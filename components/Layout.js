@@ -8,14 +8,14 @@ export default function Layout({ children }) {
       {/* container */}
       <main className=" sticky top-0 z-10 mx-auto h-auto bg-white backdrop-filter backdrop-blur ">
         {/* container */}
-        <main className="max-w-4xl w-full mx-auto sm:px-5 py-2 sm:py-3">
+        <main className="max-w-4xl w-full mx-auto p-5">
           {/* desktop navigation*/}
           <nav className="sm:flex justify-between items-center hidden ">
             {/* brand name / home button */}
             <section>
               <Link href="/">
-                <a className="text-lg">
-                  <span className="font-normal">HarisLab</span>
+                <a className="text-xl">
+                  <span className="font-medium">HarisLab</span>
                 </a>
               </Link>
             </section>
@@ -23,20 +23,26 @@ export default function Layout({ children }) {
             {/* main link */}
             <section className="flex flex-row space-x-5">
               <Link href="/homeMath">
-                <a>Matematika</a>
+                <a className="px-2 py-1 rounded-md hover:bg-[#F9F5F1]">
+                  Matematika
+                </a>
               </Link>
               <Link href="/homePhy">
-                <a>Fisika</a>
+                <a className="px-2 py-1 rounded-md hover:bg-[#F9F5F1]">
+                  Fisika
+                </a>
               </Link>
             </section>
 
             {/* signIn/signUp */}
             <section className="flex flex-row space-x-3">
               <Link href="/signIn">
-                <a>Masuk</a>
+                <a className="px-2 py-1 rounded-md hover:bg-[#F9F5F1]">Masuk</a>
               </Link>
               <Link href="/signUp">
-                <a>Daftar</a>
+                <a className="px-2 py-1 rounded-md hover:bg-[#F9F5F1]">
+                  Daftar
+                </a>
               </Link>
             </section>
           </nav>
@@ -45,11 +51,11 @@ export default function Layout({ children }) {
           <nav className="flex flex-row-reverse sm:hidden w-full">
             <div className="w-full">
               <Menu as="div" className="relative inline-block w-full">
-                <div className="flex items-center justify-between px-5 sm:px-0 ">
+                <div className="flex items-center justify-between">
                   {/* brand name / home button */}
                   <section>
                     <Link href="/">
-                      <a className="text-lg">
+                      <a className="text-xl">
                         <span className="font-normal">HarisLab</span>
                       </a>
                     </Link>
@@ -73,10 +79,10 @@ export default function Layout({ children }) {
                   </Menu.Button>
                 </div>
 
-                <Menu.Items className="absolute right-0 w-1/3 mt-2 origin-top-right bg-black  text-white mr-5 sm:mr-0 divide-y divide-gray-700 rounded-md shadow-xl ">
+                <Menu.Items className="absolute right-0 w-1/3 mt-2 origin-top-right bg-white mr-0 divide-y divide-gray-500 border border-gray-500 shadow-2xl rounded-md">
                   <Menu.Item>
                     {({ active }) => (
-                      <button className={` group w-full p-2  `}>
+                      <button className="w-full p-2 hover:bg-[#f9f5f1] rounded-none ">
                         {active ? (
                           <Link href="/homeMath">
                             <a>Matematika</a>
@@ -91,7 +97,7 @@ export default function Layout({ children }) {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className={` group w-full p-2  `}>
+                      <button className="w-full p-2 hover:bg-[#f9f5f1] rounded-none ">
                         {active ? (
                           <Link href="/homePhy">
                             <a>Fisika</a>
@@ -106,7 +112,7 @@ export default function Layout({ children }) {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className={` group w-full p-2  `}>
+                      <button className="w-full p-2 hover:bg-[#f9f5f1] rounded-none ">
                         {active ? (
                           <Link href="/signIn">
                             <a>Sign In</a>
@@ -121,7 +127,7 @@ export default function Layout({ children }) {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className={` group w-full p-2  `}>
+                      <button className="w-full p-2 hover:bg-[#f9f5f1] rounded-none ">
                         {active ? (
                           <Link href="/signUp">
                             <a>Sign Up</a>
@@ -145,7 +151,7 @@ export default function Layout({ children }) {
       {/* container */}
       <main className="w-full mx-auto max-w-4xl px-5">
         {/* component search */}
-        <section className="flex items-center border border-black px-2 py-1.5 rounded-md">
+        <section className="bg-white flex items-center border border-black px-2 py-1.5 rounded-md">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
