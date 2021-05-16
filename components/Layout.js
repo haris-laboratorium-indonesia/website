@@ -2,11 +2,12 @@ import Link from "next/link";
 import { Menu } from "@headlessui/react";
 
 export default function Layout({ children }) {
+  const nav = "px-2 py-1 rounded-md hover:bg-[#F9F5F1]";
   return (
     <main>
       {/* navigation */}
       {/* container */}
-      <main className=" sticky top-0 z-10 mx-auto h-auto bg-white backdrop-filter backdrop-blur ">
+      <main className=" sticky top-0 z-10 mx-auto h-auto bg-[#fffefc] backdrop-filter backdrop-blur ">
         {/* container */}
         <main className="max-w-4xl w-full mx-auto p-5">
           {/* desktop navigation*/}
@@ -22,27 +23,30 @@ export default function Layout({ children }) {
 
             {/* main link */}
             <section className="flex flex-row space-x-5">
-              <Link href="/homeMath">
-                <a className="px-2 py-1 rounded-md hover:bg-[#F9F5F1]">
-                  Matematika
-                </a>
+              <Link href="/learn/math/homeMath">
+                <a className={nav}>Belajar</a>
               </Link>
-              <Link href="/homePhy">
-                <a className="px-2 py-1 rounded-md hover:bg-[#F9F5F1]">
-                  Fisika
-                </a>
+              <Link href="/calculator/calculatorMath">
+                <a className={nav}>Kalkulator</a>
+              </Link>
+              <Link href="/flashCard/flashCardMath">
+                <a className={nav}>FlashCard</a>
+              </Link>
+              <Link href="/animation/animationMath">
+                <a className={nav}>Animasi</a>
+              </Link>
+              <Link href="/scan/scanMath">
+                <a className={nav}>Scan</a>
               </Link>
             </section>
 
             {/* signIn/signUp */}
             <section className="flex flex-row space-x-3">
               <Link href="/signIn">
-                <a className="px-2 py-1 rounded-md hover:bg-[#F9F5F1]">Masuk</a>
+                <a className={nav}>Masuk</a>
               </Link>
               <Link href="/signUp">
-                <a className="px-2 py-1 rounded-md hover:bg-[#F9F5F1]">
-                  Daftar
-                </a>
+                <a className={nav}>Daftar</a>
               </Link>
             </section>
           </nav>
@@ -84,12 +88,12 @@ export default function Layout({ children }) {
                     {({ active }) => (
                       <button className="w-full p-2 hover:bg-[#f9f5f1] rounded-none ">
                         {active ? (
-                          <Link href="/homeMath">
-                            <a>Matematika</a>
+                          <Link href="/learn/math/homeMath">
+                            <a>Belajar</a>
                           </Link>
                         ) : (
-                          <Link href="/homeMath">
-                            <a>Matematika</a>
+                          <Link href="/learn/math/homeMath">
+                            <a>Belajar</a>
                           </Link>
                         )}
                       </button>
@@ -99,12 +103,42 @@ export default function Layout({ children }) {
                     {({ active }) => (
                       <button className="w-full p-2 hover:bg-[#f9f5f1] rounded-none ">
                         {active ? (
-                          <Link href="/homePhy">
-                            <a>Fisika</a>
+                          <Link href="/calculator/calculatorMath">
+                            <a>Kalkulator</a>
                           </Link>
                         ) : (
-                          <Link href="/homePhy">
-                            <a>Fisika</a>
+                          <Link href="/calculator/calculatorMath">
+                            <a>Kalkulator</a>
+                          </Link>
+                        )}
+                      </button>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <button className="w-full p-2 hover:bg-[#f9f5f1] rounded-none ">
+                        {active ? (
+                          <Link href="/animation/animationMath">
+                            <a>Animasi</a>
+                          </Link>
+                        ) : (
+                          <Link href="/animation/animationMath">
+                            <a>Animasi</a>
+                          </Link>
+                        )}
+                      </button>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <button className="w-full p-2 hover:bg-[#f9f5f1] rounded-none ">
+                        {active ? (
+                          <Link href="/scan/scanMath">
+                            <a>Scan</a>
+                          </Link>
+                        ) : (
+                          <Link href="/scan/scanMath">
+                            <a>Scan</a>
                           </Link>
                         )}
                       </button>
