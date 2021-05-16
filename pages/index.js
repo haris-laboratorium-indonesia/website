@@ -1,65 +1,102 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { Disclosure } from "@headlessui/react";
 
+import Link from "next/link";
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+    <main>
+      {/* fisika & matematika */}
+      <section className="grid grid-cols-1 sm:grid-cols-2 my-5 gap-3 sm:gap-5">
+        <Link href="/homeMath">
+          <a>
+            <div className="bg-[#007aff] text-white py-3 text-center rounded-md hover:bg-opacity-80">
+              Matematika
+            </div>
           </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+        </Link>
+        <Link href="/homePhy">
+          <a>
+            <div className="bg-[#ff2d55] text-white py-3 text-center rounded-md hover:bg-opacity-80">
+              Fisika
+            </div>
           </a>
+        </Link>
+      </section>
+      {/* features */}
+      <section className=" grid grid-cols-1 sm:grid-cols-4 gap-5">
+        {/* calculator */}
+        <Disclosure as="div">
+          <Disclosure.Button className=" text-center py-3 bg-black text-white  focus:outline-none font-medium  w-full hover:bg-opacity-80 rounded-md">
+            Kalkulator
+          </Disclosure.Button>
+          <Disclosure.Panel className=" text-center rounded-b-lg border border-t-0 border-gray-500 p-1 -mt-1">
+            <div className="py-1 border-b border-gray-500">
+              <Link href="/featuresMath/calculator">
+                <a>Kalkulator Matematika</a>
+              </Link>
+            </div>
+            <div className="py-1">
+              <Link href="/featuresPhy/calculator">
+                <a>Kalkulator Fisika</a>
+              </Link>
+            </div>
+          </Disclosure.Panel>
+        </Disclosure>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+        {/* flashCard */}
+        <Disclosure as="div">
+          <Disclosure.Button className=" text-center py-3 bg-black text-white focus:outline-none font-medium  w-full hover:bg-opacity-80 rounded-md">
+            Flash Card
+          </Disclosure.Button>
+          <Disclosure.Panel className="text-center rounded-b-lg border border-t-0 border-gray-500 p-1 -mt-1">
+            <div className="py-1 border-b border-gray-500">
+              <Link href="/featuresMath/flashCard">
+                <a>Flash Card Matematika</a>
+              </Link>
+            </div>
+            <div className="py-1">
+              <Link href="/featuresPhy/flashCard">
+                <a>Flash Card Fisika</a>
+              </Link>
+            </div>
+          </Disclosure.Panel>
+        </Disclosure>
+        {/* animation */}
+        <Disclosure as="div">
+          <Disclosure.Button className=" text-center py-3 bg-black text-white focus:outline-none font-medium  w-full hover:bg-opacity-80 rounded-md">
+            Animasi
+          </Disclosure.Button>
+          <Disclosure.Panel className="text-center rounded-b-lg border border-t-0 border-gray-500 p-1 -mt-1">
+            <div className="py-1 border-b border-gray-500">
+              <Link href="/featuresMath/animation">
+                <a>Animasi Matematika</a>
+              </Link>
+            </div>
+            <div className="py-1">
+              <Link href="/featuresPhy/animation">
+                <a>Animasi Fisika</a>
+              </Link>
+            </div>
+          </Disclosure.Panel>
+        </Disclosure>
+        {/* scan */}
+        <Disclosure as="div">
+          <Disclosure.Button className=" text-center py-3 bg-black text-white focus:outline-none font-medium  w-full hover:bg-opacity-80 rounded-md">
+            Scan
+          </Disclosure.Button>
+          <Disclosure.Panel className="text-center rounded-b-lg border border-t-0 border-gray-500 p-1 -mt-1">
+            <div className="py-1 border-b border-gray-500">
+              <Link href="/featuresMath/scan">
+                <a>Scan Matematika</a>
+              </Link>
+            </div>
+            <div className="py-1">
+              <Link href="/featuresPhy/scan">
+                <a>Scan Fisika</a>
+              </Link>
+            </div>
+          </Disclosure.Panel>
+        </Disclosure>
+      </section>
+    </main>
+  );
 }
