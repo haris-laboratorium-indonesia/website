@@ -11,7 +11,7 @@ export default function Home() {
       <div>
         <Link href="/learn/math/homeMath">
           <a>
-            <div className="h-14 w-14 rounded-md p-3 bg-gray-200  hover:bg-[#f9f5f1] items-center">
+            <div className="h-14 w-14 rounded-md p-3 bg-gray-100 border border-gray-200  hover:bg-[#f9f5f1] items-center">
               <HiOutlineLibrary className="w-8 h-8 " />
             </div>
           </a>
@@ -23,7 +23,7 @@ export default function Home() {
       <div>
         <Link href="/flashCard/flashCardMath">
           <a>
-            <div className="h-14 w-14 rounded-md p-3 bg-gray-200  hover:bg-[#f9f5f1] items-center">
+            <div className="h-14 w-14 rounded-md p-3 bg-gray-100 border border-gray-200  hover:bg-[#f9f5f1] items-center">
               <HiOutlineColorSwatch className="w-8 h-8 " />
             </div>
           </a>
@@ -34,8 +34,8 @@ export default function Home() {
       <div>
         <Link href="/calculator/calculatorMath">
           <a>
-            <div className="h-14 w-14 rounded-md p-3 bg-gray-200  hover:bg-[#f9f5f1] items-center">
-              <HiOutlineCalculator className="w-8 h-8 " />{" "}
+            <div className="h-14 w-14 rounded-md p-3 bg-gray-100 border border-gray-200  hover:bg-[#f9f5f1] items-center">
+              <HiOutlineCalculator className="w-8 h-8 " />
             </div>
           </a>
         </Link>
@@ -45,8 +45,8 @@ export default function Home() {
       <div>
         <Link href="/animation/animationMath">
           <a>
-            <div className="h-14 w-14 rounded-md p-3 bg-gray-200  hover:bg-[#f9f5f1] items-center">
-              <HiOutlinePresentationChartLine className="w-8 h-8 " />{" "}
+            <div className="h-14 w-14 rounded-md p-3 bg-gray-100 border border-gray-200  hover:bg-[#f9f5f1] items-center">
+              <HiOutlinePresentationChartLine className="w-8 h-8 " />
             </div>
           </a>
         </Link>
@@ -56,8 +56,8 @@ export default function Home() {
       <div>
         <Link href="/scan/scanMath">
           <a>
-            <div className="h-14 w-14 rounded-md p-3 bg-gray-200  hover:bg-[#f9f5f1] items-center">
-              <HiOutlineCamera className="w-8 h-8 " />{" "}
+            <div className="h-14 w-14 rounded-md p-3 bg-gray-100 border border-gray-200  hover:bg-[#f9f5f1] items-center">
+              <HiOutlineCamera className="w-8 h-8 " />
             </div>
           </a>
         </Link>
