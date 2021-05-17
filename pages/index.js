@@ -1,28 +1,69 @@
 import Link from "next/link";
+import { HiOutlineCamera } from "react-icons/hi";
+import { HiOutlineColorSwatch } from "react-icons/hi";
+import { HiOutlineCalculator } from "react-icons/hi";
+import { HiOutlinePresentationChartLine } from "react-icons/hi";
+import { HiOutlineLibrary } from "react-icons/hi";
+
 export default function Home() {
-  const a =
-    "rounded-md text-white hover:text-black bg-black hover:bg-white border border-black px-2 py-1.5 text-center";
   return (
-    <main className="grid grid-cols-2 sm:grid-cols-5 gap-5">
-      <Link href="/learn/math/homeMath">
-        <a className={a}>Belajar</a>
-      </Link>
+    <main className="grid grid-cols-4 sm:grid-cols-10 gap-5 mx-auto">
+      <div>
+        <Link href="/learn/math/homeMath">
+          <a>
+            <div className="h-14 w-14 rounded-md p-3 bg-gray-200  hover:bg-[#f9f5f1] items-center">
+              <HiOutlineLibrary className="w-8 h-8 " />
+            </div>
+          </a>
+        </Link>
 
-      <Link href="/calculator/calculatorMath">
-        <a className={a}>Kalkulator</a>
-      </Link>
+        <div className="text-xs mt-1 text-center w-14 ">Belajar</div>
+      </div>
 
-      <Link href="/flashCard/flashCardMath">
-        <a className={a}>Flash Card</a>
-      </Link>
+      <div>
+        <Link href="/flashCard/flashCardMath">
+          <a>
+            <div className="h-14 w-14 rounded-md p-3 bg-gray-200  hover:bg-[#f9f5f1] items-center">
+              <HiOutlineColorSwatch className="w-8 h-8 " />
+            </div>
+          </a>
+        </Link>
+        <div className="text-xs mt-1 text-center w-14">FlashCard</div>
+      </div>
 
-      <Link href="/animation/animationMath">
-        <a className={a}>Animasi</a>
-      </Link>
+      <div>
+        <Link href="/calculator/calculatorMath">
+          <a>
+            <div className="h-14 w-14 rounded-md p-3 bg-gray-200  hover:bg-[#f9f5f1] items-center">
+              <HiOutlineCalculator className="w-8 h-8 " />{" "}
+            </div>
+          </a>
+        </Link>
+        <div className="text-xs mt-1 text-center w-14">Kalkulator</div>
+      </div>
 
-      <Link href="/scan/scanMath">
-        <a className={a}>Scan</a>
-      </Link>
+      <div>
+        <Link href="/animation/animationMath">
+          <a>
+            <div className="h-14 w-14 rounded-md p-3 bg-gray-200  hover:bg-[#f9f5f1] items-center">
+              <HiOutlinePresentationChartLine className="w-8 h-8 " />{" "}
+            </div>
+          </a>
+        </Link>
+        <div className="text-xs mt-1 text-center w-14">Animasi</div>
+      </div>
+
+      <div>
+        <Link href="/scan/scanMath">
+          <a>
+            <div className="h-14 w-14 rounded-md p-3 bg-gray-200  hover:bg-[#f9f5f1] items-center">
+              <HiOutlineCamera className="w-8 h-8 " />{" "}
+            </div>
+          </a>
+        </Link>
+
+        <div className="text-xs mt-1 text-center w-14">Scan</div>
+      </div>
     </main>
   );
 }

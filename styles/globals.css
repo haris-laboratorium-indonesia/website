@@ -22,3 +22,7 @@ a {
   -webkit-backdrop-filter: blur(7px);
   border-radius: 10px;
 }
+
+.caret-black{
+  caret-color: black;
+}

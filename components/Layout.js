@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Menu } from "@headlessui/react";
 
 export default function Layout({ children }) {
-  const nav = "px-2 py-1 rounded-md hover:bg-[#F9F5F1]";
+  const nav = "px-2 py-1 rounded-md hover:bg-[#f9f5f1]";
   return (
     <main>
       {/* navigation */}
@@ -11,20 +11,23 @@ export default function Layout({ children }) {
         {/* container */}
         <main className="max-w-4xl w-full mx-auto p-5">
           {/* desktop navigation*/}
-          <nav className="sm:flex justify-between items-center hidden ">
+          <nav className="md:flex justify-between items-center hidden text-sm">
             {/* brand name / home button */}
-            <section>
+            <section className="flex justify-start space-x-5 items-center">
               <Link href="/">
-                <a className="text-xl">
+                <a className="text-2xl">
                   <span className="font-medium">HarisLab</span>
                 </a>
               </Link>
             </section>
 
             {/* main link */}
-            <section className="flex flex-row space-x-5">
+            <section className="flex flex-row justify-end items-center space-x-2 text-sm ">
               <Link href="/learn/math/homeMath">
                 <a className={nav}>Belajar</a>
+              </Link>
+              <Link href="/blog">
+                <a className={nav}>Blog</a>
               </Link>
               <Link href="/calculator/calculatorMath">
                 <a className={nav}>Kalkulator</a>
@@ -41,52 +44,84 @@ export default function Layout({ children }) {
             </section>
 
             {/* signIn/signUp */}
-            <section className="flex flex-row space-x-3">
+            <section className="flex flex-row justify-end items-center space-x-2 ">
               <Link href="/signIn">
-                <a className={nav}>Masuk</a>
+                <a className="px-2 py-1 hover:rounded-md hover:bg-[#f9f5f1] ">
+                  Masuk
+                </a>
               </Link>
               <Link href="/signUp">
-                <a className={nav}>Daftar</a>
+                <a className="rounded-md bg-black text-white hover:text-black hover:bg-[#f9f6f1] px-2 py-1">
+                  Daftar
+                </a>
               </Link>
             </section>
           </nav>
 
           {/* mobile navigation */}
-          <nav className="flex flex-row-reverse sm:hidden w-full">
-            <div className="w-full">
-              <Menu as="div" className="relative inline-block w-full">
-                <div className="flex items-center justify-between">
-                  {/* brand name / home button */}
-                  <section>
-                    <Link href="/">
-                      <a className="text-xl">
-                        <span className="font-normal">HarisLab</span>
-                      </a>
-                    </Link>
-                  </section>
+          <nav className="flex  md:hidden w-full">
+            <Menu as="div" className="relative inline-block w-full">
+              <div className="flex items-center justify-between">
+                {/* brand name / home button */}
+                <section>
+                  <Link href="/">
+                    <a className="text-xl">
+                      <span className="font-normal">HarisLab</span>
+                    </a>
+                  </Link>
+                </section>
 
-                  <Menu.Button className=" focus:outline-none ">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-8 w-8"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1}
-                        d="M4 8h16M4 16h16"
+                <Menu.Button className=" focus:outline-none ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-8 w-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1}
+                      d="M4 8h16M4 16h16"
+                    />
+                  </svg>
+                </Menu.Button>
+              </div>
+
+              <Menu.Items className="absolute right-0 w-2/3 mt-2 p-2 pb-0 origin-top-right bg-black text-white mr-0 divide-y divide-gray-500 rounded">
+                <div>
+                  {/* search button */}
+                  {/* container */}
+                  <main className="w-full pb-2">
+                    {/* component search */}
+                    <section className="bg-white flex items-center border border-black px-1.5 py-1 rounded">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 text-gray-500"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1}
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        />
+                      </svg>
+                      <input
+                        type="text"
+                        className="focus:outline-none caret-black w-full focus:placeholder-black ml-1 "
+                        placeholder="Search"
                       />
-                    </svg>
-                  </Menu.Button>
+                    </section>
+                  </main>
                 </div>
-
-                <Menu.Items className="absolute right-0 w-1/3 mt-2 origin-top-right bg-white mr-0 divide-y divide-gray-500 border border-gray-500 shadow-2xl rounded-md">
+                <div>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full p-2 hover:bg-[#f9f5f1] rounded-none ">
+                      <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
                         {active ? (
                           <Link href="/learn/math/homeMath">
                             <a>Belajar</a>
@@ -101,7 +136,24 @@ export default function Layout({ children }) {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full p-2 hover:bg-[#f9f5f1] rounded-none ">
+                      <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
+                        {active ? (
+                          <Link href="/blog">
+                            <a>Blog</a>
+                          </Link>
+                        ) : (
+                          <Link href="/blog">
+                            <a>Blog</a>
+                          </Link>
+                        )}
+                      </button>
+                    )}
+                  </Menu.Item>
+                </div>
+                <div>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
                         {active ? (
                           <Link href="/calculator/calculatorMath">
                             <a>Kalkulator</a>
@@ -116,7 +168,7 @@ export default function Layout({ children }) {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full p-2 hover:bg-[#f9f5f1] rounded-none ">
+                      <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
                         {active ? (
                           <Link href="/animation/animationMath">
                             <a>Animasi</a>
@@ -131,7 +183,22 @@ export default function Layout({ children }) {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full p-2 hover:bg-[#f9f5f1] rounded-none ">
+                      <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
+                        {active ? (
+                          <Link href="/flashCard/flashCardMath">
+                            <a>Flash Card</a>
+                          </Link>
+                        ) : (
+                          <Link href="/flashCard/animationMath">
+                            <a>Flash Card</a>
+                          </Link>
+                        )}
+                      </button>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
                         {active ? (
                           <Link href="/scan/scanMath">
                             <a>Scan</a>
@@ -144,9 +211,11 @@ export default function Layout({ children }) {
                       </button>
                     )}
                   </Menu.Item>
+                </div>
+                <div>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full p-2 hover:bg-[#f9f5f1] rounded-none ">
+                      <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
                         {active ? (
                           <Link href="/signIn">
                             <a>Sign In</a>
@@ -161,7 +230,7 @@ export default function Layout({ children }) {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full p-2 hover:bg-[#f9f5f1] rounded-none ">
+                      <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
                         {active ? (
                           <Link href="/signUp">
                             <a>Sign Up</a>
@@ -174,43 +243,16 @@ export default function Layout({ children }) {
                       </button>
                     )}
                   </Menu.Item>
-                </Menu.Items>
-              </Menu>
-            </div>
+                </div>
+              </Menu.Items>
+            </Menu>
           </nav>
         </main>
       </main>
 
-      {/* search button */}
-      {/* container */}
-      <main className="w-full mx-auto max-w-4xl px-5">
-        {/* component search */}
-        <section className="bg-white flex items-center border border-black px-2 py-1.5 rounded-md">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-          <input
-            type="text"
-            className="focus:outline-none  w-full focus:placeholder-black ml-1 "
-            placeholder="Search"
-          />
-        </section>
-      </main>
-
       {/* content */}
       {/* jangan lupa untuk membuat px-5 setiap pages */}
-      <main className="w-full mx-auto max-w-4xl min-h-screen px-5 mt-10">
+      <main className="w-full mx-auto max-w-4xl min-h-screen px-5 mt-5">
         {children}
       </main>
     </main>
