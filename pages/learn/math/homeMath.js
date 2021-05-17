@@ -4,7 +4,7 @@ import MathPhyOption from "../../../components/MathPhyOption";
 export default function homeMath() {
   return (
     <main>
-      <MathPhyOption currentPage="Matematika" anotherPage="Fisika" page="/learn/phy/homePhy"/>
+      <MathPhyOption logo="<HiOutlineLibrary />" currentPage="Matematika" anotherPage="Fisika" page="/learn/phy/homePhy"/>
       <section className="grid grid-cols-1 sm:grid-cols-4 divide-y divide-gray-400 sm:divide-y-0">
         <ChapterBox title="Lingkaran" toPage="ChapterMath/linear" />
         <ChapterBox title="Integral Tentu" toPage="ChapterMath/linear" />

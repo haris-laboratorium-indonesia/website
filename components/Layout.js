@@ -74,7 +74,7 @@ export default function Layout({ children }) {
                 <Menu.Button className=" focus:outline-none ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-8 w-8"
+                    className="h-7 w-7"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -82,14 +82,14 @@ export default function Layout({ children }) {
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={1}
-                      d="M4 8h16M4 16h16"
+                      strokeWidth="1"
+                      d="M4 6h16M4 12h16M4 18h16"
                     />
                   </svg>
                 </Menu.Button>
               </div>
 
-              <Menu.Items className="absolute right-0 w-2/3 mt-2 p-2 pb-0 origin-top-right bg-black text-white mr-0 divide-y divide-gray-500 rounded">
+              <Menu.Items className="absolute right-0 w-1/2 mt-2 p-2 pb-0 origin-top-right bg-black text-white mr-0 divide-y divide-gray-500 rounded">
                 <div>
                   {/* search button */}
                   {/* container */}
@@ -98,7 +98,7 @@ export default function Layout({ children }) {
                     <section className="bg-white flex items-center border border-black px-1.5 py-1 rounded">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 text-gray-500"
+                        className="h-5 w-5 text-black"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -118,7 +118,7 @@ export default function Layout({ children }) {
                     </section>
                   </main>
                 </div>
-                <div>
+                <div className="py-2">
                   <Menu.Item>
                     {({ active }) => (
                       <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
@@ -150,7 +150,7 @@ export default function Layout({ children }) {
                     )}
                   </Menu.Item>
                 </div>
-                <div>
+                <div className="py-2">
                   <Menu.Item>
                     {({ active }) => (
                       <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
@@ -212,7 +212,7 @@ export default function Layout({ children }) {
                     )}
                   </Menu.Item>
                 </div>
-                <div>
+                <div className="py-2">
                   <Menu.Item>
                     {({ active }) => (
                       <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
@@ -252,7 +252,7 @@ export default function Layout({ children }) {
 
       {/* content */}
       {/* jangan lupa untuk membuat px-5 setiap pages */}
-      <main className="w-full mx-auto max-w-4xl min-h-screen px-5 mt-5">
+      <main className="w-full mx-auto max-w-4xl min-h-screen px-5 mt-1">
         {children}
       </main>
     </main>
