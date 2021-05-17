@@ -74,7 +74,7 @@ export default function Layout({ children }) {
                 <Menu.Button className=" focus:outline-none ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-7 w-7"
+                    className="h-10 w-10"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -112,7 +112,7 @@ export default function Layout({ children }) {
                       </svg>
                       <input
                         type="text"
-                        className="focus:outline-none caret-black w-full focus:placeholder-black ml-1 "
+                        className="text-black focus:outline-none caret-black w-full focus:placeholder-black ml-1 "
                         placeholder="Search"
                       />
                     </section>
