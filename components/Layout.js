@@ -274,8 +274,8 @@ export default function Layout({ children }) {
         <main className="w-full mx-auto max-w-4xl min-h-screen px-5 mt-5">
           {children}
         </main>
-        <footer className="bottom-0 text-center">
-          <div className="p-5">
+        <footer className="bottom-0 text-sm sm:text-base text-center">
+          <div className="p-3 sm:p-5 text-gray-600">
             &copy;2021 haris<span className="font-light">lab</span> ∙ Made by{" "}
             <a
               target="_blank"

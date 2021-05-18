@@ -17,12 +17,12 @@ export default function Home() {
         </div>
         <div className="flex flex-col sm:flex-row justify-center w-2/3 sm:1/2 mx-auto space-y-5 sm:space-y-0 sm:space-x-5">
           <Link href="/learn/math/homeMath">
-            <a className="rounded-md px-2 py-1.5 bg-black hover:bg-white border border-black hover:text-black text-white text-center">
+            <a className="rounded-md p-2 sm:py-1.5 bg-black hover:bg-white border border-black hover:text-black text-white text-center">
               Belajar Matematika
             </a>
           </Link>
           <Link href="/learn/phy/homePhy">
-            <a className="rounded-md px-2 py-1.5 bg-black hover:bg-white border border-black hover:text-black text-white text-center">
+            <a className="rounded-md p-2 sm:py-1.5 bg-black hover:bg-white border border-black hover:text-black text-white text-center">
               Belajar Fisika
             </a>
           </Link>
