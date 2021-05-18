@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Menu } from "@headlessui/react";
 import Head from "next/head";
-
+import Image from "next/image";
 export default function Layout({ children }) {
   const nav = "px-2 py-1 rounded-md hover:bg-[#f9f5f1]";
   return (
@@ -21,9 +21,12 @@ export default function Layout({ children }) {
               {/* brand name / home button */}
               <section className="flex justify-start space-x-5 items-center">
                 <Link href="/">
-                  <a className="text-xl">
-                    haris
-                    <span className="font-light">lab</span>
+                  <a className="text-xl flex items-center space-x-2">
+                    <Image src="/logo.svg" width="24" height="24" priority />
+                    <div>
+                      haris
+                      <span className="font-light">lab</span>
+                    </div>
                   </a>
                 </Link>
               </section>
@@ -72,9 +75,17 @@ export default function Layout({ children }) {
                   {/* brand name / home button */}
                   <section>
                     <Link href="/">
-                      <a className="text-2xl">
-                        haris
-                        <span className="font-light">lab</span>
+                      <a className="text-xl flex items-center space-x-2">
+                        <Image
+                          src="/logo.svg"
+                          width="24"
+                          height="24"
+                          priority
+                        />
+                        <div>
+                          haris
+                          <span className="font-light">lab</span>
+                        </div>
                       </a>
                     </Link>
                   </section>
@@ -263,6 +274,18 @@ export default function Layout({ children }) {
         <main className="w-full mx-auto max-w-4xl min-h-screen px-5 mt-5">
           {children}
         </main>
+        <footer className="bottom-0 text-center">
+          <div className="p-5">
+            &copy;2021 haris<span className="font-light">lab</span> ∙ Made by{" "}
+            <a
+              target="_blank"
+              href="https://twitter.com/haritssr"
+              className="text-blue-500 hover:underline"
+            >
+              Harits Syah
+            </a>{" "}
+          </div>
+        </footer>
       </main>
     </>
   );
