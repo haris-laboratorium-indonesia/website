@@ -21,8 +21,8 @@ export default function Layout({ children }) {
               {/* brand name / home button */}
               <section className="flex justify-start space-x-5 items-center">
                 <Link href="/">
-                  <a className="text-xl flex items-center">
-                    <Image src="/logo.svg" width="24" height="24" priority />
+                  <a className="text-base flex items-center">
+                    <Image src="/logo.svg" width="20" height="20" priority />
                     <div className="ml-1">
                       haris
                       <span className="font-light">lab</span>
@@ -32,12 +32,9 @@ export default function Layout({ children }) {
               </section>
 
               {/* main link */}
-              <section className="flex flex-row justify-end items-center space-x-2 text-sm ">
+              <section className="flex flex-row justify-end items-center space-x-7 text-sm ">
                 <Link href="/learn/math/homeMath">
                   <a className={nav}>Belajar</a>
-                </Link>
-                <Link href="/blog">
-                  <a className={nav}>Blog</a>
                 </Link>
                 <Link href="/calculator/calculatorMath">
                   <a className={nav}>Kalkulator</a>
@@ -54,14 +51,14 @@ export default function Layout({ children }) {
               </section>
 
               {/* signIn/signUp */}
-              <section className="flex flex-row justify-end items-center space-x-2 ">
+              <section className="flex flex-row justify-end items-center space-x-2">
                 <Link href="/signIn">
                   <a className="px-2 py-1 hover:rounded-md hover:bg-gray-100 ">
                     Masuk
                   </a>
                 </Link>
                 <Link href="/signUp">
-                  <a className="rounded-md bg-black text-white border border-black hover:text-black hover:bg-gray-100 px-2 py-1">
+                  <a className="text-xs rounded-md bg-black text-white border border-black hover:text-black hover:bg-gray-100 px-2 py-1">
                     Daftar
                   </a>
                 </Link>
@@ -78,8 +75,8 @@ export default function Layout({ children }) {
                       <a className="text-xl flex items-center">
                         <Image
                           src="/logo.svg"
-                          width="24"
-                          height="24"
+                          width="22"
+                          height="22"
                           priority
                         />
                         <div className="ml-1">
@@ -108,7 +105,7 @@ export default function Layout({ children }) {
                   </Menu.Button>
                 </div>
 
-                <Menu.Items className="absolute right-0 w-1/2 mt-2 p-2 pb-0 origin-top-right bg-black text-white mr-0 divide-y divide-gray-500 rounded overflow-y-scroll h-auto">
+                <Menu.Items className="absolute right-0 w-1/2 mt-2 p-2 pb-0 origin-top-right bg-white  mr-0 divide-y divide-gray-300 rounded-lg h-auto border border-gray-400">
                   <div>
                     {/* search button */}
                     {/* container */}
@@ -140,7 +137,7 @@ export default function Layout({ children }) {
                   <div className="py-2">
                     <Menu.Item>
                       {({ active }) => (
-                        <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
+                        <button className="w-full p-2 text-left hover:bg-gray-100 rounded-lg hover:text-blue-500 ">
                           {active ? (
                             <Link href="/learn/math/homeMath">
                               <a>Belajar</a>
@@ -148,21 +145,6 @@ export default function Layout({ children }) {
                           ) : (
                             <Link href="/learn/math/homeMath">
                               <a>Belajar</a>
-                            </Link>
-                          )}
-                        </button>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
-                          {active ? (
-                            <Link href="/blog">
-                              <a>Blog</a>
-                            </Link>
-                          ) : (
-                            <Link href="/blog">
-                              <a>Blog</a>
                             </Link>
                           )}
                         </button>
@@ -172,7 +154,7 @@ export default function Layout({ children }) {
                   <div className="py-2">
                     <Menu.Item>
                       {({ active }) => (
-                        <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
+                        <button className="w-full p-2 text-left hover:bg-gray-100 rounded-lg hover:text-blue-500 ">
                           {active ? (
                             <Link href="/calculator/calculatorMath">
                               <a>Kalkulator</a>
@@ -187,7 +169,7 @@ export default function Layout({ children }) {
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
+                        <button className="w-full p-2 text-left hover:bg-gray-100 rounded-lg hover:text-blue-500 ">
                           {active ? (
                             <Link href="/animation/animationMath">
                               <a>Animasi</a>
@@ -202,7 +184,7 @@ export default function Layout({ children }) {
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
+                        <button className="w-full p-2 text-left hover:bg-gray-100 rounded-lg hover:text-blue-500 ">
                           {active ? (
                             <Link href="/flashCard/flashCardMath">
                               <a>Flash Card</a>
@@ -217,7 +199,7 @@ export default function Layout({ children }) {
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
+                        <button className="w-full p-2 text-left hover:bg-gray-100 rounded-lg hover:text-blue-500 ">
                           {active ? (
                             <Link href="/scan/scanMath">
                               <a>Scan</a>
@@ -234,7 +216,7 @@ export default function Layout({ children }) {
                   <div className="py-2">
                     <Menu.Item>
                       {({ active }) => (
-                        <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
+                        <button className="w-full p-2 text-left hover:bg-gray-100 rounded-lg hover:text-blue-500 ">
                           {active ? (
                             <Link href="/signIn">
                               <a>Sign In</a>
@@ -249,7 +231,7 @@ export default function Layout({ children }) {
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <button className="w-full p-2 text-left hover:bg-gray-900 rounded-none ">
+                        <button className="w-full p-2 text-left hover:bg-gray-100 rounded-lg hover:text-blue-500 ">
                           {active ? (
                             <Link href="/signUp">
                               <a>Sign Up</a>
