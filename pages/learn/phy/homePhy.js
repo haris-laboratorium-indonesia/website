@@ -1,11 +1,13 @@
 import ChapterBox from "../../../components/ChapterBox";
 import MathPhyOption from "../../../components/MathPhyOption";
+import PhyParam from "../../../components/PhyParam";
 
 export default function homePhy() {
   return (
     <main>
-      <MathPhyOption currentPage="Fisika" anotherPage="Matematika" page="/learn/math/homeMath"/>
-
+      {/* <MathPhyOption currentPage="Fisika" anotherPage="Matematika" page="/learn/math/homeMath"/> */}
+      <header className="text-2xl font-bold">Belajar</header>
+      <PhyParam to="/learn/math/homeMath" />
       <section className="grid grid-cols-1 sm:grid-cols-4 divide-y divide-gray-400 sm:divide-y-0">
         <ChapterBox title="Fluida Statis" toPage="ChapterPhy/fluida" />
         <ChapterBox title="Fluida Dinamis" toPage="ChapterPhy/fluida" />
