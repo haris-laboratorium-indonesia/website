@@ -3,7 +3,7 @@ import { Menu } from "@headlessui/react";
 import Head from "next/head";
 import Image from "next/image";
 export default function Layout({ children }) {
-  const nav = "px-2 py-1 rounded-md hover:bg-[#f9f5f1]";
+  const nav = "px-2 py-1 rounded-md hover:bg-gray-100";
   return (
     <>
       <Head>
@@ -13,17 +13,17 @@ export default function Layout({ children }) {
       <main>
         {/* navigation */}
         {/* container */}
-        <main className=" sticky top-0 z-10 mx-auto h-auto bg-[#fffefc] border-b border-gray-300">
+        <main className=" sticky top-0 z-10 mx-auto h-auto bg-white border-b border-gray-300">
           {/* container */}
-          <main className="max-w-4xl w-full mx-auto px-5 py-4">
+          <main className="max-w-4xl w-full mx-auto px-5 py-2">
             {/* desktop navigation*/}
             <nav className="md:flex justify-between items-center hidden text-sm">
               {/* brand name / home button */}
               <section className="flex justify-start space-x-5 items-center">
                 <Link href="/">
-                  <a className="text-xl flex items-center space-x-2">
+                  <a className="text-xl flex items-center">
                     <Image src="/logo.svg" width="24" height="24" priority />
-                    <div>
+                    <div className="ml-1">
                       haris
                       <span className="font-light">lab</span>
                     </div>
@@ -56,12 +56,12 @@ export default function Layout({ children }) {
               {/* signIn/signUp */}
               <section className="flex flex-row justify-end items-center space-x-2 ">
                 <Link href="/signIn">
-                  <a className="px-2 py-1 hover:rounded-md hover:bg-[#f9f5f1] ">
+                  <a className="px-2 py-1 hover:rounded-md hover:bg-gray-100 ">
                     Masuk
                   </a>
                 </Link>
                 <Link href="/signUp">
-                  <a className="rounded-md bg-black text-white hover:text-black hover:bg-[#f9f6f1] px-2 py-1">
+                  <a className="rounded-md bg-black text-white border border-black hover:text-black hover:bg-gray-100 px-2 py-1">
                     Daftar
                   </a>
                 </Link>
@@ -75,14 +75,14 @@ export default function Layout({ children }) {
                   {/* brand name / home button */}
                   <section>
                     <Link href="/">
-                      <a className="text-xl flex items-center space-x-2">
+                      <a className="text-xl flex items-center">
                         <Image
                           src="/logo.svg"
                           width="24"
                           height="24"
                           priority
                         />
-                        <div>
+                        <div className="ml-1">
                           haris
                           <span className="font-light">lab</span>
                         </div>
@@ -93,7 +93,7 @@ export default function Layout({ children }) {
                   <Menu.Button className=" focus:outline-none ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-10 w-10"
+                      className="h-8 w-8"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"

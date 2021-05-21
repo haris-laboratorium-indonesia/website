@@ -9,6 +9,7 @@ export default function flashCardMath() {
         page="/flashCard/flashCardPhy"
       />
       <div>flashCardMath</div>
+      
     </>
   );
 }
