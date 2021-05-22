@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <section className="mb-10 bg-gray-50 -m-5 py-10 border-b">
         <div className="text-center text-3xl sm:text-4xl font-bold w-5/6 sm:w-1/2 mx-auto">
-          <span className="text-gray-600">Pelajari Fisika dan Matematika</span>{" "}
+          <span className="text-gray-800">Pelajari Fisika dan Matematika</span>{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500 py-2">
             sebagaimana mereka seharusnya dipelajari.
           </span>
