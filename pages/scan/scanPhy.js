@@ -1,13 +1,10 @@
-import MathPhyOption from "../../components/MathPhyOption";
+import PhyTab from "../../components/PhyTab";
 
 export default function scanPhy() {
   return (
     <>
-      <MathPhyOption
-        currentPage="Scan Fisika "
-        anotherPage="Scan Matematika "
-        page="/scan/scanMath"
-      />
+            <PhyTab in="Scan" to="scanMath" />
+
       <div>scanPhy</div>
     </>
   );

@@ -1,13 +1,10 @@
-import MathPhyOption from "../../components/MathPhyOption";
+import MathTab from "../../components/MathTab";
 
 export default function calculatorMath() {
   return (
     <>
-      <MathPhyOption
-        currentPage="Kalkulator Matematika"
-        anotherPage="Kalkulator Fisika"
-        page="/calculator/calculatorPhy"
-      />
+      <MathTab in="Kalkulator" to="calculatorPhy" />
+
       <div>calculatorMath</div>
     </>
   );

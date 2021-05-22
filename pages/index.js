@@ -8,33 +8,33 @@ import { HiOutlineBookOpen } from "react-icons/hi";
 export default function Home() {
   return (
     <>
-      <section className="mb-10 bg-gray-50 -m-5 space-y-5 py-10 border-b">
-        <div className="text-center text-2xl sm:text-3xl font-bold w-5/6 sm:w-1/2 mx-auto ">
-          Pelajari Fisika dan Matematika <span className="text-blue-500">
-            sebagaimana mereka seharusnya
-            dipelajari.
+      <section className="mb-10 bg-gray-50 -m-5 py-10 border-b">
+        <div className="text-center text-3xl sm:text-4xl font-bold w-5/6 sm:w-1/2 mx-auto">
+          <span className="text-gray-600">Pelajari Fisika dan Matematika</span>{" "}
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500 py-2">
+            sebagaimana mereka seharusnya dipelajari.
           </span>
         </div>
-        <div className="flex flex-col sm:flex-row justify-center w-2/3 sm:1/2 mx-auto space-y-5 sm:space-y-0 sm:space-x-5">
+        <div className="flex justify-center w-2/3 sm:1/2 mx-auto mt-5">
           <Link href="/learn/math/homeMath">
-            <a className="rounded-md px-3 py-2 sm:py-1.5 bg-black hover:bg-white border border-black hover:text-black text-white text-center">
-              Belajar Matematika
-            </a>
-          </Link>
-          <Link href="/learn/phy/homePhy">
-            <a className="rounded-md px-3 py-2 sm:py-1.5 bg-black hover:bg-white border border-black hover:text-black text-white text-center">
-              Belajar Fisika
+            <a className="rounded-full px-5 py-3 sm:py-1.5 bg-blue-600 hover:bg-opacity-80 text-sm text-white text-center">
+              Belajar Sekarang
             </a>
           </Link>
         </div>
       </section>
-      <div className="text-center text-gray-500 my-5">Atau coba fitur lainnya</div>
+      <div className="text-center text-gray-500 my-5">
+        Atau coba fitur lainnya
+      </div>
       <main className="grid grid-cols-4 sm:grid-cols-5 sm:w-2/3 gap-5 mx-auto ">
         <div className="mx-auto">
           <Link href="/learn/math/homeMath">
             <a>
-              <div className="h-15 w-15 rounded-xl shadow-md p-3 hover:bg-gray-100 border border-gray-400 items-center">
-                <HiOutlineBookOpen className="w-8 h-8 " />
+              <div className="h-14 w-14 rounded-xl shadow-md p-3 hover:bg-gray-100 border border-gray-400 items-center justify-center">
+                <HiOutlineBookOpen
+                  className="w-7 h-7 text-gray-700  "
+                  strokeWidth={1}
+                />
               </div>
             </a>
           </Link>
@@ -46,7 +46,7 @@ export default function Home() {
           <Link href="/flashCard/flashCardMath">
             <a>
               <div className="h-15 w-15 rounded-xl shadow-md p-3 hover:bg-gray-100 border border-gray-400 items-center">
-                <HiOutlineColorSwatch className="w-8 h-8 " />
+                <HiOutlineColorSwatch className="w-7 h-7 text-gray-700 " />
               </div>
             </a>
           </Link>
@@ -57,7 +57,7 @@ export default function Home() {
           <Link href="/calculator/calculatorMath">
             <a>
               <div className="h-15 w-15 rounded-xl shadow-md p-3 hover:bg-gray-100 border border-gray-400 items-center">
-                <HiOutlineCalculator className="w-8 h-8 " />
+                <HiOutlineCalculator className="w-7 h-7 text-gray-700 " />
               </div>
             </a>
           </Link>
@@ -68,7 +68,7 @@ export default function Home() {
           <Link href="/animation/animationMath">
             <a>
               <div className="h-15 w-15 rounded-xl shadow-md p-3 hover:bg-gray-100 border border-gray-400 items-center">
-                <HiOutlinePresentationChartLine className="w-8 h-8 " />
+                <HiOutlinePresentationChartLine className="w-7 h-7 text-gray-700 " />
               </div>
             </a>
           </Link>
@@ -79,7 +79,7 @@ export default function Home() {
           <Link href="/scan/scanMath">
             <a>
               <div className="h-15 w-15 rounded-xl shadow-md p-3 hover:bg-gray-100 border border-gray-400 items-center">
-                <HiOutlineCamera className="w-8 h-8 " />
+                <HiOutlineCamera className="w-7 h-7 text-gray-700 " />
               </div>
             </a>
           </Link>

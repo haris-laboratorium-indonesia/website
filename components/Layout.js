@@ -3,11 +3,11 @@ import { Menu } from "@headlessui/react";
 import Head from "next/head";
 import Image from "next/image";
 export default function Layout({ children }) {
-  const nav = "px-2 py-1 rounded-md hover:bg-gray-100";
+  const nav = "px-2 py-1 rounded-md hover:text-blue-600";
   return (
     <>
       <Head>
-        <title>harislab</title>
+        <title>Harislab</title>
         <link rel="icon" href="/logo.ico" />
       </Head>
       <main>
@@ -19,13 +19,12 @@ export default function Layout({ children }) {
             {/* desktop navigation*/}
             <nav className="md:flex justify-between items-center hidden text-sm">
               {/* brand name / home button */}
-              <section className="flex justify-start space-x-5 items-center">
+              <section className=" flex justify-start items-center">
                 <Link href="/">
-                  <a className="text-base flex items-center">
-                    <Image src="/logo.svg" width="20" height="20" priority />
-                    <div className="ml-1">
-                      haris
-                      <span className="font-light">lab</span>
+                  <a className="text-lg flex flex-row items-center">
+                    <div className="ml-0.5 font-semibold">
+                      Haris
+                      <span className="font-light">Lab</span>
                     </div>
                   </a>
                 </Link>
@@ -53,12 +52,12 @@ export default function Layout({ children }) {
               {/* signIn/signUp */}
               <section className="flex flex-row justify-end items-center space-x-2">
                 <Link href="/signIn">
-                  <a className="px-2 py-1 hover:rounded-md hover:bg-gray-100 ">
+                  <a className="px-2 py-1 hover:rounded-md hover:text-blue-500 ">
                     Masuk
                   </a>
                 </Link>
                 <Link href="/signUp">
-                  <a className="text-xs rounded-md bg-black text-white border border-black hover:text-black hover:bg-gray-100 px-2 py-1">
+                  <a className="text-xs rounded-full bg-blue-600  text-white hover:bg-opacity-90  px-3 py-1.5">
                     Daftar
                   </a>
                 </Link>
@@ -72,16 +71,10 @@ export default function Layout({ children }) {
                   {/* brand name / home button */}
                   <section>
                     <Link href="/">
-                      <a className="text-xl flex items-center">
-                        <Image
-                          src="/logo.svg"
-                          width="22"
-                          height="22"
-                          priority
-                        />
-                        <div className="ml-1">
-                          haris
-                          <span className="font-light">lab</span>
+                      <a className="text-lg flex flex-row items-center">
+                        <div className="ml-0.5 font-semibold">
+                          Haris
+                          <span className="font-light">Lab</span>
                         </div>
                       </a>
                     </Link>
@@ -90,7 +83,7 @@ export default function Layout({ children }) {
                   <Menu.Button className=" focus:outline-none ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-8 w-8"
+                      className="h-7 w-7"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -105,7 +98,7 @@ export default function Layout({ children }) {
                   </Menu.Button>
                 </div>
 
-                <Menu.Items className="absolute right-0 w-1/2 mt-2 p-2 pb-0 origin-top-right bg-white  mr-0 divide-y divide-gray-300 rounded-lg h-auto border border-gray-400">
+                <Menu.Items className="absolute right-0 w-1/2 mt-2 p-2 pb-0 origin-top-right bg-white  mr-0 divide-y divide-gray-300 rounded-lg h-auto border border-gray-400 shadow-lg transition duration-500 ease-out">
                   <div>
                     {/* search button */}
                     {/* container */}

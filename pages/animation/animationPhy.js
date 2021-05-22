@@ -1,13 +1,10 @@
-import MathPhyOption from "../../components/MathPhyOption";
+import PhyTab from "../../components/PhyTab";
 
 export default function animationPhy() {
   return (
     <>
-      <MathPhyOption
-        currentPage="Animasi Fisika"
-        anotherPage="Animasi Matematika"
-        page="/animation/animationMath"
-      />
+      <PhyTab in="Animasi" to="animationMath" />
+
       <div>animationPhy</div>
     </>
   );

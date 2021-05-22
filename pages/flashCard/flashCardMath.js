@@ -1,15 +1,11 @@
-import MathPhyOption from "../../components/MathPhyOption";
+import MathTab from "../../components/MathTab";
 
 export default function flashCardMath() {
   return (
     <>
-      <MathPhyOption
-        currentPage="Flash Card Matematika"
-        anotherPage="Flash Card Fisika "
-        page="/flashCard/flashCardPhy"
-      />
+      <MathTab in="Flash Card" to="flashCardPhy" />
+
       <div>flashCardMath</div>
-      
     </>
   );
 }

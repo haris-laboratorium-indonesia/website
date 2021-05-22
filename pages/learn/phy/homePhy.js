@@ -1,35 +1,32 @@
 import ChapterBox from "../../../components/ChapterBox";
-import MathPhyOption from "../../../components/MathPhyOption";
-import PhyParam from "../../../components/PhyParam";
+import PhyTab from "../../../components/PhyTab";
 
 export default function homePhy() {
   return (
     <main>
-      {/* <MathPhyOption currentPage="Fisika" anotherPage="Matematika" page="/learn/math/homeMath"/> */}
-      <header className="text-2xl font-bold">Belajar</header>
-      <PhyParam to="/learn/math/homeMath" />
-      <section className="grid grid-cols-1 sm:grid-cols-4 divide-y divide-gray-400 sm:divide-y-0">
-        <ChapterBox title="Fluida Statis" toPage="ChapterPhy/fluida" />
-        <ChapterBox title="Fluida Dinamis" toPage="ChapterPhy/fluida" />
-        <ChapterBox title="Termodinamika" toPage="ChapterPhy/fluida" />
-        <ChapterBox title="Gelombang Mekanik" toPage="ChapterPhy/fluida" />
+      <PhyTab in="Belajar" to="/learn/math/homeMath" />
+      <section className="grid grid-cols-1 sm:grid-cols-3 divide-y divide-gray-200 sm:divide-y-0">
+        <ChapterBox title="Fluida Statis" to="fluida" />
+        <ChapterBox title="Fluida Dinamis" to="fluida" />
+        <ChapterBox title="Termodinamika" to="fluida" />
+        <ChapterBox title="Gelombang Mekanik" to="fluida" />
         <ChapterBox
           title="Gelombang Elektromagnetik"
-          toPage="ChapterPhy/fluida"
+          to="fluida"
         />
-        <ChapterBox title="Kinematika" toPage="ChapterPhy/fluida" />
-        <ChapterBox title="Dinamika" toPage="ChapterPhy/fluida" />
-        <ChapterBox title="Kesetimbangan" toPage="ChapterPhy/fluida" />
-        <ChapterBox title="Besaran & Pengukuran" toPage="ChapterPhy/fluida" />
-        <ChapterBox title="Radiasi Benda Hitam" toPage="ChapterPhy/fluida" />
-        <ChapterBox title="Relativitas Khusus" toPage="ChapterPhy/fluida" />
-        <ChapterBox title="Kuantum" toPage="ChapterPhy/fluida" />
-        <ChapterBox title="Inti" toPage="ChapterPhy/fluida" />
-        <ChapterBox title="Magnet" toPage="ChapterPhy/fluida" />
-        <ChapterBox title="Listrik Statis" toPage="ChapterPhy/fluida" />
-        <ChapterBox title="Listrik Dinamis" toPage="ChapterPhy/fluida" />
-        <ChapterBox title="Gelombang Bunyi" toPage="ChapterPhy/fluida" />
-        <ChapterBox title="Optik" toPage="ChapterPhy/fluida" />
+        <ChapterBox title="Kinematika" to="fluida" />
+        <ChapterBox title="Dinamika" to="fluida" />
+        <ChapterBox title="Kesetimbangan" to="fluida" />
+        <ChapterBox title="Besaran & Pengukuran" to="fluida" />
+        <ChapterBox title="Radiasi Benda Hitam" to="fluida" />
+        <ChapterBox title="Relativitas Khusus" to="fluida" />
+        <ChapterBox title="Kuantum" to="fluida" />
+        <ChapterBox title="Inti" to="fluida" />
+        <ChapterBox title="Magnet" to="fluida" />
+        <ChapterBox title="Listrik Statis" to="fluida" />
+        <ChapterBox title="Listrik Dinamis" to="fluida" />
+        <ChapterBox title="Gelombang Bunyi" to="fluida" />
+        <ChapterBox title="Optik" to="fluida" />
       </section>
     </main>
   );
