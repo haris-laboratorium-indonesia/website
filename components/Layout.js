@@ -13,7 +13,7 @@ export default function Layout({ children }) {
       <main>
         {/* navigation */}
         {/* container */}
-        <main className=" sticky top-0 z-10 mx-auto h-auto bg-white border-b border-gray-300">
+        <main className=" sticky top-0 z-10 mx-auto h-auto blur border-b border-gray-300">
           {/* container */}
           <main className="max-w-4xl w-full mx-auto px-5 py-2">
             {/* desktop navigation*/}
@@ -98,16 +98,16 @@ export default function Layout({ children }) {
                   </Menu.Button>
                 </div>
 
-                <Menu.Items className="absolute right-0 w-1/2 mt-2 p-2 pb-0 origin-top-right bg-white  mr-0 divide-y divide-gray-300 rounded-lg h-auto border border-gray-400 shadow-lg transition duration-500 ease-out">
+                <Menu.Items className="absolute right-0 w-2/3 mt-2 p-3 pb-0 origin-top-right backdrop-filter backdrop-blur bg-black text-white bg-opacity-90  mr-0 divide-y divide-gray-400 rounded-lg h-auto  shadow-lg transition duration-500 ease-out">
                   <div>
                     {/* search button */}
                     {/* container */}
                     <main className="w-full pb-2">
                       {/* component search */}
-                      <section className="bg-white flex items-center border border-black px-1.5 py-1 rounded">
+                      <section className=" flex items-center  px-1.5 py-1 rounded bg-gray-100">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="h-5 w-5 text-black"
+                          className="h-5 w-5 text-gray-500"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -121,16 +121,16 @@ export default function Layout({ children }) {
                         </svg>
                         <input
                           type="text"
-                          className="text-black focus:outline-none caret-black w-full focus:placeholder-black ml-1 "
+                          className="text-black bg-gray-100  focus:outline-none caret-black w-full focus:placeholder-black ml-1 "
                           placeholder="Search"
                         />
                       </section>
                     </main>
                   </div>
-                  <div className="py-2">
+                  <div className="py-2 space-y-2">
                     <Menu.Item>
                       {({ active }) => (
-                        <button className="w-full p-2 text-left hover:bg-gray-100 rounded-lg hover:text-blue-500 ">
+                        <button className="w-full text-left rounded-lg hover:text-blue-500 ">
                           {active ? (
                             <Link href="/learn/math/homeMath">
                               <a>Belajar</a>
@@ -144,10 +144,10 @@ export default function Layout({ children }) {
                       )}
                     </Menu.Item>
                   </div>
-                  <div className="py-2">
+                  <div className="py-2 space-y-2">
                     <Menu.Item>
                       {({ active }) => (
-                        <button className="w-full p-2 text-left hover:bg-gray-100 rounded-lg hover:text-blue-500 ">
+                        <button className="w-full text-left rounded-lg hover:text-blue-500 ">
                           {active ? (
                             <Link href="/calculator/calculatorMath">
                               <a>Kalkulator</a>
@@ -162,7 +162,7 @@ export default function Layout({ children }) {
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <button className="w-full p-2 text-left hover:bg-gray-100 rounded-lg hover:text-blue-500 ">
+                        <button className="w-full text-left rounded-lg hover:text-blue-500 ">
                           {active ? (
                             <Link href="/animation/animationMath">
                               <a>Animasi</a>
@@ -177,7 +177,7 @@ export default function Layout({ children }) {
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <button className="w-full p-2 text-left hover:bg-gray-100 rounded-lg hover:text-blue-500 ">
+                        <button className="w-full text-left rounded-lg hover:text-blue-500 ">
                           {active ? (
                             <Link href="/flashCard/flashCardMath">
                               <a>Flash Card</a>
@@ -192,7 +192,7 @@ export default function Layout({ children }) {
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <button className="w-full p-2 text-left hover:bg-gray-100 rounded-lg hover:text-blue-500 ">
+                        <button className="w-full text-left rounded-lg hover:text-blue-500 ">
                           {active ? (
                             <Link href="/scan/scanMath">
                               <a>Scan</a>
@@ -206,10 +206,10 @@ export default function Layout({ children }) {
                       )}
                     </Menu.Item>
                   </div>
-                  <div className="py-2">
+                  <div className="py-2 space-y-2">
                     <Menu.Item>
                       {({ active }) => (
-                        <button className="w-full p-2 text-left hover:bg-gray-100 rounded-lg hover:text-blue-500 ">
+                        <button className="w-full text-left rounded-lg hover:text-blue-500 ">
                           {active ? (
                             <Link href="/signIn">
                               <a>Sign In</a>
@@ -224,7 +224,7 @@ export default function Layout({ children }) {
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <button className="w-full p-2 text-left hover:bg-gray-100 rounded-lg hover:text-blue-500 ">
+                        <button className="w-full text-left rounded-lg hover:text-blue-500 ">
                           {active ? (
                             <Link href="/signUp">
                               <a>Sign Up</a>

@@ -17,7 +17,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center w-2/3 sm:1/2 mx-auto mt-5">
           <Link href="/learn/math/homeMath">
-            <a className="rounded-full px-5 py-3 sm:py-1.5 bg-blue-600 hover:bg-opacity-80 text-sm text-white text-center">
+            <a className="rounded-full px-5 py-2 sm:py-1.5 bg-blue-600 hover:bg-opacity-80 text-sm text-white text-center">
               Belajar Sekarang
             </a>
           </Link>

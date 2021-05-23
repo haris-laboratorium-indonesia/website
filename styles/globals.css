@@ -15,11 +15,10 @@ a {
   box-sizing: border-box;
 }
 
-.boxBlur {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-  border-radius: 10px;
+.blur {
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(255, 255, 255, 0.72);
 }
 
 .caret-black{
