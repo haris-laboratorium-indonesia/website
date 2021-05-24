@@ -98,13 +98,13 @@ export default function Layout({ children }) {
                   </Menu.Button>
                 </div>
 
-                <Menu.Items className="absolute right-0 w-2/3 mt-2 p-3 pb-0 origin-top-right backdrop-filter backdrop-blur bg-black text-white bg-opacity-90  mr-0  rounded-lg h-auto  shadow-lg transition duration-500 ease-out">
+                <Menu.Items className="absolute right-0 w-2/3 mt-2 p-3 pb-0 origin-top-right backdrop-filter backdrop-blur bg-black text-white bg-opacity-80  mr-0  rounded-lg h-auto  shadow-lg transition duration-500 ease-out">
                   <div>
                     {/* search button */}
                     {/* container */}
                     <main className="w-full">
                       {/* component search */}
-                      <section className=" flex items-center  px-1.5 py-1 rounded-md bg-gray-100">
+                      <section className=" flex items-center  px-1.5 py-1 rounded-md bg-gray-200">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="h-5 w-5 text-gray-500"
@@ -121,7 +121,7 @@ export default function Layout({ children }) {
                         </svg>
                         <input
                           type="text"
-                          className="text-black bg-gray-100  focus:outline-none caret-black w-full focus:placeholder-black ml-1 "
+                          className="text-black bg-gray-200  focus:outline-none caret-black w-full focus:placeholder-black ml-1 "
                           placeholder="Search"
                         />
                       </section>
