@@ -4,9 +4,9 @@ import { HiOutlineChevronRight } from "react-icons/hi";
 
 export default function ChapterBox(props) {
   return (
-    <div className="hover:bg-gray-200  hover:rounded p-2 sm:py-1">
+    <div className=" ">
       <Link href={`${props.to}`}>
-        <a className=" w-full flex justify-between items-center">
+        <a className=" w-full flex justify-between items-center hover:bg-gray-100 border border-white hover:border-gray-400 p-2 sm:py-1 hover:rounded">
           <div className="flex items-center sm:justify-between">
             <HiFolder className=" w-6 h-6 text-gray-800 mr-1" />
             <div className="truncate">{props.title}</div>

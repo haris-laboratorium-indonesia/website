@@ -7,7 +7,10 @@ import { HiOutlineBookOpen } from "react-icons/hi";
 
 export default function Home() {
   return (
-    <>
+    <> 
+    {/* "@mdx-js/loader": "^0.15.7",
+    "@mdx-js/react": "^1.6.22",
+    "@next/mdx": "^10.2.2", */}
       <section className="mb-10 bg-gray-50 -m-5 py-10 border-b">
         <div className="text-center text-3xl sm:text-4xl font-bold w-5/6 sm:w-1/2 mx-auto">
           <span className="text-gray-800">Pelajari Fisika dan Matematika</span>{" "}
@@ -87,6 +90,7 @@ export default function Home() {
           <div className="text-xs mt-1 text-center w-14">Scan</div>
         </div>
       </main>
+      <div className="min-h-screen"></div>
     </>
   );
 }
