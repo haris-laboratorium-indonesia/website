@@ -6,12 +6,12 @@ export default function PhyTab(props) {
       <div className="flex flex-row border-b border-gray-400 items-center w-full my-5">
         <Link href={props.to}>
           <a>
-            <div className="px-3 py-1.5  border-b-0 ml-2.5 text-gray-500 hover:text-gray-900  ">
+            <div className="px-3 py-1.5  border-b-0 ml-2.5 text-gray-500 hover:text-gray-900 border border-white ">
               Matematika
             </div>
           </a>
         </Link>
-        <div className="bg-gray-100 px-3 py-1.5 rounded-t-md text-gray-900">Fisika</div>
+        <div className="bg-gray-100 px-3 py-1.5 rounded-t-md text-gray-900 border border-gray-400 border-b-0">Fisika</div>
       </div>
     </>
   );
