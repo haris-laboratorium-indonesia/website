@@ -3,10 +3,14 @@ module.exports = {
   purge: ["./pages/**/*.js", "./components/*.js"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        inter:["Inter"]
+      }
+    },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography'),],
 };

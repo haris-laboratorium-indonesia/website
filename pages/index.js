@@ -33,7 +33,7 @@ export default function Home() {
         <div className="mx-auto">
           <Link href="/learn/math/homeMath">
             <a>
-              <div className="h-14 w-14 rounded-xl shadow-md p-3 hover:bg-gray-100 border border-gray-400 items-center justify-center">
+              <div className="h-14 w-14 rounded-xl filter drop-shadow-2xl p-3 hover:bg-gray-100 border border-gray-400 items-center justify-center">
                 <HiOutlineBookOpen
                   className="w-7 h-7 text-gray-700  "
                   strokeWidth={1}
@@ -48,7 +48,7 @@ export default function Home() {
         <div className="mx-auto">
           <Link href="/flashCard/flashCardMath">
             <a>
-              <div className="h-15 w-15 rounded-xl shadow-md p-3 hover:bg-gray-100 border border-gray-400 items-center">
+              <div className="h-15 w-15 rounded-xl filter drop-shadow-2xl p-3 hover:bg-gray-100 border border-gray-400 items-center">
                 <HiOutlineColorSwatch className="w-7 h-7 text-gray-700 " />
               </div>
             </a>
@@ -59,7 +59,7 @@ export default function Home() {
         <div className="mx-auto">
           <Link href="/calculator/calculatorMath">
             <a>
-              <div className="h-15 w-15 rounded-xl shadow-md p-3 hover:bg-gray-100 border border-gray-400 items-center">
+              <div className="h-15 w-15 rounded-xl filter drop-shadow-2xl p-3 hover:bg-gray-100 border border-gray-400 items-center">
                 <HiOutlineCalculator className="w-7 h-7 text-gray-700 " />
               </div>
             </a>
@@ -70,7 +70,7 @@ export default function Home() {
         <div className="mx-auto">
           <Link href="/animation/animationMath">
             <a>
-              <div className="h-15 w-15 rounded-xl shadow-md p-3 hover:bg-gray-100 border border-gray-400 items-center">
+              <div className="h-15 w-15 rounded-xl filter drop-shadow-2xl p-3 hover:bg-gray-100 border border-gray-400 items-center">
                 <HiOutlinePresentationChartLine className="w-7 h-7 text-gray-700 " />
               </div>
             </a>
@@ -81,7 +81,7 @@ export default function Home() {
         <div className="mx-auto">
           <Link href="/scan/scanMath">
             <a>
-              <div className="h-15 w-15 rounded-xl shadow-md p-3 hover:bg-gray-100 border border-gray-400 items-center">
+              <div className="h-15 w-15 rounded-xl filter drop-shadow-2xl p-3 hover:bg-gray-100 border border-gray-400 items-center">
                 <HiOutlineCamera className="w-7 h-7 text-gray-700 " />
               </div>
             </a>

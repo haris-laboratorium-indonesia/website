@@ -1,8 +1,8 @@
 export default function linear() {
   return (
-    <main className="px-5">
+    <main className="px-5 ">
       <header>linear</header>
-      <p>
+      <p className="prose-lg font-inter">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ducimus
         repellendus perferendis enim rem expedita quos in animi cum nostrum,
         quam quis deserunt, natus nemo tempora odit dolores corporis.

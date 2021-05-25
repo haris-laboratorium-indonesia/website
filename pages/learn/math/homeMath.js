@@ -5,7 +5,7 @@ export default function homeMath() {
   return (
     <main>
       <MathTab in="Belajar" to="/learn/phy/homePhy" />
-      <section className="grid grid-cols-1 sm:grid-cols-3 divide-y divide-gray-200 sm:divide-y-0">
+      <section className="p-3 grid grid-cols-1 sm:grid-cols-3 divide-y divide-gray-200 sm:divide-y-0 border border-gray-300 rounded-lg">
         <ChapterBox title="Lingkaran" to="linear" />
         <ChapterBox title="Integral Tentu" to="linear" />
         <ChapterBox title="Integral Tak Tentu" to="linear" />

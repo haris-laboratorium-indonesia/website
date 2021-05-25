@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { Menu } from "@headlessui/react";
 import Head from "next/head";
-import Image from "next/image";
 export default function Layout({ children }) {
   const nav = "px-2 py-1 rounded-md hover:text-blue-600";
   return (
-    <>
+    <div className="font-inter">
       <Head>
         <title>HarisLab</title>
         <link rel="icon" href="/logo.ico" />
@@ -98,13 +97,13 @@ export default function Layout({ children }) {
                   </Menu.Button>
                 </div>
 
-                <Menu.Items className="absolute right-0 w-2/3 mt-2 p-3 pb-0 origin-top-right backdrop-filter backdrop-blur bg-black text-white bg-opacity-80  mr-0  rounded-lg h-auto  shadow-lg transition duration-500 ease-out">
+                <Menu.Items className="absolute right-0 w-2/3 mt-2 p-3 pb-0 origin-top-right blurBlack text-white  mr-0  rounded-lg h-auto shadow-lg">
                   <div>
                     {/* search button */}
                     {/* container */}
                     <main className="w-full">
                       {/* component search */}
-                      <section className=" flex items-center  px-1.5 py-1 rounded-md bg-gray-200">
+                      <section className=" flex items-center  px-1.5 py-1 rounded-md bg-gray-100">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="h-5 w-5 text-gray-500"
@@ -115,13 +114,13 @@ export default function Layout({ children }) {
                           <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            strokeWidth={1}
+                            strokeWidth={2}
                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                           />
                         </svg>
                         <input
                           type="text"
-                          className="text-black bg-gray-200  focus:outline-none caret-black w-full focus:placeholder-black ml-1 "
+                          className="text-black placeholder-gray-500 bg-gray-100  focus:outline-none caret-black w-full focus:placeholder-black ml-1 "
                           placeholder="Search"
                         />
                       </section>
@@ -243,8 +242,7 @@ export default function Layout({ children }) {
         </main>
 
         {/* content */}
-        {/* jangan lupa untuk membuat px-5 setiap pages */}
-        <main className="w-full mx-auto max-w-4xl min-h-screen px-5 mt-5">
+        <main className="w-full mx-auto max-w-4xl min-h-screen px-5 mt-5"> 
           {children}
         </main>
         <footer className="bottom-0 text-sm sm:text-base text-center">
@@ -260,6 +258,6 @@ export default function Layout({ children }) {
           </div>
         </footer>
       </main>
-    </>
+    </div>
   );
 }
