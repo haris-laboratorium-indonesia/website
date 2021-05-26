@@ -5,7 +5,7 @@ export default function homePhy() {
   return (
     <main>
       <PhyTab in="Belajar" to="/learn/math/homeMath" />
-      <section className="p-3 grid grid-cols-1 sm:grid-cols-3 divide-y divide-gray-200 sm:divide-y-0 border border-gray-300 rounded-lg">
+      <section className="grid grid-cols-1 sm:grid-cols-3 divide-y divide-gray-200 sm:divide-y-0 ">
         <ChapterBox title="Fluida Statis" to="fluida" />
         <ChapterBox title="Fluida Dinamis" to="fluidaDinamis" />
         <ChapterBox title="Termodinamika" to="fluida" />
