@@ -29,11 +29,11 @@ export default function Home() {
         Atau coba fitur lainnya
       </div>
       <main className="grid grid-cols-4 sm:grid-cols-5 sm:w-2/3 gap-5 mx-auto mb-10  p-5">
-        <Icons to="/learn/math/homeMath" name="Scan">
+        <Icons to="/learn/math/homeMath" name="Belajar">
           <HiOutlineBookOpen className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
         </Icons>
 
-        <Icons to="/flashCard/flashCardMath" name="Scan">
+        <Icons to="/flashCard/flashCardMath" name="Flash Card">
           <HiOutlineColorSwatch className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
         </Icons>
 
@@ -41,7 +41,7 @@ export default function Home() {
           <HiOutlineCalculator className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
         </Icons>
 
-        <Icons to="/animation/animationMath" name="Scan">
+        <Icons to="/animation/animationMath" name="Animasi">
           <HiOutlinePresentationChartLine className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
         </Icons>
 

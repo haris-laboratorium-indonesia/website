@@ -52,7 +52,7 @@ export default function Layout({ children }) {
                   <a className={nav}>Kalkulator</a>
                 </Link>
                 <Link href="/flashCard/flashCardMath">
-                  <a className={nav}>FlashCard</a>
+                  <a className={nav}>Flash Card</a>
                 </Link>
                 <Link href="/animation/animationMath">
                   <a className={nav}>Animasi</a>
