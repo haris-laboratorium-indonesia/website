@@ -28,7 +28,7 @@ export default function Home() {
       <div className="text-center text-gray-400 mt-16 -mx-5 py-3">
         Atau coba fitur lainnya
       </div>
-      <main className="grid grid-cols-4 sm:grid-cols-5 sm:w-2/3 gap-5 mx-auto mb-10 border-t border-b p-5">
+      <main className="grid grid-cols-4 sm:grid-cols-5 sm:w-2/3 gap-5 mx-auto mb-10  p-5">
         <Icons to="/learn/math/homeMath" name="Scan">
           <HiOutlineBookOpen className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
         </Icons>
@@ -52,7 +52,7 @@ export default function Home() {
       <div className="text-center text-gray-400 mt-16 -mx-5 py-3">
         Portofolio
       </div>
-      <section className="grid grid-cols-1 sm:grid-cols-2 gap-20 sm:gap-5  p-5 -mx-5 border-t border-b">
+      <section className="grid grid-cols-1 sm:grid-cols-2 gap-20 sm:gap-5  p-5 -mx-5 ">
         <div>
           <div className="font-medium text-xl mb-2 text-gray-700 text-center">
             AKA Trading Indonesia
@@ -60,16 +60,19 @@ export default function Home() {
           <div className="rounded-lg border border-gray-200 shadow-xl overflow-hidden">
             <Image
               src="/PortofolioAKA.png"
-              width="1894px"
-              height="940px"
+              width="1534px"
+              height="863px"
               priority
             />
           </div>
-          <div className="bg-[#7F957C] bg-opacity-30 text-green-900 p-2 text-center hover:bg-white border border-green-900 rounded-md mt-3 font-medium">
-            <a href="https://www.aka-tradingindo.com" target="_blank">
-              aka-tradingindo.com
-            </a>
-          </div>
+
+          <a
+            className="mt-4 bg- border border-[#7F957C]  text-[#7F957C] p-2 text-center hover:bg-[#7F957C] hover:bg-opacity-5 rounded-full font-medium block "
+            href="https://www.aka-tradingindo.com"
+            target="_blank"
+          >
+            aka-tradingindo.com
+          </a>
         </div>
         <div>
           <div className="font-medium text-xl mb-2 text-gray-700 text-center">
@@ -78,27 +81,28 @@ export default function Home() {
           <div className="rounded-lg border border-gray-200 shadow-xl overflow-hidden">
             <Image
               src="/PortofolioHarisLab.png"
-              width="1894px"
-              height="940px"
+              width="1534px"
+              height="863px"
               priority
             />
           </div>
-          <div className="bg-blue-100  text-gray-900 p-2 text-center hover:bg-white border border-gray-900 rounded-md mt-3 font-medium">
-            <a href="https://harislab.vercel.app" target="_blank">
-              harislab.vercel.app
-            </a>
-          </div>
+
+          <a
+            className="mt-4 border border-blue-600  text-blue-600 hover:bg-blue-100 p-2 text-center hover:bg-opacity-20 rounded-full font-medium block "
+            href="https://harislab.vercel.app"
+            target="_blank"
+          >
+            harislab.vercel.app
+          </a>
         </div>
       </section>
-      <div className="text-center text-gray-400 mt-16 -mx-5 py-3">
-        F.A.Q
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 p-5 -mx-5 border-t border-b">
+      <div className="text-center text-gray-400 mt-16 -mx-5 py-3">F.A.Q</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 p-5 -mx-5 ">
         <Disclosure as="div" className="flex flex-col w-full ">
-          <Disclosure.Button className=" bg-blue-500 text-white p-2  rounded-md focus:outline-none">
+          <Disclosure.Button className=" hover:bg-blue-50 border border-blue-500 text-blue-500 p-2  rounded-md focus:outline-none">
             Apa itu HarisLab ?
           </Disclosure.Button>
-          <Disclosure.Panel className="text-gray-500 p-2 rounded-md mt-1 border border-gray-500">
+          <Disclosure.Panel className="text-gray-400 p-2 rounded-md mt-1 border border-gray-500">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
             magnam obcaecati repudiandae illo saepe laudantium in voluptates
             nobis omnis, dolore possimus laboriosam velit voluptatum ratione
@@ -108,10 +112,10 @@ export default function Home() {
           </Disclosure.Panel>
         </Disclosure>
         <Disclosure as="div" className="flex flex-col w-full ">
-          <Disclosure.Button className=" bg-blue-500 text-white p-2  rounded-md focus:outline-none">
+          <Disclosure.Button className=" hover:bg-blue-50 border border-blue-500 text-blue-500 p-2  rounded-md focus:outline-none">
             Pembayaran lewat apa ?
           </Disclosure.Button>
-          <Disclosure.Panel className="text-gray-500 p-2 rounded-md mt-1 border border-gray-500">
+          <Disclosure.Panel className="text-gray-400 p-2 rounded-md mt-1 border border-gray-500">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
             fugiat facere consequuntur, non eveniet inventore nam excepturi a
             accusamus, praesentium perspiciatis quos iure asperiores fugit
@@ -125,10 +129,10 @@ export default function Home() {
         </Disclosure>
 
         <Disclosure as="div" className="flex flex-col w-full ">
-          <Disclosure.Button className=" bg-blue-500 text-white p-2  rounded-md focus:outline-none">
+          <Disclosure.Button className=" hover:bg-blue-50 border border-blue-500 text-blue-500 p-2  rounded-md focus:outline-none">
             Untuk kelas berapa ?
           </Disclosure.Button>
-          <Disclosure.Panel className="text-gray-500 p-2 rounded-md mt-1 border border-gray-500">
+          <Disclosure.Panel className="text-gray-400 p-2 rounded-md mt-1 border border-gray-500">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo sunt,
             repellendus minima amet iste illo quam architecto veniam
             necessitatibus, nemo dolorum consequatur ut eveniet expedita nihil,
@@ -138,10 +142,10 @@ export default function Home() {
           </Disclosure.Panel>
         </Disclosure>
         <Disclosure as="div" className="flex flex-col w-full ">
-          <Disclosure.Button className=" bg-blue-500 text-white p-2  rounded-md focus:outline-none">
+          <Disclosure.Button className=" hover:bg-blue-50 border border-blue-500 text-blue-500 p-2  rounded-md focus:outline-none">
             HeadQuarters HarisLab di mana ?{" "}
           </Disclosure.Button>
-          <Disclosure.Panel className="text-gray-500 p-2 rounded-md mt-1 border border-gray-500">
+          <Disclosure.Panel className="text-gray-400 p-2 rounded-md mt-1 border border-gray-500">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
             assumenda cum provident nihil sit illum quasi tempore vel
             blanditiis, totam minima nostrum! Quia tempora blanditiis
@@ -150,10 +154,10 @@ export default function Home() {
           </Disclosure.Panel>
         </Disclosure>
         <Disclosure as="div" className="flex flex-col w-full ">
-          <Disclosure.Button className=" bg-blue-500 text-white p-2  rounded-md focus:outline-none">
+          <Disclosure.Button className=" hover:bg-blue-50 border border-blue-500 text-blue-500 p-2  rounded-md focus:outline-none">
             HarisLab ada fitur apa saja ?{" "}
           </Disclosure.Button>
-          <Disclosure.Panel className="text-gray-500 p-2 rounded-md mt-1 border border-gray-500">
+          <Disclosure.Panel className="text-gray-400 p-2 rounded-md mt-1 border border-gray-500">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
             commodi nobis corporis voluptatum amet molestiae sunt odit
             reiciendis enim mollitia dicta minus itaque doloremque quas
