@@ -90,8 +90,8 @@ export default function Layout({ children }) {
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth="1"
-                        d="M4 6h16M4 12h16M4 18h16"
+                        strokeWidth={2}
+                        d="M4 8h16M4 16h16"
                       />
                     </svg>
                   </Menu.Button>
@@ -242,7 +242,7 @@ export default function Layout({ children }) {
         </main>
 
         {/* content */}
-        <main className="w-full mx-auto max-w-5xl min-h-screen px-5 mt-5"> 
+        <main className="w-full mx-auto max-w-5xl min-h-screen px-5 mt-5">
           {children}
         </main>
         <footer className="bottom-0 text-sm sm:text-base text-center">

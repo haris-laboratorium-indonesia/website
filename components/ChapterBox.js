@@ -11,7 +11,7 @@ export default function ChapterBox({to, title}) {
             <HiFolder className=" w-6 h-6 text-blue-500 mr-1" />
             <div className="truncate">{title}</div>
           </div>
-          <HiOutlineChevronRight className="w-5 h-5 text-gray-500  sm:hidden" />
+          <HiOutlineChevronRight className="w-5 h-5 text-gray-400  sm:hidden" />
         </a>
       </Link>
     </div>

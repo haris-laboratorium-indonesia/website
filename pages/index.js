@@ -25,7 +25,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      <div className="text-center text-gray-600 mt-16 -mx-5 py-3 border-t">
+      <div className="text-center text-gray-400 mt-16 -mx-5 py-3">
         Atau coba fitur lainnya
       </div>
       <main className="grid grid-cols-4 sm:grid-cols-5 sm:w-2/3 gap-5 mx-auto mb-10 border-t border-b p-5">
@@ -49,7 +49,7 @@ export default function Home() {
           <HiOutlineCamera className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
         </Icons>
       </main>
-      <div className="text-center text-gray-600 mt-16 -mx-5 py-3 border-t">
+      <div className="text-center text-gray-400 mt-16 -mx-5 py-3">
         Portofolio
       </div>
       <section className="grid grid-cols-1 sm:grid-cols-2 gap-20 sm:gap-5  p-5 -mx-5 border-t border-b">
@@ -57,7 +57,7 @@ export default function Home() {
           <div className="font-medium text-xl mb-2 text-gray-700 text-center">
             AKA Trading Indonesia
           </div>
-          <div className="rounded-lg hover:shadow-2xl border border-gray-700 overflow-hidden">
+          <div className="rounded-lg border border-gray-200 shadow-xl overflow-hidden">
             <Image
               src="/PortofolioAKA.png"
               width="1894px"
@@ -65,7 +65,7 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="bg-[#7F957C] bg-opacity-30 text-green-900 p-2 text-center hover:bg-white border border-gray-700 rounded-md mt-3 font-medium">
+          <div className="bg-[#7F957C] bg-opacity-30 text-green-900 p-2 text-center hover:bg-white border border-green-900 rounded-md mt-3 font-medium">
             <a href="https://www.aka-tradingindo.com" target="_blank">
               aka-tradingindo.com
             </a>
@@ -75,7 +75,7 @@ export default function Home() {
           <div className="font-medium text-xl mb-2 text-gray-700 text-center">
             HarisLab
           </div>
-          <div className="rounded-lg hover:shadow-2xl border border-gray-700 overflow-hidden">
+          <div className="rounded-lg border border-gray-200 shadow-xl overflow-hidden">
             <Image
               src="/PortofolioHarisLab.png"
               width="1894px"
@@ -83,17 +83,17 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="bg-blue-100  text-gray-900 p-2 text-center hover:bg-white border border-gray-700 rounded-md mt-3 font-medium">
+          <div className="bg-blue-100  text-gray-900 p-2 text-center hover:bg-white border border-gray-900 rounded-md mt-3 font-medium">
             <a href="https://harislab.vercel.app" target="_blank">
               harislab.vercel.app
             </a>
           </div>
         </div>
       </section>
-      <div className="text-center text-gray-600 mt-16 -mx-5 py-3 border-t">
+      <div className="text-center text-gray-400 mt-16 -mx-5 py-3">
         F.A.Q
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 p-5 -mx-5 border-t border-b">
         <Disclosure as="div" className="flex flex-col w-full ">
           <Disclosure.Button className=" bg-blue-500 text-white p-2  rounded-md focus:outline-none">
             Apa itu HarisLab ?
@@ -174,7 +174,7 @@ function Icons({ to, children, name }) {
     <div className="mx-auto group">
       <Link href={to}>
         <a>
-          <div className="h-15 w-15 rounded-xl p-3 border group-hover:border-blue-600 border-gray-400 items-center">
+          <div className="flex justify-centerh-15 w-15 rounded-xl p-3 border group-hover:border-blue-600 border-gray-400 items-center">
             {children}
           </div>
         </a>
