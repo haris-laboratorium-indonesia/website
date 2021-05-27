@@ -14,7 +14,7 @@ export default function Layout({ children }) {
         {/* container */}
         <main className=" sticky top-0 z-10 mx-auto h-auto blur border-b border-gray-300">
           {/* container */}
-          <main className="max-w-5xl w-full mx-auto px-5 py-2">
+          <main className="max-w-5xl w-full mx-auto px-5 py-3">
             {/* desktop navigation*/}
             <nav className="md:flex justify-between items-center hidden text-sm">
               {/* brand name / home button */}
