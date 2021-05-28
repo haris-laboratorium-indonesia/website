@@ -1,20 +1,40 @@
-export default function linear() {
+import { Client } from "@notionhq/client";
+
+export default function linear({ formulas }) {
+  console.log(formulas);
   return (
     <main className="px-5 ">
       <header>linear</header>
-      <p className="prose-lg font-inter">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ducimus
-        repellendus perferendis enim rem expedita quos in animi cum nostrum,
-        quam quis deserunt, natus nemo tempora odit dolores corporis.
-        Repudiandae aliquid quae, similique, autem sed, illo exercitationem
-        harum nam amet necessitatibus esse! Expedita, consequatur eius. Ex
-        nostrum molestiae, saepe, velit sequi quidem aliquam laboriosam error
-        suscipit, ipsam ea asperiores accusamus commodi voluptatem voluptatum
-        sapiente modi nulla totam soluta iste facere. Ducimus at fugit hic
-        dolorum nihil aut illo quod eius quos explicabo tempora culpa dolore cum
-        reiciendis, animi ab quis laudantium consequatur! Voluptatum hic itaque
-        iure fuga ducimus alias error.
-      </p>
+
+      <div className="grid grid-cols-3 gap-2 bg-blue-500 p-5">
+        {formulas.map((formula) => (
+          <a
+            key={formula.id}
+            href="aka-tradingindo.com"
+            className="p-2 rounded-md"
+          >
+            <div>{formula.properties.Judul.title[0].plain_text}</div>
+            <div>{formula.properties.Rumus.rich_text[0].plain_text}</div>
+            <div>
+              {formula.properties.Satuan.rich_text[0].plain_text}
+              {formula.properties.Satuan.rich_text[1].plain_text}
+              {formula.properties.Satuan.rich_text[2].plain_text}
+            </div>
+          </a>
+        ))}
+      </div>
     </main>
   );
+}
+
+export async function getStaticProps() {
+  const notion = new Client({ auth: process.env.NOTION_API_KEY });
+  const response = await notion.databases.query({
+    database_id: process.env.NOTION_DATABASE_ID,
+  });
+  return {
+    props: {
+      formulas: response.results,
+    },
+  };
 }

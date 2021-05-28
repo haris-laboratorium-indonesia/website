@@ -4,13 +4,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      fontFamily:{
-        inter:["Inter"]
-      }
+      fontFamily: {
+        inter: ["Inter"],
+        mw: ["Merriweather"],
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/typography'),],
+  plugins: [require("@tailwindcss/typography")],
 };

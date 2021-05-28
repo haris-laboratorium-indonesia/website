@@ -21,20 +21,6 @@ export default function Layout({ children }) {
               <section className=" flex justify-start items-center">
                 <Link href="/">
                   <a className="text-lg flex flex-row items-center">
-                    <div>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
                     <div className="ml-0.5 font-semibold">
                       Haris
                       <span className="font-light">Lab</span>
@@ -85,20 +71,6 @@ export default function Layout({ children }) {
                   <section>
                     <Link href="/">
                       <a className="text-lg flex flex-row items-center">
-                        <div>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                        </div>
                         <div className="ml-0.5 font-semibold">
                           Haris
                           <span className="font-light">Lab</span>

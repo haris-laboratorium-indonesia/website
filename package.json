@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.2.0",
+    "@notionhq/client": "^0.1.8",
     "@tailwindcss/typography": "^0.4.1",
     "next": "10.2.0",
     "react": "17.0.2",
