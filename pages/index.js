@@ -5,12 +5,13 @@ import { HiOutlineColorSwatch } from "react-icons/hi";
 import { HiOutlineCalculator } from "react-icons/hi";
 import { HiOutlinePresentationChartLine } from "react-icons/hi";
 import { HiOutlineBookOpen } from "react-icons/hi";
+import { HiOutlinePuzzle } from "react-icons/hi";
 import { Disclosure } from "@headlessui/react";
 
 export default function Home() {
   return (
     <>
-      <section className="mb-10 bg-gradient-to-br from-gray-50 to-gray-200 -m-5 py-10 border-b">
+      <section className="mb-10 bg-gradient-to-b from-gray-100 to-gray-50/2 -m-5 py-10">
         <div className="text-center text-3xl sm:text-4xl font-bold w-5/6 sm:w-1/2 mx-auto">
           <span className="text-gray-800">Pelajari Fisika dan Matematika</span>{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500 py-2">
@@ -28,7 +29,7 @@ export default function Home() {
       <div className="text-center text-gray-400 mt-16 -mx-5 py-3">
         Atau coba fitur lainnya
       </div>
-      <main className="grid grid-cols-4 sm:grid-cols-5 sm:w-2/3 gap-5 mx-auto mb-10  p-5">
+      <main className="grid grid-cols-4 sm:grid-cols-6 gap-5 mx-auto mb-10  p-5">
         <Icons to="/learn/math/homeMath" name="Belajar">
           <HiOutlineBookOpen className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
         </Icons>
@@ -47,6 +48,10 @@ export default function Home() {
 
         <Icons to="scan/ScanMath" name="Scan">
           <HiOutlineCamera className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
+        </Icons>
+
+        <Icons to="scan/ScanMath" name="Games">
+          <HiOutlinePuzzle className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
         </Icons>
       </main>
       <div className="text-center text-gray-400 mt-16 -mx-5 py-3">
@@ -178,7 +183,7 @@ function Icons({ to, children, name }) {
     <div className="mx-auto group">
       <Link href={to}>
         <a>
-          <div className="flex justify-centerh-15 w-15 rounded-xl p-3 border group-hover:border-blue-600 border-gray-400 items-center">
+          <div className="flex justify-centerh-15 w-15 rounded-xl p-3.5 border group-hover:border-blue-600 border-gray-400 items-center">
             {children}
           </div>
         </a>
