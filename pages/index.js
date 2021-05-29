@@ -11,21 +11,30 @@ import { Disclosure } from "@headlessui/react";
 export default function Home() {
   return (
     <>
-      <section className="mb-10 bg-gradient-to-b from-gray-100 to-gray-50/2 -m-5 py-10">
-        <div className="text-center text-3xl sm:text-4xl font-bold w-5/6 sm:w-1/2 mx-auto">
-          <span className="text-gray-800">Pelajari Fisika dan Matematika</span>{" "}
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500 py-2">
-            sebagaimana mereka seharusnya dipelajari.
-          </span>
+      <section className="mb-10 bg-gradient-to-b from-[#FEF8EE] to-white sm:to-[#FFFEF9] -m-5 sm:mx-0  flex">
+        <div className="w-full sm:w-1/2 p-5 sm:py-24 sm:px-14">
+          <div className="text-left text-3xl sm:text-4xl font-bold">
+            <span className="text-[#3a3a3c]">Pelajari Fisika dan Matematika</span>{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500 py-2">
+              sebagaimana mereka seharusnya dipelajari.
+            </span>
+          </div>
+          <div className="flex mt-5 justify-center sm:justify-start">
+            <Link href="/learn/math/homeMath">
+              <a className="rounded-full w-full sm:w-1/2 px-5 py-2.5 bg-blue-600 hover:bg-opacity-80 text-sm text-white text-center">
+                Belajar Sekarang
+              </a>
+            </Link>
+          </div>
         </div>
-        <div className="flex justify-center w-2/3 sm:1/2 mx-auto mt-5">
-          <Link href="/learn/math/homeMath">
-            <a className="rounded-full px-5 py-2 sm:py-1.5 bg-blue-600 hover:bg-opacity-80 text-sm text-white text-center">
-              Belajar Sekarang
-            </a>
-          </Link>
+        <div className="hidden sm:block w-1/2">
+          <Image src="/hero.svg" width="1000px" height="1000px" priority />
         </div>
       </section>
+
+      <div>
+        <span className="id"></span>
+      </div>
       <div className="text-center text-gray-400 mt-16 -mx-5 py-3">
         Atau coba fitur lainnya
       </div>
