@@ -49,7 +49,7 @@ export default function Layout({ children }) {
                 <Link href="/scan/scanMath">
                   <a className={nav}>Games</a>
                 </Link>
-                <Link href="/scan/scanMath">
+                <Link href="/merchandise">
                   <a className={nav}>Merchandise</a>
                 </Link>
               </section>

@@ -13,15 +13,15 @@ export default function Home() {
     <>
       <section className="mb-10 bg-gradient-to-b from-gray-50 to-white -m-5 sm:mx-0 gap-5 grid grid-cols-1 sm:grid-cols-2">
         <article className="w-full px-5 py-7 sm:pl-10 sm:py-10">
-          <div className="text-left text-3xl sm:text-4xl font-bold">
+          <div className="w-4/5 sm:w-full text-left text-4xl sm:text-4xl font-bold">
             <span className="text-[#3a3a3c]">
-              Pelajari sains
+              Pelajari Sains
             </span>{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500 py-2">
+            <span className="text-[#8e8e93] py-2 font-light">
               sebagaimana mereka seharusnya dipelajari.
             </span>
           </div>
-          <div className="flex mt-5 justify-center sm:justify-start">
+          <div className="flex mt-7 justify-center sm:justify-start">
             <Link href="/learn/math/homeMath">
               <a className="rounded-full w-full sm:w-1/2 px-5 py-2.5 bg-blue-600 hover:bg-opacity-80 text-sm text-white text-center">
                 Belajar Sekarang
@@ -31,33 +31,33 @@ export default function Home() {
         </article>
         <main className="p-5 sm:p-10 grid grid-cols-4 sm:grid-cols-3 gap-4">
           <Icons to="/learn/math/homeMath" name="Belajar">
-            <HiOutlineBookOpen className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
+            <HiOutlineBookOpen className="w-7 h-7 text-gray-700" />
           </Icons>
 
           <Icons to="/flashCard/flashCardMath" name="Card">
-            <HiOutlineColorSwatch className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
+            <HiOutlineColorSwatch className="w-7 h-7 text-gray-700" />
           </Icons>
 
           <Icons to="/calculator/calculatorMath" name="Kalkulator">
-            <HiOutlineCalculator className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
+            <HiOutlineCalculator className="w-7 h-7 text-gray-700" />
           </Icons>
 
           <Icons to="/animation/animationMath" name="Animasi">
-            <HiOutlinePresentationChartLine className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
+            <HiOutlinePresentationChartLine className="w-7 h-7 text-gray-700" />
           </Icons>
 
           <Icons to="scan/ScanMath" name="Scan">
-            <HiOutlineCamera className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
+            <HiOutlineCamera className="w-7 h-7 text-gray-700" />
           </Icons>
 
           <Icons to="scan/ScanMath" name="Games">
-            <HiOutlinePuzzle className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
+            <HiOutlinePuzzle className="w-7 h-7 text-gray-700" />
           </Icons>
         </main>
         <div className="hidden sm:block w-1/2 object-none object-center"></div>
       </section>
 
-      <section className="grid grid-cols-1 sm:grid-cols-2 gap-20 sm:gap-5  p-5 -mx-5 hidden">
+      <section className=" grid-cols-1 sm:grid-cols-2 gap-20 sm:gap-5  p-5 -mx-5 hidden">
         <div>
           <div className="font-medium text-xl mb-2 text-gray-700 text-center">
             AKA Trading Indonesia
@@ -102,9 +102,9 @@ export default function Home() {
         </div>
       </section>
       <div className="text-center text-gray-400 mt-16 -mx-5 py-3">F.A.Q</div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 p-5 -mx-5 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 px-14 -mx-5 ">
         <Disclosure as="div" className="flex flex-col w-full ">
-          <Disclosure.Button className=" hover:bg-blue-50 border border-blue-500 text-blue-500 p-2  rounded-md focus:outline-none">
+          <Disclosure.Button className=" hover:bg-gray-50 border border-gray-500 text-gray-500 p-2  rounded-md focus:outline-none">
             Apa itu HarisLab ?
           </Disclosure.Button>
           <Disclosure.Panel className="text-gray-400 p-2 rounded-md mt-1 border border-gray-500">
@@ -117,7 +117,7 @@ export default function Home() {
           </Disclosure.Panel>
         </Disclosure>
         <Disclosure as="div" className="flex flex-col w-full ">
-          <Disclosure.Button className=" hover:bg-blue-50 border border-blue-500 text-blue-500 p-2  rounded-md focus:outline-none">
+          <Disclosure.Button className=" hover:bg-gray-50 border border-gray-500 text-gray-500 p-2  rounded-md focus:outline-none">
             Pembayaran lewat apa ?
           </Disclosure.Button>
           <Disclosure.Panel className="text-gray-400 p-2 rounded-md mt-1 border border-gray-500">
@@ -134,7 +134,7 @@ export default function Home() {
         </Disclosure>
 
         <Disclosure as="div" className="flex flex-col w-full ">
-          <Disclosure.Button className=" hover:bg-blue-50 border border-blue-500 text-blue-500 p-2  rounded-md focus:outline-none">
+          <Disclosure.Button className=" hover:bg-gray-50 border border-gray-500 text-gray-500 p-2  rounded-md focus:outline-none">
             Untuk kelas berapa ?
           </Disclosure.Button>
           <Disclosure.Panel className="text-gray-400 p-2 rounded-md mt-1 border border-gray-500">
@@ -147,7 +147,7 @@ export default function Home() {
           </Disclosure.Panel>
         </Disclosure>
         <Disclosure as="div" className="flex flex-col w-full ">
-          <Disclosure.Button className=" hover:bg-blue-50 border border-blue-500 text-blue-500 p-2  rounded-md focus:outline-none">
+          <Disclosure.Button className=" hover:bg-gray-50 border border-gray-500 text-gray-500 p-2  rounded-md focus:outline-none">
             HeadQuarters HarisLab di mana ?{" "}
           </Disclosure.Button>
           <Disclosure.Panel className="text-gray-400 p-2 rounded-md mt-1 border border-gray-500">
@@ -159,7 +159,7 @@ export default function Home() {
           </Disclosure.Panel>
         </Disclosure>
         <Disclosure as="div" className="flex flex-col w-full ">
-          <Disclosure.Button className=" hover:bg-blue-50 border border-blue-500 text-blue-500 p-2  rounded-md focus:outline-none">
+          <Disclosure.Button className=" hover:bg-gray-50 border border-gray-500 text-gray-500 p-2  rounded-md focus:outline-none">
             HarisLab ada fitur apa saja ?{" "}
           </Disclosure.Button>
           <Disclosure.Panel className="text-gray-400 p-2 rounded-md mt-1 border border-gray-500">
@@ -180,15 +180,15 @@ export default function Home() {
 
 function Icons({ to, children, name }) {
   return (
-    <div className="mx-auto group">
+    <div className="mx-auto group ">
       <Link href={to}>
         <a>
-          <div className="flex justify-centerh-15 w-15 rounded-xl p-3.5 border group-hover:border-blue-600 border-gray-400 items-center">
+          <div className="flex justify-centerh-15 w-15 rounded-xl p-3.5 bg-gradient-to-t from-gray-200 to-gray-100 items-center transform hover:-translate-y-1 duration-300 ease-in-out hover:shadow-lg ">
             {children}
           </div>
         </a>
       </Link>
-      <div className="group-hover:text-blue-600 text-xs mt-1 text-center w-14">
+      <div className=" text-xs mt-1 text-center w-14">
         {name}
       </div>
     </div>
