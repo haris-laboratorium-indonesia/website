@@ -1,9 +1,9 @@
 import Link from "next/link";
 export default function PhyTab(props) {
   return (
-    <div className="flex flex-row space-x-2 my-5 items-center w-full">
+    <div className="flex flex-row sm:space-x-5 my-5 items-center w-full">
       <div className="text-3xl font-semibold font-mw py-1">{props.in}</div>
-      <div className="flex flex-row space-x-2">
+      <div className="flex flex-row justify-end sm:justify-start space-x-2 w-full">
         <Link href={props.to}>
           <a>
             <div className="px-3 py-1.5 sm:py-1 text-gray-500 hover:text-gray-900 border  rounded-md border-gray-300 ">
