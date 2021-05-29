@@ -11,10 +11,12 @@ import { Disclosure } from "@headlessui/react";
 export default function Home() {
   return (
     <>
-      <section className="mb-10 bg-gradient-to-b from-[#FEF8EE] to-white sm:to-[#FFFEF9] -m-5 sm:mx-0  flex">
-        <div className="w-full sm:w-1/2 p-5 sm:py-24 sm:px-14">
+      <section className="mb-10 bg-gradient-to-b from-gray-50 to-white -m-5 sm:mx-0 gap-5 grid grid-cols-1 sm:grid-cols-2">
+        <article className="w-full px-5 py-7 sm:pl-10 sm:py-10">
           <div className="text-left text-3xl sm:text-4xl font-bold">
-            <span className="text-[#3a3a3c]">Pelajari Fisika dan Matematika</span>{" "}
+            <span className="text-[#3a3a3c]">
+              Pelajari sains
+            </span>{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500 py-2">
               sebagaimana mereka seharusnya dipelajari.
             </span>
@@ -26,47 +28,36 @@ export default function Home() {
               </a>
             </Link>
           </div>
-        </div>
-        <div className="hidden sm:block w-1/2">
-          <Image src="/hero.svg" width="1000px" height="1000px" priority />
-        </div>
+        </article>
+        <main className="p-5 sm:p-10 grid grid-cols-4 sm:grid-cols-3 gap-4">
+          <Icons to="/learn/math/homeMath" name="Belajar">
+            <HiOutlineBookOpen className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
+          </Icons>
+
+          <Icons to="/flashCard/flashCardMath" name="Card">
+            <HiOutlineColorSwatch className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
+          </Icons>
+
+          <Icons to="/calculator/calculatorMath" name="Kalkulator">
+            <HiOutlineCalculator className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
+          </Icons>
+
+          <Icons to="/animation/animationMath" name="Animasi">
+            <HiOutlinePresentationChartLine className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
+          </Icons>
+
+          <Icons to="scan/ScanMath" name="Scan">
+            <HiOutlineCamera className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
+          </Icons>
+
+          <Icons to="scan/ScanMath" name="Games">
+            <HiOutlinePuzzle className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
+          </Icons>
+        </main>
+        <div className="hidden sm:block w-1/2 object-none object-center"></div>
       </section>
 
-      <div>
-        <span className="id"></span>
-      </div>
-      <div className="text-center text-gray-400 mt-16 -mx-5 py-3">
-        Atau coba fitur lainnya
-      </div>
-      <main className="grid grid-cols-4 sm:grid-cols-6 gap-5 mx-auto mb-10  p-5">
-        <Icons to="/learn/math/homeMath" name="Belajar">
-          <HiOutlineBookOpen className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
-        </Icons>
-
-        <Icons to="/flashCard/flashCardMath" name="Flash Card">
-          <HiOutlineColorSwatch className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
-        </Icons>
-
-        <Icons to="/calculator/calculatorMath" name="Kalkulator">
-          <HiOutlineCalculator className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
-        </Icons>
-
-        <Icons to="/animation/animationMath" name="Animasi">
-          <HiOutlinePresentationChartLine className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
-        </Icons>
-
-        <Icons to="scan/ScanMath" name="Scan">
-          <HiOutlineCamera className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
-        </Icons>
-
-        <Icons to="scan/ScanMath" name="Games">
-          <HiOutlinePuzzle className="w-7 h-7 group-hover:text-blue-600 text-gray-700" />
-        </Icons>
-      </main>
-      <div className="text-center text-gray-400 mt-16 -mx-5 py-3">
-        Portofolio
-      </div>
-      <section className="grid grid-cols-1 sm:grid-cols-2 gap-20 sm:gap-5  p-5 -mx-5 ">
+      <section className="grid grid-cols-1 sm:grid-cols-2 gap-20 sm:gap-5  p-5 -mx-5 hidden">
         <div>
           <div className="font-medium text-xl mb-2 text-gray-700 text-center">
             AKA Trading Indonesia

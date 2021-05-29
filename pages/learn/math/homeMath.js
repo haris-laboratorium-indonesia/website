@@ -27,6 +27,9 @@ export default function homeMath() {
         <ChapterBox title="Statistika" to="linear" />
         <ChapterBox title="Peluang" to="linear" />
       </section>
+      <section className="mt-20">
+        
+      </section>
     </main>
   );
 }

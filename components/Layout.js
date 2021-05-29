@@ -30,7 +30,7 @@ export default function Layout({ children }) {
               </section>
 
               {/* main link */}
-              <section className="flex flex-row justify-end items-center space-x-7 text-sm ">
+              <section className="flex flex-row justify-end items-center space-x-3 text-sm ">
                 <Link href="/learn/math/homeMath">
                   <a className={nav}>Belajar</a>
                 </Link>
@@ -38,7 +38,7 @@ export default function Layout({ children }) {
                   <a className={nav}>Kalkulator</a>
                 </Link>
                 <Link href="/flashCard/flashCardMath">
-                  <a className={nav}>Flash Card</a>
+                  <a className={nav}>Card</a>
                 </Link>
                 <Link href="/animation/animationMath">
                   <a className={nav}>Animasi</a>
@@ -48,6 +48,9 @@ export default function Layout({ children }) {
                 </Link>
                 <Link href="/scan/scanMath">
                   <a className={nav}>Games</a>
+                </Link>
+                <Link href="/scan/scanMath">
+                  <a className={nav}>Merchandise</a>
                 </Link>
               </section>
 
