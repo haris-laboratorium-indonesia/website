@@ -251,9 +251,9 @@ export default function Layout({ children }) {
         <main className="w-full mx-auto max-w-5xl min-h-screen px-5 mt-5">
           {children}
         </main>
-        <footer className="bottom-0 text-sm sm:text-base text-center">
+        <footer className="bottom-0 text-xs sm:text-base text-center">
           <div className="p-3 sm:p-5 text-gray-600">
-            &copy;2021 Haris<span className="font-light">Lab</span> ∙ Made by{" "}
+            &copy;2021 Haris<span className="font-light">Lab</span> Inc ∙ Made by{" "}
             <a
               target="_blank"
               href="https://twitter.com/haritssr"

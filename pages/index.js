@@ -97,9 +97,9 @@ export default function Home() {
         Kami Peduli Tentang
       </div>
 
-      <section className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-10">
+      <section className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-10 px-5 sm:px-10">
         {tools.map((tool) => (
-          <div key={tool.id}>
+          <div key={tool.ID}>
             {/* icons */}
             <div>
               <svg
@@ -175,7 +175,7 @@ export default function Home() {
         </div>
       </section>
       <div className="text-center text-gray-400 mt-16 mb-10 -mx-5 py-3">FAQ</div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 px-14 -mx-5 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 px-10 -mx-5 ">
         <Disclosure as="div" className="flex flex-col w-full ">
           <Disclosure.Button className=" hover:bg-blue-50 border border-gray-500 text-gray-500 p-2  rounded-md focus:outline-none">
             Apa itu HarisLab ?
