@@ -11,7 +11,7 @@ export default function PhyTab(props) {
             </div>
           </a>
         </Link>
-        <div className=" bg-gray-100 px-2 py-1 rounded-md text-gray-900 border border-gray-400">
+        <div className=" bg-gray-100 px-2 py-1 rounded-md text-gray-900 border border-gray-400 shadow-inner">
           Fisika
         </div>
       </div>

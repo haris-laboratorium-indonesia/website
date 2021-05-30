@@ -4,7 +4,7 @@ export default function MathTab(props) {
     <div className="flex flex-row sm:space-x-5 my-5 items-center w-full">
       <div className="text-2xl sm:text-3xl font-semibold font-mw py-1">{props.in}</div>
       <div className="flex flex-row justify-end sm:justify-start space-x-2 w-full ">
-        <div className=" bg-gray-100 px-2 py-1 rounded-md text-gray-900 border border-gray-400">
+        <div className=" bg-gray-100 px-2 py-1 rounded-md text-gray-900 border border-gray-400 shadow-inner">
           Matematika
         </div>
         <Link href={props.to}>
