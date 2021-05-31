@@ -11,7 +11,7 @@ import { Disclosure } from "@headlessui/react";
 export default function Home() {
   const tools = [
     {
-      ID:"1",
+      ID: "1",
       SVGPaths:
         "M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5",
       CTALink: "/merchandise",
@@ -20,7 +20,7 @@ export default function Home() {
         "What seems right is partly is what we're used to seeing on that screen everyday and when it changes immediately there's all kinds of little pattern recognizing in our brain.",
     },
     {
-      ID:"2",
+      ID: "2",
       SVGPaths:
         "M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4",
       CTALink: "/merchandise",
@@ -29,7 +29,7 @@ export default function Home() {
         "The Ability to retent the information for long time, in order to reuse the information, how to store the information is matters.",
     },
     {
-      ID:"3",
+      ID: "3",
       SVGPaths:
         "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z",
       CTALink: "/merchandise",
@@ -38,7 +38,7 @@ export default function Home() {
         "We make the design as usefull as delightul as fast as follow laws of ux as possible. So you can meet your need as soon as possible.",
     },
     {
-      ID:"4",
+      ID: "4",
       SVGPaths:
         "M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z",
       CTALink: "/merchandise",
@@ -51,8 +51,8 @@ export default function Home() {
     <>
       <section className="mb-10 bg-gradient-to-b from-gray-50 to-white -m-5 sm:mx-0 gap-5 grid grid-cols-1 sm:grid-cols-2">
         <article className="w-full px-5 py-7 sm:pl-10 sm:py-10">
-          <div className="w-4/5 sm:w-full text-left text-4xl sm:text-4xl font-bold">
-            <span className="text-gray-900">Pelajari Sains</span>{" "}
+          <div className="w-4/5 sm:w-full text-left text-4xl sm:text-4xl font-mw">
+            <span className="text-gray-900 font-extrabold ">Pelajari Sains</span>{" "}
             <span className="text-gray-600 py-2 font-normal">
               sebagaimana mereka seharusnya dipelajari.
             </span>
@@ -90,10 +90,32 @@ export default function Home() {
             <HiOutlinePuzzle className="w-7 h-7 text-gray-700" />
           </Icons>
         </main>
-        <div className="hidden sm:block w-1/2 object-none object-center"></div>
+      </section>
+      <div className="text-center font-light text-gray-400 mt-16 mb-10 sm:mb-2 -mx-5 py-3">
+Bagaimana kami menyajikan informasi      </div>
+      {/* Framework */}
+      <section className="mb-24 space-y-5 sm:space-y-0 flex flex-col sm:flex-row justify-between items-center px-5 sm:px-10">
+        <div className="w-full sm:w-1/2">
+          <div className="text-4xl font-semibold mb-2 font-mw">Framework</div>
+          <div className="text-xl">
+            Di HarisLab, semua bab pelajaran dibuat sebuah struktur informasi
+            sedemikia rupa agar mudah diingat. Sehingga kita bisa berekspektasi
+            kepada setiap bab nya, bahwa ini yang akan kita pelajari. Coba dan
+            rasakan kemudahannya.
+          </div>
+        </div>
+        <div className="w-full sm:w-1/2">
+          <Image
+            src="/Framework.svg"
+            height="650px"
+            width="881px"
+            layout="intrinsic"
+            priority
+          />
+        </div>
       </section>
       {/* Alat */}
-      <div className="text-center text-gray-400 mt-16 mb-10 -mx-5 py-3">
+      <div className="text-center font-light text-gray-400 mt-16 mb-10 -mx-5 py-3">
         Kami Peduli Tentang
       </div>
 
@@ -174,7 +196,9 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <div className="text-center text-gray-400 mt-16 mb-10 -mx-5 py-3">FAQ</div>
+      <div className="text-center font-light text-gray-400 mt-16 mb-10 -mx-5 py-3">
+        FAQ
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 px-5 sm:px-14 -mx-5 ">
         <Disclosure as="div" className="flex flex-col w-full ">
           <Disclosure.Button className=" hover:bg-blue-50 border border-gray-500 text-gray-500 p-2  rounded-md focus:outline-none">
