@@ -2,7 +2,7 @@ import Image from "next/image";
 import { HiOutlinePlusSm } from "react-icons/hi";
 import { HiOutlineShare } from "react-icons/hi";
 export default function merchandise() {
-  const kaos = [
+  const kaoss = [
     { id: "1", judul: " Hukum Newton HarisLab T-Shirt", image: "/kaos1.jpg" },
     {
       id: "2",
@@ -17,25 +17,67 @@ export default function merchandise() {
       image: "/kaos5.jpg",
     },
     { id: "6", judul: " Pythagoras HarisLab T-Shirt", image: "/kaos6.jpg" },
-    { id: "7", judul: " Elektromagnetik HarisLab T-Shirt", image: "/kaos7.jpg" },
+    {
+      id: "7",
+      judul: " Elektromagnetik HarisLab T-Shirt",
+      image: "/kaos7.jpg",
+    },
+  ];
+  const posters = [
+    { id: "1", judul: " Hukum Newton HarisLab T-Shirt", image: "/pic1.jpeg" },
+    { id: "2", judul: " HukumT-Shirt", image: "/pic2.jpeg" },
+    { id: "3", judul: " Hukum Kepler HarisLab T-Shirt", image: "/pic3.jpeg" },
+    { id: "4", judul: " Schrodinger HarisLab T-Shirt", image: "/pic4.jpeg" },
+    { id: "5", judul: " Konstanta Pla", image: "/pic5.jpeg" },
   ];
   return (
     <>
-      <div className="text-2xl sm:text-3xl font-semibold font-mw mt-5">
+      <div className="text-2xl sm:text-3xl font-semibold font-mw my-5">
         Merchandise
       </div>
-
-      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-5 gap-y-10 sm:gap-x-10 my-5">
-        {kaos.map((kao) => (
-          <div key={kaos.id}>
+      <div className="mt-20 mb-5 text-4xl font-semibold">Kaos</div>
+      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-10 gap-y-10 sm:gap-x-10 my-5">
+        {kaoss.map((kaos) => (
+          <div key={kaoss.id}>
             <div className="font-light text-xs sm:text-sm mb-2 w-4/5 truncate">
-              {kao.judul}
+              {kaos.judul}
             </div>
             <Image
-              className="rounded"
-              src={kao.image}
+              className="rounded-md"
+              src={kaos.image}
               width="1000px"
               height="1000px"
+              layout="intrinsic"
+              priority
+            />
+            <div className="flex items-center justify-between">
+              <div className="flex space-x-1">
+                <div className="p-1 border border-white rounded hover:border-[#3a3a3c]">
+                  <HiOutlineShare className="text-gray-500 hover:text-[#3a3a3c]" />
+                </div>
+                <div className="p-1 border border-white rounded hover:border-[#3a3a3c]">
+                  <HiOutlinePlusSm className="text-gray-500 hover:text-[#3a3a3c]" />
+                </div>
+              </div>
+              <div className="rounded px-5 py-1 border hover:bg-black border-gray-600 text-xs hover:text-white bg-white text-black">
+                Beli
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="mt-20 mb-5 text-4xl font-semibold">Poster</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+        {posters.map((poster) => (
+          <div key={kaoss.id}>
+            <div className="font-light text-xs sm:text-sm mb-2 w-4/5 truncate">
+              {poster.judul}
+            </div>
+            <Image
+              className="rounded-md"
+              src={poster.image}
+              width="1280px"
+              height="960px"
               layout="intrinsic"
               priority
             />

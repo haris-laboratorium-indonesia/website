@@ -6,7 +6,7 @@ export default function linear({ formulas }) {
     <main className="px-5 ">
       <header>linear</header>
 
-      <div className="grid grid-cols-3 gap-2 bg-blue-500 p-5">
+      <div className="grid grid-cols-3 gap-2 bg-blue-500 p-5 prose">
         {formulas.map((formula) => (
           <a
             key={formula.id}
