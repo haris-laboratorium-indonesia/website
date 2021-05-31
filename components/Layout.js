@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Menu } from "@headlessui/react";
 import Head from "next/head";
 export default function Layout({ children }) {
-  const nav = "px-2 py-1 rounded-md hover:text-blue-600";
+  const nav = "px-2 py-1 rounded-md hover:text-[#007AFF] text-[#45484a]";
   return (
     <div className="font-inter">
       <Head>
@@ -21,9 +21,9 @@ export default function Layout({ children }) {
               <section className=" flex justify-start items-center">
                 <Link href="/">
                   <a className="text-lg flex flex-row items-center">
-                    <div className="ml-0.5 font-semibold ">
+                    <div className="ml-0.5 font-semibold text-[#1c1c1e] ">
                       Haris
-                      <span className="font-light">Lab</span>
+                      <span className="font-light text-[#45484a]">Lab</span>
                     </div>
                   </a>
                 </Link>
@@ -57,12 +57,12 @@ export default function Layout({ children }) {
               {/* signIn/signUp */}
               <section className="flex flex-row justify-end items-center space-x-2">
                 <Link href="/signIn">
-                  <a className="px-2 py-1 hover:rounded-md hover:text-blue-500 ">
+                  <a className="px-2 py-1 hover:rounded-md hover:text-[#007AFF] text-[#45484a] ">
                     Masuk
                   </a>
                 </Link>
                 <Link href="/signUp">
-                  <a className="text-xs rounded-full bg-blue-600  text-white hover:bg-opacity-90  px-3 py-1.5">
+                  <a className="text-xs rounded-full bg-[#007AFF]  text-white hover:bg-opacity-90  px-3 py-1.5">
                     Daftar
                   </a>
                 </Link>
@@ -77,9 +77,9 @@ export default function Layout({ children }) {
                   <section>
                     <Link href="/">
                       <a className="text-lg flex flex-row items-center">
-                        <div className="ml-0.5 font-semibold">
+                        <div className="ml-0.5 font-semibold text-[#1c1c1e] ">
                           Haris
-                          <span className="font-light">Lab</span>
+                          <span className="font-light text-[#45484a]">Lab</span>
                         </div>
                       </a>
                     </Link>
