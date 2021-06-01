@@ -96,20 +96,20 @@ export default function Layout({ children }) {
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth={2}
+                        strokeWidth={1}
                         d="M4 8h16M4 16h16"
                       />
                     </svg>
                   </Menu.Button>
                 </div>
 
-                <Menu.Items className="absolute right-0 w-2/3 mt-2 p-3 pb-0 origin-top-right blurBlack text-white  mr-0  rounded-lg h-auto shadow-lg">
-                  <div>
+                <Menu.Items className="absolute right-0 w-full mt-2 p-3 origin-top-right text-[#1c1c1e]   bg-white shadow-hero border border-[#8e8e93] rounded-md">
+                  <section className="mb-2">
                     {/* search button */}
                     {/* container */}
                     <main className="w-full">
                       {/* component search */}
-                      <section className=" flex items-center  px-1.5 py-1 rounded-md bg-gray-100">
+                      <section className=" flex items-center  px-1.5 py-1.5 rounded bg-gray-100 border border-[#8e8e93]">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="h-5 w-5 text-gray-500"
@@ -131,116 +131,171 @@ export default function Layout({ children }) {
                         />
                       </section>
                     </main>
-                  </div>
-                  <div className="py-3 space-y-3 border-b">
-                    <Menu.Item>
-                      {({ active }) => (
-                        <button className="w-full text-left rounded-lg hover:text-blue-500 ">
-                          {active ? (
-                            <Link href="/learn/math/homeMath">
-                              <a>Belajar</a>
-                            </Link>
-                          ) : (
-                            <Link href="/learn/math/homeMath">
-                              <a>Belajar</a>
-                            </Link>
-                          )}
-                        </button>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <button className="w-full text-left rounded-lg hover:text-blue-500 ">
-                          {active ? (
-                            <Link href="/calculator/calculatorMath">
-                              <a>Kalkulator</a>
-                            </Link>
-                          ) : (
-                            <Link href="/calculator/calculatorMath">
-                              <a>Kalkulator</a>
-                            </Link>
-                          )}
-                        </button>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <button className="w-full text-left rounded-lg hover:text-blue-500 ">
-                          {active ? (
-                            <Link href="/animation/animationMath">
-                              <a>Animasi</a>
-                            </Link>
-                          ) : (
-                            <Link href="/animation/animationMath">
-                              <a>Animasi</a>
-                            </Link>
-                          )}
-                        </button>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <button className="w-full text-left rounded-lg hover:text-blue-500 ">
-                          {active ? (
-                            <Link href="/flashCard/flashCardMath">
-                              <a>Flash Card</a>
-                            </Link>
-                          ) : (
-                            <Link href="/flashCard/animationMath">
-                              <a>Flash Card</a>
-                            </Link>
-                          )}
-                        </button>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <button className="w-full text-left rounded-lg hover:text-blue-500 ">
-                          {active ? (
-                            <Link href="/scan/scanMath">
-                              <a>Scan</a>
-                            </Link>
-                          ) : (
-                            <Link href="/scan/scanMath">
-                              <a>Scan</a>
-                            </Link>
-                          )}
-                        </button>
-                      )}
-                    </Menu.Item>
-                  </div>
-                  <div className="py-3 space-y-3">
-                    <Menu.Item>
-                      {({ active }) => (
-                        <button className="w-full text-left rounded-lg hover:text-blue-500 ">
-                          {active ? (
-                            <Link href="/signIn">
-                              <a>Sign In</a>
-                            </Link>
-                          ) : (
-                            <Link href="/signIn">
-                              <a>Sign In</a>
-                            </Link>
-                          )}
-                        </button>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <button className="w-full text-left rounded-lg hover:text-blue-500 ">
-                          {active ? (
-                            <Link href="/signUp">
-                              <a>Sign Up</a>
-                            </Link>
-                          ) : (
-                            <Link href="/signUp">
-                              <a>Sign Up</a>
-                            </Link>
-                          )}
-                        </button>
-                      )}
-                    </Menu.Item>
-                  </div>
+                  </section>
+                  <section className="grid grid-cols-2">
+                    {/* Alat */}
+                    <div className=" p-2 flex flex-col space-y-2">
+                      <div className="text-xs text-[#45484a]">ALAT</div>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button className="w-full text-left rounded-lg  ">
+                            {active ? (
+                              <Link href="/learn/math/homeMath">
+                                <a>Belajar</a>
+                              </Link>
+                            ) : (
+                              <Link href="/learn/math/homeMath">
+                                <a>Belajar</a>
+                              </Link>
+                            )}
+                          </button>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button className="w-full text-left rounded-lg  ">
+                            {active ? (
+                              <Link href="/calculator/calculatorMath">
+                                <a>Kalkulator</a>
+                              </Link>
+                            ) : (
+                              <Link href="/calculator/calculatorMath">
+                                <a>Kalkulator</a>
+                              </Link>
+                            )}
+                          </button>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button className="w-full text-left rounded-lg  ">
+                            {active ? (
+                              <Link href="/animation/animationMath">
+                                <a>Animasi</a>
+                              </Link>
+                            ) : (
+                              <Link href="/animation/animationMath">
+                                <a>Animasi</a>
+                              </Link>
+                            )}
+                          </button>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button className="w-full text-left rounded-lg  ">
+                            {active ? (
+                              <Link href="/flashCard/flashCardMath">
+                                <a>Flash Card</a>
+                              </Link>
+                            ) : (
+                              <Link href="/flashCard/animationMath">
+                                <a>Flash Card</a>
+                              </Link>
+                            )}
+                          </button>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button className="w-full text-left rounded-lg  ">
+                            {active ? (
+                              <Link href="/scan/scanMath">
+                                <a>Scan</a>
+                              </Link>
+                            ) : (
+                              <Link href="/scan/scanMath">
+                                <a>Scan</a>
+                              </Link>
+                            )}
+                          </button>
+                        )}
+                      </Menu.Item>
+                    </div>
+                    {/* Lainnya */}
+                    <div className=" p-2 flex flex-col space-y-2">
+                      <div className="text-xs text-[#45484a]">LAINNYA</div>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button className="w-full text-left rounded-lg  ">
+                            {active ? (
+                              <Link href="/scan/scanMath">
+                                <a>Portofolio</a>
+                              </Link>
+                            ) : (
+                              <Link href="/scan/scanMath">
+                                <a>Portofolio</a>
+                              </Link>
+                            )}
+                          </button>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button className="w-full text-left rounded-lg  ">
+                            {active ? (
+                              <Link href="/scan/scanMath">
+                                <a>Booking Me!</a>
+                              </Link>
+                            ) : (
+                              <Link href="/scan/scanMath">
+                                <a>Booking Me!</a>
+                              </Link>
+                            )}
+                          </button>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button className="w-full text-left rounded-lg  ">
+                            {active ? (
+                              <Link href="/scan/scanMath">
+                                <a>Merchandise</a>
+                              </Link>
+                            ) : (
+                              <Link href="/scan/scanMath">
+                                <a>Merchandise</a>
+                              </Link>
+                            )}
+                          </button>
+                        )}
+                      </Menu.Item>
+                    </div>
+                    <div className="col-span-2 my-2">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button className="w-full text-center rounded-md border border-[#8e8e93] py-1.5">
+                            {active ? (
+                              <Link href="/signIn">
+                                <a>Masuk</a>
+                              </Link>
+                            ) : (
+                              <Link href="/signIn">
+                                <a>Masuk</a>
+                              </Link>
+                            )}
+                          </button>
+                        )}
+                      </Menu.Item>
+                    </div>
+                    <div className="col-span-2 ">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button className="w-full text-center rounded-md bg-[#007AFF] text-white py-1.5">
+                            {active ? (
+                              <Link href="/signUp">
+                                <a>Daftar</a>
+                              </Link>
+                            ) : (
+                              <Link href="/signUp">
+                                <a>Daftar</a>
+                              </Link>
+                            )}
+                          </button>
+                        )}
+                      </Menu.Item>
+                    </div>
+                  </section>
                 </Menu.Items>
               </Menu>
             </nav>
@@ -253,7 +308,8 @@ export default function Layout({ children }) {
         </main>
         <footer className="bottom-0 text-xs sm:text-base text-center">
           <div className="p-3 sm:p-5 text-gray-600">
-            &copy;2021 Haris<span className="font-light">Lab</span> Inc ∙ Made by{" "}
+            &copy;2021 Haris<span className="font-light">Lab</span> Inc ∙ Made
+            by{" "}
             <a
               target="_blank"
               href="https://twitter.com/haritssr"

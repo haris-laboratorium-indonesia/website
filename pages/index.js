@@ -49,7 +49,7 @@ export default function Home() {
   ];
   return (
     <>
-      <section className="mb-10 bg-gradient-to-b from-gray-50 to-white -m-5 sm:mx-0 gap-5 grid grid-cols-1 sm:grid-cols-2">
+      <section className="mb-10 bg-gradient-to-b from-gray-100 to-white -m-5 sm:mx-0 gap-5 grid grid-cols-1 sm:grid-cols-2">
         <article className="w-full px-5 py-7 sm:pl-10 sm:py-10">
           <div className="w-4/5 sm:w-full text-left text-4xl sm:text-4xl font-mw">
             <span className="text-[#1c1c1e] font-extrabold ">
