@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { Menu } from "@headlessui/react";
 import Head from "next/head";
+import { Popover } from "@headlessui/react";
+import { HiOutlineChevronDown } from "react-icons/hi";
+
 export default function Layout({ children }) {
   const nav = "px-2 py-1 rounded-md hover:text-[#007AFF] text-[#45484a]";
   return (
@@ -14,14 +17,14 @@ export default function Layout({ children }) {
         {/* container */}
         <main className=" sticky top-0 z-10 mx-auto h-auto blur border-b border-gray-300">
           {/* container */}
-          <main className="max-w-5xl w-full mx-auto px-5 sm:px-0 py-2.5">
+          <main className="max-w-5xl w-full mx-auto px-0 py-2.5">
             {/* desktop navigation*/}
             <nav className="md:flex justify-between items-center hidden text-sm">
               {/* brand name / home button */}
-              <section className=" flex justify-start items-center">
+              <section className=" flex justify-start items-center ">
                 <Link href="/">
                   <a className="text-lg flex flex-row items-center">
-                    <div className="ml-0.5 font-semibold text-[#1c1c1e] ">
+                    <div className="ml-0.5 font-semibold text-[#1c1c1e]  ">
                       Haris
                       <span className="font-light text-[#45484a]">Lab</span>
                     </div>
@@ -30,7 +33,7 @@ export default function Layout({ children }) {
               </section>
 
               {/* main link */}
-              <section className="flex flex-row justify-end items-center space-x-3 text-xs ">
+              <section className="flex flex-row justify-end items-center space-x-3 text-sm ">
                 <Link href="/math/homeMath">
                   <a className={nav}>Belajar</a>
                 </Link>
@@ -40,7 +43,6 @@ export default function Layout({ children }) {
                 <Link href="/calculatorMath">
                   <a className={nav}>Kalkulator</a>
                 </Link>
-
                 <Link href="/animationMath">
                   <a className={nav}>Animasi</a>
                 </Link>
@@ -50,15 +52,33 @@ export default function Layout({ children }) {
                 <Link href="/gamesMath">
                   <a className={nav}>Games</a>
                 </Link>
-                <Link href="/merchandise">
-                  <a className={nav}>Merchandise</a>
-                </Link>
-                <Link href="/bookingme">
-                  <a className={nav}>Booking Me !</a>
-                </Link>
-                <Link href="/portofolio">
-                  <a className={nav}>Portofolio</a>
-                </Link>
+                <Popover className="relative">
+                  <Popover.Button className="py-0.5 px-2 flex justify-between items-center hover:text-[#007AFF] text-[#45484a]">
+                    <span>Lainnya</span>
+                    <HiOutlineChevronDown
+                      className="text-opacity-70"
+                      aria-hidden="true"
+                    />
+                  </Popover.Button>
+
+                  <Popover.Panel className="blur shadow-xl py-2 w-32 absolute z-10 mt-3 rounded border border-gray-300 flex flex-col space-y-2">
+                    <Link href="/merchandise">
+                      <a className="px-2 py-1 text-center hover:text-[#007AFF] text-[#45484a] hover:bg-gray-100">
+                        Merchandise
+                      </a>
+                    </Link>
+                    <Link href="/bookingme">
+                      <a className="px-2 py-1 text-center hover:text-[#007AFF] text-[#45484a] hover:bg-gray-100">
+                        Booking Me !
+                      </a>
+                    </Link>
+                    <Link href="/portofolio">
+                      <a className="px-2 py-1 text-center hover:text-[#007AFF] text-[#45484a] hover:bg-gray-100">
+                        Portofolio
+                      </a>
+                    </Link>
+                  </Popover.Panel>
+                </Popover>
               </section>
 
               {/* signIn/signUp */}
@@ -84,7 +104,7 @@ export default function Layout({ children }) {
                   <section>
                     <Link href="/">
                       <a className="text-lg flex flex-row items-center">
-                        <div className="ml-0.5 font-semibold text-[#1c1c1e] ">
+                        <div className="ml-0.5 font-semibold text-[#1c1c1e] pl-5">
                           Haris
                           <span className="font-light text-[#45484a]">Lab</span>
                         </div>
@@ -92,7 +112,7 @@ export default function Layout({ children }) {
                     </Link>
                   </section>
 
-                  <Menu.Button className=" focus:outline-none ">
+                  <Menu.Button className=" focus:outline-none pr-5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-7 w-7"
@@ -110,7 +130,7 @@ export default function Layout({ children }) {
                   </Menu.Button>
                 </div>
 
-                <Menu.Items className="absolute right-0 w-full mt-2 p-3 origin-top-right text-[#1c1c1e]   bg-white shadow-hero border border-[#8e8e93] rounded-md">
+                <Menu.Items className="absolute right-0 w-full mt-2 p-5 origin-top-right text-[#1c1c1e] bg-white border-b shadow-hero">
                   <section className="mb-2">
                     {/* search button */}
                     {/* container */}
@@ -139,7 +159,42 @@ export default function Layout({ children }) {
                       </section>
                     </main>
                   </section>
-                  <section className="grid grid-cols-2">
+
+                  <section className="grid grid-cols-2 gap-5 mt-5">
+                    <div>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button className="w-full text-center rounded-md border border-[#8e8e93] py-1.5">
+                            {active ? (
+                              <Link href="/signIn">
+                                <a>Masuk</a>
+                              </Link>
+                            ) : (
+                              <Link href="/signIn">
+                                <a>Masuk</a>
+                              </Link>
+                            )}
+                          </button>
+                        )}
+                      </Menu.Item>
+                    </div>
+                    <div>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button className="w-full text-center rounded-md bg-[#007AFF] text-white py-1.5">
+                            {active ? (
+                              <Link href="/signUp">
+                                <a>Daftar</a>
+                              </Link>
+                            ) : (
+                              <Link href="/signUp">
+                                <a>Daftar</a>
+                              </Link>
+                            )}
+                          </button>
+                        )}
+                      </Menu.Item>
+                    </div>
                     {/* Alat */}
                     <div className=" p-2 flex flex-col space-y-2">
                       <div className="text-xs text-[#45484a]">ALAT</div>
@@ -263,40 +318,6 @@ export default function Layout({ children }) {
                             ) : (
                               <Link href="/scanMath">
                                 <a>Merchandise</a>
-                              </Link>
-                            )}
-                          </button>
-                        )}
-                      </Menu.Item>
-                    </div>
-                    <div className="col-span-2 my-2">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <button className="w-full text-center rounded-md border border-[#8e8e93] py-1.5">
-                            {active ? (
-                              <Link href="/signIn">
-                                <a>Masuk</a>
-                              </Link>
-                            ) : (
-                              <Link href="/signIn">
-                                <a>Masuk</a>
-                              </Link>
-                            )}
-                          </button>
-                        )}
-                      </Menu.Item>
-                    </div>
-                    <div className="col-span-2 ">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <button className="w-full text-center rounded-md bg-[#007AFF] text-white py-1.5">
-                            {active ? (
-                              <Link href="/signUp">
-                                <a>Daftar</a>
-                              </Link>
-                            ) : (
-                              <Link href="/signUp">
-                                <a>Daftar</a>
                               </Link>
                             )}
                           </button>
