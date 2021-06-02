@@ -17,7 +17,7 @@ export default function Home() {
       {/* Hero */}
       <section className=" flex justify-center bg-gradient-to-b from-gray-100 to-white">
         <section className=" gap-5 grid grid-cols-1 sm:grid-cols-2 max-w-5xl mx-auto py-10 sm:py-5">
-          <article className="w-full px-5 py-3 sm:pl-0 sm:py-10">
+          <article className="w-full px-5 py-3 lg:pl-0 sm:py-10">
             <div className="w-full text-center sm:text-left text-4xl sm:text-4xl font-mw">
               <span className=" font-extrabold ">Pelajari Sains</span>{" "}
               <span className="py-2 font-normal">

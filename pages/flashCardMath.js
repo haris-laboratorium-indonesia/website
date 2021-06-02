@@ -5,7 +5,7 @@ export default function flashCardMath() {
   
   return (
     <main className="max-w-5xl mx-auto ">
-      <div className="px-5 sm:px-0">
+      <div className="px-5 lg:px-0">
         <MathTab in="Card" to="flashCardPhy" />
       </div>
 

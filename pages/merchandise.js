@@ -6,7 +6,7 @@ import { Posters } from "../lib/Posters";
 
 export default function merchandise() {
   return (
-    <main className="max-w-5xl mx-auto px-5 sm:px-0">
+    <main className="max-w-5xl mx-auto px-5 lg:px-0">
       <div className="text-2xl sm:text-3xl font-semibold font-mw my-5">
         Merchandise
       </div>

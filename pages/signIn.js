@@ -1,6 +1,6 @@
 export default function signUp() {
   return (
-    
+    <main className="max-w-5xl mx-auto px-5 lg:px-0">
       <form className="mx-auto w-full sm:w-1/2 space-y-4 shadow-md border border-gray-500 rounded-lg p-5 bg-white">
         <h1 className="text-3xl  font-medium">Sign In</h1>
         <section className="flex flex-col">
@@ -33,5 +33,6 @@ export default function signUp() {
           Sign In
         </button>
       </form>
+    </main>
   );
 }

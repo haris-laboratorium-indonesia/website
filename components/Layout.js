@@ -17,14 +17,14 @@ export default function Layout({ children }) {
         {/* container */}
         <main className=" sticky top-0 z-10 mx-auto h-auto blur border-b border-gray-300">
           {/* container */}
-          <main className="max-w-5xl w-full mx-auto px-0 py-2.5">
+          <main className="max-w-5xl w-full mx-auto  py-2">
             {/* desktop navigation*/}
-            <nav className="md:flex justify-between items-center hidden text-sm">
+            <nav className="md:flex justify-between items-center hidden px-5 lg:px-0 ">
               {/* brand name / home button */}
               <section className=" flex justify-start items-center ">
                 <Link href="/">
                   <a className="text-lg flex flex-row items-center">
-                    <div className="ml-0.5 font-semibold text-[#1c1c1e]  ">
+                    <div className="ml-0.5 font-semibold text-[#1c1c1e] font-mw  ">
                       Haris
                       <span className="font-light text-[#45484a]">Lab</span>
                     </div>
@@ -33,7 +33,7 @@ export default function Layout({ children }) {
               </section>
 
               {/* main link */}
-              <section className="flex flex-row justify-end items-center space-x-3 text-sm ">
+              <section className="flex flex-row justify-end items-center space-x-2 lg:space-x-5 ">
                 <Link href="/math/homeMath">
                   <a className={nav}>Belajar</a>
                 </Link>
@@ -98,12 +98,12 @@ export default function Layout({ children }) {
             <nav className="flex justify-between">
               <Menu
                 as="div"
-                className="static w-1/6 flex  md:hidden justify-center bg-pink-500"
+                className="static w-1/6 flex  md:hidden justify-start pl-5 "
               >
-                <Menu.Button className=" focus:outline-none bg-blue-500 ">
+                <Menu.Button className=" focus:outline-none ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-7 w-7"
+                    className="h-6 w-6"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -123,7 +123,7 @@ export default function Layout({ children }) {
                       <section className=" flex items-center  px-1.5 py-1.5 rounded bg-gray-100 border border-[#8e8e93]">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="h-5 w-5 text-gray-500"
+                          className="h-7 w-7 text-gray-500"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -131,7 +131,7 @@ export default function Layout({ children }) {
                           <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            strokeWidth={2}
+                            strokeWidth={1}
                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                           />
                         </svg>
@@ -146,9 +146,9 @@ export default function Layout({ children }) {
                 </Menu.Items>
               </Menu>
 
-              <nav className="bg-blue-200 w-2/3 justify-center">
+              <nav className=" w-2/3 justify-center block md:hidden">
                 <Link href="/">
-                  <a className="block text-lg font-semibold text-[#1c1c1e] text-center w-full bg-yellow-300 font-mw">
+                  <a className="block text-lg font-semibold text-[#1c1c1e] text-center w-full font-mw">
                     <span>Haris</span>
                     <span className="font-light text-[#45484a]">Lab</span>
                   </a>
@@ -157,12 +157,12 @@ export default function Layout({ children }) {
 
               <Menu
                 as="div"
-                className="static w-1/6 flex  md:hidden justify-center bg-pink-500"
+                className="static w-1/6 flex  md:hidden justify-end pr-5 "
               >
-                <Menu.Button className=" focus:outline-none bg-blue-500 ">
+                <Menu.Button className=" focus:outline-none  ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-7 w-7"
+                    className="h-6 w-6"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
