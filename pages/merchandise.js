@@ -13,8 +13,8 @@ export default function merchandise() {
       <div className="mt-20 mb-5 text-4xl font-semibold">Kaos</div>
       <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-10 gap-y-10 sm:gap-x-10 my-5">
         {Kaoss.map((kaos) => (
-          <div key={Kaoss.id}>
-            <div className="font-light text-xs sm:text-sm mb-2 w-4/5 truncate">
+          <div key={kaos.id}>
+            <div className="font-light text-sm sm:text-sm mb-2 w-4/5 truncate">
               {kaos.judul}
             </div>
             <Image

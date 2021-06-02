@@ -95,47 +95,31 @@ export default function Layout({ children }) {
                 </Link>
               </section>
             </nav>
+            <nav className="flex justify-between">
+              <Menu
+                as="div"
+                className="static w-1/6 flex  md:hidden justify-center bg-pink-500"
+              >
+                <Menu.Button className=" focus:outline-none bg-blue-500 ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-7 w-7"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1}
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+                </Menu.Button>
 
-            {/* mobile navigation */}
-            <nav className="flex  md:hidden w-full">
-              <Menu as="div" className="relative inline-block w-full">
-                <div className="flex items-center justify-between">
-                  {/* brand name / home button */}
-                  <section>
-                    <Link href="/">
-                      <a className="text-lg flex flex-row items-center">
-                        <div className="ml-0.5 font-semibold text-[#1c1c1e] pl-5">
-                          Haris
-                          <span className="font-light text-[#45484a]">Lab</span>
-                        </div>
-                      </a>
-                    </Link>
-                  </section>
-
-                  <Menu.Button className=" focus:outline-none pr-5">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-7 w-7"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1}
-                        d="M4 8h16M4 16h16"
-                      />
-                    </svg>
-                  </Menu.Button>
-                </div>
-
-                <Menu.Items className="absolute right-0 w-full mt-2 p-5 origin-top-right text-[#1c1c1e] bg-white border-b shadow-hero">
+                <Menu.Items className="absolute right-0 w-screen  mt-8 p-5 origin-top-right text-[#1c1c1e] bg-white border-b shadow-hero">
                   <section className="mb-2">
-                    {/* search button */}
-                    {/* container */}
                     <main className="w-full">
-                      {/* component search */}
                       <section className=" flex items-center  px-1.5 py-1.5 rounded bg-gray-100 border border-[#8e8e93]">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -159,29 +143,61 @@ export default function Layout({ children }) {
                       </section>
                     </main>
                   </section>
+                </Menu.Items>
+              </Menu>
 
-                  <section className="grid grid-cols-2 gap-5 mt-5">
+              <nav className="bg-blue-200 w-2/3 justify-center">
+                <Link href="/">
+                  <a className="block text-lg font-semibold text-[#1c1c1e] text-center w-full bg-yellow-300 font-mw">
+                    <span>Haris</span>
+                    <span className="font-light text-[#45484a]">Lab</span>
+                  </a>
+                </Link>
+              </nav>
+
+              <Menu
+                as="div"
+                className="static w-1/6 flex  md:hidden justify-center bg-pink-500"
+              >
+                <Menu.Button className=" focus:outline-none bg-blue-500 ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-7 w-7"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1}
+                      d="M4 8h16M4 16h16"
+                    />
+                  </svg>
+                </Menu.Button>
+
+                <Menu.Items className="absolute right-0 w-full mt-8 p-5 origin-top-right text-[#1c1c1e] bg-white border-b shadow-hero">
+                  <section className="grid grid-cols-2 gap-5">
+                    <Menu.Item>
+                      {({ active }) => (
+                        <button className="w-full text-center rounded-md border border-[#8e8e93] py-1.5">
+                          {active ? (
+                            <Link href="/signIn">
+                              <a>Masuk</a>
+                            </Link>
+                          ) : (
+                            <Link href="/signIn">
+                              <a>Masuk</a>
+                            </Link>
+                          )}
+                        </button>
+                      )}
+                    </Menu.Item>
+
                     <div>
                       <Menu.Item>
                         {({ active }) => (
-                          <button className="w-full text-center rounded-md border border-[#8e8e93] py-1.5">
-                            {active ? (
-                              <Link href="/signIn">
-                                <a>Masuk</a>
-                              </Link>
-                            ) : (
-                              <Link href="/signIn">
-                                <a>Masuk</a>
-                              </Link>
-                            )}
-                          </button>
-                        )}
-                      </Menu.Item>
-                    </div>
-                    <div>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <button className="w-full text-center rounded-md bg-[#007AFF] text-white py-1.5">
+                          <button className="w-full text-center rounded-md bg-[#007AFF] border border-[#007AFF] text-white py-1.5">
                             {active ? (
                               <Link href="/signUp">
                                 <a>Daftar</a>
@@ -333,55 +349,69 @@ export default function Layout({ children }) {
 
         <main className="w-full  min-h-screen">{children}</main>
 
-        <footer className="bottom-0 text-xs sm:text-base text-center mt-24 w-full bg-gray-50 p-5 sm:px-0">
-          <div className="flex flex-col sm:flex-row text-left space-y-6 sm:space-y-0 max-w-5xl mx-auto">
-            <div className="flex w-full sm:w-1/2">
-              <div className="w-full sm:w-1/3">
-                <div className="font-light text-gray-600 text-sm">ALAT</div>
+        <footer className="bottom-0  text-center mt-24 w-full bg-gray-50 p-5 sm:px-0 border-t border-gray-300">
+          <section className="flex flex-col sm:flex-row text-left space-y-10 sm:space-y-0 max-w-5xl mx-auto">
+            <article className="flex w-full sm:w-1/2">
+              <div className="w-full sm:w-1/2 space-y-1">
+                <div className="font-light text-gray-600 text-base">ALAT</div>
                 <Link href="/math/homeMath">
-                  <a className="block hover:underline">Belajar</a>
+                  <a className="block hover:underline text-base">Belajar</a>
                 </Link>
                 <Link href="/calculatorMath">
-                  <a className="block hover:underline">Kalkulator</a>
+                  <a className="block hover:underline text-base">Kalkulator</a>
                 </Link>
                 <Link href="/flashcardMath">
-                  <a className="block hover:underline">Kartu</a>
+                  <a className="block hover:underline text-base">Kartu</a>
                 </Link>
                 <Link href="/animationMath">
-                  <a className="block hover:underline">Animasi</a>
+                  <a className="block hover:underline text-base">Animasi</a>
                 </Link>
                 <Link href="/scanMath">
-                  <a className="block hover:underline">Scan</a>
+                  <a className="block hover:underline text-base">Scan</a>
                 </Link>
                 <Link href="/gamesMath">
-                  <a className="block hover:underline">Games</a>
+                  <a className="block hover:underline text-base">Games</a>
                 </Link>
               </div>
-              <div className="w-full sm:w-1/3">
+              <div className="w-full sm:w-1/2 space-y-1">
                 <div className="font-light text-gray-600 text-sm">LAINNYA</div>
                 <Link href="/merchandise">
-                  <a className="block hover:underline">Merchandise</a>
+                  <a className="block hover:underline text-base">Merchandise</a>
                 </Link>
                 <Link href="/bookingme">
-                  <a className="block hover:underline">Booking Me !</a>
+                  <a className="block hover:underline text-base">
+                    Booking Me !
+                  </a>
                 </Link>
                 <Link href="/portofolio">
-                  <a className="block hover:underline">Portofolio</a>
+                  <a className="block hover:underline text-base">Portofolio</a>
                 </Link>
               </div>
-            </div>
-            <div className=" text-gray-600 w-full sm:w-1/2">
-              &copy;2021 Haris<span className="font-light">Lab</span> Inc ∙ Made
-              by{" "}
-              <a
-                target="_blank"
-                href="https://twitter.com/haritssr"
-                className="text-blue-500 hover:underline"
-              >
-                Harits Syah
-              </a>{" "}
-            </div>
-          </div>
+            </article>
+            <article className="w-full sm:w-1/2">
+              <div className="font-mw text-4xl">
+                Haris<span className="text-gray-500">Lab</span>
+              </div>
+              <div className="mt-2 text-lg text-gray-500">
+                PT. Haris Laboratorium Indonesia
+              </div>
+              <div className="mt-2 text-sm text-gray-500">
+                Jl. Manggis 5, Pondok Kacang Timur, Tangerang Banten 15226,
+                Indonesia
+              </div>
+              <div className=" text-gray-600 w-full mt-10">
+                Copyright &copy;2021 Haris
+                <span className="font-light">Lab</span> Inc ∙ Made by{" "}
+                <a
+                  target="_blank"
+                  href="https://twitter.com/haritssr"
+                  className="text-blue-500 hover:underline"
+                >
+                  Harits Syah
+                </a>{" "}
+              </div>
+            </article>
+          </section>
         </footer>
       </main>
     </div>
