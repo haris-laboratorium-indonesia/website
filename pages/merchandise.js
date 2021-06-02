@@ -1,44 +1,19 @@
 import Image from "next/image";
 import { HiOutlinePlusSm } from "react-icons/hi";
 import { HiOutlineShare } from "react-icons/hi";
+import { Kaoss } from "../lib/Kaoss";
+import { Posters } from "../lib/Posters";
+
 export default function merchandise() {
-  const kaoss = [
-    { id: "1", judul: " Hukum Newton HarisLab T-Shirt", image: "/kaos1.jpg" },
-    {
-      id: "2",
-      judul: " Hukum Archimedes HarisLab T-Shirt",
-      image: "/kaos2.jpg",
-    },
-    { id: "3", judul: " Hukum Kepler HarisLab T-Shirt", image: "/kaos3.jpg" },
-    { id: "4", judul: " Schrodinger HarisLab T-Shirt", image: "/kaos4.jpg" },
-    {
-      id: "5",
-      judul: " Konstanta Planck HarisLab T-Shirt",
-      image: "/kaos5.jpg",
-    },
-    { id: "6", judul: " Pythagoras HarisLab T-Shirt", image: "/kaos6.jpg" },
-    {
-      id: "7",
-      judul: " Elektromagnetik HarisLab T-Shirt",
-      image: "/kaos7.jpg",
-    },
-  ];
-  const posters = [
-    { id: "1", judul: " Hukum Newton HarisLab T-Shirt", image: "/pic1.jpeg" },
-    { id: "2", judul: " HukumT-Shirt", image: "/pic2.jpeg" },
-    { id: "3", judul: " Hukum Kepler HarisLab T-Shirt", image: "/pic3.jpeg" },
-    { id: "4", judul: " Schrodinger HarisLab T-Shirt", image: "/pic4.jpeg" },
-    { id: "5", judul: " Konstanta Pla", image: "/pic5.jpeg" },
-  ];
   return (
-    <>
+    <main className="max-w-5xl mx-auto px-5 sm:px-0">
       <div className="text-2xl sm:text-3xl font-semibold font-mw my-5">
         Merchandise
       </div>
       <div className="mt-20 mb-5 text-4xl font-semibold">Kaos</div>
       <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-10 gap-y-10 sm:gap-x-10 my-5">
-        {kaoss.map((kaos) => (
-          <div key={kaoss.id}>
+        {Kaoss.map((kaos) => (
+          <div key={Kaoss.id}>
             <div className="font-light text-xs sm:text-sm mb-2 w-4/5 truncate">
               {kaos.judul}
             </div>
@@ -68,8 +43,8 @@ export default function merchandise() {
       </div>
       <div className="mt-20 mb-5 text-4xl font-semibold">Poster</div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-        {posters.map((poster) => (
-          <div key={kaoss.id}>
+        {Posters.map((poster) => (
+          <div key={poster.id}>
             <div className="font-light text-xs sm:text-sm mb-2 w-4/5 truncate">
               {poster.judul}
             </div>
@@ -97,6 +72,6 @@ export default function merchandise() {
           </div>
         ))}
       </div>
-    </>
+    </main>
   );
 }

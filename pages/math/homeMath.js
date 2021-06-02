@@ -1,10 +1,10 @@
-import ChapterBox from "../../../components/ChapterBox";
-import MathTab from "../../../components/MathTab";
+import ChapterBox from "../../components/ChapterBox";
+import MathTab from "../../components/MathTab";
 
 export default function homeMath() {
   return (
-    <main>
-      <MathTab in="Belajar" to="/learn/phy/homePhy" />
+    <main className="max-w-5xl mx-auto px-5 sm:px-0">
+      <MathTab in="Belajar" to="/phy/homePhy" />
       <section className="grid grid-cols-1 sm:grid-cols-3 divide-y divide-gray-200 sm:divide-y-0">
         <ChapterBox title="Lingkaran" to="linear" />
         <ChapterBox title="Integral Tentu" to="linear" />
@@ -26,9 +26,6 @@ export default function homeMath() {
         <ChapterBox title="Deret" to="linear" />
         <ChapterBox title="Statistika" to="linear" />
         <ChapterBox title="Peluang" to="linear" />
-      </section>
-      <section className="mt-20">
-        
       </section>
     </main>
   );

@@ -13,6 +13,11 @@ module.exports = {
         inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
         none: "0 0 0 0 rgba(59, 130, 246, 0.5), 0 0 0 0 rgba(59, 130, 246, 0.1)",
       },
+      colors: {
+        blue: {
+          harislab: "#007AFF",
+        },
+      },
     },
   },
   variants: {

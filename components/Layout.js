@@ -14,7 +14,7 @@ export default function Layout({ children }) {
         {/* container */}
         <main className=" sticky top-0 z-10 mx-auto h-auto blur border-b border-gray-300">
           {/* container */}
-          <main className="max-w-5xl w-full mx-auto px-5 py-3">
+          <main className="max-w-5xl w-full mx-auto px-5 sm:px-0 py-2.5">
             {/* desktop navigation*/}
             <nav className="md:flex justify-between items-center hidden text-sm">
               {/* brand name / home button */}
@@ -30,27 +30,34 @@ export default function Layout({ children }) {
               </section>
 
               {/* main link */}
-              <section className="flex flex-row justify-end items-center space-x-3 text-sm ">
-                <Link href="/learn/math/homeMath">
+              <section className="flex flex-row justify-end items-center space-x-3 text-xs ">
+                <Link href="/math/homeMath">
                   <a className={nav}>Belajar</a>
                 </Link>
-                <Link href="/calculator/calculatorMath">
+                <Link href="/flashCardMath">
+                  <a className={nav}>Kartu</a>
+                </Link>
+                <Link href="/calculatorMath">
                   <a className={nav}>Kalkulator</a>
                 </Link>
-                <Link href="/flashCard/flashCardMath">
-                  <a className={nav}>Card</a>
-                </Link>
-                <Link href="/animation/animationMath">
+
+                <Link href="/animationMath">
                   <a className={nav}>Animasi</a>
                 </Link>
-                <Link href="/scan/scanMath">
+                <Link href="/scanMath">
                   <a className={nav}>Scan</a>
                 </Link>
-                <Link href="/scan/scanMath">
+                <Link href="/gamesMath">
                   <a className={nav}>Games</a>
                 </Link>
                 <Link href="/merchandise">
                   <a className={nav}>Merchandise</a>
+                </Link>
+                <Link href="/bookingme">
+                  <a className={nav}>Booking Me !</a>
+                </Link>
+                <Link href="/portofolio">
+                  <a className={nav}>Portofolio</a>
                 </Link>
               </section>
 
@@ -140,11 +147,11 @@ export default function Layout({ children }) {
                         {({ active }) => (
                           <button className="w-full text-left rounded-lg  ">
                             {active ? (
-                              <Link href="/learn/math/homeMath">
+                              <Link href="/math/homeMath">
                                 <a>Belajar</a>
                               </Link>
                             ) : (
-                              <Link href="/learn/math/homeMath">
+                              <Link href="/math/homeMath">
                                 <a>Belajar</a>
                               </Link>
                             )}
@@ -155,11 +162,26 @@ export default function Layout({ children }) {
                         {({ active }) => (
                           <button className="w-full text-left rounded-lg  ">
                             {active ? (
-                              <Link href="/calculator/calculatorMath">
+                              <Link href="/flashCardMath">
+                                <a>Kartu</a>
+                              </Link>
+                            ) : (
+                              <Link href="/flashCardMath">
+                                <a>Kartu</a>
+                              </Link>
+                            )}
+                          </button>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button className="w-full text-left rounded-lg  ">
+                            {active ? (
+                              <Link href="/calculatorMath">
                                 <a>Kalkulator</a>
                               </Link>
                             ) : (
-                              <Link href="/calculator/calculatorMath">
+                              <Link href="/calculatorMath">
                                 <a>Kalkulator</a>
                               </Link>
                             )}
@@ -170,32 +192,18 @@ export default function Layout({ children }) {
                         {({ active }) => (
                           <button className="w-full text-left rounded-lg  ">
                             {active ? (
-                              <Link href="/animation/animationMath">
+                              <Link href="/animationMath">
                                 <a>Animasi</a>
                               </Link>
                             ) : (
-                              <Link href="/animation/animationMath">
+                              <Link href="/animationMath">
                                 <a>Animasi</a>
                               </Link>
                             )}
                           </button>
                         )}
                       </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <button className="w-full text-left rounded-lg  ">
-                            {active ? (
-                              <Link href="/flashCard/flashCardMath">
-                                <a>Flash Card</a>
-                              </Link>
-                            ) : (
-                              <Link href="/flashCard/animationMath">
-                                <a>Flash Card</a>
-                              </Link>
-                            )}
-                          </button>
-                        )}
-                      </Menu.Item>
+
                       <Menu.Item>
                         {({ active }) => (
                           <button className="w-full text-left rounded-lg  ">
@@ -219,11 +227,11 @@ export default function Layout({ children }) {
                         {({ active }) => (
                           <button className="w-full text-left rounded-lg  ">
                             {active ? (
-                              <Link href="/scan/scanMath">
+                              <Link href="/portofolio">
                                 <a>Portofolio</a>
                               </Link>
                             ) : (
-                              <Link href="/scan/scanMath">
+                              <Link href="/portofolio">
                                 <a>Portofolio</a>
                               </Link>
                             )}
@@ -234,11 +242,11 @@ export default function Layout({ children }) {
                         {({ active }) => (
                           <button className="w-full text-left rounded-lg  ">
                             {active ? (
-                              <Link href="/scan/scanMath">
+                              <Link href="/bookingme">
                                 <a>Booking Me!</a>
                               </Link>
                             ) : (
-                              <Link href="/scan/scanMath">
+                              <Link href="/bookingme">
                                 <a>Booking Me!</a>
                               </Link>
                             )}
@@ -249,11 +257,11 @@ export default function Layout({ children }) {
                         {({ active }) => (
                           <button className="w-full text-left rounded-lg  ">
                             {active ? (
-                              <Link href="/scan/scanMath">
+                              <Link href="/scanMath">
                                 <a>Merchandise</a>
                               </Link>
                             ) : (
-                              <Link href="/scan/scanMath">
+                              <Link href="/scanMath">
                                 <a>Merchandise</a>
                               </Link>
                             )}
@@ -302,21 +310,56 @@ export default function Layout({ children }) {
           </main>
         </main>
 
-        {/* content */}
-        <main className="w-full mx-auto max-w-5xl min-h-screen px-5 mt-5">
-          {children}
-        </main>
-        <footer className="bottom-0 text-xs sm:text-base text-center">
-          <div className="p-3 sm:p-5 text-gray-600">
-            &copy;2021 Haris<span className="font-light">Lab</span> Inc ∙ Made
-            by{" "}
-            <a
-              target="_blank"
-              href="https://twitter.com/haritssr"
-              className="text-blue-500 hover:underline"
-            >
-              Harits Syah
-            </a>{" "}
+        <main className="w-full  min-h-screen">{children}</main>
+
+        <footer className="bottom-0 text-xs sm:text-base text-center mt-24 w-full bg-gray-50 p-5 sm:px-0">
+          <div className="flex flex-col sm:flex-row text-left space-y-6 sm:space-y-0 max-w-5xl mx-auto">
+            <div className="flex w-full sm:w-1/2">
+              <div className="w-full sm:w-1/3">
+                <div className="font-light text-gray-600 text-sm">ALAT</div>
+                <Link href="/math/homeMath">
+                  <a className="block hover:underline">Belajar</a>
+                </Link>
+                <Link href="/calculatorMath">
+                  <a className="block hover:underline">Kalkulator</a>
+                </Link>
+                <Link href="/flashcardMath">
+                  <a className="block hover:underline">Kartu</a>
+                </Link>
+                <Link href="/animationMath">
+                  <a className="block hover:underline">Animasi</a>
+                </Link>
+                <Link href="/scanMath">
+                  <a className="block hover:underline">Scan</a>
+                </Link>
+                <Link href="/gamesMath">
+                  <a className="block hover:underline">Games</a>
+                </Link>
+              </div>
+              <div className="w-full sm:w-1/3">
+                <div className="font-light text-gray-600 text-sm">LAINNYA</div>
+                <Link href="/merchandise">
+                  <a className="block hover:underline">Merchandise</a>
+                </Link>
+                <Link href="/bookingme">
+                  <a className="block hover:underline">Booking Me !</a>
+                </Link>
+                <Link href="/portofolio">
+                  <a className="block hover:underline">Portofolio</a>
+                </Link>
+              </div>
+            </div>
+            <div className=" text-gray-600 w-full sm:w-1/2">
+              &copy;2021 Haris<span className="font-light">Lab</span> Inc ∙ Made
+              by{" "}
+              <a
+                target="_blank"
+                href="https://twitter.com/haritssr"
+                className="text-blue-500 hover:underline"
+              >
+                Harits Syah
+              </a>{" "}
+            </div>
           </div>
         </footer>
       </main>
