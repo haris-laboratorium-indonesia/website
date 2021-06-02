@@ -17,7 +17,7 @@ export default function Layout({ children }) {
         {/* container */}
         <main className=" sticky top-0 z-10 mx-auto h-auto blur border-b border-gray-300">
           {/* container */}
-          <main className="max-w-5xl w-full mx-auto  py-2">
+          <main className="max-w-5xl w-full mx-auto  py-0 md:py-2">
             {/* desktop navigation*/}
             <nav className="md:flex justify-between items-center hidden px-5 lg:px-0 ">
               {/* brand name / home button */}
@@ -100,7 +100,7 @@ export default function Layout({ children }) {
                 as="div"
                 className="static w-1/6 flex  md:hidden justify-start  "
               >
-                <Menu.Button className=" focus:outline-none pl-5">
+                <Menu.Button className=" focus:outline-none pl-5 py-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -117,7 +117,7 @@ export default function Layout({ children }) {
                   </svg>
                 </Menu.Button>
 
-                <Menu.Items className="absolute right-0 w-screen  mt-8 p-5 origin-top-right text-[#1c1c1e] bg-white border-b shadow-hero">
+                <Menu.Items className="absolute right-0 w-screen  mt-11 p-5 origin-top-right text-[#1c1c1e] bg-white border-b border-t shadow-lg">
                   <section className="mb-2">
                     <main className="w-full">
                       <section className=" flex items-center  px-1.5 py-1.5 rounded bg-gray-100 border border-[#8e8e93]">
@@ -146,9 +146,9 @@ export default function Layout({ children }) {
                 </Menu.Items>
               </Menu>
 
-              <nav className=" w-2/3 justify-center block md:hidden">
+              <nav className=" w-2/3 justify-center block md:hidden ">
                 <Link href="/">
-                  <a className="block text-lg font-semibold text-[#1c1c1e] text-center w-full font-mw">
+                  <a className="block text-lg font-semibold text-[#1c1c1e] text-center w-full font-mw py-2">
                     <span>Haris</span>
                     <span className="font-light text-[#45484a]">Lab</span>
                   </a>
@@ -159,7 +159,7 @@ export default function Layout({ children }) {
                 as="div"
                 className="static w-1/6 flex  md:hidden justify-end  "
               >
-                <Menu.Button className=" focus:outline-none pr-5 ">
+                <Menu.Button className=" focus:outline-none pr-5 py-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-7 w-7"
@@ -176,7 +176,7 @@ export default function Layout({ children }) {
                   </svg>
                 </Menu.Button>
 
-                <Menu.Items className="absolute right-0 w-full mt-8 p-5 origin-top-right text-[#1c1c1e] bg-white border-b shadow-hero">
+                <Menu.Items className="absolute right-0 w-full mt-11 p-5 origin-top-right text-[#1c1c1e] bg-white border-b border-t shadow-lg">
                   <section className="grid grid-cols-2 gap-5">
                     <Menu.Item>
                       {({ active }) => (
@@ -389,17 +389,17 @@ export default function Layout({ children }) {
               </div>
             </article>
             <article className="w-full sm:w-1/2">
-              <div className="font-mw text-4xl">
-                Haris<span className="text-gray-500">Lab</span>
+              <div className="font-mw text-3xl">
+                Haris<span className="text-gray-600">Lab</span>
               </div>
-              <div className="mt-2 text-lg text-gray-500">
+              <div className="mt-2 text-sm text-gray-600">
                 PT. Haris Laboratorium Indonesia
               </div>
               <div className="mt-2 text-sm text-gray-500">
                 Jl. Manggis 5, Pondok Kacang Timur, Tangerang Selatan, Banten
                 15226, Indonesia
               </div>
-              <div className=" text-gray-600 w-full mt-10 text-sm lg:text-base flex flex-col sm:flex-row">
+              <div className=" text-gray-600 w-full mt-10 text-sm  flex flex-col sm:flex-row">
                 <div>
                   Copyright &copy;2021 Haris
                   <span className="font-light">Lab</span> Inc. &nbsp;

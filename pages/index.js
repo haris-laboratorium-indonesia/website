@@ -9,7 +9,6 @@ import { HiOutlinePresentationChartLine } from "react-icons/hi";
 import { HiOutlineBookOpen } from "react-icons/hi";
 import { HiOutlinePuzzle } from "react-icons/hi";
 import { HiOutlineChevronRight } from "react-icons/hi";
-
 import { weCareAbouts } from "../lib/weCareAbouts";
 import { FAQs } from "../lib/FAQs";
 
@@ -134,7 +133,9 @@ export default function Home() {
       </header>
       <section className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 px-5 lg:px-0 max-w-5xl mx-auto ">
         {FAQs.map((FAQs) => (
-          <FAQ button={FAQs.button} panel={FAQs.panel} />
+          <div key={FAQs.id}>
+            <FAQ button={FAQs.button} panel={FAQs.panel} />
+          </div>
         ))}
       </section>
     </>
