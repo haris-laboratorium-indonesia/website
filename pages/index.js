@@ -8,6 +8,8 @@ import { HiOutlineCalculator } from "react-icons/hi";
 import { HiOutlinePresentationChartLine } from "react-icons/hi";
 import { HiOutlineBookOpen } from "react-icons/hi";
 import { HiOutlinePuzzle } from "react-icons/hi";
+import { HiOutlineChevronRight } from "react-icons/hi";
+
 import { weCareAbouts } from "../lib/weCareAbouts";
 import { FAQs } from "../lib/FAQs";
 
@@ -60,14 +62,21 @@ export default function Home() {
         Bagaimana kami menyajikan informasi ?
       </header>
       {/* Framework */}
-      <section className="  max-w-5xl mx-auto space-y-5 sm:space-y-0 flex flex-col sm:flex-row justify-between items-center  px-5 sm:px-0">
-        <div className="w-full sm:w-1/2">
-          <div className="text-4xl font-semibold mb-2 font-mw">Framework</div>
+      <section className="  max-w-5xl mx-auto space-y-5 sm:space-y-0 flex flex-col sm:flex-row justify-between items-center  px-5 lg:px-0">
+        <div className="w-full sm:w-1/2 space-y-3">
+          <div className="text-4xl font-semibold font-mw">Framework</div>
           <div className="text-lg">
             Di HarisLab, semua bab pelajaran dibuat sebuah struktur informasi
             sedemikia rupa agar mudah diingat. Sehingga kita bisa berekspektasi
             kepada setiap bab nya, bahwa ini yang akan kita pelajari. Coba dan
             rasakan kemudahannya.
+          </div>
+          <div className="text-blue-harislab hover:underline">
+            <Link href="/">
+              <a>
+                Selengkapnya <HiOutlineChevronRight className="inline" />
+              </a>
+            </Link>
           </div>
         </div>
         <div className="w-full sm:w-1/2">
@@ -85,7 +94,7 @@ export default function Home() {
       <header className="text-center font-light text-gray-400 mb-10 mt-20  py-3 max-w-5xl mx-auto">
         Kami Peduli Tentang
       </header>
-      <section className=" max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-10 px-5 sm:px-0">
+      <section className=" max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-10 px-5 lg:px-0">
         {weCareAbouts.map((weCareAbout) => (
           <div key={weCareAbout.id}>
             {/* icon */}
@@ -123,7 +132,7 @@ export default function Home() {
       <header className="text-center font-light text-gray-400 mb-10 mt-20 max-w-5xl mx-auto py-3">
         FAQ
       </header>
-      <section className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 px-5 sm:px-0 max-w-5xl mx-auto ">
+      <section className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 px-5 lg:px-0 max-w-5xl mx-auto ">
         {FAQs.map((FAQs) => (
           <FAQ button={FAQs.button} panel={FAQs.panel} />
         ))}

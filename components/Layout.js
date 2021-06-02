@@ -5,7 +5,7 @@ import { Popover } from "@headlessui/react";
 import { HiOutlineChevronDown } from "react-icons/hi";
 
 export default function Layout({ children }) {
-  const nav = "px-2 py-1 rounded-md hover:text-[#007AFF] text-[#45484a]";
+  const nav = "px-2 py-1 rounded-md hover:text-[#007AFF] text-[#45484a] text-sm";
   return (
     <div className="font-inter">
       <Head>
@@ -53,7 +53,7 @@ export default function Layout({ children }) {
                   <a className={nav}>Games</a>
                 </Link>
                 <Popover className="relative">
-                  <Popover.Button className="py-0.5 px-2 flex justify-between items-center hover:text-[#007AFF] text-[#45484a]">
+                  <Popover.Button className="py-0.5 px-2 flex justify-between items-center hover:text-[#007AFF] text-[#45484a] text-sm">
                     <span>Lainnya</span>
                     <HiOutlineChevronDown
                       className="text-opacity-70"
@@ -84,7 +84,7 @@ export default function Layout({ children }) {
               {/* signIn/signUp */}
               <section className="flex flex-row justify-end items-center space-x-2">
                 <Link href="/signIn">
-                  <a className="px-2 py-1 hover:rounded-md hover:text-[#007AFF] text-[#45484a] ">
+                  <a className="px-2 py-1 hover:rounded-md hover:text-[#007AFF] text-[#45484a] text-sm">
                     Masuk
                   </a>
                 </Link>
@@ -95,12 +95,12 @@ export default function Layout({ children }) {
                 </Link>
               </section>
             </nav>
-            <nav className="flex justify-between">
+            <nav className="flex justify-between items-center">
               <Menu
                 as="div"
-                className="static w-1/6 flex  md:hidden justify-start pl-5 "
+                className="static w-1/6 flex  md:hidden justify-start  "
               >
-                <Menu.Button className=" focus:outline-none ">
+                <Menu.Button className=" focus:outline-none pl-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -157,12 +157,12 @@ export default function Layout({ children }) {
 
               <Menu
                 as="div"
-                className="static w-1/6 flex  md:hidden justify-end pr-5 "
+                className="static w-1/6 flex  md:hidden justify-end  "
               >
-                <Menu.Button className=" focus:outline-none  ">
+                <Menu.Button className=" focus:outline-none pr-5 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
+                    className="h-7 w-7"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -396,19 +396,25 @@ export default function Layout({ children }) {
                 PT. Haris Laboratorium Indonesia
               </div>
               <div className="mt-2 text-sm text-gray-500">
-                Jl. Manggis 5, Pondok Kacang Timur, Tangerang Banten 15226,
-                Indonesia
+                Jl. Manggis 5, Pondok Kacang Timur, Tangerang Selatan, Banten
+                15226, Indonesia
               </div>
-              <div className=" text-gray-600 w-full mt-10">
-                Copyright &copy;2021 Haris
-                <span className="font-light">Lab</span> Inc ∙ Made by{" "}
-                <a
-                  target="_blank"
-                  href="https://twitter.com/haritssr"
-                  className="text-blue-500 hover:underline"
-                >
-                  Harits Syah
-                </a>{" "}
+              <div className=" text-gray-600 w-full mt-10 text-sm lg:text-base flex flex-col sm:flex-row">
+                <div>
+                  Copyright &copy;2021 Haris
+                  <span className="font-light">Lab</span> Inc. &nbsp;
+                </div>
+                <div>
+                  Made by &nbsp;
+                  <a
+                    target="_blank"
+                    href="https://twitter.com/haritssr"
+                    className="text-blue-500 hover:underline"
+                  >
+                    Harits Syah
+                  </a>
+                  .
+                </div>
               </div>
             </article>
           </section>
