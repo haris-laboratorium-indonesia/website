@@ -90,7 +90,7 @@ export default function Layout({ children }) {
                   </a>
                 </Link>
                 <Link href="/signUp">
-                  <a className="text-xs rounded-full bg-[#007AFF]  text-white hover:bg-opacity-90  px-3 py-1.5">
+                  <a className="text-xs rounded-md bg-[#007AFF]  text-white hover:bg-opacity-90  px-3 py-1.5">
                     Daftar
                   </a>
                 </Link>
