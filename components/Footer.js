@@ -6,36 +6,36 @@ export default function Footer() {
       <section className="flex flex-col max-w-4xl mx-auto space-y-10 text-left sm:flex-row sm:space-y-0">
         <article className="flex w-full sm:w-1/2">
           <div className="w-full space-y-1 sm:w-1/2">
-            <div className="text-base font-light text-gray-600">ALAT</div>
+            <div className="text-sm font-light text-gray-600">ALAT</div>
             <Link href="/math/homeMath">
-              <a className="block text-base hover:underline">Belajar</a>
+              <a className="block text-sm hover:underline">Belajar</a>
             </Link>
             <Link href="/calculatorMath">
-              <a className="block text-base hover:underline">Kalkulator</a>
+              <a className="block text-sm hover:underline">Kalkulator</a>
             </Link>
             <Link href="/flashcardMath">
-              <a className="block text-base hover:underline">Kartu</a>
+              <a className="block text-sm hover:underline">Kartu</a>
             </Link>
             <Link href="/animationMath">
-              <a className="block text-base hover:underline">Animasi</a>
+              <a className="block text-sm hover:underline">Animasi</a>
             </Link>
             <Link href="/scanMath">
-              <a className="block text-base hover:underline">Scan</a>
+              <a className="block text-sm hover:underline">Scan</a>
             </Link>
             <Link href="/gamesMath">
-              <a className="block text-base hover:underline">Games</a>
+              <a className="block text-sm hover:underline">Games</a>
             </Link>
           </div>
           <div className="w-full space-y-1 sm:w-1/2">
             <div className="text-sm font-light text-gray-600">LAINNYA</div>
             <Link href="/merchandise">
-              <a className="block text-base hover:underline">Merchandise</a>
+              <a className="block text-sm hover:underline">Merchandise</a>
             </Link>
             <Link href="/bookingMe">
-              <a className="block text-base hover:underline">Booking Me !</a>
+              <a className="block text-sm hover:underline">Booking Me !</a>
             </Link>
             <Link href="/portofolio">
-              <a className="block text-base hover:underline">Portofolio</a>
+              <a className="block text-sm hover:underline">Portofolio</a>
             </Link>
           </div>
         </article>
