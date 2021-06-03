@@ -5,7 +5,7 @@ export default function Icons({ to, children, name }) {
     <div className="mx-auto ">
       <Link href={to}>
         <a>
-          <div className="group flex justify-centerh-15 w-15 rounded-xl p-3.5 bg-gradient-to-t from-gray-200 to-gray-100 items-center transform hover:translate-y-0.5 -translate-y-0.5 transition duration-200 ease-in-out hover:shadow-inner shadow-hero">
+          <div className="group flex justify-centerh-15 w-15 rounded-xl p-3.5 bg-white items-center transform hover:translate-y-0.5 -translate-y-0.5 transition duration-200 ease-in-out hover:shadow-none shadow-hero">
             {children}
           </div>
         </a>

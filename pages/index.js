@@ -27,7 +27,7 @@ export default function Home() {
             </div>
             <div className="flex justify-center mt-7 sm:justify-start">
               <Link href="/math/homeMath">
-                <a className="rounded-full text-center  w-2/3 sm:w-1/2 px-5 py-3 sm:py-2.5 bg-blue-harislab text-white hover:bg-opacity-90 hover:shadow-inner shadow-hero">
+                <a className="rounded-full text-center  w-2/3 sm:w-1/2 px-5 py-3 sm:py-2.5 bg-blue-harislab text-white hover:bg-opacity-90 hover:shadow-inner ">
                   Belajar Sekarang
                 </a>
               </Link>
@@ -35,22 +35,22 @@ export default function Home() {
           </article>
           <article className="grid grid-cols-4 gap-4 px-5 py-5 sm:pr-0 sm:p-10 sm:grid-cols-3">
             <Icons to="/math/homeMath" name="Belajar">
-              <HiOutlineBookOpen className="w-7 h-7 group-hover:text-gray-600" />
+              <HiOutlineBookOpen className="w-7 h-7 group-hover:text-gray-700" />
             </Icons>
             <Icons to="/flashCardMath" name="Card">
-              <HiOutlineColorSwatch className="w-7 h-7 group-hover:text-gray-600" />
+              <HiOutlineColorSwatch className="w-7 h-7 group-hover:text-gray-700" />
             </Icons>
             <Icons to="/calculatorMath" name="Kalkulator">
-              <HiOutlineCalculator className="w-7 h-7 group-hover:text-gray-600" />
+              <HiOutlineCalculator className="w-7 h-7 group-hover:text-gray-700" />
             </Icons>
             <Icons to="/animationMath" name="Animasi">
-              <HiOutlinePresentationChartLine className="w-7 h-7 group-hover:text-gray-600" />
+              <HiOutlinePresentationChartLine className="w-7 h-7 group-hover:text-gray-700" />
             </Icons>
             <Icons to="/scanMath" name="Scan">
-              <HiOutlineCamera className="w-7 h-7 group-hover:text-gray-600" />
+              <HiOutlineCamera className="w-7 h-7 group-hover:text-gray-700" />
             </Icons>
             <Icons to="/gamesMath" name="Games">
-              <HiOutlinePuzzle className="w-7 h-7 group-hover:text-gray-600" />
+              <HiOutlinePuzzle className="w-7 h-7 group-hover:text-gray-700" />
             </Icons>
           </article>
         </section>
