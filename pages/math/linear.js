@@ -3,10 +3,10 @@ import { Client } from "@notionhq/client";
 export default function linear({ formulas }) {
   console.log(formulas);
   return (
-    <main className="px-5 ">
+    <main className="max-w-4xl px-5 mx-auto lg:px-0">
       <header>linear</header>
 
-      <div className="grid grid-cols-3 gap-2 bg-blue-500 p-5 prose">
+      <div className="grid grid-cols-3 gap-2 p-5 prose bg-blue-500">
         {formulas.map((formula) => (
           <a
             key={formula.id}

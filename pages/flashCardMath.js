@@ -4,17 +4,17 @@ import {Matriks } from "../lib/FlashCardMath"
 export default function flashCardMath() {
   
   return (
-    <main className="max-w-5xl mx-auto ">
+    <main className="max-w-4xl mx-auto ">
       <div className="px-5 lg:px-0">
         <MathTab in="Card" to="flashCardPhy" />
       </div>
 
-      <div className="mb-5 text-2xl font-semibold px-5 sm:px-0">Matriks</div>
-      <div className="space-x-5 bg-gray-100 p-5 shadow-inner  sm:p-5 flex overflow-x-auto ">
+      <div className="px-5 mb-5 text-2xl font-semibold sm:px-0">Matriks</div>
+      <div className="flex p-5 space-x-5 overflow-x-auto bg-gray-100 shadow-inner sm:p-5 ">
         {Matriks.map((Matrik) => (
           <div
             key={Matrik.id}
-            className="rounded-lg shadow-2xl w-4/5 sm:w-1/4 flex-shrink-0 overflow-hidden"
+            className="flex-shrink-0 w-4/5 overflow-hidden rounded-lg shadow-2xl sm:w-1/4"
           >
             <div>
               <Image src={Matrik.pic} width="2000px" height="2000px" priority />

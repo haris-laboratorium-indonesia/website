@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { Menu } from "@headlessui/react";
 import Head from "next/head";
-import { Popover } from "@headlessui/react";
+import { Menu, Popover } from "@headlessui/react";
 import { HiOutlineChevronDown } from "react-icons/hi";
+import Footer from "./Footer";
 
 export default function Layout({ children }) {
-  const nav = "px-2 py-1 rounded-md hover:text-[#007AFF] text-[#45484a] text-sm";
+  const nav =
+    "px-2 py-1 rounded-md hover:text-[#007AFF] text-[#45484a] text-sm";
   return (
     <div className="font-inter">
       <Head>
@@ -15,15 +16,15 @@ export default function Layout({ children }) {
       <main>
         {/* navigation */}
         {/* container */}
-        <main className=" sticky top-0 z-10 mx-auto h-auto blur border-b border-gray-300">
+        <main className="sticky top-0 z-10 h-auto mx-auto border-b border-gray-300 blur">
           {/* container */}
-          <main className="max-w-5xl w-full mx-auto  py-0 md:py-2">
+          <main className="w-full max-w-4xl py-0 mx-auto md:py-2">
             {/* desktop navigation*/}
-            <nav className="md:flex justify-between items-center hidden px-5 lg:px-0 ">
+            <nav className="items-center justify-between hidden px-5 md:flex lg:px-0 ">
               {/* brand name / home button */}
-              <section className=" flex justify-start items-center ">
+              <section className="flex items-center justify-start ">
                 <Link href="/">
-                  <a className="text-lg flex flex-row items-center">
+                  <a className="flex flex-row items-center text-lg">
                     <div className="ml-0.5 font-semibold text-[#1c1c1e] font-mw  ">
                       Haris
                       <span className="font-light text-[#45484a]">Lab</span>
@@ -33,7 +34,7 @@ export default function Layout({ children }) {
               </section>
 
               {/* main link */}
-              <section className="flex flex-row justify-end items-center space-x-2 lg:space-x-5 ">
+              <section className="flex flex-row items-center justify-end space-x-2 lg:space-x-5 ">
                 <Link href="/math/homeMath">
                   <a className={nav}>Belajar</a>
                 </Link>
@@ -61,13 +62,13 @@ export default function Layout({ children }) {
                     />
                   </Popover.Button>
 
-                  <Popover.Panel className="blur shadow-xl py-2 w-32 absolute z-10 mt-3 rounded border border-gray-300 flex flex-col space-y-2">
+                  <Popover.Panel className="absolute z-10 flex flex-col w-32 py-2 mt-3 space-y-2 border border-gray-300 rounded shadow-xl blur">
                     <Link href="/merchandise">
                       <a className="px-2 py-1 text-center hover:text-[#007AFF] text-[#45484a] hover:bg-gray-100">
                         Merchandise
                       </a>
                     </Link>
-                    <Link href="/bookingme">
+                    <Link href="/bookingMe">
                       <a className="px-2 py-1 text-center hover:text-[#007AFF] text-[#45484a] hover:bg-gray-100">
                         Booking Me !
                       </a>
@@ -82,7 +83,7 @@ export default function Layout({ children }) {
               </section>
 
               {/* signIn/signUp */}
-              <section className="flex flex-row justify-end items-center space-x-2">
+              <section className="flex flex-row items-center justify-end space-x-2">
                 <Link href="/signIn">
                   <a className="px-2 py-1 hover:rounded-md hover:text-[#007AFF] text-[#45484a] text-sm">
                     Masuk
@@ -95,15 +96,15 @@ export default function Layout({ children }) {
                 </Link>
               </section>
             </nav>
-            <nav className="flex justify-between items-center">
+            <nav className="flex items-center justify-between">
               <Menu
                 as="div"
-                className="static w-1/6 flex  md:hidden justify-start  "
+                className="static flex justify-start w-1/6 md:hidden "
               >
-                <Menu.Button className=" focus:outline-none pl-5 py-2">
+                <Menu.Button className="py-2 pl-5 focus:outline-none">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
+                    className="h-7 w-7"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -123,7 +124,7 @@ export default function Layout({ children }) {
                       <section className=" flex items-center  px-1.5 py-1.5 rounded bg-gray-100 border border-[#8e8e93]">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="h-7 w-7 text-gray-500"
+                          className="text-gray-500 h-7 w-7"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -137,7 +138,7 @@ export default function Layout({ children }) {
                         </svg>
                         <input
                           type="text"
-                          className="text-black placeholder-gray-500 bg-gray-100  focus:outline-none caret-black w-full focus:placeholder-black ml-1 "
+                          className="w-full ml-1 text-black placeholder-gray-500 bg-gray-100 focus:outline-none caret-black focus:placeholder-black "
                           placeholder="Search"
                         />
                       </section>
@@ -146,7 +147,7 @@ export default function Layout({ children }) {
                 </Menu.Items>
               </Menu>
 
-              <nav className=" w-2/3 justify-center block md:hidden ">
+              <nav className="justify-center block w-2/3 md:hidden">
                 <Link href="/">
                   <a className="block text-lg font-semibold text-[#1c1c1e] text-center w-full font-mw py-2">
                     <span>Haris</span>
@@ -157,9 +158,9 @@ export default function Layout({ children }) {
 
               <Menu
                 as="div"
-                className="static w-1/6 flex  md:hidden justify-end  "
+                className="static flex justify-end w-1/6 md:hidden "
               >
-                <Menu.Button className=" focus:outline-none pr-5 py-2">
+                <Menu.Button className="py-2 pr-5 focus:outline-none">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-7 w-7"
@@ -176,8 +177,8 @@ export default function Layout({ children }) {
                   </svg>
                 </Menu.Button>
 
-                <Menu.Items className="absolute right-0 w-full mt-11 p-5 origin-top-right text-[#1c1c1e] bg-white border-b border-t shadow-lg">
-                  <section className="grid grid-cols-2 gap-5">
+                <Menu.Items className=" absolute right-0 w-full mt-11 p-5 origin-top-right text-[#1c1c1e] bg-white border-b border-t shadow-lg ">
+                  <section className="grid grid-cols-1 gap-3 mb-5">
                     <Menu.Item>
                       {({ active }) => (
                         <button className="w-full text-center rounded-md border border-[#8e8e93] py-1.5">
@@ -193,30 +194,29 @@ export default function Layout({ children }) {
                         </button>
                       )}
                     </Menu.Item>
-
-                    <div>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <button className="w-full text-center rounded-md bg-[#007AFF] border border-[#007AFF] text-white py-1.5">
-                            {active ? (
-                              <Link href="/signUp">
-                                <a>Daftar</a>
-                              </Link>
-                            ) : (
-                              <Link href="/signUp">
-                                <a>Daftar</a>
-                              </Link>
-                            )}
-                          </button>
-                        )}
-                      </Menu.Item>
-                    </div>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <button className="w-full text-center rounded-md bg-[#007AFF] border border-[#007AFF] text-white py-1.5">
+                          {active ? (
+                            <Link href="/signUp">
+                              <a>Daftar</a>
+                            </Link>
+                          ) : (
+                            <Link href="/signUp">
+                              <a>Daftar</a>
+                            </Link>
+                          )}
+                        </button>
+                      )}
+                    </Menu.Item>
+                  </section>
+                  <section className="grid grid-cols-2 gap-5">
                     {/* Alat */}
-                    <div className=" p-2 flex flex-col space-y-2">
+                    <div className="flex flex-col p-2 space-y-2 ">
                       <div className="text-xs text-[#45484a]">ALAT</div>
                       <Menu.Item>
                         {({ active }) => (
-                          <button className="w-full text-left rounded-lg  ">
+                          <button className="w-full text-left rounded-lg ">
                             {active ? (
                               <Link href="/math/homeMath">
                                 <a>Belajar</a>
@@ -231,7 +231,7 @@ export default function Layout({ children }) {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <button className="w-full text-left rounded-lg  ">
+                          <button className="w-full text-left rounded-lg ">
                             {active ? (
                               <Link href="/flashCardMath">
                                 <a>Kartu</a>
@@ -246,7 +246,7 @@ export default function Layout({ children }) {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <button className="w-full text-left rounded-lg  ">
+                          <button className="w-full text-left rounded-lg ">
                             {active ? (
                               <Link href="/calculatorMath">
                                 <a>Kalkulator</a>
@@ -261,7 +261,7 @@ export default function Layout({ children }) {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <button className="w-full text-left rounded-lg  ">
+                          <button className="w-full text-left rounded-lg ">
                             {active ? (
                               <Link href="/animationMath">
                                 <a>Animasi</a>
@@ -277,13 +277,13 @@ export default function Layout({ children }) {
 
                       <Menu.Item>
                         {({ active }) => (
-                          <button className="w-full text-left rounded-lg  ">
+                          <button className="w-full text-left rounded-lg ">
                             {active ? (
-                              <Link href="/scan/scanMath">
+                              <Link href="/scanMath">
                                 <a>Scan</a>
                               </Link>
                             ) : (
-                              <Link href="/scan/scanMath">
+                              <Link href="/scanMath">
                                 <a>Scan</a>
                               </Link>
                             )}
@@ -292,11 +292,11 @@ export default function Layout({ children }) {
                       </Menu.Item>
                     </div>
                     {/* Lainnya */}
-                    <div className=" p-2 flex flex-col space-y-2">
+                    <div className="flex flex-col p-2 space-y-2 ">
                       <div className="text-xs text-[#45484a]">LAINNYA</div>
                       <Menu.Item>
                         {({ active }) => (
-                          <button className="w-full text-left rounded-lg  ">
+                          <button className="w-full text-left rounded-lg ">
                             {active ? (
                               <Link href="/portofolio">
                                 <a>Portofolio</a>
@@ -311,13 +311,13 @@ export default function Layout({ children }) {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <button className="w-full text-left rounded-lg  ">
+                          <button className="w-full text-left rounded-lg ">
                             {active ? (
-                              <Link href="/bookingme">
+                              <Link href="/bookingMe">
                                 <a>Booking Me!</a>
                               </Link>
                             ) : (
-                              <Link href="/bookingme">
+                              <Link href="/bookingMe">
                                 <a>Booking Me!</a>
                               </Link>
                             )}
@@ -326,13 +326,13 @@ export default function Layout({ children }) {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <button className="w-full text-left rounded-lg  ">
+                          <button className="w-full text-left rounded-lg ">
                             {active ? (
-                              <Link href="/scanMath">
+                              <Link href="/merchandise">
                                 <a>Merchandise</a>
                               </Link>
                             ) : (
-                              <Link href="/scanMath">
+                              <Link href="/merchandise">
                                 <a>Merchandise</a>
                               </Link>
                             )}
@@ -347,78 +347,9 @@ export default function Layout({ children }) {
           </main>
         </main>
 
-        <main className="w-full  min-h-screen">{children}</main>
+        <main className="w-full min-h-screen">{children}</main>
 
-        <footer className="bottom-0  text-center mt-24 w-full bg-gray-50 p-5 sm:px-0 border-t border-gray-300">
-          <section className="flex flex-col sm:flex-row text-left space-y-10 sm:space-y-0 max-w-5xl mx-auto">
-            <article className="flex w-full sm:w-1/2">
-              <div className="w-full sm:w-1/2 space-y-1">
-                <div className="font-light text-gray-600 text-base">ALAT</div>
-                <Link href="/math/homeMath">
-                  <a className="block hover:underline text-base">Belajar</a>
-                </Link>
-                <Link href="/calculatorMath">
-                  <a className="block hover:underline text-base">Kalkulator</a>
-                </Link>
-                <Link href="/flashcardMath">
-                  <a className="block hover:underline text-base">Kartu</a>
-                </Link>
-                <Link href="/animationMath">
-                  <a className="block hover:underline text-base">Animasi</a>
-                </Link>
-                <Link href="/scanMath">
-                  <a className="block hover:underline text-base">Scan</a>
-                </Link>
-                <Link href="/gamesMath">
-                  <a className="block hover:underline text-base">Games</a>
-                </Link>
-              </div>
-              <div className="w-full sm:w-1/2 space-y-1">
-                <div className="font-light text-gray-600 text-sm">LAINNYA</div>
-                <Link href="/merchandise">
-                  <a className="block hover:underline text-base">Merchandise</a>
-                </Link>
-                <Link href="/bookingme">
-                  <a className="block hover:underline text-base">
-                    Booking Me !
-                  </a>
-                </Link>
-                <Link href="/portofolio">
-                  <a className="block hover:underline text-base">Portofolio</a>
-                </Link>
-              </div>
-            </article>
-            <article className="w-full sm:w-1/2">
-              <div className="font-mw text-3xl">
-                Haris<span className="text-gray-600">Lab</span>
-              </div>
-              <div className="mt-2 text-sm text-gray-600">
-                PT. Haris Laboratorium Indonesia
-              </div>
-              <div className="mt-2 text-sm text-gray-500">
-                Jl. Manggis 5, Pondok Kacang Timur, Tangerang Selatan, Banten
-                15226, Indonesia
-              </div>
-              <div className=" text-gray-600 w-full mt-10 text-sm  flex flex-col sm:flex-row">
-                <div>
-                  Copyright &copy;2021 Haris
-                  <span className="font-light">Lab</span> Inc. &nbsp;
-                </div>
-                <div>
-                  Made by &nbsp;
-                  <a
-                    target="_blank"
-                    href="https://twitter.com/haritssr"
-                    className="text-blue-500 hover:underline"
-                  >
-                    Harits Syah
-                  </a>
-                  .
-                </div>
-              </div>
-            </article>
-          </section>
-        </footer>
+        <Footer />
       </main>
     </div>
   );

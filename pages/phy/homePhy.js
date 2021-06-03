@@ -3,9 +3,9 @@ import PhyTab from "../../components/PhyTab";
 
 export default function homePhy() {
   return (
-    <main className="max-w-5xl mx-auto px-5 sm:px-0">
+    <main className="max-w-4xl px-5 mx-auto sm:px-0">
       <PhyTab in="Belajar" to="/math/homeMath" />
-      <section className="grid grid-cols-1 sm:grid-cols-3 divide-y divide-gray-200 sm:divide-y-0 ">
+      <section className="grid grid-cols-1 divide-y divide-gray-200 sm:grid-cols-3 sm:divide-y-0 ">
         <ChapterBox title="Fluida Statis" to="fluida" />
         <ChapterBox title="Fluida Dinamis" to="fluidaDinamis" />
         <ChapterBox title="Termodinamika" to="fluida" />
