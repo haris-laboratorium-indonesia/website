@@ -16,7 +16,7 @@ export default function Layout({ children }) {
       <main>
         {/* navigation */}
         {/* container */}
-        <main className="sticky top-0 z-10 h-auto mx-auto border-b border-gray-300 blur">
+        <main className="sticky top-0 z-10 h-auto mx-auto blur">
           {/* container */}
           <main className="w-full max-w-4xl py-0 mx-auto md:py-2">
             {/* desktop navigation*/}
