@@ -18,14 +18,14 @@ export default function Layout({ children }) {
         {/* container */}
         <main className="sticky top-0 z-10 h-auto mx-auto blur">
           {/* container */}
-          <main className="w-full max-w-4xl py-0 mx-auto md:py-2">
+          <main className="w-full max-w-4xl py-0 mx-auto md:py-2.5">
             {/* desktop navigation*/}
             <nav className="items-center justify-between hidden px-5 md:flex lg:px-0 ">
               {/* brand name / home button */}
               <section className="flex items-center justify-start ">
                 <Link href="/">
                   <a className="flex flex-row items-center text-lg">
-                    <div className="ml-0.5 font-semibold text-[#1c1c1e] font-mw  ">
+                    <div className="ml-0.5 font-semibold text-[#1c1c1e] ">
                       Haris
                       <span className="font-light text-[#45484a]">Lab</span>
                     </div>
@@ -101,10 +101,10 @@ export default function Layout({ children }) {
                 as="div"
                 className="static flex justify-start w-1/6 md:hidden "
               >
-                <Menu.Button className="py-2 pl-5 focus:outline-none">
+                <Menu.Button className="py-3.5 pl-5 focus:outline-none">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-7 w-7"
+                    className="w-5 h-5"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -118,7 +118,7 @@ export default function Layout({ children }) {
                   </svg>
                 </Menu.Button>
 
-                <Menu.Items className="absolute right-0 w-screen  mt-11 p-5 origin-top-right text-[#1c1c1e] bg-white border-b border-t shadow-lg">
+                <Menu.Items className="absolute right-0 w-screen  mt-11 p-5 origin-top-right text-[#1c1c1e] bg-white shadow-lg">
                   <section className="mb-2">
                     <main className="w-full">
                       <section className=" flex items-center  px-1.5 py-1.5 rounded bg-gray-100 border border-[#8e8e93]">
@@ -149,7 +149,7 @@ export default function Layout({ children }) {
 
               <nav className="justify-center block w-2/3 md:hidden">
                 <Link href="/">
-                  <a className="block text-lg font-semibold text-[#1c1c1e] text-center w-full font-mw py-2">
+                  <a className="block text-lg font-semibold text-[#1c1c1e] text-center w-full py-2.5">
                     <span>Haris</span>
                     <span className="font-light text-[#45484a]">Lab</span>
                   </a>
@@ -160,7 +160,7 @@ export default function Layout({ children }) {
                 as="div"
                 className="static flex justify-end w-1/6 md:hidden "
               >
-                <Menu.Button className="py-2 pr-5 focus:outline-none">
+                <Menu.Button className="py-2.5 pr-5 focus:outline-none">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-7 w-7"

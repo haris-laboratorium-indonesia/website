@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bottom-0 w-full p-5 mt-24 text-center border-t border-gray-300 bg-gray-50 sm:px-0">
+    <footer className="bottom-0 w-full p-5 mt-24 text-center bg-gray-50 sm:px-0">
       <section className="flex flex-col max-w-4xl mx-auto space-y-10 text-left sm:flex-row sm:space-y-0">
         <article className="flex w-full sm:w-1/2">
           <div className="w-full space-y-1 sm:w-1/2">
@@ -40,23 +40,23 @@ export default function Footer() {
           </div>
         </article>
         <article className="w-full sm:w-1/2">
-          <div className="text-2xl font-mw">
+          <div className="text-2xl">
             Haris<span className="text-gray-600">Lab</span>
           </div>
-          <div className="mt-2 text-sm text-gray-600">
+          <div className="mt-2 text-xs text-gray-600 sm:text-sm">
             PT. Haris Laboratorium Indonesia
           </div>
-          <div className="mt-2 text-sm text-gray-500">
+          <div className="mt-2 text-xs text-gray-500 sm:text-sm">
             Jl. Manggis 5, Pondok Kacang Timur, Tangerang Selatan, Banten 15226,
             Indonesia
           </div>
-          <div className="flex flex-col w-full mt-10 text-sm text-gray-600 sm:flex-row">
+          <div className="flex flex-col w-full mt-10 text-xs text-gray-600 sm:text-sm sm:flex-row">
             <div>
               Copyright &copy;2021 Haris
               <span className="font-light">Lab</span> LLC. &nbsp;
             </div>
             <div>
-              Made by &nbsp;
+              Crafted by &nbsp;
               <a
                 target="_blank"
                 href="https://twitter.com/haritssr"
