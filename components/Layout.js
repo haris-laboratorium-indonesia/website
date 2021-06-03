@@ -96,12 +96,15 @@ export default function Layout({ children }) {
                 </Link>
               </section>
             </nav>
+
+            {/* Mobile Nav */}
             <nav className="flex items-center justify-between">
+              {/* Search button */}
               <Menu
                 as="div"
-                className="static flex justify-start w-1/6 md:hidden "
+                className="static flex justify-start w-1/4 md:hidden "
               >
-                <Menu.Button className="py-3.5 pl-5 focus:outline-none">
+                <Menu.Button className="py-3.5 pl-5 focus:outline-none w-full">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-5 h-5"
@@ -110,21 +113,21 @@ export default function Layout({ children }) {
                     stroke="currentColor"
                   >
                     <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                      // strokeLinecap="round"
+                      // strokeLinejoin="round"
                       strokeWidth={1}
                       d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                     />
                   </svg>
                 </Menu.Button>
 
-                <Menu.Items className="absolute right-0 w-screen  mt-11 p-5 origin-top-right text-[#1c1c1e] bg-white shadow-lg">
+                <Menu.Items className="absolute right-0 w-screen border-t mt-12 p-5 origin-top-right text-[#1c1c1e]  backdrop-filter backdrop-blur-md ">
                   <section className="mb-2">
                     <main className="w-full">
-                      <section className=" flex items-center  px-1.5 py-1.5 rounded bg-gray-100 border border-[#8e8e93]">
+                      <section className="shadow-2xl flex items-center  px-1.5 py-1.5 rounded-md bg-white border border-gray-600 hover:ring-1 hover:ring-blue-harislab">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="text-gray-500 h-7 w-7"
+                          className="w-6 h-6 text-gray-500"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -138,7 +141,7 @@ export default function Layout({ children }) {
                         </svg>
                         <input
                           type="text"
-                          className="w-full ml-1 text-black placeholder-gray-500 bg-gray-100 focus:outline-none caret-black focus:placeholder-black "
+                          className="w-full ml-1 text-black placeholder-gray-500 bg-white focus:outline-none caret-black focus:placeholder-black "
                           placeholder="Search"
                         />
                       </section>
@@ -147,7 +150,8 @@ export default function Layout({ children }) {
                 </Menu.Items>
               </Menu>
 
-              <nav className="justify-center block w-2/3 md:hidden">
+              {/* HarisLab */}
+              <nav className="justify-center block w-2/4 md:hidden">
                 <Link href="/">
                   <a className="block text-lg font-semibold text-[#1c1c1e] text-center w-full py-2.5">
                     <span>Haris</span>
@@ -156,11 +160,12 @@ export default function Layout({ children }) {
                 </Link>
               </nav>
 
+              {/* Menu */}
               <Menu
                 as="div"
-                className="static flex justify-end w-1/6 md:hidden "
+                className="static flex justify-end w-1/4 md:hidden "
               >
-                <Menu.Button className="py-2.5 pr-5 focus:outline-none">
+                <Menu.Button className="py-2.5 pr-5 focus:outline-none w-full flex justify-end">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-7 w-7"
@@ -177,7 +182,7 @@ export default function Layout({ children }) {
                   </svg>
                 </Menu.Button>
 
-                <Menu.Items className=" absolute right-0 w-full mt-11 p-5 origin-top-right text-[#1c1c1e] bg-white border-b border-t shadow-lg ">
+                <Menu.Items className=" absolute right-0 w-full mt-12 p-5 origin-top-right text-[#1c1c1e] bg-white border-b border-t shadow-lg ">
                   <section className="grid grid-cols-1 gap-3 mb-5">
                     <Menu.Item>
                       {({ active }) => (
@@ -210,7 +215,7 @@ export default function Layout({ children }) {
                       )}
                     </Menu.Item>
                   </section>
-                  <section className="grid grid-cols-2 gap-5">
+                  <section className="grid grid-cols-2 gap-5 pt-2 border-t border-gray-500">
                     {/* Alat */}
                     <div className="flex flex-col p-2 space-y-2 ">
                       <div className="text-xs text-[#45484a]">ALAT</div>
