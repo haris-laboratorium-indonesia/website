@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="flex justify-center bg-gray-300 shadow-inner">
+      <section className="flex justify-center shadow-inner bg-gradient-to-b from-gray-200 to-white">
         <section className="grid max-w-4xl grid-cols-1 gap-5 py-10 mx-auto sm:grid-cols-2">
           <article className="w-full px-5 py-3 lg:px-0 sm:py-10">
             <div className="w-full text-4xl font-bold text-center text-gray-800 lg:text-6xl sm:text-left font-inter">
@@ -65,7 +65,7 @@ export default function Home() {
         </header>
         {/* Framework */}
         <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
-          <div className="w-full space-y-3 sm:w-1/2">
+          <div className="w-full space-y-3 sm:w-2/3">
             <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-green-500 to-yellow-400 bg-clip-text">
               Framework
             </div>
@@ -83,7 +83,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="w-full sm:w-1/2">
+          <div className="w-full sm:w-1/3">
             <Image
               src="/Framework.svg"
               height="1000px"
@@ -96,7 +96,7 @@ export default function Home() {
 
         {/* Auto Learning */}
         <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
-          <div className="w-full space-y-3 sm:w-1/2">
+          <div className="w-full space-y-3 sm:w-2/3">
             <div className="text-4xl font-bold text-transparent bg-gradient-to-tr from-red-500 to-yellow-400 bg-clip-text">
               Auto Learning
             </div>
@@ -115,7 +115,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="w-full sm:w-1/2">
+          <div className="w-full sm:w-1/3">
             <Image
               src="/Framework.svg"
               height="1000px"
@@ -127,7 +127,7 @@ export default function Home() {
         </section>
       </div>
 
-      <div className="py-10 bg-gray-100 ">
+      <div className="py-10 bg-gray-50 ">
         {/* Kami peduli tentang */}
         <header className="max-w-4xl py-3 mx-auto my-10 font-light text-center text-gray-400">
           Kami Peduli Tentang

@@ -10,7 +10,7 @@ export default function Layout({ children }) {
     <div className="font-inter">
       <Head>
         <title>HarisLab</title>
-        <link rel="icon" href="/Logo.ico" />
+        <link rel="icon" href="/ICO.ico" />
       </Head>
       <main>
         {/* navigation */}
