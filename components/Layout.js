@@ -5,13 +5,12 @@ import { HiOutlineChevronDown } from "react-icons/hi";
 import Footer from "./Footer";
 
 export default function Layout({ children }) {
-  const nav =
-    "px-2 py-1 rounded-md hover:text-[#007AFF] text-[#45484a] text-sm";
+  const nav = "px-2 py-1 rounded-md hover:text-white text-gray-300   text-sm";
   return (
     <div className="font-inter">
       <Head>
         <title>HarisLab</title>
-        <link rel="icon" href="/ya.ico" />
+        <link rel="icon" href="/Logo.ico" />
       </Head>
       <main>
         {/* navigation */}
@@ -25,9 +24,9 @@ export default function Layout({ children }) {
               <section className="flex items-center justify-start ">
                 <Link href="/">
                   <a className="flex flex-row items-center text-lg">
-                    <div className="ml-0.5 font-semibold text-[#1c1c1e] ">
+                    <div className="ml-0.5 font-semibold text-gray-300 hover:text-white ">
                       Haris
-                      <span className="font-light text-[#45484a]">Lab</span>
+                      <span className="font-light">Lab</span>
                     </div>
                   </a>
                 </Link>
@@ -53,8 +52,8 @@ export default function Layout({ children }) {
                 <Link href="/gamesMath">
                   <a className={nav}>Games</a>
                 </Link>
-                <Popover className="relative">
-                  <Popover.Button className="py-0.5 px-2 flex justify-between items-center hover:text-[#007AFF] text-[#45484a] text-sm">
+                <Popover className="relative text-gray-300 hover:text-white">
+                  <Popover.Button className="py-0.5 px-2 flex justify-between items-center hover:text-white text-sm ">
                     <span>Lainnya</span>
                     <HiOutlineChevronDown
                       className="text-opacity-70"
@@ -64,18 +63,23 @@ export default function Layout({ children }) {
 
                   <Popover.Panel className="absolute z-10 flex flex-col w-32 py-2 mt-3 space-y-2 border border-gray-300 rounded shadow-xl blur">
                     <Link href="/merchandise">
-                      <a className="px-2 py-1 text-center hover:text-[#007AFF] text-[#45484a] hover:bg-gray-100">
+                      <a className="px-4 py-1 text-sm text-left hover:text-white hover:bg-gray-600">
                         Merchandise
                       </a>
                     </Link>
                     <Link href="/bookingMe">
-                      <a className="px-2 py-1 text-center hover:text-[#007AFF] text-[#45484a] hover:bg-gray-100">
+                      <a className="px-4 py-1 text-sm text-left hover:text-white hover:bg-gray-600">
                         Booking Me !
                       </a>
                     </Link>
                     <Link href="/portofolio">
-                      <a className="px-2 py-1 text-center hover:text-[#007AFF] text-[#45484a] hover:bg-gray-100">
+                      <a className="px-4 py-1 text-sm text-left hover:text-white hover:bg-gray-600">
                         Portofolio
+                      </a>
+                    </Link>
+                    <Link href="/blog">
+                      <a className="px-4 py-1 text-sm text-left hover:text-white hover:bg-gray-600">
+                        Blog
                       </a>
                     </Link>
                   </Popover.Panel>
@@ -85,12 +89,12 @@ export default function Layout({ children }) {
               {/* signIn/signUp */}
               <section className="flex flex-row items-center justify-end space-x-2">
                 <Link href="/signIn">
-                  <a className="px-2 py-1 hover:rounded-md hover:text-[#007AFF] text-[#45484a] text-sm">
+                  <a className="px-2 py-1 text-sm text-gray-300 hover:rounded-md hover:text-white">
                     Masuk
                   </a>
                 </Link>
                 <Link href="/signUp">
-                  <a className="text-xs rounded-md bg-[#007AFF]  text-white hover:bg-opacity-90  px-3 py-1.5">
+                  <a className="text-xs rounded-md border-[#007AFF] border text-[#007AFF] hover:bg-opacity-90  px-3 py-1.5">
                     Daftar
                   </a>
                 </Link>
@@ -107,14 +111,12 @@ export default function Layout({ children }) {
                 <Menu.Button className="py-3.5 pl-5 focus:outline-none w-full">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-5 h-5"
+                    className="w-5 h-5 text-white"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
                     <path
-                      // strokeLinecap="round"
-                      // strokeLinejoin="round"
                       strokeWidth={1}
                       d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                     />
@@ -153,9 +155,9 @@ export default function Layout({ children }) {
               {/* HarisLab */}
               <nav className="justify-center block w-2/4 md:hidden">
                 <Link href="/">
-                  <a className="block text-lg font-semibold text-[#1c1c1e] text-center w-full py-2.5">
+                  <a className="block text-lg font-semibold text-white text-center w-full py-2.5">
                     <span>Haris</span>
-                    <span className="font-light text-[#45484a]">Lab</span>
+                    <span className="font-light">Lab</span>
                   </a>
                 </Link>
               </nav>
@@ -168,7 +170,7 @@ export default function Layout({ children }) {
                 <Menu.Button className="py-2.5 pr-5 focus:outline-none w-full flex justify-end">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-7 w-7"
+                    className="text-white h-7 w-7"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -177,7 +179,7 @@ export default function Layout({ children }) {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={1}
-                      d="M4 8h16M4 16h16"
+                      d="M4 6h16M4 12h16M4 18h16"
                     />
                   </svg>
                 </Menu.Button>

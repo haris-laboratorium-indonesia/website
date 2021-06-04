@@ -16,12 +16,14 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="flex justify-center bg-gradient-to-b from-gray-200 to-white">
+      <section className="flex justify-center bg-gray-300 shadow-inner">
         <section className="grid max-w-4xl grid-cols-1 gap-5 py-10 mx-auto sm:grid-cols-2">
-          <article className="w-full px-5 py-3 lg:pl-0 sm:py-10">
-            <div className="w-full text-4xl font-bold text-center sm:text-left sm:text-4xl font-inter">
-              <span className="text-gray-800">Pelajari sains</span>{" "}
-              <span className="py-2 text-transparent bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text">
+          <article className="w-full px-5 py-3 lg:px-0 sm:py-10">
+            <div className="w-full text-4xl font-bold text-center text-gray-800 lg:text-6xl sm:text-left font-inter">
+              <span className="">
+                Pelajari sains
+              </span>{" "}
+              <span className="py-2 text-3xl font-normal leading-snug tracking-tighter lg:text-5xl">
                 sebagaimana mereka seharusnya dipelajari.
               </span>
             </div>
@@ -33,24 +35,24 @@ export default function Home() {
               </Link>
             </div>
           </article>
-          <article className="grid grid-cols-4 gap-4 px-5 py-5 sm:pr-0 sm:p-10 sm:grid-cols-3">
+          <article className="grid content-start grid-cols-4 gap-5 px-5 py-5 lg:gap-y-14 sm:pr-0 sm:p-10 sm:grid-cols-3">
             <Icons to="/math/homeMath" name="Belajar">
-              <HiOutlineBookOpen className="w-7 h-7 group-hover:text-gray-700" />
+              <HiOutlineBookOpen className="text-gray-700 w-7 h-7 lg:h-10 lg:w-10" />
             </Icons>
             <Icons to="/flashCardMath" name="Card">
-              <HiOutlineColorSwatch className="w-7 h-7 group-hover:text-gray-700" />
+              <HiOutlineColorSwatch className="text-gray-700 w-7 h-7 lg:h-10 lg:w-10" />
             </Icons>
             <Icons to="/calculatorMath" name="Kalkulator">
-              <HiOutlineCalculator className="w-7 h-7 group-hover:text-gray-700" />
+              <HiOutlineCalculator className="text-gray-700 w-7 h-7 lg:h-10 lg:w-10" />
             </Icons>
             <Icons to="/animationMath" name="Animasi">
-              <HiOutlinePresentationChartLine className="w-7 h-7 group-hover:text-gray-700" />
+              <HiOutlinePresentationChartLine className="text-gray-700 w-7 h-7 lg:h-10 lg:w-10" />
             </Icons>
             <Icons to="/scanMath" name="Scan">
-              <HiOutlineCamera className="w-7 h-7 group-hover:text-gray-700" />
+              <HiOutlineCamera className="text-gray-700 w-7 h-7 lg:h-10 lg:w-10" />
             </Icons>
             <Icons to="/gamesMath" name="Games">
-              <HiOutlinePuzzle className="w-7 h-7 group-hover:text-gray-700" />
+              <HiOutlinePuzzle className="text-gray-700 w-7 h-7 lg:h-10 lg:w-10" />
             </Icons>
           </article>
         </section>
@@ -64,7 +66,9 @@ export default function Home() {
         {/* Framework */}
         <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
           <div className="w-full space-y-3 sm:w-1/2">
-            <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-green-500 to-yellow-400 bg-clip-text">Framework</div>
+            <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-green-500 to-yellow-400 bg-clip-text">
+              Framework
+            </div>
             <div className="text-lg font-medium">
               Di HarisLab, semua bab pelajaran dibuat sebuah struktur informasi
               sedemikia rupa agar mudah diingat. Sehingga kita bisa
@@ -93,7 +97,9 @@ export default function Home() {
         {/* Auto Learning */}
         <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
           <div className="w-full space-y-3 sm:w-1/2">
-            <div className="text-4xl font-bold text-transparent bg-gradient-to-tr from-red-500 to-yellow-400 bg-clip-text">Auto Learning</div>
+            <div className="text-4xl font-bold text-transparent bg-gradient-to-tr from-red-500 to-yellow-400 bg-clip-text">
+              Auto Learning
+            </div>
             <div className="text-lg font-medium">
               HarisLab didesain agar siapapun terutama murid agar bisa belajar
               mandiri tanpa guru, bahkan tanpa buku panduan. Di sini kalian bisa
@@ -120,7 +126,7 @@ export default function Home() {
           </div>
         </section>
       </div>
-      
+
       <div className="py-10 bg-gray-100 ">
         {/* Kami peduli tentang */}
         <header className="max-w-4xl py-3 mx-auto my-10 font-light text-center text-gray-400">
@@ -165,7 +171,7 @@ export default function Home() {
         <header className="max-w-4xl py-3 mx-auto my-10 font-light text-center text-gray-400">
           FAQ
         </header>
-        <section className="grid max-w-4xl grid-cols-1 gap-3 px-5 mx-auto sm:grid-cols-2 sm:gap-5 lg:px-0 ">
+        <section className="grid max-w-4xl grid-cols-1 gap-5 px-5 mx-auto sm:gap-5 lg:px-0 ">
           {FAQs.map((FAQs) => (
             <div key={FAQs.id}>
               <FAQ button={FAQs.button} panel={FAQs.panel} />
