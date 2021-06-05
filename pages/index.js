@@ -16,20 +16,20 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="flex justify-center shadow-inner bg-gradient-to-b from-gray-200 to-white">
+      <section className="flex justify-center bg-gradient-to-b from-gray-200 to-white">
         <section className="grid max-w-4xl grid-cols-1 gap-5 py-10 mx-auto sm:grid-cols-2">
           <article className="w-full px-5 py-3 lg:px-0 sm:py-10">
-            <div className="w-full text-4xl font-bold text-center text-gray-800 lg:text-6xl sm:text-left font-inter">
-              <span className="">
+            <div className="w-full text-4xl text-center lg:text-6xl sm:text-left font-inter">
+              <span className="font-bold ">
                 Pelajari sains
               </span>{" "}
-              <span className="py-2 text-3xl font-normal leading-snug tracking-tighter lg:text-5xl">
+              <span className="py-2 text-3xl leading-snug tracking-tighter lg:text-5xl">
                 sebagaimana mereka seharusnya dipelajari.
               </span>
             </div>
             <div className="flex justify-center mt-7 sm:justify-start">
               <Link href="/math/homeMath">
-                <a className="rounded-lg text-center  w-2/3 sm:w-1/2 px-5 py-3 sm:py-2.5 bg-blue-harislab text-white hover:bg-opacity-90 hover:shadow-inner ">
+                <a className="rounded-lg text-center  w-2/3 sm:w-1/2 px-5 py-3 sm:py-2.5 bg-blue-harislab text-white hover:bg-opacity-90  ">
                   Belajar Sekarang
                 </a>
               </Link>
@@ -58,9 +58,9 @@ export default function Home() {
         </section>
       </section>
 
-      <div className="pb-10 ">
+      <div className="py-10 ">
         {/* Bagaimana kami menyajikan informasi ?*/}
-        <header className="w-2/3 max-w-4xl py-3 mx-auto my-10 text-center text-gray-400 sm:w-full sm:mb-2">
+        <header className="mb-10 text-center ">
           Bagaimana kami menyajikan informasi ?
         </header>
         {/* Framework */}
@@ -127,12 +127,12 @@ export default function Home() {
         </section>
       </div>
 
-      <div className="py-10 bg-gray-50 ">
+      <div className="px-5 py-10 lg:px-0 bg-gray-50">
         {/* Kami peduli tentang */}
-        <header className="max-w-4xl py-3 mx-auto my-10 font-light text-center text-gray-400">
+        <header className="mb-10 text-center ">
           Kami Peduli Tentang
         </header>
-        <section className="grid max-w-4xl grid-cols-1 gap-10 px-5 mx-auto sm:grid-cols-3 md:grid-cols-4 lg:px-0">
+        <section className="grid max-w-4xl grid-cols-1 gap-10 mx-auto sm:grid-cols-3 md:grid-cols-4 ">
           {weCareAbouts.map((weCareAbout) => (
             <div key={weCareAbout.id}>
               {/* icon */}
@@ -168,7 +168,7 @@ export default function Home() {
       </div>
       <div className="py-10 ">
         {/* FAQ */}
-        <header className="max-w-4xl py-3 mx-auto my-10 font-light text-center text-gray-400">
+        <header className="max-w-4xl py-3 mx-auto my-10 text-center ">
           FAQ
         </header>
         <section className="grid max-w-4xl grid-cols-1 gap-5 px-5 mx-auto sm:gap-5 lg:px-0 ">
