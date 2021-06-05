@@ -1,8 +1,9 @@
 import Image from "next/image";
 import MathTab from "../components/MathTab";
-import {Matriks } from "../lib/FlashCardMath"
+import What from "../components/What";
+import { Matriks } from "../lib/FlashCardMath";
+
 export default function flashCardMath() {
-  
   return (
     <main className="max-w-4xl mx-auto ">
       <div className="px-5 lg:px-0">
@@ -31,6 +32,10 @@ export default function flashCardMath() {
           </div>
         ))}
       </div>
+      <What
+        title="Apa itu Kartu Fisika di HarisLab ?"
+        description="Kartu Fisika di HarisLab adalah tempat bagi murid untuk mereview sebuah potongan pelajaran, sangat cocok untuk kamu yang ingin mereview pelajaran sebelum uts, uas, ujian masuk, tanpa harus melihat seluruh materi yang panjang."
+      />
     </main>
   );
 }

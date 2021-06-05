@@ -7,10 +7,10 @@ import { Posters } from "../lib/Posters";
 export default function merchandise() {
   return (
     <main className="max-w-4xl px-5 mx-auto lg:px-0">
-      <div className="my-5 text-2xl font-semibold sm:text-3xl font-mw">
+      <section className="py-1 my-5 text-2xl font-semibold sm:text-3xl">
         Merchandise
-      </div>
-      <div className="mt-20 mb-5 text-4xl font-semibold">Kaos</div>
+      </section>
+      <div className="mb-5 text-4xl font-semibold ">Kaos</div>
       <div className="grid grid-cols-2 gap-10 my-5 sm:grid-cols-4 md:grid-cols-4 gap-y-10 sm:gap-x-10">
         {Kaoss.map((kaos) => (
           <div key={kaos.id}>

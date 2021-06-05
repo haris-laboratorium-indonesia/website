@@ -20,9 +20,7 @@ export default function Home() {
         <section className="grid max-w-4xl grid-cols-1 gap-5 py-10 mx-auto sm:grid-cols-2">
           <article className="w-full px-5 py-3 lg:px-0 sm:py-10">
             <div className="w-full text-4xl text-center lg:text-6xl sm:text-left font-inter">
-              <span className="font-bold ">
-                Pelajari sains
-              </span>{" "}
+              <span className="font-bold ">Pelajari sains</span>{" "}
               <span className="py-2 text-3xl leading-snug tracking-tighter lg:text-5xl">
                 sebagaimana mereka seharusnya dipelajari.
               </span>
@@ -58,9 +56,9 @@ export default function Home() {
         </section>
       </section>
 
-      <div className="py-10 ">
+      <div className="py-10 space-y-10 sm:space-y-5">
         {/* Bagaimana kami menyajikan informasi ?*/}
-        <header className="mb-10 text-center ">
+        <header className="mb-10 text-sm text-center sm:text-base">
           Bagaimana kami menyajikan informasi ?
         </header>
         {/* Framework */}
@@ -125,13 +123,44 @@ export default function Home() {
             />
           </div>
         </section>
+        
+        {/* Project-Base Learning */}
+        <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
+          <div className="w-full space-y-3 sm:w-2/3">
+            <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text">
+              Project-Base Learning
+            </div>
+            <div className="text-lg font-medium">
+              Project-Base learning berarti kalian diberi masalah dulu baru
+              menggunakan semua materi pelajaran di 'Belajar' untuk
+              menyelesaikan masalah. Ini meningkatkan sense of utility yang
+              selama ini hilang di pendidikan SMA fisika dan matematika di
+              Indonesia, murid sering bilang "ini gunanya buat apa ?", kita
+              kalimat seperti itu akan jarang terlihat di HarisLab.
+            </div>
+            <div className="text-blue-harislab hover:underline">
+              <Link href="/menyajikanInformasi">
+                <a>
+                  Selengkapnya <HiOutlineChevronRight className="inline" />
+                </a>
+              </Link>
+            </div>
+          </div>
+          <div className="w-full sm:w-1/3">
+            <Image
+              src="/Framework.svg"
+              height="1000px"
+              width="1000px"
+              layout="responsive"
+              priority
+            />
+          </div>
+        </section>
       </div>
 
       <div className="px-5 py-10 lg:px-0 bg-gray-50">
         {/* Kami peduli tentang */}
-        <header className="mb-10 text-center ">
-          Kami Peduli Tentang
-        </header>
+        <header className="mb-10 text-center ">Kami Peduli Tentang</header>
         <section className="grid max-w-4xl grid-cols-1 gap-10 mx-auto sm:grid-cols-3 md:grid-cols-4 ">
           {weCareAbouts.map((weCareAbout) => (
             <div key={weCareAbout.id}>

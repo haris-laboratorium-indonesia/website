@@ -1,5 +1,5 @@
 import MathTab from "../components/MathTab";
-
+import What from "../components/What";
 export default function calculatorMath() {
   function tambah() {
     let angka1 = parseFloat(document.calculator.angka1.value);
@@ -22,6 +22,10 @@ export default function calculatorMath() {
           value="x"
         />
       </div>
+      <What
+        title="Apa itu Kalkulator Matematika di HarisLab ?"
+        description="Kalkulator Matematika di HarisLab adalah tempat untuk menghitung nilai dari sebuah rumus, jadi kamu sebagai siswa atau siapapun yang butuh untuk menghitung perhitungan yang melibatkan rumus matematika tingkat SMA tidak perlu menulis panjang-panjang di kertas, semua cara sudah kami masukkan dalam mesin kalkulator kami, kamu tinggal memasukkan nilai yang ingin kalian hitung. Ini mempercepat work flow kalian, luangkan waktu lebih banyak untuk menyelesaikan masalah dan memahaminya daripada menghitung yang bisa dilakukan oleh mesin."
+      />
     </main>
   );
 }

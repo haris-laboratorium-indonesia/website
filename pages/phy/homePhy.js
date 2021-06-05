@@ -1,5 +1,6 @@
 import ChapterBox from "../../components/ChapterBox";
 import PhyTab from "../../components/PhyTab";
+import What from "../../components/What";
 
 export default function homePhy() {
   return (
@@ -25,6 +26,10 @@ export default function homePhy() {
         <ChapterBox title="Gelombang Bunyi" to="fluida" />
         <ChapterBox title="Optik" to="fluida" />
       </section>
+      <What
+        title="Apa itu Belajar Fisika di Harislab ?"
+        description="Belajar di HarisLab berarti melihat materi pelajaran, kamu bisa baca materi, melihat contoh soal, variabel, rumus yang digunakan, bahkan bisa melihat semua penurunan rumus dari rumus yang sering dipakai dalam mengerjakan sebuah soal."
+      />
     </main>
   );
 }

@@ -1,5 +1,6 @@
 import ChapterBox from "../../components/ChapterBox";
 import MathTab from "../../components/MathTab";
+import What from "../../components/What";
 
 export default function homeMath() {
   return (
@@ -27,6 +28,10 @@ export default function homeMath() {
         <ChapterBox title="Statistika" to="linear" />
         <ChapterBox title="Peluang" to="linear" />
       </section>
+      <What
+        title="Apa itu Belajar Matematika di Harislab ?"
+        description="Belajar di HarisLab berarti melihat materi pelajaran, kamu bisa baca materi, melihat contoh soal, variabel, rumus yang digunakan, bahkan bisa melihat semua penurunan rumus dari rumus yang sering dipakai dalam mengerjakan sebuah soal."
+      />
     </main>
   );
 }
