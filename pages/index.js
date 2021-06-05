@@ -115,7 +115,7 @@ export default function Home() {
           </div>
           <div className="w-full sm:w-1/3">
             <Image
-              src="/Framework.svg"
+              src="/AutoLearning.svg"
               height="1000px"
               width="1000px"
               layout="responsive"
@@ -136,7 +136,7 @@ export default function Home() {
               menyelesaikan masalah. Ini meningkatkan sense of utility yang
               selama ini hilang di pendidikan SMA fisika dan matematika di
               Indonesia, murid sering bilang "ini gunanya buat apa ?", kita
-              kalimat seperti itu akan jarang terlihat di HarisLab.
+              kalimat seperti itu akan jarang terdengar di HarisLab.
             </div>
             <div className="text-blue-harislab hover:underline">
               <Link href="/menyajikanInformasi">
@@ -148,7 +148,7 @@ export default function Home() {
           </div>
           <div className="w-full sm:w-1/3">
             <Image
-              src="/Framework.svg"
+              src="/Project-BaseLearning.svg"
               height="1000px"
               width="1000px"
               layout="responsive"
