@@ -71,7 +71,6 @@ export default function Footer() {
               >
                 Harits Syah
               </a>
-              
             </div>
           </div>
         </article>
@@ -79,3 +78,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+// komponen ini ada di Layout.js

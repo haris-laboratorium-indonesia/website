@@ -14,3 +14,5 @@ export default function Icons({ to, children, name }) {
     </main>
   );
 }
+
+// komponen ini ada di index.js

@@ -20,3 +20,5 @@ export default function PhyTab(props) {
     </main>
   );
 }
+
+// komponen ini ada di halaman homePhy.js, cardPhy.js,calculatorPhy.js, animationPhy.jsscanPhy.js, gamesPhy.js

@@ -12,3 +12,5 @@ export default function FAQ({ button, panel }) {
     </Disclosure>
   );
 }
+
+// komponen ini ada di index.js

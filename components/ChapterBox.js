@@ -17,3 +17,5 @@ export default function ChapterBox({ to, title }) {
     </main>
   );
 }
+
+// komponen ini ada di homeMath.js, homePhy.js

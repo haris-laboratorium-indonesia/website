@@ -56,7 +56,7 @@ export default function Home() {
         </section>
       </section>
 
-      <div className="py-10 space-y-10 sm:space-y-5">
+      <div className="py-10 space-y-20 sm:space-y-5">
         {/* Bagaimana kami menyajikan informasi ?*/}
         <header className="mb-10 text-sm text-center sm:text-base">
           Bagaimana kami menyajikan informasi ?
@@ -123,7 +123,7 @@ export default function Home() {
             />
           </div>
         </section>
-        
+
         {/* Project-Base Learning */}
         <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
           <div className="w-full space-y-3 sm:w-2/3">
@@ -149,6 +149,34 @@ export default function Home() {
           <div className="w-full sm:w-1/3">
             <Image
               src="/Project-BaseLearning.svg"
+              height="1000px"
+              width="1000px"
+              layout="responsive"
+              priority
+            />
+          </div>
+        </section>
+
+        {/* No Ads */}
+        <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
+          <div className="w-full space-y-3 sm:w-2/3">
+            <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-pink-600 to-yellow-500 bg-clip-text">
+              No Ads
+            </div>
+            <div className="text-lg font-medium">
+              Cukup sudah kamu melihat iklan dimana-mana, di internet, di sosial media, di youtube, di jalanan, sekarang waktunya fokus belajar, kita tau kalian benci iklan, begitupun kami, maka dari itu, HarisLab tanpa iklan, tentu tidak nyaman bukan ketika sedang enak-enak baca tiba-tiba muncul konten yang gak berhubungan dengan apa yang kita pelajari ?, kami menghargai perhatian anda, sumber daya terpenting kedua setelah waktu.
+            </div>
+            <div className="text-blue-harislab hover:underline">
+              <Link href="/menyajikanInformasi">
+                <a>
+                  Selengkapnya <HiOutlineChevronRight className="inline" />
+                </a>
+              </Link>
+            </div>
+          </div>
+          <div className="w-full sm:w-1/3">
+            <Image
+              src="/NoAds.svg"
               height="1000px"
               width="1000px"
               layout="responsive"
