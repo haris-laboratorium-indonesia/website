@@ -19,10 +19,10 @@ export default function Home() {
       <section className="flex justify-center bg-gradient-to-b from-gray-200 to-white">
         <section className="grid max-w-4xl grid-cols-1 gap-5 py-10 mx-auto sm:grid-cols-2">
           <article className="w-full px-5 py-3 lg:px-0 sm:py-10">
-            <div className="w-full text-4xl text-center lg:text-6xl sm:text-left font-inter">
-              <span className="font-bold ">Pelajari sains</span>{" "}
-              <span className="py-2 text-3xl leading-snug tracking-tighter lg:text-5xl">
-                sebagaimana mereka seharusnya dipelajari.
+            <div className="w-full text-4xl text-center lg:text-5xl sm:text-left font-inter">
+              <span className="block font-bold">Laboratorium untuk pelajar.</span>
+              <span className="py-2 text-2xl tracking-tighter ">
+                Materi FisMat, Flash Card, Kalkulator, Animasi, Scan soal, Games, Booking Les.
               </span>
             </div>
             <div className="flex justify-center mt-7 sm:justify-start">
