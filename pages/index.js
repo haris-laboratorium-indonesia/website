@@ -18,20 +18,19 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="flex justify-center bg-gradient-to-b from-gray-200 to-white">
-        <section className="grid max-w-4xl grid-cols-1 gap-5 py-10 mx-auto sm:grid-cols-2">
-          <article className="w-full px-5 py-3 lg:px-0 sm:py-10">
-            <div className="w-full text-4xl text-center lg:text-5xl sm:text-left font-inter">
-              <span className="block font-bold">
-                Laboratorium untuk pelajar.
-              </span>
-              <span className="text-lg sm:text-xl ">
-                Materi FisMat, Flash Card, Kalkulator, Animasi, Scan soal,
-                Games, Booking Les.
-              </span>
-            </div>
+        <section className="grid max-w-4xl grid-cols-1 gap-5 py-5 mx-auto sm:grid-cols-2">
+          <article className="w-full px-5 py-3 space-y-5 lg:px-0 sm:py-10 font-inter">
+            <p className="block text-4xl font-bold text-center sm:text-5xl sm:text-left">
+              Laboratorium untuk pelajar.
+            </p>
+            <p className="text-lg leading-tight text-center sm:text-xl sm:text-left">
+              Materi FisMat, Flash Card, Kalkulator, Animasi, Scan soal, Games,
+              Booking Les.
+            </p>
+
             <div className="flex justify-center mt-7 sm:justify-start">
               <Link href="/math/homeMath">
-                <a className="rounded-lg text-center  w-2/3 sm:w-1/2 px-5 py-3 sm:py-2.5 bg-blue-harislab text-white hover:bg-opacity-90  ">
+                <a className="rounded-lg text-center  w-2/3 sm:w-1/2 px-5 py-3 sm:py-2.5 bg-blue-harislab text-white hover:bg-opacity-85 transform -translate-y-0.5 hover:translate-y-0.5 shadow-lg hover:shadow-none transition duration-100 ">
                   Belajar Sekarang
                 </a>
               </Link>
