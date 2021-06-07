@@ -37,7 +37,7 @@ export default function Home() {
               </Link>
             </div>
           </article>
-          <article className="grid content-start grid-cols-4 gap-5 px-5 py-5 lg:gap-y-14 sm:pr-0 sm:p-10 sm:grid-cols-3">
+          <article className="grid grid-cols-4 gap-5 px-5 py-5 justify-items-center sm:pr-0 sm:p-10 sm:grid-cols-3">
             <Icons to="/math/homeMath" name="Materi">
               <HiOutlineBookOpen className="text-gray-700 w-7 h-7 lg:h-10 lg:w-10" />
             </Icons>
