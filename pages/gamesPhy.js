@@ -4,7 +4,7 @@ import What from "../components/What";
 export default function gamesMath() {
   return (
     <main className="max-w-4xl px-5 mx-auto lg:px-0">
-      <PhyTab in="Games" to="gamesMath" />
+      <PhyTab in="Permainan" to="gamesMath" />
 
       <What
         title="Apa itu Games Fisika di HarisLab ?"

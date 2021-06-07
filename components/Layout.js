@@ -51,7 +51,7 @@ export default function Layout({ children }) {
                   <a className={nav}>Scan</a>
                 </Link>
                 <Link href="/gamesMath">
-                  <a className={nav}>Games</a>
+                  <a className={nav}>Permainan</a>
                 </Link>
 
                 {/* Lainnya */}
@@ -290,10 +290,41 @@ export default function Layout({ children }) {
                           </button>
                         )}
                       </Menu.Item>
+
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button className="w-full text-left rounded-lg ">
+                            {active ? (
+                              <Link href="/gamesMath">
+                                <a>Permainan</a>
+                              </Link>
+                            ) : (
+                              <Link href="/gamesMath">
+                                <a>Permainan</a>
+                              </Link>
+                            )}
+                          </button>
+                        )}
+                      </Menu.Item>
                     </div>
                     {/* Lainnya */}
                     <div className="flex flex-col p-2 space-y-2 ">
                       <div className="text-xs text-[#45484a]">LAINNYA</div>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button className="w-full text-left rounded-lg ">
+                            {active ? (
+                              <Link href="/blog">
+                                <a>Blog</a>
+                              </Link>
+                            ) : (
+                              <Link href="/blog">
+                                <a>Blog</a>
+                              </Link>
+                            )}
+                          </button>
+                        )}
+                      </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
                           <button className="w-full text-left rounded-lg ">

@@ -5,7 +5,7 @@ import What from "../../components/What";
 export default function homePhy() {
   return (
     <main className="max-w-4xl px-5 mx-auto lg:px-0">
-      <PhyTab in="Belajar" to="/math/homeMath" />
+      <PhyTab in="Materi" to="/math/homeMath" />
       <section className="grid grid-cols-1 divide-y divide-gray-200 sm:grid-cols-3 sm:divide-y-0 ">
         <ChapterBox title="Fluida Statis" to="fluida" />
         <ChapterBox title="Fluida Dinamis" to="fluidaDinamis" />

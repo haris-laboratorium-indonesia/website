@@ -24,7 +24,7 @@ export default function Home() {
               <span className="block font-bold">
                 Laboratorium untuk pelajar.
               </span>
-              <span className="py-2 text-2xl tracking-tighter ">
+              <span className="text-lg sm:text-xl ">
                 Materi FisMat, Flash Card, Kalkulator, Animasi, Scan soal,
                 Games, Booking Les.
               </span>
@@ -38,10 +38,10 @@ export default function Home() {
             </div>
           </article>
           <article className="grid content-start grid-cols-4 gap-5 px-5 py-5 lg:gap-y-14 sm:pr-0 sm:p-10 sm:grid-cols-3">
-            <Icons to="/math/homeMath" name="Belajar">
+            <Icons to="/math/homeMath" name="Materi">
               <HiOutlineBookOpen className="text-gray-700 w-7 h-7 lg:h-10 lg:w-10" />
             </Icons>
-            <Icons to="/flashCardMath" name="Card">
+            <Icons to="/flashCardMath" name="Kartu">
               <HiOutlineColorSwatch className="text-gray-700 w-7 h-7 lg:h-10 lg:w-10" />
             </Icons>
             <Icons to="/calculatorMath" name="Kalkulator">
@@ -53,7 +53,7 @@ export default function Home() {
             <Icons to="/scanMath" name="Scan">
               <HiOutlineCamera className="text-gray-700 w-7 h-7 lg:h-10 lg:w-10" />
             </Icons>
-            <Icons to="/gamesMath" name="Games">
+            <Icons to="/gamesMath" name="Permainan">
               <HiOutlinePuzzle className="text-gray-700 w-7 h-7 lg:h-10 lg:w-10" />
             </Icons>
           </article>

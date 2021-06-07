@@ -10,7 +10,7 @@ export default function flashCardMath() {
         <MathTab in="Card" to="flashCardPhy" />
       </div>
 
-      <div className="px-5 mb-5 text-2xl font-semibold sm:px-0">Matriks</div>
+      <div className="px-5 mb-5 text-2xl font-semibold lg:px-0">Matriks</div>
       <div className="flex p-5 space-x-5 overflow-x-auto bg-gray-100 shadow-inner sm:p-5 ">
         {Matriks.map((Matrik) => (
           <div
@@ -32,10 +32,12 @@ export default function flashCardMath() {
           </div>
         ))}
       </div>
-      <What
-        title="Apa itu Kartu Fisika di HarisLab ?"
-        description="Kartu Fisika di HarisLab adalah tempat bagi murid untuk mereview sebuah potongan pelajaran, sangat cocok untuk kamu yang ingin mereview pelajaran sebelum uts, uas, ujian masuk, tanpa harus melihat seluruh materi yang panjang."
-      />
+      <div className="px-5 lg:px-0">
+        <What
+          title="Apa itu Kartu Fisika di HarisLab ?"
+          description="Kartu Fisika di HarisLab adalah tempat bagi murid untuk mereview sebuah potongan pelajaran, sangat cocok untuk kamu yang ingin mereview pelajaran sebelum uts, uas, ujian masuk, tanpa harus melihat seluruh materi yang panjang."
+        />
+      </div>
     </main>
   );
 }

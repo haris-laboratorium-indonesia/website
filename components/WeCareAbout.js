@@ -20,9 +20,7 @@ export default function WeCareAbout({ key, svg, name, description }) {
       </div>
       {/* Name */}
       <div className="my-2">
-        <h1 className="text-xl font-semibold text-gray-700 hover:underline">
-          {name}
-        </h1>
+        <h1 className="text-xl font-semibold ">{name}</h1>
       </div>
       {/* description */}
       <div className="text-gray-600">{description}</div>

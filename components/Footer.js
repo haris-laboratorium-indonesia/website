@@ -16,7 +16,7 @@ export default function Footer() {
             <Link href="/calculatorMath">
               <a className={navigation}>Kalkulator</a>
             </Link>
-            <Link href="/flashcardMath">
+            <Link href="/flashCardMath">
               <a className={navigation}>Kartu</a>
             </Link>
             <Link href="/animationMath">
@@ -26,21 +26,25 @@ export default function Footer() {
               <a className={navigation}>Scan</a>
             </Link>
             <Link href="/gamesMath">
-              <a className={navigation}>Games</a>
+              <a className={navigation}>Permainan</a>
             </Link>
           </div>
 
           {/* Lainnya */}
           <div className="w-full space-y-1 sm:w-1/2">
             <div className="text-sm ">LAINNYA</div>
-            <Link href="/merchandise">
-              <a className={navigation}>Merchandise</a>
+            <Link href="/portofolio">
+              <a className={navigation}>Portofolio</a>
             </Link>
+
             <Link href="/bookingMe">
               <a className={navigation}>Booking Me !</a>
             </Link>
-            <Link href="/portofolio">
-              <a className={navigation}>Portofolio</a>
+            <Link href="/merchandise">
+              <a className={navigation}>Merchandise</a>
+            </Link>
+            <Link href="/blog">
+              <a className={navigation}>Blog</a>
             </Link>
           </div>
         </article>
@@ -54,8 +58,7 @@ export default function Footer() {
             PT. Haris Laboratorium Indonesia
           </div>
           <div className="mt-2 sm:text-sm">
-            Pondok Kacang Timur, Tangerang Selatan, Banten 15226,
-            Indonesia
+            Pondok Kacang Timur, Tangerang Selatan, Banten 15226, Indonesia
           </div>
           <div className="flex flex-col w-full mt-10 sm:text-sm sm:flex-row">
             <div>
