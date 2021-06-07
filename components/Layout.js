@@ -36,7 +36,7 @@ export default function Layout({ children }) {
               {/* main link */}
               <section className="flex flex-row items-center justify-end space-x-2 lg:space-x-5 ">
                 <Link href="/math/homeMath">
-                  <a className={nav}>Belajar</a>
+                  <a className={nav}>Materi</a>
                 </Link>
                 <Link href="/flashCardMath">
                   <a className={nav}>Kartu</a>
@@ -219,11 +219,11 @@ export default function Layout({ children }) {
                           <button className="w-full text-left rounded-lg ">
                             {active ? (
                               <Link href="/math/homeMath">
-                                <a>Belajar</a>
+                                <a>Materi</a>
                               </Link>
                             ) : (
                               <Link href="/math/homeMath">
-                                <a>Belajar</a>
+                                <a>Materi</a>
                               </Link>
                             )}
                           </button>

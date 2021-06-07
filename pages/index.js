@@ -11,6 +11,7 @@ import { HiOutlinePuzzle } from "react-icons/hi";
 import { HiOutlineChevronRight } from "react-icons/hi";
 import { weCareAbouts } from "../lib/weCareAbouts";
 import { FAQs } from "../lib/FAQs";
+import WeCareAbout from "../components/WeCareAbout";
 
 export default function Home() {
   return (
@@ -20,9 +21,12 @@ export default function Home() {
         <section className="grid max-w-4xl grid-cols-1 gap-5 py-10 mx-auto sm:grid-cols-2">
           <article className="w-full px-5 py-3 lg:px-0 sm:py-10">
             <div className="w-full text-4xl text-center lg:text-5xl sm:text-left font-inter">
-              <span className="block font-bold">Laboratorium untuk pelajar.</span>
+              <span className="block font-bold">
+                Laboratorium untuk pelajar.
+              </span>
               <span className="py-2 text-2xl tracking-tighter ">
-                Materi FisMat, Flash Card, Kalkulator, Animasi, Scan soal, Games, Booking Les.
+                Materi FisMat, Flash Card, Kalkulator, Animasi, Scan soal,
+                Games, Booking Les.
               </span>
             </div>
             <div className="flex justify-center mt-7 sm:justify-start">
@@ -56,18 +60,18 @@ export default function Home() {
         </section>
       </section>
 
-      <div className="py-10 space-y-20 sm:space-y-5">
-        {/* Bagaimana kami menyajikan informasi ?*/}
+      {/* Bagaimana kami menyajikan informasi ?*/}
+      <section className="py-10 space-y-20 sm:space-y-5">
         <header className="mb-10 text-sm text-center sm:text-base">
           Bagaimana kami menyajikan informasi ?
         </header>
-        {/* Framework */}
+        {/* Kerangka Kerja */}
         <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
           <div className="w-full space-y-3 sm:w-2/3">
             <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-green-500 to-yellow-400 bg-clip-text">
-              Framework
+              Kerangka Kerja
             </div>
-            <div className="text-lg font-medium">
+            <div className="text-lg">
               Di HarisLab, semua bab pelajaran dibuat sebuah struktur informasi
               sedemikia rupa agar mudah diingat. Sehingga kita bisa
               berekspektasi kepada setiap bab nya, bahwa ini yang akan kita
@@ -92,13 +96,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Auto Learning */}
+        {/* Belajar Mandiri */}
         <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
           <div className="w-full space-y-3 sm:w-2/3">
             <div className="text-4xl font-bold text-transparent bg-gradient-to-tr from-red-500 to-yellow-400 bg-clip-text">
-              Auto Learning
+              Belajar Mandiri
             </div>
-            <div className="text-lg font-medium">
+            <div className="text-lg">
               HarisLab didesain agar siapapun terutama murid agar bisa belajar
               mandiri tanpa guru, bahkan tanpa buku panduan. Di sini kalian bisa
               mendapatkan materi apapun, menggunakan kalkulator, men-track
@@ -124,19 +128,19 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Project-Base Learning */}
+        {/* Belajar Berdasarkan Proyek */}
         <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
           <div className="w-full space-y-3 sm:w-2/3">
             <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text">
-              Project-Base Learning
+              Belajar Berdasarkan Proyek
             </div>
-            <div className="text-lg font-medium">
-              Project-Base learning berarti kalian diberi masalah dulu baru
-              menggunakan semua materi pelajaran di 'Belajar' untuk
-              menyelesaikan masalah. Ini meningkatkan sense of utility yang
-              selama ini hilang di pendidikan SMA fisika dan matematika di
-              Indonesia, murid sering bilang "ini gunanya buat apa ?", kita
-              kalimat seperti itu akan jarang terdengar di HarisLab.
+            <div className="text-lg">
+              Belajar berdasarkan proyek (Project-Base Learning) berarti kalian
+              diberi masalah dulu baru menggunakan semua materi pelajaran di
+              'Belajar' untuk menyelesaikan masalah. Ini meningkatkan sense of
+              utility yang selama ini hilang di pendidikan SMA fisika dan
+              matematika di Indonesia, murid sering bilang "ini gunanya buat apa
+              ?", kita kalimat seperti itu akan jarang terdengar di HarisLab.
             </div>
             <div className="text-blue-harislab hover:underline">
               <Link href="/menyajikanInformasi">
@@ -163,8 +167,14 @@ export default function Home() {
             <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-pink-600 to-yellow-500 bg-clip-text">
               No Ads
             </div>
-            <div className="text-lg font-medium">
-              Cukup sudah kamu melihat iklan dimana-mana, di internet, di sosial media, di youtube, di jalanan, sekarang waktunya fokus belajar, kita tau kalian benci iklan, begitupun kami, maka dari itu, HarisLab tanpa iklan, tentu tidak nyaman bukan ketika sedang enak-enak baca tiba-tiba muncul konten yang gak berhubungan dengan apa yang kita pelajari ?, kami menghargai perhatian anda, sumber daya terpenting kedua setelah waktu.
+            <div className="text-lg">
+              Cukup sudah kamu melihat iklan dimana-mana, di internet, di sosial
+              media, di youtube, di jalanan, sekarang waktunya fokus belajar,
+              kita tau kalian benci iklan, begitupun kami, maka dari itu,
+              HarisLab tanpa iklan, tentu tidak nyaman bukan ketika sedang
+              enak-enak baca tiba-tiba muncul konten yang gak berhubungan dengan
+              apa yang kita pelajari ?, kami menghargai perhatian anda, sumber
+              daya terpenting kedua setelah waktu.
             </div>
             <div className="text-blue-harislab hover:underline">
               <Link href="/menyajikanInformasi">
@@ -184,47 +194,25 @@ export default function Home() {
             />
           </div>
         </section>
-      </div>
+      </section>
 
+      {/* Kami peduli tentang */}
       <div className="px-5 py-10 lg:px-0 bg-gray-50">
-        {/* Kami peduli tentang */}
         <header className="mb-10 text-center ">Kami Peduli Tentang</header>
         <section className="grid max-w-4xl grid-cols-1 gap-10 mx-auto sm:grid-cols-3 md:grid-cols-4 ">
           {weCareAbouts.map((weCareAbout) => (
-            <div key={weCareAbout.id}>
-              {/* icon */}
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-8 h-8 text-blue-harislab"
-                  responsive="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d={weCareAbout.svg}
-                  />
-                </svg>
-              </div>
-              {/* Name */}
-              <div className="my-2">
-                <Link href={weCareAbout.CTALink}>
-                  <a className="text-xl font-semibold text-gray-700 hover:underline">
-                    {weCareAbout.CTAName}
-                  </a>
-                </Link>
-              </div>
-              {/* description */}
-              <div className="text-gray-600">{weCareAbout.description}</div>
-            </div>
+            <WeCareAbout
+              key={weCareAbout.id}
+              svg={weCareAbout.svg}
+              name={weCareAbout.name}
+              description={weCareAbout.description}
+            />
           ))}
         </section>
       </div>
+
+      {/* FAQ */}
       <div className="py-10 ">
-        {/* FAQ */}
         <header className="max-w-4xl py-3 mx-auto my-10 text-center ">
           FAQ
         </header>
@@ -239,3 +227,5 @@ export default function Home() {
     </>
   );
 }
+
+// link ke halaman ini ada di ../components/Layout.js

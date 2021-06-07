@@ -54,7 +54,7 @@ export default function Footer() {
             PT. Haris Laboratorium Indonesia
           </div>
           <div className="mt-2 sm:text-sm">
-            Jl. Manggis 5, Pondok Kacang Timur, Tangerang Selatan, Banten 15226,
+            Pondok Kacang Timur, Tangerang Selatan, Banten 15226,
             Indonesia
           </div>
           <div className="flex flex-col w-full mt-10 sm:text-sm sm:flex-row">
