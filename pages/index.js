@@ -30,7 +30,7 @@ export default function Home() {
 
             <div className="flex justify-center mt-7 sm:justify-start">
               <Link href="/signUp">
-                <a className="rounded-lg text-center  w-2/3 sm:w-1/2 px-5 py-3 sm:py-2.5 bg-blue-harislab text-white hover:bg-opacity-85 transform -translate-y-0.5 hover:translate-y-0.5 shadow-lg hover:shadow-none transition duration-100 ">
+                <a className="rounded-lg text-center  w-2/3 sm:w-1/2 px-5 py-3 sm:py-2.5 bg-blue-harislab text-white hover:bg-opacity-100 transform -translate-y-px hover:translate-y-px shadow-md hover:shadow-none transition duration-300 bg-opacity-85 ">
                   Daftar Sekarang
                 </a>
               </Link>
@@ -67,7 +67,7 @@ export default function Home() {
         {/* Kerangka Kerja */}
         <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
           <div className="w-full space-y-3 sm:w-2/3">
-            <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-green-500 to-yellow-400 bg-clip-text">
+            <div className="text-4xl font-bold text-[#34c759]">
               Kerangka Kerja
             </div>
             <div className="text-lg">
@@ -98,7 +98,7 @@ export default function Home() {
         {/* Belajar Mandiri */}
         <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
           <div className="w-full space-y-3 sm:w-2/3">
-            <div className="text-4xl font-bold text-transparent bg-gradient-to-tr from-red-500 to-yellow-400 bg-clip-text">
+            <div className="text-4xl font-bold text-[#ff9500]">
               Belajar Mandiri
             </div>
             <div className="text-lg">
@@ -130,7 +130,7 @@ export default function Home() {
         {/* Belajar Berdasarkan Proyek */}
         <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
           <div className="w-full space-y-3 sm:w-2/3">
-            <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text">
+            <div className="text-4xl font-bold text-[#af52de]">
               Belajar Berdasarkan Proyek
             </div>
             <div className="text-lg">
@@ -163,8 +163,8 @@ export default function Home() {
         {/* No Ads */}
         <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
           <div className="w-full space-y-3 sm:w-2/3">
-            <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-pink-600 to-yellow-500 bg-clip-text">
-              No Ads
+            <div className="text-4xl font-bold text-[#ff2d55]">
+              Tanpa Iklan
             </div>
             <div className="text-lg">
               Cukup sudah kamu melihat iklan dimana-mana, di internet, di sosial
