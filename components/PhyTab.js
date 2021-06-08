@@ -8,12 +8,12 @@ export default function PhyTab(props) {
       <section className="flex flex-row justify-end w-full space-x-2 sm:justify-start">
         <Link href={props.to}>
           <a>
-            <div className="px-2 py-1 border border-black rounded-md hover:bg-gray-50">
+            <div className="px-2 pt-1.5 pb-1 rounded-t  border-b-2 border-gray-100 bg-gray-100 hover:bg-gray-200">
               Matematika
             </div>
           </a>
         </Link>
-        <div className="px-2 py-1 bg-gray-200 border border-black rounded-md">
+        <div className="px-2 pt-1.5 pb-1 rounded-t  border-b-2 border-blue-harislab bg-gray-100 shadow-inner ">
           Fisika
         </div>
       </section>

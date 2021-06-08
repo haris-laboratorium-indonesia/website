@@ -29,9 +29,9 @@ export default function Home() {
             </p>
 
             <div className="flex justify-center mt-7 sm:justify-start">
-              <Link href="/math/homeMath">
+              <Link href="/signUp">
                 <a className="rounded-lg text-center  w-2/3 sm:w-1/2 px-5 py-3 sm:py-2.5 bg-blue-harislab text-white hover:bg-opacity-85 transform -translate-y-0.5 hover:translate-y-0.5 shadow-lg hover:shadow-none transition duration-100 ">
-                  Belajar Sekarang
+                  Daftar Sekarang
                 </a>
               </Link>
             </div>

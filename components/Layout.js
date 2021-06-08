@@ -34,7 +34,7 @@ export default function Layout({ children }) {
               </section>
 
               {/* main link */}
-              <section className="flex flex-row items-center justify-end space-x-2 lg:space-x-5 ">
+              <section className="flex flex-row items-center justify-end space-x-2 lg:space-x-3 ">
                 <Link href="/math/homeMath">
                   <a className={nav}>Materi</a>
                 </Link>
