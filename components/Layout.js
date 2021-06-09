@@ -10,8 +10,8 @@ export default function Layout({ children }) {
   return (
     <nav className="font-inter">
       <Head>
-        <title>Haris Lab</title>
-        <link rel="icon" href="/ICO.ico" />
+        <title>harisLab</title>
+        <link rel="icon" href="/Logo.ico" />
       </Head>
       <main>
         {/* navigation */}
@@ -24,10 +24,10 @@ export default function Layout({ children }) {
               {/* brand name / home button */}
               <section className="flex items-center justify-start ">
                 <Link href="/">
-                  <a className="flex flex-row items-center text-lg">
+                  <a className="flex flex-row items-center text-lg font-mw">
                     <div className="ml-0.5 font-semibold">
                       haris
-                      <span className="font-light">lab</span>
+                      <span className="font-light">Lab</span>
                     </div>
                   </a>
                 </Link>
@@ -146,9 +146,9 @@ export default function Layout({ children }) {
               {/* HarisLab */}
               <nav className="justify-center block w-2/4 md:hidden">
                 <Link href="/">
-                  <a className="block text-lg font-semibold  text-center w-full py-2.5">
+                  <a className="block text-lg font-semibold  text-center w-full py-2.5 font-mw">
                     <span>haris</span>
-                    <span className="font-light">lab</span>
+                    <span className="font-light">Lab</span>
                   </a>
                 </Link>
               </nav>

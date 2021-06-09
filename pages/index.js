@@ -14,6 +14,7 @@ import { FAQs } from "../lib/FAQs";
 import WeCareAbout from "../components/WeCareAbout";
 
 export default function Home() {
+  const tableColor = "bg-blue-100 text-blue-500 text-center";
   return (
     <>
       {/* Hero */}
@@ -30,7 +31,7 @@ export default function Home() {
 
             <div className="flex justify-center mt-7 sm:justify-start">
               <Link href="/signUp">
-                <a className="rounded-lg text-center  w-2/3 sm:w-1/2 px-5 py-3 sm:py-2.5 bg-blue-harislab text-white hover:bg-opacity-100 transform -translate-y-px hover:translate-y-px shadow-md hover:shadow-none transition duration-300 bg-opacity-85 ">
+                <a className="rounded-lg text-center  w-2/3 sm:w-1/2 px-5 py-3 sm:py-2.5 bg-blue-harislab text-white  shadow-md hover:shadow-none hover:bg-opacity-80">
                   Daftar Sekarang
                 </a>
               </Link>
@@ -67,7 +68,7 @@ export default function Home() {
         {/* Kerangka Kerja */}
         <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
           <div className="w-full space-y-3 sm:w-2/3">
-            <div className="text-4xl font-bold text-[#34c759]">
+            <div className="text-4xl font-bold ">
               Kerangka Kerja
             </div>
             <div className="text-lg">
@@ -98,7 +99,7 @@ export default function Home() {
         {/* Belajar Mandiri */}
         <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
           <div className="w-full space-y-3 sm:w-2/3">
-            <div className="text-4xl font-bold text-[#ff9500]">
+            <div className="text-4xl font-bold ">
               Belajar Mandiri
             </div>
             <div className="text-lg">
@@ -130,7 +131,7 @@ export default function Home() {
         {/* Belajar Berdasarkan Proyek */}
         <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
           <div className="w-full space-y-3 sm:w-2/3">
-            <div className="text-4xl font-bold text-[#af52de]">
+            <div className="text-4xl font-bold ">
               Belajar Berdasarkan Proyek
             </div>
             <div className="text-lg">
@@ -163,9 +164,7 @@ export default function Home() {
         {/* No Ads */}
         <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
           <div className="w-full space-y-3 sm:w-2/3">
-            <div className="text-4xl font-bold text-[#ff2d55]">
-              Tanpa Iklan
-            </div>
+            <div className="text-4xl font-bold ">Tanpa Iklan</div>
             <div className="text-lg">
               Cukup sudah kamu melihat iklan dimana-mana, di internet, di sosial
               media, di youtube, di jalanan, sekarang waktunya fokus belajar,
@@ -207,6 +206,45 @@ export default function Home() {
               description={weCareAbout.description}
             />
           ))}
+        </section>
+      </div>
+
+      {/* harislab vs zenius vs ruangguru */}
+      <div className="py-10 ">
+        <header className="max-w-4xl py-3 mx-auto my-10 text-center ">
+          harislab vs zenius vs ruangguru
+        </header>
+        <section className="grid max-w-4xl grid-cols-1 gap-5 px-5 mx-auto sm:gap-5 lg:px-0 ">
+          <table>
+            <thead >
+              <tr className="divide-x divide-blue-300">
+                <th>vs</th>
+                <th>harislab</th>
+                <th>zenius</th>
+                <th>ruangguru</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y-2 divide-blue-300">
+              <tr>
+                <td className={tableColor}>harga</td>
+                <td className={tableColor}>25rb/bln</td>
+                <td className={tableColor}>50rb/bln</td>
+                <td className={tableColor}>80rb/bln</td>
+              </tr>
+              <tr>
+                <td className={tableColor}>harga</td>
+                <td className={tableColor}>25rb/bln</td>
+                <td className={tableColor}>50rb/bln</td>
+                <td className={tableColor}>80rb/bln</td>
+              </tr>
+              <tr>
+                <td className={tableColor}>harga</td>
+                <td className={tableColor}>25rb/bln</td>
+                <td className={tableColor}>50rb/bln</td>
+                <td className={tableColor}>80rb/bln</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
       </div>
 

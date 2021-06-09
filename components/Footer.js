@@ -51,8 +51,8 @@ export default function Footer() {
 
         {/* Company Identity */}
         <article className="w-full text-xs sm:w-1/2">
-          <div className="text-2xl">
-            Haris<span>Lab</span>
+          <div className="text-2xl font-mw">
+            haris<span className="font-light">Lab</span>
           </div>
           <div className="mt-2 sm:text-sm">
             PT. Haris Laboratorium Indonesia
