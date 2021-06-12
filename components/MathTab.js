@@ -1,15 +1,13 @@
 import Link from "next/link";
 export default function MathTab(props) {
   return (
-    <main className="flex flex-row items-center justify-between w-full my-5 sm:space-x-5 sm:justify-start">
-      <section className="py-1 text-xl font-semibold sm:text-3xl">
-        {props.in}
-      </section>
-      <section className="flex flex-row justify-end w-auto p-1 space-x-2 text-sm bg-gray-100 rounded-lg sm:justify-start">
-        <div className="px-2 py-1 bg-white rounded-lg shadow-md ">Matematika</div>
-        <Link href={props.to}>
+    <main className="sticky z-10 flex flex-row items-center justify-between w-full pt-2 pb-1 my-2 bg-white border-b -top-1 sm:space-x-5 sm:pt-3 sm:pb-2">
+      <section className="text-lg font-semibold">{props.in}</section>
+      <section className="flex flex-row justify-end w-auto space-x-2 text-sm">
+        <div className="px-2 py-1 text-blue-harislab ">Matematika</div>
+        <Link href={props.to} scroll={false}>
           <a>
-            <div className="px-2 py-1 rounded-lg ">Fisika</div>
+            <div className="px-2 py-1 ">Fisika</div>
           </a>
         </Link>
       </section>

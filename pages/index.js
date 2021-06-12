@@ -18,21 +18,21 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="flex justify-center bg-gradient-to-b from-gray-200 to-white">
-        <section className="grid max-w-4xl grid-cols-1 gap-5 py-5 mx-auto sm:grid-cols-2">
-          <article className="w-full px-5 py-3 lg:px-0 sm:py-10 font-inter">
-            <div className="text-4xl font-bold text-center sm:text-5xl sm:text-left">
+      <section className="flex justify-center ">
+        <section className="grid grid-cols-1 gap-5 py-5 mx-auto lg:grid-cols-2">
+          <article className="w-full px-5 py-3 lg:px-0 sm:py-10 font-inter text-[#1D1D1F]">
+            <div className="text-4xl font-bold text-center sm:text-6xl lg:text-left ">
               Laboratorium
             </div>
-            <div className="text-4xl font-bold text-center text-gray-600 sm:text-5xl sm:text-left">
+            <div className="text-4xl font-bold text-center sm:text-6xl lg:text-left">
               untuk pelajar
             </div>
-            <p className="mt-5 text-lg leading-tight text-center sm:text-left">
+            <p className="mt-5 text-lg leading-tight text-center lg:text-left">
               Materi FisMat, Flash Card, Kalkulator, Animasi, Scan soal, Games,
               Booking Les.
             </p>
 
-            <div className="flex justify-center mt-5 sm:justify-start">
+            <div className="flex justify-center mt-5 lg:justify-start">
               <Link href="/signUp">
                 <a className="rounded-lg text-center  w-2/3 sm:w-1/2 px-5 py-3 sm:py-2.5 bg-blue-harislab text-white  shadow-md hover:shadow-none hover:bg-opacity-80">
                   Daftar Sekarang
@@ -69,7 +69,7 @@ export default function Home() {
           Bagaimana kami menyajikan informasi ?
         </header>
         {/* Kerangka Kerja */}
-        <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
+        <section className="flex flex-col items-center justify-between px-5 mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
           <div className="w-full space-y-3 sm:w-2/3">
             <div className="text-4xl font-bold ">Kerangka Kerja</div>
             <div className="text-lg">
@@ -98,7 +98,7 @@ export default function Home() {
         </section>
 
         {/* Belajar Mandiri */}
-        <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
+        <section className="flex flex-col items-center justify-between px-5 mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
           <div className="w-full space-y-3 sm:w-2/3">
             <div className="text-4xl font-bold ">Belajar Mandiri</div>
             <div className="text-lg">
@@ -128,7 +128,7 @@ export default function Home() {
         </section>
 
         {/* Belajar Berdasarkan Proyek */}
-        <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
+        <section className="flex flex-col items-center justify-between px-5 mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
           <div className="w-full space-y-3 sm:w-2/3">
             <div className="text-4xl font-bold ">
               Belajar Berdasarkan Proyek
@@ -161,7 +161,7 @@ export default function Home() {
         </section>
 
         {/* No Ads */}
-        <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
+        <section className="flex flex-col items-center justify-between px-5 mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
           <div className="w-full space-y-3 sm:w-2/3">
             <div className="text-4xl font-bold ">Tanpa Iklan</div>
             <div className="text-lg">
@@ -194,9 +194,9 @@ export default function Home() {
       </section>
 
       {/* Kami peduli tentang */}
-      <div className="px-5 py-10 lg:px-0 bg-gray-50">
+      <div className="px-5 py-10 bg-gray-50">
         <header className="mb-10 text-center ">Kami Peduli Tentang</header>
-        <section className="grid max-w-4xl grid-cols-1 gap-10 mx-auto sm:grid-cols-3 md:grid-cols-4 ">
+        <section className="grid grid-cols-1 gap-10 mx-auto sm:grid-cols-3 md:grid-cols-4 ">
           {weCareAbouts.map((weCareAbout) => (
             <WeCareAbout
               key={weCareAbout.id}
@@ -210,10 +210,10 @@ export default function Home() {
 
       {/* harislab vs zenius vs ruangguru */}
       <div className="py-10 ">
-        <header className="max-w-4xl py-3 mx-auto my-10 text-center ">
+        <header className="py-3 mx-auto my-10 text-center ">
           harislab vs zenius vs ruangguru
         </header>
-        <section className="grid max-w-4xl grid-cols-1 gap-5 px-5 mx-auto sm:gap-5 lg:px-0 ">
+        <section className="grid grid-cols-1 gap-5 px-5 mx-auto sm:gap-5 lg:px-0 ">
           <table>
             <thead>
               <tr className="divide-x divide-blue-300">
@@ -249,10 +249,10 @@ export default function Home() {
 
       {/* FAQ */}
       <div className="py-10 ">
-        <header className="max-w-4xl py-3 mx-auto my-10 text-center ">
+        <header className="py-3 mx-auto my-10 text-center ">
           FAQ
         </header>
-        <section className="grid max-w-4xl grid-cols-1 gap-5 px-5 mx-auto sm:gap-5 lg:px-0 ">
+        <section className="grid grid-cols-1 gap-5 px-5 mx-auto sm:gap-5 lg:px-0 ">
           {FAQs.map((FAQs) => (
             <div key={FAQs.id}>
               <FAQ button={FAQs.button} panel={FAQs.panel} />

@@ -3,7 +3,7 @@ import What from "../components/What";
 
 export default function calculatorPhy() {
   return (
-    <main className="max-w-4xl px-5 mx-auto lg:px-0">
+    <main  >
       <PhyTab in="Kalkulator" to="calculatorMath" />
       <What
         title="Apa itu Kalkulator Fisika di HarisLab ?"

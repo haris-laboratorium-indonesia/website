@@ -3,7 +3,7 @@ import What from "../components/What";
 
 export default function scanMath() {
   return (
-    <main className="max-w-4xl px-5 mx-auto lg:px-0">
+    <main  >
       <MathTab in="Scan" to="scanPhy" />
 
       <What

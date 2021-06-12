@@ -5,10 +5,8 @@ import { Matriks } from "../lib/FlashCardMath";
 
 export default function flashCardMath() {
   return (
-    <main className="max-w-4xl mx-auto ">
-      <div className="px-5 lg:px-0">
-        <MathTab in="Card" to="flashCardPhy" />
-      </div>
+    <main>
+      <MathTab in="Card" to="flashCardPhy" />
 
       <div className="px-5 mb-5 text-2xl font-semibold lg:px-0">Matriks</div>
       <div className="flex p-5 space-x-5 overflow-x-auto sm:p-5 ">

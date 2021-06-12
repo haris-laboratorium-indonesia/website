@@ -17,6 +17,7 @@ module.exports = {
         blue: {
           harislab: "#007AFF",
         },
+        // black: "#1D1D1F",
       },
     },
   },

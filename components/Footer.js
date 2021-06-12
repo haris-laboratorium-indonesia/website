@@ -5,7 +5,7 @@ export default function Footer() {
     "block text-sm text-gray-400 hover:underline hover:text-white hover:underline";
   return (
     <footer className="bottom-0 w-full p-5 sm:py-10 mt-24 text-center bg-[#1D1D1F] sm:px-0">
-      <section className="flex flex-col max-w-4xl mx-auto space-y-10 text-left sm:flex-row sm:space-y-0">
+      <section className="flex flex-col max-w-5xl mx-auto space-y-10 text-left sm:flex-row sm:space-y-0">
         {/* Footer Navigation */}
         <article className="flex w-full sm:w-1/2">
           <div className="w-full space-y-1 sm:w-1/2">
@@ -52,8 +52,8 @@ export default function Footer() {
 
         {/* Company Identity */}
         <article className="w-full pt-10 text-xs text-gray-500 border-t border-gray-500 sm:border-0 sm:pt-0 sm:w-1/2">
-          <div className="text-2xl font-mw">
-            haris<span className="font-light">Lab</span>
+          <div className="text-2xl text-white font-mw">
+            Haris<span className="font-light text-gray-400">Lab</span>
           </div>
           <div className="mt-2 sm:text-sm">
             PT. Haris Laboratorium Indonesia

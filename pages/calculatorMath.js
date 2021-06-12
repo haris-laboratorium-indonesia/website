@@ -8,7 +8,7 @@ export default function calculatorMath() {
     return (document.calculator.hasil.value = hasil);
   }
   return (
-    <main className="max-w-4xl px-5 mx-auto lg:px-0">
+    <main  >
       <MathTab in="Kalkulator" to="calculatorPhy" />
       <div>calculatorMath</div>
       <div className="flex flex-col w-1/3" name="calculator">

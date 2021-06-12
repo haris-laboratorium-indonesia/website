@@ -3,7 +3,7 @@ import What from "../components/What";
 
 export default function animationMath() {
   return (
-    <main className="max-w-4xl px-5 mx-auto mt-14 lg:px-0">
+    <main >
       <MathTab in="Animasi" to="animationPhy" />
       <What
         title="Apa itu Animasi Matematika di HarisLab ?"

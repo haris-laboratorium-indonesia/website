@@ -8,7 +8,7 @@ export default function signUp() {
             Nama
           </label>
           <input
-            className="px-2 py-1 border border-black rounded  focus:outline-none focus:ring-1 focus:ring-blue-500"
+            className="px-2 py-1 border border-black rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
             type="text"
             id="nama"
             placeholder="Nama "
@@ -20,7 +20,7 @@ export default function signUp() {
             Password
           </label>
           <input
-            className="px-2 py-1 border border-black rounded  focus:outline-none focus:ring-1 focus:ring-blue-500"
+            className="px-2 py-1 border border-black rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
             type="text"
             id="Password"
             placeholder="Password"

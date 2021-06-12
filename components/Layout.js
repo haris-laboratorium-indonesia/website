@@ -5,26 +5,25 @@ import { HiOutlineChevronDown } from "react-icons/hi";
 import Footer from "./Footer";
 
 export default function Layout({ children }) {
-  const nav = "px-2 py-1 rounded-md text-sm text-gray-600 hover:text-black";
+  const nav = "px-2 py-1 text-sm rounded-md text-gray-600 hover:text-black";
   const lainnya = "px-4 py-1 text-sm text-left hover:bg-gray-100";
   return (
     <nav className="font-inter">
       <Head>
-        <title>harisLab</title>
-        <link rel="icon" href="/Logo.ico" />
+        <title>HarisLab</title>
+        <link rel="icon" href="/x.ico" />
       </Head>
       <main>
         {/* navigation */}
         {/* container-full*/}
-        <main className="sticky top-0 z-10 h-auto mx-auto border-b blur">
+        <main className="sticky z-50 w-full h-auto mx-auto border-b blur text-[#1D1D1F]">
           {/* container-max-4xl */}
-          <main className="w-full max-w-4xl py-0 mx-auto md:py-2.5">
+          <main className="w-full max-w-5xl py-0 mx-auto md:py-2">
             {/* desktop navigation*/}
             <nav className="flex flex-row items-center justify-between hidden w-full px-5 md:flex lg:px-0">
               <Link href="/">
-                <a className="flex flex-row items-center text-lg font-mw ml-0.5 font-semibold">
-                  haris
-                  <span className="font-light">Lab</span>
+                <a className="flex flex-row items-center text-[#1D1D1F] font-semibold text-lg  ml-0.5 font-mw">
+                  Haris<span className="font-light">Lab</span>
                 </a>
               </Link>
               <Link href="/math/homeMath">
@@ -43,7 +42,7 @@ export default function Layout({ children }) {
                 <a className={nav}>Scan</a>
               </Link>
               <Link href="/gamesMath">
-                <a className={nav}>Permainan</a>
+                <a className={nav}>Game</a>
               </Link>
 
               {/* Lainnya */}
@@ -77,14 +76,14 @@ export default function Layout({ children }) {
                 <a className={nav}>Masuk</a>
               </Link>
               <Link href="/signUp">
-                <a className="text-sm rounded-md text-white bg-[#007AFF] hover:bg-opacity-90  px-3 py-1.5">
+                <a className="text-xs rounded-md text-white bg-[#007AFF] hover:bg-opacity-90  px-3 py-1.5">
                   Daftar
                 </a>
               </Link>
             </nav>
 
             {/* Mobile Navigation */}
-            <nav className="flex items-center justify-between">
+            <nav className="z-20 flex items-center justify-between">
               {/* Search button */}
               <Menu
                 as="div"
@@ -105,7 +104,7 @@ export default function Layout({ children }) {
                   </svg>
                 </Menu.Button>
 
-                <Menu.Items className="absolute right-0 w-screen p-5 mt-12 origin-top-right border-t ">
+                <Menu.Items className="absolute right-0 z-50 w-screen p-5 mt-12 origin-top-right border-t">
                   <section className="mb-2">
                     <main className="w-full">
                       <section className="shadow-2xl flex items-center  px-1.5 py-1.5 rounded-md bg-white border border-gray-600 hover:ring-1 hover:ring-blue-harislab">
@@ -135,8 +134,8 @@ export default function Layout({ children }) {
               {/* HarisLab */}
               <nav className="justify-center block w-2/4 md:hidden">
                 <Link href="/">
-                  <a className="block text-lg font-semibold  text-center w-full py-2.5 font-mw">
-                    <span>haris</span>
+                  <a className="block text-lg font-medium text-center w-full py-2.5 font-mw text-[#1D1D1F]">
+                    <span>Haris</span>
                     <span className="font-light">Lab</span>
                   </a>
                 </Link>
@@ -147,7 +146,7 @@ export default function Layout({ children }) {
                 as="div"
                 className="static flex justify-end w-1/4 md:hidden "
               >
-                <Menu.Button className="py-2.5 pr-5 focus:outline-none w-full flex justify-end">
+                <Menu.Button className="py-2.5 pr-5 focus:outline-none w-full flex justify-end z-50">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className=" h-7 w-7"
@@ -367,7 +366,9 @@ export default function Layout({ children }) {
           </main>
         </main>
 
-        <main className="w-full min-h-screen">{children}</main>
+        <main className="w-full max-w-5xl min-h-screen px-5 mx-auto lg:px-0 text-[#1D1D1F]">
+          {children}
+        </main>
 
         <Footer />
       </main>
