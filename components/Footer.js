@@ -1,15 +1,16 @@
 import Link from "next/link";
 
 export default function Footer() {
-  const navigation = "block text-sm hover:underline";
+  const navigation =
+    "block text-sm text-gray-400 hover:underline hover:text-white hover:underline";
   return (
-    <footer className="bottom-0 w-full p-5 mt-24 text-center bg-gray-50 sm:px-0">
+    <footer className="bottom-0 w-full p-5 sm:py-10 mt-24 text-center bg-[#1D1D1F] sm:px-0">
       <section className="flex flex-col max-w-4xl mx-auto space-y-10 text-left sm:flex-row sm:space-y-0">
         {/* Footer Navigation */}
         <article className="flex w-full sm:w-1/2">
           <div className="w-full space-y-1 sm:w-1/2">
             {/* Alat */}
-            <div className="text-sm ">ALAT</div>
+            <div className="text-sm font-medium text-white">Alat</div>
             <Link href="/math/homeMath">
               <a className={navigation}>Belajar</a>
             </Link>
@@ -32,13 +33,13 @@ export default function Footer() {
 
           {/* Lainnya */}
           <div className="w-full space-y-1 sm:w-1/2">
-            <div className="text-sm ">LAINNYA</div>
+            <div className="text-sm font-medium text-white ">Lainnya</div>
             <Link href="/portofolio">
               <a className={navigation}>Portofolio</a>
             </Link>
 
             <Link href="/bookingMe">
-              <a className={navigation}>Booking Me !</a>
+              <a className={navigation}>Booking Les</a>
             </Link>
             <Link href="/merchandise">
               <a className={navigation}>Merchandise</a>
@@ -50,7 +51,7 @@ export default function Footer() {
         </article>
 
         {/* Company Identity */}
-        <article className="w-full text-xs sm:w-1/2">
+        <article className="w-full pt-10 text-xs text-gray-500 border-t border-gray-500 sm:border-0 sm:pt-0 sm:w-1/2">
           <div className="text-2xl font-mw">
             haris<span className="font-light">Lab</span>
           </div>

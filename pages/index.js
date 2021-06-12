@@ -20,16 +20,19 @@ export default function Home() {
       {/* Hero */}
       <section className="flex justify-center bg-gradient-to-b from-gray-200 to-white">
         <section className="grid max-w-4xl grid-cols-1 gap-5 py-5 mx-auto sm:grid-cols-2">
-          <article className="w-full px-5 py-3 space-y-5 lg:px-0 sm:py-10 font-inter">
-            <p className="block text-4xl font-bold text-center sm:text-5xl sm:text-left">
-              Laboratorium untuk pelajar.
-            </p>
-            <p className="text-lg leading-tight text-center sm:text-xl sm:text-left">
+          <article className="w-full px-5 py-3 lg:px-0 sm:py-10 font-inter">
+            <div className="text-4xl font-bold text-center sm:text-5xl sm:text-left">
+              Laboratorium
+            </div>
+            <div className="text-4xl font-bold text-center text-gray-600 sm:text-5xl sm:text-left">
+              untuk pelajar
+            </div>
+            <p className="mt-5 text-lg leading-tight text-center sm:text-left">
               Materi FisMat, Flash Card, Kalkulator, Animasi, Scan soal, Games,
               Booking Les.
             </p>
 
-            <div className="flex justify-center mt-7 sm:justify-start">
+            <div className="flex justify-center mt-5 sm:justify-start">
               <Link href="/signUp">
                 <a className="rounded-lg text-center  w-2/3 sm:w-1/2 px-5 py-3 sm:py-2.5 bg-blue-harislab text-white  shadow-md hover:shadow-none hover:bg-opacity-80">
                   Daftar Sekarang
@@ -68,9 +71,7 @@ export default function Home() {
         {/* Kerangka Kerja */}
         <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
           <div className="w-full space-y-3 sm:w-2/3">
-            <div className="text-4xl font-bold ">
-              Kerangka Kerja
-            </div>
+            <div className="text-4xl font-bold ">Kerangka Kerja</div>
             <div className="text-lg">
               Di HarisLab, semua bab pelajaran dibuat sebuah struktur informasi
               sedemikia rupa agar mudah diingat. Sehingga kita bisa
@@ -99,9 +100,7 @@ export default function Home() {
         {/* Belajar Mandiri */}
         <section className="flex flex-col items-center justify-between max-w-4xl px-5 mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
           <div className="w-full space-y-3 sm:w-2/3">
-            <div className="text-4xl font-bold ">
-              Belajar Mandiri
-            </div>
+            <div className="text-4xl font-bold ">Belajar Mandiri</div>
             <div className="text-lg">
               HarisLab didesain agar siapapun terutama murid agar bisa belajar
               mandiri tanpa guru, bahkan tanpa buku panduan. Di sini kalian bisa
@@ -216,7 +215,7 @@ export default function Home() {
         </header>
         <section className="grid max-w-4xl grid-cols-1 gap-5 px-5 mx-auto sm:gap-5 lg:px-0 ">
           <table>
-            <thead >
+            <thead>
               <tr className="divide-x divide-blue-300">
                 <th>vs</th>
                 <th>harislab</th>

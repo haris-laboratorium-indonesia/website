@@ -5,7 +5,7 @@ import { HiOutlineChevronDown } from "react-icons/hi";
 import Footer from "./Footer";
 
 export default function Layout({ children }) {
-  const nav = "px-2 py-1 rounded-md text-sm";
+  const nav = "px-2 py-1 rounded-md text-sm text-gray-600 hover:text-black";
   const lainnya = "px-4 py-1 text-sm text-left hover:bg-gray-100";
   return (
     <nav className="font-inter">
@@ -15,86 +15,75 @@ export default function Layout({ children }) {
       </Head>
       <main>
         {/* navigation */}
-        {/* container */}
+        {/* container-full*/}
         <main className="sticky top-0 z-10 h-auto mx-auto border-b blur">
-          {/* container */}
+          {/* container-max-4xl */}
           <main className="w-full max-w-4xl py-0 mx-auto md:py-2.5">
             {/* desktop navigation*/}
-            <nav className="items-center justify-between hidden px-5 md:flex lg:px-0 ">
-              {/* brand name / home button */}
-              <section className="flex items-center justify-start ">
-                <Link href="/">
-                  <a className="flex flex-row items-center text-lg font-mw">
-                    <div className="ml-0.5 font-semibold">
-                      haris
-                      <span className="font-light">Lab</span>
-                    </div>
-                  </a>
-                </Link>
-              </section>
+            <nav className="flex flex-row items-center justify-between hidden w-full px-5 md:flex lg:px-0">
+              <Link href="/">
+                <a className="flex flex-row items-center text-lg font-mw ml-0.5 font-semibold">
+                  haris
+                  <span className="font-light">Lab</span>
+                </a>
+              </Link>
+              <Link href="/math/homeMath">
+                <a className={nav}>Materi</a>
+              </Link>
+              <Link href="/flashCardMath">
+                <a className={nav}>Kartu</a>
+              </Link>
+              <Link href="/calculatorMath">
+                <a className={nav}>Kalkulator</a>
+              </Link>
+              <Link href="/animationMath">
+                <a className={nav}>Animasi</a>
+              </Link>
+              <Link href="/scanMath">
+                <a className={nav}>Scan</a>
+              </Link>
+              <Link href="/gamesMath">
+                <a className={nav}>Permainan</a>
+              </Link>
 
-              {/* main link */}
-              <section className="flex flex-row items-center justify-end space-x-2 lg:space-x-3 ">
-                <Link href="/math/homeMath">
-                  <a className={nav}>Materi</a>
-                </Link>
-                <Link href="/flashCardMath">
-                  <a className={nav}>Kartu</a>
-                </Link>
-                <Link href="/calculatorMath">
-                  <a className={nav}>Kalkulator</a>
-                </Link>
-                <Link href="/animationMath">
-                  <a className={nav}>Animasi</a>
-                </Link>
-                <Link href="/scanMath">
-                  <a className={nav}>Scan</a>
-                </Link>
-                <Link href="/gamesMath">
-                  <a className={nav}>Permainan</a>
-                </Link>
+              {/* Lainnya */}
+              <Popover className="relative ">
+                <Popover.Button
+                  className={`${nav} flex justify-between items-center focus:outline-none`}
+                >
+                  <span>Lainnya</span>
+                  <HiOutlineChevronDown
+                    className="text-opacity-70"
+                    aria-hidden="true"
+                  />
+                </Popover.Button>
 
-                {/* Lainnya */}
-                <Popover className="relative ">
-                  <Popover.Button className="py-0.5 px-2 flex justify-between items-center  text-sm focus:outline-none ">
-                    <span>Lainnya</span>
-                    <HiOutlineChevronDown
-                      className="text-opacity-70"
-                      aria-hidden="true"
-                    />
-                  </Popover.Button>
-
-                  <Popover.Panel className="absolute z-10 flex flex-col w-32 py-2 mt-5 space-y-2 bg-white rounded shadow-xl">
-                    <Link href="/merchandise">
-                      <a className={lainnya}>Merchandise</a>
-                    </Link>
-                    <Link href="/bookingMe">
-                      <a className={lainnya}>Booking Me !</a>
-                    </Link>
-                    <Link href="/portofolio">
-                      <a className={lainnya}>Portofolio</a>
-                    </Link>
-                    <Link href="/blog">
-                      <a className={lainnya}>Blog</a>
-                    </Link>
-                  </Popover.Panel>
-                </Popover>
-              </section>
-
-              {/* signIn/signUp */}
-              <section className="flex flex-row items-center justify-end space-x-2">
-                <Link href="/signIn">
-                  <a className="px-2 py-1 text-sm ">Masuk</a>
-                </Link>
-                <Link href="/signUp">
-                  <a className="text-xs rounded-md border-[#007AFF] border text-[#007AFF] hover:bg-opacity-90  px-3 py-1.5">
-                    Daftar
-                  </a>
-                </Link>
-              </section>
+                <Popover.Panel className="absolute z-10 flex flex-col w-32 py-2 mt-5 space-y-2 bg-white rounded shadow-xl">
+                  <Link href="/merchandise">
+                    <a className={lainnya}>Merchandise</a>
+                  </Link>
+                  <Link href="/bookingMe">
+                    <a className={lainnya}>Booking Les </a>
+                  </Link>
+                  <Link href="/portofolio">
+                    <a className={lainnya}>Portofolio</a>
+                  </Link>
+                  <Link href="/blog">
+                    <a className={lainnya}>Blog</a>
+                  </Link>
+                </Popover.Panel>
+              </Popover>
+              <Link href="/signIn">
+                <a className={nav}>Masuk</a>
+              </Link>
+              <Link href="/signUp">
+                <a className="text-sm rounded-md text-white bg-[#007AFF] hover:bg-opacity-90  px-3 py-1.5">
+                  Daftar
+                </a>
+              </Link>
             </nav>
 
-            {/* Mobile Nav */}
+            {/* Mobile Navigation */}
             <nav className="flex items-center justify-between">
               {/* Search button */}
               <Menu
