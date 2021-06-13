@@ -1,5 +1,4 @@
 import PhyTab from "../components/PhyTab";
-import FlashCard from "../components/FlashCard";
 import What from "../components/What";
 
 export default function flashCardPhy() {
