@@ -1,13 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import Icons from "../components/Icons";
 import FAQ from "../components/FAQ";
-import { HiOutlineCamera } from "react-icons/hi";
-import { HiOutlineColorSwatch } from "react-icons/hi";
-import { HiOutlineCalculator } from "react-icons/hi";
-import { HiOutlinePresentationChartLine } from "react-icons/hi";
-import { HiOutlineBookOpen } from "react-icons/hi";
-import { HiOutlinePuzzle } from "react-icons/hi";
+
 import { HiOutlineChevronRight } from "react-icons/hi";
 import { weCareAbouts } from "../lib/weCareAbouts";
 import { FAQs } from "../lib/FAQs";
