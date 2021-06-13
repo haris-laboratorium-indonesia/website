@@ -19,46 +19,26 @@ export default function Home() {
     <main className="">
       {/* Hero */}
       <section className="flex justify-center mt-11">
-        <section className="grid grid-cols-1 gap-5 py-5 mx-auto lg:grid-cols-2">
+        <section className="grid grid-cols-1 gap-5 py-5 mx-auto">
           <article className="w-full px-5 py-3 lg:px-0 sm:py-10 font-inter text-[#1D1D1F]">
-            <div className="text-4xl font-bold text-center sm:text-6xl lg:text-left ">
+            <div className="text-4xl font-bold text-center sm:text-6xl ">
               Laboratorium
             </div>
-            <div className="text-4xl font-bold text-center sm:text-6xl lg:text-left">
+            <div className="text-4xl font-bold text-center sm:text-6xl ">
               untuk pelajar
             </div>
-            <p className="mt-5 text-lg leading-tight text-center lg:text-left">
+            <p className="mt-5 text-lg leading-tight text-center ">
               Materi FisMat, Flash Card, Kalkulator, Animasi, Scan soal, Games,
               Booking Les.
             </p>
 
-            <div className="flex justify-center mt-5 lg:justify-start">
+            <div className="flex justify-center mt-5 ">
               <Link href="/signUp">
                 <a className="rounded-lg text-center  w-5/6 sm:w-1/2 px-5 py-3 sm:py-2.5 bg-blue-harislab text-white  shadow-md hover:shadow-none hover:bg-opacity-80">
                   Daftar Sekarang
                 </a>
               </Link>
             </div>
-          </article>
-          <article className="grid grid-cols-4 gap-5 px-5 py-5 justify-items-center sm:pr-0 sm:p-10 sm:grid-cols-3">
-            <Icons to="/math/homeMath" name="Materi">
-              <HiOutlineBookOpen className="text-gray-700 w-7 h-7 lg:h-10 lg:w-10" />
-            </Icons>
-            <Icons to="/flashCardMath" name="Kartu">
-              <HiOutlineColorSwatch className="text-gray-700 w-7 h-7 lg:h-10 lg:w-10" />
-            </Icons>
-            <Icons to="/calculatorMath" name="Kalkulator">
-              <HiOutlineCalculator className="text-gray-700 w-7 h-7 lg:h-10 lg:w-10" />
-            </Icons>
-            <Icons to="/animationMath" name="Animasi">
-              <HiOutlinePresentationChartLine className="text-gray-700 w-7 h-7 lg:h-10 lg:w-10" />
-            </Icons>
-            <Icons to="/scanMath" name="Scan">
-              <HiOutlineCamera className="text-gray-700 w-7 h-7 lg:h-10 lg:w-10" />
-            </Icons>
-            <Icons to="/gamesMath" name="Permainan">
-              <HiOutlinePuzzle className="text-gray-700 w-7 h-7 lg:h-10 lg:w-10" />
-            </Icons>
           </article>
         </section>
       </section>
@@ -249,9 +229,7 @@ export default function Home() {
 
       {/* FAQ */}
       <div className="py-10 ">
-        <header className="py-3 mx-auto my-10 text-center ">
-          FAQ
-        </header>
+        <header className="py-3 mx-auto my-10 text-center ">FAQ</header>
         <section className="grid grid-cols-1 gap-5 px-5 mx-auto sm:gap-5 lg:px-0 ">
           {FAQs.map((FAQs) => (
             <div key={FAQs.id}>
