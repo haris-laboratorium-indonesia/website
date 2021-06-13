@@ -9,9 +9,6 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.2.0",
-    "@mdx-js/loader": "^0.15.4",
-    "@mdx-js/react": "^1.6.22",
-    "@next/mdx": "^10.2.3",
     "@notionhq/client": "^0.1.8",
     "@tailwindcss/typography": "^0.4.1",
     "katex": "^0.13.11",
