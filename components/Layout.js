@@ -10,6 +10,7 @@ export default function Layout({ children }) {
         <title>HarisLab</title>
         <link rel="icon" href="/z.ico" />
       </Head>
+
       {/* container-full*/}
       <nav className="fixed top-0  z-50 w-full h-auto mx-auto border-b blur text-[#1D1D1F]">
         {/* container-max-5xl */}
@@ -20,7 +21,7 @@ export default function Layout({ children }) {
           <MobileNav />
         </nav>
       </nav>
-      <section className="mt-11 w-full max-w-5xl min-h-screen px-5 mx-auto lg:px-0 text-[#1D1D1F]">
+      <section className="mt-16 w-full max-w-5xl  px-5 mx-auto xl:px-0 text-[#1D1D1F] min-h-screen">
         {children}
       </section>
       <Footer />

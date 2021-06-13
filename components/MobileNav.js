@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Menu } from "@headlessui/react";
-import { HiOutlineX, HiMenu } from "react-icons/hi";
 
 export default function MobileNav() {
   return (
