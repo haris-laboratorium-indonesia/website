@@ -138,7 +138,8 @@ export default function homeMath() {
       error, numquam maiores. Assumenda ab ad sequi magni? Repudiandae odit
       eveniet tempora repellendus sed rem fugiat eligendi obcaecati optio nisi
       soluta illum veritatis accusantium labore, reprehenderit eum amet ad quam
-      impedit natus iusto laborum, voluptatibus sequi ex.
+      impedit natus iusto laborum, voluptatibus sequi ex.{" "}
+      <div className="h-96"></div>
     </main>
   );
 }

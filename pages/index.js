@@ -16,9 +16,9 @@ import WeCareAbout from "../components/WeCareAbout";
 export default function Home() {
   const tableColor = "bg-blue-100 text-blue-500 text-center";
   return (
-    <>
+    <main className="">
       {/* Hero */}
-      <section className="flex justify-center ">
+      <section className="flex justify-center mt-11">
         <section className="grid grid-cols-1 gap-5 py-5 mx-auto lg:grid-cols-2">
           <article className="w-full px-5 py-3 lg:px-0 sm:py-10 font-inter text-[#1D1D1F]">
             <div className="text-4xl font-bold text-center sm:text-6xl lg:text-left ">
@@ -34,7 +34,7 @@ export default function Home() {
 
             <div className="flex justify-center mt-5 lg:justify-start">
               <Link href="/signUp">
-                <a className="rounded-lg text-center  w-2/3 sm:w-1/2 px-5 py-3 sm:py-2.5 bg-blue-harislab text-white  shadow-md hover:shadow-none hover:bg-opacity-80">
+                <a className="rounded-lg text-center  w-5/6 sm:w-1/2 px-5 py-3 sm:py-2.5 bg-blue-harislab text-white  shadow-md hover:shadow-none hover:bg-opacity-80">
                   Daftar Sekarang
                 </a>
               </Link>
@@ -69,7 +69,7 @@ export default function Home() {
           Bagaimana kami menyajikan informasi ?
         </header>
         {/* Kerangka Kerja */}
-        <section className="flex flex-col items-center justify-between px-5 mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
+        <section className="flex flex-col items-center justify-between mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
           <div className="w-full space-y-3 sm:w-2/3">
             <div className="text-4xl font-bold ">Kerangka Kerja</div>
             <div className="text-lg">
@@ -98,7 +98,7 @@ export default function Home() {
         </section>
 
         {/* Belajar Mandiri */}
-        <section className="flex flex-col items-center justify-between px-5 mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
+        <section className="flex flex-col items-center justify-between mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
           <div className="w-full space-y-3 sm:w-2/3">
             <div className="text-4xl font-bold ">Belajar Mandiri</div>
             <div className="text-lg">
@@ -128,7 +128,7 @@ export default function Home() {
         </section>
 
         {/* Belajar Berdasarkan Proyek */}
-        <section className="flex flex-col items-center justify-between px-5 mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
+        <section className="flex flex-col items-center justify-between mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
           <div className="w-full space-y-3 sm:w-2/3">
             <div className="text-4xl font-bold ">
               Belajar Berdasarkan Proyek
@@ -161,7 +161,7 @@ export default function Home() {
         </section>
 
         {/* No Ads */}
-        <section className="flex flex-col items-center justify-between px-5 mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
+        <section className="flex flex-col items-center justify-between mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
           <div className="w-full space-y-3 sm:w-2/3">
             <div className="text-4xl font-bold ">Tanpa Iklan</div>
             <div className="text-lg">
@@ -260,7 +260,7 @@ export default function Home() {
           ))}
         </section>
       </div>
-    </>
+    </main>
   );
 }
 

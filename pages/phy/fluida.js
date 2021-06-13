@@ -1,4 +1,17 @@
+import useSWR from "swr";
+
+async function fetcher(url) {
+  const res = await fetch(url);
+  return res.json();
+}
+
 export default function fluida() {
+  const url = "http://localhost:3000/api/hello";
+  const { data, error } = useSWR(url, fetcher);
+  if (error) return <div>failed to load</div>;
+  if (!data) return <div>loading...</div>;
+  console.log(data);
+  const { iniData } = data;
   return (
     <main className="px-5">
       <header>fluida</header>
@@ -15,6 +28,15 @@ export default function fluida() {
         reiciendis, animi ab quis laudantium consequatur! Voluptatum hic itaque
         iure fuga ducimus alias error.
       </p>
+      {/* {data.map((a) => {
+        <div key={a.id} className="grid grid-cols-5 gap-5">
+          <div>{a.pic}</div>
+          <div>{a.title}</div>
+          <div>{a.subTitle}</div>
+          <div>{a.description}</div>
+        </div>;
+      })} */}
+      <div>{iniData}</div>
     </main>
   );
 }

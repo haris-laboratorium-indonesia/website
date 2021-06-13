@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function PhyTab(props) {
   return (
-    <main className="sticky z-10 flex flex-row items-center justify-between w-full pt-2 pb-1 my-2 bg-white border-b sm:pt-3 sm:pb-2 -top-1 blur sm:space-x-5">
+    <main className="flex flex-row items-center justify-between w-full mt-16 mb-2 border-b sm:space-x-5">
       <section className="text-lg font-semibold">{props.in}</section>
       <section className="flex flex-row justify-end w-auto space-x-2 text-sm">
         <Link href={props.to} scroll={false}>

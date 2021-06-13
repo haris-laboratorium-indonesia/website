@@ -1,6 +1,6 @@
-export default function WeCareAbout({ key, svg, name, description }) {
+export default function WeCareAbout({ id, svg, name, description }) {
   return (
-    <div key={key}>
+    <div key={id}>
       {/* icon */}
       <div>
         <svg

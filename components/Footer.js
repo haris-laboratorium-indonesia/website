@@ -20,15 +20,6 @@ export default function Footer() {
             <Link href="/flashCardMath">
               <a className={navigation}>Kartu</a>
             </Link>
-            <Link href="/animationMath">
-              <a className={navigation}>Animasi</a>
-            </Link>
-            <Link href="/scanMath">
-              <a className={navigation}>Scan</a>
-            </Link>
-            <Link href="/gamesMath">
-              <a className={navigation}>Permainan</a>
-            </Link>
           </div>
 
           {/* Lainnya */}

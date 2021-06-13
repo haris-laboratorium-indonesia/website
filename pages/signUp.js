@@ -1,7 +1,7 @@
 export default function signUp() {
   return (
-    <main className="max-w-4xl px-5 mx-auto mt-5 lg:px-0">
-      <form className="w-full p-5 mx-auto space-y-4 bg-white border border-gray-500 rounded-lg shadow-md  sm:w-1/2">
+    <main className="mt-16">
+      <form className="w-full p-5 mx-auto space-y-4 bg-white border border-gray-500 rounded-lg shadow-md sm:w-1/2">
         <h1 className="text-3xl font-medium">Sign Up</h1>
         <section className="flex flex-col">
           <label className="text-sm" htmlFor="nama">
