@@ -6,18 +6,19 @@ import WeCareAbout from "../components/WeCareAbout";
 import { sendInformation } from "../lib/sendInformation";
 
 export default function Home() {
-  const table = "bg-blue-50 text-blue-500 text-center text-sm p-2";
+  const td = " text-left text-sm p-2";
+  const th = "p-2 text-left text-base font-medium text-blue-500 bg-blue-50"
   return (
     <main className="">
       {/* Hero */}
       <section className="flex justify-center">
         <section className="grid grid-cols-1 gap-5 py-5 mx-auto">
           <article className="w-full py-3 lg:px-0 sm:py-10 font-inter ">
-            <div className="text-4xl font-bold text-center sm:text-6xl ">
+            <div className="text-4xl font-bold text-center sm:text-6xl font-mw">
               Laboratorium
             </div>
-            <div className="text-4xl font-bold text-center sm:text-6xl ">
-              untuk pelajar
+            <div className="text-4xl font-bold text-center text-blue-400 sm:text-6xl font-mw">
+              untuk Pelajar
             </div>
             <p className="mt-5 leading-tight text-center ">
               Materi FisMat, Flash Card, Kalkulator, Animasi, Scan soal, Games,
@@ -27,7 +28,7 @@ export default function Home() {
             <div className="flex justify-center mt-5 ">
               <Link href="/signUp">
                 <a className="rounded-lg text-center  w-5/6 sm:w-1/2  py-3 sm:py-2.5 bg-blue-harislab text-white  shadow-md hover:shadow-none hover:bg-opacity-80">
-                  Daftar Sekarang
+                  Mulai Sekarang
                 </a>
               </Link>
             </div>
@@ -75,46 +76,46 @@ export default function Home() {
           harislab vs zenius vs ruangguru
         </header>
         <section className="mx-auto overflow-x-auto sm:gap-5 lg:px-0">
-          <table className="border border-blue-300 rounded-md">
+          <table className="w-full border border-blue-300">
             <thead >
               <tr className="divide-x divide-blue-300 ">
-                <th className="p-2 font-medium">vs</th>
-                <th className="p-2 font-medium">HarisLab</th>
-                <th className="p-2 font-medium">Zenius</th>
-                <th className="p-2 font-medium">Ruangguru</th>
-                <th className="p-2 font-medium">Buku Paket</th>
+                <th className={th}>VS</th>
+                <th className={th}>HarisLab</th>
+                <th className={th}>Zenius</th>
+                <th className={th}>Ruangguru</th>
+                <th className={th}>Buku Paket</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-blue-300">
               <tr className="divide-x divide-blue-300">
-                <td className={table}>Harga</td>
-                <td className={table}>25rb/bln</td>
-                <td className={table}>50rb/bln</td>
-                <td className={table}>80rb/bln</td>
-                <td className={table}>200rb/bln</td>
+                <td className={td}>Harga</td>
+                <td className={td}>25rb/bln</td>
+                <td className={td}>50rb/bln</td>
+                <td className={td}>80rb/bln</td>
+                <td className={td}>200rb/bln</td>
               </tr>
               <tr className="divide-x divide-blue-300">
-                <td className={table}>Update Informasi</td>
-                <td className={table}>Selalu Update</td>
-                <td className={table}>Selalu Update</td>
-                <td className={table}>Selalu Update</td>
-                <td className={table}>Tidak Update</td>
+                <td className={td}>Update Informasi</td>
+                <td className={td}>Selalu Update</td>
+                <td className={td}>Selalu Update</td>
+                <td className={td}>Selalu Update</td>
+                <td className={td}>Tidak Update</td>
               </tr>
               <tr className="divide-x divide-blue-300">
-                <td className={table}>Durabilitas</td>
-                <td className={table}>Aman</td>
-                <td className={table}>Aman</td>
-                <td className={table}>Aman</td>
-                <td className={table}>
+                <td className={td}>Durabilitas</td>
+                <td className={td}>Aman</td>
+                <td className={td}>Aman</td>
+                <td className={td}>Aman</td>
+                <td className={td}>
                   Mudah rusak jika terkena air dan tekanan
                 </td>
               </tr>
               <tr className="divide-x divide-blue-300">
-                <td className={table}>Mobilitas</td>
-                <td className={table}>Mudah dibawa</td>
-                <td className={table}>Mudah dibawa</td>
-                <td className={table}>Mudah dibawa</td>
-                <td className={table}>Sulit dibawa </td>
+                <td className={td}>Mobilitas</td>
+                <td className={td}>Mudah dibawa</td>
+                <td className={td}>Mudah dibawa</td>
+                <td className={td}>Mudah dibawa</td>
+                <td className={td}>Sulit dibawa </td>
               </tr>
             </tbody>
           </table>

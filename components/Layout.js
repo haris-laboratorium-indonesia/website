@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Footer from "./Footer";
-import DesktopNav from "./DesktopNav";
-import MobileNav from "./MobileNav";
+import NavDesktop from "./NavDesktop";
+import NavMobile from "./NavMobile";
 
 export default function Layout({ children }) {
   return (
@@ -25,10 +25,10 @@ export default function Layout({ children }) {
         <meta property="og:type" content="website" />
       </Head>
 
-      <nav className="z-50 w-full h-auto mx-auto bg-white border-b border-gray-300">
+      <nav className="z-50 w-full h-auto mx-auto bg-white">
         <nav className="w-full max-w-5xl mx-auto">
-          <DesktopNav />
-          <MobileNav />
+          <NavDesktop />
+          <NavMobile />
         </nav>
       </nav>
       <section className="w-full max-w-5xl min-h-screen px-5 mx-auto mt-5 xl:px-0">

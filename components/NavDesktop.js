@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Popover } from "@headlessui/react";
 import { HiOutlineChevronDown } from "react-icons/hi";
-export default function DesktopNav() {
+export default function NavDesktop() {
   const nav =
     "px-2.5 py-1 text-sm rounded-md transition duration-200 text-gray-800 ";
   const lainnya = "hover:bg-gray-50 py-1 px-2.5 text-sm";

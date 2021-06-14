@@ -2,7 +2,7 @@ export default function WeCareAbout({ id, svg, name, description }) {
   return (
     <div key={id}>
       {/* icon */}
-      <div>
+      <div className="pl-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="w-8 h-8 text-blue-harislab"
@@ -20,11 +20,11 @@ export default function WeCareAbout({ id, svg, name, description }) {
         </svg>
       </div>
       {/* Name */}
-      <div className="my-2">
-        <h1 className="text-xl font-semibold ">{name}</h1>
+      <div className="pl-3 mt-3 mb-2 border-l border-blue-500">
+        <h1 className="font-semibold ">{name}</h1>
       </div>
       {/* description */}
-      <div className="text-gray-600">{description}</div>
+      <div className="pl-3 text-gray-700">{description}</div>
     </div>
   );
 }
