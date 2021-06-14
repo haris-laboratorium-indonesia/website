@@ -6,7 +6,7 @@ export default function homeMath() {
   return (
     <main>
       <TabMath in="Materi" to="/phy/homePhy" />
-      <section className="grid grid-cols-1 divide-y divide-gray-200 sm:grid-cols-3 sm:divide-y-0">
+      <section className="grid grid-cols-1 divide-y divide-gray-200 sm:grid-cols-3 sm:divide-y-0 ">
         <ChapterBox title="Lingkaran" to="linear" />
         <ChapterBox title="Integral Tentu" to="linear" />
         <ChapterBox title="Integral Tak Tentu" to="linear" />

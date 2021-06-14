@@ -1,18 +1,27 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   mode: "jit",
   purge: ["./pages/**/*.js", "./components/*.js"],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    colors: {
+      black:"#262626",
+      white: "#FFFFFF",
+      gray: colors.trueGray,
+      red: colors.red,
+      yellow: colors.yellow,
+      green: colors.green,
+      cyan: colors.cyan,
+      blue: colors.blue,
+      fuschsia: colors.fuchsia,
+    },
     extend: {
       fontFamily: {
         inter: ["Inter"],
         mw: ["Merriweather"],
       },
-      boxShadow: {
-        hero: "0 4px 6px -1px rgba(0, 122, 255, 0.5), 0 2px 4px -1px rgba(0, 122, 255, 0.05)",
-        inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
-        none: "0 0 0 0 rgba(59, 130, 246, 0.5), 0 0 0 0 rgba(59, 130, 246, 0.1)",
-      },
+
       backgroundImage: (theme) => ({
         "landing-page": "url('/monterey.jpg')",
       }),

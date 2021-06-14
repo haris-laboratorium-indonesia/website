@@ -7,7 +7,7 @@ export default function MobileNav() {
       {/* HarisLab */}
       <nav className="block w-3/4 ">
         <Link href="/">
-          <a className="block w-full py-2 pl-5 text-lg font-semibold font-mw">
+          <a className="block w-full py-2.5 pl-5 text-lg font-semibold font-mw">
             <span>Haris</span>
             <span className="font-light">Lab</span>
           </a>
@@ -18,7 +18,7 @@ export default function MobileNav() {
       <Menu as="div" className="static flex justify-end w-1/4 ">
         {({ open }) => (
           <>
-            <Menu.Button className="z-50 flex justify-end w-full py-2 pr-5 focus:outline-none">
+            <Menu.Button className="z-50 flex justify-end w-full py-2.5 pr-5 focus:outline-none">
               {open ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -52,9 +52,9 @@ export default function MobileNav() {
               )}
             </Menu.Button>
 
-            <Menu.Items className="absolute right-0 w-full p-5 mt-12 origin-top-right bg-gray-200 border-t border-b border-gray-700">
+            <Menu.Items className="absolute right-0 w-full p-5 mt-12 origin-top-right bg-gray-800 ">
               {/* Search */}
-              <section className="mb-5  flex items-center  px-1.5 py-1.5 rounded-md bg-white border-2 border-white focus-within:border-blue-harislab shadow ">
+              <section className="mb-5  flex items-center  px-1.5 py-1 rounded-lg bg-white border-2 border-white focus-within:ring-blue-500 focus-within:ring ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-5 h-5 text-gray-500"
@@ -74,13 +74,13 @@ export default function MobileNav() {
                 />
               </section>
 
-              <section className="grid grid-cols-2 gap-5 py-5 mb-5 border-t border-b border-gray-500">
+              <section className="grid grid-cols-2 gap-5">
                 {/* Alat */}
                 <div className="flex flex-col p-2 space-y-2 ">
-                  <div className="text-xs text-[#45484a]">ALAT</div>
+                  <div className="text-xs text-white">ALAT</div>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full text-left rounded-lg ">
+                      <button className="w-full text-left text-gray-400 rounded-lg">
                         {active ? (
                           <Link href="/math/homeMath">
                             <a>Materi</a>
@@ -95,7 +95,7 @@ export default function MobileNav() {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full text-left rounded-lg ">
+                      <button className="w-full text-left text-gray-400 rounded-lg">
                         {active ? (
                           <Link href="/flashCardMath">
                             <a>Kartu</a>
@@ -110,7 +110,7 @@ export default function MobileNav() {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full text-left rounded-lg ">
+                      <button className="w-full text-left text-gray-400 rounded-lg">
                         {active ? (
                           <Link href="/calculatorMath">
                             <a>Kalkulator</a>
@@ -118,6 +118,51 @@ export default function MobileNav() {
                         ) : (
                           <Link href="/calculatorMath">
                             <a>Kalkulator</a>
+                          </Link>
+                        )}
+                      </button>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <button className="w-full text-left text-gray-400 rounded-lg">
+                        {active ? (
+                          <Link href="/animationMath">
+                            <a>Animasi</a>
+                          </Link>
+                        ) : (
+                          <Link href="/animationMath">
+                            <a>Animasi</a>
+                          </Link>
+                        )}
+                      </button>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <button className="w-full text-left text-gray-400 rounded-lg">
+                        {active ? (
+                          <Link href="/scanMath">
+                            <a>ScanSoal</a>
+                          </Link>
+                        ) : (
+                          <Link href="/scanMath">
+                            <a>ScanSoal</a>
+                          </Link>
+                        )}
+                      </button>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <button className="w-full text-left text-gray-400 rounded-lg">
+                        {active ? (
+                          <Link href="/gamesMath">
+                            <a>Games</a>
+                          </Link>
+                        ) : (
+                          <Link href="/gamesMath">
+                            <a>Games</a>
                           </Link>
                         )}
                       </button>
@@ -127,10 +172,10 @@ export default function MobileNav() {
 
                 {/* Lainnya */}
                 <div className="flex flex-col p-2 space-y-2 ">
-                  <div className="text-xs text-[#45484a]">LAINNYA</div>
+                  <div className="text-xs text-white">LAINNYA</div>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full text-left rounded-lg ">
+                      <button className="w-full text-left text-gray-400 rounded-lg">
                         {active ? (
                           <Link href="/blog">
                             <a>Blog</a>
@@ -145,7 +190,7 @@ export default function MobileNav() {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full text-left rounded-lg ">
+                      <button className="w-full text-left text-gray-400 rounded-lg">
                         {active ? (
                           <Link href="/portofolio">
                             <a>Portofolio</a>
@@ -160,7 +205,7 @@ export default function MobileNav() {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full text-left rounded-lg ">
+                      <button className="w-full text-left text-gray-400 rounded-lg">
                         {active ? (
                           <Link href="/bookingMe">
                             <a>Booking Me!</a>
@@ -175,7 +220,7 @@ export default function MobileNav() {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full text-left rounded-lg ">
+                      <button className="w-full text-left text-gray-400 rounded-lg">
                         {active ? (
                           <Link href="/merchandise">
                             <a>Merchandise</a>
@@ -183,46 +228,42 @@ export default function MobileNav() {
                         ) : (
                           <Link href="/merchandise">
                             <a>Merchandise</a>
+                          </Link>
+                        )}
+                      </button>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <button className="w-full text-left text-gray-400 rounded-lg">
+                        {active ? (
+                          <Link href="/merchandise">
+                            <a>Login</a>
+                          </Link>
+                        ) : (
+                          <Link href="/merchandise">
+                            <a>Login</a>
+                          </Link>
+                        )}
+                      </button>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <button className="w-full text-left text-gray-400 rounded-lg">
+                        {active ? (
+                          <Link href="/merchandise">
+                            <a>Daftar</a>
+                          </Link>
+                        ) : (
+                          <Link href="/merchandise">
+                            <a>Daftar</a>
                           </Link>
                         )}
                       </button>
                     )}
                   </Menu.Item>
                 </div>
-              </section>
-              <section className="grid grid-cols-1 gap-3">
-                {/* Login */}
-                <Menu.Item>
-                  {({ active }) => (
-                    <button className="w-full text-center rounded-md border border-black py-1.5">
-                      {active ? (
-                        <Link href="/signIn">
-                          <a>Login</a>
-                        </Link>
-                      ) : (
-                        <Link href="/signIn">
-                          <a>Login</a>
-                        </Link>
-                      )}
-                    </button>
-                  )}
-                </Menu.Item>
-                {/* Daftar */}
-                <Menu.Item>
-                  {({ active }) => (
-                    <button className="w-full text-center rounded-md bg-[#007AFF] border border-[#007AFF] text-white py-1.5">
-                      {active ? (
-                        <Link href="/signUp">
-                          <a>Daftar</a>
-                        </Link>
-                      ) : (
-                        <Link href="/signUp">
-                          <a>Daftar</a>
-                        </Link>
-                      )}
-                    </button>
-                  )}
-                </Menu.Item>
               </section>
             </Menu.Items>
           </>

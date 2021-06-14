@@ -4,7 +4,7 @@ export default function Footer() {
   const navigation =
     "block text-sm text-gray-400 hover:underline hover:text-white hover:underline";
   return (
-    <footer className="bottom-0 w-full  mt-24 text-center bg-[#1D1D1F] ">
+    <footer className="bottom-0 w-full mt-24 text-center bg-gray-800 ">
       <section className="flex flex-col max-w-5xl p-5 mx-auto space-y-10 text-left sm:flex-row sm:space-y-0 xl:px-0">
         {/* Footer Navigation */}
         <article className="flex w-full sm:w-1/2">

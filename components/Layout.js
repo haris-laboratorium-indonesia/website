@@ -8,7 +8,7 @@ export default function Layout({ children }) {
     <main className="font-inter">
       <Head>
         <title>HarisLab</title>
-        <link rel="icon" href="/z.ico" />
+        <link rel="icon" href="/h.ico" />
         <meta
           name="description"
           content="Tempat untuk belajar matematika dan fisika sebagaimana mereka seharusnya dipelajari."
@@ -25,7 +25,7 @@ export default function Layout({ children }) {
         <meta property="og:type" content="website" />
       </Head>
 
-      <nav className="z-50 w-full mx-auto border-b border-gray-400 blur h-11">
+      <nav className="z-50 w-full h-auto mx-auto bg-white border-b border-gray-300">
         <nav className="w-full max-w-5xl mx-auto">
           <DesktopNav />
           <MobileNav />
