@@ -8,8 +8,8 @@ export default function ChapterBox({ to, title }) {
       <Link href={to}>
         <a className="flex items-center justify-between w-full px-0 py-3 sm:px-2 sm:py-1 sm:hover:bg-gray-100 sm:border sm:border-white hover:rounded">
           <div className="flex items-center sm:justify-between">
-            <HiFolder className="w-6 h-6 mr-1 text-[#1D1D1F]" />
-            <div className="text-sm truncate">{title}</div>
+            <HiFolder className="w-6 h-6 mr-1 " />
+            <div className="truncate">{title}</div>
           </div>
           <HiOutlineChevronRight className="w-5 h-5 sm:hidden" />
         </a>

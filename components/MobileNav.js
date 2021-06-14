@@ -5,9 +5,9 @@ export default function MobileNav() {
   return (
     <nav className="z-20 flex items-center justify-between md:hidden">
       {/* HarisLab */}
-      <nav className="block w-3/4  ">
+      <nav className="block w-3/4 ">
         <Link href="/">
-          <a className="block text-lg font-semibold pl-4 w-full py-2 text-[#1D1D1F]">
+          <a className="block w-full py-2 pl-5 text-lg font-semibold font-mw">
             <span>Haris</span>
             <span className="font-light">Lab</span>
           </a>
@@ -18,7 +18,7 @@ export default function MobileNav() {
       <Menu as="div" className="static flex justify-end w-1/4 ">
         {({ open }) => (
           <>
-            <Menu.Button className="z-50 flex justify-end w-full py-2 pr-4 focus:outline-none">
+            <Menu.Button className="z-50 flex justify-end w-full py-2 pr-5 focus:outline-none">
               {open ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -1,11 +1,10 @@
 import Link from "next/link";
-import Image from "next/image";
 import FAQ from "../components/FAQ";
 
-import { HiOutlineChevronRight } from "react-icons/hi";
 import { weCareAbouts } from "../lib/weCareAbouts";
 import { FAQs } from "../lib/FAQs";
 import WeCareAbout from "../components/WeCareAbout";
+import { sendInformation } from "../lib/sendInformation";
 
 export default function Home() {
   const tableColor = "bg-blue-100 text-blue-500 text-center";
@@ -14,7 +13,7 @@ export default function Home() {
       {/* Hero */}
       <section className="flex justify-center mt-11">
         <section className="grid grid-cols-1 gap-5 py-5 mx-auto">
-          <article className="w-full px-5 py-3 lg:px-0 sm:py-10 font-inter text-[#1D1D1F]">
+          <article className="w-full py-3 lg:px-0 sm:py-10 font-inter ">
             <div className="text-4xl font-bold text-center sm:text-6xl ">
               Laboratorium
             </div>
@@ -28,7 +27,7 @@ export default function Home() {
 
             <div className="flex justify-center mt-5 ">
               <Link href="/signUp">
-                <a className="rounded-lg text-center  w-5/6 sm:w-1/2 px-5 py-3 sm:py-2.5 bg-blue-harislab text-white  shadow-md hover:shadow-none hover:bg-opacity-80">
+                <a className="rounded-lg text-center  w-5/6 sm:w-1/2  py-3 sm:py-2.5 bg-blue-harislab text-white  shadow-md hover:shadow-none hover:bg-opacity-80">
                   Daftar Sekarang
                 </a>
               </Link>
@@ -37,184 +36,82 @@ export default function Home() {
         </section>
       </section>
 
-      {/* Bagaimana kami menyajikan informasi ?*/}
-      <section className="py-10 space-y-20 sm:space-y-5">
-        <header className="mb-10 text-sm text-center sm:text-base">
-          Bagaimana kami menyajikan informasi ?
+      {/* Cara kami menyajikan informasi */}
+      <div className="py-10 ">
+        <header className="mb-10 text-center ">
+          Cara kami menyajikan informasi
         </header>
-        {/* Kerangka Kerja */}
-        <section className="flex flex-col items-center justify-between mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
-          <div className="w-full space-y-3 sm:w-2/3">
-            <div className="text-4xl font-bold ">Kerangka Kerja</div>
-            <div className="text-lg">
-              Di HarisLab, semua bab pelajaran dibuat sebuah struktur informasi
-              sedemikia rupa agar mudah diingat. Sehingga kita bisa
-              berekspektasi kepada setiap bab nya, bahwa ini yang akan kita
-              pelajari. Coba dan rasakan kemudahannya.
-            </div>
-            <div className="text-blue-harislab hover:underline">
-              <Link href="/menyajikanInformasi">
-                <a>
-                  Selengkapnya <HiOutlineChevronRight className="inline" />
-                </a>
-              </Link>
-            </div>
-          </div>
-          <div className="w-full sm:w-1/3">
-            <Image
-              src="/Framework.svg"
-              height="1000px"
-              width="1000px"
-              layout="responsive"
-              priority
-            />
-          </div>
-        </section>
-
-        {/* Belajar Mandiri */}
-        <section className="flex flex-col items-center justify-between mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
-          <div className="w-full space-y-3 sm:w-2/3">
-            <div className="text-4xl font-bold ">Belajar Mandiri</div>
-            <div className="text-lg">
-              HarisLab didesain agar siapapun terutama murid agar bisa belajar
-              mandiri tanpa guru, bahkan tanpa buku panduan. Di sini kalian bisa
-              mendapatkan materi apapun, menggunakan kalkulator, men-track
-              progress belajar, bahkan kalian bisa mengenerate animasi dari
-              soal.
-            </div>
-            <div className="text-blue-harislab hover:underline">
-              <Link href="/menyajikanInformasi">
-                <a>
-                  Selengkapnya <HiOutlineChevronRight className="inline" />
-                </a>
-              </Link>
-            </div>
-          </div>
-          <div className="w-full sm:w-1/3">
-            <Image
-              src="/AutoLearning.svg"
-              height="1000px"
-              width="1000px"
-              layout="responsive"
-              priority
-            />
-          </div>
-        </section>
-
-        {/* Belajar Berdasarkan Proyek */}
-        <section className="flex flex-col items-center justify-between mx-auto space-y-5 font-inter sm:space-y-0 sm:flex-row lg:px-0">
-          <div className="w-full space-y-3 sm:w-2/3">
-            <div className="text-4xl font-bold ">
-              Belajar Berdasarkan Proyek
-            </div>
-            <div className="text-lg">
-              Belajar berdasarkan proyek (Project-Base Learning) berarti kalian
-              diberi masalah dulu baru menggunakan semua materi pelajaran di
-              'Belajar' untuk menyelesaikan masalah. Ini meningkatkan sense of
-              utility yang selama ini hilang di pendidikan SMA fisika dan
-              matematika di Indonesia, murid sering bilang "ini gunanya buat apa
-              ?", kita kalimat seperti itu akan jarang terdengar di HarisLab.
-            </div>
-            <div className="text-blue-harislab hover:underline">
-              <Link href="/menyajikanInformasi">
-                <a>
-                  Selengkapnya <HiOutlineChevronRight className="inline" />
-                </a>
-              </Link>
-            </div>
-          </div>
-          <div className="w-full sm:w-1/3">
-            <Image
-              src="/Project-BaseLearning.svg"
-              height="1000px"
-              width="1000px"
-              layout="responsive"
-              priority
-            />
-          </div>
-        </section>
-
-        {/* No Ads */}
-        <section className="flex flex-col items-center justify-between mx-auto mt-10 space-y-5 font-inter sm:space-y-0 sm:flex-row-reverse lg:px-0 sm:mt-0">
-          <div className="w-full space-y-3 sm:w-2/3">
-            <div className="text-4xl font-bold ">Tanpa Iklan</div>
-            <div className="text-lg">
-              Cukup sudah kamu melihat iklan dimana-mana, di internet, di sosial
-              media, di youtube, di jalanan, sekarang waktunya fokus belajar,
-              kita tau kalian benci iklan, begitupun kami, maka dari itu,
-              HarisLab tanpa iklan, tentu tidak nyaman bukan ketika sedang
-              enak-enak baca tiba-tiba muncul konten yang gak berhubungan dengan
-              apa yang kita pelajari ?, kami menghargai perhatian anda, sumber
-              daya terpenting kedua setelah waktu.
-            </div>
-            <div className="text-blue-harislab hover:underline">
-              <Link href="/menyajikanInformasi">
-                <a>
-                  Selengkapnya <HiOutlineChevronRight className="inline" />
-                </a>
-              </Link>
-            </div>
-          </div>
-          <div className="w-full sm:w-1/3">
-            <Image
-              src="/NoAds.svg"
-              height="1000px"
-              width="1000px"
-              layout="responsive"
-              priority
-            />
-          </div>
-        </section>
-      </section>
-
-      {/* Kami peduli tentang */}
-      <div className="px-5 py-10 bg-gray-50">
-        <header className="mb-10 text-center ">Kami Peduli Tentang</header>
         <section className="grid grid-cols-1 gap-10 mx-auto sm:grid-cols-3 md:grid-cols-4 ">
-          {weCareAbouts.map((weCareAbout) => (
+          {sendInformation.map((a) => (
             <WeCareAbout
-              key={weCareAbout.id}
-              svg={weCareAbout.svg}
-              name={weCareAbout.name}
-              description={weCareAbout.description}
+              key={a.id}
+              name={a.title}
+              description={a.description}
             />
           ))}
         </section>
       </div>
 
-      {/* harislab vs zenius vs ruangguru */}
+      {/* Kami peduli tentang */}
+      <div className="py-10 ">
+        <header className="mb-10 text-center ">Kami Peduli Tentang</header>
+        <section className="grid grid-cols-1 gap-10 mx-auto sm:grid-cols-3 md:grid-cols-4 ">
+          {weCareAbouts.map((a) => (
+            <WeCareAbout
+              key={a.id}
+              name={a.title}
+              description={a.description}
+            />
+          ))}
+        </section>
+      </div>
+
+      {/* HarisLab vs Zenius vs Ruangguru vs Buku Paket*/}
       <div className="py-10 ">
         <header className="py-3 mx-auto my-10 text-center ">
           harislab vs zenius vs ruangguru
         </header>
-        <section className="grid grid-cols-1 gap-5 px-5 mx-auto sm:gap-5 lg:px-0 ">
-          <table>
+        <section className="grid grid-cols-1 gap-5 mx-auto sm:gap-5 lg:px-0 ">
+          <table className="overscroll-x-auto">
             <thead>
               <tr className="divide-x divide-blue-300">
                 <th>vs</th>
-                <th>harislab</th>
-                <th>zenius</th>
-                <th>ruangguru</th>
+                <th>HarisLab</th>
+                <th>Zenius</th>
+                <th>Ruangguru</th>
+                <th>Buku Paket</th>
               </tr>
             </thead>
             <tbody className="divide-y-2 divide-blue-300">
               <tr>
-                <td className={tableColor}>harga</td>
+                <td className={tableColor}>Harga</td>
                 <td className={tableColor}>25rb/bln</td>
                 <td className={tableColor}>50rb/bln</td>
                 <td className={tableColor}>80rb/bln</td>
+                <td className={tableColor}>200rb/bln</td>
               </tr>
               <tr>
-                <td className={tableColor}>harga</td>
-                <td className={tableColor}>25rb/bln</td>
-                <td className={tableColor}>50rb/bln</td>
-                <td className={tableColor}>80rb/bln</td>
+                <td className={tableColor}>Update Informasi</td>
+                <td className={tableColor}>Selalu Update</td>
+                <td className={tableColor}>Selalu Update</td>
+                <td className={tableColor}>Selalu Update</td>
+                <td className={tableColor}>Tidak Update</td>
               </tr>
               <tr>
-                <td className={tableColor}>harga</td>
-                <td className={tableColor}>25rb/bln</td>
-                <td className={tableColor}>50rb/bln</td>
-                <td className={tableColor}>80rb/bln</td>
+                <td className={tableColor}>Durabilitas</td>
+                <td className={tableColor}>Aman</td>
+                <td className={tableColor}>Aman</td>
+                <td className={tableColor}>Aman</td>
+                <td className={tableColor}>
+                  Mudah rusak jika terkena air dan tekanan
+                </td>
+              </tr>
+              <tr>
+                <td className={tableColor}>Mobilitas</td>
+                <td className={tableColor}>Mudah dibawa</td>
+                <td className={tableColor}>Mudah dibawa</td>
+                <td className={tableColor}>Mudah dibawa</td>
+                <td className={tableColor}>Sulit dibawa </td>
               </tr>
             </tbody>
           </table>
@@ -224,7 +121,7 @@ export default function Home() {
       {/* FAQ */}
       <div className="py-10 ">
         <header className="py-3 mx-auto my-10 text-center ">FAQ</header>
-        <section className="grid grid-cols-1 gap-5 px-5 mx-auto sm:gap-5 lg:px-0 ">
+        <section className="grid grid-cols-1 gap-5 mx-auto sm:gap-5 lg:px-0 ">
           {FAQs.map((FAQs) => (
             <div key={FAQs.id}>
               <FAQ button={FAQs.button} panel={FAQs.panel} />
