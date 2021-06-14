@@ -139,7 +139,6 @@ export default function homeMath() {
       eveniet tempora repellendus sed rem fugiat eligendi obcaecati optio nisi
       soluta illum veritatis accusantium labore, reprehenderit eum amet ad quam
       impedit natus iusto laborum, voluptatibus sequi ex.{" "}
-      <div className="h-96"></div>
     </main>
   );
 }

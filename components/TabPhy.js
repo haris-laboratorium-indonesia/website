@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function TabPhy(props) {
   return (
-    <main className="sticky top-0 flex flex-row items-center justify-between w-full h-auto py-2 mb-5 bg-white border-b border-gray-300 ">
+    <main className="sticky top-0 flex flex-row items-center justify-between w-full h-auto py-1 mb-5 bg-white ">
       <section className="text-2xl font-semibold text-red-500">
         {props.in}
       </section>
@@ -13,7 +13,7 @@ export default function TabPhy(props) {
             </div>
           </a>
         </Link>
-        <div className="px-2 py-1 text-black bg-white border border-gray-200 rounded-md shadow">
+        <div className="px-2 py-1 text-black bg-white border border-white rounded-md shadow">
           Fisika
         </div>
       </section>

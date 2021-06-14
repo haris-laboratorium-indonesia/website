@@ -31,8 +31,8 @@ export default function Layout({ children }) {
           <NavMobile />
         </nav>
       </nav>
-      <section className="w-full max-w-5xl min-h-screen px-5 mx-auto mt-5 xl:px-0">
-        {children}
+      <section className="w-full max-w-5xl min-h-screen px-5 pt-5 pb-10 mx-auto xl:px-0">
+        <section className="border-l border-r border-gray-200">{children}</section>
       </section>
       <Footer />
     </main>

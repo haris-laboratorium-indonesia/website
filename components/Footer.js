@@ -4,11 +4,11 @@ export default function Footer() {
   const navigation =
     "block text-sm text-gray-400 hover:underline hover:text-white hover:underline";
   return (
-    <footer className="bottom-0 w-full mt-24 text-center bg-gray-800 ">
+    <footer className="bottom-0 w-full text-center bg-gray-800 ">
       <section className="flex flex-col max-w-5xl p-5 mx-auto space-y-10 text-left sm:flex-row sm:space-y-0 xl:px-0">
         {/* Footer Navigation */}
         <article className="flex w-full sm:w-1/2">
-          <div className="w-full space-y-1 sm:w-1/2">
+          <div className="w-full space-y-2 sm:w-1/2">
             {/* Alat */}
             <div className="text-sm font-medium text-white">Alat</div>
             <Link href="/math/homeMath">
@@ -23,7 +23,7 @@ export default function Footer() {
           </div>
 
           {/* Lainnya */}
-          <div className="w-full space-y-1 sm:w-1/2">
+          <div className="w-full space-y-2 sm:w-1/2">
             <div className="text-sm font-medium text-white ">Lainnya</div>
             <Link href="/portofolio">
               <a className={navigation}>Portofolio</a>

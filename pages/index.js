@@ -12,8 +12,8 @@ export default function Home() {
     <main className="">
       {/* Hero */}
       <section className="flex justify-center">
-        <section className="grid grid-cols-1 gap-5 py-5 mx-auto">
-          <article className="w-full py-3 lg:px-0 sm:py-10 font-inter ">
+        <section className="grid grid-cols-1 gap-5 mx-auto">
+          <article className="w-full lg:px-0 sm:py-10 font-inter ">
             <div className="text-4xl font-bold text-center sm:text-6xl font-mw">
               Laboratorium
             </div>
@@ -38,7 +38,7 @@ export default function Home() {
 
       {/* Cara kami menyajikan informasi */}
       <div className="py-10 ">
-        <header className="my-10 text-center text-gray-600 ">
+        <header className="mb-10 text-center text-gray-600 ">
           Cara kami menyajikan informasi
         </header>
         <section className="grid grid-cols-1 gap-10 mx-auto sm:grid-cols-3 md:grid-cols-4 ">

@@ -52,12 +52,12 @@ export default function NavMobile() {
               )}
             </Menu.Button>
 
-            <Menu.Items className="absolute right-0 w-full p-5 mt-12 origin-top-right bg-gray-800 ">
+            <Menu.Items className="absolute z-30 right-0 w-full p-5 origin-top-right bg-gray-800 mt-[52px] h-full">
               {/* Search */}
-              <section className="mb-5  flex items-center  px-1.5 py-1 rounded-lg bg-white border-2 border-white focus-within:ring-blue-500 focus-within:ring ">
+              <section className="mb-5  flex items-center  px-1.5 py-1 rounded-lg bg-gray-700  ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5 text-gray-500"
+                  className="w-5 h-5 text-gray-300"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -69,14 +69,14 @@ export default function NavMobile() {
                 </svg>
                 <input
                   type="text"
-                  className="w-full ml-1 text-black placeholder-gray-500 bg-white focus:outline-none caret-black focus:placeholder-black "
+                  className="w-full ml-1 text-white placeholder-gray-300 bg-gray-700 focus:outline-none focus:placeholder-white "
                   placeholder="Search"
                 />
               </section>
 
-              <section className="grid grid-cols-2 gap-5">
+              <section className="grid grid-cols-2 gap-5 pt-5 border-t border-gray-500">
                 {/* Alat */}
-                <div className="flex flex-col p-2 space-y-2 ">
+                <div className="flex flex-col p-2 space-y-3 ">
                   <div className="text-xs text-white">ALAT</div>
                   <Menu.Item>
                     {({ active }) => (
@@ -171,7 +171,7 @@ export default function NavMobile() {
                 </div>
 
                 {/* Lainnya */}
-                <div className="flex flex-col p-2 space-y-2 ">
+                <div className="flex flex-col p-2 space-y-3 ">
                   <div className="text-xs text-white">LAINNYA</div>
                   <Menu.Item>
                     {({ active }) => (
