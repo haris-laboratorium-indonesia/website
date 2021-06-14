@@ -1,5 +1,5 @@
-import Tab from "../components/Tab";
+import TabMath from "../components/TabMath";
 
 export default function animationMath() {
-  return <Tab textColor="text-cyan-500" halaman="Animasi"/>;
+  return <TabMath page="Animasi" textColor="text-cyan-500" to="animationPhy"/>;
 }

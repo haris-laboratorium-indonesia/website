@@ -9,7 +9,7 @@ export default function calculatorMath() {
   }
   return (
     <main  >
-      <TabMath in="Kalkulator" to="calculatorPhy" />
+      <TabMath page="Kalkulator" to="calculatorPhy" textColor="text-green-500"/>
       <div>calculatorMath</div>
       <div className="flex flex-col w-1/3" name="calculator">
         <input className="bg-red-500" type="number" name="angka1" />

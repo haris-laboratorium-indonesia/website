@@ -6,7 +6,7 @@ import { Matriks } from "../lib/FlashCardMath";
 export default function flashCardMath() {
   return (
     <main>
-      <TabMath in="Card" to="flashCardPhy" />
+      <TabMath page="Card" to="flashCardPhy" textColor="text-yellow-500" />
 
       <div className="px-5 mb-5 text-2xl font-semibold lg:px-0">Matriks</div>
       <div className="flex p-5 space-x-5 overflow-x-auto sm:p-5 ">

@@ -66,7 +66,7 @@ export default function NavDesktop() {
                 />
               </Popover.Button>
 
-              <Popover.Panel className="absolute z-10 flex flex-col py-2 space-y-2 bg-white rounded shadow">
+              <Popover.Panel className="absolute z-50 flex flex-col py-2 space-y-2 bg-white rounded shadow">
                 <Link href="/blog">
                   <a className={lainnya}>Blog</a>
                 </Link>

@@ -52,9 +52,9 @@ export default function NavMobile() {
               )}
             </Menu.Button>
 
-            <Menu.Items className="absolute z-30 right-0 w-full p-5 origin-top-right bg-gray-800 mt-[52px] h-full">
+            <Menu.Items className="absolute z-50 right-0 w-full p-5 origin-top-right bg-gray-800 mt-[52px] h-full">
               {/* Search */}
-              <section className="mb-5  flex items-center  px-1.5 py-1 rounded-lg bg-gray-700  ">
+              <section className="mb-5  flex items-center  p-1.5 rounded-lg bg-gray-700  ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-5 h-5 text-gray-300"

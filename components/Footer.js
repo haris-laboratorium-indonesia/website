@@ -10,7 +10,7 @@ export default function Footer() {
         <article className="flex w-full sm:w-1/2">
           <div className="w-full space-y-2 sm:w-1/2">
             {/* Alat */}
-            <div className="text-sm font-medium text-white">Alat</div>
+            <div className="text-sm text-white">ALAT</div>
             <Link href="/math/homeMath">
               <a className={navigation}>Belajar</a>
             </Link>
@@ -24,7 +24,7 @@ export default function Footer() {
 
           {/* Lainnya */}
           <div className="w-full space-y-2 sm:w-1/2">
-            <div className="text-sm font-medium text-white ">Lainnya</div>
+            <div className="text-sm text-white ">LAINNYA</div>
             <Link href="/portofolio">
               <a className={navigation}>Portofolio</a>
             </Link>

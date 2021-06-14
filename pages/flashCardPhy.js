@@ -4,7 +4,7 @@ import What from "../components/What";
 export default function flashCardPhy() {
   return (
     <main>
-      <TabPhy in="Card" to="flashCardMath" />
+      <TabPhy page="Card" to="flashCardMath" textColor="text-yellow-500 " />
 
       <div>Kuantum</div>
 
