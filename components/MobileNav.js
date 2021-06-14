@@ -3,11 +3,11 @@ import { Menu } from "@headlessui/react";
 
 export default function MobileNav() {
   return (
-    <nav className="z-20 flex items-center justify-between ">
+    <nav className="z-20 flex items-center justify-between md:hidden">
       {/* HarisLab */}
-      <nav className="block w-3/4 md:hidden">
+      <nav className="block w-3/4  ">
         <Link href="/">
-          <a className="block text-lg font-semibold pl-5 w-full py-2.5 font-mw text-[#1D1D1F]">
+          <a className="block text-lg font-semibold pl-4 w-full py-2 text-[#1D1D1F]">
             <span>Haris</span>
             <span className="font-light">Lab</span>
           </a>
@@ -15,10 +15,10 @@ export default function MobileNav() {
       </nav>
 
       {/* Menu */}
-      <Menu as="div" className="static flex justify-end w-1/4 md:hidden ">
+      <Menu as="div" className="static flex justify-end w-1/4 ">
         {({ open }) => (
           <>
-            <Menu.Button className="py-2.5 pr-5 focus:outline-none w-full flex justify-end z-50">
+            <Menu.Button className="z-50 flex justify-end w-full py-2 pr-4 focus:outline-none">
               {open ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@ export default function MobileNav() {
               )}
             </Menu.Button>
 
-            <Menu.Items className="bg-[#F2F5F7] absolute right-0 w-full p-5 mt-12 origin-top-right border-t border-b shadow-lg ">
+            <Menu.Items className="absolute right-0 w-full p-5 mt-12 origin-top-right bg-gray-200 border-t border-b border-gray-700">
               {/* Search */}
               <section className="mb-5  flex items-center  px-1.5 py-1.5 rounded-md bg-white border-2 border-white focus-within:border-blue-harislab shadow ">
                 <svg

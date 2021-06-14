@@ -1,10 +1,10 @@
-import PhyTab from "../components/PhyTab";
+import TabPhy from "../components/TabPhy";
 import What from "../components/What";
 
 export default function flashCardPhy() {
   return (
     <main>
-      <PhyTab in="Card" to="flashCardMath" />
+      <TabPhy in="Card" to="flashCardMath" />
 
       <div>Kuantum</div>
 

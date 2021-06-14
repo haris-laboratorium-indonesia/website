@@ -1,22 +1,24 @@
 import { Menu } from "@headlessui/react";
 export default function fluida() {
   return (
-    <main>
+    <main className="grid grid-cols-1 gap-4 md:grid-cols-4 ">
       <Menu
         as="div"
-        className="sticky flex flex-col items-center w-full bg-white top-16"
+        className="sticky top-0 z-20 flex flex-col items-center w-full md:bg-white h-11 md:col-span-1"
       >
         {({ open }) => (
           <>
-            <div className="flex items-center justify-between w-full text-[#3A3A3C] py-1">
-              <div className="font-semibold">Fluida Statis</div>
+            <div className="flex items-center md:justify-between justify-end w-full text-[#3A3A3C] py-2">
+              <div className="hidden text-lg font-semibold md:block ">
+                Fluida Statis
+              </div>
               <Menu.Button className="focus:outline-none px-2 py-1 space-x-1 rounded-md flex justify-between items-center border border-[#D1D1DB] bg-[#F2F2F7]">
                 <div className="text-xs">Daftar Isi</div>
                 <div>
                   {open ? (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-4 h-4"
+                      className="w-5 h-5"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -31,7 +33,7 @@ export default function fluida() {
                   ) : (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-4 h-4"
+                      className="w-5 h-5"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -47,7 +49,7 @@ export default function fluida() {
                 </div>
               </Menu.Button>
             </div>
-            <Menu.Items className="max-w-5xl space-y-2 bg-[#F2F5F7] text-sm right-0 w-full p-2 rounded  mt-4 origin-top-right border border-[#D1D1DB]  ">
+            <Menu.Items className="max-w-5xl space-y-2 bg-[#F2F5F7] text-sm right-0 w-full p-2 rounded  mt-1 origin-top-right border border-[#D1D1DB]  ">
               <Menu.Item as="div">
                 <a
                   href="#Pengenalan"
@@ -58,7 +60,7 @@ export default function fluida() {
               </Menu.Item>
               <Menu.Item as="div">
                 <a
-                  href="#Konstanta"
+                  href="#Variabel"
                   className="block text-[#FF9500] hover:bg-[#FF9500] hover:bg-opacity-10 rounded px-2 py-1"
                 >
                   Konstanta dan Variabel
@@ -92,91 +94,161 @@ export default function fluida() {
           </>
         )}
       </Menu>
-      <div>
-        <h1 id="Pengenalan" className="sticky top-24 bg-white py-1 text-[#FF2D55] font-semibold">
-          Pengenalan
-        </h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto,
-          nobis ea unde a quisquam molestias? Debitis fuga unde reprehenderit,
-          expedita omnis voluptates at animi quod quaerat exercitationem nam
-          ipsam molestiae, modi dolores cum neque eius adipisci esse quas ad
-          dignissimos sequi dolorum possimus. Consectetur, sunt, vero aliquam
-          itaque ab dolorem non nesciunt incidunt possimus dolorum veritatis.
-          Cum veniam reprehenderit iste qui consequuntur sint repudiandae, natus
-          excepturi quaerat debitis? Nulla iste ut natus nisi. Vel adipisci,
-          dolorum laboriosam suscipit autem quisquam, ex vitae blanditiis dicta
-          sapiente recusandae, eaque nulla voluptate. Reiciendis provident eaque
-          fugit, necessitatibus vero nemo deserunt incidunt natus numquam odio
-          dolore ipsam consectetur suscipit dolores porro consequatur molestiae
-          quis repellendus doloribus. Ad cupiditate impedit illo perspiciatis
-          alias quam vitae voluptatem quibusdam tempora ea error aperiam, ipsa
-          dolorum, reprehenderit accusamus nisi deleniti? Ad voluptas beatae
-          velit optio cum modi accusantium? Facilis unde dolore consequatur vel?
-          Quae modi non nisi sunt adipisci aut impedit, mollitia, consequuntur
-          dolorum eum iste voluptatem optio cupiditate facere nihil magnam.
-          Neque quam accusantium, repellat iure esse porro itaque repellendus
-          aliquam similique deleniti harum quia ipsum culpa, sint maxime dolor
-          illo. Rem aliquid quisquam provident est excepturi magni animi illo
-          quos mollitia asperiores doloribus ea eius a quas ipsam veritatis
-          nesciunt voluptates placeat repellendus fuga, officia dolores
-          accusamus. Magni, nisi praesentium porro fugiat, in provident, quidem
-          velit esse id qui temporibus adipisci voluptatibus. Maiores aspernatur
-          dicta accusamus aut cupiditate labore necessitatibus similique odio
-          unde magni eius dolores facere sed saepe voluptatum maxime, eaque non
-          et reprehenderit deserunt? Nemo nesciunt minima vero nulla mollitia
-          neque nisi distinctio! Sequi, cumque maxime molestiae commodi repellat
-          eum numquam minima, nemo quam vitae quisquam vero possimus recusandae
-          quis deleniti tenetur deserunt praesentium porro quaerat similique
-          omnis ad! Debitis natus repudiandae maiores error quos aperiam porro
-          consectetur incidunt, suscipit necessitatibus quod rem placeat ipsa
-          explicabo vero minus! Harum cumque sapiente nostrum ducimus qui,
-          beatae, unde aspernatur debitis fuga tenetur vero voluptatibus
-          necessitatibus, architecto blanditiis obcaecati? Explicabo soluta a
-          commodi, praesentium repudiandae corporis ea modi dolorem error
-          numquam? Quis temporibus corrupti tempora et officia velit adipisci
-          dolorum quo quas totam tenetur ullam minus veniam aliquam esse, dicta
-          illum libero quam numquam voluptatum sapiente hic! Rerum veritatis
-          consequuntur doloremque culpa eos magni sunt nostrum omnis velit!
-          Vitae velit provident voluptate nihil esse adipisci hic? Repellendus
-          omnis aperiam et quibusdam, officiis animi iusto porro quisquam, sed
-          neque libero blanditiis exercitationem? Unde nam ad doloribus
-          molestiae nostrum laboriosam alias labore id ipsam consequatur aliquam
-          mollitia impedit, et minus, cum atque hic dolorem libero ut quod
-          itaque distinctio aut non. Pariatur odit maxime ad vel quae
-          voluptatibus, inventore nihil nisi fugit deleniti ab exercitationem
-          rem, vitae nostrum aut placeat vero dignissimos! Ratione nisi maxime
-          sapiente consequuntur totam labore autem enim harum accusamus magni
-          sed alias libero inventore placeat aut, dolorum odio dicta delectus
-          officia facere quidem animi? Minus officiis exercitationem commodi
-          similique quasi praesentium voluptates temporibus doloribus dolore
-          alias porro esse soluta fugiat voluptate non, neque molestiae sit
-          beatae. Tenetur aliquid similique autem adipisci. Commodi magnam
-          recusandae voluptate! Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Aspernatur, repudiandae itaque ipsam qui porro,
-          harum fugiat quidem officiis amet adipisci corrupti quos excepturi nam
-          voluptates pariatur alias? Architecto nemo similique consequatur
-          repellendus. Atque non architecto provident necessitatibus corrupti
-          quis, ab aut facere expedita incidunt? Placeat ex, dolore deleniti
-          fugit quaerat quidem quia neque iusto consectetur suscipit,
-          consequuntur, facere fuga facilis commodi similique dolores odit.
-          Natus amet recusandae dignissimos nesciunt aperiam enim asperiores
-          iste incidunt nobis perspiciatis, animi nam iusto, veniam minima illo
-          culpa a delectus neque unde. Dolor modi iste laboriosam blanditiis,
-          adipisci, a animi incidunt, doloribus exercitationem eveniet
-          nisi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-          atque doloremque asperiores quis optio. Dolorem nostrum excepturi,
-          vitae repudiandae necessitatibus labore. Atque, sed, doloremque error
-          adipisci dolore veniam et quae, reiciendis sapiente ipsum quas aliquid
-          similique dolorum voluptas illo amet? Accusantium alias aut iure, quae
-          libero magnam voluptate iste suscipit autem laboriosam possimus
-          voluptates laudantium commodi ipsa quidem debitis eligendi pariatur?
-          Expedita aperiam dolore voluptate dolorum voluptas mollitia, sunt
-          blanditiis, deleniti alias, laboriosam earum odit doloribus? Cumque
-          laboriosam perspiciatis amet explicabo aliquid incidunt architecto aut
-          corporis quibusdam vel. Nobis architecto perferendis facere cumque?
-          Assumenda voluptatum minus maiores dignissimos. Incidunt, reiciendis?
-        </p>
+      <div className="md:col-span-3">
+        <div>
+          <h1
+            id="Pengenalan"
+            className="z-10 text-xl sm:text-2xl bg-white rounded-md  sticky top-0  py-2 text-[#FF2D55] font-semibold"
+          >
+            Pengenalan
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim
+            provident tenetur? Earum voluptas, rerum aliquid corporis, sit
+            veritatis laborum aut eum sed saepe natus esse quas expedita animi!
+            Quasi odio architecto impedit voluptatum eligendi nihil placeat
+            molestiae at vitae consequatur, autem, eos hic nemo debitis
+            recusandae deleniti asperiores? Officia quam eaque excepturi facere,
+            eligendi perferendis iste. Accusantium nam dolor doloremque unde
+            expedita sunt cumque blanditiis, corrupti, in sit ipsum qui
+            laboriosam hic quidem, odio ad. In officia, pariatur exercitationem
+            provident deserunt neque excepturi nisi voluptates saepe quidem
+            commodi esse, atque odio incidunt voluptatum porro ipsum reiciendis
+            iusto nostrum laboriosam.
+          </p>
+        </div>
+        <div>
+          <h1
+            id="Variabel"
+            className="z-10 text-xl sm:text-2xl bg-white rounded-md  sticky top-0  py-2 text-[#FF9500] font-semibold"
+          >
+            Variabel
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim
+            provident tenetur? Earum voluptas, rerum aliquid corporis, sit
+            veritatis laborum aut eum sed saepe natus esse quas expedita animi!
+            Quasi odio architecto impedit voluptatum eligendi nihil placeat
+            molestiae at vitae consequatur, autem, eos hic nemo debitis
+            recusandae deleniti asperiores? Officia quam eaque excepturi facere,
+            eligendi perferendis iste. Accusantium nam dolor doloremque unde
+            expedita sunt cumque blanditiis, corrupti, in sit ipsum qui
+            laboriosam hic quidem, odio ad. In officia, pariatur exercitationem
+            provident deserunt neque excepturi nisi voluptates saepe quidem
+            commodi esse, atque odio incidunt voluptatum porro ipsum reiciendis
+            iusto nostrum laboriosam. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Laborum quibusdam ipsa nostrum facilis qui nisi
+            ratione molestias, sequi dolores nihil sint corporis tenetur nam
+            illum accusantium reprehenderit eos! Eligendi illo iste, at
+            obcaecati quaerat corporis qui iusto eveniet soluta unde sunt rem?
+            Corrupti, quidem! Aspernatur perspiciatis quibusdam iure laborum
+            perferendis eligendi quas dolor quia, sit expedita modi quis nam
+            aliquid deserunt amet soluta cumque at eaque dolores dolore corporis
+            libero provident consectetur quidem. Repudiandae sed debitis omnis
+            corrupti possimus in sit magni labore, sapiente repellat nam libero
+            explicabo aspernatur rerum facere, incidunt eligendi consequatur
+            magnam inventore voluptatem illo. Nihil, asperiores!
+          </p>
+        </div>
+        <div>
+          <h1
+            id="Rumus"
+            className="z-10 text-xl sm:text-2xl bg-white rounded-md  sticky top-0  py-2 text-[#34C759] font-semibold"
+          >
+            Rumus
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim
+            provident tenetur? Earum voluptas, rerum aliquid corporis, sit
+            veritatis laborum aut eum sed saepe natus esse quas expedita animi!
+            Quasi odio architecto impedit voluptatum eligendi nihil placeat
+            molestiae at vitae consequatur, autem, eos hic nemo debitis
+            recusandae deleniti asperiores? Officia quam eaque excepturi facere,
+            eligendi perferendis iste. Accusantium nam dolor doloremque unde
+            expedita sunt cumque blanditiis, corrupti, in sit ipsum qui
+            laboriosam hic quidem, odio ad. In officia, pariatur exercitationem
+            provident deserunt neque excepturi nisi voluptates saepe quidem
+            commodi esse, atque odio incidunt voluptatum porro ipsum reiciendis
+            iusto nostrum laboriosam. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Laborum quibusdam ipsa nostrum facilis qui nisi
+            ratione molestias, sequi dolores nihil sint corporis tenetur nam
+            illum accusantium reprehenderit eos! Eligendi illo iste, at
+            obcaecati quaerat corporis qui iusto eveniet soluta unde sunt rem?
+            Corrupti, quidem! Aspernatur perspiciatis quibusdam iure laborum
+            perferendis eligendi quas dolor quia, sit expedita modi quis nam
+            aliquid deserunt amet soluta cumque at eaque dolores dolore corporis
+            libero provident consectetur quidem. Repudiandae sed debitis omnis
+            corrupti possimus in sit magni labore, sapiente repellat nam libero
+            explicabo aspernatur rerum facere, incidunt eligendi consequatur
+            magnam inventore voluptatem illo. Nihil, asperiores!
+          </p>
+        </div>
+        <div>
+          <h1
+            id="PenurunanRumus"
+            className="z-10 text-xl sm:text-2xl bg-white rounded-md  sticky top-0  py-2 text-[#32ADFA] font-semibold"
+          >
+            Penurunan Rumus
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim
+            provident tenetur? Earum voluptas, rerum aliquid corporis, sit
+            veritatis laborum aut eum sed saepe natus esse quas expedita animi!
+            Quasi odio architecto impedit voluptatum eligendi nihil placeat
+            molestiae at vitae consequatur, autem, eos hic nemo debitis
+            recusandae deleniti asperiores? Officia quam eaque excepturi facere,
+            eligendi perferendis iste. Accusantium nam dolor doloremque unde
+            expedita sunt cumque blanditiis, corrupti, in sit ipsum qui
+            laboriosam hic quidem, odio ad. In officia, pariatur exercitationem
+            provident deserunt neque excepturi nisi voluptates saepe quidem
+            commodi esse, atque odio incidunt voluptatum porro ipsum reiciendis
+            iusto nostrum laboriosam. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Laborum quibusdam ipsa nostrum facilis qui nisi
+            ratione molestias, sequi dolores nihil sint corporis tenetur nam
+            illum accusantium reprehenderit eos! Eligendi illo iste, at
+            obcaecati quaerat corporis qui iusto eveniet soluta unde sunt rem?
+            Corrupti, quidem! Aspernatur perspiciatis quibusdam iure laborum
+            perferendis eligendi quas dolor quia, sit expedita modi quis nam
+            aliquid deserunt amet soluta cumque at eaque dolores dolore corporis
+            libero provident consectetur quidem. Repudiandae sed debitis omnis
+            corrupti possimus in sit magni labore, sapiente repellat nam libero
+            explicabo aspernatur rerum facere, incidunt eligendi consequatur
+            magnam inventore voluptatem illo. Nihil, asperiores!
+          </p>
+        </div>
+        <div>
+          <h1
+            id="ContohSoal"
+            className="z-10 text-xl sm:text-2xl bg-white rounded-md  sticky top-0  py-2 text-[#5856D6] font-semibold"
+          >
+            Contoh Soal
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim
+            provident tenetur? Earum voluptas, rerum aliquid corporis, sit
+            veritatis laborum aut eum sed saepe natus esse quas expedita animi!
+            Quasi odio architecto impedit voluptatum eligendi nihil placeat
+            molestiae at vitae consequatur, autem, eos hic nemo debitis
+            recusandae deleniti asperiores? Officia quam eaque excepturi facere,
+            eligendi perferendis iste. Accusantium nam dolor doloremque unde
+            expedita sunt cumque blanditiis, corrupti, in sit ipsum qui
+            laboriosam hic quidem, odio ad. In officia, pariatur exercitationem
+            provident deserunt neque excepturi nisi voluptates saepe quidem
+            commodi esse, atque odio incidunt voluptatum porro ipsum reiciendis
+            iusto nostrum laboriosam. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Laborum quibusdam ipsa nostrum facilis qui nisi
+            ratione molestias, sequi dolores nihil sint corporis tenetur nam
+            illum accusantium reprehenderit eos! Eligendi illo iste, at
+            obcaecati quaerat corporis qui iusto eveniet soluta unde sunt rem?
+            Corrupti, quidem! Aspernatur perspiciatis quibusdam iure laborum
+            perferendis eligendi quas dolor quia, sit expedita modi quis nam
+            aliquid deserunt amet soluta cumque at eaque dolores dolore corporis
+            libero provident consectetur quidem. Repudiandae sed debitis omnis
+            corrupti possimus in sit magni labore, sapiente repellat nam libero
+            explicabo aspernatur rerum facere, incidunt eligendi consequatur
+            magnam inventore voluptatem illo. Nihil, asperiores!
+          </p>
+        </div>
       </div>
     </main>
   );

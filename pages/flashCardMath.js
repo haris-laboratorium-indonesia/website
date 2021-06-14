@@ -1,12 +1,12 @@
 import Image from "next/image";
-import MathTab from "../components/MathTab";
+import TabMath from "../components/TabMath";
 import What from "../components/What";
 import { Matriks } from "../lib/FlashCardMath";
 
 export default function flashCardMath() {
   return (
     <main>
-      <MathTab in="Card" to="flashCardPhy" />
+      <TabMath in="Card" to="flashCardPhy" />
 
       <div className="px-5 mb-5 text-2xl font-semibold lg:px-0">Matriks</div>
       <div className="flex p-5 space-x-5 overflow-x-auto sm:p-5 ">

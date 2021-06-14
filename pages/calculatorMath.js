@@ -1,4 +1,4 @@
-import MathTab from "../components/MathTab";
+import TabMath from "../components/TabMath";
 import What from "../components/What";
 export default function calculatorMath() {
   function tambah() {
@@ -9,7 +9,7 @@ export default function calculatorMath() {
   }
   return (
     <main  >
-      <MathTab in="Kalkulator" to="calculatorPhy" />
+      <TabMath in="Kalkulator" to="calculatorPhy" />
       <div>calculatorMath</div>
       <div className="flex flex-col w-1/3" name="calculator">
         <input className="bg-red-500" type="number" name="angka1" />

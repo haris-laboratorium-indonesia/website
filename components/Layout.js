@@ -11,17 +11,13 @@ export default function Layout({ children }) {
         <link rel="icon" href="/z.ico" />
       </Head>
 
-      {/* container-full*/}
-      <nav className="fixed top-0  z-50 w-full h-auto mx-auto border-b blur text-[#1D1D1F]">
-        {/* container-max-5xl */}
-        <nav className="w-full max-w-5xl py-0 mx-auto md:py-2.5">
-          {/* desktop navigation*/}
+      <nav className=" z-50 w-full  mx-auto border-b border-gray-400 blur text-[#1D1D1F] h-11">
+        <nav className="w-full max-w-5xl mx-auto">
           <DesktopNav />
-          {/* Mobile Navigation */}
           <MobileNav />
         </nav>
       </nav>
-      <section className="mt-16 w-full max-w-5xl  px-5 mx-auto xl:px-0 text-[#1D1D1F] min-h-screen">
+      <section className="w-full max-w-5xl mt-5  px-4 mx-auto xl:px-0 text-[#1D1D1F] min-h-screen">
         {children}
       </section>
       <Footer />

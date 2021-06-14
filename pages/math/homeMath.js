@@ -1,11 +1,11 @@
 import ChapterBox from "../../components/ChapterBox";
-import MathTab from "../../components/MathTab";
+import TabMath from "../../components/TabMath";
 import What from "../../components/What";
 
 export default function homeMath() {
   return (
     <main>
-      <MathTab in="Materi" to="/phy/homePhy" />
+      <TabMath in="Materi" to="/phy/homePhy" />
       <section className="grid grid-cols-1 divide-y divide-gray-200 sm:grid-cols-3 sm:divide-y-0">
         <ChapterBox title="Lingkaran" to="linear" />
         <ChapterBox title="Integral Tentu" to="linear" />
