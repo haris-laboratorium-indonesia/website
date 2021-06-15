@@ -70,14 +70,14 @@ export default function NavDesktop() {
                 <Link href="/blog">
                   <a className={lainnya}>Blog</a>
                 </Link>
-                <Link href="/bookingMe">
+                <Link href="/bookingLes">
                   <a className={lainnya}>Booking Les </a>
                 </Link>
 
                 <Link href="/merchandise">
                   <a className={lainnya}>Merchandise</a>
                 </Link>
-                <Link href="/merchandise">
+                <Link href="/portofolio">
                   <a className={lainnya}>Portofolio</a>
                 </Link>
               </Popover.Panel>

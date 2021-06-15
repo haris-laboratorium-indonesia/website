@@ -5,7 +5,7 @@ export default function ChapterBox({ to, title }) {
   return (
     <main>
       <Link href={to}>
-        <a className="flex items-center justify-between w-full px-0 py-3 sm:px-2 sm:py-1 sm:hover:bg-gray-100 sm:border sm:border-gray-300">
+        <a className="flex items-center justify-between w-full px-0 py-3 sm:px-2 sm:py-2 sm:hover:bg-gray-100 sm:hover:rounded-md">
           <div className="flex items-center sm:justify-between">
             <svg
               className="w-6 h-6 mr-1 text-red-500"

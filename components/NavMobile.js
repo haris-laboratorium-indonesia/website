@@ -207,12 +207,12 @@ export default function NavMobile() {
                     {({ active }) => (
                       <button className="w-full text-left text-gray-400 rounded-lg">
                         {active ? (
-                          <Link href="/bookingMe">
-                            <a>Booking Me!</a>
+                          <Link href="/bookingLes">
+                            <a>Booking Les</a>
                           </Link>
                         ) : (
-                          <Link href="/bookingMe">
-                            <a>Booking Me!</a>
+                          <Link href="/bookingLes">
+                            <a>Booking Les</a>
                           </Link>
                         )}
                       </button>
@@ -237,11 +237,11 @@ export default function NavMobile() {
                     {({ active }) => (
                       <button className="w-full text-left text-gray-400 rounded-lg">
                         {active ? (
-                          <Link href="/merchandise">
+                          <Link href="/login">
                             <a>Login</a>
                           </Link>
                         ) : (
-                          <Link href="/merchandise">
+                          <Link href="/login">
                             <a>Login</a>
                           </Link>
                         )}
@@ -252,11 +252,11 @@ export default function NavMobile() {
                     {({ active }) => (
                       <button className="w-full text-left text-gray-400 rounded-lg">
                         {active ? (
-                          <Link href="/merchandise">
+                          <Link href="/signUp">
                             <a>Daftar</a>
                           </Link>
                         ) : (
-                          <Link href="/merchandise">
+                          <Link href="/signup">
                             <a>Daftar</a>
                           </Link>
                         )}

@@ -1,25 +1,23 @@
 import Image from "next/image";
 import { HiOutlinePlusSm } from "react-icons/hi";
 import { HiOutlineShare } from "react-icons/hi";
-import { Kaoss } from "../lib/Kaoss";
-import { Posters } from "../lib/Posters";
-
+import { tshirts } from "../lib/tshirts";
+import { posters } from "../lib/posters";
+import Tab from "../components/Tab";
 export default function merchandise() {
   return (
-    <main  >
-      <section className="py-1 my-5 text-2xl font-semibold sm:text-3xl">
-        Merchandise
-      </section>
+    <main>
+      <Tab page="Merchandise" />
       <div className="mb-5 text-4xl font-semibold ">Kaos</div>
       <div className="grid grid-cols-2 gap-10 my-5 sm:grid-cols-4 md:grid-cols-4 gap-y-10 sm:gap-x-10">
-        {Kaoss.map((kaos) => (
-          <div key={kaos.id}>
+        {tshirts.map((a) => (
+          <div key={a.id}>
             <div className="w-4/5 mb-2 text-sm font-light truncate sm:text-sm">
-              {kaos.judul}
+              {a.judul}
             </div>
             <Image
               className="rounded-md"
-              src={kaos.image}
+              src={a.image}
               width="1000px"
               height="1000px"
               layout="intrinsic"
@@ -43,14 +41,14 @@ export default function merchandise() {
       </div>
       <div className="mt-20 mb-5 text-4xl font-semibold">Poster</div>
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
-        {Posters.map((poster) => (
-          <div key={poster.id}>
+        {posters.map((p) => (
+          <div key={p.id}>
             <div className="w-4/5 mb-2 text-xs font-light truncate sm:text-sm">
-              {poster.judul}
+              {p.judul}
             </div>
             <Image
               className="rounded-md"
-              src={poster.image}
+              src={p.image}
               width="1280px"
               height="960px"
               layout="intrinsic"

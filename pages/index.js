@@ -2,8 +2,8 @@ import Link from "next/link";
 import FAQ from "../components/FAQ";
 import { weCareAbouts } from "../lib/weCareAbouts";
 import { FAQs } from "../lib/FAQs";
-import WeCareAbout from "../components/WeCareAbout";
-import { sendInformation } from "../lib/sendInformation";
+import InfoBox from "../components/InfoBox";
+import { sendInformations } from "../lib/sendInformations";
 
 export default function Home() {
   const td = " text-left text-sm p-2";
@@ -13,7 +13,7 @@ export default function Home() {
       {/* Hero */}
       <section className="flex justify-center">
         <section className="grid grid-cols-1 gap-5 mx-auto">
-          <article className="w-full lg:px-0 sm:py-10 font-inter ">
+          <article className="w-full py-10 lg:px-0 font-inter ">
             <div className="text-4xl font-bold text-center sm:text-6xl font-mw">
               Laboratorium
             </div>
@@ -42,8 +42,8 @@ export default function Home() {
           Cara kami menyajikan informasi
         </header>
         <section className="grid grid-cols-1 gap-10 mx-auto sm:grid-cols-3 md:grid-cols-4 ">
-          {sendInformation.map((a) => (
-            <WeCareAbout
+          {sendInformations.map((a) => (
+            <InfoBox
               key={a.id}
               svg={a.svg}
               name={a.title}
@@ -60,7 +60,7 @@ export default function Home() {
         </header>
         <section className="grid grid-cols-1 gap-10 mx-auto sm:grid-cols-3 md:grid-cols-4 ">
           {weCareAbouts.map((a) => (
-            <WeCareAbout
+            <InfoBox
               key={a.id}
               svg={a.svg}
               name={a.title}
@@ -125,7 +125,7 @@ export default function Home() {
       {/* FAQ */}
       <div className="py-10 ">
         <header className="py-3 mx-auto my-10 text-center ">FAQ</header>
-        <section className="grid grid-cols-1 gap-5 mx-auto sm:gap-5 lg:px-0 ">
+        <section className="grid grid-cols-1 gap-5 mx-auto sm:grid-cols-2 sm:gap-5 ">
           {FAQs.map((FAQs) => (
             <div key={FAQs.id}>
               <FAQ button={FAQs.button} panel={FAQs.panel} />

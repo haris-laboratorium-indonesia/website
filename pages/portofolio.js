@@ -1,9 +1,8 @@
+import Tab from "../components/Tab";
 export default function portofolio() {
   return (
-    <main  >
-      <section className="py-1 my-5 text-2xl font-semibold sm:text-3xl">
-        Portofolio
-      </section>
+    <main>
+      <Tab page="Portofolio" />
       <section className="space-y-5">
         <article className="w-full sm:w-1/3 font-medium px-4 py-2  text-center border-2 rounded-md border-[#5E725B] bg-[#5E725B] hover:bg-white text-white hover:text-[#5E725B]">
           <a href="https://www.aka-tradingindo.com/" target="_blank">

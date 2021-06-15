@@ -1,4 +1,4 @@
-export default function WeCareAbout({ id, svg, name, description }) {
+export default function InfoBox({ id, svg, name, description }) {
   return (
     <div key={id}>
       {/* icon */}

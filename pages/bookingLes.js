@@ -1,8 +1,8 @@
 import Tab from "../components/Tab";
-export default function blog() {
+export default function bookingLes() {
   return (
     <main>
-      <Tab page="Blog" />
+      <Tab page="Booking Les" />
     </main>
   );
 }

@@ -5,7 +5,7 @@ export default function Footer() {
     "block text-sm text-gray-400 hover:underline hover:text-white hover:underline";
   return (
     <footer className="bottom-0 w-full text-center bg-gray-800 ">
-      <section className="flex flex-col max-w-5xl p-5 mx-auto space-y-10 text-left sm:flex-row sm:space-y-0 xl:px-0">
+      <section className="flex flex-col max-w-5xl px-5 py-10 mx-auto mt-10 space-y-10 text-left sm:flex-row sm:space-y-0 xl:px-0">
         {/* Footer Navigation */}
         <article className="flex w-full sm:w-1/2">
           <div className="w-full space-y-2 sm:w-1/2">
@@ -14,11 +14,21 @@ export default function Footer() {
             <Link href="/math/homeMath">
               <a className={navigation}>Belajar</a>
             </Link>
+            <Link href="/flashCardMath">
+              <a className={navigation}>FlashCard</a>
+            </Link>
             <Link href="/calculatorMath">
               <a className={navigation}>Kalkulator</a>
             </Link>
-            <Link href="/flashCardMath">
-              <a className={navigation}>Kartu</a>
+
+            <Link href="/animationMath">
+              <a className={navigation}>Animasi</a>
+            </Link>
+            <Link href="/scanMath">
+              <a className={navigation}>Scan Soal</a>
+            </Link>
+            <Link href="/gamesMath">
+              <a className={navigation}>Games</a>
             </Link>
           </div>
 
