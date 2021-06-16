@@ -7,7 +7,7 @@ import { sendInformations } from "../lib/sendInformations";
 
 export default function Home() {
   const td = " text-left text-sm p-2";
-  const th = "p-2 text-left text-base font-medium text-blue-500 bg-blue-50"
+  const th = "p-2 text-left text-base font-medium text-blue-500 bg-blue-50";
   return (
     <main className="">
       {/* Hero */}
@@ -77,7 +77,7 @@ export default function Home() {
         </header>
         <section className="mx-auto overflow-x-auto sm:gap-5 lg:px-0">
           <table className="w-full border border-blue-300">
-            <thead >
+            <thead>
               <tr className="divide-x divide-blue-300 ">
                 <th className={th}>VS</th>
                 <th className={th}>HarisLab</th>
@@ -106,9 +106,7 @@ export default function Home() {
                 <td className={td}>Aman</td>
                 <td className={td}>Aman</td>
                 <td className={td}>Aman</td>
-                <td className={td}>
-                  Mudah rusak jika terkena air dan tekanan
-                </td>
+                <td className={td}>Mudah rusak jika terkena air dan tekanan</td>
               </tr>
               <tr className="divide-x divide-blue-300">
                 <td className={td}>Mobilitas</td>
@@ -124,8 +122,10 @@ export default function Home() {
 
       {/* FAQ */}
       <div className="py-10 ">
-        <header className="py-3 mx-auto my-10 text-center ">FAQ</header>
-        <section className="grid grid-cols-1 gap-5 mx-auto sm:grid-cols-2 sm:gap-5 ">
+        <header className="py-3 mx-auto my-10 text-center ">
+          Frequently Asked Questions
+        </header>
+        <section className="grid max-w-xl grid-cols-1 gap-5 mx-auto ">
           {FAQs.map((FAQs) => (
             <div key={FAQs.id}>
               <FAQ button={FAQs.button} panel={FAQs.panel} />

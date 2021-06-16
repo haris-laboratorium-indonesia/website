@@ -7,7 +7,7 @@ const NavMobile = () => {
       {/* HarisLab */}
       <nav className="block w-3/4 ">
         <Link href="/">
-          <a className="block w-full py-3 pl-5 text-lg font-semibold font-mw">
+          <a className="block w-full py-3 pl-5 text-xl font-semibold font-mw">
             <span>Haris</span>
             <span className="font-light">Lab</span>
           </a>
@@ -22,7 +22,7 @@ const NavMobile = () => {
               {open ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-7 h-7"
+                  className="w-8 h-8"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -37,7 +37,7 @@ const NavMobile = () => {
               ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-7 h-7"
+                  className="h-8 w-7"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -52,7 +52,7 @@ const NavMobile = () => {
               )}
             </Menu.Button>
 
-            <Menu.Items className="absolute z-50 right-0 w-full p-5 origin-top-right bg-gray-800 mt-[52px] h-full">
+            <Menu.Items className="absolute right-0 z-50 w-full p-5 origin-top-right bg-gray-800 mt-14">
               {/* Search */}
               <section className="mb-5  flex items-center  p-1.5 rounded-lg bg-gray-700  ">
                 <svg

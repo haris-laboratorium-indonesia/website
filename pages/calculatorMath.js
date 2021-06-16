@@ -1,6 +1,7 @@
 import TabMath from "../components/TabMath";
 import What from "../components/What";
-export default function calculatorMath() {
+
+const calculatorMath = () => {
   function tambah() {
     let angka1 = parseFloat(document.calculator.angka1.value);
     let angka2 = parseFloat(document.calculator.angka2.value);
@@ -8,8 +9,12 @@ export default function calculatorMath() {
     return (document.calculator.hasil.value = hasil);
   }
   return (
-    <main  >
-      <TabMath page="Kalkulator" to="calculatorPhy" textColor="text-green-500"/>
+    <main>
+      <TabMath
+        page="Kalkulator"
+        to="calculatorPhy"
+        textColor="text-green-500"
+      />
       <div>calculatorMath</div>
       <div className="flex flex-col w-1/3" name="calculator">
         <input className="bg-red-500" type="number" name="angka1" />
@@ -28,4 +33,6 @@ export default function calculatorMath() {
       />
     </main>
   );
-}
+};
+
+export default calculatorMath;

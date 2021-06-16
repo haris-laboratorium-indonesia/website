@@ -1,8 +1,10 @@
 import Tab from "../components/Tab";
-export default function bookingLes() {
+const bookingLes = () => {
   return (
     <main>
       <Tab page="Booking Les" />
     </main>
   );
-}
+};
+
+export default bookingLes;

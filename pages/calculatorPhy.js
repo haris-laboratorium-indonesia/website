@@ -1,14 +1,20 @@
 import TabPhy from "../components/TabPhy";
 import What from "../components/What";
 
-export default function calculatorPhy() {
+const calculatorPhy = () => {
   return (
-    <main  >
-      <TabPhy page="Kalkulator" to="calculatorMath" textColor="text-green-500" />
+    <main>
+      <TabPhy
+        page="Kalkulator"
+        to="calculatorMath"
+        textColor="text-green-500"
+      />
       <What
         title="Apa itu Kalkulator Fisika di HarisLab ?"
         description="Kalkulator Fisika di HarisLab adalah tempat untuk menghitung nilai dari sebuah rumus, jadi kamu sebagai siswa atau siapapun yang butuh untuk menghitung perhitungan yang melibatkan rumus fisika tingkat SMA tidak perlu menulis panjang-panjang di kertas, semua cara sudah kami masukkan dalam mesin kalkulator kami, kamu tinggal memasukkan nilai yang ingin kalian hitung. Ini mempercepat work flow kalian, luangkan waktu lebih banyak untuk menyelesaikan masalah dan memahaminya daripada menghitung yang bisa dilakukan oleh mesin."
       />
     </main>
   );
-}
+};
+
+export default calculatorPhy;

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const TabMath = ({ page, to, textColor }) => {
   return (
-    <main className="sticky top-0 z-40 flex flex-row items-center justify-between w-full h-auto py-1 mb-5 bg-white">
+    <main className="sticky top-0 z-40 flex flex-row items-center justify-between w-full h-auto pt-5 pb-1 mb-5 bg-white">
       <section className={`${textColor} text-2xl font-semibold`}>
         {page}
       </section>

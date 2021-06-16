@@ -3,7 +3,7 @@ import TabMath from "../components/TabMath";
 import What from "../components/What";
 import { Matriks } from "../lib/FlashCardMath";
 
-export default function flashCardMath() {
+const flashCardMath = () => {
   return (
     <main>
       <TabMath page="Card" to="flashCardPhy" textColor="text-yellow-500" />
@@ -35,4 +35,6 @@ export default function flashCardMath() {
       </div>
     </main>
   );
-}
+};
+
+export default flashCardMath;

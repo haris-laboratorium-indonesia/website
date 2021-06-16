@@ -18,6 +18,7 @@ const merchandise = () => {
             </div>
             <Image
               className="rounded-md"
+              alt="Foto Baju"
               src={a.image}
               width="1000px"
               height="1000px"

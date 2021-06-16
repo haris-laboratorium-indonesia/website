@@ -39,7 +39,7 @@ const Footer = () => {
               <a className={navigation}>Portofolio</a>
             </Link>
 
-            <Link href="/bookingMe">
+            <Link href="/bookingLes">
               <a className={navigation}>Booking Les</a>
             </Link>
             <Link href="/merchandise">
@@ -62,6 +62,8 @@ const Footer = () => {
           <div className="mt-2 sm:text-sm">
             Pondok Kacang Timur, Tangerang Selatan, Banten 15226, Indonesia
           </div>
+          <div className="mt-2 sm:text-sm">harislabindonesia@gmail.com</div>
+
           <div className="flex flex-col w-full mt-10 sm:text-sm sm:flex-row">
             <div>
               Copyright &copy;2021 Haris

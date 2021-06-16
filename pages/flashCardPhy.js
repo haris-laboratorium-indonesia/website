@@ -1,7 +1,7 @@
 import TabPhy from "../components/TabPhy";
 import What from "../components/What";
 
-export default function flashCardPhy() {
+const flashCardPhy = () => {
   return (
     <main>
       <TabPhy page="Card" to="flashCardMath" textColor="text-yellow-500 " />
@@ -14,4 +14,5 @@ export default function flashCardPhy() {
       />
     </main>
   );
-}
+};
+export default flashCardPhy;
