@@ -4,7 +4,8 @@ import { HiOutlineShare } from "react-icons/hi";
 import { tshirts } from "../lib/tshirts";
 import { posters } from "../lib/posters";
 import Tab from "../components/Tab";
-export default function merchandise() {
+
+const merchandise = () => {
   return (
     <main>
       <Tab page="Merchandise" />
@@ -72,4 +73,6 @@ export default function merchandise() {
       </div>
     </main>
   );
-}
+};
+
+export default merchandise;

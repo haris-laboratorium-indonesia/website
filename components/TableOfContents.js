@@ -1,5 +1,6 @@
 import { Menu } from "@headlessui/react";
-export default function TableOfContents() {
+
+const TableOfContents = () => {
   return (
     <Menu
       as="div"
@@ -13,39 +14,7 @@ export default function TableOfContents() {
             </div>
             <Menu.Button className="focus:outline-none px-2 py-1 space-x-1 rounded-md flex justify-between items-center border border-[#D1D1DB] bg-[#F2F2F7]">
               <div className="text-xs">Daftar Isi</div>
-              <div>
-                {open ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-5 h-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1}
-                      d="M5 15l7-7 7 7"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-5 h-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                )}
-              </div>
+              <div>{open ? <ChevronDown /> : <ChevronUp />}</div>
             </Menu.Button>
           </div>
           <Menu.Items className="max-w-5xl space-y-2 bg-[#F2F5F7] text-sm right-0 w-full p-2 rounded  mt-1 origin-top-right border border-[#D1D1DB]  ">
@@ -94,4 +63,42 @@ export default function TableOfContents() {
       )}
     </Menu>
   );
-}
+};
+
+const ChevronDown = (props) => {
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-5 h-5"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    {...props}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1}
+      d="M5 15l7-7 7 7"
+    />
+  </svg>;
+};
+
+const ChevronUp = (props) => {
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-5 h-5"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    {...props}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1}
+      d="M19 9l-7 7-7-7"
+    />
+  </svg>;
+};
+
+export default TableOfContents;

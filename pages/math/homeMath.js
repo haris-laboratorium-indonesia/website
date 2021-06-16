@@ -2,10 +2,10 @@ import ChapterBox from "../../components/ChapterBox";
 import TabMath from "../../components/TabMath";
 import What from "../../components/What";
 
-export default function homeMath() {
+const homeMath = () => {
   return (
     <main>
-      <TabMath page="Materi" to="/phy/homePhy" textColor="text-red-500"/>
+      <TabMath page="Materi" to="/phy/homePhy" textColor="text-red-500" />
       <section className="grid grid-cols-1 divide-y divide-gray-200 sm:grid-cols-3 sm:divide-y-0 ">
         <ChapterBox title="Lingkaran" to="linear" />
         <ChapterBox title="Integral Tentu" to="linear" />
@@ -141,4 +141,6 @@ export default function homeMath() {
       impedit natus iusto laborum, voluptatibus sequi ex.{" "}
     </main>
   );
-}
+};
+
+export default homeMath;

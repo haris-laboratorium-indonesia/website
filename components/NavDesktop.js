@@ -1,18 +1,22 @@
 import Link from "next/link";
 import { Popover } from "@headlessui/react";
 import { HiOutlineChevronDown } from "react-icons/hi";
-export default function NavDesktop() {
+
+const NavDesktop = () => {
   const nav =
     "px-2.5 py-1 text-sm rounded-md transition duration-200 text-gray-800 ";
   const lainnya = "hover:bg-gray-50 py-1 px-2.5 text-sm";
   return (
     <nav className="hidden md:block">
       <nav className="flex flex-row items-center justify-between w-full px-5 py-4 md:flex xl:px-0 ">
+        {/* Logo */}
         <Link href="/">
           <a className="flex flex-row items-center text-lg font-semibold font-mw ">
             Haris<span className="font-light">Lab</span>
           </a>
         </Link>
+
+        {/* Desktop Link */}
         <Link href="/math/homeMath">
           <a
             className={`${nav} hover:bg-red-50 hover:text-red-700 border border-white hover:border-red-300`}
@@ -56,6 +60,7 @@ export default function NavDesktop() {
           </a>
         </Link>
 
+        {/* Lainnya */}
         <Popover className="relative">
           {({ open }) => (
             <>
@@ -85,6 +90,7 @@ export default function NavDesktop() {
           )}
         </Popover>
 
+        {/* Login Link */}
         <Link href="/signUp">
           <a className="text-xs rounded-md text-white bg-gray-800 hover:bg-opacity-90  px-3 py-1.5">
             Login
@@ -93,4 +99,6 @@ export default function NavDesktop() {
       </nav>
     </nav>
   );
-}
+};
+
+export default NavDesktop;

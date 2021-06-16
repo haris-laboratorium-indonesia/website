@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Footer() {
+const Footer = () => {
   const navigation =
     "block text-sm text-gray-400 hover:underline hover:text-white hover:underline";
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Footer Navigation */}
         <article className="flex w-full sm:w-1/2">
           <div className="w-full space-y-2 sm:w-1/2">
-            {/* Alat */}
+            {/* ALAT */}
             <div className="text-sm text-white">ALAT</div>
             <Link href="/math/homeMath">
               <a className={navigation}>Belajar</a>
@@ -32,7 +32,7 @@ export default function Footer() {
             </Link>
           </div>
 
-          {/* Lainnya */}
+          {/* LAINNYA */}
           <div className="w-full space-y-2 sm:w-1/2">
             <div className="text-sm text-white ">LAINNYA</div>
             <Link href="/portofolio">
@@ -82,6 +82,6 @@ export default function Footer() {
       </section>
     </footer>
   );
-}
+};
 
-// komponen ini ada di Layout.js
+export default Footer;

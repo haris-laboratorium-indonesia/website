@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Menu } from "@headlessui/react";
 
-export default function NavMobile() {
+const NavMobile = () => {
   return (
     <nav className="z-20 flex items-center justify-between md:hidden">
       {/* HarisLab */}
@@ -271,4 +271,6 @@ export default function NavMobile() {
       </Menu>
     </nav>
   );
-}
+};
+
+export default NavMobile;

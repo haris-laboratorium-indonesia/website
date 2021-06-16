@@ -1,7 +1,7 @@
-export default function InfoBox({ id, svg, name, description }) {
+const InfoBox = ({ id, svg, name, description }) => {
   return (
     <div key={id}>
-      {/* icon */}
+      {/* Icon */}
       <div className="pl-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -27,4 +27,6 @@ export default function InfoBox({ id, svg, name, description }) {
       <div className="pl-3 text-gray-700">{description}</div>
     </div>
   );
-}
+};
+
+export default InfoBox;

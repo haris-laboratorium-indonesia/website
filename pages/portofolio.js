@@ -1,5 +1,6 @@
 import Tab from "../components/Tab";
-export default function portofolio() {
+
+const portofolio = () => {
   return (
     <main>
       <Tab page="Portofolio" />
@@ -17,4 +18,6 @@ export default function portofolio() {
       </section>
     </main>
   );
-}
+};
+
+export default portofolio;

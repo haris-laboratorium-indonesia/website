@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { HiOutlineChevronRight } from "react-icons/hi";
 
-export default function ChapterBox({ to, title }) {
+const ChapterBox = ({ to, title }) => {
   return (
     <main>
       <Link href={to}>
@@ -43,6 +42,8 @@ export default function ChapterBox({ to, title }) {
       </Link>
     </main>
   );
-}
+};
+
+export default ChapterBox;
 
 // komponen ini ada di homeMath.js, homePhy.js

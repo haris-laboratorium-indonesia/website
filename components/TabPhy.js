@@ -1,5 +1,5 @@
 import Link from "next/link";
-export default function TabPhy({ page, to, textColor }) {
+const TabPhy = ({ page, to, textColor }) => {
   return (
     <main className="sticky top-0 z-40 flex flex-row items-center justify-between w-full h-auto py-1 mb-5 bg-white ">
       <section className={`${textColor} text-2xl font-semibold`}>
@@ -19,6 +19,8 @@ export default function TabPhy({ page, to, textColor }) {
       </section>
     </main>
   );
-}
+};
+
+export default TabPhy;
 
 // komponen ini ada di halaman homePhy.js, cardPhy.js,calculatorPhy.js, animationPhy.jsscanPhy.js, gamesPhy.js

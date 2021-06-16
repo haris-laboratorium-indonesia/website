@@ -1,5 +1,6 @@
 import Link from "next/link";
-export default function TabMath({ page, to, textColor }) {
+
+const TabMath = ({ page, to, textColor }) => {
   return (
     <main className="sticky top-0 z-40 flex flex-row items-center justify-between w-full h-auto py-1 mb-5 bg-white">
       <section className={`${textColor} text-2xl font-semibold`}>
@@ -19,5 +20,7 @@ export default function TabMath({ page, to, textColor }) {
       </section>
     </main>
   );
-}
+};
+
+export default TabMath;
 // komponen ini ada di halaman homeMath.js,  cardMath.js,  calculatorMath.js, animationMath.js, , scanMath.js, , gamesMath.js,
