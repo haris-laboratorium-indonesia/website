@@ -24,13 +24,13 @@ module.exports = {
       },
 
       backgroundImage: (theme) => ({
-        "landing-page": "url('/monterey.jpg')",
+        "landing-page": "url('/monterey-light.jpg')",
+        
       }),
       colors: {
         blue: {
           harislab: "#007AFF",
         },
-        // black: "#1D1D1F",
       },
     },
   },

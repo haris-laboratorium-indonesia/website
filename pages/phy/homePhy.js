@@ -5,11 +5,11 @@ import What from "../../components/What";
 export default function homePhy() {
   return (
     <main>
-      <TabPhy page="Materi" to="/math/homeMath" textColor="text-red-600" />
+      <TabPhy page="Materi" to="/math/homeMath" textColor="text-rose-500" />
       <section className="grid grid-cols-1 divide-y divide-gray-200 sm:grid-cols-3 sm:divide-y-0 ">
         <ChapterBox title="Fluida Statis" to="fluida" />
         <ChapterBox title="Fluida Dinamis" to="fluidaDinamis" />
-        <ChapterBox title="Termodinamika" to="fluida" />
+        <ChapterBox title="Termodinamika" to="termodinamika" />
         <ChapterBox title="Gelombang Mekanik" to="fluida" />
         <ChapterBox title="Gelombang Elektromagnetik" to="fluida" />
         <ChapterBox title="Kinematika" to="fluida" />

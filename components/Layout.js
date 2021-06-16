@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <main className="font-inter">
       <Head>
         <title>HarisLab</title>
-        <link rel="icon" href="/h.ico" />
+        <link rel="icon" href="/hahaha.ico" />
         <meta
           name="description"
           content="Tempat untuk belajar matematika dan fisika sebagaimana mereka seharusnya dipelajari."

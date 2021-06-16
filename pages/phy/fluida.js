@@ -1,6 +1,6 @@
 export default function fluida() {
   const td = " text-left text-sm p-2";
-  const th = "p-2 text-left text-base font-medium text-red-500 bg-red-50";
+  const th = "p-2 text-left text-base font-medium text-rose-500 bg-rose-50";
   return (
     <main className="grid grid-cols-1 gap-4 md:grid-cols-4 ">
       <div className="space-y-10 md:col-span-3">
@@ -35,9 +35,9 @@ export default function fluida() {
           </h1>
 
           <section className="mx-auto overflow-x-auto sm:gap-5 lg:px-0">
-            <table className="w-full border border-red-300">
+            <table className="w-full border border-rose-300">
               <thead>
-                <tr className="divide-x divide-red-300 ">
+                <tr className="divide-x divide-rose-300 ">
                   <th className={th}>Nama</th>
                   <th className={th}>Satuan</th>
                   <th className={th}>Simbol</th>
@@ -45,29 +45,29 @@ export default function fluida() {
                   
                 </tr>
               </thead>
-              <tbody className="divide-y divide-red-300">
-                <tr className="divide-x divide-red-300">
+              <tbody className="divide-y divide-rose-300">
+                <tr className="divide-x divide-rose-300">
                   <td className={td}>Harga</td>
                   <td className={td}>25rb/bln</td>
                   <td className={td}>50rb/bln</td>
                   <td className={td}>80rb/bln</td>
                   
                 </tr>
-                <tr className="divide-x divide-red-300">
+                <tr className="divide-x divide-rose-300">
                   <td className={td}>Update Informasi</td>
                   <td className={td}>Selalu Update</td>
                   <td className={td}>Selalu Update</td>
                   <td className={td}>Selalu Update</td>
                   
                 </tr>
-                <tr className="divide-x divide-red-300">
+                <tr className="divide-x divide-rose-300">
                   <td className={td}>Durabilitas</td>
                   <td className={td}>Aman</td>
                   <td className={td}>Aman</td>
                   <td className={td}>Aman</td>
                   
                 </tr>
-                <tr className="divide-x divide-red-300">
+                <tr className="divide-x divide-rose-300">
                   <td className={td}>Mobilitas</td>
                   <td className={td}>Mudah dibawa</td>
                   <td className={td}>Mudah dibawa</td>

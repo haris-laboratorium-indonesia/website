@@ -11,30 +11,49 @@ export default function Home() {
   return (
     <main className="">
       {/* Hero */}
-      <section className="flex justify-center">
-        <section className="grid grid-cols-1 gap-5 mx-auto">
-          <article className="w-full py-10 lg:px-0 font-inter ">
-            <div className="text-4xl font-bold text-center sm:text-6xl font-mw">
-              Laboratorium
-            </div>
-            <div className="text-4xl font-bold text-center text-blue-400 sm:text-6xl font-mw">
-              untuk Pelajar
-            </div>
-            <p className="mt-5 leading-tight text-center ">
-              Materi FisMat, Flash Card, Kalkulator, Animasi, Scan soal, Games,
-              Booking Les.
-            </p>
 
-            <div className="flex justify-center mt-5 ">
-              <Link href="/signUp">
-                <a className="rounded-lg text-center  w-5/6 sm:w-1/2  py-3 sm:py-2.5 bg-blue-harislab text-white  shadow-md hover:shadow-none hover:bg-opacity-80">
-                  Mulai Sekarang
-                </a>
-              </Link>
+      <article className="relative w-full -mt-5 py-14 lg:px-0 font-inter ">
+        <div className="text-4xl font-bold text-center text-black sm:text-6xl font-mw">
+          Laboratorium
+        </div>
+        <div className="text-4xl font-bold text-center text-blue-500 sm:text-6xl font-mw">
+          untuk Pelajar
+        </div>
+        <p className="mt-5 leading-tight text-center text-black">
+          Materi FisMat, Flash Card, Kalkulator, Animasi, Scan soal, Games,
+          Booking Les.
+        </p>
+        <div className="flex justify-center mt-5 ">
+          <Link href="/signUp">
+            <a className="rounded-lg text-center w-1/2 sm:w-1/6  py-3 sm:py-2.5 bg-blue-harislab text-white  shadow-md hover:shadow-none hover:bg-opacity-80">
+              Mulai Sekarang
+            </a>
+          </Link>
+        </div>
+      </article>
+
+      {/* <div className="relative shadow-inner mt-14">
+        <Image
+          src="/monterey-light.jpg"
+          layout="fill"
+          className="absolute inset-0 object-cover w-full h-64 bg-opacity-50"
+        />
+        <div className="relative max-w-5xl py-5 mx-auto ">
+          <div className="w-full px-8 py-10 lg:py-14 lg:pl-0 sm:max-w-3xl ">
+            <div className="mb-4 text-3xl font-bold text-center text-white bg-black bg-opacity-30 md:text-5xl md:text-left title-font">
+              <p className="block leading-normal font-EBGaramond">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
+                sapiente.
+              </p>
             </div>
-          </article>
-        </section>
-      </section>
+            <div className="mb-2 leading-relaxed text-center text-white md:text-left"></div>
+            <div className="text-center text-white border-b border-white md:text-left"></div>
+            <p className="block text-lg text-center text-white bg-black bg-opacity-30 md:text-left font-EBGaramond">
+              Lorem ipsum dolor sit.
+            </p>
+          </div>
+        </div>
+      </div> */}
 
       {/* Cara kami menyajikan informasi */}
       <div className="py-10 ">
