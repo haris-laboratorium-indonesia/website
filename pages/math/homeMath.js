@@ -5,7 +5,7 @@ import What from "../../components/What";
 const homeMath = () => {
   return (
     <main>
-      <TabMath page="Materi" to="/phy/homePhy" textColor="text-red-500" />
+      <TabMath page="Materi" to="/phy/homePhy" textColor="text-rose-500" />
       <section className="grid grid-cols-1 divide-y divide-gray-200 sm:grid-cols-3 sm:divide-y-0 ">
         <ChapterBox title="Lingkaran" to="linear" />
         <ChapterBox title="Integral Tentu" to="linear" />

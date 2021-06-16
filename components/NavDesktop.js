@@ -19,7 +19,7 @@ const NavDesktop = () => {
         {/* Desktop Link */}
         <Link href="/math/homeMath">
           <a
-            className={`${nav} hover:bg-red-50 hover:text-red-700 border border-white hover:border-red-300`}
+            className={`${nav} hover:bg-rose-50 hover:text-rose-700 border border-white hover:border-rose-300`}
           >
             Materi
           </a>

@@ -7,7 +7,7 @@ const ChapterBox = ({ to, title }) => {
         <a className="flex items-center justify-between w-full px-0 py-3 sm:px-2 sm:py-2 sm:hover:bg-gray-100 sm:hover:rounded-md">
           <div className="flex items-center sm:justify-between">
             <svg
-              className="w-6 h-6 mr-1 text-red-500"
+              className="w-6 h-6 mr-1 text-rose-500"
               viewBox="0 0 24 24"
               width="24"
               height="24"
