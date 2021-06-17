@@ -1,37 +1,39 @@
 import Image from "next/image";
-
-const Judul = ({ children }) => {
-  return <h1 className="text-xl">{children}</h1>;
-};
+import ChapterLayout from "../../components/ChapterLayout";
+import katex from "katex";
 
 export default function fluida() {
   const td = " text-left text-sm p-2";
   const th = "p-2 text-left text-base font-medium text-rose-500 bg-rose-50";
   return (
-    <main className="grid grid-cols-1 gap-4 md:grid-cols-4 ">
-      <Judul>Termodinamika</Judul>
-      <div className="space-y-10 md:col-span-3">
-        <div className="prose">
+    <ChapterLayout title="Termodinamika" description="Materi Termodinamika SMA">
+      <div className=" sm:col-span-1">
+        <div className="sticky p-2 space-y-2 border border-gray-300 rounded-md top-5">
+          <div className="font-semibold">Termodinamika</div>
+          <div>Pengenalan</div>
+          <div>Variabel</div>
+          <div>Rumus</div>
+          <div>Penurunan Rumus </div>
+          <div>Contoh Soal</div>
+        </div>
+      </div>
+      <div className="sm:col-span-3">
+        <div>
           <h1
             id="Pengenalan"
             className="z-10 py-2 text-xl font-semibold bg-white rounded-md sm:text-2xl"
           >
             Pengenalan
           </h1>
-          <Image
-            src="/monterey-dark.jpg"
-            alt="MacOS Monteret Light Wallpaper"
-            width={6008}
-            height={3379}
-            priority
-          />
-          <Image
-            src="/monterey-light.jpg"
-            alt="MacOS Monteret Light Wallpaper"
-            width={6008}
-            height={3379}
-            priority
-          />
+          <div className="w-full overflow-hidden rounded-lg">
+            <Image
+              src="/monterey-dark.jpg"
+              alt="MacOS Monteret Light Wallpaper"
+              width={6008}
+              height={3379}
+              priority
+            />
+          </div>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim
           provident tenetur? Earum voluptas, rerum aliquid corporis, sit
           veritatis laborum aut eum sed saepe natus esse quas expedita animi!
@@ -191,6 +193,6 @@ export default function fluida() {
           </p>
         </div>
       </div>
-    </main>
+    </ChapterLayout>
   );
 }

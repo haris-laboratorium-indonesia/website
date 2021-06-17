@@ -48,13 +48,20 @@ const Footer = () => {
             <Link href="/blog">
               <a className={navigation}>Blog</a>
             </Link>
+            <Link href="/">
+              <a className={navigation}>Beranda</a>
+            </Link>
           </div>
         </article>
 
         {/* Company Identity */}
         <article className="w-full pt-10 text-xs text-gray-500 border-t border-gray-500 sm:border-0 sm:pt-0 sm:w-1/2">
           <div className="text-2xl text-white font-mw">
-            Haris<span className="font-light text-gray-400">Lab</span>
+            <Link href="/">
+              <a>
+                Haris<span className="font-light text-gray-400">Lab</span>
+              </a>
+            </Link>
           </div>
           <div className="mt-2 sm:text-sm">
             PT. Haris Laboratorium Indonesia
