@@ -12,7 +12,7 @@ const Beranda = () => {
     <main className="">
       {/* Hero */}
 
-      <article className="relative w-full py-10 -mt-5 lg:px-0 font-inter ">
+      <article className="relative w-full py-10 -mt-5 lg:py-16 lg:px-0 font-inter ">
         <div className="text-4xl font-bold text-center text-black sm:text-6xl ">
           Laboratorium
         </div>

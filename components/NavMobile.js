@@ -2,11 +2,11 @@ import Link from "next/link";
 import { Menu } from "@headlessui/react";
 const NavMobile = () => {
   return (
-    <nav className="z-20 flex items-center p-1 jus roundedtify-between md:hidden">
+    <nav className="z-20 flex items-center justify-between md:hidden">
       {/* HarisLab */}
-      <nav className="block w-3/4 ">
+      <nav className="block ">
         <Link href="/">
-          <a className="block w-full py-3 pl-5 text-xl font-semibold ">
+          <a className="block w-full py-2.5 px-5 text-xl font-semibold ">
             <span>Haris</span>
             <span className="font-light">Lab</span>
           </a>
@@ -14,14 +14,14 @@ const NavMobile = () => {
       </nav>
 
       {/* Menu */}
-      <Menu as="div" className="static flex justify-end w-1/4 ">
+      <Menu as="div" className="static flex justify-end ">
         {({ open }) => (
           <>
-            <Menu.Button className="z-50 flex justify-end w-full py-3 pr-5 focus:outline-none">
+            <Menu.Button className="z-50 flex justify-end w-full py-2.5 px-5 focus:outline-none">
               {open ? <X /> : <HamburgerMenu />}
             </Menu.Button>
 
-            <Menu.Items className="absolute right-0 z-50 w-full p-5 origin-top-right bg-gray-100 shadow-inner mt-14">
+            <Menu.Items className="border-b border-black absolute right-0 z-50 w-full p-5 mt-[52px] origin-top-right bg-gray-100 shadow-inner">
               {/* Search */}
               <section className="mb-5  flex items-center   p-1.5 rounded-lg bg-gray-200 border-[1.4px] border-gray-200 focus-within:border-black ">
                 <SearchIcon />
@@ -34,7 +34,7 @@ const NavMobile = () => {
 
               <section className="grid grid-cols-2 gap-2 pt-5 border-t border-gray-500">
                 {/* Lainnya */}
-                <div className="flex flex-col space-y-3 ">
+                <div className="flex flex-col space-y-2 ">
                   <div className="text-xs text-gray-600">LAINNYA</div>
                   <Menu.Item>
                     {({ active }) => (
@@ -144,7 +144,7 @@ const NavMobile = () => {
                 </div>
 
                 {/* Alat */}
-                <div className="flex flex-col space-y-3 ">
+                <div className="flex flex-col space-y-2 ">
                   <div className="text-xs text-gray-600">ALAT</div>
                   <Menu.Item>
                     {({ active }) => (

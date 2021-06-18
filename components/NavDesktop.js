@@ -8,7 +8,7 @@ const NavDesktop = () => {
   const lainnya = "hover:bg-gray-50 py-1 px-2.5 text-sm";
   return (
     <nav className="hidden md:block">
-      <nav className="flex flex-row items-center justify-between w-full px-5 py-4 md:flex xl:px-0">
+      <nav className="flex flex-row items-center justify-between w-full px-5 py-3 md:flex xl:px-0">
         {/* Logo */}
         <Link href="/">
           <a className="flex flex-row items-center text-lg font-semibold ">
