@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Menu } from "@headlessui/react";
 const NavMobile = () => {
   return (
-    <nav className="z-20 flex items-center justify-between md:hidden">
+    <nav className="z-20 flex items-center p-1 jus roundedtify-between md:hidden">
       {/* HarisLab */}
       <nav className="block w-3/4 ">
         <Link href="/">
@@ -21,9 +21,9 @@ const NavMobile = () => {
               {open ? <X /> : <HamburgerMenu />}
             </Menu.Button>
 
-            <Menu.Items className="absolute right-0 z-50 w-full p-5 origin-top-right bg-gray-100 mt-14">
+            <Menu.Items className="absolute right-0 z-50 w-full p-5 origin-top-right bg-gray-100 shadow-inner mt-14">
               {/* Search */}
-              <section className="mb-5  flex items-center  p-1.5 rounded-lg bg-gray-200 border-[1.4px] border-gray-200 focus-within:border-black ">
+              <section className="mb-5  flex items-center   p-1.5 rounded-lg bg-gray-200 border-[1.4px] border-gray-200 focus-within:border-black ">
                 <SearchIcon />
                 <input
                   type="text"
@@ -34,21 +34,21 @@ const NavMobile = () => {
 
               <section className="grid grid-cols-2 gap-2 pt-5 border-t border-gray-500">
                 {/* Lainnya */}
-                <div className="flex flex-col p-2 space-y-4 ">
-                  <div className="text-xs text-black">LAINNYA</div>
+                <div className="flex flex-col space-y-3 ">
+                  <div className="text-xs text-gray-600">LAINNYA</div>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg">
+                      <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/blog">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Pen />
                               Blog
                             </a>
                           </Link>
                         ) : (
                           <Link href="/blog">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Pen />
                               Blog
                             </a>
@@ -59,17 +59,17 @@ const NavMobile = () => {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg">
+                      <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/portofolio">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Award />
                               Portofolio
                             </a>
                           </Link>
                         ) : (
                           <Link href="/portofolio">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Award />
                               Portofolio
                             </a>
@@ -80,17 +80,17 @@ const NavMobile = () => {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg">
+                      <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/bookingLes">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Calender />
                               Booking Les
                             </a>
                           </Link>
                         ) : (
                           <Link href="/bookingLes">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Calender />
                               Booking Les
                             </a>
@@ -101,17 +101,17 @@ const NavMobile = () => {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg">
+                      <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/merchandise">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Cart />
                               Merchandise
                             </a>
                           </Link>
                         ) : (
                           <Link href="/merchandise">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Cart />
                               Merchandise
                             </a>
@@ -122,17 +122,17 @@ const NavMobile = () => {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg">
+                      <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/login">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Masuk />
                               Login
                             </a>
                           </Link>
                         ) : (
                           <Link href="/login">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Masuk />
                               Login
                             </a>
@@ -144,21 +144,21 @@ const NavMobile = () => {
                 </div>
 
                 {/* Alat */}
-                <div className="flex flex-col p-2 space-y-4 ">
-                  <div className="text-xs text-black">ALAT</div>
+                <div className="flex flex-col space-y-3 ">
+                  <div className="text-xs text-gray-600">ALAT</div>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg">
+                      <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/materi">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Folder />
                               Materi
                             </a>
                           </Link>
                         ) : (
                           <Link href="/materi">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Folder />
                               Materi
                             </a>
@@ -169,17 +169,17 @@ const NavMobile = () => {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg">
+                      <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/kartu">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Kartu />
                               Kartu
                             </a>
                           </Link>
                         ) : (
                           <Link href="/kartu">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Kartu />
                               Kartu
                             </a>
@@ -190,17 +190,17 @@ const NavMobile = () => {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg">
+                      <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/kalkulator">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Kalkulator />
                               Kalkulator
                             </a>
                           </Link>
                         ) : (
                           <Link href="/kalkulator">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Kalkulator />
                               Kalkulator
                             </a>
@@ -211,17 +211,17 @@ const NavMobile = () => {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg">
+                      <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/animasi">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Play />
                               Animasi
                             </a>
                           </Link>
                         ) : (
                           <Link href="/animasi">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Play />
                               Animasi
                             </a>
@@ -232,17 +232,17 @@ const NavMobile = () => {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg">
+                      <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/scan">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Camera />
                               Scan
                             </a>
                           </Link>
                         ) : (
                           <Link href="/scan">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Camera />
                               Scan
                             </a>
@@ -253,17 +253,17 @@ const NavMobile = () => {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg">
+                      <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/games">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Puzzle />
                               Games
                             </a>
                           </Link>
                         ) : (
                           <Link href="/games">
-                            <a className="flex items-center">
+                            <a className="flex items-center p-1 rounded">
                               <Puzzle />
                               Games
                             </a>
