@@ -3,20 +3,16 @@ const TabPhy = ({ page, to, backTo, textColor }) => {
   return (
     <header className="z-40 flex flex-row items-center justify-between w-full h-auto mb-3 bg-white ">
       <Link href={backTo}>
-        <a className={`${textColor} block text-2xl font-semibold`}>
-          {page}
-        </a>
+        <a className={`${textColor} block text-2xl font-semibold`}>{page}</a>
       </Link>
 
-      <section className="flex flex-row items-center justify-end p-0.5 space-x-2 text-sm  rounded-md bg-gray-100">
+      <section className="flex flex-row items-center justify-end p-1 space-x-1 text-sm font-medium bg-gray-100 rounded-lg ">
         <Link href={to} scroll={false}>
           <a>
-            <div className="px-2 py-1 text-black border rounded-md border-gray-50">
-              Matematika
-            </div>
+            <div className="px-2 py-1 text-gray-700 rounded-md hover:bg-gray-200 ">Matematika</div>
           </a>
         </Link>
-        <div className="px-2 py-1 text-black bg-white border border-white rounded-md shadow">
+        <div className="px-2 py-1 bg-white rounded-md shadow-md text-rose-500 ">
           Fisika
         </div>
       </section>

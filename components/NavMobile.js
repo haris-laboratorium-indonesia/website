@@ -6,7 +6,7 @@ const NavMobile = () => {
       {/* HarisLab */}
       <nav className="block ">
         <Link href="/">
-          <a className="block w-full py-2.5 px-5 text-xl font-semibold ">
+          <a className="block w-full px-5 py-3 text-xl font-semibold ">
             <span>Haris</span>
             <span className="font-light">Lab</span>
           </a>
@@ -21,7 +21,7 @@ const NavMobile = () => {
               {open ? <X /> : <HamburgerMenu />}
             </Menu.Button>
 
-            <Menu.Items className="border-b border-black absolute right-0 z-50 w-full p-5 mt-[52px] origin-top-right bg-gray-100 shadow-inner">
+            <Menu.Items className="min-h-screen absolute right-0 z-50 w-full p-5 mt-[52px] origin-top-right bg-gray-100 shadow-inner">
               {/* Search */}
               <section className="mb-5  flex items-center   p-1.5 rounded-lg bg-gray-200 border-[1.4px] border-gray-200 focus-within:border-black ">
                 <SearchIcon />
@@ -150,14 +150,14 @@ const NavMobile = () => {
                     {({ active }) => (
                       <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
-                          <Link href="/materi">
+                          <Link href="/materi/matematika">
                             <a className="flex items-center p-1 rounded">
                               <Folder />
                               Materi
                             </a>
                           </Link>
                         ) : (
-                          <Link href="/materi">
+                          <Link href="/materi/matematika">
                             <a className="flex items-center p-1 rounded">
                               <Folder />
                               Materi
