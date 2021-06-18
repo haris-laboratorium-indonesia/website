@@ -3,12 +3,13 @@ import { HiOutlinePlusSm } from "react-icons/hi";
 import { HiOutlineShare } from "react-icons/hi";
 import { tshirts } from "../lib/tshirts";
 import { posters } from "../lib/posters";
-import Tab from "../components/Tab";
+import Judul from "../components/Judul";
 
 const merchandise = () => {
   return (
     <main>
-      <Tab page="Merchandise" />
+      <Judul page="Merchandise" textColor="text-black" />
+
       <div className="mb-5 text-4xl font-semibold ">Kaos</div>
       <div className="grid grid-cols-2 gap-10 my-5 sm:grid-cols-4 md:grid-cols-4 gap-y-10 sm:gap-x-10">
         {tshirts.map((a) => (

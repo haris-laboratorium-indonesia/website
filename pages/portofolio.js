@@ -1,9 +1,9 @@
-import Tab from "../components/Tab";
+import Judul from "../components/Judul";
 
 const portofolio = () => {
   return (
     <main>
-      <Tab page="Portofolio" />
+      <Judul page="Portofolio" textColor="text-black" />
       <section className="space-y-5">
         <article className="w-full sm:w-1/3 font-medium px-4 py-2  text-center border-2 rounded-md border-[#5E725B] bg-[#5E725B] hover:bg-white text-white hover:text-[#5E725B]">
           <a href="https://www.aka-tradingindo.com/" target="_blank">
