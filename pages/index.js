@@ -12,11 +12,11 @@ const Beranda = () => {
     <main className="">
       {/* Hero */}
 
-      <article className="relative w-full -mt-5 py-14 lg:px-0 font-inter ">
-        <div className="text-4xl font-bold text-center text-black sm:text-6xl font-mw">
+      <article className="relative w-full py-10 -mt-5 lg:px-0 font-inter ">
+        <div className="text-4xl font-bold text-center text-black sm:text-6xl ">
           Laboratorium
         </div>
-        <div className="text-4xl font-bold text-center text-blue-500 sm:text-6xl font-mw">
+        <div className="text-4xl font-bold text-center text-blue-500 sm:text-6xl ">
           untuk Pelajar
         </div>
         <p className="mt-5 leading-tight text-center text-black">
@@ -25,7 +25,7 @@ const Beranda = () => {
         </p>
         <div className="flex justify-center mt-5 ">
           <Link href="/signUp">
-            <a className="rounded-lg text-center w-1/2 sm:w-1/6  py-3 sm:py-2.5 bg-blue-harislab text-white  shadow-md hover:shadow-none hover:bg-opacity-80">
+            <a className="rounded-lg text-center w-1/2 sm:w-1/6 px-3 py-2.5 bg-blue-harislab text-white  shadow-md hover:shadow-none hover:bg-opacity-80">
               Mulai Sekarang
             </a>
           </Link>

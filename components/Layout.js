@@ -25,14 +25,14 @@ const Layout = ({ children }) => {
         <meta property="og:type" content="website" />
       </Head>
 
-      <main className="z-50 w-full h-auto mx-auto bg-white">
+      <main className="z-50 w-full h-auto mx-auto bg-white border-b border-gray-300 ">
         <main className="w-full max-w-5xl mx-auto">
           <NavDesktop />
           <NavMobile />
         </main>
       </main>
 
-      <section className="w-full max-w-5xl min-h-screen px-5 pt-5 pb-10 mx-auto xl:px-0">
+      <section className="w-full max-w-5xl min-h-screen px-5 pt-3 pb-10 mx-auto xl:px-0">
         {children}
       </section>
 

@@ -4,60 +4,36 @@ import { HiOutlineChevronDown } from "react-icons/hi";
 
 const NavDesktop = () => {
   const nav =
-    "px-2.5 py-1 text-sm rounded-md transition duration-200 text-gray-800 ";
+    "px-2.5 py-1 text-sm rounded-md transition duration-100 ease-out text-gray-800 hover:text-white ";
   const lainnya = "hover:bg-gray-50 py-1 px-2.5 text-sm";
   return (
     <nav className="hidden md:block">
-      <nav className="flex flex-row items-center justify-between w-full px-5 py-4 md:flex xl:px-0 ">
+      <nav className="flex flex-row items-center justify-between w-full px-5 py-4 md:flex xl:px-0">
         {/* Logo */}
         <Link href="/">
-          <a className="flex flex-row items-center text-lg font-semibold font-mw ">
-            Haris<span className="font-light">Lab</span>
+          <a className="flex flex-row items-center text-lg font-semibold ">
+            Haris <span className="font-light"> Lab</span>
           </a>
         </Link>
 
         {/* Desktop Link */}
         <Link href="/materi">
-          <a
-            className={`${nav} hover:bg-rose-50 hover:text-rose-700 border border-white hover:border-rose-300`}
-          >
-            Materi
-          </a>
+          <a className={`${nav} hover:bg-rose-500  `}>Materi</a>
         </Link>
         <Link href="/kartu">
-          <a
-            className={`${nav} hover:bg-yellow-50 hover:text-yellow-700 border border-white hover:border-yellow-300`}
-          >
-            Kartu
-          </a>
+          <a className={`${nav} hover:bg-amber-500 `}>Kartu</a>
         </Link>
         <Link href="/kalkulator">
-          <a
-            className={`${nav} hover:bg-green-50 hover:text-green-700 border border-white hover:border-green-300`}
-          >
-            Kalkulator
-          </a>
+          <a className={`${nav} hover:bg-green-500 `}>Kalkulator</a>
         </Link>
         <Link href="/animasi">
-          <a
-            className={`${nav} hover:bg-cyan-50 hover:text-cyan-700 border border-white hover:border-cyan-300`}
-          >
-            Animasi
-          </a>
+          <a className={`${nav} hover:bg-cyan-500 `}>Animasi</a>
         </Link>
         <Link href="/scan">
-          <a
-            className={`${nav} hover:bg-blue-50 hover:text-blue-700 border border-white hover:border-blue-300`}
-          >
-            Scan
-          </a>
+          <a className={`${nav} hover:bg-blue-500 `}>Scan</a>
         </Link>
         <Link href="/games">
-          <a
-            className={`${nav} hover:bg-fuschsia-50 hover:text-fuschsia-700 border border-white hover:border-fuschsia-300`}
-          >
-            Games
-          </a>
+          <a className={`${nav} hover:bg-fuschsia-500 `}>Games</a>
         </Link>
 
         {/* Lainnya */}
@@ -91,8 +67,8 @@ const NavDesktop = () => {
         </Popover>
 
         {/* Login Link */}
-        <Link href="/signUp">
-          <a className="text-xs rounded-md text-white bg-gray-800 hover:bg-opacity-90  px-3 py-1.5">
+        <Link href="/login">
+          <a className="text-xs rounded-md text-black border border-black hover:bg-black hover:text-white  px-3 py-1.5">
             Login
           </a>
         </Link>
