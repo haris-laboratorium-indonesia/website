@@ -22,11 +22,6 @@ module.exports = {
         inter: ["Inter"],
         mw: ["Merriweather"],
       },
-
-      backgroundImage: (theme) => ({
-        "landing-page": "url('/monterey-light.jpg')",
-        
-      }),
       colors: {
         blue: {
           harislab: "#007AFF",

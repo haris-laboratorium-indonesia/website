@@ -82,11 +82,11 @@ const NavMobile = () => {
                     {({ active }) => (
                       <button className="w-full text-left text-gray-400 rounded-lg">
                         {active ? (
-                          <Link href="/math/homeMath">
+                          <Link href="/materi">
                             <a>Materi</a>
                           </Link>
                         ) : (
-                          <Link href="/math/homeMath">
+                          <Link href="/materi">
                             <a>Materi</a>
                           </Link>
                         )}
@@ -97,11 +97,11 @@ const NavMobile = () => {
                     {({ active }) => (
                       <button className="w-full text-left text-gray-400 rounded-lg">
                         {active ? (
-                          <Link href="/flashCardMath">
+                          <Link href="/kartu">
                             <a>Kartu</a>
                           </Link>
                         ) : (
-                          <Link href="/flashCardMath">
+                          <Link href="/kartu">
                             <a>Kartu</a>
                           </Link>
                         )}
@@ -112,11 +112,11 @@ const NavMobile = () => {
                     {({ active }) => (
                       <button className="w-full text-left text-gray-400 rounded-lg">
                         {active ? (
-                          <Link href="/calculatorMath">
+                          <Link href="/kalkulator">
                             <a>Kalkulator</a>
                           </Link>
                         ) : (
-                          <Link href="/calculatorMath">
+                          <Link href="/kalkulator">
                             <a>Kalkulator</a>
                           </Link>
                         )}
@@ -127,11 +127,11 @@ const NavMobile = () => {
                     {({ active }) => (
                       <button className="w-full text-left text-gray-400 rounded-lg">
                         {active ? (
-                          <Link href="/animationMath">
+                          <Link href="/animasi">
                             <a>Animasi</a>
                           </Link>
                         ) : (
-                          <Link href="/animationMath">
+                          <Link href="/animasi">
                             <a>Animasi</a>
                           </Link>
                         )}
@@ -142,12 +142,12 @@ const NavMobile = () => {
                     {({ active }) => (
                       <button className="w-full text-left text-gray-400 rounded-lg">
                         {active ? (
-                          <Link href="/scanMath">
-                            <a>ScanSoal</a>
+                          <Link href="/scan">
+                            <a>Scan</a>
                           </Link>
                         ) : (
-                          <Link href="/scanMath">
-                            <a>ScanSoal</a>
+                          <Link href="/scan">
+                            <a>Scan</a>
                           </Link>
                         )}
                       </button>
@@ -157,11 +157,11 @@ const NavMobile = () => {
                     {({ active }) => (
                       <button className="w-full text-left text-gray-400 rounded-lg">
                         {active ? (
-                          <Link href="/gamesMath">
+                          <Link href="/games">
                             <a>Games</a>
                           </Link>
                         ) : (
-                          <Link href="/gamesMath">
+                          <Link href="/games">
                             <a>Games</a>
                           </Link>
                         )}

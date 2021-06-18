@@ -2,12 +2,17 @@ import ChapterBox from "../../components/ChapterBox";
 import TabMath from "../../components/TabMath";
 import What from "../../components/What";
 
-const homeMath = () => {
+const matematika = () => {
   return (
     <main>
-      <TabMath page="Materi" to="/phy/homePhy" textColor="text-rose-500" />
+      <TabMath
+        page="Materi"
+        backTo="/materi"
+        to="/materi/fisika"
+        textColor="text-rose-500"
+      />
       <section className="grid grid-cols-1 divide-y divide-gray-200 sm:grid-cols-3 sm:divide-y-0 ">
-        <ChapterBox title="Lingkaran" to="linear" />
+        <ChapterBox title="Lingkaran" to="matematika/linear" />
         <ChapterBox title="Integral Tentu" to="linear" />
         <ChapterBox title="Integral Tak Tentu" to="linear" />
         <ChapterBox title="Linear" to="linear" />
@@ -143,4 +148,4 @@ const homeMath = () => {
   );
 };
 
-export default homeMath;
+export default matematika;

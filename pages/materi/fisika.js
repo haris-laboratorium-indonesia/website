@@ -2,14 +2,14 @@ import ChapterBox from "../../components/ChapterBox";
 import TabPhy from "../../components/TabPhy";
 import What from "../../components/What";
 
-export default function homePhy() {
+const fisika = () => {
   return (
     <main>
-      <TabPhy page="Materi" to="/math/homeMath" textColor="text-rose-500" />
+      <TabPhy page="Materi" backTo="/materi" to="/materi/matematika" textColor="text-rose-500" />
       <section className="grid grid-cols-1 divide-y divide-gray-200 sm:grid-cols-3 sm:divide-y-0 ">
-        <ChapterBox title="Fluida Statis" to="fluida" />
+        <ChapterBox title="Fluida Statis" to="fisika/fluida" />
         <ChapterBox title="Fluida Dinamis" to="fluidaDinamis" />
-        <ChapterBox title="Termodinamika" to="termodinamika" />
+        <ChapterBox title="Termodinamika" to="fisika/termodinamika" />
         <ChapterBox title="Gelombang Mekanik" to="fluida" />
         <ChapterBox title="Gelombang Elektromagnetik" to="fluida" />
         <ChapterBox title="Kinematika" to="fluida" />
@@ -79,4 +79,6 @@ export default function homePhy() {
       </p>
     </main>
   );
-}
+};
+
+export default fisika;

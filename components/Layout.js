@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
   return (
     <main className="font-inter">
       <Head>
-        <title>HarisLab</title>
+        <title>Haris Lab</title>
         <link rel="icon" href="/hahaha.ico" />
         <meta
           name="description"

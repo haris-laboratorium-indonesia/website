@@ -1,4 +1,5 @@
-import Tab from "../components/Tab";
+import Tab from "../components/Judul";
+
 const bookingLes = () => {
   return (
     <main>

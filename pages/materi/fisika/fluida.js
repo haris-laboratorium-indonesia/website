@@ -1,4 +1,4 @@
-export default function fluida() {
+const fluida = () => {
   const td = " text-left text-sm p-2";
   const th = "p-2 text-left text-base font-medium text-rose-500 bg-rose-50";
   return (
@@ -42,7 +42,6 @@ export default function fluida() {
                   <th className={th}>Satuan</th>
                   <th className={th}>Simbol</th>
                   <th className={th}>Arah</th>
-                  
                 </tr>
               </thead>
               <tbody className="divide-y divide-rose-300">
@@ -51,28 +50,24 @@ export default function fluida() {
                   <td className={td}>25rb/bln</td>
                   <td className={td}>50rb/bln</td>
                   <td className={td}>80rb/bln</td>
-                  
                 </tr>
                 <tr className="divide-x divide-rose-300">
                   <td className={td}>Update Informasi</td>
                   <td className={td}>Selalu Update</td>
                   <td className={td}>Selalu Update</td>
                   <td className={td}>Selalu Update</td>
-                  
                 </tr>
                 <tr className="divide-x divide-rose-300">
                   <td className={td}>Durabilitas</td>
                   <td className={td}>Aman</td>
                   <td className={td}>Aman</td>
                   <td className={td}>Aman</td>
-                  
                 </tr>
                 <tr className="divide-x divide-rose-300">
                   <td className={td}>Mobilitas</td>
                   <td className={td}>Mudah dibawa</td>
                   <td className={td}>Mudah dibawa</td>
                   <td className={td}>Mudah dibawa</td>
-                  
                 </tr>
               </tbody>
             </table>
@@ -180,4 +175,6 @@ export default function fluida() {
       </div>
     </main>
   );
-}
+};
+
+export default fluida;

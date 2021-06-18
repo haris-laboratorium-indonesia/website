@@ -5,7 +5,7 @@ import { FAQs } from "../lib/FAQs";
 import InfoBox from "../components/InfoBox";
 import { sendInformations } from "../lib/sendInformations";
 
-export default function Home() {
+const Beranda = () => {
   const td = " text-left text-sm p-2";
   const th = "p-2 text-left text-base font-medium text-blue-500 bg-blue-50";
   return (
@@ -31,29 +31,6 @@ export default function Home() {
           </Link>
         </div>
       </article>
-
-      {/* <div className="relative shadow-inner mt-14">
-        <Image
-          src="/monterey-light.jpg"
-          layout="fill"
-          className="absolute inset-0 object-cover w-full h-64 bg-opacity-50"
-        />
-        <div className="relative max-w-5xl py-5 mx-auto ">
-          <div className="w-full px-8 py-10 lg:py-14 lg:pl-0 sm:max-w-3xl ">
-            <div className="mb-4 text-3xl font-bold text-center text-white bg-black bg-opacity-30 md:text-5xl md:text-left title-font">
-              <p className="block leading-normal font-EBGaramond">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
-                sapiente.
-              </p>
-            </div>
-            <div className="mb-2 leading-relaxed text-center text-white md:text-left"></div>
-            <div className="text-center text-white border-b border-white md:text-left"></div>
-            <p className="block text-lg text-center text-white bg-black bg-opacity-30 md:text-left font-EBGaramond">
-              Lorem ipsum dolor sit.
-            </p>
-          </div>
-        </div>
-      </div> */}
 
       {/* Cara kami menyajikan informasi */}
       <div className="py-10 ">
@@ -154,6 +131,8 @@ export default function Home() {
       </div>
     </main>
   );
-}
+};
+
+export default Beranda;
 
 // link ke halaman ini ada di ../components/Layout.js

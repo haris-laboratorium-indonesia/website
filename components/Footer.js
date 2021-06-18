@@ -11,23 +11,23 @@ const Footer = () => {
           <div className="w-full space-y-2 sm:w-1/2">
             {/* ALAT */}
             <div className="text-sm text-white">ALAT</div>
-            <Link href="/math/homeMath">
+            <Link href="/matematika">
               <a className={navigation}>Belajar</a>
             </Link>
-            <Link href="/flashCardMath">
+            <Link href="/kartuMatematika">
               <a className={navigation}>FlashCard</a>
             </Link>
-            <Link href="/calculatorMath">
+            <Link href="/kalkulatorMatematika">
               <a className={navigation}>Kalkulator</a>
             </Link>
 
-            <Link href="/animationMath">
+            <Link href="/animasiMatematika">
               <a className={navigation}>Animasi</a>
             </Link>
             <Link href="/scanMath">
               <a className={navigation}>Scan Soal</a>
             </Link>
-            <Link href="/gamesMath">
+            <Link href="/permainanMatematika">
               <a className={navigation}>Games</a>
             </Link>
           </div>

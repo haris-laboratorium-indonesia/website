@@ -1,23 +1,55 @@
 import Image from "next/image";
-import ChapterLayout from "../../components/ChapterLayout";
-import katex from "katex";
+import Link from "next/link";
+import { HiOutlineChevronLeft } from "react-icons/hi";
+import ChapterLayout from "../../../components/ChapterLayout";
+import ExampleMain from "../../../components/ExampleMain";
+import ExampleChild from "../../../components/ExampleChild";
 
-export default function fluida() {
+const List = () => {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="20"
+      height="20"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      fill="none"
+      shape-rendering="geometricPrecision"
+    >
+      <path d="M8 6h13" />
+      <path d="M8 12h13" />
+      <path d="M8 18h13" />
+      <path d="M3 6h.01" />
+      <path d="M3 12h.01" />
+      <path d="M3 18h.01" />
+    </svg>
+  );
+};
+const termodinamika = () => {
   const td = " text-left text-sm p-2";
   const th = "p-2 text-left text-base font-medium text-rose-500 bg-rose-50";
   return (
-    <ChapterLayout title="Termodinamika" description="Materi Termodinamika SMA">
-      <div className=" sm:col-span-1">
-        <div className="sticky p-2 space-y-2 border border-gray-300 rounded-md top-5">
-          <div className="font-semibold">Termodinamika</div>
-          <div>Pengenalan</div>
-          <div>Variabel</div>
-          <div>Rumus</div>
-          <div>Penurunan Rumus </div>
-          <div>Contoh Soal</div>
+    <ChapterLayout chapter="Termodinamika">
+      <div className="sticky top-0 z-30 flex items-center justify-between py-1 mb-10 bg-white border-b border-gray-300 sm:py-2">
+        <Link href="/materi/fisika">
+          <a className="flex items-center w-1/3 text-rose-500">
+            <HiOutlineChevronLeft className="text-rose-500" />
+            <div>Bab</div>
+          </a>
+        </Link>
+        <div className="flex items-center justify-end w-2/3 space-x-3 text-xs">
+          <div className="px-2 py-1 border rounded border-rose-500 text-rose-500">
+            SUBSCRIBE
+          </div>
+          <div className="px-2 py-0.5 text-gray-500 border border-gray-500 rounded">
+            <List />
+          </div>
         </div>
       </div>
-      <div className="sm:col-span-3">
+      <div className="text-4xl">Termodinamika</div>
+      <div>
         <div>
           <h1
             id="Pengenalan"
@@ -162,37 +194,91 @@ export default function fluida() {
         <div className>
           <h1
             id="ContohSoal"
-            className="z-10 py-2 text-xl font-semibold bg-white rounded-md sm:text-2xl"
+            className="py-2 text-xl font-semibold bg-white rounded-md sm:text-2xl"
           >
             Contoh Soal
           </h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim
             provident tenetur? Earum voluptas, rerum aliquid corporis, sit
-            veritatis laborum aut eum sed saepe natus esse quas expedita animi!
-            Quasi odio architecto impedit voluptatum eligendi nihil placeat
-            molestiae at vitae consequatur, autem, eos hic nemo debitis
-            recusandae deleniti asperiores? Officia quam eaque excepturi facere,
-            eligendi perferendis iste. Accusantium nam dolor doloremque unde
-            expedita sunt cumque blanditiis, corrupti, in sit ipsum qui
-            laboriosam hic quidem, odio ad. In officia, pariatur exercitationem
-            provident deserunt neque excepturi nisi voluptates saepe quidem
-            commodi esse, atque odio incidunt voluptatum porro ipsum reiciendis
-            iusto nostrum laboriosam. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Laborum quibusdam ipsa nostrum facilis qui nisi
-            ratione molestias, sequi dolores nihil sint corporis tenetur nam
-            illum accusantium reprehenderit eos! Eligendi illo iste, at
-            obcaecati quaerat corporis qui iusto eveniet soluta unde sunt rem?
-            Corrupti, quidem! Aspernatur perspiciatis quibusdam iure laborum
-            perferendis eligendi quas dolor quia, sit expedita modi quis nam
-            aliquid deserunt amet soluta cumque at eaque dolores dolore corporis
-            libero provident consectetur quidem. Repudiandae sed debitis omnis
-            corrupti possimus in sit magni labore, sapiente repellat nam libero
-            explicabo aspernatur rerum facere, incidunt eligendi consequatur
-            magnam inventore voluptatem illo. Nihil, asperiores!
           </p>
+          <ExampleMain type="Contoh Soal Mudah" tambahan="space-y-2">
+            <ExampleChild type="Teori Kinetik Gas">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+              nemo.
+            </ExampleChild>
+            <ExampleChild type="Teori Kinetik Gas">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+              nemo.
+            </ExampleChild>
+            <ExampleChild type="Teori Kinetik Gas">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+              nemo.
+            </ExampleChild>
+            <ExampleChild type="Teori Kinetik Gas">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+              nemo.
+            </ExampleChild>
+            <ExampleChild type="Teori Kinetik Gas">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+              nemo.
+            </ExampleChild>
+            <ExampleChild type="Teori Kinetik Gas">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+              nemo.
+            </ExampleChild>
+
+            <ExampleChild type="Teori Kinetik Gas">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+              nemo.
+            </ExampleChild>
+            <ExampleChild type="Teori Kinetik Gas">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+              nemo.
+            </ExampleChild>
+
+            <ExampleChild type="Teori Kinetik Gas">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+              nemo.
+            </ExampleChild>
+            <ExampleChild type="Teori Kinetik Gas">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+              nemo.
+            </ExampleChild>
+          </ExampleMain>
+          <ExampleMain type="Contoh Soal Mudah">
+            <ExampleChild type="Teori Kinetik Gas">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+              nemo.
+            </ExampleChild>
+          </ExampleMain>
+          <ExampleMain type="Contoh Soal Mudah">
+            <ExampleChild type="Teori Kinetik Gas">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+              nemo.
+            </ExampleChild>
+          </ExampleMain>
+          <ExampleMain type="Contoh Soal Mudah">
+            <ExampleChild type="Teori Kinetik Gas">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+              nemo.
+            </ExampleChild>
+          </ExampleMain>
+          <ExampleMain type="Contoh Soal Mudah">
+            <ExampleChild type="Teori Kinetik Gas">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+              nemo.
+            </ExampleChild>
+          </ExampleMain>
+          <ExampleMain type="Contoh Soal Mudah">
+            <ExampleChild type="Teori Kinetik Gas">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
+              nemo.
+            </ExampleChild>
+          </ExampleMain>
         </div>
       </div>
     </ChapterLayout>
   );
-}
+};
+export default termodinamika;

@@ -17,42 +17,42 @@ const NavDesktop = () => {
         </Link>
 
         {/* Desktop Link */}
-        <Link href="/math/homeMath">
+        <Link href="/materi">
           <a
             className={`${nav} hover:bg-rose-50 hover:text-rose-700 border border-white hover:border-rose-300`}
           >
             Materi
           </a>
         </Link>
-        <Link href="/flashCardMath">
+        <Link href="/kartu">
           <a
             className={`${nav} hover:bg-yellow-50 hover:text-yellow-700 border border-white hover:border-yellow-300`}
           >
-            FlashCard
+            Kartu
           </a>
         </Link>
-        <Link href="/calculatorMath">
+        <Link href="/kalkulator">
           <a
             className={`${nav} hover:bg-green-50 hover:text-green-700 border border-white hover:border-green-300`}
           >
             Kalkulator
           </a>
         </Link>
-        <Link href="/animationMath">
+        <Link href="/animasi">
           <a
             className={`${nav} hover:bg-cyan-50 hover:text-cyan-700 border border-white hover:border-cyan-300`}
           >
             Animasi
           </a>
         </Link>
-        <Link href="/scanMath">
+        <Link href="/scan">
           <a
             className={`${nav} hover:bg-blue-50 hover:text-blue-700 border border-white hover:border-blue-300`}
           >
-            ScanSoal
+            Scan
           </a>
         </Link>
-        <Link href="/gamesMath">
+        <Link href="/games">
           <a
             className={`${nav} hover:bg-fuschsia-50 hover:text-fuschsia-700 border border-white hover:border-fuschsia-300`}
           >
