@@ -32,20 +32,20 @@ const termodinamika = () => {
   const th = "p-2 text-left text-base font-medium text-rose-500 bg-rose-50";
   return (
     <ChapterLayout chapter="Termodinamika">
-      <div className="sticky top-0 z-30 flex items-center justify-between py-1 mb-5 bg-white sm:py-2">
+      <div className="sticky top-0 z-30 flex items-center justify-between py-2 mb-5 bg-white sm:py-2">
         <Link href="/materi/fisika">
-          <a className=" flex items-center pr-1 py-0.5 rounded-md  text-rose-400 hover:bg-gray-100">
-            <HiOutlineChevronLeft className="text-rose-400" />
+          <a className=" flex items-center pr-1 py-0.5 rounded-md  text-gray-800 hover:bg-gray-100">
+            <HiOutlineChevronLeft className="text-gray-800" />
             <div>Materi</div>
           </a>
         </Link>
         <div className="flex items-center justify-end w-2/3 space-x-2 text-xs">
           <Link href="/login">
-            <a className="block px-2 py-1 duration-200 border rounded border-rose-400 text-rose-400 hover:bg-rose-400 hover:text-white">
+            <a className="block px-2 py-1 text-gray-800 duration-200 border border-gray-400 rounded hover:bg-gray-800 hover:text-white">
               SUBSCRIBE
             </a>
           </Link>
-          <div className="px-1 p-0.5 text-rose-500 border border-rose-500 rounded">
+          <div className="px-1 p-0.5 text-gray-800 border border-gray-800 rounded">
             <List />
           </div>
         </div>

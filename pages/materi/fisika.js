@@ -7,7 +7,7 @@ const fisika = () => {
     <main>
       <TabPhy
         page="Materi"
-        backTo="/materi"
+        backTo="/materi/fisika"
         to="/materi/matematika"
         textColor="text-rose-500"
       />

@@ -2,11 +2,11 @@ import Link from "next/link";
 import { Menu } from "@headlessui/react";
 const NavMobile = () => {
   return (
-    <nav className="z-20 flex items-center justify-between md:hidden">
+    <nav className="z-20 flex items-center justify-between px-4 py-3 md:hidden">
       {/* HarisLab */}
       <nav className="block ">
         <Link href="/">
-          <a className="block w-full px-5 py-3 text-xl font-semibold ">
+          <a className="block w-full p-1 text-xl font-semibold p ">
             <span>Haris</span>
             <span className="font-light">Lab</span>
           </a>
@@ -17,11 +17,11 @@ const NavMobile = () => {
       <Menu as="div" className="static flex justify-end ">
         {({ open }) => (
           <>
-            <Menu.Button className="z-50 flex justify-end w-full py-2.5 px-5 focus:outline-none">
+            <Menu.Button className="z-50 flex justify-end w-full  py-0.5 px-1 bg-gray-100 border border-gray-200 rounded-md focus:outline-none">
               {open ? <X /> : <HamburgerMenu />}
             </Menu.Button>
 
-            <Menu.Items className="min-h-screen absolute right-0 z-50 w-full p-5 mt-[52px] origin-top-right bg-gray-100 shadow-inner">
+            <Menu.Items className="absolute right-0 z-50 w-full min-h-screen p-5 mt-12 origin-top-right bg-gray-100 border-b border-gray-600 shadow-inner">
               {/* Search */}
               <section className="mb-5  flex items-center   p-1.5 rounded-lg bg-gray-200 border-[1.4px] border-gray-200 focus-within:border-black ">
                 <SearchIcon />
@@ -34,21 +34,21 @@ const NavMobile = () => {
 
               <section className="grid grid-cols-2 gap-2 pt-5 border-t border-gray-500">
                 {/* Lainnya */}
-                <div className="flex flex-col space-y-2 ">
-                  <div className="text-xs text-gray-600">LAINNYA</div>
+                <div className="flex flex-col ">
+                  <div className="pl-2 text-xs text-gray-600">LAINNYA</div>
                   <Menu.Item>
                     {({ active }) => (
                       <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/blog">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Pen />
                               Blog
                             </a>
                           </Link>
                         ) : (
                           <Link href="/blog">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Pen />
                               Blog
                             </a>
@@ -62,14 +62,14 @@ const NavMobile = () => {
                       <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/portofolio">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Award />
                               Portofolio
                             </a>
                           </Link>
                         ) : (
                           <Link href="/portofolio">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Award />
                               Portofolio
                             </a>
@@ -83,14 +83,14 @@ const NavMobile = () => {
                       <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/bookingLes">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Calender />
                               Booking Les
                             </a>
                           </Link>
                         ) : (
                           <Link href="/bookingLes">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Calender />
                               Booking Les
                             </a>
@@ -104,14 +104,14 @@ const NavMobile = () => {
                       <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/merchandise">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Cart />
                               Merchandise
                             </a>
                           </Link>
                         ) : (
                           <Link href="/merchandise">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Cart />
                               Merchandise
                             </a>
@@ -125,14 +125,14 @@ const NavMobile = () => {
                       <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/login">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Masuk />
                               Login
                             </a>
                           </Link>
                         ) : (
                           <Link href="/login">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Masuk />
                               Login
                             </a>
@@ -144,21 +144,21 @@ const NavMobile = () => {
                 </div>
 
                 {/* Alat */}
-                <div className="flex flex-col space-y-2 ">
-                  <div className="text-xs text-gray-600">ALAT</div>
+                <div className="flex flex-col ">
+                  <div className="pl-2 text-xs text-gray-600">ALAT</div>
                   <Menu.Item>
                     {({ active }) => (
                       <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/materi/matematika">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Folder />
                               Materi
                             </a>
                           </Link>
                         ) : (
                           <Link href="/materi/matematika">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Folder />
                               Materi
                             </a>
@@ -172,14 +172,14 @@ const NavMobile = () => {
                       <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/kartu">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Kartu />
                               Kartu
                             </a>
                           </Link>
                         ) : (
                           <Link href="/kartu">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Kartu />
                               Kartu
                             </a>
@@ -193,14 +193,14 @@ const NavMobile = () => {
                       <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/kalkulator">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Kalkulator />
                               Kalkulator
                             </a>
                           </Link>
                         ) : (
                           <Link href="/kalkulator">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Kalkulator />
                               Kalkulator
                             </a>
@@ -214,14 +214,14 @@ const NavMobile = () => {
                       <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/animasi">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Play />
                               Animasi
                             </a>
                           </Link>
                         ) : (
                           <Link href="/animasi">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Play />
                               Animasi
                             </a>
@@ -235,14 +235,14 @@ const NavMobile = () => {
                       <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/scan">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Camera />
                               Scan
                             </a>
                           </Link>
                         ) : (
                           <Link href="/scan">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Camera />
                               Scan
                             </a>
@@ -256,14 +256,14 @@ const NavMobile = () => {
                       <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
                           <Link href="/games">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Puzzle />
                               Games
                             </a>
                           </Link>
                         ) : (
                           <Link href="/games">
-                            <a className="flex items-center p-1 rounded">
+                            <a className="flex items-center p-2 rounded-md">
                               <Puzzle />
                               Games
                             </a>
@@ -302,7 +302,7 @@ const X = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-8 h-8"
+      className="text-gray-700 w-7 h-7"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -310,7 +310,7 @@ const X = () => {
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={1}
+        strokeWidth={1.5}
         d="M6 18L18 6M6 6l12 12"
       />
     </svg>
@@ -321,7 +321,7 @@ const HamburgerMenu = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-8 w-7"
+      className="text-gray-700 h-7 w-7"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -329,7 +329,7 @@ const HamburgerMenu = () => {
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={1}
+        strokeWidth={1.5}
         d="M4 6h16M4 12h16M4 18h16"
       />
     </svg>
@@ -401,7 +401,6 @@ const Play = () => {
       strokeLinecap="round"
       strokeLinejoin="round"
       fill="none"
-      shape-rendering="geometricPrecision"
     >
       <path d="M13 19l9-7-9-7v14z" />
       <path d="M2 19l9-7-9-7v14z" />
@@ -419,7 +418,6 @@ const Camera = () => {
       strokeLinecap="round"
       strokeLinejoin="round"
       fill="none"
-      shape-rendering="geometricPrecision"
     >
       <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z" />
       <circle cx="12" cy="13" r="4" />
@@ -437,7 +435,6 @@ const Puzzle = () => {
       strokeLinecap="round"
       strokeLinejoin="round"
       fill="none"
-      shape-rendering="geometricPrecision"
     >
       <path
         strokeLinecap="round"
@@ -461,7 +458,6 @@ const Pen = () => {
       strokeLinecap="round"
       strokeLinejoin="round"
       fill="none"
-      shape-rendering="geometricPrecision"
     >
       <path d="M12 20h9" />
       <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
@@ -479,7 +475,6 @@ const Award = () => {
       strokeLinecap="round"
       strokeLinejoin="round"
       fill="none"
-      shape-rendering="geometricPrecision"
     >
       <circle cx="12" cy="8" r="7" />
       <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12" />
@@ -497,7 +492,6 @@ const Calender = () => {
       strokeLinecap="round"
       strokeLinejoin="round"
       fill="none"
-      shape-rendering="geometricPrecision"
     >
       <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
       <path d="M16 2v4" />
@@ -517,7 +511,6 @@ const Cart = () => {
       strokeLinecap="round"
       strokeLinejoin="round"
       fill="none"
-      shape-rendering="geometricPrecision"
     >
       <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
       <path d="M3 6h18" />
@@ -536,7 +529,6 @@ const Masuk = () => {
       strokeLinecap="round"
       strokeLinejoin="round"
       fill="none"
-      shape-rendering="geometricPrecision"
     >
       <path d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
     </svg>

@@ -17,7 +17,7 @@ const NavDesktop = () => {
         </Link>
 
         {/* Desktop Link */}
-        <Link href="/materi">
+        <Link href="/materi/matematika">
           <a className={`${nav} hover:bg-rose-500  `}>Materi</a>
         </Link>
         <Link href="/kartu">

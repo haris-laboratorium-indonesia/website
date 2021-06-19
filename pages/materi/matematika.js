@@ -7,7 +7,7 @@ const matematika = () => {
     <main>
       <TabMath
         page="Materi"
-        backTo="/materi"
+        backTo="/materi/matematika"
         to="/materi/fisika"
         textColor="text-rose-500"
       />
