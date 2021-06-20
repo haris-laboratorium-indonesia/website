@@ -10,7 +10,7 @@ const ChapterBox = ({ to, title }) => {
 
             <p className="truncate">{title}</p>
           </div>
-          <RightArrow />
+          <RightArrow a="text-gray-700" />
         </a>
       </Link>
     </main>
@@ -19,11 +19,11 @@ const ChapterBox = ({ to, title }) => {
 
 export default ChapterBox;
 
-const RightArrow = () => {
+export const RightArrow = (a) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-5 h-5 text-gray-700 sm:hidden"
+      className={`${a} w-5 h-5 sm:hidden`}
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"

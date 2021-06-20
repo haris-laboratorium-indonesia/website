@@ -4,43 +4,44 @@ import { HiOutlineChevronDown } from "react-icons/hi";
 
 const NavDesktop = () => {
   const nav =
-    "px-2.5 py-1 text-sm rounded-md transition duration-100 ease-out text-gray-800 hover:text-white ";
+    "px-2.5 py-1 text-sm rounded-md transition duration-100 ease-out text-gray-800 border-white hover:border-gray-300 hover:bg-gray-50 border";
   const lainnya = "hover:bg-gray-50 py-1 px-2.5 text-sm";
   return (
     <nav className="hidden md:block">
       <nav className="flex flex-row items-center justify-between w-full px-5 py-3 md:flex xl:px-0">
         {/* Logo */}
         <Link href="/">
-          <a className="flex flex-row items-center text-lg font-semibold ">
-            Haris <span className="font-light"> Lab</span>
+          <a className="items-center block text-xl font-semibold font-mw">
+            <span className="font-bold">Haris</span>
+            <span className="font-light">Lab</span>
           </a>
         </Link>
 
         {/* Desktop Link */}
         <Link href="/materi/matematika">
-          <a className={`${nav} hover:bg-rose-500  `}>Materi</a>
+          <a className={nav}>Materi</a>
         </Link>
         <Link href="/kartu">
-          <a className={`${nav} hover:bg-amber-500 `}>Kartu</a>
+          <a className={nav}>Kartu</a>
         </Link>
         <Link href="/kalkulator">
-          <a className={`${nav} hover:bg-green-500 `}>Kalkulator</a>
+          <a className={nav}>Kalkulator</a>
         </Link>
         <Link href="/animasi">
-          <a className={`${nav} hover:bg-cyan-500 `}>Animasi</a>
+          <a className={nav}>Animasi</a>
         </Link>
         <Link href="/scan">
-          <a className={`${nav} hover:bg-blue-500 `}>Scan</a>
+          <a className={nav}>Scan</a>
         </Link>
         <Link href="/games">
-          <a className={`${nav} hover:bg-fuschsia-500 `}>Games</a>
+          <a className={nav}>Games</a>
         </Link>
 
         {/* Lainnya */}
         <Popover className="relative">
           {({ open }) => (
             <>
-              <Popover.Button className="flex items-center px-2 py-1 space-x-1 text-sm text-gray-800 border border-white rounded-md justify-b-5etween hover:border-gray-200 hover:bg-gray-50 focus:outline-none">
+              <Popover.Button className="flex items-center justify-between px-2 py-1 space-x-1 text-sm text-gray-800 border border-white rounded-md hover:border-gray-300 hover:bg-gray-50 focus:outline-none">
                 <span>Lainnya</span>
                 <HiOutlineChevronDown
                   className={`${open ? "transform rotate-180" : ""}`}

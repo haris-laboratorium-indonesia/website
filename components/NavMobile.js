@@ -2,26 +2,24 @@ import Link from "next/link";
 import { Menu } from "@headlessui/react";
 const NavMobile = () => {
   return (
-    <nav className="z-20 flex items-center justify-between px-4 py-3 md:hidden">
+    <nav className="z-20 flex items-center justify-between px-5 py-2 md:hidden">
       {/* HarisLab */}
-      <nav className="block ">
-        <Link href="/">
-          <a className="block w-full p-1 text-xl font-semibold p ">
-            <span>Haris</span>
-            <span className="font-light">Lab</span>
-          </a>
-        </Link>
-      </nav>
+      <Link href="/">
+        <a className="items-center block w-full text-xl font-semibold font-mw">
+          <span className="font-bold">Haris</span>
+          <span className="font-light">Lab</span>
+        </a>
+      </Link>
 
       {/* Menu */}
       <Menu as="div" className="static flex justify-end ">
         {({ open }) => (
           <>
-            <Menu.Button className="z-50 flex justify-end w-full  py-0.5 px-1 bg-gray-100 border border-gray-200 rounded-md focus:outline-none">
+            <Menu.Button className="z-50 flex justify-end w-full  py-0.5 px-1 hover:bg-gray-100  rounded-md focus:outline-none">
               {open ? <X /> : <HamburgerMenu />}
             </Menu.Button>
 
-            <Menu.Items className="absolute right-0 z-50 w-full min-h-screen p-5 mt-12 origin-top-right bg-gray-100 border-b border-gray-600 shadow-inner">
+            <Menu.Items className="absolute right-0 z-50 w-full min-h-screen p-5 origin-top-right bg-gray-100 border-b border-gray-600 shadow-inner mt-11">
               {/* Search */}
               <section className="mb-5  flex items-center   p-1.5 rounded-lg bg-gray-200 border-[1.4px] border-gray-200 focus-within:border-black ">
                 <SearchIcon />
@@ -330,7 +328,7 @@ const HamburgerMenu = () => {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={1.5}
-        d="M4 6h16M4 12h16M4 18h16"
+        d="M4 8h16M4 16h16"
       />
     </svg>
   );

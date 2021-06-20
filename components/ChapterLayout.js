@@ -28,7 +28,7 @@ const ChapterLayout = ({ chapter, title, description, children }) => {
         )}
       </Head> */}
 
-      <main className="max-w-2xl mx-auto">{children}</main>
+      <main >{children}</main>
     </main>
   );
 };

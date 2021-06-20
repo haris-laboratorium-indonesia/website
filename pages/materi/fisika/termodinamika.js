@@ -4,19 +4,18 @@ import { HiOutlineChevronLeft } from "react-icons/hi";
 import ChapterLayout from "../../../components/ChapterLayout";
 import ExampleMain from "../../../components/ExampleMain";
 import ExampleChild from "../../../components/ExampleChild";
+import { Menu } from "@headlessui/react";
 
 const List = () => {
   return (
     <svg
+      className="w-5 h-5"
       viewBox="0 0 24 24"
-      width="20"
-      height="20"
       stroke="currentColor"
       stroke-width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
       fill="none"
-      shape-rendering="geometricPrecision"
     >
       <path d="M8 6h13" />
       <path d="M8 12h13" />
@@ -28,113 +27,75 @@ const List = () => {
   );
 };
 const termodinamika = () => {
+  const daftarIsi = "block text-blue-500 hover:underline hover:text-blue-700";
   const td = " text-left text-sm p-2";
   const th = "p-2 text-left text-base font-medium text-rose-500 bg-rose-50";
   return (
     <ChapterLayout chapter="Termodinamika">
-      <div className="sticky top-0 z-30 flex items-center justify-between py-2 mb-5 bg-white sm:py-2">
-        <Link href="/materi/fisika">
-          <a className=" flex items-center pr-1 py-0.5 rounded-md  text-gray-800 hover:bg-gray-100">
-            <HiOutlineChevronLeft className="text-gray-800" />
-            <div>Materi</div>
-          </a>
-        </Link>
-        <div className="flex items-center justify-end w-2/3 space-x-2 text-xs">
-          <Link href="/login">
-            <a className="block px-2 py-1 text-gray-800 duration-200 border border-gray-400 rounded hover:bg-gray-800 hover:text-white">
-              SUBSCRIBE
-            </a>
-          </Link>
-          <div className="px-1 p-0.5 text-gray-800 border border-gray-800 rounded">
-            <List />
-          </div>
-        </div>
-      </div>
-      <div className="text-4xl">Termodinamika</div>
-      <div>
-        <div>
-          <h1
-            id="Pengenalan"
-            className="z-10 py-2 text-xl font-semibold bg-white rounded-md sm:text-2xl"
+      <div className="flex flex-col lg:flex-row lg:space-x-6">
+        <div className="sticky top-0 z-40 lg:w-1/4">
+          <Menu
+            as="div"
+            className="sticky top-0 z-30 flex flex-col items-center w-full py-2 mb-5 bg-white border-b border-gray-400 lg:top-3 sm:py-2 "
           >
-            Pengenalan
-          </h1>
-          <div className="w-full overflow-hidden rounded-lg">
-            <Image
-              src="/monterey-dark.jpg"
-              alt="MacOS Monteret Light Wallpaper"
-              width={6008}
-              height={3379}
-              priority
-            />
-          </div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim
-          provident tenetur? Earum voluptas, rerum aliquid corporis, sit
-          veritatis laborum aut eum sed saepe natus esse quas expedita animi!
-          Quasi odio architecto impedit voluptatum eligendi nihil placeat
-          molestiae at vitae consequatur, autem, eos hic nemo debitis recusandae
-          deleniti asperiores? Officia quam eaque excepturi facere, eligendi
-          perferendis iste. Accusantium nam dolor doloremque unde expedita sunt
-          cumque blanditiis, corrupti, in sit ipsum qui laboriosam hic quidem,
-          odio ad. In officia, pariatur exercitationem provident deserunt neque
-          excepturi nisi voluptates saepe quidem commodi esse, atque odio
-          incidunt voluptatum porro ipsum reiciendis iusto nostrum laboriosam.
+            <Menu.Button className="flex flex-row items-center justify-between w-full focus:outline-none ">
+              <Link href="/materi/fisika">
+                <a className="p-1 text-gray-800 rounded-md hover:bg-gray-100">
+                  <HiOutlineChevronLeft />
+                </a>
+              </Link>
+              <div>Termodinamika</div>
+              <div className="p-1 rounded-md hover:bg-gray-100">
+                <List />
+              </div>
+            </Menu.Button>
+            <Menu.Items className="flex flex-col w-full p-3 mt-2 space-y-2 bg-gray-100 rounded-lg ">
+              <Menu.Item>
+                <a className={daftarIsi} href="#Pengenalan">
+                  Pengenalan
+                </a>
+              </Menu.Item>
+              <Menu.Item>
+                <a className={daftarIsi} href="#Variabel">
+                  Variabel
+                </a>
+              </Menu.Item>
+              <Menu.Item>
+                <a className={daftarIsi} href="#Rumus">
+                  Rumus
+                </a>
+              </Menu.Item>
+              <Menu.Item>
+                <a className={daftarIsi} href="#PenurunanRumus">
+                  Penurunan Rumus
+                </a>
+              </Menu.Item>
+              <Menu.Item>
+                <a className={daftarIsi} href="#ContohSoal">
+                  ContohSoal
+                </a>
+              </Menu.Item>
+            </Menu.Items>
+          </Menu>
         </div>
-        <div className>
-          <h1
-            id="Variabel"
-            className="z-10 py-2 text-xl font-semibold bg-white rounded-md sm:text-2xl"
-          >
-            Variabel
-          </h1>
 
-          <section className="mx-auto overflow-x-auto sm:gap-5 lg:px-0">
-            <table className="w-full border border-rose-300">
-              <thead>
-                <tr className="divide-x divide-rose-300 ">
-                  <th className={th}>Nama</th>
-                  <th className={th}>Satuan</th>
-                  <th className={th}>Simbol</th>
-                  <th className={th}>Arah</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-rose-300">
-                <tr className="divide-x divide-rose-300">
-                  <td className={td}>Harga</td>
-                  <td className={td}>25rb/bln</td>
-                  <td className={td}>50rb/bln</td>
-                  <td className={td}>80rb/bln</td>
-                </tr>
-                <tr className="divide-x divide-rose-300">
-                  <td className={td}>Update Informasi</td>
-                  <td className={td}>Selalu Update</td>
-                  <td className={td}>Selalu Update</td>
-                  <td className={td}>Selalu Update</td>
-                </tr>
-                <tr className="divide-x divide-rose-300">
-                  <td className={td}>Durabilitas</td>
-                  <td className={td}>Aman</td>
-                  <td className={td}>Aman</td>
-                  <td className={td}>Aman</td>
-                </tr>
-                <tr className="divide-x divide-rose-300">
-                  <td className={td}>Mobilitas</td>
-                  <td className={td}>Mudah dibawa</td>
-                  <td className={td}>Mudah dibawa</td>
-                  <td className={td}>Mudah dibawa</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-        </div>
-        <div className>
-          <h1
-            id="Rumus"
-            className="z-10 py-2 text-xl font-semibold bg-white rounded-md sm:text-2xl"
-          >
-            Rumus
-          </h1>
-          <p>
+        <section className="lg:w-3/4">
+          <div className="mb-10">
+            <h1
+              id="Pengenalan"
+              className="z-10 pt-8 pb-2 text-2xl font-semibold bg-white rounded-md lg:pt-0 "
+            >
+              Pengenalan
+            </h1>
+            <div className="z-10 w-full overflow-hidden rounded-lg">
+              <Image
+                src="/monterey-dark.jpg"
+                alt="MacOS Monteret Light Wallpaper"
+                width={6008}
+                height={3379}
+                priority
+              />
+            </div>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim
             provident tenetur? Earum voluptas, rerum aliquid corporis, sit
             veritatis laborum aut eum sed saepe natus esse quas expedita animi!
@@ -146,139 +107,211 @@ const termodinamika = () => {
             laboriosam hic quidem, odio ad. In officia, pariatur exercitationem
             provident deserunt neque excepturi nisi voluptates saepe quidem
             commodi esse, atque odio incidunt voluptatum porro ipsum reiciendis
-            iusto nostrum laboriosam. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Laborum quibusdam ipsa nostrum facilis qui nisi
-            ratione molestias, sequi dolores nihil sint corporis tenetur nam
-            illum accusantium reprehenderit eos! Eligendi illo iste, at
-            obcaecati quaerat corporis qui iusto eveniet soluta unde sunt rem?
-            Corrupti, quidem! Aspernatur perspiciatis quibusdam iure laborum
-            perferendis eligendi quas dolor quia, sit expedita modi quis nam
-            aliquid deserunt amet soluta cumque at eaque dolores dolore corporis
-            libero provident consectetur quidem. Repudiandae sed debitis omnis
-            corrupti possimus in sit magni labore, sapiente repellat nam libero
-            explicabo aspernatur rerum facere, incidunt eligendi consequatur
-            magnam inventore voluptatem illo. Nihil, asperiores!
-          </p>
-        </div>
-        <div className>
-          <h1
-            id="PenurunanRumus"
-            className="z-10 py-2 text-xl font-semibold bg-white rounded-md sm:text-2xl"
-          >
-            Penurunan Rumus
-          </h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim
-            provident tenetur? Earum voluptas, rerum aliquid corporis, sit
-            veritatis laborum aut eum sed saepe natus esse quas expedita animi!
-            Quasi odio architecto impedit voluptatum eligendi nihil placeat
-            molestiae at vitae consequatur, autem, eos hic nemo debitis
-            recusandae deleniti asperiores? Officia quam eaque excepturi facere,
-            eligendi perferendis iste. Accusantium nam dolor doloremque unde
-            expedita sunt cumque blanditiis, corrupti, in sit ipsum qui
-            laboriosam hic quidem, odio ad. In officia, pariatur exercitationem
-            provident deserunt neque excepturi nisi voluptates saepe quidem
-            commodi esse, atque odio incidunt voluptatum porro ipsum reiciendis
-            iusto nostrum laboriosam. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Laborum quibusdam ipsa nostrum facilis qui nisi
-            ratione molestias, sequi dolores nihil sint corporis tenetur nam
-            illum accusantium reprehenderit eos! Eligendi illo iste, at
-            obcaecati quaerat corporis qui iusto eveniet soluta unde sunt rem?
-            Corrupti, quidem! Aspernatur perspiciatis quibusdam iure laborum
-            perferendis eligendi quas dolor quia, sit expedita modi quis nam
-            aliquid deserunt amet soluta cumque at eaque dolores dolore corporis
-            libero provident consectetur quidem. Repudiandae sed debitis omnis
-            corrupti possimus in sit magni labore, sapiente repellat nam libero
-            explicabo aspernatur rerum facere, incidunt eligendi consequatur
-            magnam inventore voluptatem illo. Nihil, asperiores!
-          </p>
-        </div>
-        <div className>
-          <h1
-            id="ContohSoal"
-            className="py-2 text-xl font-semibold bg-white rounded-md sm:text-2xl"
-          >
-            Contoh Soal
-          </h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim
-            provident tenetur? Earum voluptas, rerum aliquid corporis, sit
-          </p>
-          <ExampleMain type="Contoh Soal Mudah" tambahan="space-y-2">
-            <ExampleChild type="Teori Kinetik Gas">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-              nemo.
-            </ExampleChild>
-            <ExampleChild type="Teori Kinetik Gas">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-              nemo.
-            </ExampleChild>
-            <ExampleChild type="Teori Kinetik Gas">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-              nemo.
-            </ExampleChild>
-            <ExampleChild type="Teori Kinetik Gas">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-              nemo.
-            </ExampleChild>
-            <ExampleChild type="Teori Kinetik Gas">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-              nemo.
-            </ExampleChild>
-            <ExampleChild type="Teori Kinetik Gas">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-              nemo.
-            </ExampleChild>
+            iusto nostrum laboriosam.
+          </div>
+          <div className="mb-10">
+            <h1
+              id="Variabel"
+              className="z-10 pt-8 pb-2 text-2xl font-semibold bg-white rounded-md lg:pt-0"
+            >
+              Variabel
+            </h1>
 
-            <ExampleChild type="Teori Kinetik Gas">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-              nemo.
-            </ExampleChild>
-            <ExampleChild type="Teori Kinetik Gas">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-              nemo.
-            </ExampleChild>
+            <section className="mx-auto overflow-x-auto sm:gap-5 lg:px-0">
+              <table className="w-full border border-rose-300">
+                <thead>
+                  <tr className="divide-x divide-rose-300 ">
+                    <th className={th}>Nama</th>
+                    <th className={th}>Satuan</th>
+                    <th className={th}>Simbol</th>
+                    <th className={th}>Arah</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-rose-300">
+                  <tr className="divide-x divide-rose-300">
+                    <td className={td}>Harga</td>
+                    <td className={td}>25rb/bln</td>
+                    <td className={td}>50rb/bln</td>
+                    <td className={td}>80rb/bln</td>
+                  </tr>
+                  <tr className="divide-x divide-rose-300">
+                    <td className={td}>Update Informasi</td>
+                    <td className={td}>Selalu Update</td>
+                    <td className={td}>Selalu Update</td>
+                    <td className={td}>Selalu Update</td>
+                  </tr>
+                  <tr className="divide-x divide-rose-300">
+                    <td className={td}>Durabilitas</td>
+                    <td className={td}>Aman</td>
+                    <td className={td}>Aman</td>
+                    <td className={td}>Aman</td>
+                  </tr>
+                  <tr className="divide-x divide-rose-300">
+                    <td className={td}>Mobilitas</td>
+                    <td className={td}>Mudah dibawa</td>
+                    <td className={td}>Mudah dibawa</td>
+                    <td className={td}>Mudah dibawa</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </div>
+          <div className="mb-10">
+            <h1
+              id="Rumus"
+              className="z-10 pt-8 pb-2 text-2xl font-semibold bg-white rounded-md lg:pt-0"
+            >
+              Rumus
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
+              enim provident tenetur? Earum voluptas, rerum aliquid corporis,
+              sit veritatis laborum aut eum sed saepe natus esse quas expedita
+              animi! Quasi odio architecto impedit voluptatum eligendi nihil
+              placeat molestiae at vitae consequatur, autem, eos hic nemo
+              debitis recusandae deleniti asperiores? Officia quam eaque
+              excepturi facere, eligendi perferendis iste. Accusantium nam dolor
+              doloremque unde expedita sunt cumque blanditiis, corrupti, in sit
+              ipsum qui laboriosam hic quidem, odio ad. In officia, pariatur
+              exercitationem provident deserunt neque excepturi nisi voluptates
+              saepe quidem commodi esse, atque odio incidunt voluptatum porro
+              ipsum reiciendis iusto nostrum laboriosam. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Laborum quibusdam ipsa nostrum
+              facilis qui nisi ratione molestias, sequi dolores nihil sint
+              corporis tenetur nam illum accusantium reprehenderit eos! Eligendi
+              illo iste, at obcaecati quaerat corporis qui iusto eveniet soluta
+              unde sunt rem? Corrupti, quidem! Aspernatur perspiciatis quibusdam
+              iure laborum perferendis eligendi quas dolor quia, sit expedita
+              modi quis nam aliquid deserunt amet soluta cumque at eaque dolores
+              dolore corporis libero provident consectetur quidem. Repudiandae
+              sed debitis omnis corrupti possimus in sit magni labore, sapiente
+              repellat nam libero explicabo aspernatur rerum facere, incidunt
+              eligendi consequatur magnam inventore voluptatem illo. Nihil,
+              asperiores!
+            </p>
+          </div>
+          <div className="mb-10">
+            <h1
+              id="PenurunanRumus"
+              className="z-10 pt-8 pb-2 text-2xl font-semibold bg-white rounded-md lg:pt-0"
+            >
+              Penurunan Rumus
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
+              enim provident tenetur? Earum voluptas, rerum aliquid corporis,
+              sit veritatis laborum aut eum sed saepe natus esse quas expedita
+              animi! Quasi odio architecto impedit voluptatum eligendi nihil
+              placeat molestiae at vitae consequatur, autem, eos hic nemo
+              debitis recusandae deleniti asperiores? Officia quam eaque
+              excepturi facere, eligendi perferendis iste. Accusantium nam dolor
+              doloremque unde expedita sunt cumque blanditiis, corrupti, in sit
+              ipsum qui laboriosam hic quidem, odio ad. In officia, pariatur
+              exercitationem provident deserunt neque excepturi nisi voluptates
+              saepe quidem commodi esse, atque odio incidunt voluptatum porro
+              ipsum reiciendis iusto nostrum laboriosam. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Laborum quibusdam ipsa nostrum
+              facilis qui nisi ratione molestias, sequi dolores nihil sint
+              corporis tenetur nam illum accusantium reprehenderit eos! Eligendi
+              illo iste, at obcaecati quaerat corporis qui iusto eveniet soluta
+              unde sunt rem? Corrupti, quidem! Aspernatur perspiciatis quibusdam
+              iure laborum perferendis eligendi quas dolor quia, sit expedita
+              modi quis nam aliquid deserunt amet soluta cumque at eaque dolores
+              dolore corporis libero provident consectetur quidem. Repudiandae
+              sed debitis omnis corrupti possimus in sit magni labore, sapiente
+              repellat nam libero explicabo aspernatur rerum facere, incidunt
+              eligendi consequatur magnam inventore voluptatem illo. Nihil,
+              asperiores!
+            </p>
+          </div>
+          <div className="mb-10">
+            <h1
+              id="ContohSoal"
+              className="pt-8 pb-2 text-2xl font-semibold bg-white rounded-md lg:pt-0"
+            >
+              Contoh Soal
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
+              enim provident tenetur? Earum voluptas, rerum aliquid corporis,
+              sit
+            </p>
+            <ExampleMain type="Contoh Soal Mudah" tambahan="space-y-2">
+              <ExampleChild type="Teori Kinetik Gas">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, nemo.
+              </ExampleChild>
+              <ExampleChild type="Teori Kinetik Gas">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, nemo.
+              </ExampleChild>
+              <ExampleChild type="Teori Kinetik Gas">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, nemo.
+              </ExampleChild>
+              <ExampleChild type="Teori Kinetik Gas">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, nemo.
+              </ExampleChild>
+              <ExampleChild type="Teori Kinetik Gas">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, nemo.
+              </ExampleChild>
+              <ExampleChild type="Teori Kinetik Gas">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, nemo.
+              </ExampleChild>
 
-            <ExampleChild type="Teori Kinetik Gas">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-              nemo.
-            </ExampleChild>
-            <ExampleChild type="Teori Kinetik Gas">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-              nemo.
-            </ExampleChild>
-          </ExampleMain>
-          <ExampleMain type="Contoh Soal Mudah">
-            <ExampleChild type="Teori Kinetik Gas">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-              nemo.
-            </ExampleChild>
-          </ExampleMain>
-          <ExampleMain type="Contoh Soal Mudah">
-            <ExampleChild type="Teori Kinetik Gas">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-              nemo.
-            </ExampleChild>
-          </ExampleMain>
-          <ExampleMain type="Contoh Soal Mudah">
-            <ExampleChild type="Teori Kinetik Gas">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-              nemo.
-            </ExampleChild>
-          </ExampleMain>
-          <ExampleMain type="Contoh Soal Mudah">
-            <ExampleChild type="Teori Kinetik Gas">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-              nemo.
-            </ExampleChild>
-          </ExampleMain>
-          <ExampleMain type="Contoh Soal Mudah">
-            <ExampleChild type="Teori Kinetik Gas">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-              nemo.
-            </ExampleChild>
-          </ExampleMain>
-        </div>
+              <ExampleChild type="Teori Kinetik Gas">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, nemo.
+              </ExampleChild>
+              <ExampleChild type="Teori Kinetik Gas">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, nemo.
+              </ExampleChild>
+
+              <ExampleChild type="Teori Kinetik Gas">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, nemo.
+              </ExampleChild>
+              <ExampleChild type="Teori Kinetik Gas">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, nemo.
+              </ExampleChild>
+            </ExampleMain>
+            <ExampleMain type="Contoh Soal Mudah">
+              <ExampleChild type="Teori Kinetik Gas">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, nemo.
+              </ExampleChild>
+            </ExampleMain>
+            <ExampleMain type="Contoh Soal Mudah">
+              <ExampleChild type="Teori Kinetik Gas">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, nemo.
+              </ExampleChild>
+            </ExampleMain>
+            <ExampleMain type="Contoh Soal Mudah">
+              <ExampleChild type="Teori Kinetik Gas">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, nemo.
+              </ExampleChild>
+            </ExampleMain>
+            <ExampleMain type="Contoh Soal Mudah">
+              <ExampleChild type="Teori Kinetik Gas">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, nemo.
+              </ExampleChild>
+            </ExampleMain>
+            <ExampleMain type="Contoh Soal Mudah">
+              <ExampleChild type="Teori Kinetik Gas">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti, nemo.
+              </ExampleChild>
+            </ExampleMain>
+          </div>
+        </section>
       </div>
     </ChapterLayout>
   );

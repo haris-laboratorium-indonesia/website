@@ -5,7 +5,7 @@ const InfoBox = ({ id, svg, name, description }) => {
       <div className="pl-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-8 h-8 text-blue-harislab"
+          className="w-8 h-8 text-harislab"
           responsive="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -20,7 +20,7 @@ const InfoBox = ({ id, svg, name, description }) => {
         </svg>
       </div>
       {/* Name */}
-      <div className="pl-3 mt-3 mb-2 border-l border-blue-500">
+      <div className="pl-3 mt-3 mb-2 border-l border-harislab">
         <h1 className="font-semibold ">{name}</h1>
       </div>
       {/* description */}

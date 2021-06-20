@@ -12,24 +12,36 @@ const Beranda = () => {
     <main className="">
       {/* Hero */}
 
-      <article className="relative w-full py-5 lg:py-16 lg:px-0 font-inter ">
+      <article className="relative w-full py-10 lg:py-16 lg:px-0 font-inter ">
         <div className="text-4xl font-bold text-center text-black sm:text-6xl ">
           Laboratorium
         </div>
-        <div className="text-4xl font-bold text-center text-blue-500 sm:text-6xl ">
+        <div className="text-4xl font-bold text-center text-harislab sm:text-6xl ">
           untuk Pelajar
         </div>
-        <p className="mt-5 leading-tight text-center text-black">
+        <p className="mt-5 text-sm leading-tight text-center text-black">
           Materi FisMat, Flash Card, Kalkulator, Animasi, Scan soal, Games,
           Booking Les.
         </p>
-        <div className="flex justify-center mt-5 ">
-          <Link href="/signUp">
-            <a className="rounded-lg text-center w-1/2 sm:w-1/6 px-3 py-2.5 bg-blue-harislab text-white  shadow-md hover:shadow-none hover:bg-opacity-80">
-              Mulai Sekarang
-            </a>
-          </Link>
-        </div>
+        <Link href="/signUp">
+          <a className="w-full  mt-5 flex text-center items-center justify-center  px-3 py-2.5 underline hover:no-underline text-harislab   hover:bg-opacity-80">
+            Pelajari lebih lanjut
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className={`text-harislab w-5 h-5`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </a>
+        </Link>
       </article>
 
       {/* Cara kami menyajikan informasi */}
@@ -72,9 +84,9 @@ const Beranda = () => {
           harislab vs zenius vs ruangguru
         </header>
         <section className="mx-auto overflow-x-auto sm:gap-5 lg:px-0">
-          <table className="w-full border border-blue-300">
+          <table className="w-full border border-harislab">
             <thead>
-              <tr className="divide-x divide-blue-300 ">
+              <tr className="divide-x divide-harislab ">
                 <th className={th}>VS</th>
                 <th className={th}>HarisLab</th>
                 <th className={th}>Zenius</th>
@@ -82,29 +94,29 @@ const Beranda = () => {
                 <th className={th}>Buku Paket</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-blue-300">
-              <tr className="divide-x divide-blue-300">
+            <tbody className="divide-y divide-harislab">
+              <tr className="divide-x divide-harislab">
                 <td className={td}>Harga</td>
                 <td className={td}>25rb/bln</td>
                 <td className={td}>50rb/bln</td>
                 <td className={td}>80rb/bln</td>
                 <td className={td}>200rb/bln</td>
               </tr>
-              <tr className="divide-x divide-blue-300">
+              <tr className="divide-x divide-harislab">
                 <td className={td}>Update Informasi</td>
                 <td className={td}>Selalu Update</td>
                 <td className={td}>Selalu Update</td>
                 <td className={td}>Selalu Update</td>
                 <td className={td}>Tidak Update</td>
               </tr>
-              <tr className="divide-x divide-blue-300">
+              <tr className="divide-x divide-harislab">
                 <td className={td}>Durabilitas</td>
                 <td className={td}>Aman</td>
                 <td className={td}>Aman</td>
                 <td className={td}>Aman</td>
                 <td className={td}>Mudah rusak jika terkena air dan tekanan</td>
               </tr>
-              <tr className="divide-x divide-blue-300">
+              <tr className="divide-x divide-harislab">
                 <td className={td}>Mobilitas</td>
                 <td className={td}>Mudah dibawa</td>
                 <td className={td}>Mudah dibawa</td>

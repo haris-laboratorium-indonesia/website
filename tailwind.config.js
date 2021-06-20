@@ -6,6 +6,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
+      harislab: "#007AFF",
       black: "#262626",
       white: "#FFFFFF",
       gray: colors.trueGray,
@@ -22,11 +23,6 @@ module.exports = {
       fontFamily: {
         inter: ["Inter"],
         mw: ["Merriweather"],
-      },
-      colors: {
-        blue: {
-          harislab: "#007AFF",
-        },
       },
     },
   },
