@@ -1,11 +1,36 @@
 import Link from "next/link";
 import { Menu } from "@headlessui/react";
+
+const Login = () => {
+  return (
+    <Link href="/login">
+      <a className="block">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-6 h-6 text-gray-700"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1}
+            d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+          />
+        </svg>
+      </a>
+    </Link>
+  );
+};
 const NavMobile = () => {
   return (
     <nav className="z-20 flex items-center justify-between px-5 py-2 md:hidden">
+      <Login />
+
       {/* HarisLab */}
       <Link href="/">
-        <a className="items-center block w-full text-xl font-semibold font-mw">
+        <a className="items-center block w-full text-xl font-semibold text-center font-mw">
           <span className="font-bold">Haris</span>
           <span className="font-light">Lab</span>
         </a>
@@ -19,7 +44,7 @@ const NavMobile = () => {
               {open ? <X /> : <HamburgerMenu />}
             </Menu.Button>
 
-            <Menu.Items className="absolute right-0 z-50 w-full min-h-screen p-5 origin-top-right bg-gray-100 border-b border-gray-600 shadow-inner mt-11">
+            <Menu.Items className="absolute right-0 z-50 w-full min-h-screen p-5 mt-10 origin-top-right bg-gray-100 border-b border-gray-600 shadow-inner">
               {/* Search */}
               <section className="mb-5  flex items-center   p-1.5 rounded-lg bg-gray-200 border-[1.4px] border-gray-200 focus-within:border-black ">
                 <SearchIcon />
@@ -327,7 +352,7 @@ const HamburgerMenu = () => {
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={1.5}
+        strokeWidth={1}
         d="M4 8h16M4 16h16"
       />
     </svg>

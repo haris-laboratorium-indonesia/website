@@ -5,15 +5,15 @@ const ExampleChild = ({ type, children }) => {
   return (
     <Disclosure
       as="div"
-      className="flex flex-col w-full rounded-md bg-rose-100"
+      className="flex flex-col w-full bg-gray-200 rounded-md"
     >
       {({ open }) => (
         <>
           <Disclosure.Button
             as="div"
-            className="flex items-center justify-between px-4 py-2 rounded-md focus:outline-none  cursor-pointer"
+            className="flex items-center justify-between px-4 py-2 rounded-md cursor-pointer focus:outline-none"
           >
-            <div className="font-semibold text-rose-500">{type}</div>
+            <div className="font-semibold text-gray-700">{type}</div>
             <HiOutlineChevronDown
               className={`${open ? "transform rotate-180" : ""} block`}
             />

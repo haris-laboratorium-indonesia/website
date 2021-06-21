@@ -26,6 +26,42 @@ const List = () => {
     </svg>
   );
 };
+const Down = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-6 h-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1}
+        d="M19 9l-7 7-7-7"
+      />
+    </svg>
+  );
+};
+const Up = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-6 h-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1}
+        d="M5 15l7-7 7 7"
+      />
+    </svg>
+  );
+};
 const termodinamika = () => {
   const daftarIsi = "block text-blue-500 hover:underline hover:text-blue-700";
   const td = " text-left text-sm p-2";
@@ -36,46 +72,45 @@ const termodinamika = () => {
         <div className="sticky top-0 z-40 lg:w-1/4">
           <Menu
             as="div"
-            className="sticky top-0 z-30 flex flex-col items-center w-full py-2 mb-5 bg-white border-b border-gray-400 lg:top-3 sm:py-2 "
+            className="sticky top-0 z-30 flex flex-col items-center w-full py-2 mb-5 bg-white border-b border-gray-300 lg:top-3 "
           >
-            <Menu.Button className="flex flex-row items-center justify-between w-full focus:outline-none ">
-              <Link href="/materi/fisika">
-                <a className="p-1 text-gray-800 rounded-md hover:bg-gray-100">
-                  <HiOutlineChevronLeft />
-                </a>
-              </Link>
-              <div>Termodinamika</div>
-              <div className="p-1 rounded-md hover:bg-gray-100">
-                <List />
-              </div>
-            </Menu.Button>
-            <Menu.Items className="flex flex-col w-full p-3 mt-2 space-y-2 bg-gray-100 rounded-lg ">
-              <Menu.Item>
-                <a className={daftarIsi} href="#Pengenalan">
-                  Pengenalan
-                </a>
-              </Menu.Item>
-              <Menu.Item>
-                <a className={daftarIsi} href="#Variabel">
-                  Variabel
-                </a>
-              </Menu.Item>
-              <Menu.Item>
-                <a className={daftarIsi} href="#Rumus">
-                  Rumus
-                </a>
-              </Menu.Item>
-              <Menu.Item>
-                <a className={daftarIsi} href="#PenurunanRumus">
-                  Penurunan Rumus
-                </a>
-              </Menu.Item>
-              <Menu.Item>
-                <a className={daftarIsi} href="#ContohSoal">
-                  ContohSoal
-                </a>
-              </Menu.Item>
-            </Menu.Items>
+            {({ open }) => (
+              <>
+                <Menu.Button className="flex flex-row items-center justify-between w-full focus:outline-none ">
+                  <div className="text-lg font-semibold">Termodinamika</div>
+                  <div className="p-1 rounded-md hover:bg-gray-100">
+                    {open ? <Up /> : <Down />}
+                  </div>
+                </Menu.Button>
+                <Menu.Items className="flex flex-col w-full p-3 mt-2 space-y-2 bg-gray-100 rounded-lg ">
+                  <Menu.Item>
+                    <a className={daftarIsi} href="#Pengenalan">
+                      Pengenalan
+                    </a>
+                  </Menu.Item>
+                  <Menu.Item>
+                    <a className={daftarIsi} href="#Variabel">
+                      Variabel
+                    </a>
+                  </Menu.Item>
+                  <Menu.Item>
+                    <a className={daftarIsi} href="#Rumus">
+                      Rumus
+                    </a>
+                  </Menu.Item>
+                  <Menu.Item>
+                    <a className={daftarIsi} href="#PenurunanRumus">
+                      Penurunan Rumus
+                    </a>
+                  </Menu.Item>
+                  <Menu.Item>
+                    <a className={daftarIsi} href="#ContohSoal">
+                      ContohSoal
+                    </a>
+                  </Menu.Item>
+                </Menu.Items>
+              </>
+            )}
           </Menu>
         </div>
 
