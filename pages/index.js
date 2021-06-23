@@ -4,14 +4,30 @@ import { weCareAbouts } from "../lib/weCareAbouts";
 import { FAQs } from "../lib/FAQs";
 import InfoBox from "../components/InfoBox";
 import { sendInformations } from "../lib/sendInformations";
+import Script from "next/script";
 
 const Beranda = () => {
+  // const yes = () => {
+  //   return (
+  //     <Script
+  //       dangerouslySetInnerHTML={{
+  //         __html: `alert("button pressed")`,
+  //       }}
+  //     />
+  //   );
+  // };
+  const yes = () => {
+    document.getElementById("kotak").classList.toggle("w-10");
+  };
   const td = " text-left text-sm p-2";
   const th = "p-2 text-left text-base font-medium text-blue-500 bg-blue-50";
   return (
     <main className="">
       {/* Hero */}
-
+      <button onClick={yes}>buttonsdfsldfkjsldkjflsdk</button>
+      <div className="w-10 h-10 bg-red-500" id="kotak">
+        kotak
+      </div>
       <article className="relative w-full py-10 lg:py-16 lg:px-0 font-inter ">
         <div className="text-4xl font-bold text-center text-black sm:text-6xl ">
           Laboratorium

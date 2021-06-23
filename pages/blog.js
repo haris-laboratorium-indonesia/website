@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import Container from "/components/Container";
 import BlogPost from "/components/BlogPost";
 import { getAllFilesFrontMatter } from "/lib/mdx";

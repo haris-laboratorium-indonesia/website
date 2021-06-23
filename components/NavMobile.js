@@ -26,7 +26,10 @@ const Login = () => {
 const NavMobile = () => {
   return (
     <nav className="z-20 flex items-center justify-between px-5 py-2 md:hidden">
-      <Login />
+      {/* <Login /> */}
+      <Link href="/login">
+        <a className="text-xs">Login</a>
+      </Link>
 
       {/* HarisLab */}
       <Link href="/">
@@ -101,27 +104,7 @@ const NavMobile = () => {
                       </button>
                     )}
                   </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg ">
-                        {active ? (
-                          <Link href="/bookingLes">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Calender />
-                              Booking Les
-                            </a>
-                          </Link>
-                        ) : (
-                          <Link href="/bookingLes">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Calender />
-                              Booking Les
-                            </a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
+
                   <Menu.Item>
                     {({ active }) => (
                       <button className="w-full text-left text-black rounded-lg ">
@@ -137,27 +120,6 @@ const NavMobile = () => {
                             <a className="flex items-center p-2 rounded-md">
                               <Cart />
                               Merchandise
-                            </a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg ">
-                        {active ? (
-                          <Link href="/login">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Masuk />
-                              Login
-                            </a>
-                          </Link>
-                        ) : (
-                          <Link href="/login">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Masuk />
-                              Login
                             </a>
                           </Link>
                         )}
@@ -197,14 +159,14 @@ const NavMobile = () => {
                           <Link href="/kartu">
                             <a className="flex items-center p-2 rounded-md">
                               <Kartu />
-                              Kartu
+                              Flash Card
                             </a>
                           </Link>
                         ) : (
                           <Link href="/kartu">
                             <a className="flex items-center p-2 rounded-md">
                               <Kartu />
-                              Kartu
+                              Flash Card
                             </a>
                           </Link>
                         )}
@@ -236,59 +198,17 @@ const NavMobile = () => {
                     {({ active }) => (
                       <button className="w-full text-left text-black rounded-lg ">
                         {active ? (
-                          <Link href="/animasi">
+                          <Link href="/bookingLes">
                             <a className="flex items-center p-2 rounded-md">
-                              <Play />
-                              Animasi
+                              <Calender />
+                              Booking Les
                             </a>
                           </Link>
                         ) : (
-                          <Link href="/animasi">
+                          <Link href="/bookingLes">
                             <a className="flex items-center p-2 rounded-md">
-                              <Play />
-                              Animasi
-                            </a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg ">
-                        {active ? (
-                          <Link href="/scan">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Camera />
-                              Scan
-                            </a>
-                          </Link>
-                        ) : (
-                          <Link href="/scan">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Camera />
-                              Scan
-                            </a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg ">
-                        {active ? (
-                          <Link href="/games">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Puzzle />
-                              Games
-                            </a>
-                          </Link>
-                        ) : (
-                          <Link href="/games">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Puzzle />
-                              Games
+                              <Calender />
+                              Booking Les
                             </a>
                           </Link>
                         )}

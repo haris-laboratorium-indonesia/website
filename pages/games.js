@@ -4,7 +4,7 @@ import Judul from "../components/Judul";
 const permainan = () => {
   return (
     <>
-      <Judul page="Games" textColor="text-fuschsia-500" />
+      <Judul page="Games"  />
       <ComingSoon />
     </>
   );

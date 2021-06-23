@@ -6,7 +6,7 @@ import NavMobile from "./NavMobile";
 const Layout = ({ children }) => {
   return (
     <main className="font-inter">
-      <Head>
+      {/* <Head>
         <title>Haris Lab</title>
         <link rel="icon" href="/hahaha.ico" />
         <meta
@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
         />
         <meta property="og:url" content="https://harislab.com/" />
         <meta property="og:type" content="website" />
-      </Head>
+      </Head> */}
 
       <main className="z-50 w-full h-auto mx-auto bg-white border-b border-gray-300 ">
         <main className="w-full max-w-5xl mx-auto">

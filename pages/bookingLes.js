@@ -1,9 +1,9 @@
-import Tab from "../components/Judul";
+import Judul from "../components/Judul";
 
 const bookingLes = () => {
   return (
     <main>
-      <Tab page="Booking Les" />
+      <Judul page="Booking Les" />
     </main>
   );
 };

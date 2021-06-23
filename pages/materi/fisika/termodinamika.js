@@ -5,69 +5,36 @@ import ChapterLayout from "../../../components/ChapterLayout";
 import ExampleMain from "../../../components/ExampleMain";
 import ExampleChild from "../../../components/ExampleChild";
 import { Menu } from "@headlessui/react";
-
-const List = () => {
-  return (
-    <svg
-      className="w-5 h-5"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      fill="none"
-    >
-      <path d="M8 6h13" />
-      <path d="M8 12h13" />
-      <path d="M8 18h13" />
-      <path d="M3 6h.01" />
-      <path d="M3 12h.01" />
-      <path d="M3 18h.01" />
-    </svg>
-  );
-};
-const Down = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={1}
-        d="M19 9l-7 7-7-7"
-      />
-    </svg>
-  );
-};
-const Up = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={1}
-        d="M5 15l7-7 7 7"
-      />
-    </svg>
-  );
-};
+import monterey from "../../../public/monterey.jpg";
+import Script from "next/script";
+import Head from "next/head";
 const termodinamika = () => {
   const daftarIsi = "block text-blue-500 hover:underline hover:text-blue-700";
   const td = " text-left text-sm p-2";
   const th = "p-2 text-left text-base font-medium text-rose-500 bg-rose-50";
   return (
     <ChapterLayout chapter="Termodinamika">
+      <Script
+        src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"
+        onLoad={() => {
+          document.addEventListener("DOMContentLoaded", function () {
+            renderMathInElement(document.body, {
+              // customised options
+              // • auto-render specific keys, e.g.:
+              delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true },
+              ],
+              // • rendering keys, e.g.:
+              throwOnError: false,
+            });
+          });
+        }}
+      />
+      \[This is an example of inline \\(\LaTeX\\). The following is Stokes'
+      theorem in a `displaymath`\]
       <div className="flex flex-col lg:flex-row lg:space-x-6">
         <div className="sticky top-0 z-40 lg:w-1/4">
           <Menu
@@ -113,7 +80,6 @@ const termodinamika = () => {
             )}
           </Menu>
         </div>
-
         <section className="lg:w-3/4">
           <div className="mb-10">
             <h1
@@ -124,10 +90,10 @@ const termodinamika = () => {
             </h1>
             <div className="z-10 w-full overflow-hidden rounded-lg">
               <Image
-                src="/monterey-dark.jpg"
+                src={monterey}
                 alt="MacOS Monteret Light Wallpaper"
-                width={6008}
-                height={3379}
+                placeholder="blur"
+                layout="responsive"
                 priority
               />
             </div>
@@ -352,3 +318,60 @@ const termodinamika = () => {
   );
 };
 export default termodinamika;
+
+const List = () => {
+  return (
+    <svg
+      className="w-5 h-5"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      fill="none"
+    >
+      <path d="M8 6h13" />
+      <path d="M8 12h13" />
+      <path d="M8 18h13" />
+      <path d="M3 6h.01" />
+      <path d="M3 12h.01" />
+      <path d="M3 18h.01" />
+    </svg>
+  );
+};
+const Down = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-6 h-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1}
+        d="M19 9l-7 7-7-7"
+      />
+    </svg>
+  );
+};
+const Up = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-6 h-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1}
+        d="M5 15l7-7 7 7"
+      />
+    </svg>
+  );
+};

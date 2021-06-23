@@ -10,7 +10,7 @@ const ExampleMain = ({ type, children, tambahan }) => {
             as="div"
             className="flex items-center justify-between px-4 py-2 rounded-md cursor-pointer focus:outline-none"
           >
-            <div className="font-semibold text-gray-700">{type}</div>
+            <div className="text-gray-700">{type}</div>
 
             <HiOutlineChevronDown
               className={`${open ? "transform rotate-180" : ""} block`}
