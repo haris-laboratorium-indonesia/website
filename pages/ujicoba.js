@@ -1,3 +1,7 @@
+import { useState, useEffect } from "react";
+import "katex/dist/katex.min.css";
+import TeX from "@matejmazur/react-katex";
+
 export default function ujicoba() {
   const yes = () => {
     document.getElementById("kotak").classList.toggle("w-10");

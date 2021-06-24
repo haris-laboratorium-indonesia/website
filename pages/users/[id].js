@@ -1,11 +1,15 @@
 import { useRouter } from "next/router";
+import Layout from "../../components/Layout";
 
 const userDetails = (props) => {
   const { user } = props;
   const router = useRouter();
   const { id } = router.query;
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
   return (
-    <>
+    <Layout title="Users" description="Users">
       <div className="text-2xl font-semibold sm:text-2xl">User {id}</div>
       <div className="inline-block p-2 bg-gray-100 rounded-md">
         <div>{user.name}</div>
@@ -13,7 +17,7 @@ const userDetails = (props) => {
         <div>{user.phone}</div>
         <div>{user.website}</div>
       </div>
-    </>
+    </Layout>
   );
 };
 

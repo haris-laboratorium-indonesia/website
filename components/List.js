@@ -27,7 +27,7 @@ const List = ({ title }) => {
             </div>
           </Menu.Button>
           <Menu.Items className="flex justify-end w-full ">
-            <div className="w-full p-1 bg-white border rounded-lg drop-shadow-2xl border-harislab sm:w-1/3">
+            <div className="w-full p-1 bg-white border border-gray-300 rounded-lg drop-shadow-2xl sm:w-1/3">
               <Menu.Item>
                 <a className={daftarIsi} href="#Pengenalan">
                   Pengenalan

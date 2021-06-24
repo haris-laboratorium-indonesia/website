@@ -1,11 +1,12 @@
 import { useRouter } from "next/router";
 import Judul from "../../components/Judul";
+import Layout from "../../components/Layout";
 
-const a = ({dataUsers}) => {
+const a = ({ dataUsers }) => {
   console.log(dataUsers);
   const router = useRouter();
   return (
-    <>
+    <Layout title="Users" description="Data User">
       <Judul page="Users" textColor="text-black" />
       <div className="grid grid-cols-4 gap-5">
         {dataUsers.map((user) => (
@@ -20,7 +21,7 @@ const a = ({dataUsers}) => {
           </div>
         ))}
       </div>
-    </>
+    </Layout>
   );
 };
 
