@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import Layout from "../components/Layout";
 
 const y = () => {
   const router = useRouter();
@@ -9,9 +10,11 @@ const y = () => {
     }, 4000);
   }, []);
   return (
-    <div className="flex items-center justify-center text-3xl">
-      Kamu nyasar !
-    </div>
+    <Layout title="404" description="Kamu nyasar !">
+      <div className="flex items-center justify-center text-3xl">
+        Kamu nyasar !
+      </div>
+    </Layout>
   );
 };
 

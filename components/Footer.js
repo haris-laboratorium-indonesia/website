@@ -4,8 +4,8 @@ const Footer = () => {
   const navigation =
     "block  text-gray-400 hover:underline hover:text-white hover:underline";
   return (
-    <footer className="bottom-0 w-full text-center bg-gray-800 ">
-      <section className="flex flex-col max-w-5xl px-5 py-10 mx-auto mt-10 space-y-10 text-left sm:flex-row sm:space-y-0 xl:px-0">
+    <footer className="bottom-0 w-full mt-20 text-center bg-gray-800">
+      <section className="flex flex-col max-w-5xl px-5 pt-5 pb-10 mx-auto mt-10 space-y-10 text-left sm:pt-0 sm:flex-row sm:space-y-0 xl:px-0">
         {/* Footer Navigation */}
         <article className="flex w-full sm:w-1/2">
           {/* LAINNYA */}

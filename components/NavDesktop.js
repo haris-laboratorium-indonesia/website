@@ -2,11 +2,10 @@ import Link from "next/link";
 
 const NavDesktop = () => {
   const nav =
-    "px-2.5 py-1  rounded-md transition duration-100 ease-out text-gray-800 border-white hover:border-gray-300 hover:bg-gray-50 border";
-  const lainnya = "hover:bg-gray-50 py-1 px-2.5 text-sm";
+    "px-2.5 py-1 rounded-md transition duration-100 ease-out  hover:bg-blue-100 ";
   return (
     <nav className="hidden md:block">
-      <nav className="flex flex-row items-center justify-between w-full px-5 py-3 md:flex xl:px-0">
+      <nav className="z-50 flex flex-row items-center justify-between w-full h-auto max-w-5xl px-5 py-4 mx-auto border-b border-gray-300 md:flex xl:px-0">
         <Link href="/">
           <a className="items-center block text-xl font-semibold font-mw">
             <span className="font-bold">Haris</span>
@@ -31,7 +30,7 @@ const NavDesktop = () => {
         </Link>
 
         <Link href="/login">
-          <a className="text-sm rounded-md text-black border border-black hover:bg-black hover:text-white  px-3 py-1.5">
+          <a className="text-sm rounded-md text-white border duration-200 border-white hover:border-harislab hover:bg-white bg-harislab hover:text-harislab px-3 pt-1 pb-1.5">
             Login
           </a>
         </Link>

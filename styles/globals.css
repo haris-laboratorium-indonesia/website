@@ -20,11 +20,11 @@
  * If omitted, Tailwind will append these classes to the very end of
  * your stylesheet by default.
  */
-@tailwind screens;
+@tailwind variants;
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 20px;
+  scroll-padding-top: 60px;
 }
 
 body {

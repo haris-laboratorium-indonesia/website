@@ -1,9 +1,16 @@
 import Judul from "../components/Judul";
+import Layout from "../components/Layout";
+
 const kartu = () => {
   return (
-    <div>
-      <Judul page="Flash Card" />
-    </div>
+    <Layout
+      title="Flash Card | Haris Lab"
+      description="Flash Card untuk belajar"
+    >
+      <div>
+        <Judul page="Flash Card" />
+      </div>
+    </Layout>
   );
 };
 

@@ -1,36 +1,10 @@
 import ChapterBox from "../../components/ChapterBox";
 import TabMath from "../../components/TabMath";
-import { useState, useEffect } from "react";
+import Layout from "../../components/Layout";
 
 const matematika = () => {
-  const [name, setName] = useState("");
-  const handleChange = (e) => setName(e.target.value);
-  const [name2, setName2] = useState("");
-  const handleChange2 = (e) => setName2(e.target.value);
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    window.localStorage.setItem("name", name);
-  }, [name]);
   return (
-    <main>
-      <button onClick={() => setCount((c) => c + 1)}>{count}</button>
-      <div className="">
-        <form action="">
-          <label htmlFor="name">Name</label>
-          <input onChange={handleChange} type="text" id="name" />
-        </form>
-        {name ? <strong>Hello {name}</strong> : "Please type your name"}
-      </div>
-
-      <div className="">
-        <form action="">
-          <label htmlFor="name2">Name2</label>
-          <input onChange={handleChange2} type="text" id="name2" />
-        </form>
-        {name2 ? <strong>Hello {name2}</strong> : "Please type your name"}
-      </div>
-
+    <Layout title="Materi Matematika" description="Materi Matematika SMP SMA">
       <TabMath
         page="Materi"
         backTo="/materi/matematika"
@@ -59,7 +33,7 @@ const matematika = () => {
         <ChapterBox title="Statistika" to="linear" />
         <ChapterBox title="Peluang" to="linear" />
       </section>
-    </main>
+    </Layout>
   );
 };
 export default matematika;

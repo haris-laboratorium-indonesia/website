@@ -25,7 +25,7 @@ const Login = () => {
 };
 const NavMobile = () => {
   return (
-    <nav className="z-20 flex items-center justify-between px-5 py-2 md:hidden">
+    <nav className="z-50 flex items-center justify-between w-full h-auto max-w-5xl px-5 py-2 mx-auto  md:hidden">
       {/* <Login /> */}
       <Link href="/login">
         <a className="text-xs">Login</a>
@@ -49,11 +49,11 @@ const NavMobile = () => {
 
             <Menu.Items className="absolute right-0 z-50 w-full min-h-screen p-5 mt-10 origin-top-right bg-gray-100 border-b border-gray-600 shadow-inner">
               {/* Search */}
-              <section className="mb-5  flex items-center   p-1.5 rounded-lg bg-gray-200 border-[1.4px] border-gray-200 focus-within:border-black ">
+              <section className="mb-5  flex items-center   p-1.5 rounded-lg bg-gray-300 border-[1.4px] border-gray-300 focus-within:border-black ">
                 <SearchIcon />
                 <input
                   type="text"
-                  className="w-full ml-1 text-black placeholder-gray-500 bg-gray-200 focus:outline-none focus:placeholder-black "
+                  className="w-full ml-1 text-black placeholder-gray-700 bg-gray-300 focus:outline-none focus:placeholder-black "
                   placeholder="Search"
                 />
               </section>
@@ -253,7 +253,7 @@ const X = () => {
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={1.5}
+        strokeWidth={1}
         d="M6 18L18 6M6 6l12 12"
       />
     </svg>
@@ -282,7 +282,7 @@ const HamburgerMenu = () => {
 const Folder = () => {
   return (
     <svg
-      className="w-5 h-5 mr-1.5"
+      className="w-5 h-5 mr-1"
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="1.5"
@@ -300,7 +300,7 @@ const Kartu = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-5 h-5 mr-1.5"
+      className="w-5 h-5 mr-1"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -319,7 +319,7 @@ const Kalkulator = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-5 h-5 mr-2 -ml-0.5"
+      className="w-5 h-5 mr-1.5 -ml-0.5"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -337,7 +337,7 @@ const Kalkulator = () => {
 const Play = () => {
   return (
     <svg
-      className="w-5 h-5 mr-1.5"
+      className="w-5 h-5 mr-1"
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="1.5"
@@ -354,7 +354,7 @@ const Play = () => {
 const Camera = () => {
   return (
     <svg
-      className="w-5 h-5 mr-1.5"
+      className="w-5 h-5 mr-1"
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="1.5"
@@ -371,7 +371,7 @@ const Camera = () => {
 const Puzzle = () => {
   return (
     <svg
-      className="w-5 h-5 mr-1.5"
+      className="w-5 h-5 mr-1"
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="1.5"
@@ -394,7 +394,7 @@ const Puzzle = () => {
 const Pen = () => {
   return (
     <svg
-      className="w-5 h-5 mr-1.5"
+      className="w-5 h-5 mr-1"
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="1.5"
@@ -411,7 +411,7 @@ const Pen = () => {
 const Award = () => {
   return (
     <svg
-      className="w-5 h-5 mr-1.5"
+      className="w-5 h-5 mr-1"
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="1.5"
@@ -428,7 +428,7 @@ const Award = () => {
 const Calender = () => {
   return (
     <svg
-      className="w-5 h-5 mr-1.5"
+      className="w-5 h-5 mr-1"
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="1.5"
@@ -447,7 +447,7 @@ const Calender = () => {
 const Cart = () => {
   return (
     <svg
-      className="w-5 h-5 mr-1.5"
+      className="w-5 h-5 mr-1"
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="1.5"
@@ -465,7 +465,7 @@ const Cart = () => {
 const Masuk = () => {
   return (
     <svg
-      className="w-5 h-5 mr-1.5"
+      className="w-5 h-5 mr-1"
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="1.5"

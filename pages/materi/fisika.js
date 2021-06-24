@@ -1,10 +1,10 @@
 import ChapterBox from "../../components/ChapterBox";
 import TabPhy from "../../components/TabPhy";
-import What from "../../components/What";
+import Layout from "../../components/Layout";
 
 const fisika = () => {
   return (
-    <main>
+    <Layout title="Materi Matematika" description="Materi Matematika SMP SMA">
       <TabPhy
         page="Materi"
         backTo="/materi/fisika"
@@ -31,7 +31,7 @@ const fisika = () => {
         <ChapterBox title="Gelombang Bunyi" to="fluida" />
         <ChapterBox title="Optik" to="fluida" />
       </section>
-    </main>
+    </Layout>
   );
 };
 
