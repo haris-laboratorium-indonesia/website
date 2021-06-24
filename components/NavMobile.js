@@ -1,36 +1,199 @@
-import Link from "next/link";
-import { Menu } from "@headlessui/react";
+import Link from 'next/link'
+import {Menu, Transition} from '@headlessui/react'
 
-const Login = () => {
-  return (
-    <Link href="/login">
-      <a className="block">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 text-gray-700"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1}
-            d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
-          />
-        </svg>
-      </a>
-    </Link>
-  );
-};
 const NavMobile = () => {
   return (
-    <nav className="z-50 flex items-center justify-between w-full h-auto max-w-5xl px-5 py-2 mx-auto  md:hidden">
-      {/* <Login /> */}
-      <Link href="/login">
-        <a className="text-xs">Login</a>
-      </Link>
+    <nav className="z-50 flex items-center justify-between w-full h-auto max-w-5xl px-5 py-3 mx-auto border-b border-gray-300 md:hidden">
+      {/* Menu */}
+      <Menu as="div" className="static flex justify-end ">
+        {({open}) => (
+          <>
+            <Menu.Button className="z-50 flex justify-end w-full  py-0.5 px-1 hover:bg-gray-100  rounded-md focus:outline-none">
+              {open ? <X /> : <HamburgerMenu />}
+            </Menu.Button>
+            <Transition
+              enter="transition duration-100"
+              enterFrom="transform scale-50 opacity-50"
+              enterTo="transform scale-100 opacity-100"
+              leave="transition duration-100"
+              leaveFrom="transform scale-100 opacity-100"
+              leaveTo="transform scale-95 opacity-0"
+            >
+              <Menu.Items className="absolute right-0 z-50 w-full min-h-screen p-5 mt-10 origin-top-right bg-gray-100 border-b border-gray-600 shadow-inner">
+                {/* Search */}
+                <section className="mb-5  flex items-center   p-1.5 rounded-lg bg-gray-300 border-[1.4px] border-gray-300 focus-within:border-black ">
+                  <SearchIcon />
+                  <input
+                    type="text"
+                    className="w-full ml-1 text-black placeholder-gray-700 bg-gray-300 focus:outline-none focus:placeholder-black "
+                    placeholder="Search"
+                  />
+                </section>
 
+                <section className="grid grid-cols-2 gap-2 pt-5 border-t border-gray-500">
+                  {/* Lainnya */}
+                  <div className="flex flex-col ">
+                    <div className="pl-2 text-xs text-gray-600">LAINNYA</div>
+                    <Menu.Item>
+                      {({active}) => (
+                        <button className="w-full text-left text-black rounded-lg ">
+                          {active ? (
+                            <Link href="/blog">
+                              <a className="flex items-center p-2 rounded-md">
+                                <Pen />
+                                Blog
+                              </a>
+                            </Link>
+                          ) : (
+                            <Link href="/blog">
+                              <a className="flex items-center p-2 rounded-md">
+                                <Pen />
+                                Blog
+                              </a>
+                            </Link>
+                          )}
+                        </button>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({active}) => (
+                        <button className="w-full text-left text-black rounded-lg ">
+                          {active ? (
+                            <Link href="/portofolio">
+                              <a className="flex items-center p-2 rounded-md">
+                                <Award />
+                                Portofolio
+                              </a>
+                            </Link>
+                          ) : (
+                            <Link href="/portofolio">
+                              <a className="flex items-center p-2 rounded-md">
+                                <Award />
+                                Portofolio
+                              </a>
+                            </Link>
+                          )}
+                        </button>
+                      )}
+                    </Menu.Item>
+
+                    <Menu.Item>
+                      {({active}) => (
+                        <button className="w-full text-left text-black rounded-lg ">
+                          {active ? (
+                            <Link href="/merchandise">
+                              <a className="flex items-center p-2 rounded-md">
+                                <Cart />
+                                Merchandise
+                              </a>
+                            </Link>
+                          ) : (
+                            <Link href="/merchandise">
+                              <a className="flex items-center p-2 rounded-md">
+                                <Cart />
+                                Merchandise
+                              </a>
+                            </Link>
+                          )}
+                        </button>
+                      )}
+                    </Menu.Item>
+                  </div>
+
+                  {/* Alat */}
+                  <div className="flex flex-col ">
+                    <div className="pl-2 text-xs text-gray-600">ALAT</div>
+                    <Menu.Item>
+                      {({active}) => (
+                        <button className="w-full text-left text-black rounded-lg ">
+                          {active ? (
+                            <Link href="/materi/matematika">
+                              <a className="flex items-center p-2 rounded-md">
+                                <Folder />
+                                Materi
+                              </a>
+                            </Link>
+                          ) : (
+                            <Link href="/materi/matematika">
+                              <a className="flex items-center p-2 rounded-md">
+                                <Folder />
+                                Materi
+                              </a>
+                            </Link>
+                          )}
+                        </button>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({active}) => (
+                        <button className="w-full text-left text-black rounded-lg ">
+                          {active ? (
+                            <Link href="/kartu">
+                              <a className="flex items-center p-2 rounded-md">
+                                <Kartu />
+                                Flash Card
+                              </a>
+                            </Link>
+                          ) : (
+                            <Link href="/kartu">
+                              <a className="flex items-center p-2 rounded-md">
+                                <Kartu />
+                                Flash Card
+                              </a>
+                            </Link>
+                          )}
+                        </button>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({active}) => (
+                        <button className="w-full text-left text-black rounded-lg ">
+                          {active ? (
+                            <Link href="/kalkulator">
+                              <a className="flex items-center p-2 rounded-md">
+                                <Kalkulator />
+                                Kalkulator
+                              </a>
+                            </Link>
+                          ) : (
+                            <Link href="/kalkulator">
+                              <a className="flex items-center p-2 rounded-md">
+                                <Kalkulator />
+                                Kalkulator
+                              </a>
+                            </Link>
+                          )}
+                        </button>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({active}) => (
+                        <button className="w-full text-left text-black rounded-lg ">
+                          {active ? (
+                            <Link href="/bookingLes">
+                              <a className="flex items-center p-2 rounded-md">
+                                <Calender />
+                                Booking Les
+                              </a>
+                            </Link>
+                          ) : (
+                            <Link href="/bookingLes">
+                              <a className="flex items-center p-2 rounded-md">
+                                <Calender />
+                                Booking Les
+                              </a>
+                            </Link>
+                          )}
+                        </button>
+                      )}
+                    </Menu.Item>
+                  </div>
+                </section>
+              </Menu.Items>
+            </Transition>
+          </>
+        )}
+      </Menu>
       {/* HarisLab */}
       <Link href="/">
         <a className="items-center block w-full text-xl font-semibold text-center font-mw">
@@ -39,193 +202,15 @@ const NavMobile = () => {
         </a>
       </Link>
 
-      {/* Menu */}
-      <Menu as="div" className="static flex justify-end ">
-        {({ open }) => (
-          <>
-            <Menu.Button className="z-50 flex justify-end w-full  py-0.5 px-1 hover:bg-gray-100  rounded-md focus:outline-none">
-              {open ? <X /> : <HamburgerMenu />}
-            </Menu.Button>
-
-            <Menu.Items className="absolute right-0 z-50 w-full min-h-screen p-5 mt-10 origin-top-right bg-gray-100 border-b border-gray-600 shadow-inner">
-              {/* Search */}
-              <section className="mb-5  flex items-center   p-1.5 rounded-lg bg-gray-300 border-[1.4px] border-gray-300 focus-within:border-black ">
-                <SearchIcon />
-                <input
-                  type="text"
-                  className="w-full ml-1 text-black placeholder-gray-700 bg-gray-300 focus:outline-none focus:placeholder-black "
-                  placeholder="Search"
-                />
-              </section>
-
-              <section className="grid grid-cols-2 gap-2 pt-5 border-t border-gray-500">
-                {/* Lainnya */}
-                <div className="flex flex-col ">
-                  <div className="pl-2 text-xs text-gray-600">LAINNYA</div>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg ">
-                        {active ? (
-                          <Link href="/blog">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Pen />
-                              Blog
-                            </a>
-                          </Link>
-                        ) : (
-                          <Link href="/blog">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Pen />
-                              Blog
-                            </a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg ">
-                        {active ? (
-                          <Link href="/portofolio">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Award />
-                              Portofolio
-                            </a>
-                          </Link>
-                        ) : (
-                          <Link href="/portofolio">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Award />
-                              Portofolio
-                            </a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
-
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg ">
-                        {active ? (
-                          <Link href="/merchandise">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Cart />
-                              Merchandise
-                            </a>
-                          </Link>
-                        ) : (
-                          <Link href="/merchandise">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Cart />
-                              Merchandise
-                            </a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
-                </div>
-
-                {/* Alat */}
-                <div className="flex flex-col ">
-                  <div className="pl-2 text-xs text-gray-600">ALAT</div>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg ">
-                        {active ? (
-                          <Link href="/materi/matematika">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Folder />
-                              Materi
-                            </a>
-                          </Link>
-                        ) : (
-                          <Link href="/materi/matematika">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Folder />
-                              Materi
-                            </a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg ">
-                        {active ? (
-                          <Link href="/kartu">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Kartu />
-                              Flash Card
-                            </a>
-                          </Link>
-                        ) : (
-                          <Link href="/kartu">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Kartu />
-                              Flash Card
-                            </a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg ">
-                        {active ? (
-                          <Link href="/kalkulator">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Kalkulator />
-                              Kalkulator
-                            </a>
-                          </Link>
-                        ) : (
-                          <Link href="/kalkulator">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Kalkulator />
-                              Kalkulator
-                            </a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black rounded-lg ">
-                        {active ? (
-                          <Link href="/bookingLes">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Calender />
-                              Booking Les
-                            </a>
-                          </Link>
-                        ) : (
-                          <Link href="/bookingLes">
-                            <a className="flex items-center p-2 rounded-md">
-                              <Calender />
-                              Booking Les
-                            </a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
-                </div>
-              </section>
-            </Menu.Items>
-          </>
-        )}
-      </Menu>
+      {/* <Login /> */}
+      <Link href="/login">
+        <a className="px-2 pb-1.5 pt-1 text-sm text-white rounded-md bg-harislab">Login</a>
+      </Link>
     </nav>
-  );
-};
+  )
+}
 
-export default NavMobile;
+export default NavMobile
 
 const SearchIcon = () => {
   return (
@@ -238,8 +223,8 @@ const SearchIcon = () => {
     >
       <path strokeWidth={1.4} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
     </svg>
-  );
-};
+  )
+}
 
 const X = () => {
   return (
@@ -250,15 +235,10 @@ const X = () => {
       viewBox="0 0 24 24"
       stroke="currentColor"
     >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={1}
-        d="M6 18L18 6M6 6l12 12"
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M6 18L18 6M6 6l12 12" />
     </svg>
-  );
-};
+  )
+}
 
 const HamburgerMenu = () => {
   return (
@@ -269,15 +249,10 @@ const HamburgerMenu = () => {
       viewBox="0 0 24 24"
       stroke="currentColor"
     >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={1}
-        d="M4 8h16M4 16h16"
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 8h16M4 16h16" />
     </svg>
-  );
-};
+  )
+}
 
 const Folder = () => {
   return (
@@ -293,8 +268,8 @@ const Folder = () => {
     >
       <path d="M2.707 7.454V5.62C2.707 4.725 3.469 4 4.409 4h4.843c.451 0 .884.17 1.204.474l.49.467c.126.12.296.186.473.186h8.399c.94 0 1.55.695 1.55 1.59v.737m-18.661 0h-.354a.344.344 0 00-.353.35l.508 11.587c.015.34.31.609.668.609h17.283c.358 0 .652-.269.667-.61L22 7.805a.344.344 0 00-.353-.35h-.278m-18.662 0h18.662" />
     </svg>
-  );
-};
+  )
+}
 
 const Kartu = () => {
   return (
@@ -312,8 +287,8 @@ const Kartu = () => {
         d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
       />
     </svg>
-  );
-};
+  )
+}
 
 const Kalkulator = () => {
   return (
@@ -331,8 +306,8 @@ const Kalkulator = () => {
         d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
       />
     </svg>
-  );
-};
+  )
+}
 
 const Play = () => {
   return (
@@ -348,8 +323,8 @@ const Play = () => {
       <path d="M13 19l9-7-9-7v14z" />
       <path d="M2 19l9-7-9-7v14z" />
     </svg>
-  );
-};
+  )
+}
 
 const Camera = () => {
   return (
@@ -365,8 +340,8 @@ const Camera = () => {
       <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z" />
       <circle cx="12" cy="13" r="4" />
     </svg>
-  );
-};
+  )
+}
 
 const Puzzle = () => {
   return (
@@ -386,8 +361,8 @@ const Puzzle = () => {
         d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
       />
     </svg>
-  );
-};
+  )
+}
 
 // ---------------------------------------------------------------------
 
@@ -405,8 +380,8 @@ const Pen = () => {
       <path d="M12 20h9" />
       <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
     </svg>
-  );
-};
+  )
+}
 
 const Award = () => {
   return (
@@ -422,8 +397,8 @@ const Award = () => {
       <circle cx="12" cy="8" r="7" />
       <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12" />
     </svg>
-  );
-};
+  )
+}
 
 const Calender = () => {
   return (
@@ -441,8 +416,8 @@ const Calender = () => {
       <path d="M8 2v4" />
       <path d="M3 10h18" />
     </svg>
-  );
-};
+  )
+}
 
 const Cart = () => {
   return (
@@ -459,8 +434,8 @@ const Cart = () => {
       <path d="M3 6h18" />
       <path d="M16 10a4 4 0 01-8 0" />
     </svg>
-  );
-};
+  )
+}
 
 const Masuk = () => {
   return (
@@ -475,5 +450,5 @@ const Masuk = () => {
     >
       <path d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
     </svg>
-  );
-};
+  )
+}

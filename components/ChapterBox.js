@@ -4,11 +4,11 @@ const ChapterBox = ({ to, title }) => {
   return (
     <main>
       <Link href={to}>
-        <a className="flex items-center justify-between w-full px-0 py-3 sm:px-2 sm:py-2 sm:hover:bg-gray-100 sm:hover:rounded-md ">
+        <a className="flex items-center justify-between w-full px-0 py-3 sm:px-1.5 sm:py-1.5 sm:hover:bg-gray-100 sm:hover:rounded-md ">
           <div className="flex items-center sm:justify-between">
             <Folder />
 
-            <p className="truncate">{title}</p>
+            <p className="text-gray-700 truncate">{title}</p>
           </div>
           <RightArrow a="text-gray-700" />
         </a>
@@ -41,7 +41,7 @@ export const RightArrow = (a) => {
 const Folder = (props) => {
   return (
     <svg
-      className="w-6 h-6 mr-1 text-gray-700"
+      className="w-6 h-6 mr-1 text-blue-400"
       viewBox="0 0 24 24"
       width="24"
       height="24"
@@ -49,11 +49,14 @@ const Folder = (props) => {
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
-      fill="#fff"
+      fill="#60A5FA"
       {...props}
     >
-      <path d="M2.707 7.454V5.62C2.707 4.725 3.469 4 4.409 4h4.843c.451 0 .884.17 1.204.474l.49.467c.126.12.296.186.473.186h8.399c.94 0 1.55.695 1.55 1.59v.737m-18.661 0h-.354a.344.344 0 00-.353.35l.508 11.587c.015.34.31.609.668.609h17.283c.358 0 .652-.269.667-.61L22 7.805a.344.344 0 00-.353-.35h-.278m-18.662 0h18.662" />
+      <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
     </svg>
   );
 };
 // komponen ini ada di homeMath.js, homePhy.js
+{/* <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+</svg> */}

@@ -26,7 +26,7 @@ const Beranda = () => {
             Booking Les.
           </p>
           <Link href="/signUp">
-            <a className="w-full  mt-5 flex text-center items-center justify-center  px-3 py-2.5 underline hover:no-underline text-harislab   hover:bg-opacity-80">
+            <a className="w-full  mt-5 flex text-center items-center justify-center  px-3 py-2.5 hover:underline text-harislab   hover:bg-opacity-80">
               Pelajari lebih lanjut
               <svg
                 xmlns="http://www.w3.org/2000/svg"

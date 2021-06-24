@@ -1,11 +1,12 @@
-import Judul from "../components/Judul";
+import Judul from '../components/Judul'
+import Layout from '../components/Layout'
 
 const bookingLes = () => {
   return (
-    <main>
+    <Layout title="Booking Les" description="Booking Les tidak pernah semudah ini">
       <Judul page="Booking Les" />
-    </main>
-  );
-};
+    </Layout>
+  )
+}
 
-export default bookingLes;
+export default bookingLes

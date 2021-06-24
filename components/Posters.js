@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { HiOutlinePlusSm } from "react-icons/hi";
-import { HiOutlineShare } from "react-icons/hi";
+import Image from "next/image"
+import { HiOutlinePlusSm } from "react-icons/hi"
+import { HiOutlineShare } from "react-icons/hi"
 
 const Posters = ({ key, title, image }) => {
   return (
@@ -34,7 +34,7 @@ const Posters = ({ key, title, image }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Posters;
+export default Posters

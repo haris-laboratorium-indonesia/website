@@ -1,12 +1,13 @@
-import Judul from "../components/Judul";
-import Posters from "../components/Posters";
-import { tshirts } from "../lib/tshirts";
-import { posters } from "../lib/posters";
-import Tshirts from "../components/Tshirts";
+import Judul from '../components/Judul'
+import Posters from '../components/Posters'
+import {tshirts} from '../lib/tshirts'
+import {posters} from '../lib/posters'
+import Tshirts from '../components/Tshirts'
+import Layout from '../components/Layout'
 
 const merchandise = () => {
   return (
-    <main>
+    <Layout title="Merchandise" description="Dapatkan Merchandise HarisLab sekarang juga.">
       <Judul page="Merchandise" />
 
       <div className="mt-20 mb-5 text-4xl font-semibold ">Kaos</div>
@@ -21,8 +22,8 @@ const merchandise = () => {
           <Posters key={p.id} title={p.title} image={p.image} />
         ))}
       </div>
-    </main>
-  );
-};
+    </Layout>
+  )
+}
 
-export default merchandise;
+export default merchandise

@@ -1,9 +1,9 @@
-import Judul from "../components/Judul";
-import Head from "next/head";
-import Script from "next/script";
+import Judul from '../components/Judul'
+import Layout from '../components/Layout'
+
 const kalkulator = () => {
   return (
-    <main>
+    <Layout title="Kalkulator" description="Kalkulator Matematika dan Fisika terbaik yang pernah dibuat.">
       <Judul page="Kalkulator" textColor="text-green-500" />
       <div className="calculator-grid bg-gradient-to-r from-green-500 to-cyan-500">
         <div className="output">
@@ -31,8 +31,8 @@ const kalkulator = () => {
         <button data-number>0</button>
         <button className="span-two">=</button>
       </div>
-    </main>
-  );
-};
+    </Layout>
+  )
+}
 
-export default kalkulator;
+export default kalkulator

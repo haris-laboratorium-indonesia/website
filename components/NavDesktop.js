@@ -1,8 +1,7 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 const NavDesktop = () => {
-  const nav =
-    "px-2.5 py-1 rounded-md transition duration-100 ease-out  hover:bg-blue-100 ";
+  const nav = 'px-2.5 pt-1 pb-1.5 rounded-md  duration-200  hover:text-harislab border border-white hover:border-harislab '
   return (
     <nav className="hidden md:block">
       <nav className="z-50 flex flex-row items-center justify-between w-full h-auto max-w-5xl px-5 py-4 mx-auto border-b border-gray-300 md:flex xl:px-0">
@@ -36,7 +35,7 @@ const NavDesktop = () => {
         </Link>
       </nav>
     </nav>
-  );
-};
+  )
+}
 
-export default NavDesktop;
+export default NavDesktop

@@ -1,14 +1,15 @@
-import Head from "next/head";
-import Footer from "./Footer";
-import NavDesktop from "./NavDesktop";
-import NavMobile from "./NavMobile";
-const Layout = ({ children, title, description }) => {
-  const image = "https://harislab.com/public/HarisLab.png";
-  const type = "website";
+import Head from 'next/head'
+import Footer from './Footer'
+import NavDesktop from './NavDesktop'
+import NavMobile from './NavMobile'
+const Layout = ({children, title, description}) => {
+  const image = 'https://harislab.com/public/HarisLab.png'
+  const type = 'website'
   return (
     <>
       <Head>
         <title>{title} | HarisLab</title>
+        <link rel="icon" href="/hahaha.ico" />
         <meta name="robots" content="follow, index" />
         <meta content={description} name="description" />
         <meta property="og:type" content={type} />
@@ -26,13 +27,11 @@ const Layout = ({ children, title, description }) => {
       <NavDesktop />
       <NavMobile />
 
-      <section className="w-full max-w-5xl min-h-screen px-5 pt-3 pb-10 mx-auto xl:px-0 font-inter">
-        {children}
-      </section>
+      <section className="w-full max-w-5xl min-h-screen px-5 pt-3 pb-10 mx-auto xl:px-0 font-inter">{children}</section>
 
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

@@ -1,8 +1,7 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 const Footer = () => {
-  const navigation =
-    "block  text-gray-400 hover:underline hover:text-white hover:underline";
+  const navigation = 'block  text-gray-400 hover:underline hover:text-white hover:underline'
   return (
     <footer className="bottom-0 w-full mt-20 text-center bg-gray-800">
       <section className="flex flex-col max-w-5xl px-5 pt-5 pb-10 mx-auto mt-10 space-y-10 text-left sm:pt-0 sm:flex-row sm:space-y-0 xl:px-0">
@@ -49,9 +48,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="">PT. Haris Laboratorium Indonesia</div>
-          <div className="">
-            Pondok Kacang Timur, Tangerang Selatan, Banten 15226, Indonesia
-          </div>
+          <div className="">Pondok Kacang Timur, Tangerang Selatan, Banten 15226, Indonesia</div>
           <div className="">harislabindonesia@gmail.com</div>
           <div className="flex flex-col w-full sm:flex-row">
             <div>
@@ -59,10 +56,16 @@ const Footer = () => {
               <span className="">Lab</span> LLC. &nbsp;
             </div>
           </div>
+          <div>
+            Crafted by{' '}
+            <a href="https://www.twitter.com/haritssr" target="_blank" className="text-harislab hover:underline">
+              Harits Syah
+            </a>
+          </div>
         </article>
       </section>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

@@ -1,7 +1,9 @@
+import Layout from '../components/Layout'
+
 const login = () => {
   return (
-    <main className="mt-16">
-      <form className="w-full p-5 mx-auto space-y-4 bg-white border border-gray-500 rounded-lg shadow-md sm:w-1/2">
+    <Layout title="Login" description="Login">
+      <form className="p-5 mx-auto space-y-4 bg-white border border-gray-500 rounded-lg shadow-md mt-16w-full sm:w-1/2">
         <h1 className="text-3xl font-medium">Login</h1>
         <section className="flex flex-col">
           <label className="text-sm" htmlFor="nama">
@@ -33,8 +35,8 @@ const login = () => {
           Login
         </button>
       </form>
-    </main>
-  );
-};
+    </Layout>
+  )
+}
 
-export default login;
+export default login
