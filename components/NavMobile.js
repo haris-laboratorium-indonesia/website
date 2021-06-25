@@ -1,202 +1,154 @@
 import Link from 'next/link'
-import {Menu, Transition} from '@headlessui/react'
+import {Menu} from '@headlessui/react'
 
 const NavMobile = () => {
+  const menu = 'flex items-center py-1 text text-lg'
+
   return (
     <nav className="z-50 flex items-center justify-between w-full h-auto max-w-5xl px-5 py-3 mx-auto border-b border-gray-300 md:hidden">
       {/* Menu */}
-      <Menu as="div" className="static flex justify-end ">
+      <Menu as="div" className="static flex justify-end text-">
         {({open}) => (
           <>
             <Menu.Button className="z-50 flex justify-end w-full  py-0.5 px-1 hover:bg-gray-100  rounded-md focus:outline-none">
               {open ? <X /> : <HamburgerMenu />}
             </Menu.Button>
-            <Transition
-              enter="transition duration-100"
-              enterFrom="transform scale-50 opacity-50"
-              enterTo="transform scale-100 opacity-100"
-              leave="transition duration-100"
-              leaveFrom="transform scale-100 opacity-100"
-              leaveTo="transform scale-95 opacity-0"
-            >
-              <Menu.Items className="absolute right-0 z-50 w-full min-h-screen p-5 mt-10 origin-top-right bg-gray-100 border-b border-gray-600 shadow-inner">
-                {/* Search */}
-                <section className="mb-5  flex items-center   p-1.5 rounded-lg bg-gray-300 border-[1.4px] border-gray-300 focus-within:border-black ">
-                  <SearchIcon />
-                  <input
-                    type="text"
-                    className="w-full ml-1 text-black placeholder-gray-700 bg-gray-300 focus:outline-none focus:placeholder-black "
-                    placeholder="Search"
-                  />
-                </section>
 
-                <section className="grid grid-cols-2 gap-2 pt-5 border-t border-gray-500">
-                  {/* Lainnya */}
-                  <div className="flex flex-col ">
-                    <div className="pl-2 text-xs text-gray-600">LAINNYA</div>
-                    <Menu.Item>
-                      {({active}) => (
-                        <button className="w-full text-left text-black rounded-lg ">
-                          {active ? (
-                            <Link href="/blog">
-                              <a className="flex items-center p-2 rounded-md">
-                                <Pen />
-                                Blog
-                              </a>
-                            </Link>
-                          ) : (
-                            <Link href="/blog">
-                              <a className="flex items-center p-2 rounded-md">
-                                <Pen />
-                                Blog
-                              </a>
-                            </Link>
-                          )}
-                        </button>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({active}) => (
-                        <button className="w-full text-left text-black rounded-lg ">
-                          {active ? (
-                            <Link href="/portofolio">
-                              <a className="flex items-center p-2 rounded-md">
-                                <Award />
-                                Portofolio
-                              </a>
-                            </Link>
-                          ) : (
-                            <Link href="/portofolio">
-                              <a className="flex items-center p-2 rounded-md">
-                                <Award />
-                                Portofolio
-                              </a>
-                            </Link>
-                          )}
-                        </button>
-                      )}
-                    </Menu.Item>
+            <Menu.Items className="absolute right-0 z-50 w-full min-h-screen p-5 mt-10 duration-300 origin-top-right bg-gray-100 border-b border-gray-600 shadow-inner">
+              {/* Search */}
+              <section className="mb-5 duration-200 flex items-center rounded-lg  p-1.5 bg-gray-300 border-[1.4px] border-gray-300 focus-within:border-gray-300 focus-within:bg-gray-100 ">
+                <SearchIcon />
+                <input
+                  type="text"
+                  className="w-full ml-1 text-black placeholder-gray-700 duration-200 bg-gray-300 focus:outline-none focus:placeholder-black focus:bg-gray-100 "
+                  placeholder="Search"
+                />
+              </section>
 
-                    <Menu.Item>
-                      {({active}) => (
-                        <button className="w-full text-left text-black rounded-lg ">
-                          {active ? (
-                            <Link href="/merchandise">
-                              <a className="flex items-center p-2 rounded-md">
-                                <Cart />
-                                Merchandise
-                              </a>
-                            </Link>
-                          ) : (
-                            <Link href="/merchandise">
-                              <a className="flex items-center p-2 rounded-md">
-                                <Cart />
-                                Merchandise
-                              </a>
-                            </Link>
-                          )}
-                        </button>
-                      )}
-                    </Menu.Item>
-                  </div>
+              <section className="grid grid-cols-2 gap-2 pt-5 border-t border-gray-500">
+                {/* Lainnya */}
+                <div className="flex flex-col ">
+                  <div className="text-gray-600 ">LAINNYA</div>
+                  <Menu.Item>
+                    {({active}) => (
+                      <button className="w-full text-left text-black ">
+                        {active ? (
+                          <Link href="/blog">
+                            <a className={menu}>Blog</a>
+                          </Link>
+                        ) : (
+                          <Link href="/blog">
+                            <a className={menu}>Blog</a>
+                          </Link>
+                        )}
+                      </button>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({active}) => (
+                      <button className="w-full text-left text-black ">
+                        {active ? (
+                          <Link href="/portofolio">
+                            <a className={menu}>Portofolio</a>
+                          </Link>
+                        ) : (
+                          <Link href="/portofolio">
+                            <a className={menu}>Portofolio</a>
+                          </Link>
+                        )}
+                      </button>
+                    )}
+                  </Menu.Item>
 
-                  {/* Alat */}
-                  <div className="flex flex-col ">
-                    <div className="pl-2 text-xs text-gray-600">ALAT</div>
-                    <Menu.Item>
-                      {({active}) => (
-                        <button className="w-full text-left text-black rounded-lg ">
-                          {active ? (
-                            <Link href="/materi/matematika">
-                              <a className="flex items-center p-2 rounded-md">
-                                <Folder />
-                                Materi
-                              </a>
-                            </Link>
-                          ) : (
-                            <Link href="/materi/matematika">
-                              <a className="flex items-center p-2 rounded-md">
-                                <Folder />
-                                Materi
-                              </a>
-                            </Link>
-                          )}
-                        </button>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({active}) => (
-                        <button className="w-full text-left text-black rounded-lg ">
-                          {active ? (
-                            <Link href="/kartu">
-                              <a className="flex items-center p-2 rounded-md">
-                                <Kartu />
-                                Flash Card
-                              </a>
-                            </Link>
-                          ) : (
-                            <Link href="/kartu">
-                              <a className="flex items-center p-2 rounded-md">
-                                <Kartu />
-                                Flash Card
-                              </a>
-                            </Link>
-                          )}
-                        </button>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({active}) => (
-                        <button className="w-full text-left text-black rounded-lg ">
-                          {active ? (
-                            <Link href="/kalkulator">
-                              <a className="flex items-center p-2 rounded-md">
-                                <Kalkulator />
-                                Kalkulator
-                              </a>
-                            </Link>
-                          ) : (
-                            <Link href="/kalkulator">
-                              <a className="flex items-center p-2 rounded-md">
-                                <Kalkulator />
-                                Kalkulator
-                              </a>
-                            </Link>
-                          )}
-                        </button>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({active}) => (
-                        <button className="w-full text-left text-black rounded-lg ">
-                          {active ? (
-                            <Link href="/bookingLes">
-                              <a className="flex items-center p-2 rounded-md">
-                                <Calender />
-                                Booking Les
-                              </a>
-                            </Link>
-                          ) : (
-                            <Link href="/bookingLes">
-                              <a className="flex items-center p-2 rounded-md">
-                                <Calender />
-                                Booking Les
-                              </a>
-                            </Link>
-                          )}
-                        </button>
-                      )}
-                    </Menu.Item>
-                  </div>
-                </section>
-              </Menu.Items>
-            </Transition>
+                  <Menu.Item>
+                    {({active}) => (
+                      <button className="w-full text-left text-black ">
+                        {active ? (
+                          <Link href="/merchandise">
+                            <a className={menu}>Merchandise</a>
+                          </Link>
+                        ) : (
+                          <Link href="/merchandise">
+                            <a className={menu}>Merchandise</a>
+                          </Link>
+                        )}
+                      </button>
+                    )}
+                  </Menu.Item>
+                </div>
+
+                {/* Alat */}
+                <div className="flex flex-col ">
+                  <div className="text-gray-600 ">ALAT</div>
+                  <Menu.Item>
+                    {({active}) => (
+                      <button className="w-full text-left text-black ">
+                        {active ? (
+                          <Link href="/materi/matematika">
+                            <a className={menu}>Materi</a>
+                          </Link>
+                        ) : (
+                          <Link href="/materi/matematika">
+                            <a className={menu}>Materi</a>
+                          </Link>
+                        )}
+                      </button>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({active}) => (
+                      <button className="w-full text-left text-black ">
+                        {active ? (
+                          <Link href="/kartu">
+                            <a className={menu}>Flash Card</a>
+                          </Link>
+                        ) : (
+                          <Link href="/kartu">
+                            <a className={menu}>Flash Card</a>
+                          </Link>
+                        )}
+                      </button>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({active}) => (
+                      <button className="w-full text-left text-black ">
+                        {active ? (
+                          <Link href="/kalkulator">
+                            <a className={menu}>Kalkulator</a>
+                          </Link>
+                        ) : (
+                          <Link href="/kalkulator">
+                            <a className={menu}>Kalkulator</a>
+                          </Link>
+                        )}
+                      </button>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({active}) => (
+                      <button className="w-full text-left text-black ">
+                        {active ? (
+                          <Link href="/bookingLes">
+                            <a className={menu}>Booking Les</a>
+                          </Link>
+                        ) : (
+                          <Link href="/bookingLes">
+                            <a className={menu}>Booking Les</a>
+                          </Link>
+                        )}
+                      </button>
+                    )}
+                  </Menu.Item>
+                </div>
+              </section>
+            </Menu.Items>
           </>
         )}
       </Menu>
       {/* HarisLab */}
       <Link href="/">
-        <a className="items-center block w-full text-xl font-semibold text-center font-mw">
+        <a className="items-center block w-full pl-4 text-xl font-semibold text-center font-mw">
           <span className="font-bold">Haris</span>
           <span className="font-light">Lab</span>
         </a>
@@ -204,7 +156,9 @@ const NavMobile = () => {
 
       {/* <Login /> */}
       <Link href="/login">
-        <a className="px-2 pb-1.5 pt-1 text-sm text-white rounded-md bg-harislab">Login</a>
+        <a className="px-3 pt-1.5 pb-2 text-sm text-white rounded-md bg-harislab">
+          Login
+        </a>
       </Link>
     </nav>
   )
@@ -235,7 +189,12 @@ const X = () => {
       viewBox="0 0 24 24"
       stroke="currentColor"
     >
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M6 18L18 6M6 6l12 12" />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1}
+        d="M6 18L18 6M6 6l12 12"
+      />
     </svg>
   )
 }
@@ -243,16 +202,24 @@ const X = () => {
 const HamburgerMenu = () => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
       className="text-gray-700 h-7 w-7"
-      fill="none"
       viewBox="0 0 24 24"
+      width="24"
+      height="24"
       stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      fill="none"
     >
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 8h16M4 16h16" />
+      <path d="M3 12h18" />
+      <path d="M3 6h18" />
+      <path d="M3 18h18" />
     </svg>
   )
 }
+
+//
 
 const Folder = () => {
   return (

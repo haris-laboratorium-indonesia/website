@@ -1,14 +1,14 @@
-import Link from "next/link";
-import FAQ from "../components/FAQ";
-import InfoBox from "../components/InfoBox";
-import { FAQs } from "../lib/FAQs";
-import { weCareAbouts } from "../lib/weCareAbouts";
-import { sendInformations } from "../lib/sendInformations";
-import Layout from "../components/Layout";
+import Link from 'next/link'
+import FAQ from '../components/FAQ'
+import InfoBox from '../components/InfoBox'
+import {FAQs} from '../lib/FAQs'
+import {weCareAbouts} from '../lib/weCareAbouts'
+import {sendInformations} from '../lib/sendInformations'
+import Layout from '../components/Layout'
 
 const Beranda = () => {
-  const td = " text-left text-sm p-2";
-  const th = "p-2 text-left text-base font-medium text-blue-500 bg-blue-50";
+  const td = ' text-left text-sm p-2'
+  const th = 'p-2 text-left text-base font-medium text-blue-500 bg-blue-50'
 
   return (
     <Layout title="Beranda" description="Laboratorium untuk Pelajar.">
@@ -143,9 +143,9 @@ const Beranda = () => {
         </div>
       </main>
     </Layout>
-  );
-};
+  )
+}
 
-export default Beranda;
+export default Beranda
 
 // link ke halaman ini ada di ../components/Layout.js

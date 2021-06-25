@@ -2,10 +2,10 @@ import 'katex/dist/katex.min.css'
 import Termodinamika from '../../../public/Termodinamika.jpg'
 import TeX from '@matejmazur/react-katex'
 import Image from 'next/image'
-import ExampleMain from '../../../components/ExampleMain'
-import ExampleChild from '../../../components/ExampleChild'
-import List from '../../../components/List'
-import Layout from '../../../components/Layout'
+import ExampleMain from '@/components/ExampleMain'
+import ExampleChild from '@/components/ExampleChild'
+import ListTermodinamika from '@/components/List/ListTermodinamika'
+import Layout from '@/components/Layout'
 
 const termodinamika = () => {
   const th = 'w-1/5 p-2 text-center text-base font-medium text-blue-500 bg-blue-50'
@@ -14,7 +14,7 @@ const termodinamika = () => {
   const header = 'z-10 pt-8 pb-4 text-3xl bg-white rounded-md lg:pt-0 font-mw mt-14'
   return (
     <Layout title="Termodinamika" description="Materi Termodinamika">
-      <List title="Termodinamika" backToLink="/materi/fisika" backToName="Fisika" />
+      <ListTermodinamika title="Termodinamika" backToLink="/materi/fisika" backToName="Fisika" />
       <div className="max-w-3xl mx-auto">
         <div className="mt-10 mb-5 text-2xl font-semibold sm:text-5xl font-mw">Termodinamika</div>
         <Image
