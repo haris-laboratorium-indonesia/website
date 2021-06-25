@@ -7,11 +7,11 @@ const matematika = () => {
     <Layout title="Materi Matematika" description="Materi Matematika SMP SMA">
       <TabMath
         page="Materi"
-        backTo="/materi/matematika"
-        to="/materi/fisika"
+        backTo="/matematika"
+        to="/fisika"
         textColor="text-rose-500"
       />
-      <section className="grid grid-cols-1 divide-y divide-gray-200 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:divide-y-0 ">
+      <section className="grid grid-cols-1 border border-gray-300 divide-y divide-gray-300 rounded-md bg-gray-50 sm:p-2 sm:grid-cols-2 md:grid-cols-3 sm:divide-y-0 ">
         <ChapterBox title="Lingkaran" to="matematika/linear" />
         <ChapterBox title="Integral Tentu" to="linear" />
         <ChapterBox title="Integral Tak Tentu" to="linear" />

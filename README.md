@@ -12,3 +12,7 @@ merchandise
 portfolio
 booking les
 blog
+
+component class tailwindcss  @apply :
+button
+ 

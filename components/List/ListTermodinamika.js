@@ -19,7 +19,6 @@ const ListTermodinamika = ({title, backToLink, backToName}) => {
             <Link href={backToLink}>
               <a className="flex items-center justify-center rounded-md py-0.5 px-1 hover:bg-gray-100">
                 <LeftArrow />
-                <div className="hidden text-sm sm:block">{backToName}</div>
               </a>
             </Link>
 

@@ -8,7 +8,7 @@ const Layout = ({children, title, description}) => {
   return (
     <>
       <Head>
-        <title>{title} | HarisLab</title>
+        <title>{title} - HarisLab</title>
         <link rel="icon" href="/hahaha.ico" />
         <meta name="robots" content="follow, index" />
         <meta content={description} name="description" />
@@ -24,10 +24,14 @@ const Layout = ({children, title, description}) => {
         <meta name="twitter:image" content={image} />
       </Head>
 
-      <NavDesktop />
-      <NavMobile />
+      <div className="bg-gray-800">
+        <NavDesktop />
+        <NavMobile />
+      </div>
 
-      <section className="w-full max-w-5xl min-h-screen px-5 pt-3 pb-10 mx-auto xl:px-0 font-inter">{children}</section>
+      <section className="w-full max-w-4xl min-h-screen px-5 pt-3 pb-10 mx-auto xl:px-0 font-inter">
+        {children}
+      </section>
 
       <Footer />
     </>

@@ -4,7 +4,7 @@ const ChapterBox = ({to, title}) => {
   return (
     <main>
       <Link href={to}>
-        <a className="flex items-center justify-between w-full px-0 py-3 sm:px-1.5 sm:py-1.5 sm:hover:bg-gray-100 sm:hover:rounded-md ">
+        <a className="flex items-center justify-between w-full px-2 py-2.5 sm:px-1.5 sm:py-1.5 sm:hover:bg-gray-200 sm:hover:rounded-md ">
           <div className="flex items-center sm:justify-between">
             <Folder />
 
