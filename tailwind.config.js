@@ -1,14 +1,14 @@
-const colors = require("tailwindcss/colors");
+const colors = require('tailwindcss/colors')
 
 module.exports = {
-  mode: "jit",
-  purge: ["./pages/**/*.js", "./components/*.js"],
+  mode: 'jit',
+  purge: ['./pages/**/*.js', './components/**/*.js', './components/List/*.js'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
-      harislab: "#007AFF",
-      black: "#262626",
-      white: "#FFFFFF",
+      harislab: '#007AFF',
+      black: '#262626',
+      white: '#FFFFFF',
       gray: colors.trueGray,
       red: colors.red,
       rose: colors.rose,
@@ -21,13 +21,13 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        inter: ["Inter"],
-        mw: ["Merriweather"],
+        inter: ['Inter'],
+        mw: ['Merriweather'],
       },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography")],
-};
+  plugins: [require('@tailwindcss/typography')],
+}

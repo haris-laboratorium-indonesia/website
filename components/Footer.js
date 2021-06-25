@@ -1,15 +1,15 @@
 import Link from 'next/link'
 
 const Footer = () => {
-  const navigation = 'block text-gray-300 hover:underline hover:text-white hover:underline'
+  const navigation = 'block text-gray-400 text-lg  hover:underline'
   return (
     <footer className="bottom-0 w-full mt-20 text-center bg-gray-800">
-      <section className="flex flex-col max-w-4xl px-5 pt-5 pb-10 mx-auto mt-10 space-y-10 text-left sm:pt-0 sm:flex-row sm:space-y-0 xl:px-0">
+      <section className="flex flex-col max-w-4xl px-5 py-5 mx-auto mt-10 space-y-10 text-left sm:pt-0 sm:flex-row sm:space-y-0 xl:px-0">
         {/* Footer Navigation */}
         <article className="flex w-full sm:w-1/2">
           {/* LAINNYA */}
           <div className="w-full space-y-2 sm:w-1/2">
-            <div className="text-white ">LAINNYA</div>
+            <div className="text-lg font-medium text-white ">Lainnya</div>
             <Link href="/blog">
               <a className={navigation}>Blog</a>
             </Link>
@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
           <div className="w-full space-y-2 sm:w-1/2">
             {/* ALAT */}
-            <div className="text-white ">ALAT</div>
+            <div className="text-lg font-medium text-white ">Alat</div>
             <Link href="/matematika">
               <a className={navigation}>Materi</a>
             </Link>

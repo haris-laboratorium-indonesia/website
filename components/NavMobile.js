@@ -3,7 +3,7 @@ import {Menu} from '@headlessui/react'
 import {X, HamburgerMenu, SearchIcon} from '@/Icons'
 
 const NavMobile = () => {
-  const menu = 'py-1.5 text-lg block text-gray-300 '
+  const menu = 'py-1.5 text-lg block text-gray-400 '
 
   return (
     <nav className="z-50 flex items-center justify-between w-full h-auto max-w-5xl px-5 py-3 mx-auto border-b border-gray-300 md:hidden">
@@ -157,7 +157,7 @@ const NavMobile = () => {
 
       {/* <Login /> */}
       <Link href="/login">
-        <a className="px-3 pt-1 pb-1.5 text-sm text-white rounded-full bg-harislab">
+        <a className="px-3 py-1 text-white rounded-full tet-sm bg-harislab">
           Login
         </a>
       </Link>

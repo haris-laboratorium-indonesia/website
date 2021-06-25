@@ -1,44 +1,22 @@
 export const Down = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={1}
-        d="M19 9l-7 7-7-7"
-      />
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 9l-7 7-7-7" />
     </svg>
   )
 }
 export const Up = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={1}
-        d="M5 15l7-7 7 7"
-      />
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M5 15l7-7 7 7" />
     </svg>
   )
 }
 
-export const MenuList = ({textColor}) => {
+export const MenuList = ({ textColor }) => {
   return (
     <svg
-      className={`${textColor} w-7 h-7`}
+      className={`text-gray-700 w-6 h-6`}
       viewBox="0 0 24 24"
       width="24"
       height="24"
@@ -47,7 +25,6 @@ export const MenuList = ({textColor}) => {
       stroke-linecap="round"
       stroke-linejoin="round"
       fill="none"
-      shape-rendering="geometricPrecision"
     >
       <path d="M8 6h13" />
       <path d="M8 12h13" />
@@ -63,17 +40,12 @@ export const LeftArrow = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="text-gray-700 w-7 h-7"
+      className="w-6 h-6 text-gray-700"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
     >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={1.5}
-        d="M15 19l-7-7 7-7"
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
     </svg>
   )
 }
@@ -87,12 +59,7 @@ export const RightArrow = (a) => {
       viewBox="0 0 24 24"
       stroke="currentColor"
     >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={1}
-        d="M9 5l7 7-7 7"
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 5l7 7-7 7" />
     </svg>
   )
 }
@@ -321,12 +288,7 @@ export const X = () => {
       viewBox="0 0 24 24"
       stroke="currentColor"
     >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={1}
-        d="M6 18L18 6M6 6l12 12"
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M6 18L18 6M6 6l12 12" />
     </svg>
   )
 }

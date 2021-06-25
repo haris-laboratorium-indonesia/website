@@ -29,7 +29,7 @@ const Layout = ({children, title, description}) => {
         <NavMobile />
       </div>
 
-      <section className="w-full max-w-4xl min-h-screen px-5 pt-3 pb-10 mx-auto xl:px-0 font-inter">
+      <section className="w-full max-w-4xl min-h-screen px-5 pb-10 mx-auto xl:px-0 font-inter">
         {children}
       </section>
 
