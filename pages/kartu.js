@@ -1,14 +1,14 @@
-import Judul from "../components/Judul";
+import Title from "../components/Title";
 import Layout from "../components/Layout";
 
 const kartu = () => {
   return (
     <Layout
-      title="Flash Card | Haris Lab"
+      title="Flash Card"
       description="Flash Card untuk belajar"
     >
       <div>
-        <Judul page="Flash Card" />
+        <Title name="Flash Card" />
       </div>
     </Layout>
   );

@@ -6,7 +6,7 @@ const fisika = () => {
   return (
     <Layout title="Materi Matematika" description="Materi Matematika SMP SMA">
       <TabPhy
-        page="Materi"
+        page="Fisika"
         backTo="/fisika"
         to="/matematika"
         textColor="text-rose-500"

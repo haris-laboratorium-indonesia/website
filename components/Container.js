@@ -1,24 +1,24 @@
-import Head from "next/head";
-import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
+import Head from 'next/head'
+import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react'
+import { useTheme } from 'next-themes'
 
 export default function Container(props) {
-  const [mounted, setMounted] = useState(false);
-  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false)
+  const { resolvedTheme, setTheme } = useTheme()
 
   // After mounting, we have access to the theme
-  useEffect(() => setMounted(true), []);
+  useEffect(() => setMounted(true), [])
 
-  const { children, ...customMeta } = props;
-  const router = useRouter();
+  const { children, ...customMeta } = props
+  const router = useRouter()
   const meta = {
-    title: "Lee Robinson – Developer, writer, creator.",
+    title: 'Lee Robinson – Developer, writer, creator.',
     description: `Front-end developer, JavaScript enthusiast, and course creator.`,
-    image: "https://leerob.io/static/images/banner.png",
-    type: "website",
+    image: 'https://leerob.io/static/images/banner.png',
+    type: 'website',
     ...customMeta,
-  };
+  }
 
   return (
     <div className="bg-white dark:bg-black">
@@ -38,17 +38,12 @@ export default function Container(props) {
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
-        {meta.date && (
-          <meta property="article:published_time" content={meta.date} />
-        )}
+        {meta.date && <meta property="article:published_time" content={meta.date} />}
       </Head>
 
-      <main
-        id="skip"
-        className="flex flex-col justify-center bg-white dark:bg-black"
-      >
+      <main id="skip" className="flex flex-col justify-center bg-white dark:bg-black">
         {children}
       </main>
     </div>
-  );
+  )
 }

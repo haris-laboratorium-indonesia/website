@@ -6,7 +6,7 @@ const matematika = () => {
   return (
     <Layout title="Materi Matematika" description="Materi Matematika SMP SMA">
       <TabMath
-        page="Materi"
+        page="Matematika"
         backTo="/matematika"
         to="/fisika"
         textColor="text-rose-500"

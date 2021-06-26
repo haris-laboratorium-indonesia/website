@@ -2,7 +2,8 @@ import { Menu } from '@headlessui/react'
 import { Down, Up, MenuList, LeftArrow } from '@/Icons'
 import Link from 'next/link'
 const ListTermodinamika = ({ title, materi }) => {
-  const daftarIsi = 'block text-gray-800 hover:bg-gray-500 hover:text-white rounded-md px-2 py-1'
+  const H1 = 'block text-gray-800 hover:bg-gray-500 hover:text-white rounded-md px-2 py-1'
+  const H2 = 'block text-gray-800 hover:bg-gray-500 hover:text-white rounded-md pl-6 pr-2 py-1'
 
   return (
     <Menu as="div" className="sticky top-0 z-40 flex flex-col items-center w-full my-5 ">
@@ -29,27 +30,48 @@ const ListTermodinamika = ({ title, materi }) => {
           <Menu.Items className="flex justify-end w-full">
             <div className="w-full p-1.5  border border-gray-300 bg-gray-50 rounded-md drop-shadow-2xl mt-2 sm:w-1/3">
               <Menu.Item>
-                <a className={daftarIsi} href="#Pengenalan">
+                <a className={H1} href="#Pengenalan">
                   Pengenalan
                 </a>
               </Menu.Item>
               <Menu.Item>
-                <a className={daftarIsi} href="#Variabel">
+                <a className={H2} href="#Apa">
+                  Apa
+                </a>
+              </Menu.Item>
+              <Menu.Item>
+                <a className={H2} href="#Siapa">
+                  Siapa
+                </a>
+              </Menu.Item>
+              <Menu.Item>
+                <a className={H2} href="#Dimana">
+                  Dimana
+                </a>
+              </Menu.Item>
+              <Menu.Item>
+                <a className={H2} href="#Kapan">
+                  Kapan
+                </a>
+              </Menu.Item>
+
+              <Menu.Item>
+                <a className={H1} href="#Variabel">
                   Variabel
                 </a>
               </Menu.Item>
               <Menu.Item>
-                <a className={daftarIsi} href="#Rumus">
+                <a className={H1} href="#Rumus">
                   Rumus
                 </a>
               </Menu.Item>
               <Menu.Item>
-                <a className={daftarIsi} href="#PenurunanRumus">
+                <a className={H1} href="#PenurunanRumus">
                   Penurunan Rumus
                 </a>
               </Menu.Item>
               <Menu.Item>
-                <a className={daftarIsi} href="#ContohSoal">
+                <a className={H1} href="#ContohSoal">
                   ContohSoal
                 </a>
               </Menu.Item>

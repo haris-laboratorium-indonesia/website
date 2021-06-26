@@ -2,7 +2,8 @@ import Head from 'next/head'
 import Footer from './Footer'
 import NavDesktop from './NavDesktop'
 import NavMobile from './NavMobile'
-const Layout = ({children, title, description}) => {
+
+const Layout = ({ children, title, description }) => {
   const image = 'https://harislab.com/public/HarisLab.png'
   const type = 'website'
   return (
@@ -29,9 +30,7 @@ const Layout = ({children, title, description}) => {
         <NavMobile />
       </div>
 
-      <section className="w-full max-w-4xl min-h-screen px-5 pb-10 mx-auto xl:px-0 font-inter">
-        {children}
-      </section>
+      <section className="w-full max-w-4xl min-h-screen px-5 mx-auto xl:px-0 font-inter">{children}</section>
 
       <Footer />
     </>

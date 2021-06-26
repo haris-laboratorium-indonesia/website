@@ -1,15 +1,15 @@
 import Link from 'next/link'
-import {Menu} from '@headlessui/react'
-import {X, HamburgerMenu, SearchIcon} from '@/Icons'
+import { X, HamburgerMenu, SearchIcon } from '@/Icons'
+import { Menu } from '@headlessui/react'
 
 const NavMobile = () => {
-  const menu = 'py-1.5 text-lg block text-gray-400 '
+  const nav = 'py-1.5 text-lg block text-gray-400 '
 
   return (
     <nav className="z-50 flex items-center justify-between w-full h-auto max-w-5xl px-5 py-3 mx-auto border-b border-gray-300 md:hidden">
       {/* Menu */}
       <Menu as="div" className="static flex justify-end text-">
-        {({open}) => (
+        {({ open }) => (
           <>
             <Menu.Button className="z-50 flex justify-end w-full  py-0.5 px-1 hover:bg-gray-700  rounded-md focus:outline-none">
               {open ? <X /> : <HamburgerMenu />}
@@ -31,30 +31,30 @@ const NavMobile = () => {
                 <div className="flex flex-col ">
                   <div className="text-lg font-medium text-white ">Lainnya</div>
                   <Menu.Item>
-                    {({active}) => (
+                    {({ active }) => (
                       <button className="w-full text-left text-black ">
                         {active ? (
                           <Link href="/blog">
-                            <a className={menu}>Blog</a>
+                            <a className={nav}>Blog</a>
                           </Link>
                         ) : (
                           <Link href="/blog">
-                            <a className={menu}>Blog</a>
+                            <a className={nav}>Blog</a>
                           </Link>
                         )}
                       </button>
                     )}
                   </Menu.Item>
                   <Menu.Item>
-                    {({active}) => (
+                    {({ active }) => (
                       <button className="w-full text-left text-black ">
                         {active ? (
                           <Link href="/portofolio">
-                            <a className={menu}>Portofolio</a>
+                            <a className={nav}>Portofolio</a>
                           </Link>
                         ) : (
                           <Link href="/portofolio">
-                            <a className={menu}>Portofolio</a>
+                            <a className={nav}>Portofolio</a>
                           </Link>
                         )}
                       </button>
@@ -62,15 +62,15 @@ const NavMobile = () => {
                   </Menu.Item>
 
                   <Menu.Item>
-                    {({active}) => (
+                    {({ active }) => (
                       <button className="w-full text-left text-black ">
                         {active ? (
                           <Link href="/merchandise">
-                            <a className={menu}>Merchandise</a>
+                            <a className={nav}>Merchandise</a>
                           </Link>
                         ) : (
                           <Link href="/merchandise">
-                            <a className={menu}>Merchandise</a>
+                            <a className={nav}>Merchandise</a>
                           </Link>
                         )}
                       </button>
@@ -82,60 +82,75 @@ const NavMobile = () => {
                 <div className="flex flex-col ">
                   <div className="text-lg font-medium text-white ">Alat</div>
                   <Menu.Item>
-                    {({active}) => (
+                    {({ active }) => (
                       <button className="w-full text-left text-black ">
                         {active ? (
                           <Link href="/matematika">
-                            <a className={menu}>Materi</a>
+                            <a className={nav}>Matematika</a>
                           </Link>
                         ) : (
                           <Link href="/matematika">
-                            <a className={menu}>Materi</a>
+                            <a className={nav}>Matematika</a>
                           </Link>
                         )}
                       </button>
                     )}
                   </Menu.Item>
                   <Menu.Item>
-                    {({active}) => (
+                    {({ active }) => (
+                      <button className="w-full text-left text-black ">
+                        {active ? (
+                          <Link href="/fisika">
+                            <a className={nav}>Fisika</a>
+                          </Link>
+                        ) : (
+                          <Link href="/fisika">
+                            <a className={nav}>Fisika</a>
+                          </Link>
+                        )}
+                      </button>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
                       <button className="w-full text-left text-black ">
                         {active ? (
                           <Link href="/kartu">
-                            <a className={menu}>Flash Card</a>
+                            <a className={nav}>Flash Card</a>
                           </Link>
                         ) : (
                           <Link href="/kartu">
-                            <a className={menu}>Flash Card</a>
+                            <a className={nav}>Flash Card</a>
                           </Link>
                         )}
                       </button>
                     )}
                   </Menu.Item>
                   <Menu.Item>
-                    {({active}) => (
+                    {({ active }) => (
                       <button className="w-full text-left text-black ">
                         {active ? (
                           <Link href="/kalkulator">
-                            <a className={menu}>Kalkulator</a>
+                            <a className={nav}>Kalkulator</a>
                           </Link>
                         ) : (
                           <Link href="/kalkulator">
-                            <a className={menu}>Kalkulator</a>
+                            <a className={nav}>Kalkulator</a>
                           </Link>
                         )}
                       </button>
                     )}
                   </Menu.Item>
                   <Menu.Item>
-                    {({active}) => (
+                    {({ active }) => (
                       <button className="w-full text-left text-black ">
                         {active ? (
                           <Link href="/bookingLes">
-                            <a className={menu}>Booking Les</a>
+                            <a className={nav}>Booking Les</a>
                           </Link>
                         ) : (
                           <Link href="/bookingLes">
-                            <a className={menu}>Booking Les</a>
+                            <a className={nav}>Booking Les</a>
                           </Link>
                         )}
                       </button>
@@ -147,6 +162,7 @@ const NavMobile = () => {
           </>
         )}
       </Menu>
+
       {/* HarisLab */}
       <Link href="/">
         <a className="items-center block w-full pl-2 text-xl font-semibold text-center text-white font-mw">
@@ -157,14 +173,10 @@ const NavMobile = () => {
 
       {/* <Login /> */}
       <Link href="/login">
-        <a className="px-3 py-1 text-white rounded-full tet-sm bg-harislab">
-          Login
-        </a>
+        <a className="px-3 py-1 text-white rounded-full  bg-harislab">Login</a>
       </Link>
     </nav>
   )
 }
 
 export default NavMobile
-
-//

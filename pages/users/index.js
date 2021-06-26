@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import Judul from "../../components/Judul";
+import Judul from "../../components/TItle";
 import Layout from "../../components/Layout";
 
 const a = ({ dataUsers }) => {

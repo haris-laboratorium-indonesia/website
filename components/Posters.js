@@ -20,12 +20,12 @@ const Posters = ({ key, title, image }) => {
 
       <div className="flex items-center justify-between">
         <div className="flex space-x-1">
-          <div className="p-1 border border-white rounded hover:border-[#3a3a3c]">
-            <HiOutlineShare className="text-gray-500 hover:text-[#3a3a3c]" />
+          <div className="p-1 border border-white rounded hover:border-gray-800">
+            <HiOutlineShare className="text-gray-500 hover:text-gray-800" />
           </div>
 
-          <div className="p-1 border border-white rounded hover:border-[#3a3a3c]">
-            <HiOutlinePlusSm className="text-gray-500 hover:text-[#3a3a3c]" />
+          <div className="p-1 border border-white rounded hover:border-gray-800">
+            <HiOutlinePlusSm className="text-gray-500 hover:text-gray-800" />
           </div>
         </div>
 

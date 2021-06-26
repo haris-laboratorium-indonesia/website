@@ -1,10 +1,10 @@
-import Judul from '../components/Judul'
+import Title from '../components/TItle'
 import Layout from '../components/Layout'
 
 const portofolio = () => {
   return (
     <Layout title="Potofolio" description="Harits Syah Portofolio">
-      <Judul page="Portofolio" textColor="text-black" />
+      <Title name="Portofolio" />
       <section className="space-y-5">
         <article className="w-full sm:w-1/3 font-medium px-4 py-2  text-center border-2 rounded-md border-[#5E725B] bg-[#5E725B] hover:bg-white text-white hover:text-[#5E725B]">
           <a href="https://www.aka-tradingindo.com/" target="_blank">

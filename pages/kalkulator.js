@@ -1,10 +1,10 @@
-import Judul from '../components/Judul'
+import Title from '../components/TItle'
 import Layout from '../components/Layout'
 
 const kalkulator = () => {
   return (
     <Layout title="Kalkulator" description="Kalkulator Matematika dan Fisika terbaik yang pernah dibuat.">
-      <Judul page="Kalkulator" textColor="text-green-500" />
+      <Title name="Kalkulator" />
       <div className="calculator-grid bg-gradient-to-r from-green-500 to-cyan-500">
         <div className="output">
           <div data-previous-operand className="previous-operand"></div>

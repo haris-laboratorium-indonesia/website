@@ -1,10 +1,10 @@
-import Judul from '../components/Judul'
+import Title from '../components/Title'
 import Layout from '../components/Layout'
 
 const bookingLes = () => {
   return (
-    <Layout title="Booking Les" description="Booking Les tidak pernah semudah ini">
-      <Judul page="Booking Les" />
+    <Layout title="Les" description="Booking Les tidak pernah semudah ini">
+      <Title name="Booking Les" />
     </Layout>
   )
 }

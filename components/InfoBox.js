@@ -11,12 +11,7 @@ const InfoBox = ({ id, svg, name, description }) => {
           stroke="currentColor"
           fill="#ffffff"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d={svg}
-          />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={svg} />
         </svg>
       </div>
       {/* Name */}
@@ -26,7 +21,7 @@ const InfoBox = ({ id, svg, name, description }) => {
       {/* description */}
       <div className="pl-3 text-gray-700">{description}</div>
     </div>
-  );
-};
+  )
+}
 
-export default InfoBox;
+export default InfoBox

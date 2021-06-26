@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import {HiOutlineLogin} from 'react-icons/hi'
+
 const NavDesktop = () => {
   const nav = 'p-2  duration-200 hover:text-white text-gray-300  block'
   return (
@@ -13,7 +13,10 @@ const NavDesktop = () => {
         </Link>
 
         <Link href="/matematika">
-          <a className={nav}>Materi</a>
+          <a className={nav}>Matematika</a>
+        </Link>
+        <Link href="/fisika">
+          <a className={nav}>Fisika</a>
         </Link>
         <Link href="/kartu">
           <a className={nav}>Kartu</a>

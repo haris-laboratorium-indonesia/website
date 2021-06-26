@@ -1,8 +1,9 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import Container from '/components/Container'
 import BlogPost from '/components/BlogPost'
-import {getAllFilesFrontMatter} from '/lib/mdx'
+import { getAllFilesFrontMatter } from '/lib/mdx'
 import Layout from '../components/Layout'
+import Title from '@/components/Title'
 
 const blogPost = [
   {
@@ -25,7 +26,7 @@ const blogPost = [
   },
 ]
 
-export default function Blog({posts}) {
+export default function Blog({ posts }) {
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts
     .sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)))
@@ -35,7 +36,7 @@ export default function Blog({posts}) {
     <Layout title="Blog" description="Blog HarisLab">
       <Container title="Blog - HarisLab" description="Laboratorium untuk Pelajar.">
         <div className="flex flex-col items-start justify-center max-w-5xl mx-auto mb-16">
-          <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">Blog</h1>
+          <Title name="Blog" />
           <p className="mb-4 text-gray-600 dark:text-gray-400">
             {`I've been writing online since 2014, mostly about web development and tech careers.
             In total, I've written ${posts.length} articles on this site.
@@ -91,5 +92,5 @@ export default function Blog({posts}) {
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
-  return {props: {posts}}
+  return { props: { posts } }
 }

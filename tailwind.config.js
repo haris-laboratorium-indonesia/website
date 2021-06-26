@@ -1,3 +1,4 @@
+// const { urlObjectKeys } = require('next/dist/next-server/lib/utils')
 const colors = require('tailwindcss/colors')
 
 module.exports = {
@@ -20,6 +21,9 @@ module.exports = {
       fuschsia: colors.fuchsia,
     },
     extend: {
+      backgroundImage: (theme) => ({
+        hero: "url('/stackblitz.png')",
+      }),
       fontFamily: {
         inter: ['Inter'],
         mw: ['Merriweather'],

@@ -1,22 +1,22 @@
 export const Down = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 9l-7 7-7-7" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
     </svg>
   )
 }
 export const Up = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M5 15l7-7 7 7" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 15l7-7 7 7" />
     </svg>
   )
 }
 
-export const MenuList = ({ textColor }) => {
+export const MenuList = () => {
   return (
     <svg
-      className={`text-gray-700 w-6 h-6`}
+      className={`w-6 h-6`}
       viewBox="0 0 24 24"
       width="24"
       height="24"
@@ -38,23 +38,17 @@ export const MenuList = ({ textColor }) => {
 
 export const LeftArrow = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6 text-gray-700"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
     </svg>
   )
 }
 
-export const RightArrow = (a) => {
+export const RightArrow = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={`${a} w-5 h-5 sm:hidden`}
+      className=" w-6 h-6"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -64,10 +58,10 @@ export const RightArrow = (a) => {
   )
 }
 
-export const Folder = (props) => {
+export const Folder = () => {
   return (
     <svg
-      className="w-6 h-6 mr-1 text-blue-400"
+      className="w-6 h-6 text-blue-400"
       viewBox="0 0 24 24"
       width="24"
       height="24"
@@ -76,7 +70,6 @@ export const Folder = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       fill="#60A5FA"
-      {...props}
     >
       <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
     </svg>
@@ -85,13 +78,7 @@ export const Folder = (props) => {
 
 export const Kartu = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-5 h-5 mr-1"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -106,7 +93,7 @@ export const Kalkulator = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-5 h-5 mr-1.5 -ml-0.5"
+      className="w-6 h-6.5 -ml-0.5"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -124,7 +111,7 @@ export const Kalkulator = () => {
 export const Play = () => {
   return (
     <svg
-      className="w-5 h-5 mr-1"
+      className="w-6 h-6"
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="1.5"
@@ -141,7 +128,7 @@ export const Play = () => {
 export const Camera = () => {
   return (
     <svg
-      className="w-5 h-5 mr-1"
+      className="w-6 h-6"
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="1.5"
@@ -158,7 +145,7 @@ export const Camera = () => {
 export const Puzzle = () => {
   return (
     <svg
-      className="w-5 h-5 mr-1"
+      className="w-6 h-6"
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="1.5"
@@ -181,7 +168,7 @@ export const Puzzle = () => {
 export const Pen = () => {
   return (
     <svg
-      className="w-5 h-5 mr-1"
+      className="w-6 h-6"
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="1.5"
@@ -198,7 +185,7 @@ export const Pen = () => {
 export const Award = () => {
   return (
     <svg
-      className="w-5 h-5 mr-1"
+      className="w-6 h-6"
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="1.5"
@@ -215,7 +202,7 @@ export const Award = () => {
 export const Calender = () => {
   return (
     <svg
-      className="w-5 h-5 mr-1"
+      className="w-6 h-6"
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="1.5"
@@ -234,7 +221,7 @@ export const Calender = () => {
 export const Cart = () => {
   return (
     <svg
-      className="w-5 h-5 mr-1"
+      className="w-6 h-6"
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="1.5"
@@ -252,7 +239,7 @@ export const Cart = () => {
 export const Masuk = () => {
   return (
     <svg
-      className="w-5 h-5 mr-1"
+      className="w-6 h-6"
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="1.5"
@@ -269,12 +256,12 @@ export const SearchIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-5 h-5 text-gray-300"
+      className="w-6 h-6 text-gray-300"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
     >
-      <path strokeWidth={1.4} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      <path strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
     </svg>
   )
 }

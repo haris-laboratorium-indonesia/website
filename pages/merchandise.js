@@ -1,14 +1,14 @@
-import Judul from '../components/Judul'
+import Title from '../components/Title'
 import Posters from '../components/Posters'
-import {tshirts} from '../lib/tshirts'
-import {posters} from '../lib/posters'
+import { tshirts } from '../lib/tshirts'
+import { posters } from '../lib/posters'
 import Tshirts from '../components/Tshirts'
 import Layout from '../components/Layout'
 
 const merchandise = () => {
   return (
     <Layout title="Merchandise" description="Dapatkan Merchandise HarisLab sekarang juga.">
-      <Judul page="Merchandise" />
+      <Title name="Merchandise" />
 
       <div className="mt-20 mb-5 text-4xl font-semibold ">Kaos</div>
       <div className="grid grid-cols-2 gap-10 my-5 sm:grid-cols-4 md:grid-cols-4 gap-y-10 sm:gap-x-10">
