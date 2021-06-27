@@ -26,138 +26,83 @@ const NavMobile = () => {
                 />
               </section>
 
-              <section className="grid grid-cols-2 gap-2 pt-5 border-t border-gray-500">
-                {/* Lainnya */}
-                <div className="flex flex-col ">
-                  <div className="text-lg font-medium text-white ">Lainnya</div>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black ">
-                        {active ? (
-                          <Link href="/blog">
-                            <a className={nav}>Blog</a>
-                          </Link>
-                        ) : (
-                          <Link href="/blog">
-                            <a className={nav}>Blog</a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black ">
-                        {active ? (
-                          <Link href="/portofolio">
-                            <a className={nav}>Portofolio</a>
-                          </Link>
-                        ) : (
-                          <Link href="/portofolio">
-                            <a className={nav}>Portofolio</a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
+              <section className="grid grid-cols-1 pt-5 divide-y divide-gray-500">
+                <Menu.Item>
+                  {({ active }) => (
+                    <button className="w-full text-left text-black ">
+                      {active ? (
+                        <Link href="/matematika">
+                          <a className={nav}>Matematika</a>
+                        </Link>
+                      ) : (
+                        <Link href="/matematika">
+                          <a className={nav}>Matematika</a>
+                        </Link>
+                      )}
+                    </button>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <button className="w-full text-left text-black ">
+                      {active ? (
+                        <Link href="/fisika">
+                          <a className={nav}>Fisika</a>
+                        </Link>
+                      ) : (
+                        <Link href="/fisika">
+                          <a className={nav}>Fisika</a>
+                        </Link>
+                      )}
+                    </button>
+                  )}
+                </Menu.Item>
 
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black ">
-                        {active ? (
-                          <Link href="/merchandise">
-                            <a className={nav}>Merchandise</a>
-                          </Link>
-                        ) : (
-                          <Link href="/merchandise">
-                            <a className={nav}>Merchandise</a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
-                </div>
-
-                {/* Alat */}
-                <div className="flex flex-col ">
-                  <div className="text-lg font-medium text-white ">Alat</div>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black ">
-                        {active ? (
-                          <Link href="/matematika">
-                            <a className={nav}>Matematika</a>
-                          </Link>
-                        ) : (
-                          <Link href="/matematika">
-                            <a className={nav}>Matematika</a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black ">
-                        {active ? (
-                          <Link href="/fisika">
-                            <a className={nav}>Fisika</a>
-                          </Link>
-                        ) : (
-                          <Link href="/fisika">
-                            <a className={nav}>Fisika</a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
-
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black ">
-                        {active ? (
-                          <Link href="/kalkulator">
-                            <a className={nav}>Kalkulator</a>
-                          </Link>
-                        ) : (
-                          <Link href="/kalkulator">
-                            <a className={nav}>Kalkulator</a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black ">
-                        {active ? (
-                          <Link href="/kartu">
-                            <a className={nav}>Kartu</a>
-                          </Link>
-                        ) : (
-                          <Link href="/kartu">
-                            <a className={nav}>Kartu</a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button className="w-full text-left text-black ">
-                        {active ? (
-                          <Link href="/bimbel">
-                            <a className={nav}>Bimbel</a>
-                          </Link>
-                        ) : (
-                          <Link href="/bimbel">
-                            <a className={nav}>Bimbel</a>
-                          </Link>
-                        )}
-                      </button>
-                    )}
-                  </Menu.Item>
-                </div>
+                <Menu.Item>
+                  {({ active }) => (
+                    <button className="w-full text-left text-black ">
+                      {active ? (
+                        <Link href="/kalkulator">
+                          <a className={nav}>Kalkulator</a>
+                        </Link>
+                      ) : (
+                        <Link href="/kalkulator">
+                          <a className={nav}>Kalkulator</a>
+                        </Link>
+                      )}
+                    </button>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <button className="w-full text-left text-black ">
+                      {active ? (
+                        <Link href="/kartu">
+                          <a className={nav}>Kartu</a>
+                        </Link>
+                      ) : (
+                        <Link href="/kartu">
+                          <a className={nav}>Kartu</a>
+                        </Link>
+                      )}
+                    </button>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <button className="w-full text-left text-black ">
+                      {active ? (
+                        <Link href="/bimbel">
+                          <a className={nav}>Bimbel</a>
+                        </Link>
+                      ) : (
+                        <Link href="/bimbel">
+                          <a className={nav}>Bimbel</a>
+                        </Link>
+                      )}
+                    </button>
+                  )}
+                </Menu.Item>
               </section>
             </Menu.Items>
           </>

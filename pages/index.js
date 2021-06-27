@@ -13,7 +13,7 @@ const Beranda = () => {
   return (
     <Layout browserTitle="Beranda" description="Laboratorium untuk Pelajar.">
       {/* Hero */}
-      <section className="relative z-50 flex flex-col w-full py-10 bg-white border-b border-gray-400 lg:px-0 font-inter">
+      <section className="relative z-40 flex flex-col w-full py-10 bg-white border-b border-gray-400 lg:px-0 font-inter">
         <p className="mb-5 text-4xl font-bold leading-tight text-left sm:text-6xl sm:text-center">
           Pengganti{" "}
           <span>

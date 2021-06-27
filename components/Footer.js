@@ -1,28 +1,13 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 const Footer = () => {
-  const navigation = 'block text-gray-400 text-lg  hover:underline'
+  const navigation = "block text-gray-400 text-lg  hover:underline";
   return (
     <footer className="bottom-0 w-full mt-20 text-center bg-gray-800">
       <section className="flex flex-col max-w-4xl px-5 py-5 mx-auto mt-10 space-y-10 text-left sm:pt-0 sm:flex-row sm:space-y-0 xl:px-0">
         <article className="flex w-full sm:w-1/2">
-          {/* LAINNYA */}
-          <div className="w-full space-y-2 sm:w-1/2">
-            <div className="text-lg font-medium text-white ">Lainnya</div>
-            <Link href="/blog">
-              <a className={navigation}>Blog</a>
-            </Link>
-            <Link href="/portofolio">
-              <a className={navigation}>Portofolio</a>
-            </Link>
-            <Link href="/merchandise">
-              <a className={navigation}>Merchandise</a>
-            </Link>
-          </div>
-
           <div className="w-full space-y-2 sm:w-1/2">
             {/* ALAT */}
-            <div className="text-lg font-medium text-white ">Alat</div>
             <Link href="/matematika">
               <a className={navigation}>Matematika</a>
             </Link>
@@ -51,7 +36,9 @@ const Footer = () => {
             </Link>
           </div>
           <div>PT. Haris Laboratorium Indonesia</div>
-          <div>Pondok Kacang Timur, Tangerang Selatan, Banten 15226, Indonesia</div>
+          <div>
+            Pondok Kacang Timur, Tangerang Selatan, Banten 15226, Indonesia
+          </div>
           <div>harislabindonesia@gmail.com</div>
           <div className="flex flex-col w-full sm:flex-row">
             <div>
@@ -60,15 +47,19 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            Crafted by{' '}
-            <a href="https://www.twitter.com/haritssr" target="_blank" className="text-harislab hover:underline">
+            Crafted by{" "}
+            <a
+              href="https://www.twitter.com/haritssr"
+              target="_blank"
+              className="text-harislab hover:underline"
+            >
               Harits Syah
             </a>
           </div>
         </article>
       </section>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

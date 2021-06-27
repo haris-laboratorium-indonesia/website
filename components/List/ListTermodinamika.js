@@ -14,7 +14,7 @@ const ListTermodinamika = ({ title, materi, page }) => {
     >
       {({ open }) => (
         <>
-          <div class="flex justify-between items-center p-1 bg-gray-800 rounded-xl shadow-xl">
+          <div className="flex items-center justify-between p-1 bg-gray-800 shadow-xl rounded-xl">
             <Link href={materi}>
               <a className="z-50 block p-1 text-sm rounded-lg ">
                 <LeftArrow color="text-gray-300 hover:text-white" />
