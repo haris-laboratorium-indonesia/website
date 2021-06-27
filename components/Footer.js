@@ -35,8 +35,8 @@ const Footer = () => {
             <Link href="/kalkulatorMatematika">
               <a className={navigation}>Kalkulator</a>
             </Link>
-            <Link href="/bookingLes">
-              <a className={navigation}>Booking Les</a>
+            <Link href="/bimbel">
+              <a className={navigation}>Bimbel</a>
             </Link>
           </div>
         </article>

@@ -1,34 +1,40 @@
-import { Menu } from '@headlessui/react'
-import { Down, Up, MenuList, LeftArrow } from '@/Icons'
-import Link from 'next/link'
-const ListTermodinamika = ({ title, materi }) => {
-  const H1 = 'block text-gray-800 hover:bg-gray-500 hover:text-white rounded-md px-2 py-1'
-  const H2 = 'block text-gray-800 hover:bg-gray-500 hover:text-white rounded-md pl-6 pr-2 py-1'
+import { Menu } from "@headlessui/react";
+import { MenuList, LeftArrow } from "@/Icons";
+import Link from "next/link";
+const ListTermodinamika = ({ title, materi, page }) => {
+  const H1 =
+    "block text-gray-300 hover:bg-gray-600 hover:text-white rounded-md px-2 py-1";
+  const H2 =
+    "block text-gray-300 hover:bg-gray-600 hover:text-white rounded-md pl-6 pr-2 py-1";
 
   return (
-    <Menu as="div" className="sticky top-0 z-40 flex flex-col items-center w-full my-5 ">
+    <Menu
+      as="div"
+      className="sticky z-40 flex flex-col w-full my-5 top-2 md:w-1/2 sm:mx-auto"
+    >
       {({ open }) => (
         <>
-          <Menu.Button
-            className={` flex flex-row items-center justify-between w-full py-2.5 border-b border-gray-500 bg-white   focus:outline-none `}
-          >
-            <div className="text-xl font-semibold sm:text-2xl">{title}</div>
-            <div className="flex items-center justify-end space-x-2">
-              <Link href={materi}>
-                <a>
-                  <div className="z-50 px-2 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-200 bg-gray-50">
-                    <LeftArrow />
-                  </div>
-                </a>
-              </Link>
+          <div class="flex justify-between items-center p-1 bg-gray-800 rounded-xl shadow-xl">
+            <Link href={materi}>
+              <a className="z-50 block p-1 text-sm rounded-lg ">
+                <LeftArrow color="text-gray-300 hover:text-white" />
+              </a>
+            </Link>
 
-              <div className={` px-2 py-1 bg-gray-50 border border-gray-300 rounded-md hover:bg-gray-200`}>
-                <MenuList />
+            <Link href={`/fisika/${page}`}>
+              <a className="font-medium tracking-wider text-gray-100 hover:text-white">
+                {title}
+              </a>
+            </Link>
+
+            <Menu.Button className="focus:outline-none">
+              <div className="p-1 rounded-lg ">
+                <MenuList color="text-gray-300 hover:text-white" />
               </div>
-            </div>
-          </Menu.Button>
+            </Menu.Button>
+          </div>
           <Menu.Items className="flex justify-end w-full">
-            <div className="w-full p-1.5  border border-gray-300 bg-gray-50 rounded-md drop-shadow-2xl mt-2 sm:w-1/3">
+            <div className="w-full p-2 mt-2 bg-gray-800 rounded-lg drop-shadow-2xl ">
               <Menu.Item>
                 <a className={H1} href="#Pengenalan">
                   Pengenalan
@@ -80,7 +86,7 @@ const ListTermodinamika = ({ title, materi }) => {
         </>
       )}
     </Menu>
-  )
-}
+  );
+};
 
-export default ListTermodinamika
+export default ListTermodinamika;

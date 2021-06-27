@@ -3,7 +3,6 @@ import Judul from "../../components/TItle";
 import Layout from "../../components/Layout";
 
 const a = ({ dataUsers }) => {
-  console.log(dataUsers);
   const router = useRouter();
   return (
     <Layout title="Users" description="Data User">

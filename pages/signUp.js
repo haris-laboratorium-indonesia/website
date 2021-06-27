@@ -1,10 +1,10 @@
-import Layout from '@/components/Layout'
+import Layout from "@/components/Layout";
 
 const signUp = () => {
   return (
-    <Layout title="Login" description="Halaman SignUp">
+    <Layout browserTitle="Login" description="Halaman SignUp">
       <main className="mt-16">
-        <form className="w-full mt-16 p-5 mx-auto space-y-4 bg-white border border-gray-500 rounded-lg shadow-md sm:w-1/2">
+        <form className="w-full p-5 mx-auto mt-16 space-y-4 bg-white border border-gray-500 rounded-lg shadow-md sm:w-1/2">
           <h1 className="text-3xl font-medium">Daftar</h1>
           <section className="flex flex-col">
             <label className="text-sm" htmlFor="nama">
@@ -30,23 +30,23 @@ const signUp = () => {
             />
           </section>
           <div className="text-sm text-center text-gray-500 ">
-            Dengan mendaftar berarti kalian setuju dengan{' '}
+            Dengan mendaftar berarti kalian setuju dengan{" "}
             <a href="/" className="text-blue-500">
               aturan
-            </a>{' '}
-            dan{' '}
+            </a>{" "}
+            dan{" "}
             <a href="/" className="text-blue-500">
               privasi
-            </a>{' '}
+            </a>{" "}
             kami.
           </div>
           <button className="items-center w-full px-3 py-2 space-x-5 text-white bg-black border border-black rounded-md hover:bg-white hover:text-black focus:outline-none">
-            Daftar{' '}
+            Daftar{" "}
           </button>
         </form>
       </main>
     </Layout>
-  )
-}
+  );
+};
 
-export default signUp
+export default signUp;

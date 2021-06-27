@@ -1,42 +1,52 @@
-import { useState } from 'react'
-import Container from '/components/Container'
-import BlogPost from '/components/BlogPost'
-import { getAllFilesFrontMatter } from '/lib/mdx'
-import Layout from '../components/Layout'
-import Title from '@/components/Title'
+import { useState } from "react";
+import Container from "/components/Container";
+import BlogPost from "/components/BlogPost";
+import { getAllFilesFrontMatter } from "/lib/mdx";
+import Layout from "@/components/Layout";
+import Title from "@/components/Title";
 
 const blogPost = [
   {
-    title: 'Everything I Know About Style Guides, Design Systems, and Component Libraries',
+    title:
+      "Everything I Know About Style Guides, Design Systems, and Component Libraries",
     summary:
       "A deep-dive on everything I've learned in the past year building style guides, design systems, component libraries, and their best practices.",
-    slug: 'style-guides-component-libraries-design-systems',
+    slug: "style-guides-component-libraries-design-systems",
   },
 
   {
-    title: 'How Stripe Designs Beautiful Websites',
-    summary: "Examining the tips and tricks used to make Stripe's website design a notch above the rest.",
-    slug: 'how-stripe-designs-beautiful-websites',
+    title: "How Stripe Designs Beautiful Websites",
+    summary:
+      "Examining the tips and tricks used to make Stripe's website design a notch above the rest.",
+    slug: "how-stripe-designs-beautiful-websites",
   },
   {
-    title: 'Creating a Monorepo with Lerna & Yarn Workspaces',
+    title: "Creating a Monorepo with Lerna & Yarn Workspaces",
     summary:
-      'In this guide, you will learn how to create a Monorepo to manage multiple packages with a shared build, test, and release process.',
-    slug: 'monorepo-lerna-yarn-workspaces',
+      "In this guide, you will learn how to create a Monorepo to manage multiple packages with a shared build, test, and release process.",
+    slug: "monorepo-lerna-yarn-workspaces",
   },
-]
+];
 
 export default function Blog({ posts }) {
-  const [searchValue, setSearchValue] = useState('')
+  const [searchValue, setSearchValue] = useState("");
   const filteredBlogPosts = posts
-    .sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)))
-    .filter((frontMatter) => frontMatter.title.toLowerCase().includes(searchValue.toLowerCase()))
+    .sort(
+      (a, b) =>
+        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+    )
+    .filter((frontMatter) =>
+      frontMatter.title.toLowerCase().includes(searchValue.toLowerCase())
+    );
 
   return (
-    <Layout title="Blog" description="Blog HarisLab">
-      <Container title="Blog - HarisLab" description="Laboratorium untuk Pelajar.">
+    <Layout browserTitle="Blog" description="Blog HarisLab">
+      <Title name="Blog" />
+      <Container
+        title="Blog - HarisLab"
+        description="Laboratorium untuk Pelajar."
+      >
         <div className="flex flex-col items-start justify-center max-w-5xl mx-auto mb-16">
-          <Title name="Blog" />
           <p className="mb-4 text-gray-600 dark:text-gray-400">
             {`I've been writing online since 2014, mostly about web development and tech careers.
             In total, I've written ${posts.length} articles on this site.
@@ -80,17 +90,21 @@ export default function Blog({ posts }) {
           <h3 className="mt-8 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white">
             All Posts
           </h3>
-          {!filteredBlogPosts.length && <p className="mb-4 text-gray-600 dark:text-gray-400">No posts found.</p>}
+          {!filteredBlogPosts.length && (
+            <p className="mb-4 text-gray-600 dark:text-gray-400">
+              No posts found.
+            </p>
+          )}
           {filteredBlogPosts.map((frontMatter) => (
             <BlogPost key={frontMatter.title} {...frontMatter} />
           ))}
-        </div>{' '}
+        </div>{" "}
       </Container>
     </Layout>
-  )
+  );
 }
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
-  return { props: { posts } }
+  const posts = await getAllFilesFrontMatter("blog");
+  return { props: { posts } };
 }

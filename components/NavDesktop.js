@@ -1,7 +1,7 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 const NavDesktop = () => {
-  const nav = 'p-2  duration-200 hover:text-white text-gray-300  block'
+  const nav = "p-2  duration-200 hover:text-white text-gray-300  block";
   return (
     <nav className="hidden md:block">
       <nav className="z-50 flex flex-row items-center justify-between w-full h-auto max-w-4xl px-5 py-2 mx-auto xl:px-0">
@@ -18,17 +18,14 @@ const NavDesktop = () => {
         <Link href="/fisika">
           <a className={nav}>Fisika</a>
         </Link>
-        <Link href="/kartu">
-          <a className={nav}>Kartu</a>
-        </Link>
         <Link href="/kalkulator">
           <a className={nav}>Kalkulator</a>
         </Link>
-        <Link href="/bookingLes">
-          <a className={nav}>Les</a>
+        <Link href="/kartu">
+          <a className={nav}>Kartu</a>
         </Link>
-        <Link href="/blog">
-          <a className={nav}>Blog</a>
+        <Link href="/bimbel">
+          <a className={nav}>Bimbel</a>
         </Link>
 
         <Link href="/login">
@@ -40,7 +37,7 @@ const NavDesktop = () => {
         </Link>
       </nav>
     </nav>
-  )
-}
+  );
+};
 
-export default NavDesktop
+export default NavDesktop;

@@ -1,17 +1,13 @@
-import ChapterBox from '../../components/ChapterBox'
-import TabPhy from '../../components/TabPhy'
-import Layout from '../../components/Layout'
+import ChapterBox from "@/components/ChapterBox";
+import Layout from "@/components/Layout";
+import Title from "@/components/Title";
 
 const fisika = () => {
   return (
-    <Layout title="Materi Matematika" description="Materi Matematika SMP SMA">
-      <TabPhy
-        page="Fisika"
-        backTo="/fisika"
-        to="/matematika"
-        textColor="text-rose-500"
-      />
-      <section className="grid grid-cols-1 border border-gray-300 divide-y divide-gray-300 rounded-md bg-gray-50 sm:p-2 sm:grid-cols-2 md:grid-cols-3 sm:divide-y-0 ">
+    <Layout browserTitle="Fisika" description="Materi Matematika SMP SMA">
+      <Title name="Fisika" />
+
+      <section className="grid grid-cols-1 bg-gray-100 border border-gray-300 divide-y divide-gray-300 rounded-md sm:p-2 sm:grid-cols-2 md:grid-cols-3 sm:divide-y-0">
         <ChapterBox title="Fluida Statis" to="fisika/fluida" />
         <ChapterBox title="Fluida Dinamis" to="fluidaDinamis" />
         <ChapterBox title="Termodinamika" to="fisika/termodinamika" />
@@ -32,7 +28,7 @@ const fisika = () => {
         <ChapterBox title="Optik" to="fluida" />
       </section>
     </Layout>
-  )
-}
+  );
+};
 
-export default fisika
+export default fisika;

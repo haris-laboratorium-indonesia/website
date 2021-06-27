@@ -1,86 +1,93 @@
-import Link from 'next/link'
-import FAQ from '../components/FAQ'
-import InfoBox from '../components/InfoBox'
-import { FAQs } from '../lib/FAQs'
-import { weCareAbouts } from '../lib/weCareAbouts'
-import { sendInformations } from '../lib/sendInformations'
-import Layout from '../components/Layout'
-import { RightArrow } from '@/Icons'
-import stackblitz from '../public/stackblitz.png'
-import Image from 'next/image'
-
+import Link from "next/link";
+import FAQ from "../components/FAQ";
+import InfoBox from "../components/InfoBox";
+import { FAQs } from "../lib/FAQs";
+import { weCareAbouts } from "../lib/weCareAbouts";
+import { sendInformations } from "../lib/sendInformations";
+import Layout from "../components/Layout";
+import { RightArrow } from "@/Icons";
 const Beranda = () => {
-  const td = ' text-left text-sm p-2'
-  const th = 'p-2 text-left text-base font-medium text-blue-500 bg-blue-50'
+  const td = " text-left text-sm p-2";
+  const th = "p-2 text-left text-base font-medium text-blue-500 bg-blue-50";
 
   return (
-    <Layout title="Beranda" description="Laboratorium untuk Pelajar.">
+    <Layout browserTitle="Beranda" description="Laboratorium untuk Pelajar.">
       {/* Hero */}
-      <section className="relative w-full py-10 sm:py-20 lg:px-0 font-inter  flex flex-col border-b border-gray-300">
-        <p className="text-4xl font-bold sm:text-6xl mb-5 text-left sm:text-center leading-tight">
-          Pengganti{' '}
+      <section className="relative z-50 flex flex-col w-full py-10 bg-white border-b border-gray-400 lg:px-0 font-inter">
+        <p className="mb-5 text-4xl font-bold leading-tight text-left sm:text-6xl sm:text-center">
+          Pengganti{" "}
           <span>
             <Link href="/matematika">
-              <a className="underline hover:no-underline duration-200"> buku paket</a>
+              <a> buku paket,</a>
             </Link>
-          </span>
-          ,{' '}
+          </span>{" "}
           <span>
-            <Link href="/les">
-              <a className="underline hover:no-underline duration-200"> guru les</a>
+            <Link href="/bimbel">
+              <a> guru les,</a>
             </Link>
           </span>
-          ,
           <span>
             <Link href="/kalkulator">
-              <a className="underline hover:no-underline duration-200"> kalkulator</a>
+              <a> kalkulator,</a>
             </Link>
-          </span>
-          ,{' '}
+          </span>{" "}
           <span>
             <Link href="/kartu">
-              <a className="underline hover:no-underline duration-200"> flash card</a>
+              <a> flash card</a>
             </Link>
-          </span>{' '}
+          </span>{" "}
           <span className="text-harislab">untuk Pelajar</span>
         </p>
 
-        <div className="leading-tight mb-5 text-lg text-left sm:text-center">
-          Laboratorium untuk memahami matematika dan fisika yang lebih terstruktur.
+        <div className="mb-5 text-lg leading-tight text-left sm:text-center">
+          Laboratorium untuk memahami matematika dan fisika yang lebih
+          terstruktur.
         </div>
         <Link href="/signUp">
-          <a className="w-full justify-left sm:justify-center text-lg hover:underline text-harislab  flex items-center">
+          <a className="flex items-center w-full text-lg justify-left sm:justify-center hover:underline text-harislab">
             Pelajari lebih lanjut
             <RightArrow />
           </a>
         </Link>
       </section>
-      {/* <section>
-        <Image src={stackblitz} alt="Hero" placeholder="blur" layout="responsive" priority />
-      </section> */}
+
       {/* Cara kami menyajikan informasi */}
-      <div className="py-14 sm:py-20 border-b border-gray-300">
-        <header className="mb-10 text-center font-mw tracking-wide text-gray-600 ">
+      <div className="py-10 border-b border-gray-400 ">
+        <header className="mb-10 tracking-wide text-center text-gray-600 font-mw ">
           Cara kami menyajikan informasi
         </header>
         <section className="grid grid-cols-1 gap-10 mx-auto sm:grid-cols-3 md:grid-cols-4 ">
           {sendInformations.map((a) => (
-            <InfoBox key={a.id} svg={a.svg} name={a.title} description={a.description} />
+            <InfoBox
+              key={a.id}
+              svg={a.svg}
+              name={a.title}
+              description={a.description}
+            />
           ))}
         </section>
       </div>
       {/* Kami peduli tentang */}
-      <div className="py-14 sm:py-20 border-b border-gray-300">
-        <header className="mb-10 text-center font-mw tracking-wide text-gray-600">Kami Peduli Tentang</header>
+      <div className="py-10 border-b border-gray-400 ">
+        <header className="mb-10 tracking-wide text-center text-gray-600 font-mw">
+          Kami Peduli Tentang
+        </header>
         <section className="grid grid-cols-1 gap-10 mx-auto sm:grid-cols-3 md:grid-cols-4 ">
           {weCareAbouts.map((a) => (
-            <InfoBox key={a.id} svg={a.svg} name={a.title} description={a.description} />
+            <InfoBox
+              key={a.id}
+              svg={a.svg}
+              name={a.title}
+              description={a.description}
+            />
           ))}
         </section>
       </div>
       {/* HarisLab vs Zenius vs Ruangguru vs Buku Paket*/}
-      <div className="py-14 sm:py-20 border-b border-gray-300">
-        <header className=" mb-10 text-center font-mw tracking-wide ">HarisLab vs Zenius vs Ruangguru</header>
+      <div className="py-10 border-b border-gray-400 ">
+        <header className="mb-10 tracking-wide text-center font-mw">
+          HarisLab vs Zenius vs Ruangguru
+        </header>
         <section className="mx-auto overflow-x-auto sm:gap-5 lg:px-0">
           <table className="w-full border border-harislab">
             <thead>
@@ -126,8 +133,10 @@ const Beranda = () => {
         </section>
       </div>
       {/* FAQ */}
-      <div className="py-14 sm:py-20 border-b border-gray-300">
-        <header className="  mb-10 text-center font-mw tracking-wide ">Frequently Asked Questions</header>
+      <div className="py-10 border-b border-gray-400 ">
+        <header className="mb-10 tracking-wide text-center font-mw">
+          Frequently Asked Questions
+        </header>
         <section className="grid max-w-xl grid-cols-1 gap-5 mx-auto ">
           {FAQs.map((FAQs) => (
             <div key={FAQs.id}>
@@ -137,9 +146,9 @@ const Beranda = () => {
         </section>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default Beranda
+export default Beranda;
 
 // link ke halaman ini ada di ../components/Layout.js
