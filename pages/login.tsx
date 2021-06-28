@@ -27,7 +27,6 @@ const login = () => {
             id="Password"
             placeholder="Password"
             autoComplete="new-password"
-            autoComplete="current-password"
           />
         </section>
 
