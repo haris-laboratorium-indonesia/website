@@ -1,11 +1,11 @@
-import "katex/dist/katex.min.css";
-import Termodinamika from "../../public/nature.jpg";
-import TeX from "@matejmazur/react-katex";
-import Image from "next/image";
-import ExampleMain from "@/components/ExampleMain";
-import ExampleChild from "@/components/ExampleChild";
-import ListTermodinamika from "@/List/ListTermodinamika";
-import Layout from "@/components/Layout";
+import 'katex/dist/katex.min.css';
+import Termodinamika from '../../public/nature.jpg';
+import TeX from '@matejmazur/react-katex';
+import Image from 'next/image';
+import ExampleMain from '@/components/ExampleMain';
+import ExampleChild from '@/components/ExampleChild';
+import ListTermodinamika from '@/List/ListTermodinamika';
+import Layout from '@/components/Layout';
 
 const HIRARKI1 = ({ title }) => {
   return (
@@ -18,10 +18,7 @@ const HIRARKI1 = ({ title }) => {
 const HIRARKI2 = ({ id, title, children }) => {
   return (
     <div className="pl-5 mb-4 sm:pl-10">
-      <h2
-        id={id}
-        className="z-10 pb-1 text-lg font-semibold border-b border-gray-500 "
-      >
+      <h2 id={id} className="z-10 pb-1 text-lg font-semibold border-b border-gray-500 ">
         {title}
       </h2>
       <div className="pt-1">{children}</div>
@@ -30,19 +27,13 @@ const HIRARKI2 = ({ id, title, children }) => {
 };
 
 const termodinamika = () => {
-  const th =
-    "w-1/5 p-2 text-center text-base font-medium text-blue-500 bg-blue-50";
-  const td = " text-left py-3 px-2 table-auto min-w-min";
-  const tr = "divide-x divide-blue-200 ";
-  const H1 =
-    "z-10 pt-8 pb-4 text-3xl bg-white rounded-md lg:pt-0 font-mw mt-14";
+  const th = 'w-1/5 p-2 text-center text-base font-medium text-blue-500 bg-blue-50';
+  const td = ' text-left py-3 px-2 table-auto min-w-min';
+  const tr = 'divide-x divide-blue-200 ';
+  const H1 = 'z-10 pt-8 pb-4 text-3xl bg-white rounded-md lg:pt-0 font-mw mt-14';
   return (
     <Layout browserTitle="Termodinamika" description="Materi Termodinamika">
-      <ListTermodinamika
-        title="TERMODINAMIKA"
-        materi="/fisika"
-        page="termodinamika"
-      />
+      <ListTermodinamika title="TERMODINAMIKA" materi="/fisika" page="termodinamika" />
 
       <Image
         src={Termodinamika}
@@ -52,38 +43,33 @@ const termodinamika = () => {
         className="mb-4 rounded-lg drop-shadow-xl"
         priority
       />
+      <figcaption className="text-sm italic text-center font-mw">
+        Image 2 : Gunung di Gutenberg Swiss, tempat dimana rumus termodinamika ke-0 di temukan.
+      </figcaption>
       <HIRARKI1 title="Pengenalan" />
       <HIRARKI2 id="Apa" title="Apa itu Termodinamika ?">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-        consequatur veritatis, animi sed nihil dolor ad maiores obcaecati
-        exercitationem possimus adipisci optio dolorem nobis architecto autem
-        minima velit laborum iusto eum vitae esse asperiores, cum hic ratione!
-        Alias, odio? Adipisci, qui nam modi fuga eum ad. Ducimus excepturi
-        cupiditate odio.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos consequatur veritatis, animi
+        sed nihil dolor ad maiores obcaecati exercitationem possimus adipisci optio dolorem nobis
+        architecto autem minima velit laborum iusto eum vitae esse asperiores, cum hic ratione!
+        Alias, odio? Adipisci, qui nam modi fuga eum ad. Ducimus excepturi cupiditate odio.
       </HIRARKI2>
       <HIRARKI2 id="Siapa" title="Siapa yang menggunakan Termodinamika ?">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-        consequatur veritatis, animi sed nihil dolor ad maiores obcaecati
-        exercitationem possimus adipisci optio dolorem nobis architecto autem
-        minima velit laborum iusto eum vitae esse asperiores, cum hic ratione!
-        Alias, odio? Adipisci, qui nam modi fuga eum ad. Ducimus excepturi
-        cupiditate odio.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos consequatur veritatis, animi
+        sed nihil dolor ad maiores obcaecati exercitationem possimus adipisci optio dolorem nobis
+        architecto autem minima velit laborum iusto eum vitae esse asperiores, cum hic ratione!
+        Alias, odio? Adipisci, qui nam modi fuga eum ad. Ducimus excepturi cupiditate odio.
       </HIRARKI2>
       <HIRARKI2 id="Dimana" title="Dimana Termodinamika digunakan ?">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-        consequatur veritatis, animi sed nihil dolor ad maiores obcaecati
-        exercitationem possimus adipisci optio dolorem nobis architecto autem
-        minima velit laborum iusto eum vitae esse asperiores, cum hic ratione!
-        Alias, odio? Adipisci, qui nam modi fuga eum ad. Ducimus excepturi
-        cupiditate odio.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos consequatur veritatis, animi
+        sed nihil dolor ad maiores obcaecati exercitationem possimus adipisci optio dolorem nobis
+        architecto autem minima velit laborum iusto eum vitae esse asperiores, cum hic ratione!
+        Alias, odio? Adipisci, qui nam modi fuga eum ad. Ducimus excepturi cupiditate odio.
       </HIRARKI2>
       <HIRARKI2 id="Kapan" title="Kapan Termodinamika digunakan ?">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-        consequatur veritatis, animi sed nihil dolor ad maiores obcaecati
-        exercitationem possimus adipisci optio dolorem nobis architecto autem
-        minima velit laborum iusto eum vitae esse asperiores, cum hic ratione!
-        Alias, odio? Adipisci, qui nam modi fuga eum ad. Ducimus excepturi
-        cupiditate odio.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos consequatur veritatis, animi
+        sed nihil dolor ad maiores obcaecati exercitationem possimus adipisci optio dolorem nobis
+        architecto autem minima velit laborum iusto eum vitae esse asperiores, cum hic ratione!
+        Alias, odio? Adipisci, qui nam modi fuga eum ad. Ducimus excepturi cupiditate odio.
       </HIRARKI2>
 
       {/* variabel */}
@@ -144,27 +130,22 @@ const termodinamika = () => {
       {/* rumus */}
       <HIRARKI1 title="Rumus" />
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim
-        provident tenetur? Earum voluptas, rerum aliquid corporis, sit veritatis
-        laborum aut eum sed saepe natus esse quas expedita animi! Quasi odio
-        architecto impedit voluptatum eligendi nihil placeat molestiae at vitae
-        consequatur, autem, eos hic nemo debitis recusandae deleniti asperiores?
-        Officia quam eaque excepturi facere, eligendi perferendis iste.
-        Accusantium nam dolor doloremque unde expedita sunt cumque blanditiis,
-        corrupti, in sit ipsum qui laboriosam hic quidem, odio ad. In officia,
-        pariatur exercitationem provident deserunt neque excepturi nisi
-        voluptates saepe quidem commodi esse, atque odio incidunt voluptatum
-        porro ipsum reiciendis iusto nostrum laboriosam. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Laborum quibusdam ipsa nostrum
-        facilis qui nisi ratione molestias, sequi dolores nihil sint corporis
-        tenetur nam illum accusantium reprehenderit eos! Eligendi illo iste, at
-        obcaecati quaerat corporis qui iusto eveniet soluta unde sunt rem?
-        Corrupti, quidem! Aspernatur perspiciatis quibusdam iure laborum
-        perferendis eligendi quas dolor quia, sit expedita modi quis nam aliquid
-        deserunt amet soluta cumque at eaque dolores dolore corporis libero
-        provident consectetur quidem. Repudiandae sed debitis omnis corrupti
-        possimus in sit magni labore, sapiente repellat nam libero explicabo
-        aspernatur rerum facere, incidunt eligendi consequatur magnam inventore
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim provident tenetur? Earum
+        voluptas, rerum aliquid corporis, sit veritatis laborum aut eum sed saepe natus esse quas
+        expedita animi! Quasi odio architecto impedit voluptatum eligendi nihil placeat molestiae at
+        vitae consequatur, autem, eos hic nemo debitis recusandae deleniti asperiores? Officia quam
+        eaque excepturi facere, eligendi perferendis iste. Accusantium nam dolor doloremque unde
+        expedita sunt cumque blanditiis, corrupti, in sit ipsum qui laboriosam hic quidem, odio ad.
+        In officia, pariatur exercitationem provident deserunt neque excepturi nisi voluptates saepe
+        quidem commodi esse, atque odio incidunt voluptatum porro ipsum reiciendis iusto nostrum
+        laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quibusdam ipsa
+        nostrum facilis qui nisi ratione molestias, sequi dolores nihil sint corporis tenetur nam
+        illum accusantium reprehenderit eos! Eligendi illo iste, at obcaecati quaerat corporis qui
+        iusto eveniet soluta unde sunt rem? Corrupti, quidem! Aspernatur perspiciatis quibusdam iure
+        laborum perferendis eligendi quas dolor quia, sit expedita modi quis nam aliquid deserunt
+        amet soluta cumque at eaque dolores dolore corporis libero provident consectetur quidem.
+        Repudiandae sed debitis omnis corrupti possimus in sit magni labore, sapiente repellat nam
+        libero explicabo aspernatur rerum facere, incidunt eligendi consequatur magnam inventore
         voluptatem illo. Nihil, asperiores!
       </p>
       {/* penurunan rumus */}
@@ -172,47 +153,40 @@ const termodinamika = () => {
         Penurunan Rumus
       </h1>
       <p>
-        Math Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim
-        provident tenetur? Earum voluptas, rerum aliquid corporis, sit veritatis
-        laborum aut eum sed saepe natus esse quas expedita animi! Quasi odio
-        architecto impedit voluptatum eligendi nihil placeat molestiae at vitae
-        consequatur, autem, eos hic nemo debitis recusandae deleniti asperiores?
-        Officia quam eaque excepturi facere, eligendi perferendis iste.
-        Accusantium nam dolor doloremque unde expedita sunt cumque blanditiis,
-        corrupti, in sit ipsum qui laboriosam hic quidem, odio ad. In officia,
-        pariatur exercitationem provident deserunt neque excepturi nisi
-        voluptates saepe quidem commodi esse, atque odio incidunt voluptatum
-        porro ipsum reiciendis iusto nostrum laboriosam. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Laborum quibusdam ipsa nostrum
-        facilis qui nisi ratione molestias, sequi dolores nihil sint corporis
-        tenetur nam illum accusantium reprehenderit eos! Eligendi illo iste, at
-        obcaecati quaerat corporis qui iusto eveniet soluta unde sunt rem?
-        Corrupti, quidem! Aspernatur perspiciatis quibusdam iure laborum
-        perferendis eligendi quas dolor quia, sit expedita modi quis nam aliquid
-        deserunt amet soluta cumque at eaque dolores dolore corporis libero
-        provident consectetur quidem. Repudiandae sed debitis omnis corrupti
-        possimus in sit magni labore, sapiente repellat nam libero explicabo
-        aspernatur rerum facere, incidunt eligendi consequatur magnam inventore
-        voluptatem illo. Nihil, asperiores!
+        Math Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim provident tenetur?
+        Earum voluptas, rerum aliquid corporis, sit veritatis laborum aut eum sed saepe natus esse
+        quas expedita animi! Quasi odio architecto impedit voluptatum eligendi nihil placeat
+        molestiae at vitae consequatur, autem, eos hic nemo debitis recusandae deleniti asperiores?
+        Officia quam eaque excepturi facere, eligendi perferendis iste. Accusantium nam dolor
+        doloremque unde expedita sunt cumque blanditiis, corrupti, in sit ipsum qui laboriosam hic
+        quidem, odio ad. In officia, pariatur exercitationem provident deserunt neque excepturi nisi
+        voluptates saepe quidem commodi esse, atque odio incidunt voluptatum porro ipsum reiciendis
+        iusto nostrum laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+        quibusdam ipsa nostrum facilis qui nisi ratione molestias, sequi dolores nihil sint corporis
+        tenetur nam illum accusantium reprehenderit eos! Eligendi illo iste, at obcaecati quaerat
+        corporis qui iusto eveniet soluta unde sunt rem? Corrupti, quidem! Aspernatur perspiciatis
+        quibusdam iure laborum perferendis eligendi quas dolor quia, sit expedita modi quis nam
+        aliquid deserunt amet soluta cumque at eaque dolores dolore corporis libero provident
+        consectetur quidem. Repudiandae sed debitis omnis corrupti possimus in sit magni labore,
+        sapiente repellat nam libero explicabo aspernatur rerum facere, incidunt eligendi
+        consequatur magnam inventore voluptatem illo. Nihil, asperiores!
       </p>
       {/* contoh soal */}
       <h1 id="ContohSoal" className={H1}>
         Contoh Soal
       </h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim
-        provident tenetur? Earum voluptas, rerum aliquid corporis, sit
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim provident tenetur? Earum
+        voluptas, rerum aliquid corporis, sit
       </p>
       <ExampleMain type="Contoh Soal Mudah" tambahan="space-y-2">
         <ExampleChild type="Teori Kinetik Gas">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-          nemo.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nemo.
         </ExampleChild>
       </ExampleMain>
       <ExampleMain type="Contoh Soal Mudah" tambahan=" ">
         <ExampleChild type="Teori Kinetik Gas">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-          nemo.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nemo.
         </ExampleChild>
       </ExampleMain>
     </Layout>
