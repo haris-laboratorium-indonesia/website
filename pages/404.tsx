@@ -11,7 +11,7 @@ const y = () => {
   }, []);
 
   return (
-    <Layout title="404" description="Kayanya kamu nyasar deh ^_^">
+    <Layout browserTitle="404" description="Kayanya kamu nyasar deh ^_^">
       <div className="flex items-center justify-center text-3xl">
         Kayanya kamu nyasar deh ^_^
       </div>
