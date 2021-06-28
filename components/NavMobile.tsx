@@ -12,13 +12,13 @@ const NavMobile = () => {
         {({ open }) => (
           <>
             <Menu.Button className="z-50 flex justify-end w-full  py-0.5 px-1 hover:bg-gray-700  rounded-md focus:outline-none">
-              {open ? <X /> : <HamburgerMenu />}
+              {open ? <X color=" " /> : <HamburgerMenu  color=" "/>}
             </Menu.Button>
 
             <Menu.Items className="absolute right-0 z-50 w-full min-h-screen p-5 bg-gray-800 mt-11">
               {/* Search */}
               <section className="mb-5 flex items-center rounded-lg  p-1.5 bg-gray-700  ">
-                <SearchIcon />
+                <SearchIcon color=" " />
                 <input
                   type="text"
                   className="w-full ml-1 text-white placeholder-gray-300 bg-gray-700 focus:outline-none focus:placeholder-white "
