@@ -3,7 +3,11 @@ const colors = require("tailwindcss/colors");
 
 module.exports = {
   mode: "jit",
-  purge: ["./pages/**/*.js", "./components/**/*.js", "./components/List/*.js"],
+  purge: [
+    "./pages/**/*.tsx",
+    "./components/**/*.tsx",
+    "./components/List/*.tsx",
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
@@ -21,9 +25,6 @@ module.exports = {
       fuschsia: colors.fuchsia,
     },
     extend: {
-      backgroundImage: (theme) => ({
-        hero: "url('/stackblitz.png')",
-      }),
       fontFamily: {
         inter: ["Inter"],
         mw: ["Merriweather"],

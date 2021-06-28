@@ -3,7 +3,7 @@ import { X, HamburgerMenu, SearchIcon } from "@/Icons";
 import { Menu } from "@headlessui/react";
 
 const NavMobile = () => {
-  const nav = "py-1.5 text-lg block text-gray-400 ";
+  const nav = "py-1.5 text-xl block text-gray-400 ";
 
   return (
     <nav className="z-50 flex items-center justify-between w-full h-auto max-w-5xl px-5 py-3 mx-auto border-b border-gray-300 md:hidden">

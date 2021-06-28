@@ -1,33 +1,32 @@
 import Link from "next/link";
 
 const Footer = () => {
-  const navigation = "block text-gray-400 text-lg  hover:underline";
+  const navigation = "block text-gray-400 text-xl  hover:underline";
   return (
     <footer className="bottom-0 w-full mt-20 text-center bg-gray-800">
-      <section className="flex flex-col max-w-4xl px-5 py-5 mx-auto mt-10 space-y-10 text-left sm:pt-0 sm:flex-row sm:space-y-0 xl:px-0">
-        <article className="flex w-full sm:w-1/2">
-          <div className="w-full space-y-2 sm:w-1/2">
-            {/* ALAT */}
-            <Link href="/matematika">
-              <a className={navigation}>Matematika</a>
-            </Link>
-            <Link href="/fisika">
-              <a className={navigation}>Fisika</a>
-            </Link>
-            <Link href="/kartuMatematika">
-              <a className={navigation}>Flash Card</a>
-            </Link>
-            <Link href="/kalkulatorMatematika">
-              <a className={navigation}>Kalkulator</a>
-            </Link>
-            <Link href="/bimbel">
-              <a className={navigation}>Bimbel</a>
-            </Link>
-          </div>
-        </article>
+      <section className="grid max-w-4xl grid-cols-1 gap-5 px-5 py-5 mx-auto text-left sm:grid-cols-2 xl:px-0">
+        <div className="w-full space-y-2 ">
+          {/* ALAT */}
+          <Link href="/matematika">
+            <a className={navigation}>Matematika</a>
+          </Link>
+          <Link href="/fisika">
+            <a className={navigation}>Fisika</a>
+          </Link>
+          <Link href="/kalkulator">
+            <a className={navigation}>Kalkulator</a>
+          </Link>
+          <Link href="/kartu">
+            <a className={navigation}>Kartu</a>
+          </Link>
+
+          <Link href="/bimbel">
+            <a className={navigation}>Bimbel</a>
+          </Link>
+        </div>
 
         {/* Company Identity */}
-        <article className="w-full pt-10 space-y-2 text-xs text-gray-500 border-t border-gray-500 sm:border-0 sm:pt-0 sm:w-1/2 sm:text-sm">
+        <article className="w-full pt-5 space-y-2 text-xs text-gray-500 border-t border-gray-500 sm:border-0 sm:pt-0 sm:text-sm">
           <div className="text-2xl text-white font-mw">
             <Link href="/">
               <a>

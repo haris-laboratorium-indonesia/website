@@ -4,7 +4,7 @@ const fluida = () => {
   return (
     <main className="grid grid-cols-1 gap-4 md:grid-cols-4 ">
       <div className="space-y-10 md:col-span-3">
-        <div className>
+        <div>
           <h1
             id="Pengenalan"
             className="z-10 py-2 text-xl font-semibold bg-white rounded-md sm:text-2xl"
@@ -26,7 +26,7 @@ const fluida = () => {
             iusto nostrum laboriosam.
           </p>
         </div>
-        <div className>
+        <div>
           <h1
             id="Variabel"
             className="z-10 py-2 text-xl font-semibold bg-white rounded-md sm:text-2xl"
@@ -73,7 +73,7 @@ const fluida = () => {
             </table>
           </section>
         </div>
-        <div className>
+        <div >
           <h1
             id="Rumus"
             className="z-10 py-2 text-xl font-semibold bg-white rounded-md sm:text-2xl"
@@ -106,7 +106,7 @@ const fluida = () => {
             magnam inventore voluptatem illo. Nihil, asperiores!
           </p>
         </div>
-        <div className>
+        <div>
           <h1
             id="PenurunanRumus"
             className="z-10 py-2 text-xl font-semibold bg-white rounded-md sm:text-2xl"
@@ -139,7 +139,7 @@ const fluida = () => {
             magnam inventore voluptatem illo. Nihil, asperiores!
           </p>
         </div>
-        <div className>
+        <div>
           <h1
             id="ContohSoal"
             className="z-10 py-2 text-xl font-semibold bg-white rounded-md sm:text-2xl"

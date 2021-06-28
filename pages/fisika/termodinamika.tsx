@@ -209,7 +209,7 @@ const termodinamika = () => {
           nemo.
         </ExampleChild>
       </ExampleMain>
-      <ExampleMain type="Contoh Soal Mudah">
+      <ExampleMain type="Contoh Soal Mudah" tambahan=" ">
         <ExampleChild type="Teori Kinetik Gas">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
           nemo.

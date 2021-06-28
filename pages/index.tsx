@@ -6,6 +6,7 @@ import { weCareAbouts } from "../lib/weCareAbouts";
 import { sendInformations } from "../lib/sendInformations";
 import Layout from "../components/Layout";
 import { RightArrow } from "@/Icons";
+
 const Beranda = () => {
   const td = " text-left text-sm p-2";
   const th = "p-2 text-left text-base font-medium text-blue-500 bg-blue-50";
@@ -46,7 +47,7 @@ const Beranda = () => {
         <Link href="/signUp">
           <a className="flex items-center w-full text-lg justify-left sm:justify-center hover:underline text-harislab">
             Pelajari lebih lanjut
-            <RightArrow />
+            <RightArrow color="" />
           </a>
         </Link>
       </section>
