@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind variants;
 
 html {
   scroll-behavior: smooth;
@@ -67,4 +68,15 @@ a {
   top: 0;
   backdrop-filter: saturate(180%) blur(20px);
   transition: background-color 0.1 ease-in-out;
+}
+
+
+.full-width {
+	left: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	max-width: 100vw;
+	position: relative;
+	right: 50%;
+	width: 100vw;
 }

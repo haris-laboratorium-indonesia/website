@@ -30,7 +30,7 @@ const Layout = ({ children, browserTitle, description }) => {
         <NavMobile />
       </div>
 
-      <section className="w-full max-w-4xl min-h-screen px-5 mx-auto xl:px-0 font-inter">
+      <section className="w-full max-w-4xl min-h-screen px-5 mx-auto xl:px-0 font-inter ">
         {children}
       </section>
 

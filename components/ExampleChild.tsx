@@ -1,12 +1,9 @@
-import { Disclosure } from "@headlessui/react";
-import { HiOutlineChevronDown } from "react-icons/hi";
+import { Disclosure } from '@headlessui/react';
+import { HiOutlineChevronDown } from 'react-icons/hi';
 
 const ExampleChild = ({ type, children }) => {
   return (
-    <Disclosure
-      as="div"
-      className="flex flex-col w-full bg-gray-200 rounded-md"
-    >
+    <Disclosure as="div" className="flex flex-col w-full bg-gray-300 rounded-md">
       {({ open }) => (
         <>
           <Disclosure.Button
@@ -14,9 +11,7 @@ const ExampleChild = ({ type, children }) => {
             className="flex items-center justify-between px-4 py-2 rounded-md cursor-pointer focus:outline-none"
           >
             <div className="text-gray-700 ">{type}</div>
-            <HiOutlineChevronDown
-              className={`${open ? "transform rotate-180" : ""} block`}
-            />
+            <HiOutlineChevronDown className={`${open ? 'transform rotate-180' : ''} block`} />
           </Disclosure.Button>
           <Disclosure.Panel className="p-3 mt-1 text-black rounded-md ">
             {children}

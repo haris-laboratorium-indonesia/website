@@ -16,7 +16,7 @@ const Beranda = () => {
     <Layout browserTitle="Beranda" description="Laboratorium untuk Pelajar.">
       {/* Hero */}
       <section className="relative z-40 flex flex-col w-full py-10 bg-white border-b border-gray-400 sm:pt-24 sm:pb-0 lg:px-0 font-inter">
-        <p className="mb-5 text-4xl font-bold leading-tight text-center sm:text-6xl">
+        <div className="mb-5 text-4xl font-bold leading-tight text-center text-transparent sm:text-6xl">
           Pengganti{' '}
           <span>
             <Link href="/matematika">
@@ -39,13 +39,13 @@ const Beranda = () => {
             </Link>
           </span>{' '}
           {/* <span className="text-harislab">untuk Pelajar</span> */}
-        </p>
+        </div>
 
         <div className="text-lg leading-tight text-center sm:mb-12">
           Laboratorium untuk pelajar dalam memahami matematika dan fisika yang lebih terstruktur.
         </div>
         <Link href="/signUp">
-          <a className="flex items-center justify-center w-full mt-5 text-lg hover:underline text-harislab sm:mt-0 sm:my-12">
+          <a className="flex items-center justify-center w-full mt-5 text-lg text-harislab hover:underline sm:mt-0 sm:my-12">
             Pelajari lebih lanjut
             <RightArrow color="" />
           </a>

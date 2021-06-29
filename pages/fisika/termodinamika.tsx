@@ -1,5 +1,7 @@
 import 'katex/dist/katex.min.css';
-import Termodinamika from '../../public/nature.jpg';
+import Nature from '../../public/nature.jpg';
+import Forest from '../../public/amazing.jpg';
+
 import TeX from '@matejmazur/react-katex';
 import Image from 'next/image';
 import ExampleMain from '@/components/ExampleMain';
@@ -9,7 +11,7 @@ import Layout from '@/components/Layout';
 
 const HIRARKI1 = ({ title }) => {
   return (
-    <h1 id={title} className="z-10 pt-8 pb-4 text-3xl lg:pt-0 font-mw mt-14">
+    <h1 id={title} className={`z-10 pt-8 pb-4  text-3xl sm:text-4xl lg:pt-0 font-bold mt-14 `}>
       {title}
     </h1>
   );
@@ -17,60 +19,69 @@ const HIRARKI1 = ({ title }) => {
 
 const HIRARKI2 = ({ id, title, children }) => {
   return (
-    <div className="pl-5 mb-4 sm:pl-10">
-      <h2 id={id} className="z-10 pb-1 text-lg font-semibold border-b border-gray-500 ">
+    <div className="pl-5 mb-4 ">
+      <h2 id={id} className="z-10 text-lg font-semibold">
         {title}
       </h2>
-      <div className="pt-1">{children}</div>
+      <div className="tracking-wide ">{children}</div>
     </div>
   );
 };
 
 const termodinamika = () => {
-  const th = 'w-1/5 p-2 text-center text-base font-medium text-blue-500 bg-blue-50';
+  const th = 'w-1/5 p-2 text-center text-base font-medium text-amber-500 bg-amber-50';
   const td = ' text-left py-3 px-2 table-auto min-w-min';
-  const tr = 'divide-x divide-blue-200 ';
+  const tr = 'divide-x divide-amber-200 ';
   const H1 = 'z-10 pt-8 pb-4 text-3xl bg-white rounded-md lg:pt-0 font-mw mt-14';
   return (
     <Layout browserTitle="Termodinamika" description="Materi Termodinamika">
-      <ListTermodinamika title="TERMODINAMIKA" materi="/fisika" page="termodinamika" />
+      <ListTermodinamika title="Termodinamika" materi="/fisika" page="termodinamika" />
 
-      <Image
-        src={Termodinamika}
-        alt="Termodinamika"
-        placeholder="blur"
-        layout="intrinsic"
-        className="mb-4 rounded-lg drop-shadow-xl"
-        priority
-      />
+      <div className="mb-4 -mx-5 sm:-mx-0">
+        <Image
+          src={Nature}
+          alt="Termodinamika"
+          placeholder="blur"
+          layout="intrinsic"
+          priority
+          className="lg:rounded-md"
+        />
+      </div>
       <figcaption className="text-sm italic text-center font-mw">
-        Image 2 : Gunung di Gutenberg Swiss, tempat dimana rumus termodinamika ke-0 di temukan.
+        Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termodinamika ke-0 dirumuskan.
       </figcaption>
+
       <HIRARKI1 title="Pengenalan" />
-      <HIRARKI2 id="Apa" title="Apa itu Termodinamika ?">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos consequatur veritatis, animi
-        sed nihil dolor ad maiores obcaecati exercitationem possimus adipisci optio dolorem nobis
-        architecto autem minima velit laborum iusto eum vitae esse asperiores, cum hic ratione!
-        Alias, odio? Adipisci, qui nam modi fuga eum ad. Ducimus excepturi cupiditate odio.
-      </HIRARKI2>
-      <HIRARKI2 id="Siapa" title="Siapa yang menggunakan Termodinamika ?">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos consequatur veritatis, animi
-        sed nihil dolor ad maiores obcaecati exercitationem possimus adipisci optio dolorem nobis
-        architecto autem minima velit laborum iusto eum vitae esse asperiores, cum hic ratione!
-        Alias, odio? Adipisci, qui nam modi fuga eum ad. Ducimus excepturi cupiditate odio.
-      </HIRARKI2>
-      <HIRARKI2 id="Dimana" title="Dimana Termodinamika digunakan ?">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos consequatur veritatis, animi
-        sed nihil dolor ad maiores obcaecati exercitationem possimus adipisci optio dolorem nobis
-        architecto autem minima velit laborum iusto eum vitae esse asperiores, cum hic ratione!
-        Alias, odio? Adipisci, qui nam modi fuga eum ad. Ducimus excepturi cupiditate odio.
-      </HIRARKI2>
-      <HIRARKI2 id="Kapan" title="Kapan Termodinamika digunakan ?">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos consequatur veritatis, animi
-        sed nihil dolor ad maiores obcaecati exercitationem possimus adipisci optio dolorem nobis
-        architecto autem minima velit laborum iusto eum vitae esse asperiores, cum hic ratione!
-        Alias, odio? Adipisci, qui nam modi fuga eum ad. Ducimus excepturi cupiditate odio.
-      </HIRARKI2>
+      <div className="border-l border-gray-800">
+        <HIRARKI2 id="Apa" title="Apa itu Termodinamika ?">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos consequatur veritatis,
+          animi sed nihil dolor ad maiores obcaecati exercitationem possimus adipisci optio dolorem
+          nobis architecto autem minima velit laborum iusto eum vitae esse asperiores, cum hic
+          ratione! Alias, odio? Adipisci, qui nam modi fuga eum ad. Ducimus excepturi cupiditate
+          odio.
+        </HIRARKI2>
+        <HIRARKI2 id="Siapa" title="Siapa yang menggunakan Termodinamika ?">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos consequatur veritatis,
+          animi sed nihil dolor ad maiores obcaecati exercitationem possimus adipisci optio dolorem
+          nobis architecto autem minima velit laborum iusto eum vitae esse asperiores, cum hic
+          ratione! Alias, odio? Adipisci, qui nam modi fuga eum ad. Ducimus excepturi cupiditate
+          odio.
+        </HIRARKI2>
+        <HIRARKI2 id="Dimana" title="Dimana Termodinamika digunakan ?">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos consequatur veritatis,
+          animi sed nihil dolor ad maiores obcaecati exercitationem possimus adipisci optio dolorem
+          nobis architecto autem minima velit laborum iusto eum vitae esse asperiores, cum hic
+          ratione! Alias, odio? Adipisci, qui nam modi fuga eum ad. Ducimus excepturi cupiditate
+          odio.
+        </HIRARKI2>
+        <HIRARKI2 id="Kapan" title="Kapan Termodinamika digunakan ?">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos consequatur veritatis,
+          animi sed nihil dolor ad maiores obcaecati exercitationem possimus adipisci optio dolorem
+          nobis architecto autem minima velit laborum iusto eum vitae esse asperiores, cum hic
+          ratione! Alias, odio? Adipisci, qui nam modi fuga eum ad. Ducimus excepturi cupiditate
+          odio.
+        </HIRARKI2>
+      </div>
 
       {/* variabel */}
       <HIRARKI1 title="Variabel" />
@@ -84,7 +95,7 @@ const termodinamika = () => {
             </tr>
           </thead>
 
-          <tbody className="divide-y divide-blue-300">
+          <tbody className="divide-y divide-amber-300">
             <tr className={tr}>
               <td className={td}>Tekanan</td>
               <td className={td}>
@@ -140,6 +151,16 @@ const termodinamika = () => {
         quidem commodi esse, atque odio incidunt voluptatum porro ipsum reiciendis iusto nostrum
         laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quibusdam ipsa
         nostrum facilis qui nisi ratione molestias, sequi dolores nihil sint corporis tenetur nam
+        <div className="my-4 mb-4 -mx-5 sm:-mx-0">
+          <Image
+            src={Forest}
+            alt="Termodinamika"
+            placeholder="blur"
+            layout="intrinsic"
+            priority
+            className="lg:rounded-md"
+          />
+        </div>
         illum accusantium reprehenderit eos! Eligendi illo iste, at obcaecati quaerat corporis qui
         iusto eveniet soluta unde sunt rem? Corrupti, quidem! Aspernatur perspiciatis quibusdam iure
         laborum perferendis eligendi quas dolor quia, sit expedita modi quis nam aliquid deserunt
@@ -148,6 +169,7 @@ const termodinamika = () => {
         libero explicabo aspernatur rerum facere, incidunt eligendi consequatur magnam inventore
         voluptatem illo. Nihil, asperiores!
       </p>
+
       {/* penurunan rumus */}
       <h1 id="PenurunanRumus" className={H1}>
         Penurunan Rumus
@@ -179,12 +201,8 @@ const termodinamika = () => {
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim provident tenetur? Earum
         voluptas, rerum aliquid corporis, sit
       </p>
-      <ExampleMain type="Contoh Soal Mudah" tambahan="space-y-2">
-        <ExampleChild type="Teori Kinetik Gas">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nemo.
-        </ExampleChild>
-      </ExampleMain>
-      <ExampleMain type="Contoh Soal Mudah" tambahan=" ">
+
+      <ExampleMain type="Contoh Soal Mudah">
         <ExampleChild type="Teori Kinetik Gas">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nemo.
         </ExampleChild>
