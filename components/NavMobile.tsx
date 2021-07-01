@@ -3,7 +3,7 @@ import { X, HamburgerMenu, SearchIcon } from "@/Icons";
 import { Menu } from "@headlessui/react";
 
 const NavMobile = () => {
-  const nav = "py-1.5 text-xl block text-gray-400 ";
+  const nav = "py-1.5 text-xl block text-gray-200 ";
 
   return (
     <nav className="z-50 flex items-center justify-between w-full h-auto max-w-5xl px-5 py-3 mx-auto border-b border-gray-300 md:hidden">
@@ -17,7 +17,7 @@ const NavMobile = () => {
 
             <Menu.Items className="absolute right-0 z-50 w-full min-h-screen p-5 bg-gray-800 mt-11">
               {/* Search */}
-              <section className="mb-5 flex items-center rounded-lg  p-1.5 bg-gray-700  ">
+              <section className="mb-5 flex items-center rounded-lg  p-1.5 bg-gray-700  -mx-3">
                 <SearchIcon color=" " />
                 <input
                   type="text"
@@ -26,7 +26,7 @@ const NavMobile = () => {
                 />
               </section>
 
-              <section className="grid grid-cols-1 pt-5 divide-y divide-gray-500">
+              <section className="grid grid-cols-1 px-5 pt-5 divide-y divide-gray-600">
                 <Menu.Item>
                   {({ active }) => (
                     <button className="w-full text-left text-black ">

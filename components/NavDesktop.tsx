@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const NavDesktop = () => {
-  const nav = "p-2  duration-200 hover:text-white text-gray-300  block";
+  const nav = "p-2  duration-200 hover:text-white text-gray-300  block font-inter";
   return (
     <nav className="hidden md:block">
       <nav className="z-50 flex flex-row items-center justify-between w-full h-auto max-w-4xl px-5 py-2 mx-auto xl:px-0">

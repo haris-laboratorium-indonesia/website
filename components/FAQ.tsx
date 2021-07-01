@@ -8,7 +8,7 @@ const FAQ = ({ button, panel }) => {
         <>
           <Disclosure.Button
             as="div"
-            className="flex items-center justify-between p-2 border-b rounded-md focus:outline-none"
+            className="flex items-center justify-between p-2 border-b rounded-md cursor-pointer focus:outline-none active:bg-gray-100 hover:bg-gray-100"
           >
             <div>{button}</div>
             <HiOutlineChevronDown
