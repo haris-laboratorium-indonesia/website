@@ -320,8 +320,8 @@ export const X = ({ color }) => {
       stroke="currentColor"
     >
       <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        // strokeLinecap="round"
+        // strokeLinejoin="round"
         strokeWidth={1}
         d="M6 18L18 6M6 6l12 12"
       />
@@ -337,9 +337,9 @@ export const HamburgerMenu = ({ color }) => {
       width="24"
       height="24"
       stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      strokeWidth="1"
+      // strokeLinecap="round"
+      // strokeLinejoin="round"
       fill="none"
     >
       <path d="M3 12h18" />

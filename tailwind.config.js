@@ -6,6 +6,14 @@ module.exports = {
   purge: ['./pages/**/*.tsx', './components/**/*.tsx', './components/List/*.tsx'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    textIndent: (theme, { negative }) => ({
+      ...{
+        no: '0rem',
+        sm: '2rem',
+        md: '3rem',
+        lg: '4rem',
+      },
+    }),
     colors: {
       harislab: '#007AFF',
       black: '#262626',
@@ -38,5 +46,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography'), require('tailwindcss-text-indent')()],
 };

@@ -15,14 +15,8 @@ const Beranda = () => {
   return (
     <Layout browserTitle='Beranda' description='Laboratorium untuk Pelajar.'>
       {/* Hero */}
-      <div className='flex items-center justify-center mt-10 mb-5 sm:mt-24'>
-        <div className='flex items-center justify-center text-3xl font-extrabold bg-white rounded-lg sm:text-6xl sm:rounded-2xl'>
-          <span className='text-center bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-500 trns'>
-            Haris Laboratorium
-          </span>
-        </div>
-      </div>
-      <section className='relative z-40 flex flex-col w-full pb-32 bg-white sm:pb-0 lg:px-0 font-inter'>
+      
+      <section className='relative z-40 flex flex-col w-full pb-32 bg-white pt-14 sm:pt-40 sm:pb-0 font-inter'>
         <div className='max-w-3xl mx-auto mb-5 text-4xl font-extrabold leading-tight text-center text-transparent sm:text-6xl'>
           <span>
             <Link href='/matematika'>
@@ -47,8 +41,7 @@ const Beranda = () => {
         </div>
 
         <div className='text-lg leading-tight text-center sm:mb-12'>
-          Segala tentang Matematika dan Fisika sampai jenjang SMA untuk mendukung proses belajar
-          kamu.
+          Matematika dan Fisika.
         </div>
         <Link href='/signUp'>
           <a className='flex items-center justify-center w-full mt-5 text-lg duration-300 text-harislab hover:underline sm:mt-0 sm:mb-40'>
@@ -80,7 +73,7 @@ const Beranda = () => {
 
       {/* Kami peduli tentang */}
       <div className='mb-32 sm:mb-60 '>
-        <header className='mb-10 text-2xl font-bold text-center bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 trns sm:text-4xl'>
+        <header className='mb-10 text-2xl font-bold text-center bg-gradient-to-r from-lime-600 via-green-600 to-emerald-600 trns sm:text-4xl'>
           Kami Peduli Tentang
         </header>
 
@@ -91,8 +84,8 @@ const Beranda = () => {
               svg={a.svg}
               name={a.title}
               description={a.description}
-              color='text-green-600'
-              borderColor='border-green-600'
+              color='text-lime-600'
+              borderColor='border-lime-600'
             />
           ))}
         </section>
@@ -151,7 +144,7 @@ const Beranda = () => {
       {/* tailwindcss, apple, nng, lawsofux */}
       <div className='mb-32 sm:mb-60 '>
         <header className='mb-10 text-2xl font-bold text-center bg-gradient-to-r from-cyan-500 via-rose-500 to-amber-500 sm:text-4xl trns'>
-          Terinspirasi dari prinsip desain terbaik
+          Terinspirasi dari prinsip desain website informasi terbaik
         </header>
         <div className='grid grid-cols-1 gap-5 font-medium text-center sm:grid-cols-2'>
           <a

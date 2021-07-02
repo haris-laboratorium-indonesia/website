@@ -62,7 +62,6 @@ a {
   min-height: 100vh;
 }
 
-
 .sticky-nav {
   position: sticky;
   z-index: 10;
@@ -84,4 +83,10 @@ a {
 .trns {
   color: transparent;
   background-clip: text;
+}
+
+.chapterBox {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
