@@ -1,52 +1,50 @@
 import 'katex/dist/katex.min.css';
-import Nature from '../../public/nature.jpg';
-import Forest from '../../public/amazing.jpg';
-
 import TeX from '@matejmazur/react-katex';
-import Image from 'next/image';
+import Nature from '../../public/nature.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import ListTermodinamika from '@/List/ListTermodinamika';
-import Layout from '@/components/Layout';
-
-import Materi from '@/components/Materi';
-import { AA1, A2, th, td, tr, thead, Para } from '@/components/Blog';
+import LayoutMateri from '@/components/LayoutMateri';
+import {
+  AA1,
+  A2,
+  TH,
+  TData,
+  TRowwwww,
+  THEAD,
+  TBODY,
+  Para,
+  Gambar,
+  Legenda,
+  KaTeX,
+} from '@/components/Materi';
 
 const termodinamika = () => {
   return (
-    <Materi browserTitle='Termodinamika' description='Materi Termodinamika'>
+    <LayoutMateri browserTitle='Termodinamika' description='Materi Termodinamika'>
       <ListTermodinamika title='Termodinamika' materi='/fisika' page='termodinamika' />
-      <div className='mb-4 -mx-5 sm:-mx-0'>
-        <Image
-          src={Nature}
-          alt='Termodinamika'
-          placeholder='blur'
-          layout='intrinsic'
-          priority
-          className='lg:rounded'
-        />
-        <figcaption className='text-sm italic text-center text-gray-700 font-mw'>
-          Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termodinamika ke-0
-          dirumuskan.
-        </figcaption>
-      </div>
+      <Gambar
+        src={Nature}
+        alt='Termodinamika'
+        caption='Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termodinamika ke-0 dirumuskan.'
+      ></Gambar>
       <AA1 id='Pengenalan' title='Pengenalan' />
       <A2 title='Apa itu Termodinamika' />
       <Para>
         <em>Termo</em> = Panas. <em>Dinamika</em> = bergerak. Termodinamika adalah ilmu yang
         mempelajari panas yang bergerak. Panas adalah suhu, suhu memiliki energi, suhu yang bergerak
-        dinamakan kalor. Semua hal di dunia ini memiliki panas, bahkan suhu <TeX>-10\degree</TeX>{' '}
+        dinamakan kalor. Semua hal di dunia ini memiliki panas, bahkan suhu <TeX>-10\degree</TeX>
         yang biasa manusia rasakan sebagai sesuatu yang dingin pada dasarnya adalah panas, bahkan
-        dalam fisika sebenarnya tidak ada yang namanya dingin, suhu badan manusia rata-rata adalah{' '}
+        dalam fisika sebenarnya tidak ada yang namanya dingin, suhu badan manusia rata-rata adalah
         <TeX>30\degree s.d \ 37\degree</TeX>, itu untuk suhu badan yang sehat, suhu badan di bawah
         itu maka tubuh akan merasakannya sebagai dingin, dan suhu di atas itu akan dianggap sebagai
         sesuatu yang panas.
       </Para>
       <Para>
-        Namun bagi hewan lain yang tinggal di bawah laut yang suhunya bisa mencapai{' '}
+        Namun bagi hewan lain yang tinggal di bawah laut yang suhunya bisa mencapai
         <TeX>0\degree</TeX> mereka nyaman dengan suhu tersebut, sehingga persepsi dingin yang
         manusia rasakan pada suhu itu tidak mereka anggap sebagai sesuatu yang dingin bagi mereka,
-        melainkan suhu normal.
+        melainkan suhu normal. <KaTeX>{`P_h = \\rho g h = \\frac{A}{B}`}</KaTeX>
       </Para>
       <A2 title='Siapa yang menggunakan Termodinamika' />
       <Para>
@@ -69,130 +67,187 @@ const termodinamika = () => {
       <A2 title='Kapan Termodinamika digunakan' />
       <Para>Selama matahari masih menyinari bumi.</Para>
       <AA1 id='Konstanta' title='Konstanta' />
-      <section className='mx-auto overflow-x-auto sm:gap-5 lg:px-0'>
-        <table className='w-full min-w-full border table-max'>
-          <thead className={thead}>
-            <tr className={tr}>
-              <th className={th}>Simbol</th>
-              <th className={th}>Nama</th>
-              <th className={th}>Nilai</th>
-            </tr>
-          </thead>
+      <table className='w-full min-w-full border table-max'>
+        <THEAD>
+          <TRowwwww>
+            <TH>Simbol</TH>
+            <TH>Nama</TH>
+            <TH>Nilai</TH>
+          </TRowwwww>
+        </THEAD>
 
-          <tbody className='divide-y divide-gray-300'>
-            <tr className={tr}>
-              <td className={td}>
-                <TeX>k</TeX>
-              </td>
-              <td className={td}>Konstanta Bolzmann</td>
-              <td className={td}>
-                <TeX>{`1,380 \\times 10^{-23} \\frac{J}{K}`}</TeX>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+        <TBODY>
+          <TRowwwww>
+            <TData>
+              <TeX>k</TeX>
+            </TData>
+            <TData>Konstanta Boltzmann</TData>
+            <TData>
+              <KaTeX>{`1,380 \\times 10^{-23} \\frac{J}{K}`}</KaTeX>
+            </TData>
+          </TRowwwww>
+
+          <TRowwwww>
+            <TData>
+              <TeX>R</TeX>
+            </TData>
+
+            <TData>Konstanta Gas Ideal</TData>
+            <TData>
+              <KaTeX>{`8,3145 \\enspace \\frac{J\\cdot mol}{K}`}</KaTeX>
+            </TData>
+          </TRowwwww>
+        </TBODY>
+      </table>
       {/* variabel */}
       <AA1 id='Variabel' title='Variabel' />
       <section className='mx-auto overflow-x-auto sm:gap-5 lg:px-0'>
         <table className='w-full min-w-full border table-max'>
-          <thead className={thead}>
-            <tr className={tr}>
-              <th className={th}>Simbol</th>
-              <th className={th}>Nama</th>
-              <th className={th}>Satuan</th>
-            </tr>
-          </thead>
+          <THEAD>
+            <TRowwwww>
+              <TH>Simbol</TH>
+              <TH>Nama</TH>
+              <TH>Satuan</TH>
+            </TRowwwww>
+          </THEAD>
 
-          <tbody className='divide-y divide-gray-300'>
-            <tr className={tr}>
-              <td className={td}>
+          <TBODY>
+            <TRowwwww>
+              <TData>
                 <TeX>P</TeX>
-              </td>
-              <td className={td}>Tekanan</td>
-              <td className={td}>
+              </TData>
+              <TData>Tekanan</TData>
+              <TData>
                 <TeX>Pascal/Pa</TeX>
-              </td>
-            </tr>
+              </TData>
+            </TRowwwww>
 
-            <tr className={tr}>
-              <td className={td}>
-                <TeX>P_h</TeX>
-              </td>
-              <td className={td}>Tekanan Hidrostatis</td>
-              <td className={td}>
-                <TeX>Pascal/Pa</TeX>
-              </td>
-            </tr>
+            <TRowwwww>
+              <TData>
+                <TeX>V</TeX>
+              </TData>
+              <TData>Volume</TData>
+              <TData>
+                <TeX>m^3</TeX>
+              </TData>
+            </TRowwwww>
 
-            <tr className={tr}>
-              <td className={td}>
+            <TRowwwww>
+              <TData>
+                <TeX>n</TeX>
+              </TData>
+              <TData>Bayak molekul</TData>
+              <TData>
+                <TeX>-</TeX>
+              </TData>
+            </TRowwwww>
+
+            <TRowwwww>
+              <TData>
+                <TeX>T</TeX>
+              </TData>
+              <TData>Suhu/Temperatur</TData>
+              <TData>
+                <TeX>Kelvin/K</TeX>
+              </TData>
+            </TRowwwww>
+
+            <TRowwwww>
+              <TData>
                 <TeX>Q_h</TeX>
-              </td>
-              <td className={td}>Kalor masuk (Hot)</td>
-              <td className={td}>
-                <TeX>Kelvin / K</TeX>
-              </td>
-            </tr>
+              </TData>
+              <TData>Kalor masuk (Hot)</TData>
+              <TData>
+                <TeX>Joule / J</TeX>
+              </TData>
+            </TRowwwww>
 
-            <tr className={tr}>
-              <td className={td}>
+            <TRowwwww>
+              <TData>
                 <TeX>Q_c</TeX>
-              </td>
-              <td className={td}>Kalor keluar (Cold)</td>
-              <td className={td}>
-                <TeX>Kelvin / K</TeX>
-              </td>
-            </tr>
+              </TData>
+              <TData>Kalor keluar (Cold)</TData>
+              <TData>
+                <TeX>Joule / J</TeX>
+              </TData>
+            </TRowwwww>
 
-            <tr className={tr}>
-              <td className={td}>
+            <TRowwwww>
+              <TData>
                 <TeX>\eta</TeX>
-              </td>
-              <td className={td}>Efisiensi</td>
-              <td className={td}>
+              </TData>
+              <TData>Efisiensi</TData>
+              <TData>
                 <TeX>\%</TeX>
-              </td>
-            </tr>
-          </tbody>
+              </TData>
+            </TRowwwww>
+          </TBODY>
         </table>
       </section>
       {/* rumus */}
       <AA1 id='Rumus' title='Rumus' />
-      <Para>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim provident tenetur? Earum
-        voluptas, rerum aliquid corporis, sit veritatis laborum aut eum sed saepe natus esse quas
-        expedita animi! Quasi odio architecto impedit voluptatum eligendi nihil placeat molestiae at
-        vitae consequatur, autem, eos hic nemo debitis recusandae deleniti asperiores? Officia quam
-        eaque excepturi facere, eligendi perferendis iste. Accusantium nam dolor doloremque unde
-        expedita sunt cumque blanditiis, corrupti, in sit ipsum qui laboriosam hic quidem, odio ad.
-        In officia, pariatur exercitationem provident deserunt neque excepturi nisi voluptates saepe
-        quidem commodi esse, atque odio incidunt voluptatum porro ipsum reiciendis iusto nostrum
-        laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quibusdam ipsa
-        nostrum facilis qui nisi ratione molestias, sequi dolores nihil sint corporis tenetur nam
-        <div className='my-8 -mx-5 sm:-mx-0 indent-no'>
-          <Image
-            src={Forest}
-            alt='Termodinamika'
-            placeholder='blur'
-            layout='intrinsic'
-            priority
-            className='lg:rounded'
-          />
+      <div className='grid grid-cols-2 gap-5 sm:grid-cols-4'>
+        <KaTeX>PV = nRT</KaTeX>
+        <KaTeX>PV = nKT</KaTeX>
+        <KaTeX>{String.raw`\frac{1}{2}mv^2 = \frac{3}{2}KT`}</KaTeX>
+        <KaTeX>{String.raw`\frac{Q_h}{Q_c} = \frac{T_h}{T_c}`}</KaTeX>
+        <KaTeX>{String.raw`\eta = \frac{W}{Q_h}`}</KaTeX>
+        <KaTeX>{String.raw`Q = \Delta U + W`}</KaTeX>
+      </div>
+      '
+      <section className='grid grid-cols-1 gap-5 sm:grid-cols-2'>
+        <article className='p-4 bg-gray-100 border border-gray-200 rounded-lg'>
+          <div className='text-2xl font-semibold'>Isobaris</div>
+          <div className='pb-1 mb-2 border-b border-gray-300'>
+            Tekanan tetap selama proses <TeX>(\Delta P = 0)</TeX>
+          </div>
+          <KaTeX>{String.raw`\textcolor{orangered}{W} = \int P dV = P\int dV = P\Delta V`}</KaTeX>
+          <KaTeX>{String.raw`\textcolor{orangered}{Q} = \Delta U + W = \Delta U + P\Delta V`}</KaTeX>
+          <KaTeX>{String.raw`mC_p\Delta T = mC_v\Delta T + W`}</KaTeX>
+          <KaTeX>{String.raw`W = mC_p\Delta T - mC_v\Delta T`}</KaTeX>
 
-          <figcaption className='text-sm italic text-center text-gray-700 font-mw'>
-            Gambar 2 : Lembah Einstein, tempat dimana mekanika kuantum dicela dan dicaci maki.
-          </figcaption>
-        </div>
-        illum accusantium reprehenderit eos! Eligendi illo iste, at obcaecati quaerat corporis qui
-        iusto eveniet soluta unde sunt rem? Corrupti, quidem! Aspernatur perspiciatis quibusdam iure
-        laborum perferendis eligendi quas dolor quia, sit expedita modi quis nam aliquid deserunt
-        amet soluta cumque at eaque dolores dolore corporis libero provident consectetur quidem.
-        Repudiandae sed debitis omnis corrupti possimus in sit magni labore, sapiente repellat nam
-        libero explicabo aspernatur rerum facere, incidunt eligendi consequatur magnam inventore
-        voluptatem illo. Nihil, asperiores!
-      </Para>
-      {/* penurunan rumus */}
+          <KaTeX>{String.raw`W = m(C_p - C_v)\Delta T`}</KaTeX>
+        </article>
+        <article className='p-4 bg-gray-100 border border-gray-200 rounded-lg'>
+          <div className='text-2xl font-semibold'>Isokhoris</div>
+          <div className='pb-1 mb-2 border-b border-gray-300'>
+            Volume tetap selama proses <TeX>(\Delta V = 0)</TeX>
+          </div>
+          <KaTeX>{String.raw`\textcolor{orangered}{W} = \int P dV \ \ , dV = 0 \ \ , W = 0`}</KaTeX>
+          <KaTeX>{String.raw`\textcolor{orangered}{Q} = \Delta U + W, \ Q = \Delta U`}</KaTeX>
+          <KaTeX>
+            {String.raw` \textcolor{orangered}{\Delta U} = mc_v\Delta T = nMc_v\Delta T = nC_v\Delta T  `}
+          </KaTeX>
+          <KaTeX>{String.raw`m = nM, \enspace Mc_v = C_v`}</KaTeX>
+
+          <Legenda rumus='c_v' name='kalor jenis Isokhoris' />
+          <Legenda rumus='C_v' name='kalor jenis molar Isokhoris' />
+        </article>
+        <article className='p-4 bg-gray-100 border border-gray-200 rounded-lg'>
+          <div className='text-2xl font-semibold'>Isotermis</div>
+          <div className='pb-1 mb-2 border-b border-gray-300'>
+            Suhu tetap selama proses <TeX>(\Delta T = 0)</TeX>
+          </div>
+          <KaTeX>{String.raw`\textcolor{orangered}{\Delta U} = mC_v\Delta V = 0`}</KaTeX>
+          <KaTeX>{String.raw`\textcolor{orangered}{Q} = \Delta U + W = 0 + W `}</KaTeX>
+          <KaTeX>{String.raw`\textcolor{#F5F5F5}{Q} = \int P dV = \int \frac{nRT}{V} dV `}</KaTeX>
+          <KaTeX>{String.raw`\textcolor{#F5F5F5}{Q} = nRT \int \frac{1}{V} dV `}</KaTeX>
+          <KaTeX>{String.raw`\textcolor{#F5F5F5}{Q} = nRT(\ln V_2 - \ln V_1) `}</KaTeX>
+          <KaTeX>{String.raw`\textcolor{orangered}{Q} = nRT\ln\frac{V_2}{V_1}`}</KaTeX>
+        </article>
+        <article className='p-4 bg-gray-100 border border-gray-200 rounded-lg'>
+          <div className='text-2xl font-semibold'>Adiabatis</div>
+          <div className='pb-1 mb-2 border-b border-gray-300'>
+            Tidak ada perpindahan kalor antara sistem dan lingkungan <TeX>(\Delta Q = 0)</TeX>
+          </div>
+          <KaTeX>{String.raw`\textcolor{orangered}{Q} = \Delta U + W`}</KaTeX>
+          <KaTeX>{String.raw`0 = \Delta U + W`}</KaTeX>
+          <KaTeX>{String.raw`\Delta U = -W `}</KaTeX>
+          <KaTeX>{String.raw`W = -\Delta U  `}</KaTeX>
+          <KaTeX>{String.raw`PV^{\gamma} = konstan`}</KaTeX>
+        </article>
+      </section>
+      '{/* penurunan rumus */}
       <AA1 id='PenurunanRumus' title='Penurunan Rumus' />
       <Para>
         Math Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim provident tenetur?
@@ -203,20 +258,18 @@ const termodinamika = () => {
         doloremque unde expedita sunt cumque blanditiis, corrupti, in sit ipsum qui laboriosam hic
         quidem, odio ad. In officia, pariatur exercitationem provident deserunt neque excepturi nisi
         voluptates saepe quidem commodi esse, atque odio incidunt voluptatum porro ipsum reiciendis
-        iusto nostrum laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-        quibusdam ipsa nostrum facilis qui nisi ratione molestias, sequi dolores nihil sint corporis
-        tenetur nam illum accusantium reprehenderit eos! Eligendi illo iste, at obcaecati quaerat
-        corporis qui iusto eveniet soluta unde sunt rem? Corrupti, quidem! Aspernatur perspiciatis
-        quibusdam iure laborum perferendis eligendi quas dolor quia, sit expedita modi quis nam
-        aliquid deserunt amet soluta cumque at eaque dolores dolore corporis libero provident
-        consectetur quidem. Repudiandae sed debitis omnis corrupti possimus in sit magni labore,
-        sapiente repellat nam libero explicabo aspernatur rerum facere, incidunt eligendi
-        consequatur magnam inventore voluptatem illo. Nihil, asperiores!
-      </Para>{' '}
-      {/* Pembahasan */}
+        iusto nosTRowwwwwum laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Laborum quibusdam ipsa nosTRowwwwwum facilis qui nisi ratione molestias, sequi dolores nihil
+        sint corporis tenetur nam illum accusantium reprehenderit eos! Eligendi illo iste, at
+        obcaecati quaerat corporis qui iusto eveniet soluta unde sunt rem? Corrupti, quidem!
+        Aspernatur perspiciatis quibusdam iure laborum perferendis eligendi quas dolor quia, sit
+        expedita modi quis nam aliquid deserunt amet soluta cumque at eaque dolores dolore corporis
+        libero provident consectetur quidem. Repudiandae sed debitis omnis corrupti possimus in sit
+        magni labore, sapiente repellat nam libero explicabo aspernatur rerum facere, incidunt
+        eligendi consequatur magnam inventore voluptatem illo. Nihil, asperiores!
+      </Para>
       <AA1 id='Pembahasan' title='Pembahasan' />
       <Para>
-        {' '}
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore laborum dignissimos odit
         nesciunt eligendi voluptate placeat praesentium ab dolor. Aspernatur, maiores sit
         accusantium neque nobis quibusdam odit similique debitis pariatur illum voluptatem
@@ -227,7 +280,6 @@ const termodinamika = () => {
         totam eligendi inventore est ab repudiandae? Soluta, obcaecati ducimus corrupti vel quod
         quasi totam ipsum debitis?
       </Para>
-      {/* contoh soal */}
       <AA1 id='ContohSoal' title='Contoh Soal' />
       <Para>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim provident tenetur? Earum
@@ -239,7 +291,7 @@ const termodinamika = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nemo.
         </ExampleChild>
       </ExampleMain>
-    </Materi>
+    </LayoutMateri>
   );
 };
 

@@ -54,7 +54,7 @@ const Beranda = () => {
       {/* Cara kami menyajikan informasi */}
       <div className='mb-32 sm:mb-60 '>
         <div className='mb-10 text-2xl font-bold text-center sm:text-4xl bg-gradient-to-r from-purple-600 via-fuschsia-600 to-pink-600 trns'>
-          Cara kami menyajikan informasi
+          Cara saya menyajikan informasi
         </div>
 
         <section className='grid grid-cols-1 gap-10 mx-auto sm:grid-cols-3 md:grid-cols-4 '>
@@ -74,7 +74,7 @@ const Beranda = () => {
       {/* Kami peduli tentang */}
       <div className='mb-32 sm:mb-60 '>
         <header className='mb-10 text-2xl font-bold text-center bg-gradient-to-r from-lime-600 via-green-600 to-emerald-600 trns sm:text-4xl'>
-          Kami Peduli Tentang
+          Saya Peduli Tentang
         </header>
 
         <section className='grid grid-cols-1 gap-10 mx-auto sm:grid-cols-3 md:grid-cols-4 '>

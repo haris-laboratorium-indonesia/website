@@ -2,20 +2,22 @@ import { Menu } from '@headlessui/react';
 import { MenuList, LeftArrow } from '@/Icons';
 import Link from 'next/link';
 
-const ListTermodinamika = ({ title, materi, page }) => {
+const ListTermodinamika = () => {
   const list = 'block text-gray-200 hover:bg-harislab hover:text-white rounded px-2 py-1';
   return (
     <div className='sticky z-40 -mx-3 sm:-mx-5 top-2'>
       <Menu as='div' className='flex flex-col w-full my-3 sm:my-5 sm:mx-auto'>
         <div className='flex items-center justify-between w-full px-1 mx-auto bg-gray-800 rounded-md shadow-lg sm:w-1/2'>
-          <Link href={materi}>
+          <Link href='/fisika'>
             <a className='z-50 block p-1 text-sm rounded-lg '>
               <LeftArrow color='text-gray-200 hover:text-white' />
             </a>
           </Link>
 
-          <Link href={`/fisika/${page}`}>
-            <a className='block w-2/3 py-2 text-center text-gray-100 hover:text-white'>{title}</a>
+          <Link href={`/fisika/ListrikDinamis`}>
+            <a className='block w-2/3 py-2 text-center text-gray-100 hover:text-white'>
+              Listrik Dinamis
+            </a>
           </Link>
 
           <Menu.Button className='focus:outline-none'>
