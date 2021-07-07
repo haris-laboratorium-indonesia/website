@@ -1,6 +1,6 @@
 import 'katex/dist/katex.min.css';
 import TeX from '@matejmazur/react-katex';
-import GelombangElektromagnetikimage from '../../public/Fisika/GelombangElektromagnetikimage.jpg';
+import GelombangElektromagnetikimage from '../../public/Fisika/GelombangElektromagnetikImage.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import ListGelombangElektromagnetik from '@/components/ListFisika/ListGelombangElektromagnetik';
