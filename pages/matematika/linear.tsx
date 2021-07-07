@@ -1,14 +1,14 @@
-import { Client } from "@notionhq/client";
+import { Client } from '@notionhq/client';
 
-export default function linear({ formulas }) {
+export default function Linear({ formulas }) {
   console.log(formulas);
   return (
-    <main className="max-w-4xl px-5 mx-auto lg:px-0">
+    <main className='max-w-4xl px-5 mx-auto lg:px-0'>
       <header>linear</header>
 
-      <div className="grid max-w-4xl grid-cols-3 gap-5 prose bg-blue-500">
-        {formulas.map((formula) => (
-          <table key={formula.id} className="table-auto">
+      <div className='grid max-w-4xl grid-cols-3 gap-5 prose bg-blue-500'>
+        {formulas.map(formula => (
+          <table key={formula.id} className='table-auto'>
             <thead>
               <tr>
                 <th>$${formula.properties.Judul.title[0].plain_text}$$</th>

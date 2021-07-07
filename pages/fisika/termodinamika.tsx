@@ -1,9 +1,9 @@
 import 'katex/dist/katex.min.css';
 import TeX from '@matejmazur/react-katex';
-import Nature from '../../public/nature.jpg';
+import TermodinamikaImage from '../../public/Fisika/TermodinamikaImage.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
-import ListTermodinamika from '@/List/ListTermodinamika';
+import ListTermodinamika from '@/components/ListFisika/ListTermodinamika';
 import LayoutMateri from '@/components/LayoutMateri';
 import {
   AA1,
@@ -19,12 +19,12 @@ import {
   KaTeX,
 } from '@/components/Materi';
 
-const termodinamika = () => {
+export default function Termodinamika() {
   return (
     <LayoutMateri browserTitle='Termodinamika' description='Materi Termodinamika'>
-      <ListTermodinamika title='Termodinamika' materi='/fisika' page='termodinamika' />
+      <ListTermodinamika />
       <Gambar
-        src={Nature}
+        src={TermodinamikaImage}
         alt='Termodinamika'
         caption='Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termodinamika ke-0 dirumuskan.'
       ></Gambar>
@@ -67,47 +67,56 @@ const termodinamika = () => {
       <A2 title='Kapan Termodinamika digunakan' />
       <Para>Selama matahari masih menyinari bumi.</Para>
       <AA1 id='Konstanta' title='Konstanta' />
-      <table className='w-full min-w-full border table-max'>
-        <THEAD>
-          <TRowwwww>
-            <TH>Simbol</TH>
-            <TH>Nama</TH>
-            <TH>Nilai</TH>
-          </TRowwwww>
-        </THEAD>
-
-        <TBODY>
-          <TRowwwww>
-            <TData>
-              <TeX>k</TeX>
-            </TData>
-            <TData>Konstanta Boltzmann</TData>
-            <TData>
-              <KaTeX>{`1,380 \\times 10^{-23} \\frac{J}{K}`}</KaTeX>
-            </TData>
-          </TRowwwww>
-
-          <TRowwwww>
-            <TData>
-              <TeX>R</TeX>
-            </TData>
-
-            <TData>Konstanta Gas Ideal</TData>
-            <TData>
-              <KaTeX>{`8,3145 \\enspace \\frac{J\\cdot mol}{K}`}</KaTeX>
-            </TData>
-          </TRowwwww>
-        </TBODY>
-      </table>
-      {/* variabel */}
-      <AA1 id='Variabel' title='Variabel' />
-      <section className='mx-auto overflow-x-auto sm:gap-5 lg:px-0'>
+      <section className='overflow-x-auto '>
         <table className='w-full min-w-full border table-max'>
           <THEAD>
             <TRowwwww>
               <TH>Simbol</TH>
               <TH>Nama</TH>
-              <TH>Satuan</TH>
+              <TH>Dibaca</TH>
+              <TH>Asal Kata</TH>
+              <TH>Nilai</TH>
+            </TRowwwww>
+          </THEAD>
+
+          <TBODY>
+            <TRowwwww>
+              <TData>
+                <TeX>\sigma</TeX>
+              </TData>
+              <TData>Konstanta Steffan Boltzmann</TData>
+              <TData>sigma</TData>
+              <TData>-</TData>
+              <TData>
+                <KaTeX>{`1,380 \\times 10^{-23} \\frac{J}{K}`}</KaTeX>
+              </TData>
+            </TRowwwww>
+
+            <TRowwwww>
+              <TData>
+                <TeX>R</TeX>
+              </TData>
+              <TData>Konstanta Gas Ideal</TData>
+              <TData>-</TData>
+              <TData>-</TData>
+              <TData>
+                <KaTeX>{`8,3145 \\enspace \\frac{J\\cdot mol}{K}`}</KaTeX>
+              </TData>
+            </TRowwwww>
+          </TBODY>
+        </table>
+      </section>
+      {/* variabel */}
+      <AA1 id='Variabel' title='Variabel' />
+      <section className='overflow-x-auto'>
+        <table className='w-full min-w-full border table-max'>
+          <THEAD>
+            <TRowwwww>
+              <TH>Simbol</TH>
+              <TH>Nama</TH>
+              <TH>Dibaca</TH>
+              <TH>Asal Kata</TH>
+              <TH>Nilai</TH>
             </TRowwwww>
           </THEAD>
 
@@ -293,6 +302,4 @@ const termodinamika = () => {
       </ExampleMain>
     </LayoutMateri>
   );
-};
-
-export default termodinamika;
+}

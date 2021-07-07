@@ -1,9 +1,9 @@
 import 'katex/dist/katex.min.css';
 import TeX from '@matejmazur/react-katex';
-import Nature from '../../public/nature.jpg';
+import RelativitasKhususImage from '../../public/Fisika/RelativitasKhususImage.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
-import ListRelativitasKhusus from '@/List/ListRelativitasKhusus';
+import ListRelativitasKhusus from '@/components/ListFisika/ListRelativitasKhusus';
 import LayoutMateri from '@/components/LayoutMateri';
 import {
   AA1,
@@ -17,14 +17,15 @@ import {
   Gambar,
   Legenda,
   KaTeX,
+  rumusTitle,
 } from '@/components/Materi';
 
-const RelativitasKhusus = () => {
+export default function RelativitasKhusus() {
   return (
     <LayoutMateri browserTitle='Relativitas Khusus' description='Materi Relativitas Khusus'>
       <ListRelativitasKhusus />
       <Gambar
-        src={Nature}
+        src={RelativitasKhususImage}
         alt='Relativitas Khusus'
         caption='Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termodinamika ke-0 dirumuskan.'
       ></Gambar>
@@ -34,46 +35,55 @@ const RelativitasKhusus = () => {
       <A2 title='Dimana Relativitas Khusus digunakan' />
       <A2 title='Kapan Relativitas Khusus digunakan' />
       <AA1 id='Konstanta' title='Konstanta' />
-      <table className='w-full min-w-full border table-max'>
-        <THEAD>
-          <TRowwwww>
-            <TH>Simbol</TH>
-            <TH>Nama</TH>
-            <TH>Nilai</TH>
-          </TRowwwww>
-        </THEAD>
-        <TBODY>
-          <TRowwwww>
-            <TData>
-              <TeX>c</TeX>
-            </TData>
-
-            <TData>Kecepatan Cahaya</TData>
-            <TData>
-              <KaTeX>{String.raw`3\times10^8 \frac{m}{s}`}</KaTeX>
-            </TData>
-          </TRowwwww>
-
-          <TRowwwww>
-            <TData>
-              <TeX>\gamma</TeX>
-            </TData>
-            <TData>Konstanta Lorentz</TData>
-            <TData>
-              <TeX>{String.raw`\sqrt{\frac{1}{1-\frac{v^2}{c^2}}}`}</TeX>
-            </TData>
-          </TRowwwww>
-        </TBODY>
-      </table>
-      {/* variabel */}
-      <AA1 id='Variabel' title='Variabel' />
-      <section className='mx-auto overflow-x-auto sm:gap-5 lg:px-0'>
+      <section className='overflow-x-auto '>
         <table className='w-full min-w-full border table-max'>
           <THEAD>
             <TRowwwww>
               <TH>Simbol</TH>
               <TH>Nama</TH>
-              <TH>Satuan</TH>
+              <TH>Dibaca</TH>
+              <TH>Asal Kata</TH>
+              <TH>Nilai</TH>
+            </TRowwwww>
+          </THEAD>
+          <TBODY>
+            <TRowwwww>
+              <TData>
+                <TeX>c</TeX>
+              </TData>
+              <TData>Kecepatan Cahaya</TData>
+              <TData>c</TData>
+              <TData>-</TData>
+              <TData>
+                <KaTeX>{String.raw`3\times10^8 \frac{m}{s}`}</KaTeX>
+              </TData>
+            </TRowwwww>
+
+            <TRowwwww>
+              <TData>
+                <TeX>\gamma</TeX>
+              </TData>
+              <TData>Konstanta Lorentz</TData>
+              <TData>gamma</TData>
+              <TData>-</TData>
+              <TData>
+                <TeX>{String.raw`\sqrt{\frac{1}{1-\frac{v^2}{c^2}}}`}</TeX>
+              </TData>
+            </TRowwwww>
+          </TBODY>
+        </table>
+      </section>
+      {/* variabel */}
+      <AA1 id='Variabel' title='Variabel' />
+      <section className='overflow-x-auto'>
+        <table className='w-full min-w-full border table-max'>
+          <THEAD>
+            <TRowwwww>
+              <TH>Simbol</TH>
+              <TH>Nama</TH>
+              <TH>Dibaca</TH>
+              <TH>Asal Kata</TH>
+              <TH>Nilai</TH>
             </TRowwwww>
           </THEAD>
 
@@ -152,24 +162,32 @@ const RelativitasKhusus = () => {
       </section>
       {/* rumus */}
       <AA1 id='Rumus' title='Rumus' />
-
-      <KaTeX>{String.raw`\gamma = \sqrt{\frac{1}{1-\frac{v^2}{c^2}}}`}</KaTeX>
-      <KaTeX>{String.raw`\Delta t = \frac{\Delta t_o}{\gamma} = \Delta t_0 \sqrt{1- \frac{v^2}{c^2}}`}</KaTeX>
-      <KaTeX>{String.raw`\Delta L = \frac{\Delta L_o}{\gamma} = \Delta L_0 \sqrt{1- \frac{v^2}{c^2}}`}</KaTeX>
-      <KaTeX>{String.raw`m = m_0\gamma = \frac{m_0}{ \sqrt{1-\frac{v^2}{c^2}}}`}</KaTeX>
-      <KaTeX>{String.raw`P = m_0v = \frac{m_0v}{\sqrt{1-\frac{v^2}{c^2}}}`}</KaTeX>
-      <KaTeX>{String.raw`E = m_0c^2\gamma = \frac{m_0c^2}{\sqrt{1-\frac{v^2}{c^2}}}`}</KaTeX>
-      <KaTeX>{String.raw``}</KaTeX>
-      <KaTeX>{String.raw``}</KaTeX>
-      <KaTeX>{String.raw``}</KaTeX>
-      <KaTeX>{String.raw``}</KaTeX>
-      <KaTeX>{String.raw``}</KaTeX>
-      <KaTeX>{String.raw``}</KaTeX>
-      <KaTeX>{String.raw``}</KaTeX>
-      <KaTeX>{String.raw``}</KaTeX>
-      <KaTeX>{String.raw``}</KaTeX>
-      <KaTeX>{String.raw``}</KaTeX>
-
+      <div className='grid grid-cols-1 sm:grid-cols-2'>
+        <article>
+          <div className={rumusTitle}>Bilangan Lorentz</div>
+          <KaTeX>{String.raw`\gamma = \sqrt{\frac{1}{1-\frac{v^2}{c^2}}}`}</KaTeX>
+        </article>
+        <article>
+          <div className={rumusTitle}>Dilatasi Waktu</div>
+          <KaTeX>{String.raw`\Delta t = \frac{\Delta t_o}{\gamma} = \Delta t_0 \sqrt{1- \frac{v^2}{c^2}}`}</KaTeX>
+        </article>
+        <article>
+          <div className={rumusTitle}>Kontraksi Panjang</div>
+          <KaTeX>{String.raw`\Delta L = \frac{\Delta L_o}{\gamma} = \Delta L_0 \sqrt{1- \frac{v^2}{c^2}}`}</KaTeX>
+        </article>
+        <article>
+          <div className={rumusTitle}>Massa Relativistik</div>
+          <KaTeX>{String.raw`m = m_0\gamma = \frac{m_0}{ \sqrt{1-\frac{v^2}{c^2}}}`}</KaTeX>
+        </article>
+        <article>
+          <div className={rumusTitle}>Momentum Relatitivistik</div>
+          <KaTeX>{String.raw`P = m_0v = \frac{m_0v}{\sqrt{1-\frac{v^2}{c^2}}}`}</KaTeX>
+        </article>
+        <article>
+          <div className={rumusTitle}>Energi Relatitivistik</div>
+          <KaTeX>{String.raw`E = m_0c^2\gamma = \frac{m_0c^2}{\sqrt{1-\frac{v^2}{c^2}}}`}</KaTeX>
+        </article>
+      </div>
       {/* penurunan rumus */}
       <AA1 id='PenurunanRumus' title='Penurunan Rumus' />
       <Para>
@@ -201,6 +219,4 @@ const RelativitasKhusus = () => {
       </ExampleMain>
     </LayoutMateri>
   );
-};
-
-export default RelativitasKhusus;
+}

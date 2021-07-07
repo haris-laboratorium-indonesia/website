@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import 'katex/dist/katex.min.css';
 import TeX from '@matejmazur/react-katex';
-
+import Link from 'next/link';
 export const AA1 = ({ title, id }) => {
   return (
     <h1
@@ -23,14 +23,14 @@ export const Para = ({ children }) => {
 
 export const Gambar = ({ src, alt, caption }) => {
   return (
-    <div className='mb-4 -mx-5 sm:-mx-0'>
+    <div className='mb-4 -mx-5 md:-mx-10 lg:-mx-20'>
       <Image
         src={src}
         alt={alt}
         placeholder='blur'
         layout='intrinsic'
         priority
-        className='lg:rounded'
+        className='bg-contain lg:rounded-md'
       />
       <figcaption className='text-sm italic text-center text-gray-700 font-mw'>
         {caption}
@@ -38,11 +38,11 @@ export const Gambar = ({ src, alt, caption }) => {
     </div>
   );
 };
-const th = 'w-1/5 py-2 px-4 text-left text-base font-semibold text-gray-600 bg-gray-50';
-const td = ' text-left px-4 py-2 table-auto min-w-min text-gray-700';
-const tr = 'divide-x divide-gray-200 ';
-const thead = 'border-b';
-const tbody = 'divide-y divide-gray-300';
+const th = 'w-1/5 py-2 px-4 text-left font-semibold text-gray-700 bg-blue-50';
+const td = 'text-left px-4 py-1.5 table-auto min-w-min text-gray-700';
+const tr = 'divide-x border-b border-gray-300';
+const thead = 'border-b border-gray-300';
+const tbody = '';
 
 export const THEAD = ({ children }) => {
   return <thead className={thead}>{children}</thead>;
@@ -74,4 +74,14 @@ export const Legenda = ({ name, rumus }) => {
 
 export const KaTeX = ({ children }) => {
   return <TeX className={'inline-block w-full py-2 text-sm sm:text-base'}>{children}</TeX>;
+};
+
+export const rumusTitle = 'font-medium text-lg mt-5 underline';
+
+export const Anchor = ({ to, name }) => {
+  return (
+    <Link href={to}>
+      <a className='text-blue-500 hover:text-fuschsia-500 hover:underline'>{name}</a>
+    </Link>
+  );
 };

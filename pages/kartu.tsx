@@ -7,7 +7,7 @@ const kartu = () => {
     <Layout browserTitle='Kartu' description='Flash Card untuk belajar'>
       <Title name='Kartu' />
       <div className='grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4'>
-        {data.map((a) => (
+        {data.map(a => (
           <Card
             key={a.id}
             src={a.image}
@@ -59,7 +59,7 @@ const data = [
   },
   {
     id: '2',
-    image: '/Termodinamika.jpg',
+    image: '/nature.jpg',
     title: 'Azas Black',
     subTitle: 'Termodinamika',
     description:
@@ -67,7 +67,7 @@ const data = [
   },
   {
     id: '3',
-    image: '/amazing.jpg',
+    image: '/nature.jpg',
     title: 'Hukum Archimedes',
     subTitle: 'Fluida Statis',
     description:
@@ -75,7 +75,7 @@ const data = [
   },
   {
     id: '4',
-    image: '/pic1.jpeg',
+    image: '/nature.jpg',
     title: 'Hukum Pascal',
     subTitle: 'Fluida Statis',
     description:
@@ -83,7 +83,7 @@ const data = [
   },
   {
     id: '5',
-    image: '/forest.jpg',
+    image: '/nature.jpg',
     title: 'Dualitas Partikel Gelombang ',
     subTitle: 'Mekanika Kuantum',
     description:

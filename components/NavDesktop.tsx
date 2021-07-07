@@ -4,7 +4,7 @@ const NavDesktop = () => {
   const nav = "p-2  duration-200 hover:text-white text-gray-300  block font-inter";
   return (
     <nav className="hidden md:block">
-      <nav className="z-50 flex flex-row items-center justify-between w-full h-auto max-w-4xl px-5 py-2 mx-auto xl:px-0">
+      <nav className="z-50 flex flex-row items-center justify-between w-full h-auto max-w-4xl px-5 py-2.5 mx-auto xl:px-0">
         <Link href="/">
           <a className="items-center block text-lg font-semibold text-gray-200 hover:text-white font-mw">
             <span className="font-bold ">Haris</span>

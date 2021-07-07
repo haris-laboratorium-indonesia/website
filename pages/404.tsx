@@ -1,19 +1,27 @@
-import { useRouter } from "next/router";
-import { useEffect } from "react";
-import Layout from "../components/Layout";
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import Layout from '../components/Layout';
+import Link from 'next/link';
 
 const y = () => {
   const router = useRouter();
   useEffect(() => {
     setTimeout(() => {
-      router.push("/");
-    }, 4000);
+      router.push('/');
+    }, 100000);
   }, []);
 
   return (
-    <Layout browserTitle="404" description="Kayanya kamu nyasar deh ^_^">
-      <div className="flex items-center justify-center text-3xl">
-        Kayanya kamu nyasar deh ^_^
+    <Layout browserTitle='404' description='Kayanya kamu nyasar deh ^_^'>
+      <div className='flex flex-col items-center justify-center min-h-screen space-y-10 text-3xl'>
+        <div>Cie nyasar ^_^</div>
+        <div>
+          <Link href='/'>
+            <a className='block px-4 py-2 text-sm text-white duration-200 rounded-full cursor-pointer bg-harislab hover:bg-opacity-80'>
+              Beranda
+            </a>
+          </Link>
+        </div>
       </div>
     </Layout>
   );
