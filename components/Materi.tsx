@@ -2,11 +2,12 @@ import Image from 'next/image';
 import 'katex/dist/katex.min.css';
 import TeX from '@matejmazur/react-katex';
 import Link from 'next/link';
+
 export const AA1 = ({ title, id }) => {
   return (
     <h1
       id={id}
-      className={`z-10 text-3xl sm:text-4xl lg:pt-0 font-bold mt-24 mb-3 text-gray-800 font-mw border-b border-gray-400 pb-1`}
+      className={`z-10 text-3xl sm:text-4xl lg:pt-0 font-bold mt-24 mb-3 text-gray-800 font-mw pb-1`}
     >
       {title}
     </h1>
@@ -38,7 +39,10 @@ export const Gambar = ({ src, alt, caption }) => {
     </div>
   );
 };
-const th = 'w-1/5 py-2 px-4 text-left font-semibold text-gray-700 bg-blue-50';
+
+export const rumusTitle = 'font-medium text-lg mt-5 inline-block underline w-full pb-0.5';
+
+const th = 'w-1/5 py-2 px-4 text-left font-semibold text-gray-700 bg-gray-100';
 const td = 'text-left px-4 py-1.5 table-auto min-w-min text-gray-700';
 const tr = 'divide-x border-b border-gray-300';
 const thead = 'border-b border-gray-300';
@@ -59,11 +63,9 @@ export const TData = ({ children }) => {
 export const TBODY = ({ children }) => {
   return <tbody className={tbody}>{children}</tbody>;
 };
-
 export const rms = ({ children }) => {
   return <TeX>{`${children}`}</TeX>;
 };
-
 export const Legenda = ({ name, rumus }) => {
   return (
     <div className='py-2'>
@@ -71,13 +73,9 @@ export const Legenda = ({ name, rumus }) => {
     </div>
   );
 };
-
 export const KaTeX = ({ children }) => {
-  return <TeX className={'inline-block w-full py-2 text-sm sm:text-base'}>{children}</TeX>;
+  return <TeX className={'inline-block w-full py-2 text-base'}>{children}</TeX>;
 };
-
-export const rumusTitle = 'font-medium text-lg mt-5 underline';
-
 export const Anchor = ({ to, name }) => {
   return (
     <Link href={to}>

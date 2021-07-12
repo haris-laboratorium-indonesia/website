@@ -5,6 +5,9 @@ import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import ListGelombangBunyi from '@/components/ListFisika/ListGelombangBunyi';
 import LayoutMateri from '@/components/LayoutMateri';
+import { GelombangBunyiVar } from 'lib/VariabelFisika';
+import { GelombangBunyiRumus } from 'lib/RumusFisika';
+
 import {
   AA1,
   A2,
@@ -34,6 +37,7 @@ export default function GelombangBunyi() {
       <A2 title='Siapa yang menggunakan Gelombang Bunyi' />
       <A2 title='Dimana Gelombang Bunyi digunakan' />
       <A2 title='Kapan Gelombang Bunyi digunakan' />
+      
       <AA1 id='Konstanta' title='Konstanta' />
       <section className='overflow-x-auto'>
         <table className='w-full min-w-full border table-max'>
@@ -41,8 +45,6 @@ export default function GelombangBunyi() {
             <TRowwwww>
               <TH>Simbol</TH>
               <TH>Nama</TH>
-              <TH>Dibaca</TH>
-              <TH>Asal Kata</TH>
               <TH>Nilai</TH>
             </TRowwwww>
           </THEAD>
@@ -60,7 +62,7 @@ export default function GelombangBunyi() {
           </TBODY>
         </table>
       </section>
-      {/* variabel */}
+      
       <AA1 id='Variabel' title='Variabel' />
       <section className='overflow-x-auto '>
         <table className='w-full min-w-full border table-max'>
@@ -68,105 +70,34 @@ export default function GelombangBunyi() {
             <TRowwwww>
               <TH>Simbol</TH>
               <TH>Nama</TH>
-              <TH>Dibaca</TH>
-              <TH>Asal Kata</TH>
-              <TH>Nilai</TH>
+              <TH>Satuan</TH>
             </TRowwwww>
           </THEAD>
 
           <TBODY>
-            <TRowwwww>
-              <TData>
-                <TeX>m</TeX>
-              </TData>
-              <TData>Mass Tali Dawai</TData>
-              <TData>
-                <TeX>kg</TeX>
-              </TData>
-            </TRowwwww>
-
-            <TRowwwww>
-              <TData>
-                <TeX>\ell</TeX>
-              </TData>
-              <TData>Panjang Tali Dawai</TData>
-              <TData>
-                <TeX>m</TeX>
-              </TData>
-            </TRowwwww>
-
-            <TRowwwww>
-              <TData>
-                <TeX>\varUpsilon</TeX>
-              </TData>
-              <TData>Modulus Young</TData>
-              <TData>
-                <TeX>-</TeX>
-              </TData>
-            </TRowwwww>
-
-            <TRowwwww>
-              <TData>
-                <TeX>k</TeX>
-              </TData>
-              <TData>Modulus Bulk</TData>
-              <TData>
-                <TeX>-</TeX>
-              </TData>
-            </TRowwwww>
-
-            <TRowwwww>
-              <TData>
-                <TeX>M</TeX>
-              </TData>
-              <TData>Massa Molar</TData>
-              <TData>
-                <TeX>{String.raw`\frac{kg}{mol}`}</TeX>
-              </TData>
-            </TRowwwww>
-
-            <TRowwwww>
-              <TData>
-                <TeX>F</TeX>
-              </TData>
-              <TData>Gaya</TData>
-              <TData>
-                <TeX>N \ (Newton)</TeX>
-              </TData>
-            </TRowwwww>
-
-            <TRowwwww>
-              <TData>
-                <TeX>\rho</TeX>
-              </TData>
-              <TData>Massa Jenis</TData>
-              <TData>
-                <TeX>{String.raw`\frac{kg}{m^3}`}</TeX>
-              </TData>
-            </TRowwwww>
+            {GelombangBunyiVar.map(a => (
+              <TRowwwww>
+                <TData>
+                  <KaTeX>{String.raw`${a.simbol}`}</KaTeX>
+                </TData>
+                <TData>{a.nama}</TData>
+                <TData>
+                  <KaTeX>{String.raw`${a.satuan}`}</KaTeX>
+                </TData>
+              </TRowwwww>
+            ))}
           </TBODY>
         </table>
       </section>
-      {/* rumus */}
+      
       <AA1 id='Rumus' title='Rumus' />
-      <div className={`${rumusTitle} text-pink-600`}>Cepat Rambat Bergantung Medium</div>
       <div className='grid grid-cols-1 sm:grid-cols-2'>
-        <article>
-          <div className={rumusTitle}>Dawai</div>
-          <KaTeX>{String.raw`v = \sqrt{\frac{F}{\mu}} \to \mu = \frac{m}{\ell}`}</KaTeX>
-        </article>
-        <article>
-          <div className={rumusTitle}>Zat Padat</div>
-          <KaTeX>{String.raw`v = \sqrt{\frac{\varUpsilon}{\rho}} \to \varUpsilon = \frac{\sigma}{\varepsilon} = Modulus \ Young`}</KaTeX>
-        </article>
-        <article>
-          <div className={rumusTitle}>Zat Cair</div>
-          <KaTeX>{String.raw`v = \sqrt{\frac{k}{\rho}} \to k = -V \frac{dP}{dV} = Modulus \ Bulk`}</KaTeX>
-        </article>
-        <article>
-          <div className={rumusTitle}>Gas</div>
-          <KaTeX>{String.raw`v = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\frac{\gamma RT}{M}} \to \gamma = Konstanta \ Laplace, \ M = massa  \ molar`}</KaTeX>
-        </article>
+        {GelombangBunyiRumus.map(a => (
+          <article>
+            <div className={rumusTitle}>{a.nama}</div>
+            <KaTeX>{String.raw`${a.rumus}`}</KaTeX>
+          </article>
+        ))}
       </div>
 
       <AA1 id='PenurunanRumus' title='Penurunan Rumus' />

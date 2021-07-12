@@ -5,6 +5,9 @@ import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import ListTermodinamika from '@/components/ListFisika/ListTermodinamika';
 import LayoutMateri from '@/components/LayoutMateri';
+import { TermodinamikaVar } from 'lib/VariabelFisika';
+import { TermodinamikaRumus } from 'lib/RumusFisika';
+
 import {
   AA1,
   A2,
@@ -17,6 +20,7 @@ import {
   Gambar,
   Legenda,
   KaTeX,
+  rumusTitle,
 } from '@/components/Materi';
 
 export default function Termodinamika() {
@@ -27,7 +31,8 @@ export default function Termodinamika() {
         src={TermodinamikaImage}
         alt='Termodinamika'
         caption='Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termodinamika ke-0 dirumuskan.'
-      ></Gambar>
+      />
+
       <AA1 id='Pengenalan' title='Pengenalan' />
       <A2 title='Apa itu Termodinamika' />
       <Para>
@@ -66,6 +71,7 @@ export default function Termodinamika() {
       <Para>Semua hal di dunia menggunakan prinsip termodinamika.</Para>
       <A2 title='Kapan Termodinamika digunakan' />
       <Para>Selama matahari masih menyinari bumi.</Para>
+
       <AA1 id='Konstanta' title='Konstanta' />
       <section className='overflow-x-auto '>
         <table className='w-full min-w-full border table-max'>
@@ -73,8 +79,6 @@ export default function Termodinamika() {
             <TRowwwww>
               <TH>Simbol</TH>
               <TH>Nama</TH>
-              <TH>Dibaca</TH>
-              <TH>Asal Kata</TH>
               <TH>Nilai</TH>
             </TRowwwww>
           </THEAD>
@@ -85,8 +89,6 @@ export default function Termodinamika() {
                 <TeX>\sigma</TeX>
               </TData>
               <TData>Konstanta Steffan Boltzmann</TData>
-              <TData>sigma</TData>
-              <TData>-</TData>
               <TData>
                 <KaTeX>{`1,380 \\times 10^{-23} \\frac{J}{K}`}</KaTeX>
               </TData>
@@ -97,8 +99,6 @@ export default function Termodinamika() {
                 <TeX>R</TeX>
               </TData>
               <TData>Konstanta Gas Ideal</TData>
-              <TData>-</TData>
-              <TData>-</TData>
               <TData>
                 <KaTeX>{`8,3145 \\enspace \\frac{J\\cdot mol}{K}`}</KaTeX>
               </TData>
@@ -106,7 +106,7 @@ export default function Termodinamika() {
           </TBODY>
         </table>
       </section>
-      {/* variabel */}
+
       <AA1 id='Variabel' title='Variabel' />
       <section className='overflow-x-auto'>
         <table className='w-full min-w-full border table-max'>
@@ -114,149 +114,40 @@ export default function Termodinamika() {
             <TRowwwww>
               <TH>Simbol</TH>
               <TH>Nama</TH>
-              <TH>Dibaca</TH>
-              <TH>Asal Kata</TH>
-              <TH>Nilai</TH>
+              <TH>Satuan</TH>
             </TRowwwww>
           </THEAD>
 
           <TBODY>
-            <TRowwwww>
-              <TData>
-                <TeX>P</TeX>
-              </TData>
-              <TData>Tekanan</TData>
-              <TData>
-                <TeX>Pascal/Pa</TeX>
-              </TData>
-            </TRowwwww>
-
-            <TRowwwww>
-              <TData>
-                <TeX>V</TeX>
-              </TData>
-              <TData>Volume</TData>
-              <TData>
-                <TeX>m^3</TeX>
-              </TData>
-            </TRowwwww>
-
-            <TRowwwww>
-              <TData>
-                <TeX>n</TeX>
-              </TData>
-              <TData>Bayak molekul</TData>
-              <TData>
-                <TeX>-</TeX>
-              </TData>
-            </TRowwwww>
-
-            <TRowwwww>
-              <TData>
-                <TeX>T</TeX>
-              </TData>
-              <TData>Suhu/Temperatur</TData>
-              <TData>
-                <TeX>Kelvin/K</TeX>
-              </TData>
-            </TRowwwww>
-
-            <TRowwwww>
-              <TData>
-                <TeX>Q_h</TeX>
-              </TData>
-              <TData>Kalor masuk (Hot)</TData>
-              <TData>
-                <TeX>Joule / J</TeX>
-              </TData>
-            </TRowwwww>
-
-            <TRowwwww>
-              <TData>
-                <TeX>Q_c</TeX>
-              </TData>
-              <TData>Kalor keluar (Cold)</TData>
-              <TData>
-                <TeX>Joule / J</TeX>
-              </TData>
-            </TRowwwww>
-
-            <TRowwwww>
-              <TData>
-                <TeX>\eta</TeX>
-              </TData>
-              <TData>Efisiensi</TData>
-              <TData>
-                <TeX>\%</TeX>
-              </TData>
-            </TRowwwww>
+            {TermodinamikaVar.map(a => (
+              <TRowwwww>
+                <TData>
+                  <KaTeX>{String.raw`${a.simbol}`}</KaTeX>
+                </TData>
+                <TData>{a.nama}</TData>
+                <TData>
+                  <KaTeX>{String.raw`${a.satuan}`}</KaTeX>
+                </TData>
+              </TRowwwww>
+            ))}
           </TBODY>
         </table>
       </section>
-      {/* rumus */}
+
       <AA1 id='Rumus' title='Rumus' />
-      <div className='grid grid-cols-2 gap-5 sm:grid-cols-4'>
-        <KaTeX>PV = nRT</KaTeX>
-        <KaTeX>PV = nKT</KaTeX>
-        <KaTeX>{String.raw`\frac{1}{2}mv^2 = \frac{3}{2}KT`}</KaTeX>
-        <KaTeX>{String.raw`\frac{Q_h}{Q_c} = \frac{T_h}{T_c}`}</KaTeX>
-        <KaTeX>{String.raw`\eta = \frac{W}{Q_h}`}</KaTeX>
-        <KaTeX>{String.raw`Q = \Delta U + W`}</KaTeX>
+      <div className='grid grid-cols-1 sm:grid-cols-2'>
+        {TermodinamikaRumus.map(a => (
+          <article>
+            <div className={rumusTitle}>{a.nama}</div>
+            {typeof a.rumus === 'string' ? (
+              <KaTeX>{String.raw`${a.rumus}`}</KaTeX>
+            ) : (
+              a.rumus.map(b => <KaTeX>{String.raw`${b.rumus}`}</KaTeX>)
+            )}
+          </article>
+        ))}
       </div>
-      '
-      <section className='grid grid-cols-1 gap-5 sm:grid-cols-2'>
-        <article className='p-4 bg-gray-100 border border-gray-200 rounded-lg'>
-          <div className='text-2xl font-semibold'>Isobaris</div>
-          <div className='pb-1 mb-2 border-b border-gray-300'>
-            Tekanan tetap selama proses <TeX>(\Delta P = 0)</TeX>
-          </div>
-          <KaTeX>{String.raw`\textcolor{orangered}{W} = \int P dV = P\int dV = P\Delta V`}</KaTeX>
-          <KaTeX>{String.raw`\textcolor{orangered}{Q} = \Delta U + W = \Delta U + P\Delta V`}</KaTeX>
-          <KaTeX>{String.raw`mC_p\Delta T = mC_v\Delta T + W`}</KaTeX>
-          <KaTeX>{String.raw`W = mC_p\Delta T - mC_v\Delta T`}</KaTeX>
 
-          <KaTeX>{String.raw`W = m(C_p - C_v)\Delta T`}</KaTeX>
-        </article>
-        <article className='p-4 bg-gray-100 border border-gray-200 rounded-lg'>
-          <div className='text-2xl font-semibold'>Isokhoris</div>
-          <div className='pb-1 mb-2 border-b border-gray-300'>
-            Volume tetap selama proses <TeX>(\Delta V = 0)</TeX>
-          </div>
-          <KaTeX>{String.raw`\textcolor{orangered}{W} = \int P dV \ \ , dV = 0 \ \ , W = 0`}</KaTeX>
-          <KaTeX>{String.raw`\textcolor{orangered}{Q} = \Delta U + W, \ Q = \Delta U`}</KaTeX>
-          <KaTeX>
-            {String.raw` \textcolor{orangered}{\Delta U} = mc_v\Delta T = nMc_v\Delta T = nC_v\Delta T  `}
-          </KaTeX>
-          <KaTeX>{String.raw`m = nM, \enspace Mc_v = C_v`}</KaTeX>
-
-          <Legenda rumus='c_v' name='kalor jenis Isokhoris' />
-          <Legenda rumus='C_v' name='kalor jenis molar Isokhoris' />
-        </article>
-        <article className='p-4 bg-gray-100 border border-gray-200 rounded-lg'>
-          <div className='text-2xl font-semibold'>Isotermis</div>
-          <div className='pb-1 mb-2 border-b border-gray-300'>
-            Suhu tetap selama proses <TeX>(\Delta T = 0)</TeX>
-          </div>
-          <KaTeX>{String.raw`\textcolor{orangered}{\Delta U} = mC_v\Delta V = 0`}</KaTeX>
-          <KaTeX>{String.raw`\textcolor{orangered}{Q} = \Delta U + W = 0 + W `}</KaTeX>
-          <KaTeX>{String.raw`\textcolor{#F5F5F5}{Q} = \int P dV = \int \frac{nRT}{V} dV `}</KaTeX>
-          <KaTeX>{String.raw`\textcolor{#F5F5F5}{Q} = nRT \int \frac{1}{V} dV `}</KaTeX>
-          <KaTeX>{String.raw`\textcolor{#F5F5F5}{Q} = nRT(\ln V_2 - \ln V_1) `}</KaTeX>
-          <KaTeX>{String.raw`\textcolor{orangered}{Q} = nRT\ln\frac{V_2}{V_1}`}</KaTeX>
-        </article>
-        <article className='p-4 bg-gray-100 border border-gray-200 rounded-lg'>
-          <div className='text-2xl font-semibold'>Adiabatis</div>
-          <div className='pb-1 mb-2 border-b border-gray-300'>
-            Tidak ada perpindahan kalor antara sistem dan lingkungan <TeX>(\Delta Q = 0)</TeX>
-          </div>
-          <KaTeX>{String.raw`\textcolor{orangered}{Q} = \Delta U + W`}</KaTeX>
-          <KaTeX>{String.raw`0 = \Delta U + W`}</KaTeX>
-          <KaTeX>{String.raw`\Delta U = -W `}</KaTeX>
-          <KaTeX>{String.raw`W = -\Delta U  `}</KaTeX>
-          <KaTeX>{String.raw`PV^{\gamma} = konstan`}</KaTeX>
-        </article>
-      </section>
-      '{/* penurunan rumus */}
       <AA1 id='PenurunanRumus' title='Penurunan Rumus' />
       <Para>
         Math Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim provident tenetur?

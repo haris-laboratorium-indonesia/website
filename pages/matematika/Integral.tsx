@@ -5,6 +5,7 @@ import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import ListIntegral from '@/components/ListMatematika/ListIntegral';
 import LayoutMateri from '@/components/LayoutMateri';
+import { IntegralRumus } from 'lib/RumusMatematika';
 import {
   AA1,
   A2,
@@ -17,6 +18,7 @@ import {
   Gambar,
   Legenda,
   KaTeX,
+  rumusTitle,
 } from '@/components/Materi';
 
 export default function Integral() {
@@ -40,13 +42,19 @@ export default function Integral() {
       <AA1 id='Variabel' title='Variabel' />
 
       <AA1 id='Rumus' title='Rumus' />
-      <KaTeX>{String.raw`a^ma^n = a^{m+n}`}</KaTeX>
-      <KaTeX>{String.raw`\frac{a^m}{a^n} = a^{m-n}`}</KaTeX>
-      <KaTeX>{String.raw`(a\cdot b)^m = a^mb^m)`}</KaTeX>
-      <KaTeX>{String.raw`(a^m)^n = a^{mn}`}</KaTeX>
-      <KaTeX>{String.raw`a^{\frac{1}{m}} = \sqrt[m]{a}`}</KaTeX>
-      <KaTeX>{String.raw`a^{\frac{n}{m}} = \sqrt[m]{a^n}`}</KaTeX>
-      <KaTeX>{String.raw`a^0 = 1`}</KaTeX>
+      <div className='grid grid-cols-1 sm:grid-cols-2'>
+        {IntegralRumus.map(a => (
+          <article>
+            <div className={rumusTitle}>{a.nama}</div>
+            {typeof a.rumus === 'string' ? (
+              <KaTeX>{String.raw`${a.rumus}`}</KaTeX>
+            ) : (
+              a.rumus.map(b => <KaTeX>{String.raw`${b.rumus}`}</KaTeX>)
+            )}
+          </article>
+        ))}
+      </div>
+      
 
       {/* penurunan rumus */}
       <AA1 id='PenurunanRumus' title='Penurunan Rumus' />

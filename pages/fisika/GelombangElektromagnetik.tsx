@@ -37,6 +37,7 @@ export default function GelombangElektromagnetik() {
       <A2 title='Siapa yang menggunakan Gelombang Elektromagnetik' />
       <A2 title='Dimana Gelombang Elektromagnetik digunakan' />
       <A2 title='Kapan Gelombang Elektromagnetik digunakan' />
+
       <AA1 id='Konstanta' title='Konstanta' />
       <section className='overflow-x-auto'>
         <table className='w-full min-w-full border table-max'>
@@ -44,8 +45,6 @@ export default function GelombangElektromagnetik() {
             <TRowwwww>
               <TH>Simbol</TH>
               <TH>Nama</TH>
-              <TH>Dibaca</TH>
-              <TH>Asal Kata</TH>
               <TH>Nilai</TH>
             </TRowwwww>
           </THEAD>
@@ -74,7 +73,7 @@ export default function GelombangElektromagnetik() {
           </TBODY>
         </table>
       </section>
-      {/* variabel */}
+      
       <AA1 id='Variabel' title='Variabel' />
       <section className='overflow-x-auto '>
         <table className='w-full min-w-full border table-max'>
@@ -82,9 +81,7 @@ export default function GelombangElektromagnetik() {
             <TRowwwww>
               <TH>Simbol</TH>
               <TH>Nama</TH>
-              <TH>Dibaca</TH>
-              <TH>Asal Kata</TH>
-              <TH>Nilai</TH>
+              <TH>Satuan</TH>
             </TRowwwww>
           </THEAD>
 
@@ -98,50 +95,10 @@ export default function GelombangElektromagnetik() {
                 <TeX>C \ (Coulomb)</TeX>
               </TData>
             </TRowwwww>
-
-            <TRowwwww>
-              <TData>
-                <TeX>C</TeX>
-              </TData>
-              <TData>Kapasitansi</TData>
-              <TData>
-                <TeX>F \ (Farad)</TeX>
-              </TData>
-            </TRowwwww>
-
-            <TRowwwww>
-              <TData>
-                <TeX>v</TeX>
-              </TData>
-              <TData>Beda Potensial</TData>
-              <TData>
-                <TeX>v \ (Volt)</TeX>
-              </TData>
-            </TRowwwww>
-
-            <TRowwwww>
-              <TData>
-                <TeX>\Phi_L</TeX>
-              </TData>
-              <TData>Fluks Listrik</TData>
-              <TData>
-                <TeX>Wb \ (Webber)</TeX>
-              </TData>
-            </TRowwwww>
-
-            <TRowwwww>
-              <TData>
-                <TeX>R</TeX>
-              </TData>
-              <TData>Resistansi</TData>
-              <TData>
-                <TeX>\varOmega \ (Ohm)</TeX>
-              </TData>
-            </TRowwwww>
           </TBODY>
         </table>
       </section>
-      {/* rumus */}
+      
       <AA1 id='Rumus' title='Rumus' />
       <div className='grid grid-cols-1 sm:grid-cols-2'>
         <article>
@@ -150,7 +107,6 @@ export default function GelombangElektromagnetik() {
         </article>
       </div>
 
-      {/* penurunan rumus */}
       <AA1 id='PenurunanRumus' title='Penurunan Rumus' />
       <Para>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. A laudantium optio earum autem
