@@ -3,21 +3,21 @@ import TeX from '@matejmazur/react-katex';
 import MagnetImage from '../../public/Fisika/MagnetImage.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
-import ListMagnet from '@/components/ListFisika/ListMagnet';
 import LayoutMateri from '@/components/LayoutMateri';
 import { MagnetVar } from 'lib/VariabelFisika';
 import { MagnetRumus } from 'lib/RumusFisika';
-
+import { NavList } from '@/components/List';
+import List from '@/components/List';
 
 import {
   AA1,
   A2,
   TH,
   TData,
-  TRowwwww,
+  Row,
   THEAD,
-  TBODY,
-  Para,
+  Body,
+  P,
   Gambar,
   Legenda,
   KaTeX,
@@ -27,12 +27,22 @@ import {
 export default function Magnet() {
   return (
     <LayoutMateri browserTitle='Magnet' description='Materi Magnet'>
-      <ListMagnet />
+      <List branch='fisika' to='Magnet' title='Magnet'>
+        <NavList title='Pengenalan' href='Pengenalan' />
+        <NavList title='Konstanta' href='Konstanta' />
+        <NavList title='Variabel' href='Variabel' />
+        <NavList title='Rumus' href='Rumus' />
+        <NavList title='Penurunan Rumus' href='PenurunanRumus' />
+        <NavList title='Pembahasan' href='Pembahasan' />
+        <NavList title='Contoh Soal' href='ContohSoal' />
+      </List>
+      
       <Gambar
         src={MagnetImage}
         alt='Magnet'
         caption='Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termoMagnet ke-0 dirumuskan.'
       />
+      
       <AA1 id='Pengenalan' title='Pengenalan' />
       <A2 title='Apa itu Magnet' />
       <A2 title='Siapa yang menggunakan Magnet' />
@@ -43,15 +53,15 @@ export default function Magnet() {
       <section className='overflow-x-auto '>
         <table className='w-full min-w-full border table-max'>
           <THEAD>
-            <TRowwwww>
+            <Row>
               <TH>Simbol</TH>
               <TH>Nama</TH>
               <TH>Nilai</TH>
-            </TRowwwww>
+            </Row>
           </THEAD>
 
-          <TBODY>
-            <TRowwwww>
+          <Body>
+            <Row>
               <TData>
                 <TeX>\mu_0</TeX>
               </TData>
@@ -59,25 +69,25 @@ export default function Magnet() {
               <TData>
                 <KaTeX>{String.raw`4\pi\times10^{-7} \ \frac{N}{A^2}`}</KaTeX>
               </TData>
-            </TRowwwww>
-          </TBODY>
+            </Row>
+          </Body>
         </table>
       </section>
-
+      
       <AA1 id='Variabel' title='Variabel' />
       <section className='mx-auto overflow-x-auto sm:gap-5 lg:px-0'>
         <table className='w-full min-w-full border table-max'>
           <THEAD>
-            <TRowwwww>
+            <Row>
               <TH>Simbol</TH>
               <TH>Nama</TH>
               <TH>Satuan</TH>
-            </TRowwwww>
+            </Row>
           </THEAD>
 
-          <TBODY>
+          <Body>
             {MagnetVar.map(a => (
-              <TRowwwww>
+              <Row>
                 <TData>
                   <KaTeX>{String.raw`${a.simbol}`}</KaTeX>
                 </TData>
@@ -85,45 +95,49 @@ export default function Magnet() {
                 <TData>
                   <KaTeX>{String.raw`${a.satuan}`}</KaTeX>
                 </TData>
-              </TRowwwww>
+              </Row>
             ))}
-          </TBODY>
+          </Body>
         </table>
       </section>
-
+      
       <AA1 id='Rumus' title='Rumus' />
       <div className='grid grid-cols-1 sm:grid-cols-2'>
         {MagnetRumus.map(a => (
           <article>
             <div className={rumusTitle}>{a.nama}</div>
-            {typeof(a.rumus) === 'string' ? 
-            <KaTeX>{String.raw`${a.rumus}`}</KaTeX> : 
-            a.rumus.map(b => ( <KaTeX>{String.raw`${b.rumus}`}</KaTeX> ))}
-         </article>
+            {typeof a.rumus === 'string' ? (
+              <KaTeX>{String.raw`${a.rumus}`}</KaTeX>
+            ) : (
+              a.rumus.map(b => <KaTeX>{String.raw`${b.rumus}`}</KaTeX>)
+            )}
+          </article>
         ))}
       </div>
       
       <AA1 id='PenurunanRumus' title='Penurunan Rumus' />
-      <Para>
+      <P>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. A laudantium optio earum autem
         quisquam sit inventore, distinctio asperiores! Culpa optio atque similique adipisci id,
         soluta, odio excepturi ducimus laboriosam aspernatur quam velit alias. Saepe consectetur,
         harum dolorum fugit omnis nostrum deleniti exercitationem, magnam nam voluptatem voluptates,
         laudantium consequuntur ad facilis.
-      </Para>
+      </P>
+
       <AA1 id='Pembahasan' title='Pembahasan' />
-      <Para>
+      <P>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolorum cupiditate
         voluptatibus, facere, sunt illum eveniet quasi fuga consequuntur harum quo magnam facilis
         eos dolores. Sint architecto dolorem ratione. Tempora cumque amet expedita praesentium qui
         quae error laudantium incidunt odit inventore unde enim molestias voluptates aut est, facere
         earum adipisci?
-      </Para>
+      </P>
+      
       <AA1 id='ContohSoal' title='Contoh Soal' />
-      <Para>
+      <P>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa consequatur qui optio
         libero. Error sequi ea assumenda, minus nobis cupiditate!
-      </Para>
+      </P>
       <br />
       <ExampleMain type='Contoh Soal Mudah'>
         <ExampleChild type='Teori Kinetik Gas'>

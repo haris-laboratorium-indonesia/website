@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { X, HamburgerMenu, SearchIcon } from '@/Icons';
 import { Menu } from '@headlessui/react';
+import { X, HamburgerMenu, SearchIcon } from '@/Icons';
 
 const NavMobile = () => {
-  const nav = 'py-1.5 text-xl block text-gray-200 ';
+  const nav = 'py-2 text-xl block text-gray-200 ';
 
   return (
     <nav className='z-50 flex items-center justify-between w-full h-auto max-w-5xl p-3 mx-auto border-b border-gray-300 md:hidden'>
@@ -12,7 +12,11 @@ const NavMobile = () => {
         {({ open }) => (
           <>
             <Menu.Button className='z-50 flex justify-end w-full  py-0.5 px-1 rounded-md focus:outline-none'>
-              {open ? <X color=' ' /> : <HamburgerMenu color=' ' />}
+              {open ? (
+                <X color='text-white hover:text-gray-300' />
+              ) : (
+                <HamburgerMenu color='text-white hover:text-gray-300 ' />
+              )}
             </Menu.Button>
 
             <Menu.Items className='absolute right-0 z-50 w-full min-h-screen p-5 bg-gray-800 mt-11'>
@@ -103,6 +107,21 @@ const NavMobile = () => {
                     </button>
                   )}
                 </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <button className='w-full text-left text-black '>
+                      {active ? (
+                        <Link href='/pricing'>
+                          <a className={nav}>Pricing</a>
+                        </Link>
+                      ) : (
+                        <Link href='/pricing'>
+                          <a className={nav}>Pricing</a>
+                        </Link>
+                      )}
+                    </button>
+                  )}
+                </Menu.Item>
               </section>
             </Menu.Items>
           </>
@@ -119,7 +138,7 @@ const NavMobile = () => {
 
       {/* <Login /> */}
       <Link href='/login'>
-        <a className='px-3 py-1 text-white rounded-full bg-harislab'>Login</a>
+        <a className='px-3 py-1 text-white rounded-md bg-harislab'>Login</a>
       </Link>
     </nav>
   );

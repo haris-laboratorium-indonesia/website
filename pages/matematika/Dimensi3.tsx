@@ -1,19 +1,18 @@
-import 'katex/dist/katex.min.css';
-import TeX from '@matejmazur/react-katex';
 import Nature from '../../public/nature.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
-import ListDimensi3 from '@/components/ListMatematika/ListDimensi3';
 import LayoutMateri from '@/components/LayoutMateri';
+import { NavList } from '@/components/List';
+import List from '@/components/List';
 import {
   AA1,
   A2,
   TH,
   TData,
-  TRowwwww,
+  Row,
   THEAD,
-  TBODY,
-  Para,
+  Body,
+  P,
   Gambar,
   Legenda,
   KaTeX,
@@ -22,8 +21,15 @@ import {
 export default function Dimensi3() {
   return (
     <LayoutMateri browserTitle='Dimensi 3' description='Materi Dimensi 3'>
-      <ListDimensi3 />
-
+      <List branch='matematika' to='Dimensi3' title='Dimensi 3'>
+        <NavList title='Pengenalan' href='Pengenalan' />
+        <NavList title='Konstanta' href='Konstanta' />
+        <NavList title='Variabel' href='Variabel' />
+        <NavList title='Rumus' href='Rumus' />
+        <NavList title='Penurunan Rumus' href='PenurunanRumus' />
+        <NavList title='Pembahasan' href='Pembahasan' />
+        <NavList title='Contoh Soal' href='ContohSoal' />
+      </List>
       <Gambar
         src={Nature}
         alt='Dimensi 3'
@@ -56,19 +62,19 @@ export default function Dimensi3() {
       <KaTeX>{String.raw`\frac{a^m}{a^m} = a^{m-m} = a^0 = 1`}</KaTeX>
 
       <AA1 id='Pembahasan' title='Pembahasan' />
-      <Para>
+      <P>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolorum cupiditate
         voluptatibus, facere, sunt illum eveniet quasi fuga consequuntur harum quo magnam facilis
         eos dolores. Sint architecto dolorem ratione. Tempora cumque amet expedita praesentium qui
         quae error laudantium incidunt odit inventore unde enim molestias voluptates aut est, facere
         earum adipisci?
-      </Para>
+      </P>
 
       <AA1 id='ContohSoal' title='Contoh Soal' />
-      <Para>
+      <P>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa consequatur qui optio
         libero. Error sequi ea assumenda, minus nobis cupiditate!
-      </Para>
+      </P>
       <br />
       <ExampleMain type='Contoh Soal Mudah'>
         <ExampleChild type='Teori Kinetik Gas'>

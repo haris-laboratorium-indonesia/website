@@ -1,9 +1,5 @@
 import 'katex/dist/katex.min.css';
 import TeX from '@matejmazur/react-katex';
-import FluidaDinamisImage from '../../public/Fisika/FluidaDinamisImage.jpg';
-import ExampleMain from '@/components/ExampleMain';
-import ExampleChild from '@/components/ExampleChild';
-import ListFluidaDinamis from '@/components/ListFisika/ListFluidaDinamis';
 import Layout from '@/components/Layout';
 import Title from '@/components/Title';
 
@@ -12,10 +8,10 @@ import {
   A2,
   TH,
   TData,
-  TRowwwww,
+  Row,
   THEAD,
-  TBODY,
-  Para,
+  Body,
+  P,
   Gambar,
   Legenda,
   KaTeX,
@@ -27,19 +23,24 @@ export default function glosarium() {
     <Layout browserTitle='Glosarium Fisika' description='Glosarium Fisika'>
       <div className='max-w-4xl mx-auto'>
         <Title name='Glosarium Matematika' />
+
+        <div className='mb-5 -mt-5 text-center'>Konstanta dan variabel matematika.</div>
+
+        <AA1 id='Konstanta' title='Konstanta' />
+
         <section className='overflow-x-auto '>
           <table className='w-full min-w-full border table-max'>
             <THEAD>
-              <TRowwwww>
+              <Row>
                 <TH>Simbol</TH>
                 <TH>Nama</TH>
                 <TH>Dibaca</TH>
                 <TH>Asal Kata</TH>
                 <TH>Satuan</TH>
-              </TRowwwww>
+              </Row>
             </THEAD>
-            <TBODY>
-              <TRowwwww>
+            <Body>
+              <Row>
                 <TData>
                   <TeX>P</TeX>
                 </TData>
@@ -54,8 +55,8 @@ export default function glosarium() {
                 <TData>
                   <KaTeX>{String.raw`Pa \ /  Pascal \ / \frac{N}{m^2} `}</KaTeX>
                 </TData>
-              </TRowwwww>
-            </TBODY>
+              </Row>
+            </Body>
           </table>
         </section>
       </div>

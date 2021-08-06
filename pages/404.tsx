@@ -17,8 +17,8 @@ const y = () => {
         <div>Cie nyasar ^_^</div>
         <div>
           <Link href='/'>
-            <a className='block px-4 py-2 text-sm text-white duration-200 rounded-full cursor-pointer bg-harislab hover:bg-opacity-80'>
-              Beranda
+            <a className='block px-4 py-2 text-sm text-white duration-200 rounded-md cursor-pointer bg-harislab hover:bg-opacity-80'>
+              Pulang
             </a>
           </Link>
         </div>

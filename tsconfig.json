@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": ["components/*"],
-      "@/List/*": ["components/ListFisika/*"],
+      "@/List/*": ["List/ListFisika/*"],
       "@/Icons": ["components/Icons"]
     }
   },

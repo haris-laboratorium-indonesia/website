@@ -3,20 +3,21 @@ import TeX from '@matejmazur/react-katex';
 import TermodinamikaImage from '../../public/Fisika/TermodinamikaImage.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
-import ListTermodinamika from '@/components/ListFisika/ListTermodinamika';
 import LayoutMateri from '@/components/LayoutMateri';
 import { TermodinamikaVar } from 'lib/VariabelFisika';
 import { TermodinamikaRumus } from 'lib/RumusFisika';
+import { NavList } from '@/components/List';
+import List from '@/components/List';
 
 import {
   AA1,
   A2,
   TH,
   TData,
-  TRowwwww,
+  Row,
   THEAD,
-  TBODY,
-  Para,
+  Body,
+  P,
   Gambar,
   Legenda,
   KaTeX,
@@ -26,16 +27,25 @@ import {
 export default function Termodinamika() {
   return (
     <LayoutMateri browserTitle='Termodinamika' description='Materi Termodinamika'>
-      <ListTermodinamika />
+      <List branch='fisika' to='Termodinamika' title='Termodinamika'>
+        <NavList title='Pengenalan' href='Pengenalan' />
+        <NavList title='Konstanta' href='Konstanta' />
+        <NavList title='Variabel' href='Variabel' />
+        <NavList title='Rumus' href='Rumus' />
+        <NavList title='Penurunan Rumus' href='PenurunanRumus' />
+        <NavList title='Pembahasan' href='Pembahasan' />
+        <NavList title='Contoh Soal' href='ContohSoal' />
+      </List>
+
       <Gambar
         src={TermodinamikaImage}
         alt='Termodinamika'
         caption='Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termodinamika ke-0 dirumuskan.'
       />
-
+      
       <AA1 id='Pengenalan' title='Pengenalan' />
       <A2 title='Apa itu Termodinamika' />
-      <Para>
+      <P>
         <em>Termo</em> = Panas. <em>Dinamika</em> = bergerak. Termodinamika adalah ilmu yang
         mempelajari panas yang bergerak. Panas adalah suhu, suhu memiliki energi, suhu yang bergerak
         dinamakan kalor. Semua hal di dunia ini memiliki panas, bahkan suhu <TeX>-10\degree</TeX>
@@ -44,20 +54,20 @@ export default function Termodinamika() {
         <TeX>30\degree s.d \ 37\degree</TeX>, itu untuk suhu badan yang sehat, suhu badan di bawah
         itu maka tubuh akan merasakannya sebagai dingin, dan suhu di atas itu akan dianggap sebagai
         sesuatu yang panas.
-      </Para>
-      <Para>
+      </P>
+      <P>
         Namun bagi hewan lain yang tinggal di bawah laut yang suhunya bisa mencapai
         <TeX>0\degree</TeX> mereka nyaman dengan suhu tersebut, sehingga persepsi dingin yang
         manusia rasakan pada suhu itu tidak mereka anggap sebagai sesuatu yang dingin bagi mereka,
         melainkan suhu normal. <KaTeX>{`P_h = \\rho g h = \\frac{A}{B}`}</KaTeX>
-      </Para>
+      </P>
       <A2 title='Siapa yang menggunakan Termodinamika' />
-      <Para>
+      <P>
         Pada dasarnya dunia ini ada karena panas matahari, panas matahati adalah objek dari ilmu
         termodinamika juga. Semua hal di dunia ini yang bergerak baik secara mikroskopik maupun
         makroskopik memiliki properti termodinamika.
-      </Para>
-      <Para>
+      </P>
+      <P>
         Pekerjaan yang mengandung ilmu termodinamika secara khusus biasanya terknik perminyakan,
         pemadam kebakaran, koki, dan apapun yang berhubungan dengan api. Namun secara umum, karena
         definisi termodinamika adalah sebuah panas yang bergerak, maka semua yang ada di dunia ini
@@ -66,25 +76,25 @@ export default function Termodinamika() {
         jika kita mendekatinya maka panas tubuh mereka kan terasa pada tubuh kita karena ada hukum
         di termodinamika bahwa benda yang suhunya lebih tinggi, suhunya akan pindah ke benda yang
         suhunya lebih rendah.
-      </Para>
+      </P>
       <A2 title='Dimana Termodinamika digunakan' />
-      <Para>Semua hal di dunia menggunakan prinsip termodinamika.</Para>
+      <P>Semua hal di dunia menggunakan prinsip termodinamika.</P>
       <A2 title='Kapan Termodinamika digunakan' />
-      <Para>Selama matahari masih menyinari bumi.</Para>
-
+      <P>Selama matahari masih menyinari bumi.</P>
+      
       <AA1 id='Konstanta' title='Konstanta' />
       <section className='overflow-x-auto '>
         <table className='w-full min-w-full border table-max'>
           <THEAD>
-            <TRowwwww>
+            <Row>
               <TH>Simbol</TH>
               <TH>Nama</TH>
               <TH>Nilai</TH>
-            </TRowwwww>
+            </Row>
           </THEAD>
 
-          <TBODY>
-            <TRowwwww>
+          <Body>
+            <Row>
               <TData>
                 <TeX>\sigma</TeX>
               </TData>
@@ -92,9 +102,9 @@ export default function Termodinamika() {
               <TData>
                 <KaTeX>{`1,380 \\times 10^{-23} \\frac{J}{K}`}</KaTeX>
               </TData>
-            </TRowwwww>
+            </Row>
 
-            <TRowwwww>
+            <Row>
               <TData>
                 <TeX>R</TeX>
               </TData>
@@ -102,25 +112,25 @@ export default function Termodinamika() {
               <TData>
                 <KaTeX>{`8,3145 \\enspace \\frac{J\\cdot mol}{K}`}</KaTeX>
               </TData>
-            </TRowwwww>
-          </TBODY>
+            </Row>
+          </Body>
         </table>
       </section>
-
+      
       <AA1 id='Variabel' title='Variabel' />
       <section className='overflow-x-auto'>
         <table className='w-full min-w-full border table-max'>
           <THEAD>
-            <TRowwwww>
+            <Row>
               <TH>Simbol</TH>
               <TH>Nama</TH>
               <TH>Satuan</TH>
-            </TRowwwww>
+            </Row>
           </THEAD>
 
-          <TBODY>
+          <Body>
             {TermodinamikaVar.map(a => (
-              <TRowwwww>
+              <Row>
                 <TData>
                   <KaTeX>{String.raw`${a.simbol}`}</KaTeX>
                 </TData>
@@ -128,12 +138,12 @@ export default function Termodinamika() {
                 <TData>
                   <KaTeX>{String.raw`${a.satuan}`}</KaTeX>
                 </TData>
-              </TRowwwww>
+              </Row>
             ))}
-          </TBODY>
+          </Body>
         </table>
       </section>
-
+      
       <AA1 id='Rumus' title='Rumus' />
       <div className='grid grid-cols-1 sm:grid-cols-2'>
         {TermodinamikaRumus.map(a => (
@@ -147,9 +157,9 @@ export default function Termodinamika() {
           </article>
         ))}
       </div>
-
+      
       <AA1 id='PenurunanRumus' title='Penurunan Rumus' />
-      <Para>
+      <P>
         Math Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim provident tenetur?
         Earum voluptas, rerum aliquid corporis, sit veritatis laborum aut eum sed saepe natus esse
         quas expedita animi! Quasi odio architecto impedit voluptatum eligendi nihil placeat
@@ -167,9 +177,10 @@ export default function Termodinamika() {
         libero provident consectetur quidem. Repudiandae sed debitis omnis corrupti possimus in sit
         magni labore, sapiente repellat nam libero explicabo aspernatur rerum facere, incidunt
         eligendi consequatur magnam inventore voluptatem illo. Nihil, asperiores!
-      </Para>
+      </P>
+      
       <AA1 id='Pembahasan' title='Pembahasan' />
-      <Para>
+      <P>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore laborum dignissimos odit
         nesciunt eligendi voluptate placeat praesentium ab dolor. Aspernatur, maiores sit
         accusantium neque nobis quibusdam odit similique debitis pariatur illum voluptatem
@@ -179,12 +190,13 @@ export default function Termodinamika() {
         accusantium iure voluptas sequi omnis culpa in non incidunt recusandae optio rerum fugit
         totam eligendi inventore est ab repudiandae? Soluta, obcaecati ducimus corrupti vel quod
         quasi totam ipsum debitis?
-      </Para>
+      </P>
+      
       <AA1 id='ContohSoal' title='Contoh Soal' />
-      <Para>
+      <P>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim provident tenetur? Earum
         voluptas, rerum aliquid corporis, sit
-      </Para>
+      </P>
       <br />
       <ExampleMain type='Contoh Soal Mudah'>
         <ExampleChild type='Teori Kinetik Gas'>

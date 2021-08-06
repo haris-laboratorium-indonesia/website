@@ -18,13 +18,13 @@ export const A2 = ({ title }) => {
   return <div className='mt-4 font-semibold font-mw'>{title}</div>;
 };
 
-export const Para = ({ children }) => {
+export const P = ({ children }) => {
   return <p className='text-gray-800 sm:text-lg indent-sm'>{children}</p>;
 };
 
 export const Gambar = ({ src, alt, caption }) => {
   return (
-    <div className='mb-4 -mx-5 md:-mx-10 lg:-mx-20'>
+    <div className='mb-4 -mx-2 sm:-mx-0'>
       <Image
         src={src}
         alt={alt}
@@ -40,18 +40,17 @@ export const Gambar = ({ src, alt, caption }) => {
   );
 };
 
-export const rumusTitle = 'font-medium text-lg mt-5 inline-block underline w-full pb-0.5';
+export const rumusTitle = 'font-medium text-lg mt-5 inline-block w-full pb-0.5 text-harislab';
 
 const th = 'w-1/5 py-2 px-4 text-left font-semibold text-gray-700 bg-gray-100';
 const td = 'text-left px-4 py-1.5 table-auto min-w-min text-gray-700';
 const tr = 'divide-x border-b border-gray-300';
-const thead = 'border-b border-gray-300';
-const tbody = '';
+const thead = 'border-b border-gray-400';
 
 export const THEAD = ({ children }) => {
   return <thead className={thead}>{children}</thead>;
 };
-export const TRowwwww = ({ children }) => {
+export const Row = ({ children }) => {
   return <tr className={tr}>{children}</tr>;
 };
 export const TH = ({ children }) => {
@@ -60,8 +59,8 @@ export const TH = ({ children }) => {
 export const TData = ({ children }) => {
   return <td className={td}>{children}</td>;
 };
-export const TBODY = ({ children }) => {
-  return <tbody className={tbody}>{children}</tbody>;
+export const Body = ({ children }) => {
+  return <tbody>{children}</tbody>;
 };
 export const rms = ({ children }) => {
   return <TeX>{`${children}`}</TeX>;
@@ -74,7 +73,7 @@ export const Legenda = ({ name, rumus }) => {
   );
 };
 export const KaTeX = ({ children }) => {
-  return <TeX className={'inline-block w-full py-2 text-base'}>{children}</TeX>;
+  return <TeX className='inline-block w-full py-2 text-sm sm:text-base'>{children}</TeX>;
 };
 export const Anchor = ({ to, name }) => {
   return (

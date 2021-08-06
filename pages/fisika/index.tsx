@@ -9,8 +9,12 @@ const fisika = () => {
     <Layout browserTitle='Fisika' description='Materi Fisika SMA'>
       <Title name='Fisika' />
 
+      <div className='mb-5 -mt-5 text-center'>
+        Pelajari cara kerja engineering dan alam semesta melalui fisika.
+      </div>
+
       <Link href='/fisika/glosarium'>
-        <a className='flex items-center justify-between w-full px-2 py-2 mb-5 bg-gray-100 border border-gray-300 rounded-md sm:px-3 sm:hover:bg-gray-200'>
+        <a className='flex items-center justify-between w-full px-2 py-2 mb-3 duration-200 bg-white rounded-md shadow hover:shadow-md sm:px-3'>
           <div className='flex items-center space-x-2 sm:justify-between sm:space-x-1'>
             <Collection />
             <p>Glosarium Fisika</p>
@@ -21,7 +25,25 @@ const fisika = () => {
         </a>
       </Link>
 
-      <section className='grid grid-cols-1 bg-gray-100 border border-gray-300 divide-y divide-gray-300 rounded-md sm:p-2 sm:grid-cols-2 md:grid-cols-3 sm:divide-y-0'>
+      <div className='px-2 py-2 bg-white border-b shadow hover:shadow-md rounded-t-md sm:px-3'>
+        <div className='flex items-center space-x-2 sm:space-x-1'>
+          <svg
+            className='w-6 h-6 text-gray-700'
+            viewBox='0 0 24 24'
+            width='24'
+            height='24'
+            stroke='currentColor'
+            strokeWidth='1.5'
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            fill='#E4E4E7'
+          >
+            <path d='M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z' />
+          </svg>
+          <p>Bab Fisika</p>
+        </div>
+      </div>
+      <section className='grid grid-cols-1 bg-white shadow hover:shadow-md divide-y divide-gray-300 rounded-b-md sm:px-1.5 sm:py-2 sm:grid-cols-2 md:grid-cols-3 sm:divide-y-0'>
         <ChapterBox title='Fluida Statis' to='fisika/FluidaStatis' />
         <ChapterBox title='Fluida Dinamis' to='fisika/FluidaDinamis' />
         <ChapterBox title='Listrik Statis' to='fisika/ListrikStatis' />

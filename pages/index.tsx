@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import FAQ from '../components/FAQ';
 import InfoBox from '../components/InfoBox';
-import { FAQs } from '../lib/FAQs';
-import { weCareAbouts } from '../lib/weCareAbouts';
-import { sendInformations } from '../lib/sendInformations';
 import Layout from '../components/Layout';
-import { RightArrow } from '@/Icons';
+import Support from '@/components/Support';
+import Inspirasi from '@/components/Inspirasi';
 
-const Beranda = () => {
+import { isiFAQ } from '../lib/Beranda';
+import { SayaPeduliTentang } from '../lib/Beranda';
+import { CaraSayaMenyampaikanInformasi } from '../lib/Beranda';
+
+export default function Beranda() {
   const tr: string = 'divide-y divide-x divide-cyan-500';
   const td: string = ' text-left text-sm p-2';
   const th: string = 'p-2 text-left text-base font-medium text-cyan-500 bg-cyan-50';
@@ -15,38 +17,37 @@ const Beranda = () => {
   return (
     <Layout browserTitle='Beranda' description='Laboratorium untuk Pelajar.'>
       {/* Hero */}
-      
-      <section className='relative z-40 flex flex-col w-full pb-32 bg-white pt-14 sm:pt-40 sm:pb-0 font-inter'>
+
+      <section className='relative z-40 flex flex-col w-full my-32 sm:mt-20 sm:mb-10 font-inter'>
         <div className='max-w-3xl mx-auto mb-5 text-4xl font-extrabold leading-tight text-center text-transparent sm:text-6xl'>
           <span>
             <Link href='/matematika'>
-              <a> Buku Paket,</a>
+              <a> Buku Paket. </a>
             </Link>
-          </span>{' '}
+          </span>
           <span>
             <Link href='/bimbel'>
-              <a>Flash Card,</a>
+              <a>Flash Card. </a>
             </Link>
           </span>
           <span>
             <Link href='/kalkulator'>
-              <a> Guru Les,</a>
+              <a> Guru Les. </a>
             </Link>
-          </span>{' '}
+          </span>
           <span>
             <Link href='/kartu'>
-              <a>Kalkulator. </a>
+              <a>Kalkulator.</a>
             </Link>
           </span>
         </div>
 
-        <div className='text-lg leading-tight text-center sm:mb-12'>
-          Matematika dan Fisika.
+        <div className='text-lg leading-tight text-center sm:mb-5'>
+          Tempat terbaik untuk referensi, kalkulasi, animasi Matematika dan Fisika.
         </div>
-        <Link href='/signUp'>
-          <a className='flex items-center justify-center w-full mt-5 text-lg duration-300 text-harislab hover:underline sm:mt-0 sm:mb-40'>
+        <Link href='/signup'>
+          <a className='flex items-center justify-center w-3/4 py-3 mx-auto mt-5 text-lg text-white duration-200 rounded-md sm:w-1/4 bg-harislab sm:mt-0 hover:bg-opacity-70'>
             Pelajari lebih lanjut
-            <RightArrow color='' />
           </a>
         </Link>
       </section>
@@ -58,7 +59,7 @@ const Beranda = () => {
         </div>
 
         <section className='grid grid-cols-1 gap-10 mx-auto sm:grid-cols-3 md:grid-cols-4 '>
-          {sendInformations.map((a) => (
+          {CaraSayaMenyampaikanInformasi.map(a => (
             <InfoBox
               key={a.id}
               svg={a.svg}
@@ -78,7 +79,7 @@ const Beranda = () => {
         </header>
 
         <section className='grid grid-cols-1 gap-10 mx-auto sm:grid-cols-3 md:grid-cols-4 '>
-          {weCareAbouts.map((a) => (
+          {SayaPeduliTentang.map(a => (
             <InfoBox
               key={a.id}
               svg={a.svg}
@@ -141,59 +142,25 @@ const Beranda = () => {
         </section>
       </div>
 
-      {/* tailwindcss, apple, nng, lawsofux */}
-      <div className='mb-32 sm:mb-60 '>
-        <header className='mb-10 text-2xl font-bold text-center bg-gradient-to-r from-cyan-500 via-rose-500 to-amber-500 sm:text-4xl trns'>
-          Terinspirasi dari prinsip desain website informasi terbaik
-        </header>
-        <div className='grid grid-cols-1 gap-5 font-medium text-center sm:grid-cols-2'>
-          <a
-            className='py-3 text-white duration-200 border rounded-md bg-cyan-500 hover:bg-white hover:text-cyan-500 border-cyan-500 '
-            href='https://www.tailwindcss.com'
-            target='_blank'
-          >
-            Tailwind CSS
-          </a>
-          <a
-            className='py-3 text-white duration-200 border rounded-md bg-rose-500 border-rose-500 hover:bg-white hover:text-rose-500'
-            href='https://www.nngroup.com'
-            target='_blank'
-          >
-            NNGroup
-          </a>
-          <a
-            className='py-3 text-white duration-200 bg-gray-700 border border-gray-700 rounded-md hover:bg-white hover:text-gray-700'
-            href='https://developer.apple.com'
-            target='_blank'
-          >
-            Apple Developer
-          </a>
-          <a
-            className='py-3 text-white duration-200 border rounded-md bg-amber-500 border-amber-500 hover:bg-white hover:text-amber-500'
-            href='https://www.lawsofux.com'
-            target='_blank'
-          >
-            Laws of UX
-          </a>
-        </div>
-      </div>
+      <Inspirasi />
+
       {/* FAQ */}
-      <div className='mb-36'>
+      <div className='mb-32 sm:mb-60'>
         <header className='mb-10 text-2xl font-bold text-center text-gray-800 sm:text-4xl'>
           Frequently Asked Questions
         </header>
         <section className='grid max-w-xl grid-cols-1 gap-5 mx-auto '>
-          {FAQs.map((FAQs) => (
-            <div key={FAQs.id}>
-              <FAQ button={FAQs.button} panel={FAQs.panel} />
+          {isiFAQ.map(a => (
+            <div key={a.id}>
+              <FAQ button={a.button} panel={a.panel} />
             </div>
           ))}
         </section>
       </div>
+
+      <div id='support'>
+        <Support />
+      </div>
     </Layout>
   );
-};
-
-export default Beranda;
-
-// link ke halaman ini ada di ../components/Layout.js
+}

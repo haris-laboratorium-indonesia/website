@@ -3,20 +3,21 @@ import TeX from '@matejmazur/react-katex';
 import DinamikaImage from '../../public/Fisika/DinamikaImage.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
-import ListDinamika from '@/components/ListFisika/ListDinamika';
 import LayoutMateri from '@/components/LayoutMateri';
 import { DinamikaVar } from 'lib/VariabelFisika';
 import { DinamikaRumus } from 'lib/RumusFisika';
 import { DinamikaPenurunanRumus } from 'lib/PenurunanRumusFisika';
+import { NavList } from '@/components/List';
+import List from '@/components/List';
 import {
   AA1,
   A2,
   TH,
   TData,
-  TRowwwww,
+  Row,
   THEAD,
-  TBODY,
-  Para,
+  Body,
+  P,
   Gambar,
   Legenda,
   KaTeX,
@@ -26,7 +27,15 @@ import {
 export default function Dinamika() {
   return (
     <LayoutMateri browserTitle='Dinamika' description='Materi Dinamika'>
-      <ListDinamika />
+      <List branch='fisika' to='Dinamika' title='Dinamika'>
+        <NavList title='Pengenalan' href='Pengenalan' />
+        <NavList title='Konstanta' href='Konstanta' />
+        <NavList title='Variabel' href='Variabel' />
+        <NavList title='Rumus' href='Rumus' />
+        <NavList title='Penurunan Rumus' href='PenurunanRumus' />
+        <NavList title='Pembahasan' href='Pembahasan' />
+        <NavList title='Contoh Soal' href='ContohSoal' />
+      </List>
       <Gambar
         src={DinamikaImage}
         alt='Dinamika'
@@ -37,20 +46,19 @@ export default function Dinamika() {
       <A2 title='Siapa yang menggunakan Dinamika' />
       <A2 title='Dimana Dinamika digunakan' />
       <A2 title='Kapan Dinamika digunakan' />
-
       <AA1 id='Konstanta' title='Konstanta' />
       <section className='overflow-x-auto '>
         <table className='w-full min-w-full border table-max'>
           <THEAD>
-            <TRowwwww>
+            <Row>
               <TH>Simbol</TH>
               <TH>Nama</TH>
               <TH>Nilai</TH>
-            </TRowwwww>
+            </Row>
           </THEAD>
 
-          <TBODY>
-            <TRowwwww>
+          <Body>
+            <Row>
               <TData>
                 <TeX>k</TeX>
               </TData>
@@ -58,9 +66,9 @@ export default function Dinamika() {
               <TData>
                 <KaTeX>{`1,380 \\times 10^{-23} \\frac{J}{K}`}</KaTeX>
               </TData>
-            </TRowwwww>
+            </Row>
 
-            <TRowwwww>
+            <Row>
               <TData>
                 <TeX>R</TeX>
               </TData>
@@ -69,25 +77,24 @@ export default function Dinamika() {
               <TData>
                 <KaTeX>{`8,3145 \\enspace \\frac{J\\cdot mol}{K}`}</KaTeX>
               </TData>
-            </TRowwwww>
-          </TBODY>
+            </Row>
+          </Body>
         </table>
       </section>
-
       <AA1 id='Variabel' title='Variabel' />
       <section className='overflow-x-auto'>
         <table className='w-full min-w-full border table-max'>
           <THEAD>
-            <TRowwwww>
+            <Row>
               <TH>Simbol</TH>
               <TH>Nama</TH>
               <TH>Nilai</TH>
-            </TRowwwww>
+            </Row>
           </THEAD>
 
-          <TBODY>
+          <Body>
             {DinamikaVar.map(a => (
-              <TRowwwww>
+              <Row>
                 <TData>
                   <KaTeX>{String.raw`${a.simbol}`}</KaTeX>
                 </TData>
@@ -95,12 +102,11 @@ export default function Dinamika() {
                 <TData>
                   <KaTeX>{String.raw`${a.satuan}`}</KaTeX>
                 </TData>
-              </TRowwwww>
+              </Row>
             ))}
-          </TBODY>
+          </Body>
         </table>
       </section>
-
       <AA1 id='Rumus' title='Rumus' />
       <div className='grid grid-cols-1 sm:grid-cols-2'>
         {DinamikaRumus.map(a => (
@@ -114,7 +120,6 @@ export default function Dinamika() {
           </article>
         ))}
       </div>
-
       <AA1 id='PenurunanRumus' title='Penurunan Rumus' />
       <div className='grid grid-cols-1 sm:grid-cols-2'>
         {DinamikaPenurunanRumus.map(a => (
@@ -128,20 +133,19 @@ export default function Dinamika() {
           </article>
         ))}
       </div>
-      
       <AA1 id='Pembahasan' title='Pembahasan' />
-      <Para>
+      <P>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolorum cupiditate
         voluptatibus, facere, sunt illum eveniet quasi fuga consequuntur harum quo magnam facilis
         eos dolores. Sint architecto dolorem ratione. Tempora cumque amet expedita praesentium qui
         quae error laudantium incidunt odit inventore unde enim molestias voluptates aut est, facere
         earum adipisci?
-      </Para>
+      </P>
       <AA1 id='ContohSoal' title='Contoh Soal' />
-      <Para>
+      <P>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa consequatur qui optio
         libero. Error sequi ea assumenda, minus nobis cupiditate!
-      </Para>
+      </P>
       <br />
       <ExampleMain type='Contoh Soal Mudah'>
         <ExampleChild type='Teori Kinetik Gas'>

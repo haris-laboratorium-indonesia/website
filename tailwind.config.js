@@ -41,6 +41,12 @@ module.exports = {
         inter: ['Inter'],
         mw: ['Merriweather'],
       },
+      fontSize: {
+        tiny: '.950rem',
+      },
+      scale: {
+        101: '1.01',
+      },
     },
   },
   variants: {

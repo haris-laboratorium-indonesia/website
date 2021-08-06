@@ -3,17 +3,18 @@ import TeX from '@matejmazur/react-katex';
 import GelombangElektromagnetikimage from '../../public/Fisika/GelombangElektromagnetikImage.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
-import ListGelombangElektromagnetik from '@/components/ListFisika/ListGelombangElektromagnetik';
 import LayoutMateri from '@/components/LayoutMateri';
+import { NavList } from '@/components/List';
+import List from '@/components/List';
 import {
   AA1,
   A2,
   TH,
   TData,
-  TRowwwww,
+  Row,
   THEAD,
-  TBODY,
-  Para,
+  Body,
+  P,
   Gambar,
   Legenda,
   KaTeX,
@@ -26,12 +27,22 @@ export default function GelombangElektromagnetik() {
       browserTitle='Gelombang Elektromagnetik'
       description='Materi Gelombang Elektromagnetik'
     >
-      <ListGelombangElektromagnetik />
+      <List branch='fisika' to='GelombangElektromagnetik' title='Gelombang Elektromagnetik'>
+        <NavList title='Pengenalan' href='Pengenalan' />
+        <NavList title='Konstanta' href='Konstanta' />
+        <NavList title='Variabel' href='Variabel' />
+        <NavList title='Rumus' href='Rumus' />
+        <NavList title='Penurunan Rumus' href='PenurunanRumus' />
+        <NavList title='Pembahasan' href='Pembahasan' />
+        <NavList title='Contoh Soal' href='ContohSoal' />
+      </List>
+
       <Gambar
         src={GelombangElektromagnetikimage}
         alt='Gelombang Elektromagnetik'
         caption='Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termodinamika ke-0 dirumuskan.'
-      ></Gambar>
+      />
+
       <AA1 id='Pengenalan' title='Pengenalan' />
       <A2 title='Apa itu Gelombang Elektromagnetik' />
       <A2 title='Siapa yang menggunakan Gelombang Elektromagnetik' />
@@ -42,15 +53,15 @@ export default function GelombangElektromagnetik() {
       <section className='overflow-x-auto'>
         <table className='w-full min-w-full border table-max'>
           <THEAD>
-            <TRowwwww>
+            <Row>
               <TH>Simbol</TH>
               <TH>Nama</TH>
               <TH>Nilai</TH>
-            </TRowwwww>
+            </Row>
           </THEAD>
 
-          <TBODY>
-            <TRowwwww>
+          <Body>
+            <Row>
               <TData>
                 <TeX>k</TeX>
               </TData>
@@ -58,35 +69,34 @@ export default function GelombangElektromagnetik() {
               <TData>
                 <KaTeX>{`1,380 \\times 10^{-23} \\frac{J}{K}`}</KaTeX>
               </TData>
-            </TRowwwww>
+            </Row>
 
-            <TRowwwww>
+            <Row>
               <TData>
                 <TeX>R</TeX>
               </TData>
-
               <TData>Konstanta Gas Ideal</TData>
               <TData>
                 <KaTeX>{`8,3145 \\enspace \\frac{J\\cdot mol}{K}`}</KaTeX>
               </TData>
-            </TRowwwww>
-          </TBODY>
+            </Row>
+          </Body>
         </table>
       </section>
-      
+
       <AA1 id='Variabel' title='Variabel' />
       <section className='overflow-x-auto '>
         <table className='w-full min-w-full border table-max'>
           <THEAD>
-            <TRowwwww>
+            <Row>
               <TH>Simbol</TH>
               <TH>Nama</TH>
               <TH>Satuan</TH>
-            </TRowwwww>
+            </Row>
           </THEAD>
 
-          <TBODY>
-            <TRowwwww>
+          <Body>
+            <Row>
               <TData>
                 <TeX>Q</TeX>
               </TData>
@@ -94,11 +104,11 @@ export default function GelombangElektromagnetik() {
               <TData>
                 <TeX>C \ (Coulomb)</TeX>
               </TData>
-            </TRowwwww>
-          </TBODY>
+            </Row>
+          </Body>
         </table>
       </section>
-      
+
       <AA1 id='Rumus' title='Rumus' />
       <div className='grid grid-cols-1 sm:grid-cols-2'>
         <article>
@@ -108,26 +118,28 @@ export default function GelombangElektromagnetik() {
       </div>
 
       <AA1 id='PenurunanRumus' title='Penurunan Rumus' />
-      <Para>
+      <P>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. A laudantium optio earum autem
         quisquam sit inventore, distinctio asperiores! Culpa optio atque similique adipisci id,
         soluta, odio excepturi ducimus laboriosam aspernatur quam velit alias. Saepe consectetur,
         harum dolorum fugit omnis nostrum deleniti exercitationem, magnam nam voluptatem voluptates,
         laudantium consequuntur ad facilis.
-      </Para>
+      </P>
+
       <AA1 id='Pembahasan' title='Pembahasan' />
-      <Para>
+      <P>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolorum cupiditate
         voluptatibus, facere, sunt illum eveniet quasi fuga consequuntur harum quo magnam facilis
         eos dolores. Sint architecto dolorem ratione. Tempora cumque amet expedita praesentium qui
         quae error laudantium incidunt odit inventore unde enim molestias voluptates aut est, facere
         earum adipisci?
-      </Para>
+      </P>
+      
       <AA1 id='ContohSoal' title='Contoh Soal' />
-      <Para>
+      <P>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa consequatur qui optio
         libero. Error sequi ea assumenda, minus nobis cupiditate!
-      </Para>
+      </P>
       <br />
       <ExampleMain type='Contoh Soal Mudah'>
         <ExampleChild type='Teori Kinetik Gas'>
