@@ -57,7 +57,7 @@ export default function Turunan() {
       <AA1 id='PenurunanRumus' title='Penurunan Rumus' />
       <div className='grid grid-cols-1'>
         {TurunanPenurunanRumus.map(a => (
-          <article className='mb-3 overflow-x-auto' key={a.nama} >
+          <article className='mb-3 overflow-x-auto rounded-md shadow hover:shadow-md' key={a.nama}>
             <PenurunanRumus title={a.nama}>
               {typeof a.rumus === 'string' ? (
                 <KaTeX>{String.raw`${a.rumus}`}</KaTeX>

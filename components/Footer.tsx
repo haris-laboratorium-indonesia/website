@@ -1,6 +1,6 @@
 import Link from 'next/link';
 const Footer = () => {
-  const a = 'block text-gray-400 hover:text-white font-inter py-1';
+  const a = 'block text-gray-400 hover:text-white font-inter py-2';
   return (
     <footer className='bottom-0 w-full mt-20 text-center bg-gray-800'>
       {/* Footer Navigasi */}
@@ -31,8 +31,8 @@ const Footer = () => {
         </div>
 
         {/* Company Identity */}
-        <article className='w-full pt-5 space-y-2 text-gray-400 sm:pt-0 '>
-          <div className='text-2xl text-white font-mw'>
+        <article className='w-full pt-5 space-y-2 text-gray-400 sm:pt-0'>
+          <div className='flex text-2xl text-white font-mw'>
             <Link href='/'>
               <a>
                 Haris<span className='font-light text-gray-400'>Lab</span>
@@ -41,24 +41,19 @@ const Footer = () => {
           </div>
           <div>PT. Haris Laboratorium Indonesia</div>
           <div>Jl. Dr.Setiabudi Gg. Kebon Manggis 5 no. 56</div>
-
           <div>Tangerang Selatan, Banten 15226, Indonesia</div>
           <div>harislabindonesia@gmail.com</div>
           <div className='flex flex-col w-full sm:flex-row'>
             <div>
               Copyright &copy;2021 Haris
-              <span className=''>Lab</span> LLC. &nbsp;
+              <span className=''>Lab</span>
             </div>
           </div>
           <div>
             Crafted by{' '}
-            <a
-              href='https://www.twitter.com/haritssr'
-              target='_blank'
-              className='text-harislab hover:underline'
-            >
-              Harits Syah
-            </a>
+            <Link href='/about-me'>
+              <a className='ml-1 underline hover:no-underline hover:text-harislab'> Harits Syah</a>
+            </Link>
           </div>
         </article>
       </section>

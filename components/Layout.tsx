@@ -25,10 +25,10 @@ const Layout = ({ children, browserTitle, description }) => {
         <meta name='twitter:image' content={image} />
       </Head>
 
-      <div className='bg-gray-800'>
+      <section className='sticky top-0 z-50 bg-gray-800'>
         <NavDesktop />
         <NavMobile />
-      </div>
+      </section>
 
       <section className='w-full max-w-4xl min-h-screen px-5 mx-auto xl:px-0 font-inter '>
         {children}

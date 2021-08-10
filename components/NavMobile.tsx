@@ -3,7 +3,7 @@ import { Menu } from '@headlessui/react';
 import { X, HamburgerMenu, SearchIcon } from '@/Icons';
 
 const NavMobile = () => {
-  const nav = 'py-2 text-xl block text-gray-200 ';
+  const nav = 'py-3 text-xl block text-gray-200 ';
 
   return (
     <nav className='z-50 flex items-center justify-between w-full h-auto max-w-5xl p-3 mx-auto border-b border-gray-300 md:hidden'>
@@ -122,6 +122,21 @@ const NavMobile = () => {
                     </button>
                   )}
                 </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <button className='w-full text-left text-black '>
+                      {active ? (
+                        <Link href='/#support'>
+                          <a className={nav}>Support</a>
+                        </Link>
+                      ) : (
+                        <Link href='/#support'>
+                          <a className={nav}>Support</a>
+                        </Link>
+                      )}
+                    </button>
+                  )}
+                </Menu.Item>
               </section>
             </Menu.Items>
           </>
@@ -130,7 +145,7 @@ const NavMobile = () => {
 
       {/* HarisLab */}
       <Link href='/'>
-        <a className='items-center block w-full pl-6 text-xl font-semibold text-center text-white font-mw'>
+        <a className='items-center block w-full pl-6 text-lg font-medium text-center text-white font-mw'>
           <span className='font-bold'>Haris</span>
           <span className='font-light'>Lab</span>
         </a>

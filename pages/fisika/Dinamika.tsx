@@ -83,7 +83,7 @@ export default function Dinamika() {
       </section>
       <AA1 id='Variabel' title='Variabel' />
       <section className='overflow-x-auto'>
-        <table className='w-full min-w-full border table-max'>
+        <table className='w-full min-w-full border border-gray-400 table-max'>
           <THEAD>
             <Row>
               <TH>Simbol</TH>

@@ -1,6 +1,6 @@
+import Link from 'next/link';
 import { Menu } from '@headlessui/react';
 import { LeftArrow, HamburgerMenu, X } from '@/Icons';
-import Link from 'next/link';
 
 export const a = 'block text-gray-200 hover:bg-harislab hover:text-white rounded px-2 py-1';
 export const b = '';
@@ -18,7 +18,7 @@ export function NavList({ title, href }) {
 
 export default function List({ branch, to, title, children }) {
   return (
-    <div className='sticky z-40 -mx-3 top-3'>
+    <div className='sticky z-40 -mx-3 top-16 sm:top-14'>
       <Menu as='div' className='flex flex-col w-full mt-10 mb-3 sm:mb-5 sm:mx-auto'>
         {({ open }) => (
           <>

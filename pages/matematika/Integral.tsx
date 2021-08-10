@@ -53,9 +53,9 @@ export default function Integral() {
       <AA1 id='Variabel' title='Variabel' />
 
       <AA1 id='Rumus' title='Rumus' />
-      <div className='grid grid-cols-1 sm:grid-cols-2'>
+      <div className='grid grid-cols-1 gap-5 sm:grid-cols-2'>
         {IntegralRumus.map(a => (
-          <article>
+          <article className='p-5 bg-white rounded-md shadow-md hover:shadow-lg'>
             <div className={rumusTitle}>{a.nama}</div>
             {typeof a.rumus === 'string' ? (
               <KaTeX>{String.raw`${a.rumus}`}</KaTeX>

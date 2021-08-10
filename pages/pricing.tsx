@@ -21,7 +21,9 @@ export default function pricing() {
       <div className='grid grid-cols-2 gap-5'>
         <div className='p-5 space-y-5 duration-300 ease-in-out bg-white rounded-md shadow-md hover:shadow-lg hover:scale-101 '>
           <div>Nama paket</div>
-          <div className='w-1/3 mb-5 text-4xl font-bold text-gray-800 inside-block'>FREE</div>
+          <div className='w-1/3 mb-5 text-xl font-bold text-gray-800 sm:text-4xl inside-block'>
+            FREE
+          </div>
           <div>
             <div>Fitur :</div>
             <ul className='list-disc list-inside'>
@@ -34,7 +36,9 @@ export default function pricing() {
         </div>
         <div className='p-5 space-y-5 duration-300 ease-in-out bg-white rounded-md shadow-md hover:shadow-lg hover:scale-101 '>
           <div>Nama paket</div>
-          <div className='w-1/3 mb-5 text-4xl font-bold inside-block text-harislab'>PREMIUM</div>
+          <div className='w-1/3 mb-5 text-xl font-bold sm:text-4xl inside-block text-harislab'>
+            PREMIUM
+          </div>
           <div>
             <div>Fitur :</div>
             <ul className='list-disc list-inside'>

@@ -19,7 +19,7 @@ export const A2 = ({ title }) => {
 };
 
 export const P = ({ children }) => {
-  return <p className='text-gray-800 sm:text-lg indent-sm'>{children}</p>;
+  return <p className='text-gray-700 sm:text-lg indent-sm'>{children}</p>;
 };
 
 export const Gambar = ({ src, alt, caption }) => {
@@ -40,11 +40,11 @@ export const Gambar = ({ src, alt, caption }) => {
   );
 };
 
-export const rumusTitle = 'font-medium text-lg mt-5 inline-block w-full pb-0.5 text-harislab';
+export const rumusTitle = 'font-medium text-md inline-block w-full  text-pink-600';
 
-const th = 'w-1/5 py-2 px-4 text-left font-semibold text-gray-700 bg-gray-100';
+const th = 'w-1/5 py-2 px-4 text-left font-semibold text-gray-800 bg-sky-200 ';
 const td = 'text-left px-4 py-1.5 table-auto min-w-min text-gray-700';
-const tr = 'divide-x border-b border-gray-300';
+const tr = 'divide-x border-b border-gray-400';
 const thead = 'border-b border-gray-400';
 
 export const THEAD = ({ children }) => {
@@ -73,7 +73,7 @@ export const Legenda = ({ name, rumus }) => {
   );
 };
 export const KaTeX = ({ children }) => {
-  return <TeX className='inline-block w-full py-2 text-sm sm:text-base'>{children}</TeX>;
+  return <TeX className='inline-block w-full py-2 text-sm text-tiny'>{children}</TeX>;
 };
 export const Anchor = ({ to, name }) => {
   return (

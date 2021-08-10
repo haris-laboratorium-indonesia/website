@@ -14,7 +14,7 @@ const fisika = () => {
       </div>
 
       <Link href='/fisika/glosarium'>
-        <a className='flex items-center justify-between w-full px-2 py-2 mb-3 duration-200 bg-white rounded-md shadow hover:shadow-md sm:px-3'>
+        <a className='flex items-center justify-between w-full px-2.5 py-2.5 mb-3 duration-200 bg-white rounded-md shadow hover:shadow-md sm:px-3'>
           <div className='flex items-center space-x-2 sm:justify-between sm:space-x-1'>
             <Collection />
             <p>Glosarium Fisika</p>
@@ -25,7 +25,7 @@ const fisika = () => {
         </a>
       </Link>
 
-      <div className='px-2 py-2 bg-white border-b shadow hover:shadow-md rounded-t-md sm:px-3'>
+      <div className='px-2.5 py-2.5 bg-white border-b shadow hover:shadow-md rounded-t-md sm:px-3'>
         <div className='flex items-center space-x-2 sm:space-x-1'>
           <svg
             className='w-6 h-6 text-gray-700'

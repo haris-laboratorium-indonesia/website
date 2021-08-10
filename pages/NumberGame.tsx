@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 export default function NumberGame() {
   function inputKeyPress(event) {
     if (event.key === 'Enter') {

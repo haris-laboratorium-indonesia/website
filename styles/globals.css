@@ -8,8 +8,8 @@
 @tailwind variants;
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 65px;
+  scroll-behavior: auto;
+  scroll-padding-top: 120px;
 }
 
 body {

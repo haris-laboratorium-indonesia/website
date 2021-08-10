@@ -8,6 +8,7 @@ import Inspirasi from '@/components/Inspirasi';
 import { isiFAQ } from '../lib/Beranda';
 import { SayaPeduliTentang } from '../lib/Beranda';
 import { CaraSayaMenyampaikanInformasi } from '../lib/Beranda';
+import TextSlider from '@/components/delba/TextSlider';
 
 export default function Beranda() {
   const tr: string = 'divide-y divide-x divide-cyan-500';
@@ -17,39 +18,24 @@ export default function Beranda() {
   return (
     <Layout browserTitle='Beranda' description='Laboratorium untuk Pelajar.'>
       {/* Hero */}
+      <section className='relative z-40 flex flex-col w-full mt-20 mb-20 font-inter'>
+        <TextSlider slides={['Referensi.', 'Kalkulasi.', 'Animasi.']} />
 
-      <section className='relative z-40 flex flex-col w-full my-32 sm:mt-20 sm:mb-10 font-inter'>
-        <div className='max-w-3xl mx-auto mb-5 text-4xl font-extrabold leading-tight text-center text-transparent sm:text-6xl'>
-          <span>
-            <Link href='/matematika'>
-              <a> Buku Paket. </a>
-            </Link>
-          </span>
-          <span>
-            <Link href='/bimbel'>
-              <a>Flash Card. </a>
-            </Link>
-          </span>
-          <span>
-            <Link href='/kalkulator'>
-              <a> Guru Les. </a>
-            </Link>
-          </span>
-          <span>
-            <Link href='/kartu'>
-              <a>Kalkulator.</a>
-            </Link>
-          </span>
+        <div className='grid grid-cols-2 gap-5 mx-auto my-7 sm:w-1/2'>
+          <Link href='/signup'>
+            <a className='inline-block px-6 py-2 text-xl text-center text-white duration-200 rounded-lg shadow sm:text-2xl hover:shadow-md hover:-translate-y-1 bg-harislab'>
+              Daftar
+            </a>
+          </Link>
+          <Link href='/#support'>
+            <a className='inline-block px-6 py-2 text-xl text-center text-gray-800 duration-200 bg-white rounded-lg shadow-md sm:text-2xl hover:shadow-lg hover:-translate-y-1'>
+              Support
+            </a>
+          </Link>
         </div>
-
-        <div className='text-lg leading-tight text-center sm:mb-5'>
+        <div className='mb-12 text-lg font-medium leading-tight text-center '>
           Tempat terbaik untuk referensi, kalkulasi, animasi Matematika dan Fisika.
         </div>
-        <Link href='/signup'>
-          <a className='flex items-center justify-center w-3/4 py-3 mx-auto mt-5 text-lg text-white duration-200 rounded-md sm:w-1/4 bg-harislab sm:mt-0 hover:bg-opacity-70'>
-            Pelajari lebih lanjut
-          </a>
-        </Link>
       </section>
 
       {/* Cara kami menyajikan informasi */}

@@ -37,6 +37,9 @@ module.exports = {
       fuschsia: colors.fuchsia,
     },
     extend: {
+      animation: {
+        'background-spin': 'halfSpin 10s ease-in-out infinite',
+      },
       fontFamily: {
         inter: ['Inter'],
         mw: ['Merriweather'],
@@ -46,6 +49,19 @@ module.exports = {
       },
       scale: {
         101: '1.01',
+      },
+      keyframes: {
+        halfSpin: {
+          '0%': {
+            transform: 'rotate(0deg)',
+          },
+          '50%': {
+            transform: 'rotate(150deg)',
+          },
+          to: {
+            transform: 'rotate(0deg)',
+          },
+        },
       },
     },
   },
