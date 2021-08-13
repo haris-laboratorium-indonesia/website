@@ -21,15 +21,15 @@ export default function Beranda() {
       <section className='relative z-40 flex flex-col w-full mt-20 mb-20 font-inter'>
         <TextSlider slides={['Referensi.', 'Kalkulasi.', 'Animasi.']} />
 
-        <div className='grid grid-cols-2 gap-5 mx-auto my-7 sm:w-1/2'>
+        <div className='grid w-4/5 grid-cols-1 gap-4 mx-auto sm:grid-cols-2 my-7 sm:w-1/2'>
           <Link href='/signup'>
-            <a className='inline-block px-6 py-2 text-xl text-center text-white duration-200 rounded-lg shadow sm:text-2xl hover:shadow-md hover:-translate-y-1 bg-harislab'>
-              Daftar
+            <a className='inline-block px-6 py-2 text-xl text-center text-white duration-200 rounded-md shadow-md sm:text-xl hover:shadow-none hover:bg-opacity-80 bg-harislab '>
+              Lihat aplikasi
             </a>
           </Link>
           <Link href='/#support'>
-            <a className='inline-block px-6 py-2 text-xl text-center text-gray-800 duration-200 bg-white rounded-lg shadow-md sm:text-2xl hover:shadow-lg hover:-translate-y-1'>
-              Support
+            <a className='inline-block px-6 py-2 text-xl text-center text-gray-600 duration-200 bg-white rounded-md shadow-md sm:text-xl hover:shadow-none hover:bg-gray-200 '>
+              Dukung kami
             </a>
           </Link>
         </div>
@@ -53,6 +53,7 @@ export default function Beranda() {
               description={a.description}
               color='text-purple-600'
               borderColor='border-purple-600'
+              to='/about-me'
             />
           ))}
         </section>
@@ -73,6 +74,7 @@ export default function Beranda() {
               description={a.description}
               color='text-lime-600'
               borderColor='border-lime-600'
+              to='/about-me'
             />
           ))}
         </section>

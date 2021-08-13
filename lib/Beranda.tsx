@@ -11,7 +11,7 @@ export const SayaPeduliTentang = [
     svg: 'M22 12h-4l-3 9L9 3l-3 9H2',
     title: 'Tingkat Retensi',
     description:
-      'Retensi ditingkatkan dengan kemudahan mendapat informasi yang dibutuhkan.dan kemampuan kita untuk me re-call informasi pelajaran menjadi penting.',
+      'Retensi ditingkatkan dengan kemudahan mendapat informasi yang dibutuhkan dan kemampuan kita untuk me re-call informasi pelajaran menjadi penting.',
   },
   {
     id: '3',
@@ -35,7 +35,7 @@ export const CaraSayaMenyampaikanInformasi = [
     svg: 'M12 2L2 7l10 5 10-5-10-5z M2 17l10 5 10-5 M2 12l10 5 10-5 ',
     title: 'Kerangka Kerja',
     description:
-      'Di HarisLab, semua bab pelajaran dibuat sebuah struktur informasi sedemikia rupa agar mudah diingat. Sehingga kita bisa  berekspektasi kepada setiap bab nya, bahwa ini yang akan kita pelajari. Coba dan rasakan kemudahannya',
+      'Di HarisLab, semua bab pelajaran dibuat sebuah struktur informasi sedemikia rupa agar mudah diingat. Sehingga kita bisa  berekspektasi kepada setiap babnya, bahwa ini yang akan kita pelajari. Coba dan rasakan kemudahannya',
   },
   {
     id: '2',
@@ -49,7 +49,7 @@ export const CaraSayaMenyampaikanInformasi = [
     svg: 'M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z M7.5 4.21l4.5 2.6 4.5-2.6 M7.5 19.79V14.6L3 12 M21 12l-4.5 2.6v5.19 M3.27 6.96L12 12.01l8.73-5.05 M12 22.08V12',
     title: 'Berdasarkan Projek',
     description:
-      "Belajar berdasarkan proyek (Project-Base Learning) berarti kalian diberi masalah dulu baru menggunakan semua materi pelajaran di 'Belajar' untuk menyelesaikan masalah. Ini meningkatkan sense of utility.",
+      "Belajar berdasarkan proyek (Project-Base Learning) berarti kalian diberi masalah dulu baru menggunakan semua materi pelajaran di 'Matematika' dan 'Fisika' untuk menyelesaikan masalah dan meningkatkan \"sense of utility\".",
   },
   {
     id: '4',

@@ -1,8 +1,7 @@
-import ChapterBox from '@/components/ChapterBox';
+import ChapterBoxMatematika from '@/components/ChapterBox';
 import Layout from '@/components/Layout';
 import Title from '@/components/Title';
 import Link from 'next/link';
-import { RightArrow } from '@/Icons';
 
 const matematika = () => {
   return (
@@ -12,54 +11,33 @@ const matematika = () => {
       <div className='mb-5 -mt-5 text-center'>Pelajari bahasa alam semesta melalui matematika.</div>
 
       <Link href='/matematika/glosarium'>
-        <a className='flex items-center justify-between w-full px-2.5 py-2.5 mb-3 duration-200 bg-white rounded-md shadow hover:shadow-md sm:px-3'>
+        <a className='flex items-center justify-center p-2 my-5 text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 '>
           <div className='flex items-center space-x-2 sm:justify-between sm:space-x-1'>
             <Collection />
-            <p>Glosarium Matematika</p>
-          </div>
-          <div className='sm:hidden'>
-            <RightArrow color=' ' />
+            <p>Glosarium</p>
           </div>
         </a>
       </Link>
 
-      <div className='px-2.5 py-2.5 bg-white border-b shadow rounded-t-md sm:px-3 hover:shadow-md'>
-        <div className='flex items-center space-x-2 sm:space-x-1'>
-          <svg
-            className='w-6 h-6 text-gray-700'
-            viewBox='0 0 24 24'
-            width='24'
-            height='24'
-            stroke='currentColor'
-            strokeWidth='1.5'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            fill='#E4E4E7'
-          >
-            <path d='M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z' />
-          </svg>
-          <p>Bab Matematika</p>
-        </div>
-      </div>
-      <section className='grid grid-cols-1 bg-white shadow hover:shadow-md divide-y divide-gray-300 rounded-b-md sm:px-1.5 sm:py-2 sm:grid-cols-2 md:grid-cols-3 sm:divide-y-0 sm:gap-1'>
-        <ChapterBox title='Lingkaran' to='matematika/Lingkaran' />
-        <ChapterBox title='Integral' to='matematika/Integral' />
-        <ChapterBox title='Linear' to='matematika/Linear' />
-        <ChapterBox title='Kuadrat' to='matematika/Kuadrat' />
-        <ChapterBox title='Suku Banyak' to='matematika/SukuBanyak' />
-        <ChapterBox title='Matriks' to='matematika/Matriks' />
-        <ChapterBox title='Transformasi Geometri' to='matematika/TransformasiGeometri' />
-        <ChapterBox title='Geometri' to='matematika/Geometri' />
-        <ChapterBox title='Trigonometri' to='matematika/Trigonometri' />
-        <ChapterBox title='Logaritma' to='matematika/Logaritma' />
-        <ChapterBox title='Eksponen' to='matematika/Eksponen' />
-        <ChapterBox title='Turunan' to='matematika/Turunan' />
-        <ChapterBox title='Limit' to='matematika/Limit' />
-        <ChapterBox title='Dimensi 3' to='matematika/Dimensi3' />
-        <ChapterBox title='Vektor' to='matematika/Vektor' />
-        <ChapterBox title='Barisan Deret' to='matematika/BarisanDeret' />
-        <ChapterBox title='Statistika' to='matematika/Statistika' />
-        <ChapterBox title='Peluang' to='matematika/Peluang' />
+      <section className='grid grid-cols-1 gap-3 sm:grid-cols-3'>
+        <ChapterBoxMatematika title='Lingkaran' to='matematika/Lingkaran' />
+        <ChapterBoxMatematika title='Integral' to='matematika/Integral' />
+        <ChapterBoxMatematika title='Linear' to='matematika/Linear' />
+        <ChapterBoxMatematika title='Kuadrat' to='matematika/Kuadrat' />
+        <ChapterBoxMatematika title='Suku Banyak' to='matematika/SukuBanyak' />
+        <ChapterBoxMatematika title='Matriks' to='matematika/Matriks' />
+        <ChapterBoxMatematika title='Transformasi Geometri' to='matematika/TransformasiGeometri' />
+        <ChapterBoxMatematika title='Geometri' to='matematika/Geometri' />
+        <ChapterBoxMatematika title='Trigonometri' to='matematika/Trigonometri' />
+        <ChapterBoxMatematika title='Logaritma' to='matematika/Logaritma' />
+        <ChapterBoxMatematika title='Eksponen' to='matematika/Eksponen' />
+        <ChapterBoxMatematika title='Turunan' to='matematika/Turunan' />
+        <ChapterBoxMatematika title='Limit' to='matematika/Limit' />
+        <ChapterBoxMatematika title='Dimensi 3' to='matematika/Dimensi3' />
+        <ChapterBoxMatematika title='Vektor' to='matematika/Vektor' />
+        <ChapterBoxMatematika title='Barisan Deret' to='matematika/BarisanDeret' />
+        <ChapterBoxMatematika title='Statistika' to='matematika/Statistika' />
+        <ChapterBoxMatematika title='Peluang' to='matematika/Peluang' />
       </section>
     </Layout>
   );
@@ -70,7 +48,7 @@ const Collection = () => {
     <svg
       xmlns='http://www.w3.org/2000/svg'
       className='w-6 h-6 text-gray-700'
-      fill='#E4E4E7'
+      fill='#D4D4D4'
       viewBox='0 0 24 24'
       stroke='currentColor'
     >

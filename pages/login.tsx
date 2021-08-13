@@ -3,7 +3,7 @@ import Layout from '@/components/Layout';
 const login = () => {
   return (
     <Layout browserTitle='Login' description='Halaman Login'>
-      <form className='w-full p-5 mx-auto mt-16 bg-white rounded-lg shadow-md hover:shadow-lg sm:w-2/5 '>
+      <form className='w-full p-5 mx-auto mt-16 bg-white rounded-lg shadow-md sm:w-2/5 '>
         <h1 className='mb-4 text-2xl font-semibold text-center text-gray-800'>Login</h1>
         <section className='flex flex-col mb-4'>
           <label className='text-sm' htmlFor='nama'>
@@ -30,7 +30,7 @@ const login = () => {
           />
         </section>
 
-        <button className='items-center w-full px-3 py-2 text-white bg-gray-800 border border-gray-800 rounded-md duration-400 hover:bg-white hover:text-gray-800 focus:outline-none'>
+        <button className='items-center w-full px-3 py-2 text-white duration-300 bg-gray-800 border border-gray-800 rounded-md hover:bg-white hover:text-gray-800 focus:outline-none'>
           Login
         </button>
       </form>

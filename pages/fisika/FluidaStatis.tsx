@@ -6,7 +6,7 @@ import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
 import { FluidaStatisVar } from 'lib/VariabelFisika';
 import { FluidaStatisRumus } from 'lib/RumusFisika';
-import { NavList } from '@/components/List';
+import { NavListFisika } from '@/components/List';
 import List from '@/components/List';
 
 import {
@@ -27,14 +27,14 @@ import {
 export default function FluidaStatis() {
   return (
     <LayoutMateri browserTitle='Fluida Statis' description='Materi Fluida Statis'>
-      <List branch='fisika' to='FluidaStatis' title='Fluida Statis'>
-        <NavList title='Pengenalan' href='Pengenalan' />
-        <NavList title='Konstanta' href='Konstanta' />
-        <NavList title='Variabel' href='Variabel' />
-        <NavList title='Rumus' href='Rumus' />
-        <NavList title='Penurunan Rumus' href='PenurunanRumus' />
-        <NavList title='Pembahasan' href='Pembahasan' />
-        <NavList title='Contoh Soal' href='ContohSoal' />
+      <List close='text-orange-400' branch='fisika' to='FluidaStatis' title='Fluida Statis'>
+        <NavListFisika title='Pengenalan' href='Pengenalan' />
+        <NavListFisika title='Konstanta' href='Konstanta' />
+        <NavListFisika title='Variabel' href='Variabel' />
+        <NavListFisika title='Rumus' href='Rumus' />
+        <NavListFisika title='Penurunan Rumus' href='PenurunanRumus' />
+        <NavListFisika title='Pembahasan' href='Pembahasan' />
+        <NavListFisika title='Contoh Soal' href='ContohSoal' />
       </List>
       
       <Gambar

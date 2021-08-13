@@ -7,7 +7,7 @@ export default function Support() {
       </header>
       <div className='grid grid-cols-1 gap-5 sm:grid-cols-3'>
         {/* Saweria */}
-        <div className='flex justify-center p-2 bg-[#faae2b] rounded-lg  shadow-md hover:shadow-lg hover:-translate-y-1 duration-300'>
+        <div className='flex justify-center p-2 bg-[#faae2b] rounded-lg  shadow-md hover:shadow-lg h-14 items-center hover:-translate-y-1 duration-300'>
           <a
             href='https://www.saweria.co/harislab'
             target='_blank'
@@ -17,7 +17,7 @@ export default function Support() {
           </a>
         </div>
         {/* Trakteer */}
-        <div className='flex justify-center px-2 py-4 duration-300 bg-red-600 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1'>
+        <div className='flex items-center justify-center px-2 py-4 duration-300 bg-red-600 rounded-lg shadow-md h-14 hover:shadow-lg hover:-translate-y-1'>
           <a
             href='https://trakteer.id/harits-syah/tip'
             target='_blank'
@@ -27,7 +27,7 @@ export default function Support() {
           </a>
         </div>
         {/* Nih Buat Jajan */}
-        <div className='flex justify-center p-2 duration-300 bg-yellow-400 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-1'>
+        <div className='flex items-center justify-center p-2 duration-300 bg-yellow-400 rounded-lg shadow-md h-14 hover:shadow-lg hover:-translate-y-1'>
           <a href='https://www.nihbuatjajan.com/harislab' target='_blank'>
             <NBJ />
           </a>

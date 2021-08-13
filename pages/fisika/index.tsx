@@ -1,4 +1,4 @@
-import ChapterBox from '@/components/ChapterBox';
+import { ChapterBoxFisika } from '@/components/ChapterBox';
 import Layout from '@/components/Layout';
 import Title from '@/components/Title';
 import Link from 'next/link';
@@ -14,54 +14,32 @@ const fisika = () => {
       </div>
 
       <Link href='/fisika/glosarium'>
-        <a className='flex items-center justify-between w-full px-2.5 py-2.5 mb-3 duration-200 bg-white rounded-md shadow hover:shadow-md sm:px-3'>
+        <a className='flex items-center justify-center p-2 my-5 text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 '>
           <div className='flex items-center space-x-2 sm:justify-between sm:space-x-1'>
             <Collection />
-            <p>Glosarium Fisika</p>
-          </div>
-          <div className='sm:hidden'>
-            <RightArrow color=' ' />
+            <p>Glosarium</p>
           </div>
         </a>
       </Link>
-
-      <div className='px-2.5 py-2.5 bg-white border-b shadow hover:shadow-md rounded-t-md sm:px-3'>
-        <div className='flex items-center space-x-2 sm:space-x-1'>
-          <svg
-            className='w-6 h-6 text-gray-700'
-            viewBox='0 0 24 24'
-            width='24'
-            height='24'
-            stroke='currentColor'
-            strokeWidth='1.5'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            fill='#E4E4E7'
-          >
-            <path d='M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z' />
-          </svg>
-          <p>Bab Fisika</p>
-        </div>
-      </div>
-      <section className='grid grid-cols-1 bg-white shadow hover:shadow-md divide-y divide-gray-300 rounded-b-md sm:px-1.5 sm:py-2 sm:grid-cols-2 md:grid-cols-3 sm:divide-y-0'>
-        <ChapterBox title='Fluida Statis' to='fisika/FluidaStatis' />
-        <ChapterBox title='Fluida Dinamis' to='fisika/FluidaDinamis' />
-        <ChapterBox title='Listrik Statis' to='fisika/ListrikStatis' />
-        <ChapterBox title='Listrik Dinamis' to='fisika/ListrikDinamis' />
-        <ChapterBox title='Gelombang Mekanik' to='fisika/GelombangMekanik' />
-        <ChapterBox title='Gelombang Bunyi' to='fisika/GelombangBunyi' />
-        <ChapterBox title='Gelombang Elektromagnetik' to='fisika/GelombangElektromagnetik' />
-        <ChapterBox title='Kinematika' to='fisika/Kinematika' />
-        <ChapterBox title='Dinamika' to='fisika/Dinamika' />
-        <ChapterBox title='Kesetimbangan' to='fisika/Kesetimbangan' />
-        <ChapterBox title='Termodinamika' to='fisika/Termodinamika' />
-        <ChapterBox title='Besaran dan Pengukuran' to='fisika/BesaranDanSatuan' />
-        <ChapterBox title='Radiasi Benda Hitam' to='fisika/RadiasiBendaHitam' />
-        <ChapterBox title='Relativitas Khusus' to='fisika/RelativitasKhusus' />
-        <ChapterBox title='Kuantum' to='fisika/Kuantum' />
-        <ChapterBox title='Inti' to='fisika/Inti' />
-        <ChapterBox title='Magnet' to='fisika/Magnet' />
-        <ChapterBox title='Optik' to='fisika/Optik' />
+      <section className='grid grid-cols-1 gap-3 sm:grid-cols-3'>
+        <ChapterBoxFisika title='Fluida Statis' to='fisika/FluidaStatis' />
+        <ChapterBoxFisika title='Fluida Dinamis' to='fisika/FluidaDinamis' />
+        <ChapterBoxFisika title='Listrik Statis' to='fisika/ListrikStatis' />
+        <ChapterBoxFisika title='Listrik Dinamis' to='fisika/ListrikDinamis' />
+        <ChapterBoxFisika title='Gelombang Mekanik' to='fisika/GelombangMekanik' />
+        <ChapterBoxFisika title='Gelombang Bunyi' to='fisika/GelombangBunyi' />
+        <ChapterBoxFisika title='Gelombang Elektromagnetik' to='fisika/GelombangElektromagnetik' />
+        <ChapterBoxFisika title='Kinematika' to='fisika/Kinematika' />
+        <ChapterBoxFisika title='Dinamika' to='fisika/Dinamika' />
+        <ChapterBoxFisika title='Kesetimbangan' to='fisika/Kesetimbangan' />
+        <ChapterBoxFisika title='Termodinamika' to='fisika/Termodinamika' />
+        <ChapterBoxFisika title='Besaran dan Pengukuran' to='fisika/BesaranDanSatuan' />
+        <ChapterBoxFisika title='Radiasi Benda Hitam' to='fisika/RadiasiBendaHitam' />
+        <ChapterBoxFisika title='Relativitas Khusus' to='fisika/RelativitasKhusus' />
+        <ChapterBoxFisika title='Kuantum' to='fisika/Kuantum' />
+        <ChapterBoxFisika title='Inti' to='fisika/Inti' />
+        <ChapterBoxFisika title='Magnet' to='fisika/Magnet' />
+        <ChapterBoxFisika title='Optik' to='fisika/Optik' />
       </section>
     </Layout>
   );
@@ -72,7 +50,7 @@ const Collection = () => {
     <svg
       xmlns='http://www.w3.org/2000/svg'
       className='w-6 h-6 text-gray-700'
-      fill='#E4E4E7'
+      fill='#D4D4D4'
       viewBox='0 0 24 24'
       stroke='currentColor'
     >

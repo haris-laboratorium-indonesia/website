@@ -37,9 +37,9 @@ export default function kartu() {
 
 const Card = ({ title, src, subTitle }) => {
   return (
-    <div className='flex flex-col items-center justify-between w-full px-4 pt-4 pb-4 mx-auto text-gray-800 duration-300 ease-in-out bg-white shadow-lg sm:pt-8 hover:drop-shadow rounded-2xl hover:scale-101 hover:-translate-y-1 hover:shadow-xl'>
+    <div className='flex flex-col items-center justify-between w-full px-4 pt-4 pb-4 mx-auto text-gray-800 duration-200 bg-gray-100 shadow-lg hover:shadow-none hover:bg-gray-300 sm:pt-8 hover:drop-shadow rounded-xl hover:translate-y-1 '>
       <div className='flex items-center justify-center p-0.5 rounded-full bg-gradient-to-b from-gray-300 to-gray-500'>
-        <div className='flex items-center justify-center p-0.5 bg-white rounded-full'>
+        <div className='flex items-center justify-center p-0.5  rounded-full'>
           <Image
             src={src}
             alt={title}

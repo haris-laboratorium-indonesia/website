@@ -61,11 +61,26 @@ export const LeftArrow = ({ color }) => {
         strokeLinecap='round'
         strokeLinejoin='round'
         strokeWidth={1.5}
-        d='M10 19l-7-7m0 0l7-7m-7 7h18'
+        d='M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z'
       />
     </svg>
   );
 };
+
+<svg
+  xmlns='http://www.w3.org/2000/svg'
+  className='w-6 h-6'
+  fill='none'
+  viewBox='0 0 24 24'
+  stroke='currentColor'
+>
+  <path
+    strokeLinecap='round'
+    strokeLinejoin='round'
+    strokeWidth={2}
+    d='M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z'
+  />
+</svg>;
 
 {
   /* <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -87,10 +102,10 @@ export const RightArrow = ({ color }) => {
   );
 };
 
-export const Folder = () => {
+export const Folder = ({ outline, fill }) => {
   return (
     <svg
-      className='w-6 h-6 text-blue-400'
+      className={`w-6 h-6 ${outline}`}
       viewBox='0 0 24 24'
       width='24'
       height='24'
@@ -98,7 +113,7 @@ export const Folder = () => {
       strokeWidth='1.5'
       strokeLinecap='round'
       strokeLinejoin='round'
-      fill='#60A5FA'
+      fill={fill}
     >
       <path d='M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z' />
     </svg>
@@ -287,20 +302,6 @@ export const Masuk = ({ color }) => {
   );
 };
 
-export const SearchIcon = ({ color }) => {
-  return (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      className='w-6 h-6 text-gray-300'
-      fill='none'
-      viewBox='0 0 24 24'
-      stroke='currentColor'
-    >
-      <path strokeWidth={1.5} d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' />
-    </svg>
-  );
-};
-
 export const X = ({ color }) => {
   return (
     <svg
@@ -310,12 +311,7 @@ export const X = ({ color }) => {
       viewBox='0 0 24 24'
       stroke='currentColor'
     >
-      <path
-        strokeLinecap='round'
-        strokeLinejoin='round'
-        strokeWidth={1.5}
-        d='M6 18L18 6M6 6l12 12'
-      />
+      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='1' d='M6 18L18 6M6 6l12 12' />
     </svg>
   );
 };

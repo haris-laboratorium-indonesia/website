@@ -1,27 +1,17 @@
 import Layout from '@/components/Layout';
 import Title from '@/components/Title';
-import Rafi from '../../public/Trainer/Rafi.jpg';
+import Rafi from '../../public/Trainer/Rafi.jpeg';
 import Harits from '../../public/Trainer/Harits.jpg';
 import Image from 'next/image';
 import { Disclosure } from '@headlessui/react';
 import { HiOutlineChevronDown, HiChevronRight } from 'react-icons/hi';
+import Link from 'next/link';
 
 const bimbel = () => {
   return (
     <Layout browserTitle='Bimbel' description='Booking Les tidak pernah semudah ini'>
       <Title name='Bimbel' />
       <div className='mb-5 -mt-5 text-center'>Pesan les privat ke rumah.</div>
-
-      {/* Calender */}
-      {/* <div className='grid grid-cols-7 gap-2 p-2 bg-gray-200 border border-gray-300 rounded sm:hidden'>
-        <div className='px-2 py-2 text-center border border-gray-400 rounded '>senin</div>
-        <div className='px-2 py-2 text-center border border-gray-400 rounded '>senin</div>
-        <div className='px-2 py-2 text-center border border-gray-400 rounded '>senin</div>
-        <div className='px-2 py-2 text-center border border-gray-400 rounded '>senin</div>
-        <div className='px-2 py-2 text-center border border-gray-400 rounded '>senin</div>
-        <div className='px-2 py-2 text-center border border-gray-400 rounded '>senin</div>
-        <div className='px-2 py-2 text-center border border-gray-400 rounded '>senin</div>
-      </div> */}
 
       {/* Memesan pelajaran */}
       <div className='w-full p-4 mx-auto mt-5 mb-10 bg-white rounded-md shadow hover:shadow-md sm:w-1/3'>
@@ -85,7 +75,7 @@ const bimbel = () => {
           <Image src={Rafi} width={30} height={30} priority className='rounded-full' />
           <div>Rafi Amrulah</div>
         </div> */}
-        <Opener name='Rafi Amrulah' img={Rafi}>
+        <Opener name='Rafi Amrulah' to='/bimbel/trainer/rafi-amrulah' img={Rafi}>
           <div className='flex flex-col p-1 space-y-1'>
             <DaftarIsi point='Nama' desc='Rafi Amrulah Putra' />
             <DaftarIsi point='Usia' desc='15 Tahun' />{' '}
@@ -96,11 +86,8 @@ const bimbel = () => {
             <DaftarIsi point='Wilayah pelatihan' desc='Tangerang Selatan' />
             <DaftarIsi point='Bahasa' desc='Indonesia, Inggris, Jawa' />
           </div>
-          <div className='flex flex-row items-center p-1 mt-2 space-x-2 cursor-pointer text-harislab hover:underline'>
-            Profil lebih lanjut <HiChevronRight />
-          </div>
         </Opener>
-        <Opener name='Harits Syah' img={Harits}>
+        <Opener name='Harits Syah' to='/bimbel/trainer/harits-syah' img={Harits}>
           <div className='flex flex-col p-1 space-y-1'>
             <DaftarIsi point='Nama' desc='Harits Syah Rahmatullah' />
             <DaftarIsi point='Usia' desc='22 Tahun' />
@@ -111,9 +98,6 @@ const bimbel = () => {
             <DaftarIsi point='Wilayah pelatihan' desc='Tangerang Selatan' />
             <DaftarIsi point='Bahasa' desc='Indonesia, Inggris' />
           </div>
-          <div className='flex flex-row items-center p-1 mt-2 space-x-2 cursor-pointer text-harislab hover:underline'>
-            Profil lebih lanjut <HiChevronRight />
-          </div>
         </Opener>
       </div>
     </Layout>
@@ -122,7 +106,7 @@ const bimbel = () => {
 
 export default bimbel;
 
-const Opener = ({ name, img, children }) => {
+const Opener = ({ name, img, children, to }) => {
   return (
     <Disclosure
       as='div'
@@ -132,7 +116,9 @@ const Opener = ({ name, img, children }) => {
         <>
           <Disclosure.Button
             as='div'
-            className='flex items-center justify-between w-full px-3 py-2 rounded-md cursor-pointer focus:outline-none hover:bg-indigo-50'
+            className={`${
+              open ? 'rounded-t-md rounded-b-none' : 'rounded-md'
+            }  flex items-center justify-between w-full px-3 py-2  cursor-pointer focus:outline-none hover:bg-indigo-50`}
           >
             <div className='flex items-center justify-between space-x-2'>
               <Image src={img} width={30} height={30} priority className='rounded-full' />
@@ -143,6 +129,11 @@ const Opener = ({ name, img, children }) => {
           </Disclosure.Button>
           <Disclosure.Panel className='p-3 overflow-x-auto text-gray-700 bg-white border-t border-gray-300 rounded-b-md '>
             {children}
+            <Link href={`${to}`}>
+              <a className='flex flex-row items-center p-1 mt-2 space-x-2 cursor-pointer text-harislab hover:underline'>
+                Profil lebih lanjut <HiChevronRight />
+              </a>
+            </Link>
           </Disclosure.Panel>
         </>
       )}

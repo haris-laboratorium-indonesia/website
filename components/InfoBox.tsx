@@ -1,4 +1,6 @@
-const InfoBox = ({ svg, name, description, color, borderColor }) => {
+import Link from 'next/link';
+
+const InfoBox = ({ svg, name, description, color, borderColor, to }) => {
   return (
     <div>
       {/* Icon */}
@@ -20,6 +22,10 @@ const InfoBox = ({ svg, name, description, color, borderColor }) => {
       </div>
       {/* description */}
       <div className='pl-3 text-gray-700'>{description}</div>
+      {/* Read more */}
+      <Link href={to}>
+        <a className='pl-3 text-blue-500 hover:text-harislab hover:underline'>Baca lebih lanjut</a>
+      </Link>
     </div>
   );
 };

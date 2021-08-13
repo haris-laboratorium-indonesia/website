@@ -1,6 +1,6 @@
 import Link from 'next/link';
 const Footer = () => {
-  const a = 'block text-gray-400 hover:text-white font-inter py-2';
+  const a = 'block text-gray-400 hover:text-white font-inter py-2 sm:py-1';
   return (
     <footer className='bottom-0 w-full mt-20 text-center bg-gray-800'>
       {/* Footer Navigasi */}
@@ -39,7 +39,7 @@ const Footer = () => {
               </a>
             </Link>
           </div>
-          <div>PT. Haris Laboratorium Indonesia</div>
+          <div>PT. Haris Laboratory</div>
           <div>Jl. Dr.Setiabudi Gg. Kebon Manggis 5 no. 56</div>
           <div>Tangerang Selatan, Banten 15226, Indonesia</div>
           <div>harislabindonesia@gmail.com</div>

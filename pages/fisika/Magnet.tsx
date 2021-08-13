@@ -6,7 +6,7 @@ import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
 import { MagnetVar } from 'lib/VariabelFisika';
 import { MagnetRumus } from 'lib/RumusFisika';
-import { NavList } from '@/components/List';
+import { NavListFisika } from '@/components/List';
 import List from '@/components/List';
 
 import {
@@ -27,14 +27,14 @@ import {
 export default function Magnet() {
   return (
     <LayoutMateri browserTitle='Magnet' description='Materi Magnet'>
-      <List branch='fisika' to='Magnet' title='Magnet'>
-        <NavList title='Pengenalan' href='Pengenalan' />
-        <NavList title='Konstanta' href='Konstanta' />
-        <NavList title='Variabel' href='Variabel' />
-        <NavList title='Rumus' href='Rumus' />
-        <NavList title='Penurunan Rumus' href='PenurunanRumus' />
-        <NavList title='Pembahasan' href='Pembahasan' />
-        <NavList title='Contoh Soal' href='ContohSoal' />
+      <List close='text-orange-400' branch='fisika' to='Magnet' title='Magnet'>
+        <NavListFisika title='Pengenalan' href='Pengenalan' />
+        <NavListFisika title='Konstanta' href='Konstanta' />
+        <NavListFisika title='Variabel' href='Variabel' />
+        <NavListFisika title='Rumus' href='Rumus' />
+        <NavListFisika title='Penurunan Rumus' href='PenurunanRumus' />
+        <NavListFisika title='Pembahasan' href='Pembahasan' />
+        <NavListFisika title='Contoh Soal' href='ContohSoal' />
       </List>
       
       <Gambar

@@ -3,13 +3,13 @@ export const TurunanPenurunanRumus = [
     nama: '\\sin x - cara 1',
     rumus: [
       {
-        step: '\\dfrac{d\\sin x}{dx} = \\lim\\limits_{\\Delta x \to 0} \\dfrac{sin(x+\\Delta x)-\\sin x}{\\Delta x}',
+        step: '\\dfrac{d\\sin x}{dx} = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{sin(x+\\Delta x)-\\sin x}{\\Delta x}',
       },
       {
-        step: '\\dfrac{d\\sin x}{dx} = \\lim\\limits_{\\Delta x \to 0} \\dfrac{\\sin x \\cos x \\Delta x + \\cos x \\sin \\Delta x - \\sin x}{\\Delta x}',
+        step: '\\dfrac{d\\sin x}{dx} = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{\\sin x \\cos x \\Delta x + \\cos x \\sin \\Delta x - \\sin x}{\\Delta x}',
       },
       {
-        step: '\\dfrac{d\\sin x}{dx} = \\lim\\limits_{\\Delta x \to 0} \\sin x\\dfrac{\\cos \\Delta x - 1}{\\Delta x} + \\lim\\limits_{\\Delta x \to 0} \\cos x \\dfrac{\\sin\\Delta x}{\\Delta x}',
+        step: '\\dfrac{d\\sin x}{dx} = \\lim\\limits_{\\Delta x \\to 0} \\sin x\\dfrac{\\cos \\Delta x - 1}{\\Delta x} + \\lim\\limits_{\\Delta x \\to 0} \\cos x \\dfrac{\\sin\\Delta x}{\\Delta x}',
       },
       { step: '\\dfrac{d\\sin x}{dx} = \\sin x (0)  +  \\cos x(1) ' },
       { step: '\\dfrac{d\\sin x}{dx} = \\cos x' },

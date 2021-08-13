@@ -13,7 +13,7 @@ const PenurunanRumus = ({ title, children }) => {
         <>
           <Disclosure.Button
             as='div'
-            className={`flex items-center justify-between w-full px-4 py-2 cursor-pointer rounded-t-md focus:outline-none shadow hover:shadow-md hover:bg-pink-100`}
+            className={`flex items-center justify-between w-full px-4 py-2 cursor-pointer rounded-t-md focus:outline-none shadow hover:shadow-md hover:bg-emerald-200`}
           >
             <TeX className='text-gray-800 '>{title}</TeX>
 

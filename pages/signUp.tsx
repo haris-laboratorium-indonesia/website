@@ -3,7 +3,7 @@ import Layout from '@/components/Layout';
 const signup = () => {
   return (
     <Layout browserTitle='Login' description='Halaman SignUp'>
-      <form className='w-full p-5 mx-auto mt-16 space-y-4 bg-white rounded-lg shadow-md hover:shadow-lg sm:w-2/5'>
+      <form className='w-full p-5 mx-auto mt-16 space-y-4 bg-white rounded-lg shadow-md sm:w-2/5'>
         <h1 className='text-2xl font-semibold text-center text-gray-800'>Daftar</h1>
         <section className='flex flex-col'>
           <label className='text-sm' htmlFor='nama'>
@@ -39,7 +39,7 @@ const signup = () => {
           </a>{' '}
           kami.
         </div>
-        <button className='items-center w-full px-3 py-2 space-x-5 text-white bg-gray-800 border border-gray-800 rounded-md duration-400 hover:bg-white hover:text-gray-800 focus:outline-none'>
+        <button className='items-center w-full px-3 py-2 space-x-5 text-white duration-300 bg-gray-800 border border-gray-800 rounded-md hover:bg-white hover:text-gray-800 focus:outline-none'>
           Daftar
         </button>
       </form>

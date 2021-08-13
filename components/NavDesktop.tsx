@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import { HiOutlineSearch } from 'react-icons/hi';
 const NavDesktop = () => {
   const nav = 'p-2 duration-200 hover:text-white text-gray-300 text-tiny block font-inter';
   return (
@@ -8,7 +8,7 @@ const NavDesktop = () => {
         <Link href='/'>
           <a className='items-center block text-lg font-semibold text-gray-200 hover:text-white font-mw'>
             <span className='font-bold '>Haris</span>
-            <span className='font-light'>Lab</span>
+            <span className='font-light text-gray-400'>Lab</span>
           </a>
         </Link>
 
@@ -27,16 +27,19 @@ const NavDesktop = () => {
         <Link href='/bimbel'>
           <a className={nav}>Bimbel</a>
         </Link>
-        <Link href='/pricing'>
-          <a className={nav}>Pricing</a>
+        <Link href='/biaya'>
+          <a className={nav}>Biaya</a>
         </Link>
         <Link href='/#support'>
           <a className={nav}>Support</a>
         </Link>
+        <div>
+          <HiOutlineSearch className='w-5 h-5 text-gray-300 hover:text-white' />
+        </div>
 
         <Link href='/login'>
           <a>
-            <div className='px-3 pb-1 text-sm text-white duration-200 rounded-md pt-0.5 bg-harislab hover:bg-opacity-70'>
+            <div className='px-3 pb-1 text-sm text-white duration-200 rounded-md pt-0.5 border-gray-300 border hover:bg-gray-100 hover:text-gray-800'>
               Login
             </div>
           </a>

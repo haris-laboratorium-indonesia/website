@@ -2,7 +2,7 @@ import Nature from '../../public/nature.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { NavList } from '@/components/List';
+import { NavListMatematika } from '@/components/List';
 import List from '@/components/List';
 import {
   AA1,
@@ -21,20 +21,15 @@ import {
 export default function Dimensi3() {
   return (
     <LayoutMateri browserTitle='Dimensi 3' description='Materi Dimensi 3'>
-      <List branch='matematika' to='Dimensi3' title='Dimensi 3'>
-        <NavList title='Pengenalan' href='Pengenalan' />
-        <NavList title='Konstanta' href='Konstanta' />
-        <NavList title='Variabel' href='Variabel' />
-        <NavList title='Rumus' href='Rumus' />
-        <NavList title='Penurunan Rumus' href='PenurunanRumus' />
-        <NavList title='Pembahasan' href='Pembahasan' />
-        <NavList title='Contoh Soal' href='ContohSoal' />
+      <List close='text-green-500' branch='matematika' to='Dimensi3' title='Dimensi 3'>
+        <NavListMatematika title='Pengenalan' href='Pengenalan' />
+        <NavListMatematika title='Konstanta' href='Konstanta' />
+        <NavListMatematika title='Variabel' href='Variabel' />
+        <NavListMatematika title='Rumus' href='Rumus' />
+        <NavListMatematika title='Penurunan Rumus' href='PenurunanRumus' />
+        <NavListMatematika title='Pembahasan' href='Pembahasan' />
+        <NavListMatematika title='Contoh Soal' href='ContohSoal' />
       </List>
-      <Gambar
-        src={Nature}
-        alt='Dimensi 3'
-        caption='Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termodinamika ke-0 dirumuskan.'
-      ></Gambar>
 
       <AA1 id='Pengenalan' title='Pengenalan' />
       <A2 title='Apa itu Dimensi 3' />

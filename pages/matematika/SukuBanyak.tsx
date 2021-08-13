@@ -4,7 +4,7 @@ import Nature from '../../public/nature.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { NavList } from '@/components/List';
+import { NavListMatematika } from '@/components/List';
 import List from '@/components/List';
 import {
   AA1,
@@ -23,20 +23,15 @@ import {
 export default function SukuBanyak() {
   return (
     <LayoutMateri browserTitle='Suku Banyak' description='Materi Suku Banyak'>
-      <List branch='matematika' to='SukuBanyak' title='Suku Banyak'>
-        <NavList title='Pengenalan' href='Pengenalan' />
-        <NavList title='Konstanta' href='Konstanta' />
-        <NavList title='Variabel' href='Variabel' />
-        <NavList title='Rumus' href='Rumus' />
-        <NavList title='Penurunan Rumus' href='PenurunanRumus' />
-        <NavList title='Pembahasan' href='Pembahasan' />
-        <NavList title='Contoh Soal' href='ContohSoal' />
+      <List close='text-green-500' branch='matematika' to='SukuBanyak' title='Suku Banyak'>
+        <NavListMatematika title='Pengenalan' href='Pengenalan' />
+        <NavListMatematika title='Konstanta' href='Konstanta' />
+        <NavListMatematika title='Variabel' href='Variabel' />
+        <NavListMatematika title='Rumus' href='Rumus' />
+        <NavListMatematika title='Penurunan Rumus' href='PenurunanRumus' />
+        <NavListMatematika title='Pembahasan' href='Pembahasan' />
+        <NavListMatematika title='Contoh Soal' href='ContohSoal' />
       </List>
-      <Gambar
-        src={Nature}
-        alt='Suku Banyak'
-        caption='Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termodinamika ke-0 dirumuskan.'
-      ></Gambar>
 
       <AA1 id='Pengenalan' title='Pengenalan' />
       <A2 title='Apa itu Suku Banyak' />
