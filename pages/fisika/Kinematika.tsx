@@ -4,8 +4,8 @@ import KinematikaImage from '../../public/Fisika/KinematikaImage.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { KinematikaVar } from 'lib/VariabelFisika';
-import { KinematikaRumus } from 'lib/RumusFisika';
+import { KinematikaVar } from 'data/VariabelFisika';
+import { KinematikaRumus } from 'data/RumusFisika';
 import { NavListFisika } from '@/components/List';
 import List from '@/components/List';
 

@@ -4,6 +4,48 @@ import { Menu } from '@headlessui/react';
 export const a = 'block text-gray-200 hover:bg-harislab hover:text-white rounded px-2 py-1';
 export const b = '';
 
+export default function List({ branch, to, title, children, close }) {
+  return (
+    <div className='sticky z-40 -mx-3 top-14'>
+      <Menu as='div' className='flex flex-col w-full mt-2 mb-5 sm:mt-1 sm:mb-2 sm:mx-auto'>
+        {({ open }) => (
+          <>
+            <section className='flex items-center justify-between w-full mx-auto bg-gray-700 rounded-lg '>
+              <Link href={`/${branch}`}>
+                <a className='z-50 block p-2 text-sm rounded-lg '>
+                  <Collection color='text-white hover:text-gray-300' />
+                </a>
+              </Link>
+
+              <Link href={`/${branch}/${to}`}>
+                <a className='block w-2/3 py-2 text-center text-white text-tiny hover:text-gray-300'>
+                  {title}{' '}
+                </a>
+              </Link>
+
+              <Menu.Button className='focus:outline-none'>
+                <div className='p-2 rounded-lg '>
+                  {open ? (
+                    <X color={close} />
+                  ) : (
+                    <HamburgerMenu color='hover:text-gray-300 text-white' />
+                  )}
+                </div>
+              </Menu.Button>
+            </section>
+
+            <Menu.Items className='flex w-full sm:justify-end'>
+              <div className='w-full p-2 mt-2 overflow-y-auto bg-gray-700 rounded-lg shadow-lg max-h-96 sm:w-1/2'>
+                {children}
+              </div>
+            </Menu.Items>
+          </>
+        )}
+      </Menu>
+    </div>
+  );
+}
+
 export function NavListMatematika({ title, href }) {
   return (
     <Menu.Item>
@@ -27,48 +69,6 @@ export function NavListFisika({ title, href }) {
         {title}
       </a>
     </Menu.Item>
-  );
-}
-
-export default function List({ branch, to, title, children, close }) {
-  return (
-    <div className='sticky z-40 -mx-3 top-14'>
-      <Menu as='div' className='flex flex-col w-full mt-2 mb-5 sm:mt-1 sm:mb-2 sm:mx-auto'>
-        {({ open }) => (
-          <>
-            <div className='flex items-center justify-between w-full px-2 py-0.5  mx-auto bg-gray-700 rounded-lg '>
-              <Link href={`/${branch}`}>
-                <a className='z-50 block p-1 text-sm rounded-lg '>
-                  <LeftArrow color='text-white hover:text-gray-300' />
-                </a>
-              </Link>
-
-              <Link href={`/${branch}/${to}`}>
-                <a className='block w-2/3 py-2 text-center text-white text-tiny hover:text-gray-300'>
-                  {title}{' '}
-                </a>
-              </Link>
-
-              <Menu.Button className='focus:outline-none'>
-                <div className='p-1 rounded-lg '>
-                  {open ? (
-                    <X color={close} />
-                  ) : (
-                    <HamburgerMenu color='hover:text-gray-300 text-white' />
-                  )}
-                </div>
-              </Menu.Button>
-            </div>
-
-            <Menu.Items className='flex w-full sm:justify-end'>
-              <div className='w-full p-2 mt-2 overflow-y-auto bg-gray-700 rounded-lg shadow-lg max-h-96 sm:w-1/2'>
-                {children}
-              </div>
-            </Menu.Items>
-          </>
-        )}
-      </Menu>
-    </div>
   );
 }
 
@@ -102,7 +102,7 @@ const HamburgerMenu = ({ color }) => {
   />
 </svg>;
 
-const LeftArrow = ({ color }) => {
+const Collection = ({ color }) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'

@@ -4,8 +4,8 @@ import RelativitasKhususImage from '../../public/Fisika/RelativitasKhususImage.j
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { RelativitasKhususVar } from 'lib/VariabelFisika';
-import { RelativitasKhususRumus } from 'lib/RumusFisika';
+import { RelativitasKhususVar } from 'data/VariabelFisika';
+import { RelativitasKhususRumus } from 'data/RumusFisika';
 import { NavListFisika } from '@/components/List';
 import List from '@/components/List';
 import {

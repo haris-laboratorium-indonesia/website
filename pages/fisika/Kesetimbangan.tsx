@@ -5,7 +5,7 @@ import KesetimbanganImage from '../../public/Fisika/KesetimbanganImage.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { KesetimbanganRumus } from 'lib/RumusFisika';
+import { KesetimbanganRumus } from 'data/RumusFisika';
 import { NavListFisika } from '@/components/List';
 import List from '@/components/List';
 import {

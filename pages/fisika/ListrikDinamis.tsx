@@ -4,8 +4,8 @@ import ListrikDinamisImage from '../../public/Fisika/ListrikDinamisImage.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { ListrikDinamisVar } from 'lib/VariabelFisika';
-import { ListrikDinamisRumus } from 'lib/RumusFisika';
+import { ListrikDinamisVar } from 'data/VariabelFisika';
+import { ListrikDinamisRumus } from 'data/RumusFisika';
 import { NavListFisika } from '@/components/List';
 import List from '@/components/List';
 import {

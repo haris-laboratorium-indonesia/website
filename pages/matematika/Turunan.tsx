@@ -5,7 +5,7 @@ import ExampleMain from '@/components/ExampleMain';
 import PenurunanRumus from '@/components/PenurunanRumus';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { TurunanPenurunanRumus } from 'lib/PenurunanRumusMatematika';
+import { TurunanPenurunanRumus } from 'data/PenurunanRumusMatematika';
 import { NavListMatematika } from '@/components/List';
 import List from '@/components/List';
 import {
@@ -52,15 +52,14 @@ export default function Turunan() {
       <AA1 id='PenurunanRumus' title='Penurunan Rumus' />
       <div className='grid grid-cols-1'>
         {TurunanPenurunanRumus.map(a => (
-          <article className='mb-3 overflow-x-auto rounded-md shadow hover:shadow-md' key={a.nama}>
-            <PenurunanRumus title={a.nama}>
-              {typeof a.rumus === 'string' ? (
-                <KaTeX>{String.raw`${a.rumus}`}</KaTeX>
-              ) : (
-                a.rumus.map(b => <KaTeX>{String.raw`${b.step}`}</KaTeX>)
-              )}
-            </PenurunanRumus>
-          </article>
+          // perlu di selidiki, apakah perlu ditambahkan article ini, dan key: bisa dipindah ke <PenurunanRumus>
+          <PenurunanRumus title={a.nama} key={a.nama}>
+            {typeof a.rumus === 'string' ? (
+              <KaTeX>{String.raw`${a.rumus}`}</KaTeX>
+            ) : (
+              a.rumus.map(b => <KaTeX>{String.raw`${b.step}`}</KaTeX>)
+            )}
+          </PenurunanRumus>
         ))}
       </div>
 

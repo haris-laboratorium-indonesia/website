@@ -7,7 +7,7 @@ export default function NavMobileX() {
     <Menu as='div' className=''>
       {({ open }) => (
         <>
-          <Menu.Button className='z-50 flex  py-0.5 px-1 rounded-md focus:outline-none'>
+          <Menu.Button className='z-50 flex  py-2.5 px-4 rounded-md focus:outline-none'>
             {open ? (
               <X color='text-white hover:text-gray-300' />
             ) : (
@@ -22,8 +22,6 @@ export default function NavMobileX() {
               <Pusing to='kartu' title='Kartu' />
               <Pusing to='bimbel' title='Bimbel' />
               <Pusing to='kalkulator' title='Kalkulator' />
-              <Pusing to='biaya' title='Biaya' />
-              <Pusing to='#support' title='Support' />
             </section>
             <div className='grid grid-cols-2 gap-5 '>
               <Yes to='login' title='Masuk' />
@@ -84,8 +82,11 @@ const TwoLines = ({ color }) => {
 const Search = () => {
   return (
     <section className='flex items-center rounded-lg  p-1.5  bg-gray-700 '>
-      <SearchIcon color=' ' />
+      <label htmlFor='search'>
+        <SearchIcon color=' ' />
+      </label>
       <input
+        id='search'
         type='text'
         className='w-full ml-1 text-white placeholder-gray-300 bg-gray-700 focus:outline-none focus:placeholder-white '
         placeholder='Search'

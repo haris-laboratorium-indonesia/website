@@ -3,29 +3,27 @@ import { HiOutlineChevronDown } from 'react-icons/hi';
 import 'katex/dist/katex.min.css';
 import TeX from '@matejmazur/react-katex';
 
-const PenurunanRumus = ({ title, children }) => {
+export default function PenurunanRumus({ title, children }) {
   return (
-    <Disclosure
-      as='div'
-      className='flex flex-col w-full bg-white rounded-md shadow hover:shadow-md'
-    >
+    <Disclosure as='div' className='flex flex-col w-full mb-3 bg-gray-200 rounded-md'>
       {({ open }) => (
         <>
           <Disclosure.Button
             as='div'
-            className={`flex items-center justify-between w-full px-4 py-2 cursor-pointer rounded-t-md focus:outline-none shadow hover:shadow-md hover:bg-emerald-200`}
+            className={`flex items-center justify-between w-full px-3 py-2 cursor-pointer  focus:outline-none rounded-md hover:bg-gray-300 ${
+              open ? 'rounded-t-md rounded-b-none bg-gray-300' : ''
+            } `}
           >
-            <TeX className='text-gray-800 '>{title}</TeX>
+            <TeX className='text-gray-800'>{title}</TeX>
 
             <HiOutlineChevronDown className={`${open ? 'transform rotate-180' : ''} block `} />
           </Disclosure.Button>
-          <Disclosure.Panel className='p-3 overflow-x-auto text-gray-700 bg-white border-t border-gray-300 shadow rounded-b-md hover:shadow-md'>
+
+          <Disclosure.Panel className='p-3 overflow-x-auto text-gray-700 bg-gray-200 border-t border-gray-500 rounded-b-md '>
             {children}
           </Disclosure.Panel>
         </>
       )}
     </Disclosure>
   );
-};
-
-export default PenurunanRumus;
+}

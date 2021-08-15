@@ -4,8 +4,8 @@ import ListrikStatisImage from '../../public/Fisika/ListrikStatisImage.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { ListrikStatisVar } from 'lib/VariabelFisika';
-import { ListrikStatisRumus } from 'lib/RumusFisika';
+import { ListrikStatisVar } from 'data/VariabelFisika';
+import { ListrikStatisRumus } from 'data/RumusFisika';
 import { NavListFisika } from '@/components/List';
 import List from '@/components/List';
 import {

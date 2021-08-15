@@ -4,8 +4,8 @@ import MagnetImage from '../../public/Fisika/MagnetImage.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { MagnetVar } from 'lib/VariabelFisika';
-import { MagnetRumus } from 'lib/RumusFisika';
+import { MagnetVar } from 'data/VariabelFisika';
+import { MagnetRumus } from 'data/RumusFisika';
 import { NavListFisika } from '@/components/List';
 import List from '@/components/List';
 

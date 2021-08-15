@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const InfoBox = ({ svg, name, description, color, borderColor, to }) => {
   return (
-    <div>
+    <div className='px-2 sm:px-0'>
       {/* Icon */}
       <div className='pl-3'>
         <svg

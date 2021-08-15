@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import MiniProjects from '@/components/MiniProjects';
 
 export default function NumberGame() {
   function inputKeyPress(event) {
@@ -42,20 +43,23 @@ export default function NumberGame() {
   if (state.score === 10) {
     return <div className='mx-auto text-2xl text-green-500'>You win!</div>;
   }
+
   return (
-    <div className='flex flex-col items-center justify-center max-w-xl mx-auto'>
-      <div className={state.incorrect ? 'incorrect' : ''}>
-        {state.num1}+{state.num2}
+    <MiniProjects title='Number Game'>
+      <div className='flex flex-col items-center justify-center max-w-xl mx-auto'>
+        <div className={state.incorrect ? 'incorrect' : ''}>
+          {state.num1}+{state.num2}
+        </div>
+        <input
+          className='pl-2 border border-gray-500'
+          value={state.response}
+          onChange={updateResponse}
+          onKeyPress={inputKeyPress}
+          autoFocus={true}
+          //autoFocus={true} doesn't work
+        />
+        <div>Score : {state.score}</div>
       </div>
-      <input
-        className='pl-2 border border-gray-500'
-        value={state.response}
-        onChange={updateResponse}
-        onKeyPress={inputKeyPress}
-        autoFocus={true}
-        //autoFocus={true} doesn't work
-      />
-      <div>Score : {state.score}</div>
-    </div>
+    </MiniProjects>
   );
 }

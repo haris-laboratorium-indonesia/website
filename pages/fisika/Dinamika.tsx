@@ -4,9 +4,9 @@ import DinamikaImage from '../../public/Fisika/DinamikaImage.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { DinamikaVar } from 'lib/VariabelFisika';
-import { DinamikaRumus } from 'lib/RumusFisika';
-import { DinamikaPenurunanRumus } from 'lib/PenurunanRumusFisika';
+import { DinamikaVar } from 'data/VariabelFisika';
+import { DinamikaRumus } from 'data/RumusFisika';
+import { DinamikaPenurunanRumus } from 'data/PenurunanRumusFisika';
 import { NavListFisika } from '@/components/List';
 import List from '@/components/List';
 import {

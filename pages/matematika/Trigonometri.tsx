@@ -4,7 +4,7 @@ import Nature from '../../public/nature.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { TrigonometriRumus } from 'lib/RumusMatematika';
+import { TrigonometriRumus } from 'data/RumusMatematika';
 import { NavListMatematika } from '@/components/List';
 import List from '@/components/List';
 import {

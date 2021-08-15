@@ -71,10 +71,6 @@ const bimbel = () => {
       {/* Daftar Tutor */}
       <div className='mt-10 mb-3 text-2xl font-medium'> Daftar Trainer</div>
       <div className='grid w-full grid-cols-1 gap-2 sm:w-1/2 sm:gap-3'>
-        {/* <div className='flex flex-row items-center px-4 py-2 space-x-3 bg-white rounded-md shadow-md cursor-pointer hover:shadow-lg'>
-          <Image src={Rafi} width={30} height={30} priority className='rounded-full' />
-          <div>Rafi Amrulah</div>
-        </div> */}
         <Opener name='Rafi Amrulah' to='/bimbel/trainer/rafi-amrulah' img={Rafi}>
           <div className='flex flex-col p-1 space-y-1'>
             <DaftarIsi point='Nama' desc='Rafi Amrulah Putra' />

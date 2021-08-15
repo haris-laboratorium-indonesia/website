@@ -4,8 +4,8 @@ import TermodinamikaImage from '../../public/Fisika/TermodinamikaImage.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { TermodinamikaVar } from 'lib/VariabelFisika';
-import { TermodinamikaRumus } from 'lib/RumusFisika';
+import { TermodinamikaVar } from 'data/VariabelFisika';
+import { TermodinamikaRumus } from 'data/RumusFisika';
 import { NavListFisika } from '@/components/List';
 import List from '@/components/List';
 

@@ -4,8 +4,8 @@ import GelombangMekanikImage from '../../public/Fisika/GelombangMekanikImage.jpg
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { GelombangMekanikVar } from 'lib/VariabelFisika';
-import { GelombangMekanikRumus } from 'lib/RumusFisika';
+import { GelombangMekanikVar } from 'data/VariabelFisika';
+import { GelombangMekanikRumus } from 'data/RumusFisika';
 import { NavListFisika } from '@/components/List';
 import List from '@/components/List';
 

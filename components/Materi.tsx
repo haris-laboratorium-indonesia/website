@@ -43,9 +43,9 @@ export const Gambar = ({ src, alt, caption }) => {
 export const rumusTitle = 'font-medium text-md inline-block w-full  text-pink-600';
 
 const thead = 'border-t border-gray-400';
-const th = 'w-1/5 py-2 px-4 text-left font-medium text-gray-800 bg-gray-300 ';
+const th = 'w-1/5 py-2 px-4 text-left font-medium text-gray-800 bg-gray-300 w-max';
 const tr = 'divide-x divide-gray-400 border-b border-l border-r border-gray-400';
-const td = 'text-left px-4 py-1.5 table-auto min-w-min text-gray-700';
+const td = 'text-left px-2 sm:px-4 py-0.5 table-auto w-max text-gray-700 whitespace-nowrap';
 
 export const THEAD = ({ children }) => {
   return <thead className={thead}>{children}</thead>;
@@ -73,7 +73,7 @@ export const Legenda = ({ name, rumus }) => {
   );
 };
 export const KaTeX = ({ children }) => {
-  return <TeX className='inline-block w-full py-2 text-sm text-tiny'>{children}</TeX>;
+  return <TeX className='inline-block py-2 text-sm w-max'>{children}</TeX>;
 };
 export const Anchor = ({ to, name }) => {
   return (

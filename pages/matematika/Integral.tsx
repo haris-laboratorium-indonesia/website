@@ -4,8 +4,8 @@ import ExampleMain from '@/components/ExampleMain';
 import PenurunanRumus from '@/components/PenurunanRumus';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { IntegralRumus } from 'lib/RumusMatematika';
-import { IntegralPenurunanRumus } from 'lib/PenurunanRumusMatematika';
+import { IntegralRumus } from 'data/RumusMatematika';
+import { IntegralPenurunanRumus } from 'data/PenurunanRumusMatematika';
 import { NavListMatematika } from '@/components/List';
 import List from '@/components/List';
 import {

@@ -100,7 +100,7 @@ export const TurunanPenurunanRumus = [
     ],
   },
   {
-    nama: 'sec x',
+    nama: '\\sec x',
     rumus: [
       { step: '\\dfrac{d\\sec x}{dx} = \\dfrac{d}{dx} \\Big(\\dfrac{1}{cos x} \\Big)' },
       { step: '\\dfrac{d\\sec x}{dx} = \\dfrac{(0) \\cos x - (1)(-\\ x)}{\\cos^2x}' },
@@ -117,37 +117,37 @@ export const TurunanPenurunanRumus = [
         step: '\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]  = \\lim\\limits_{\\Delta x \\to 0} \\ \\dfrac{\\dfrac{f(x+\\Delta x)}{f(g+\\Delta g)} - \\dfrac{f(x)}{g(x)}}{\\Delta x}',
       },
       {
-        step: '\\textcolor{#f3f4f6}{\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]}  = \\lim\\limits_{\\Delta x \\to 0} \\ \\dfrac{1}{\\Delta x} \\Bigg[\\dfrac{f(x+\\Delta x)g(x)-f(x)g(x+\\Delta x)}{g(x+\\Delta x)g(x)}\\Bigg]',
+        step: '\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]  = \\lim\\limits_{\\Delta x \\to 0} \\ \\dfrac{1}{\\Delta x} \\Bigg[\\dfrac{f(x+\\Delta x)g(x)-f(x)g(x+\\Delta x)}{g(x+\\Delta x)g(x)}\\Bigg]',
       },
       {
-        step: '\\textcolor{#f3f4f6}{\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]}  = \\lim\\limits_{\\Delta x \\to 0} \\ \\dfrac{1}{\\Delta x} \\Bigg[\\dfrac{f(x+\\Delta x)g(x) - f(x)g(x) + f(x)g(x) - f(x)g(x+\\Delta x)}{g(x+\\Delta x)g(x)}\\Bigg]',
+        step: '\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]  = \\lim\\limits_{\\Delta x \\to 0} \\ \\dfrac{1}{\\Delta x} \\Bigg[\\dfrac{f(x+\\Delta x)g(x) - f(x)g(x) + f(x)g(x) - f(x)g(x+\\Delta x)}{g(x+\\Delta x)g(x)}\\Bigg]',
       },
       {
-        step: '\\textcolor{#f3f4f6}{\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]}  = \\lim\\limits_{\\Delta x \\to 0} \\ \\dfrac{1}{\\Delta x} \\Bigg[\\dfrac{(f(x+\\Delta x)-f(x))g(x)+f(x)(g(x+\\Delta x)-g(x))}{g(x+\\Delta x)g(x)}\\Bigg]',
+        step: '\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]  = \\lim\\limits_{\\Delta x \\to 0} \\ \\dfrac{1}{\\Delta x} \\Bigg[\\dfrac{(f(x+\\Delta x)-f(x))g(x)+f(x)(g(x+\\Delta x)-g(x))}{g(x+\\Delta x)g(x)}\\Bigg]',
       },
       {
-        step: '\\textcolor{#f3f4f6}{\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]}  = \\lim\\limits_{\\Delta x \\to 0} \\ \\dfrac{1}{g(x+\\Delta x)g(x)} \\Bigg[\\dfrac{(f(x+\\Delta x)-f(x))g(x)+f(x)(g(x+\\Delta x)-g(x))}{\\Delta x}\\Bigg]',
+        step: '\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]  = \\lim\\limits_{\\Delta x \\to 0} \\ \\dfrac{1}{g(x+\\Delta x)g(x)} \\Bigg[\\dfrac{(f(x+\\Delta x)-f(x))g(x)+f(x)(g(x+\\Delta x)-g(x))}{\\Delta x}\\Bigg]',
       },
       {
-        step: '\\textcolor{#f3f4f6}{\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]}  = \\lim\\limits_{\\Delta x \\to 0} \\ \\dfrac{1}{g(x+\\Delta x)g(x)} \\Bigg[\\dfrac{(f(x+\\Delta x)-f(x))g(x)}{{\\Delta x}}+\\dfrac{f(x)(g(x+\\Delta x)-g(x))}{{\\Delta x}}\\Bigg]',
+        step: '\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]  = \\lim\\limits_{\\Delta x \\to 0} \\ \\dfrac{1}{g(x+\\Delta x)g(x)} \\Bigg[\\dfrac{(f(x+\\Delta x)-f(x))g(x)}{{\\Delta x}}+\\dfrac{f(x)(g(x+\\Delta x)-g(x))}{{\\Delta x}}\\Bigg]',
       },
       {
-        step: '\\textcolor{#f3f4f6}{\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]}  = \\lim\\limits_{\\Delta x \\to 0} \\ \\dfrac{1}{g(x+\\Delta x)g(x)} \\Bigg[\\dfrac{(f(x+\\Delta x)-f(x))}{{\\Delta x}}g(x)+f(x)\\dfrac{(g(x+\\Delta x)-g(x))}{{\\Delta x}}\\Bigg]',
+        step: '\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]  = \\lim\\limits_{\\Delta x \\to 0} \\ \\dfrac{1}{g(x+\\Delta x)g(x)} \\Bigg[\\dfrac{(f(x+\\Delta x)-f(x))}{{\\Delta x}}g(x)+f(x)\\dfrac{(g(x+\\Delta x)-g(x))}{{\\Delta x}}\\Bigg]',
       },
       {
-        step: '\\textcolor{#f3f4f6}{\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]}  = \\lim\\limits_{\\Delta x \\to 0} \\ \\dfrac{(f(x+\\Delta x)-f(x))}{{\\Delta x}}\\dfrac{g(x)}{g(x+\\Delta x)g(x)}+\\dfrac{f(x)}{{g(x+\\Delta x)g(x)}}\\lim\\limits_{\\Delta x \\to 0}\\dfrac{(g(x+\\Delta x)-g(x))}{{\\Delta x}}',
+        step: '\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]  = \\lim\\limits_{\\Delta x \\to 0} \\ \\dfrac{(f(x+\\Delta x)-f(x))}{{\\Delta x}}\\dfrac{g(x)}{g(x+\\Delta x)g(x)}+\\dfrac{f(x)}{{g(x+\\Delta x)g(x)}}\\lim\\limits_{\\Delta x \\to 0}\\dfrac{(g(x+\\Delta x)-g(x))}{{\\Delta x}}',
       },
       {
-        step: '\\textcolor{#f3f4f6}{\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]}  = \\dfrac{d{f(x)}}{dx}\\dfrac{g(x)}{g(x+0)g(x)}+\\dfrac{f(x)}{{g(x+0)g(x)}}\\dfrac{d{g(x)}}{dx}',
+        step: '\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]  = \\dfrac{d{f(x)}}{dx}\\dfrac{g(x)}{g(x+0)g(x)}+\\dfrac{f(x)}{{g(x+0)g(x)}}\\dfrac{d{g(x)}}{dx}',
       },
       {
-        step: '\\textcolor{#f3f4f6}{\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]}  = \\dfrac{d{f(x)}}{dx}\\dfrac{g(x)}{g(x)g(x)}+\\dfrac{f(x)}{{g(x)g(x)}}\\dfrac{d{g(x)}}{dx}',
+        step: '\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]  = \\dfrac{d{f(x)}}{dx}\\dfrac{g(x)}{g(x)g(x)}+\\dfrac{f(x)}{{g(x)g(x)}}\\dfrac{d{g(x)}}{dx}',
       },
       {
-        step: "\\textcolor{#f3f4f6}{\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]}  = \\dfrac{f'(x)g(x)+f(x)g'(x)}{g(x)g(x)} = \\dfrac{f'(x)g(x)+f(x)g'(x)}{g^2(x)} ",
+        step: "\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]  = \\dfrac{f'(x)g(x)+f(x)g'(x)}{g(x)g(x)} = \\dfrac{f'(x)g(x)+f(x)g'(x)}{g^2(x)} ",
       },
       {
-        step: "\\textcolor{#f3f4f6}{\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]}  =  \\dfrac{f'(x)g(x)+f(x)g'(x)}{g^2(x)} ",
+        step: "\\dfrac{d}{dx}\\Bigg[\\dfrac{f(x)}{g(x)}\\Bigg]  =  \\dfrac{f'(x)g(x)+f(x)g'(x)}{g^2(x)} ",
       },
     ],
   },
@@ -155,25 +155,27 @@ export const TurunanPenurunanRumus = [
     nama: 'f(x)g(x)',
     rumus: [
       {
-        step: '\\dfrac{d(f(x)g(x))}{dx} = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{f(x+\\Delta x)g(x+\\Delta x)\\ - f(x)g(x)}{\\Delta x}',
+        step: '\\dfrac{d}{dx}\\Big[f(x) \\cdot g(x)\\Big] = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{f(x+\\Delta x)g(x+\\Delta x)\\ - f(x)g(x)}{\\Delta x}',
       },
       {
-        step: '\\dfrac{d(f(x)g(x))}{dx} = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{f(x+\\Delta x)g(x+\\Delta x)\\ \\textcolor{orange}{-\\ f(x)g(x+\\Delta x)\\ +\\ f(x)g(x+\\Delta x)}\\ -\\ f(x)g(x)}{\\Delta x}',
+        step: '\\dfrac{d}{dx}\\Big[f(x) \\cdot g(x)\\Big] = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{f(x+\\Delta x)g(x+\\Delta x)\\ \\textcolor{orange}{-\\ f(x)g(x+\\Delta x)\\ +\\ f(x)g(x+\\Delta x)}\\ -\\ f(x)g(x)}{\\Delta x}',
       },
       {
-        step: '\\dfrac{d(f(x)g(x))}{dx} = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{\\big[f(x+\\Delta x)\\ -\\ f(x) \\big]\\ g(x+\\Delta x)\\ + \\big[g(x+\\Delta x)\\ -\\ g(x)\\big]f(x)}{\\Delta x}',
+        step: '\\dfrac{d}{dx}\\Big[f(x) \\cdot g(x)\\Big] = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{\\big[f(x+\\Delta x)\\ -\\ f(x) \\big]\\ g(x+\\Delta x)\\ + \\big[g(x+\\Delta x)\\ -\\ g(x)\\big]f(x)}{\\Delta x}',
       },
       {
-        step: '\\dfrac{d(f(x)g(x))}{dx} = \\lim\\limits_{\\Delta x \\to 0} \\Bigg[\\dfrac{\\big[f(x+\\Delta x)\\ -\\ f(x) \\big]}{\\Delta x}g(x+\\Delta x)+\\dfrac{\\big[g(x+\\Delta x)\\ -\\ g(x)\\big]}{\\Delta x}f(x)\\Bigg]',
+        step: '\\dfrac{d}{dx}\\Big[f(x) \\cdot g(x)\\Big] = \\lim\\limits_{\\Delta x \\to 0} \\Bigg[\\dfrac{\\big[f(x+\\Delta x)\\ -\\ f(x) \\big]}{\\Delta x}g(x+\\Delta x)+\\dfrac{\\big[g(x+\\Delta x)\\ -\\ g(x)\\big]}{\\Delta x}f(x)\\Bigg]',
       },
       {
-        step: '\\dfrac{d(f(x)g(x))}{dx} = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{\\big[f(x+\\Delta x)\\ -\\ f(x) \\big]}{\\Delta x}g(x+\\Delta x)+\\ \\lim\\limits_{\\Delta x \\to 0} \\dfrac{\\big[g(x+\\Delta x)\\ -\\ g(x)\\big]}{\\Delta x}f(x)',
+        step: '\\dfrac{d}{dx}\\Big[f(x) \\cdot g(x)\\Big] = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{\\big[f(x+\\Delta x)\\ -\\ f(x) \\big]}{\\Delta x}g(x+\\Delta x)+\\ \\lim\\limits_{\\Delta x \\to 0} \\dfrac{\\big[g(x+\\Delta x)\\ -\\ g(x)\\big]}{\\Delta x}f(x)',
       },
       {
-        step: '\\dfrac{d(f(x)g(x))}{dx} = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{\\big[f(x+\\Delta x)\\ -\\ f(x) \\big]}{\\Delta x}g(x)+\\ \\lim\\limits_{\\Delta x \\to 0} \\dfrac{\\big[g(x+\\Delta x)\\ -\\ g(x)\\big]}{\\Delta x}f(x)',
+        step: '\\dfrac{d}{dx}\\Big[f(x) \\cdot g(x)\\Big] = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{\\big[f(x+\\Delta x)\\ -\\ f(x) \\big]}{\\Delta x}g(x)+\\ \\lim\\limits_{\\Delta x \\to 0} \\dfrac{\\big[g(x+\\Delta x)\\ -\\ g(x)\\big]}{\\Delta x}f(x)',
       },
-      { step: '\\dfrac{d(f(x)g(x))}{dx} = \\dfrac{d(f(x))}{dx}g(x)+\\dfrac{d(g(x))}{dx}f(x)' },
-      { step: "\\dfrac{d(f(x)g(x))}{dx} = f'(x)\\ dx\\ g(x)+\\ g'(x)dxf(x)" },
+      {
+        step: '\\dfrac{d}{dx}\\Big[f(x) \\cdot g(x)\\Big] = \\dfrac{d(f(x))}{dx}g(x)+\\dfrac{d(g(x))}{dx}f(x)',
+      },
+      { step: "\\dfrac{d}{dx}\\Big[f(x) \\cdot g(x)\\Big] = f'(x)\\ dx\\ g(x)+\\ g'(x)dxf(x)" },
     ],
   },
 
@@ -181,25 +183,25 @@ export const TurunanPenurunanRumus = [
     nama: 'f(x) \\pm g(x)',
     rumus: [
       {
-        step: '\\dfrac{d(f(x) \\ \\pm\\ g(x))}{dx} = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{\\big[f(x+\\Delta x) \\ \\pm\\ g(x+\\Delta x) \\big] - \\big[ f(x) \\ \\pm\\ g(x) \\big]}{\\Delta x}',
+        step: '\\dfrac{d}{dx}\\Big[f(x) \\ \\pm\\ g(x)\\Big] = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{\\big[f(x+\\Delta x) \\ \\pm\\ g(x+\\Delta x) \\big] - \\big[ f(x) \\ \\pm\\ g(x) \\big]}{\\Delta x}',
       },
       {
-        step: '\\dfrac{d(f(x) \\ \\pm\\ g(x))}{dx} = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{\\big[f(x+\\Delta x) \\ \\pm\\ g(x+\\Delta x) \\big] - \\big[ f(x) \\ \\pm\\ g(x) \\big]}{\\Delta x}',
+        step: '\\dfrac{d}{dx}\\Big[f(x) \\ \\pm\\ g(x)\\Big] = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{\\big[f(x+\\Delta x) \\ \\pm\\ g(x+\\Delta x) \\big] - \\big[ f(x) \\ \\pm\\ g(x) \\big]}{\\Delta x}',
       },
       {
-        step: '\\dfrac{d(f(x) \\ \\pm\\ g(x))}{dx} = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{f(x+\\Delta x) \\ \\pm\\ g(x+\\Delta x) \\ -\\ f(x) \\ \\mp\\ g(x) }{\\Delta x}',
+        step: '\\dfrac{d}{dx}\\Big[f(x) \\ \\pm\\ g(x)\\Big] = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{f(x+\\Delta x) \\ \\pm\\ g(x+\\Delta x) \\ -\\ f(x) \\ \\mp\\ g(x) }{\\Delta x}',
       },
       {
-        step: '\\dfrac{d(f(x) \\ \\pm\\ g(x))}{dx} = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{f(x+\\Delta x) \\ -\\ f(x) \\ \\pm\\ g(x+\\Delta x) \\ \\mp\\ g(x)}{\\Delta x}',
+        step: '\\dfrac{d}{dx}\\Big[f(x) \\ \\pm\\ g(x)\\Big] = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{f(x+\\Delta x) \\ -\\ f(x) \\ \\pm\\ g(x+\\Delta x) \\ \\mp\\ g(x)}{\\Delta x}',
       },
       {
-        step: '\\dfrac{d(f(x) \\ \\pm\\ g(x))}{dx} = \\lim\\limits_{\\Delta x \\to 0} \\Big[\\dfrac{f(x+\\Delta x) \\ -\\ f(x) \\ }{\\Delta x} \\pm\\ \\dfrac{g(x+\\Delta x) \\ - \\ g(x)}{\\Delta x} \\Big]',
+        step: '\\dfrac{d}{dx}\\Big[f(x) \\ \\pm\\ g(x)\\Big] = \\lim\\limits_{\\Delta x \\to 0} \\Big[\\dfrac{f(x+\\Delta x) \\ -\\ f(x) \\ }{\\Delta x} \\pm\\ \\dfrac{g(x+\\Delta x) \\ - \\ g(x)}{\\Delta x} \\Big]',
       },
       {
-        step: '\\dfrac{d(f(x) \\ \\pm\\ g(x))}{dx} = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{f(x+\\Delta x) \\ -\\ f(x) \\ }{\\Delta x} \\pm\\ \\lim\\limits_{\\Delta x \\to 0}  \\dfrac{g(x+\\Delta x) \\ - \\ g(x)}{\\Delta x}',
+        step: '\\dfrac{d}{dx}\\Big[f(x) \\ \\pm\\ g(x)\\Big] = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{f(x+\\Delta x) \\ -\\ f(x) \\ }{\\Delta x} \\pm\\ \\lim\\limits_{\\Delta x \\to 0}  \\dfrac{g(x+\\Delta x) \\ - \\ g(x)}{\\Delta x}',
       },
       {
-        step: "\\dfrac{d(f(x) \\ \\pm\\ g(x))}{dx} = \\dfrac{d(f(x))}{dx} \\pm \\dfrac{d(g(x))}{dx} = f'(x) \\ \\pm\\ g'(x)",
+        step: "\\dfrac{d}{dx}\\Big[f(x) \\ \\pm\\ g(x)\\Big] = \\dfrac{d(f(x))}{dx} \\pm \\dfrac{d(g(x))}{dx} = f'(x) \\ \\pm\\ g'(x)",
       },
     ],
   },
@@ -207,15 +209,15 @@ export const TurunanPenurunanRumus = [
     nama: 'k\\cdot g(x)',
     rumus: [
       {
-        step: '\\dfrac{d(k\\ g(x))}{dx} = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{k(g(x+\\Delta x)\\ -\\ k(g(x)))}{\\Delta x}',
+        step: '\\dfrac{d}{dx}\\Big[k\\cdot g(x)\\Big] = \\lim\\limits_{\\Delta x \\to 0} \\dfrac{k(g(x+\\Delta x)\\ -\\ k(g(x)))}{\\Delta x}',
       },
       {
-        step: '\\dfrac{d(k\\ g(x))}{dx} = \\lim\\limits_{\\Delta x \\to 0}\\ k\\ \\dfrac{g(x+\\Delta x)\\ -\\ g(x)}{\\Delta x}',
+        step: '\\dfrac{d}{dx}\\Big[k\\cdot g(x)\\Big] = \\lim\\limits_{\\Delta x \\to 0}\\ k\\ \\dfrac{g(x+\\Delta x)\\ -\\ g(x)}{\\Delta x}',
       },
       {
-        step: '\\dfrac{d(k\\ g(x))}{dx} = k\\ \\lim\\limits_{\\Delta x \\to 0} \\dfrac{g(x+\\Delta x)\\ -\\ g(x)}{\\Delta x}',
+        step: '\\dfrac{d}{dx}\\Big[k\\cdot g(x)\\Big] = k\\ \\lim\\limits_{\\Delta x \\to 0} \\dfrac{g(x+\\Delta x)\\ -\\ g(x)}{\\Delta x}',
       },
-      { step: '\\dfrac{d(k\\ g(x))}{dx} = k\\ \\dfrac{d( g(x))}{dx}' },
+      { step: '\\dfrac{d}{dx}\\Big[k\\cdot g(x)\\Big] = k\\ \\dfrac{d( g(x))}{dx}' },
     ],
   },
   {

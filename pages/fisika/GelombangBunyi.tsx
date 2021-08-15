@@ -4,8 +4,8 @@ import GelombangBunyiImage from '../../public/Fisika/GelombangBunyiImage.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { GelombangBunyiVar } from 'lib/VariabelFisika';
-import { GelombangBunyiRumus } from 'lib/RumusFisika';
+import { GelombangBunyiVar } from 'data/VariabelFisika';
+import { GelombangBunyiRumus } from 'data/RumusFisika';
 import { NavListFisika } from '@/components/List';
 import List from '@/components/List';
 

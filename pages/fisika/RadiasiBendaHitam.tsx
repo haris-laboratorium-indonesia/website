@@ -4,8 +4,8 @@ import RadiasiBendaHitamImage from '../../public/Fisika/RadiasiBendaHitamImage.j
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { RadiasiBendaHitamVar } from 'lib/VariabelFisika';
-import { RadiasiBendaHitamRumus } from 'lib/RumusFisika';
+import { RadiasiBendaHitamVar } from 'data/VariabelFisika';
+import { RadiasiBendaHitamRumus } from 'data/RumusFisika';
 import { NavListFisika } from '@/components/List';
 import List from '@/components/List';
 

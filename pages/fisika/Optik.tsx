@@ -4,7 +4,7 @@ import OptikImage from '../../public/Fisika/OptikImage.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { OptikRumus } from 'lib/RumusFisika';
+import { OptikRumus } from 'data/RumusFisika';
 import { NavListFisika } from '@/components/List';
 import List from '@/components/List';
 import {

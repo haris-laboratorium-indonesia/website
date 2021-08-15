@@ -2,8 +2,8 @@ import 'katex/dist/katex.min.css';
 import TeX from '@matejmazur/react-katex';
 import Layout from '@/components/Layout';
 import Title from '@/components/Title';
-import { GlosariumVar } from 'lib/VariabelFisika';
-import { GlosariumKonstanta } from 'lib/KonstantaFisika';
+import { GlosariumVar } from 'data/VariabelFisika';
+import { GlosariumKonstanta } from 'data/KonstantaFisika';
 import { AA1, TH, TData, Row, THEAD, Body, KaTeX } from '@/components/Materi';
 
 export default function glosarium() {

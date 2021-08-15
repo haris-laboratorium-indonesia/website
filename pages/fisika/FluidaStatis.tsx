@@ -4,8 +4,8 @@ import FluidaStatisImage from '../../public/Fisika/FluidaStatisImage.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { FluidaStatisVar } from 'lib/VariabelFisika';
-import { FluidaStatisRumus } from 'lib/RumusFisika';
+import { FluidaStatisVar } from 'data/VariabelFisika';
+import { FluidaStatisRumus } from 'data/RumusFisika';
 import { NavListFisika } from '@/components/List';
 import List from '@/components/List';
 

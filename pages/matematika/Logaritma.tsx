@@ -5,8 +5,8 @@ import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
 import { NavListMatematika } from '@/components/List';
 import List from '@/components/List';
-import { LogaritmaRumus } from 'lib/RumusMatematika';
-import { LogaritmaPenurunanRumus } from 'lib/PenurunanRumusMatematika';
+import { LogaritmaRumus } from 'data/RumusMatematika';
+import { LogaritmaPenurunanRumus } from 'data/PenurunanRumusMatematika';
 import PenurunanRumus from '@/components/PenurunanRumus';
 import {
   AA1,
