@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout';
-import Title from '@/components/Title';
+import { Title, SubTitle } from '@/components/Materi';
 export default function biaya() {
   const title = 'text-gray-500 font-semibold text-2xl mb-5';
   return (

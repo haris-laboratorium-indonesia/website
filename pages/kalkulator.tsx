@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout';
-import Title from '@/components/Title';
+import { Title, SubTitle } from '@/components/Materi';
 import { useState, useEffect } from 'react';
 
 function Box({ title }) {

@@ -6,7 +6,7 @@ import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
 import { IntegralRumus } from 'data/RumusMatematika';
 import { IntegralPenurunanRumus } from 'data/PenurunanRumusMatematika';
-import { NavListMatematika } from '@/components/List';
+import { NavList } from '@/components/List';
 import List from '@/components/List';
 import {
   AA1,
@@ -26,14 +26,14 @@ import {
 export default function Integral() {
   return (
     <LayoutMateri browserTitle='Integral' description='Materi Integral'>
-      <List close='text-green-500' branch='matematika' to='Integral' title='Integral'>
-        <NavListMatematika title='Pengenalan' href='Pengenalan' />
-        <NavListMatematika title='Konstanta' href='Konstanta' />
-        <NavListMatematika title='Variabel' href='Variabel' />
-        <NavListMatematika title='Rumus' href='Rumus' />
-        <NavListMatematika title='Penurunan Rumus' href='PenurunanRumus' />
-        <NavListMatematika title='Pembahasan' href='Pembahasan' />
-        <NavListMatematika title='Contoh Soal' href='ContohSoal' />
+      <List branch='matematika' to='Integral' title='Integral'>
+        <NavList title='Pengenalan' href='Pengenalan' />
+        <NavList title='Konstanta' href='Konstanta' />
+        <NavList title='Variabel' href='Variabel' />
+        <NavList title='Rumus' href='Rumus' />
+        <NavList title='Penurunan Rumus' href='PenurunanRumus' />
+        <NavList title='Pembahasan' href='Pembahasan' />
+        <NavList title='Contoh Soal' href='ContohSoal' />
       </List>
 
       <AA1 id='Pengenalan' title='Pengenalan' />

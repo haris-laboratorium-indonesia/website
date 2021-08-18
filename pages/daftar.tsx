@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
 
-const signup = () => {
+const daftar = () => {
   return (
     <Layout browserTitle='Login' description='Halaman SignUp'>
       <form className='w-full p-5 mx-auto mt-16 space-y-4 bg-white rounded-lg shadow-md sm:w-2/5'>
@@ -47,4 +47,4 @@ const signup = () => {
   );
 };
 
-export default signup;
+export default daftar;

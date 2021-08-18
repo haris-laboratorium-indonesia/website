@@ -6,7 +6,7 @@ import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
 import { TermodinamikaVar } from 'data/VariabelFisika';
 import { TermodinamikaRumus } from 'data/RumusFisika';
-import { NavListFisika } from '@/components/List';
+import { NavList } from '@/components/List';
 import List from '@/components/List';
 
 import {
@@ -27,14 +27,14 @@ import {
 export default function Termodinamika() {
   return (
     <LayoutMateri browserTitle='Termodinamika' description='Materi Termodinamika'>
-      <List close='text-orange-400' branch='fisika' to='Termodinamika' title='Termodinamika'>
-        <NavListFisika title='Pengenalan' href='Pengenalan' />
-        <NavListFisika title='Konstanta' href='Konstanta' />
-        <NavListFisika title='Variabel' href='Variabel' />
-        <NavListFisika title='Rumus' href='Rumus' />
-        <NavListFisika title='Penurunan Rumus' href='PenurunanRumus' />
-        <NavListFisika title='Pembahasan' href='Pembahasan' />
-        <NavListFisika title='Contoh Soal' href='ContohSoal' />
+      <List branch='fisika' to='Termodinamika' title='Termodinamika'>
+        <NavList title='Pengenalan' href='Pengenalan' />
+        <NavList title='Konstanta' href='Konstanta' />
+        <NavList title='Variabel' href='Variabel' />
+        <NavList title='Rumus' href='Rumus' />
+        <NavList title='Penurunan Rumus' href='PenurunanRumus' />
+        <NavList title='Pembahasan' href='Pembahasan' />
+        <NavList title='Contoh Soal' href='ContohSoal' />
       </List>
 
       <Gambar

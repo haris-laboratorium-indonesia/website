@@ -25,7 +25,7 @@ export default function NavMobileX() {
             </section>
             <div className='grid grid-cols-2 gap-5 '>
               <Yes to='login' title='Masuk' />
-              <Yes to='signup' title='Daftar' />
+              <Yes to='daftar' title='Daftar' />
             </div>
           </Menu.Items>
         </>

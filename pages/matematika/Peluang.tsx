@@ -4,7 +4,7 @@ import Nature from '../../public/nature.jpg';
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { NavListMatematika } from '@/components/List';
+import { NavList } from '@/components/List';
 import List from '@/components/List';
 import {
   AA1,
@@ -23,14 +23,14 @@ import {
 export default function Peluang() {
   return (
     <LayoutMateri browserTitle='Peluang' description='Materi Peluang'>
-      <List close='text-green-500' branch='matematika' to='Peluang' title='Peluang'>
-        <NavListMatematika title='Pengenalan' href='Pengenalan' />
-        <NavListMatematika title='Konstanta' href='Konstanta' />
-        <NavListMatematika title='Variabel' href='Variabel' />
-        <NavListMatematika title='Rumus' href='Rumus' />
-        <NavListMatematika title='Penurunan Rumus' href='PenurunanRumus' />
-        <NavListMatematika title='Pembahasan' href='Pembahasan' />
-        <NavListMatematika title='Contoh Soal' href='ContohSoal' />
+      <List branch='matematika' to='Peluang' title='Peluang'>
+        <NavList title='Pengenalan' href='Pengenalan' />
+        <NavList title='Konstanta' href='Konstanta' />
+        <NavList title='Variabel' href='Variabel' />
+        <NavList title='Rumus' href='Rumus' />
+        <NavList title='Penurunan Rumus' href='PenurunanRumus' />
+        <NavList title='Pembahasan' href='Pembahasan' />
+        <NavList title='Contoh Soal' href='ContohSoal' />
       </List>
 
       <AA1 id='Pengenalan' title='Pengenalan' />

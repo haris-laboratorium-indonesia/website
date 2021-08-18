@@ -4,7 +4,7 @@ import GelombangElektromagnetikimage from '../../public/Fisika/GelombangElektrom
 import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
-import { NavListFisika } from '@/components/List';
+import { NavList } from '@/components/List';
 import List from '@/components/List';
 import {
   AA1,
@@ -27,14 +27,14 @@ export default function GelombangElektromagnetik() {
       browserTitle='Gelombang Elektromagnetik'
       description='Materi Gelombang Elektromagnetik'
     >
-      <List close='text-orange-400' branch='fisika' to='GelombangElektromagnetik' title='Gelombang Elektromagnetik'>
-        <NavListFisika title='Pengenalan' href='Pengenalan' />
-        <NavListFisika title='Konstanta' href='Konstanta' />
-        <NavListFisika title='Variabel' href='Variabel' />
-        <NavListFisika title='Rumus' href='Rumus' />
-        <NavListFisika title='Penurunan Rumus' href='PenurunanRumus' />
-        <NavListFisika title='Pembahasan' href='Pembahasan' />
-        <NavListFisika title='Contoh Soal' href='ContohSoal' />
+      <List branch='fisika' to='GelombangElektromagnetik' title='Gelombang Elektromagnetik'>
+        <NavList title='Pengenalan' href='Pengenalan' />
+        <NavList title='Konstanta' href='Konstanta' />
+        <NavList title='Variabel' href='Variabel' />
+        <NavList title='Rumus' href='Rumus' />
+        <NavList title='Penurunan Rumus' href='PenurunanRumus' />
+        <NavList title='Pembahasan' href='Pembahasan' />
+        <NavList title='Contoh Soal' href='ContohSoal' />
       </List>
 
       <Gambar

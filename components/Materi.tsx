@@ -82,3 +82,24 @@ export const Anchor = ({ to, name }) => {
     </Link>
   );
 };
+
+//Typography
+export function Title({ name }) {
+  return (
+    <header className='z-40 w-full h-auto mt-10 mb-5 pt-2.5  max-w-4xl mx-auto font-inter'>
+      <div className='block text-4xl font-bold text-center text-gray-800 sm:text-5xl '>{name}</div>
+    </header>
+  );
+}
+
+export function SubTitle({ name }) {
+  return <div className='max-w-2xl mx-auto mb-10 -mt-4 text-center '>{name}</div>;
+}
+
+export function Topic({ name }) {
+  return <div className='max-w-2xl mx-auto mb-10 -mt-4 text-center '>{name}</div>;
+}
+
+export function SubTopic({ name }) {
+  return <div className='max-w-2xl mx-auto mb-10 -mt-4 text-center '>{name}</div>;
+}

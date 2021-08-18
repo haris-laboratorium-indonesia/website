@@ -1,4 +1,3 @@
-import { NBJ } from './Icons';
 export default function Support() {
   return (
     <div className='mt-36'>
@@ -7,32 +6,58 @@ export default function Support() {
       </header>
       <div className='grid grid-cols-1 gap-5 sm:grid-cols-3'>
         {/* Saweria */}
-        <div className='flex justify-center p-2 bg-[#faae2b] rounded-lg  shadow-md hover:shadow-lg h-14 items-center hover:-translate-y-1 duration-300'>
+        <div className='flex items-center justify-center p-3 bg-gray-200 rounded-lg hover:bg-gray-300 '>
           <a
             href='https://www.saweria.co/harislab'
             target='_blank'
-            className='flex items-center justify-center text-xl text-gray-50 font-mw'
+            className='flex items-center justify-center space-x-4 text-lg font-medium text-gray-700 font-inter'
           >
-            Saweria
+            <div>Saweria</div>
+            <ExternalLink />
           </a>
         </div>
         {/* Trakteer */}
-        <div className='flex items-center justify-center px-2 py-4 duration-300 bg-red-600 rounded-lg shadow-md h-14 hover:shadow-lg hover:-translate-y-1'>
+        <div className='flex items-center justify-center p-3 bg-gray-200 rounded-lg hover:bg-gray-300 '>
           <a
             href='https://trakteer.id/harits-syah/tip'
             target='_blank'
-            className='flex items-center justify-center font-semibold text-md text-gray-50 font-inter'
+            className='flex items-center justify-center space-x-4 text-lg font-medium text-gray-700 font-inter'
           >
-            Dukung saya di Trakteer
+            <div>Trakteer</div>
+            <ExternalLink />
           </a>
         </div>
         {/* Nih Buat Jajan */}
-        <div className='flex items-center justify-center p-2 duration-300 bg-yellow-400 rounded-lg shadow-md h-14 hover:shadow-lg hover:-translate-y-1'>
-          <a href='https://www.nihbuatjajan.com/harislab' target='_blank'>
-            <NBJ />
+        <div className='flex items-center justify-center p-3 bg-gray-200 rounded-lg hover:bg-gray-300 '>
+          <a
+            href='https://www.nihbuatjajan.com/harislab'
+            target='_blank'
+            className='flex items-center justify-center space-x-4 text-lg font-medium text-gray-700 font-inter'
+          >
+            <div>Nih Buat Jajan</div>
+            <ExternalLink />
           </a>
         </div>
       </div>
     </div>
   );
 }
+
+const ExternalLink = () => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      className='w-6 h-6'
+      fill='none'
+      viewBox='0 0 24 24'
+      stroke='currentColor'
+    >
+      <path
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth={1.5}
+        d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
+      />
+    </svg>
+  );
+};

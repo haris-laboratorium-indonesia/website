@@ -86,3 +86,8 @@ export const isiFAQ = [
       'Kedepannya kita akan membuat fitur scan kertas soal yang langsung jadi jawaban dan bahkan bisa mengenerate animasi, fitur progress belajar, fitur try out soal, dan fitur management informasi untuk kebutuhan sekolah sehari-hari',
   },
 ];
+
+export const ContentData = [{ title: 'matematika' }, { title: 'fisika' }, { title: 'kartu' }];
+export const BoxData = ({ title }) => {
+  return <div className='p-2 bg-gray-200 rounded-md hover:bg-gray-300'>{title}</div>;
+};

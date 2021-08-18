@@ -1,6 +1,6 @@
-import ChapterBoxMatematika from '@/components/ChapterBox';
+import ChapterBox from '@/components/ChapterBox';
 import Layout from '@/components/Layout';
-import Title from '@/components/Title';
+import { Title, SubTitle } from '@/components/Materi';
 import Link from 'next/link';
 
 const matematika = () => {
@@ -8,36 +8,34 @@ const matematika = () => {
     <Layout browserTitle='Matematika' description='Materi Matematika SMP SMA'>
       <Title name='Matematika' />
 
-      <div className='mb-5 -mt-5 text-center'>Pelajari bahasa alam semesta melalui matematika.</div>
+      <SubTitle name='Pelajari bahasa alam semesta melalui matematika.' />
 
       <Link href='/matematika/glosarium'>
-        <a className='flex items-center justify-center p-2 my-5 text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 '>
-          <div className='flex items-center space-x-2 sm:justify-between sm:space-x-1'>
-            <Collection />
-            <p>Glosarium</p>
-          </div>
+        <a className='flex items-center justify-center p-2 mx-auto my-5 space-x-1 text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300'>
+          <Collection />
+          <p>Glosarium Matematika</p>
         </a>
       </Link>
 
       <section className='grid grid-cols-1 gap-3 sm:grid-cols-3'>
-        <ChapterBoxMatematika title='Lingkaran' to='matematika/Lingkaran' />
-        <ChapterBoxMatematika title='Integral' to='matematika/Integral' />
-        <ChapterBoxMatematika title='Linear' to='matematika/Linear' />
-        <ChapterBoxMatematika title='Kuadrat' to='matematika/Kuadrat' />
-        <ChapterBoxMatematika title='Suku Banyak' to='matematika/SukuBanyak' />
-        <ChapterBoxMatematika title='Matriks' to='matematika/Matriks' />
-        <ChapterBoxMatematika title='Transformasi Geometri' to='matematika/TransformasiGeometri' />
-        <ChapterBoxMatematika title='Geometri' to='matematika/Geometri' />
-        <ChapterBoxMatematika title='Trigonometri' to='matematika/Trigonometri' />
-        <ChapterBoxMatematika title='Logaritma' to='matematika/Logaritma' />
-        <ChapterBoxMatematika title='Eksponen' to='matematika/Eksponen' />
-        <ChapterBoxMatematika title='Turunan' to='matematika/Turunan' />
-        <ChapterBoxMatematika title='Limit' to='matematika/Limit' />
-        <ChapterBoxMatematika title='Dimensi 3' to='matematika/Dimensi3' />
-        <ChapterBoxMatematika title='Vektor' to='matematika/Vektor' />
-        <ChapterBoxMatematika title='Barisan Deret' to='matematika/BarisanDeret' />
-        <ChapterBoxMatematika title='Statistika' to='matematika/Statistika' />
-        <ChapterBoxMatematika title='Peluang' to='matematika/Peluang' />
+        <ChapterBox title='Lingkaran' to='matematika/Lingkaran' />
+        <ChapterBox title='Integral' to='matematika/Integral' />
+        <ChapterBox title='Linear' to='matematika/Linear' />
+        <ChapterBox title='Kuadrat' to='matematika/Kuadrat' />
+        <ChapterBox title='Suku Banyak' to='matematika/SukuBanyak' />
+        <ChapterBox title='Matriks' to='matematika/Matriks' />
+        <ChapterBox title='Transformasi Geometri' to='matematika/TransformasiGeometri' />
+        <ChapterBox title='Geometri' to='matematika/Geometri' />
+        <ChapterBox title='Trigonometri' to='matematika/Trigonometri' />
+        <ChapterBox title='Logaritma' to='matematika/Logaritma' />
+        <ChapterBox title='Eksponen' to='matematika/Eksponen' />
+        <ChapterBox title='Turunan' to='matematika/Turunan' />
+        <ChapterBox title='Limit' to='matematika/Limit' />
+        <ChapterBox title='Dimensi 3' to='matematika/Dimensi3' />
+        <ChapterBox title='Vektor' to='matematika/Vektor' />
+        <ChapterBox title='Barisan Deret' to='matematika/BarisanDeret' />
+        <ChapterBox title='Statistika' to='matematika/Statistika' />
+        <ChapterBox title='Peluang' to='matematika/Peluang' />
       </section>
     </Layout>
   );

@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout';
-import Title from '@/components/Title';
+import { Title, SubTitle } from '@/components/Materi';
 import Rafi from '../../public/Trainer/Rafi.jpeg';
 import Harits from '../../public/Trainer/Harits.jpg';
 import Image from 'next/image';

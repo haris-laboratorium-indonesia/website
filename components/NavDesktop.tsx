@@ -7,9 +7,9 @@ const NavDesktop = () => {
     <nav className='hidden md:block'>
       <nav className='z-50 flex flex-row items-center justify-between w-full h-auto max-w-5xl px-5 py-1.5 mx-auto xl:px-0'>
         <Link href='/'>
-          <a className='items-center block text-lg font-semibold text-gray-200 hover:text-white font-mw'>
-            <span className='font-bold '>Haris</span>
-            <span className='font-light text-gray-400'>Lab</span>
+          <a className='items-center block text-lg font-semibold text-gray-200 group hover:text-white font-mw'>
+            <span className='font-bold group-hover:text-white'>Haris</span>
+            <span className='font-light text-gray-400 group-hover:text-gray-300'>Lab</span>
           </a>
         </Link>
 

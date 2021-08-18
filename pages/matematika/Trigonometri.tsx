@@ -5,7 +5,7 @@ import ExampleMain from '@/components/ExampleMain';
 import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
 import { TrigonometriRumus } from 'data/RumusMatematika';
-import { NavListMatematika } from '@/components/List';
+import { NavList } from '@/components/List';
 import List from '@/components/List';
 import {
   AA1,
@@ -25,14 +25,14 @@ import {
 export default function Trigonometri() {
   return (
     <LayoutMateri browserTitle='Trigonometri' description='Materi Trigonometri'>
-      <List close='text-green-500' branch='matematika' to='Trigonometri' title='Trigonometri'>
-        <NavListMatematika title='Pengenalan' href='Pengenalan' />
-        <NavListMatematika title='Konstanta' href='Konstanta' />
-        <NavListMatematika title='Variabel' href='Variabel' />
-        <NavListMatematika title='Rumus' href='Rumus' />
-        <NavListMatematika title='Penurunan Rumus' href='PenurunanRumus' />
-        <NavListMatematika title='Pembahasan' href='Pembahasan' />
-        <NavListMatematika title='Contoh Soal' href='ContohSoal' />
+      <List branch='matematika' to='Trigonometri' title='Trigonometri'>
+        <NavList title='Pengenalan' href='Pengenalan' />
+        <NavList title='Konstanta' href='Konstanta' />
+        <NavList title='Variabel' href='Variabel' />
+        <NavList title='Rumus' href='Rumus' />
+        <NavList title='Penurunan Rumus' href='PenurunanRumus' />
+        <NavList title='Pembahasan' href='Pembahasan' />
+        <NavList title='Contoh Soal' href='ContohSoal' />
       </List>
 
       <AA1 id='Pengenalan' title='Pengenalan' />
@@ -45,7 +45,7 @@ export default function Trigonometri() {
       <AA1 id='Variabel' title='Variabel' />
 
       <AA1 id='Rumus' title='Rumus' />
-      <div className='grid grid-cols-1 sm:grid-cols-2'>
+      <div className='grid grid-cols-1 gap-5 sm:grid-cols-2'>
         {TrigonometriRumus.map(a => (
           <article key={a.nama}>
             <div className={rumusTitle}>{a.nama}</div>

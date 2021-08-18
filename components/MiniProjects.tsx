@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Title from '@/components/Title';
+import { Title, SubTitle } from '@/components/Materi';
 import Layout from '@/components/Layout';
 
 export default function MiniProjects({ title, children }) {

@@ -1,5 +1,5 @@
 import Layout from '../components/Layout';
-import Title from '@/components/Title';
+import { Title, SubTitle } from '@/components/Materi';
 import Image from 'next/image';
 
 export default function kartu() {

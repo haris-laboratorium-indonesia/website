@@ -17,7 +17,7 @@ export default function Inspirasi() {
 const Box = ({ to, title, textColor }) => {
   return (
     <a
-      className={`items-center p-3 font-medium text-xl text-center duration-200 bg-white rounded-md shadow-md hover:shadow-none ${textColor} hover:translate-y-1 hover:bg-gray-200`}
+      className={`items-center p-3 font-medium text-lg text-center bg-gray-200 rounded-md  ${textColor} hover:bg-gray-300`}
       href={to}
       target='_blank'
     >

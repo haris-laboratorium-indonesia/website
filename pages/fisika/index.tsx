@@ -1,6 +1,6 @@
-import { ChapterBoxFisika } from '@/components/ChapterBox';
+import ChapterBox from '@/components/ChapterBox';
 import Layout from '@/components/Layout';
-import Title from '@/components/Title';
+import { Title, SubTitle } from '@/components/Materi';
 import Link from 'next/link';
 import { RightArrow } from '@/Icons';
 
@@ -9,37 +9,40 @@ const fisika = () => {
     <Layout browserTitle='Fisika' description='Materi Fisika SMA'>
       <Title name='Fisika' />
 
-      <div className='mb-5 -mt-5 text-center'>
-        Pelajari cara kerja engineering dan alam semesta melalui fisika.
+      <SubTitle name='Pelajari cara kerja engineering dan alam semesta melalui fisika.' />
+
+      <div className='mb-3 text-xl font-semibold text-center text-gray-700 sm:text-left sm:text-2xl mt-14'>
+        Glosarium Fisika
+      </div>
+      <div className='grid grid-cols-1 gap-3 sm:grid-cols-3'>
+        <ChapterBox title='Konstanta' to='fisika/fisika_konstanta' />
+        <ChapterBox title='Variabel' to='fisika/fisika_variabel' />
+        <ChapterBox title='Satuan SI' to='fisika/fisika_satuanSI' />
       </div>
 
-      <Link href='/fisika/glosarium'>
-        <a className='flex items-center justify-center p-2 my-5 text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 '>
-          <div className='flex items-center space-x-2 sm:justify-between sm:space-x-1'>
-            <Collection />
-            <p>Glosarium</p>
-          </div>
-        </a>
-      </Link>
+      <div className='mb-3 text-xl font-semibold text-center text-gray-700 sm:text-left sm:text-2xl mt-14'>
+        Bab Fisika
+      </div>
+
       <section className='grid grid-cols-1 gap-3 sm:grid-cols-3'>
-        <ChapterBoxFisika title='Fluida Statis' to='fisika/FluidaStatis' />
-        <ChapterBoxFisika title='Fluida Dinamis' to='fisika/FluidaDinamis' />
-        <ChapterBoxFisika title='Listrik Statis' to='fisika/ListrikStatis' />
-        <ChapterBoxFisika title='Listrik Dinamis' to='fisika/ListrikDinamis' />
-        <ChapterBoxFisika title='Gelombang Mekanik' to='fisika/GelombangMekanik' />
-        <ChapterBoxFisika title='Gelombang Bunyi' to='fisika/GelombangBunyi' />
-        <ChapterBoxFisika title='Gelombang Elektromagnetik' to='fisika/GelombangElektromagnetik' />
-        <ChapterBoxFisika title='Kinematika' to='fisika/Kinematika' />
-        <ChapterBoxFisika title='Dinamika' to='fisika/Dinamika' />
-        <ChapterBoxFisika title='Kesetimbangan' to='fisika/Kesetimbangan' />
-        <ChapterBoxFisika title='Termodinamika' to='fisika/Termodinamika' />
-        <ChapterBoxFisika title='Besaran dan Pengukuran' to='fisika/BesaranDanSatuan' />
-        <ChapterBoxFisika title='Radiasi Benda Hitam' to='fisika/RadiasiBendaHitam' />
-        <ChapterBoxFisika title='Relativitas Khusus' to='fisika/RelativitasKhusus' />
-        <ChapterBoxFisika title='Kuantum' to='fisika/Kuantum' />
-        <ChapterBoxFisika title='Inti' to='fisika/Inti' />
-        <ChapterBoxFisika title='Magnet' to='fisika/Magnet' />
-        <ChapterBoxFisika title='Optik' to='fisika/Optik' />
+        <ChapterBox title='Fluida Statis' to='fisika/FluidaStatis' />
+        <ChapterBox title='Fluida Dinamis' to='fisika/FluidaDinamis' />
+        <ChapterBox title='Listrik Statis' to='fisika/ListrikStatis' />
+        <ChapterBox title='Listrik Dinamis' to='fisika/ListrikDinamis' />
+        <ChapterBox title='Gelombang Mekanik' to='fisika/GelombangMekanik' />
+        <ChapterBox title='Gelombang Bunyi' to='fisika/GelombangBunyi' />
+        <ChapterBox title='Gelombang Elektromagnetik' to='fisika/GelombangElektromagnetik' />
+        <ChapterBox title='Kinematika' to='fisika/Kinematika' />
+        <ChapterBox title='Dinamika' to='fisika/Dinamika' />
+        <ChapterBox title='Kesetimbangan' to='fisika/Kesetimbangan' />
+        <ChapterBox title='Termodinamika' to='fisika/Termodinamika' />
+        <ChapterBox title='Besaran dan Pengukuran' to='fisika/BesaranDanSatuan' />
+        <ChapterBox title='Radiasi Benda Hitam' to='fisika/RadiasiBendaHitam' />
+        <ChapterBox title='Relativitas Khusus' to='fisika/RelativitasKhusus' />
+        <ChapterBox title='Kuantum' to='fisika/Kuantum' />
+        <ChapterBox title='Inti' to='fisika/Inti' />
+        <ChapterBox title='Magnet' to='fisika/Magnet' />
+        <ChapterBox title='Optik' to='fisika/Optik' />
       </section>
     </Layout>
   );

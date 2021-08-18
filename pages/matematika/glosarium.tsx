@@ -1,7 +1,6 @@
 import 'katex/dist/katex.min.css';
 import TeX from '@matejmazur/react-katex';
 import Layout from '@/components/Layout';
-import Title from '@/components/Title';
 
 import {
   AA1,
@@ -15,6 +14,7 @@ import {
   Gambar,
   Legenda,
   KaTeX,
+  Title,
   rumusTitle,
 } from '@/components/Materi';
 

@@ -4,18 +4,19 @@ import { Tab } from '@headlessui/react';
 export default function FramerMotion() {
   return (
     <MiniProjects title='Tailwindcss'>
-      <Tab.Group>
-        <Tab.List>
-          <Tab>Tab 1</Tab>
-          <Tab>Tab 2</Tab>
-          <Tab>Tab 3</Tab>
-        </Tab.List>
-        <Tab.Panels>
-          <Tab.Panel>Content 1</Tab.Panel>
-          <Tab.Panel>Content 2</Tab.Panel>
-          <Tab.Panel>Content 3</Tab.Panel>
-        </Tab.Panels>
-      </Tab.Group>
+      <SubTitle>Menu (Dropdown)</SubTitle>
+      <SubTitle>ListBox (Select)</SubTitle>
+      <SubTitle>Switch (Toggle)</SubTitle>
+      <SubTitle>Disclosure</SubTitle>
+      <SubTitle>Dialog (Modal)</SubTitle>
+      <SubTitle>Popover</SubTitle>
+      <SubTitle>Radio Group</SubTitle>
+      <SubTitle>Transition</SubTitle>
+      <SubTitle>Tabs</SubTitle>
     </MiniProjects>
   );
 }
+
+const SubTitle = ({ children }) => {
+  return <div className='mt-10 mb-5 text-xl font-semibold text-gray-800'>{children}</div>;
+};
