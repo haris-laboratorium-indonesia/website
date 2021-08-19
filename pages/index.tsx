@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import Support from '@/components/Support';
 import Inspirasi from '@/components/Inspirasi';
 import Image from 'next/image';
-
+import { Topic, SubTopic } from '@/components/Materi';
 import { isiFAQ } from '../data/Beranda';
 import { SayaPeduliTentang } from '../data/Beranda';
 import { CaraSayaMenyampaikanInformasi } from '../data/Beranda';
@@ -42,14 +42,11 @@ export default function Beranda() {
 
       {/* Fitur */}
       <div id='fitur' className='mb-32 sm:mb-60 '>
-        <div className='text-2xl font-bold text-left sm:text-center sm:text-4xl bg-gradient-to-r from-red-500 via-orange-500 to-amber-500 trns'>
-          Apa yang bisa kalian lakukan di HarisLab ?
-        </div>
-        <div className='mt-2 mb-10 text-left text-gray-600 sm:text-center '>
-          Referensi, Kalkulasi, Animasi, Bimbel.
+        <div className='mb-10 text-2xl font-semibold text-left text-gray-800 sm:text-3xl'>
+          Fitur. <span className='text-gray-500'>Referensi, Kalkulasi, Animasi, Bimbel.</span>
         </div>
 
-        <section className='grid grid-cols-1 mx-auto gap-7 sm:gap-5 sm:grid-cols-2 md:grid-cols-3 '>
+        <section className='grid grid-cols-1 mx-auto gap-7 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3 '>
           {WhatYouCanDo.map(a => (
             <YouCanDo
               key={a.title}
@@ -66,14 +63,14 @@ export default function Beranda() {
 
       {/* Cara kami menyajikan informasi */}
       <div className='mb-32 sm:mb-60 '>
-        <div className='text-2xl font-bold text-left sm:text-center sm:text-4xl bg-gradient-to-r from-pink-600 via-fuschsia-600 to-purple-600 trns'>
-          Cara kami menyajikan informasi
-        </div>
-        <div className='mt-2 mb-10 text-left text-gray-600 sm:text-center '>
-          Arsitektur informasi yang didesain untuk pengalaman belajar terbaik.
+        <div className='mb-10 text-2xl font-semibold text-left text-gray-800 sm:text-3xl'>
+          Cara kami menyajikan informasi.{' '}
+          <span className='text-gray-500'>
+            Arsitektur informasi yang didesain untuk pengalaman belajar terbaik.
+          </span>
         </div>
 
-        <section className='grid grid-cols-1 gap-10 mx-auto sm:grid-cols-3 md:grid-cols-4 '>
+        <section className='grid grid-cols-1 gap-5 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 '>
           {CaraSayaMenyampaikanInformasi.map(a => (
             <InfoBox
               key={a.id}
@@ -81,7 +78,6 @@ export default function Beranda() {
               name={a.title}
               description={a.description}
               color='text-pink-600'
-              borderColor='border-pink-600'
               to='/haris'
             />
           ))}
@@ -90,22 +86,21 @@ export default function Beranda() {
 
       {/* Kami peduli tentang */}
       <div className='mb-32 sm:mb-60 '>
-        <header className='text-2xl font-bold text-left sm:text-center bg-gradient-to-r from-emerald-600 via-green-600 to-lime-600 trns sm:text-4xl'>
-          Kami Peduli Tentang
-        </header>
-        <div className='mt-2 mb-10 text-left text-gray-600 sm:text-center'>
-          Bagaimana arsitektur informasi menunjang kemampuan pelajar dalam belajar.
+        <div className='mb-10 text-2xl font-semibold text-left text-gray-800 sm:text-3xl'>
+          Kami Peduli.{' '}
+          <span className='text-gray-500'>
+            Tentang bagaimana arsitektur informasi menunjang kemampuan pelajar dalam belajar.
+          </span>
         </div>
 
-        <section className='grid grid-cols-1 gap-10 mx-auto sm:grid-cols-3 md:grid-cols-4 '>
+        <section className='grid grid-cols-1 gap-5 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 '>
           {SayaPeduliTentang.map(a => (
             <InfoBox
               key={a.id}
               svg={a.svg}
               name={a.title}
               description={a.description}
-              color='text-green-600'
-              borderColor='border-green-600'
+              color='text-green-500'
               to='/haris'
             />
           ))}
@@ -114,9 +109,10 @@ export default function Beranda() {
 
       {/* HarisLab vs Zenius vs Ruangguru vs Buku Paket*/}
       <div className='mb-32 sm:mb-60 '>
-        <header className='mb-10 text-2xl font-bold text-left sm:text-center bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 sm:text-4xl trns'>
-          HarisLab vs Zenius vs Ruangguru
-        </header>
+        <div className='mb-10 text-2xl font-semibold text-left text-gray-800 sm:text-3xl'>
+          Perbandingan.{' '}
+          <span className='text-gray-500'>HarisLab vs Zenius vs Ruangguru vs Wikipedia</span>
+        </div>
         <section className='mx-auto overflow-x-auto sm:gap-5 lg:px-0'>
           <table className='w-full overflow-hidden border border-cyan-500'>
             <thead>
@@ -200,19 +196,19 @@ const WhatYouCanDo = [
     title: 'Matematika',
     img: '/public/fisika/GelombangElektromagnetikImage.jpg',
     fiturs: [{ fitur: 'Baca Materi' }, { fitur: 'Contoh Soal' }, { fitur: 'Penurunan Rumus' }],
-    desc: "Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    desc: 'Ilmu dasar alam semesta, tidak hanya untuk pelajaran sains alam seperti fisika dan kimia tapi juga untuk pelajaran bisnis, ekonomi, bahkan juga digunakan untuk bernalar sehari-hari.',
   },
   {
     title: 'Fisika',
     img: '/public/fisika/GelombangElektromagnetikImage.jpg',
     fiturs: [{ fitur: 'Baca Materi' }, { fitur: 'Contoh Soal' }, { fitur: 'Penurunan Rumus' }],
-    desc: "Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    desc: 'Ilmu alam yang mempelajari tentang pergerakan benda fisik dan perubahannya secara matematis. Jika ingin menjadi teknisi atau memahami alam semesta, pelajarilah fisika.',
   },
   {
     title: 'Kartu',
     img: '/public/fisika/GelombangElektromagnetikImage.jpg',
     fiturs: [{ fitur: 'Baca Materi' }, { fitur: 'Contoh Soal' }, { fitur: 'Penurunan Rumus' }],
-    desc: "Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    desc: "Sepenggal informasi yang disajikan dalam bentuk kartu yang memudahkan kita untuk menangkap informasi. Cocok untuk me-'re-call' kembali ilmu yang sudah lama dipelajari. ",
   },
   {
     title: 'Kalkulator',
@@ -222,29 +218,26 @@ const WhatYouCanDo = [
       { fitur: 'Kalkulator Saintifik' },
       { fitur: 'Kalkulator Rumus' },
     ],
-    desc: "Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    desc: 'Dalam proses belajar, siswa membutuhkan perhitungan yang cepat dan akurat. Dalam bidang sains, tidak hanya kalkulator biasa, namun kita juga butuh kalkulator saintifik dan kalkulator rumus.',
   },
   {
     title: 'Bimbel',
     img: '/public/fisika/GelombangElektromagnetikImage.jpg',
     fiturs: [{ fitur: 'Les ke rumah' }, { fitur: 'Booking Les' }, { fitur: 'Paket Les' }],
-    desc: "Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    desc: 'Tidak semua guru kompeten mengajar,sehingga banyak murid mendatangkan guru bimbel ke rumahnya. Kamu bisa pesan bimbel ke rumah dari HarisLab dengan mudah dan nyaman.',
   },
 ];
 
 const YouCanDo = ({ img, title, fitur, desc }) => {
   return (
     <Link href='/#fitur'>
-      <a className={`w-full p-4 duration-300 rounded-xl bg-gray-50 shadow-xl `}>
-        <div className='flex flex-row items-end space-x-2'>
-          <div className={`bg-gray-500 rounded w-7 h-7`}></div>
-          <div className='text-xl font-semibold'>{title}</div>
-        </div>
-        <div className='mt-4 mb-5 text-gray-600 text-tiny'>{desc}</div>
-        <div className='flex justify-between mb-1'>
-          <div className='text-sm font-semibold text-gray-500 '>Fitur Utama</div>
+      <a className={`w-full p-4 duration-300 rounded-xl bg-white shadow-lg `}>
+        <div className='text-2xl font-semibold text-gray-700'>{title}</div>
+        <div className='mt-1 mb-6 text-gray-600 text-tiny'>{desc}</div>
+        <div className='flex justify-between mb-1.5'>
+          <div className='text-sm font-medium text-gray-500 '>Fitur Utama</div>
           <Link href='/#fitur'>
-            <a className='text-sm text-gray-600 hover:underline'>Selengkapnya</a>
+            <a className='text-sm text-gray-600 hover:underline'>Selengkapnya..</a>
           </Link>
         </div>
         <div className='flex flex-col space-y-2'>{fitur}</div>
@@ -256,11 +249,8 @@ const YouCanDo = ({ img, title, fitur, desc }) => {
 const FiturBox = ({ fitur }) => {
   return (
     <Link href='/design'>
-      <a className='flex flex-row items-center justify-between p-2 duration-100 bg-white rounded-lg shadow hover:shadow-none hover:bg-gray-300 hover:translate-y-0.5 group'>
-        <div className='flex space-x-2'>
-          <div className={`w-6 h-6 bg-gray-400 rounded group-hover:bg-gray-500`}></div>
-          <div className='text-gray-700 text-tiny'>{fitur}</div>
-        </div>
+      <a className='flex flex-row items-center justify-between px-3 py-2 pr-2 border border-gray-300 rounded-md border- hover:bg-gray-100 '>
+        <div className='text-gray-700 text-tiny'>{fitur}</div>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           className='w-5 h-5 text-gray-500'

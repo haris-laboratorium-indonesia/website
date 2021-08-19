@@ -96,10 +96,14 @@ export function SubTitle({ name }) {
   return <div className='max-w-2xl mx-auto mb-10 -mt-4 text-center '>{name}</div>;
 }
 
-export function Topic({ name }) {
-  return <div className='max-w-2xl mx-auto mb-10 -mt-4 text-center '>{name}</div>;
-}
+export const Topic = ({ name }) => {
+  return (
+    <div className='mb-3 text-2xl font-semibold text-left text-gray-700 sm:text-2xl mt-14'>
+      {name}
+    </div>
+  );
+};
 
 export function SubTopic({ name }) {
-  return <div className='max-w-2xl mx-auto mb-10 -mt-4 text-center '>{name}</div>;
+  return <div className='mb-5 font-medium '>{name}</div>;
 }

@@ -36,18 +36,12 @@ export default function RelativitasKhusus() {
         <NavList title='Contoh Soal' href='ContohSoal' />
       </List>
 
-      <Gambar
-        src={RelativitasKhususImage}
-        alt='Relativitas Khusus'
-        caption='Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termodinamika ke-0 dirumuskan.'
-      />
-      
       <AA1 id='Pengenalan' title='Pengenalan' />
       <A2 title='Apa itu Relativitas Khusus' />
       <A2 title='Siapa yang menggunakan Relativitas Khusus' />
       <A2 title='Dimana Relativitas Khusus digunakan' />
       <A2 title='Kapan Relativitas Khusus digunakan' />
-      
+
       <AA1 id='Konstanta' title='Konstanta' />
       <section className='overflow-x-auto '>
         <table className='w-full min-w-full border table-max'>
@@ -81,7 +75,7 @@ export default function RelativitasKhusus() {
           </Body>
         </table>
       </section>
-      
+
       <AA1 id='Variabel' title='Variabel' />
       <section className='overflow-x-auto'>
         <table className='w-full min-w-full border table-max'>
@@ -108,7 +102,7 @@ export default function RelativitasKhusus() {
           </Body>
         </table>
       </section>
-      
+
       <AA1 id='Rumus' title='Rumus' />
       <div className='grid grid-cols-1 sm:grid-cols-2'>
         {RelativitasKhususRumus.map(a => (
@@ -118,7 +112,7 @@ export default function RelativitasKhusus() {
           </article>
         ))}
       </div>
-      
+
       <AA1 id='PenurunanRumus' title='Penurunan Rumus' />
       <P>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. A laudantium optio earum autem
@@ -127,7 +121,7 @@ export default function RelativitasKhusus() {
         harum dolorum fugit omnis nostrum deleniti exercitationem, magnam nam voluptatem voluptates,
         laudantium consequuntur ad facilis.
       </P>
-      
+
       <AA1 id='Pembahasan' title='Pembahasan' />
       <P>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolorum cupiditate
@@ -136,7 +130,7 @@ export default function RelativitasKhusus() {
         quae error laudantium incidunt odit inventore unde enim molestias voluptates aut est, facere
         earum adipisci?
       </P>
-      
+
       <AA1 id='ContohSoal' title='Contoh Soal' />
       <P>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa consequatur qui optio

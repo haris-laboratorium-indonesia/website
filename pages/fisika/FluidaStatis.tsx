@@ -37,12 +37,6 @@ export default function FluidaStatis() {
         <NavList title='Contoh Soal' href='ContohSoal' />
       </List>
       
-      <Gambar
-        src={FluidaStatisImage}
-        alt='Fluida Statis'
-        caption='Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termoFluidaStatis ke-0 dirumuskan.'
-      />
-      
       <AA1 id='Pengenalan' title='Pengenalan' />
       <A2 title='Apa itu Fluida Statis' />
       <A2 title='Siapa yang menggunakan Fluida Statis' />

@@ -1,6 +1,6 @@
 import ChapterBox from '@/components/ChapterBox';
 import Layout from '@/components/Layout';
-import { Title, SubTitle } from '@/components/Materi';
+import { Title, SubTitle, Topic } from '@/components/Materi';
 import Link from 'next/link';
 
 const matematika = () => {
@@ -10,13 +10,14 @@ const matematika = () => {
 
       <SubTitle name='Pelajari bahasa alam semesta melalui matematika.' />
 
-      <Link href='/matematika/glosarium'>
-        <a className='flex items-center justify-center p-2 mx-auto my-5 space-x-1 text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300'>
-          <Collection />
-          <p>Glosarium Matematika</p>
-        </a>
-      </Link>
+      <Topic name='Glosarium Matematika' />
+      <div className='grid grid-cols-1 gap-3 sm:grid-cols-3'>
+        <ChapterBox title='Konstanta' to='fisika/fisika_konstanta' />
+        <ChapterBox title='Variabel' to='fisika/fisika_variabel' />
+        <ChapterBox title='Satuan SI' to='fisika/fisika_satuanSI' />
+      </div>
 
+      <Topic name='Bab Matematika' />
       <section className='grid grid-cols-1 gap-3 sm:grid-cols-3'>
         <ChapterBox title='Lingkaran' to='matematika/Lingkaran' />
         <ChapterBox title='Integral' to='matematika/Integral' />

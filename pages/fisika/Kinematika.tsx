@@ -37,11 +37,7 @@ export default function Kinematika() {
         <NavList title='Contoh Soal' href='ContohSoal' />
       </List>
 
-      <Gambar
-        src={KinematikaImage}
-        alt='Kinematika'
-        caption='Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termoKinematika ke-0 dirumuskan.'
-      />
+     
       
       <AA1 id='Pengenalan' title='Pengenalan' />
       <A2 title='Apa itu Kinematika' />

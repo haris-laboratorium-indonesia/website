@@ -37,11 +37,7 @@ export default function Kesetimbangan() {
         <NavList title='Contoh Soal' href='ContohSoal' />
       </List>
 
-      <Gambar
-        src={KesetimbanganImage}
-        alt='Kesetimbangan'
-        caption='Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termodinamika ke-0 dirumuskan.'
-      />
+   
       
       <AA1 id='Pengenalan' title='Pengenalan' />
       <A2 title='Apa itu Kesetimbangan' />

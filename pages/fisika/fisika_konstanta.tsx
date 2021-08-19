@@ -10,7 +10,7 @@ export default function fisikaKonstanta() {
   return (
     <Layout browserTitle='Konstanta Fisika' description='Konstanta Fisika'>
       <AA1 id='Konstanta' title='Konstanta' />
-      <section className='mx-auto overflow-x-auto'>
+      <section className='mx-auto overflow-x-auto sm:gap-5 lg:px-0'>
         <table className='w-full min-w-full border table-max'>
           <THEAD>
             <Row>

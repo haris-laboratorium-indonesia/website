@@ -3,29 +3,31 @@ import Image from 'next/image';
 import haris from '../../public/haris.jpg';
 import Layout from '@/components/Layout';
 import { RightArrow } from '@/Icons';
+import { HiChevronLeft } from 'react-icons/hi';
 
-const ExternalLink = () => {
+const ArrowUpRight = () => {
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      className='w-6 h-6'
-      fill='none'
+      className='text-gray-500'
       viewBox='0 0 24 24'
+      width='24'
+      height='24'
       stroke='currentColor'
+      stroke-width='1.1'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+      fill='none'
+      shape-rendering='geometricPrecision'
     >
-      <path
-        strokeLinecap='round'
-        strokeLinejoin='round'
-        strokeWidth={1.5}
-        d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
-      />
+      <path d='M7 17L17 7' />
+      <path d='M7 7h10v10' />
     </svg>
   );
 };
 
-const Title = ({ name }) => {
+const Topic = ({ name }) => {
   return (
-    <div className='mb-3 text-xl font-semibold text-center text-gray-700 sm:text-left sm:text-2xl mt-14'>
+    <div className='mb-3 text-2xl font-semibold text-left text-gray-700 sm:text-2xl mt-14'>
       {name}
     </div>
   );
@@ -35,7 +37,7 @@ const GoIn = ({ to, textColor, title }) => {
   return (
     <Link href={`${to}`}>
       <a
-        className={` ${textColor} bg-gray-200 px-4 py-2 justify-between font-medium rounded-md  hover:bg-gray-300 flex `}
+        className={` ${textColor} bg-gray-200 pl-4 pr-1.5 py-2.5 sm:py-2 justify-between font-medium rounded-md  hover:bg-gray-300 flex `}
       >
         <div>{title}</div>
         <RightArrow color='' />
@@ -49,10 +51,10 @@ const GoOut = ({ to, textColor, title }) => {
     <a
       href={`${to}`}
       target='_blank'
-      className={`bg-gray-200 flex  font-medium hover:bg-gray-300 rounded-md px-4 py-2.5 sm:py-2 justify-between  ${textColor} `}
+      className={`bg-gray-200 flex  font-medium hover:bg-gray-300 rounded-md pl-4 pr-2.5 py-2.5 sm:py-2 justify-between `}
     >
-      <div>{title}</div>
-      <ExternalLink />
+      <div className={textColor}>{title}</div>
+      <ArrowUpRight />
     </a>
   );
 };
@@ -61,9 +63,12 @@ export default function aboutMe() {
   return (
     <Layout browserTitle='Harits Syah' description='HarisLab CEO'>
       <div className='bg-[#F5F5F7] min-h-screen'>
-        <div className='w-full max-w-4xl px-5 mx-auto my-10 sm:px-0 '>
-          <Link href='/'>
-            <a className='text-gray-500 hover:underline '>Back</a>
+        <div className='w-full max-w-5xl mx-auto my-10 '>
+          <Link href='/#footer'>
+            <a className='flex items-center text-gray-500 hover:underline'>
+              <HiChevronLeft className='w-6 h-6' />
+              <div>Back</div>
+            </a>
           </Link>
 
           <div className='flex items-center justify-center mt-10'>
@@ -76,8 +81,22 @@ export default function aboutMe() {
 
           <div className='mb-10 text-lg text-center text-gray-700'>Founder & CEO, HarisLab</div>
 
-          <Title name='Social Media & Contacts' />
-          <div className='grid w-full grid-cols-1 gap-4 sm:grid-cols-4'>
+          <Topic name='Websites' />
+          <div className='grid w-full grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4'>
+            <GoOut
+              to='https://www.aka-tradingindo.com'
+              textColor='text-emerald-500'
+              title='AKA Trading Indonesia'
+            />
+            <GoOut
+              to='https://www.harislab.com'
+              textColor='text-harislab'
+              title='Haris Laboratory'
+            />
+          </div>
+
+          <Topic name='Social Media & Contacts' />
+          <div className='grid w-full grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4'>
             <GoOut
               to='https://www.twitter.com/haritssr'
               textColor='text-[#1DA1F2]'
@@ -96,22 +115,8 @@ export default function aboutMe() {
             <GoOut to='tel:0895331103401' textColor='text-[#128C7E]' title='WhatsApp' />
           </div>
 
-          <Title name='Websites' />
-          <div className='grid w-full grid-cols-1 gap-4 sm:grid-cols-3 '>
-            <GoOut
-              to='https://www.aka-tradingindo.com'
-              textColor='text-green-500'
-              title='AKA Trading Indonesia'
-            />
-            <GoOut
-              to='https://www.harislab.com'
-              textColor='text-harislab'
-              title='Haris Laboratory'
-            />
-          </div>
-
-          <Title name='Mini Projects' />
-          <div className='grid grid-cols-1 gap-4 sm:grid-cols-4'>
+          <Topic name='Mini Projects' />
+          <div className='grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4' id='miniProject'>
             <GoIn title="Delba's Exp's" textColor='text-gray-700' to='/haris/delba' />
             <GoIn title='Framer Motion' textColor='text-pink-600' to='/haris/framer-motion' />
             <GoIn title='Number Game' textColor='text-gray-700' to='/haris/number-game' />
@@ -120,23 +125,8 @@ export default function aboutMe() {
             <GoIn title='Browser Title' textColor='text-orange-500' to='/haris/browser-title' />
           </div>
 
-          <Title name='Support Me' />
-          <div className='grid grid-cols-1 gap-4 sm:grid-cols-4'>
-            <GoOut title='Saweria' to='https://www.saweria.co/harislab' textColor='text-gray-800' />
-            <GoOut
-              title='Trakteer'
-              to='https://trakteer.id/harits-syah/tip'
-              textColor='text-gray-800'
-            />
-            <GoOut
-              title='Nih Buat Jajan'
-              to='https://www.nihbuatjajan.com/harislab'
-              textColor='text-gray-700'
-            />
-          </div>
-
-          <Title name='My Brain Food' />
-          <div className='grid grid-cols-1 gap-4 sm:grid-cols-4'>
+          <Topic name='My Brain Food' />
+          <div className='grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4'>
             <GoOut
               title='Apple Developer'
               to='https://developer.apple.com/videos/all-videos/'
@@ -155,8 +145,8 @@ export default function aboutMe() {
             />
           </div>
 
-          <Title name='Technology Stack' />
-          <div className='grid grid-cols-1 gap-4 sm:grid-cols-4'>
+          <Topic name='Technology Stack' />
+          <div className='grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4'>
             <GoOut
               title='html'
               to='https://developer.mozilla.org/en-US/docs/Web/HTML'
@@ -184,6 +174,21 @@ export default function aboutMe() {
             <GoOut title='supabase' to='https://supabase.io' textColor='text-emerald-600' />
             <GoOut title='firebase' to='https://firebase.google.com' textColor='text-orange-500' />
             <GoOut title='tailwindcss' to='https://tailwindcss.com' textColor='text-[#06B6D4]' />
+          </div>
+
+          <Topic name='Support Me' />
+          <div className='grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4'>
+            <GoOut title='Saweria' to='https://www.saweria.co/harislab' textColor='text-gray-800' />
+            <GoOut
+              title='Trakteer'
+              to='https://trakteer.id/harits-syah/tip'
+              textColor='text-gray-800'
+            />
+            <GoOut
+              title='Nih Buat Jajan'
+              to='https://www.nihbuatjajan.com/harislab'
+              textColor='text-gray-700'
+            />
           </div>
         </div>
       </div>

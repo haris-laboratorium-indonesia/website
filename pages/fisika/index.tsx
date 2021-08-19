@@ -1,6 +1,6 @@
 import ChapterBox from '@/components/ChapterBox';
 import Layout from '@/components/Layout';
-import { Title, SubTitle } from '@/components/Materi';
+import { Title, SubTitle, Topic, SubTopic } from '@/components/Materi';
 import Link from 'next/link';
 import { RightArrow } from '@/Icons';
 
@@ -11,19 +11,14 @@ const fisika = () => {
 
       <SubTitle name='Pelajari cara kerja engineering dan alam semesta melalui fisika.' />
 
-      <div className='mb-3 text-xl font-semibold text-center text-gray-700 sm:text-left sm:text-2xl mt-14'>
-        Glosarium Fisika
-      </div>
+      <Topic name='Glosarium Fisika' />
       <div className='grid grid-cols-1 gap-3 sm:grid-cols-3'>
         <ChapterBox title='Konstanta' to='fisika/fisika_konstanta' />
         <ChapterBox title='Variabel' to='fisika/fisika_variabel' />
         <ChapterBox title='Satuan SI' to='fisika/fisika_satuanSI' />
       </div>
 
-      <div className='mb-3 text-xl font-semibold text-center text-gray-700 sm:text-left sm:text-2xl mt-14'>
-        Bab Fisika
-      </div>
-
+      <Topic name='Bab Fisika' />
       <section className='grid grid-cols-1 gap-3 sm:grid-cols-3'>
         <ChapterBox title='Fluida Statis' to='fisika/FluidaStatis' />
         <ChapterBox title='Fluida Dinamis' to='fisika/FluidaDinamis' />

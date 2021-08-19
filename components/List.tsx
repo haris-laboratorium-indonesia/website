@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Menu } from '@headlessui/react';
-
+import { Collection } from '@/components/Icons';
 export const a = 'block text-gray-200 hover:bg-harislab hover:text-white rounded px-2 py-1';
 export const b = '';
 
@@ -13,7 +13,7 @@ export default function List({ branch, to, title, children }) {
             <section className='flex items-center justify-between w-full mx-auto bg-white border border-gray-300 rounded-lg drop-shadow-2xl sm:w-1/2'>
               <Link href={`/${branch}`}>
                 <a className='z-50 block px-3 py-2 text-sm rounded-lg '>
-                  <Collection />
+                  <Collection color='' />
                 </a>
               </Link>
 
@@ -64,25 +64,6 @@ const ChevronDown = () => {
       fill='none'
     >
       <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' />
-    </svg>
-  );
-};
-
-const Collection = () => {
-  return (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      className='w-6 h-6 text-gray-700 hover:text-harislab'
-      fill='none'
-      viewBox='0 0 24 24'
-      stroke='currentColor'
-    >
-      <path
-        strokeLinecap='round'
-        strokeLinejoin='round'
-        strokeWidth={2}
-        d='M4 6h16M4 12h16M4 18h16'
-      />
     </svg>
   );
 };

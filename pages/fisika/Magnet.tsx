@@ -36,19 +36,13 @@ export default function Magnet() {
         <NavList title='Pembahasan' href='Pembahasan' />
         <NavList title='Contoh Soal' href='ContohSoal' />
       </List>
-      
-      <Gambar
-        src={MagnetImage}
-        alt='Magnet'
-        caption='Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termoMagnet ke-0 dirumuskan.'
-      />
-      
+
       <AA1 id='Pengenalan' title='Pengenalan' />
       <A2 title='Apa itu Magnet' />
       <A2 title='Siapa yang menggunakan Magnet' />
       <A2 title='Dimana Magnet digunakan' />
       <A2 title='Kapan Magnet digunakan' />
-      
+
       <AA1 id='Konstanta' title='Konstanta' />
       <section className='overflow-x-auto '>
         <table className='w-full min-w-full border table-max'>
@@ -73,7 +67,7 @@ export default function Magnet() {
           </Body>
         </table>
       </section>
-      
+
       <AA1 id='Variabel' title='Variabel' />
       <section className='mx-auto overflow-x-auto sm:gap-5 lg:px-0'>
         <table className='w-full min-w-full border table-max'>
@@ -100,7 +94,7 @@ export default function Magnet() {
           </Body>
         </table>
       </section>
-      
+
       <AA1 id='Rumus' title='Rumus' />
       <div className='grid grid-cols-1 sm:grid-cols-2'>
         {MagnetRumus.map(a => (
@@ -114,7 +108,7 @@ export default function Magnet() {
           </article>
         ))}
       </div>
-      
+
       <AA1 id='PenurunanRumus' title='Penurunan Rumus' />
       <P>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. A laudantium optio earum autem
@@ -132,7 +126,7 @@ export default function Magnet() {
         quae error laudantium incidunt odit inventore unde enim molestias voluptates aut est, facere
         earum adipisci?
       </P>
-      
+
       <AA1 id='ContohSoal' title='Contoh Soal' />
       <P>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa consequatur qui optio

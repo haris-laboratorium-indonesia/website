@@ -37,12 +37,7 @@ export default function GelombangBunyi() {
         <NavList title='Contoh Soal' href='ContohSoal' />
       </List>
       
-      <Gambar
-        src={GelombangBunyiImage}
-        alt='Gelombang Bunyi'
-        caption='Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termodinamika ke-0 dirumuskan.'
-      />
-      
+    
       <AA1 id='Pengenalan' title='Pengenalan' />
       <A2 title='Apa itu Gelombang Bunyi' />
       <A2 title='Siapa yang menggunakan Gelombang Bunyi' />

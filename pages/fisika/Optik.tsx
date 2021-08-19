@@ -35,18 +35,12 @@ export default function Optik() {
         <NavList title='Contoh Soal' href='ContohSoal' />
       </List>
 
-      <Gambar
-        src={OptikImage}
-        alt='Optik'
-        caption='Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termoOptik ke-0 dirumuskan.'
-      />
-      
       <AA1 id='Pengenalan' title='Pengenalan' />
       <A2 title='Apa itu Optik' />
       <A2 title='Siapa yang menggunakan Optik' />
       <A2 title='Dimana Optik digunakan' />
       <A2 title='Kapan Optik digunakan' />
-      
+
       <AA1 id='Konstanta' title='Konstanta' />
       <section className='overflow-x-auto '>
         <table className='w-full min-w-full border table-max'>
@@ -59,7 +53,7 @@ export default function Optik() {
           </THEAD>
         </table>
       </section>
-      
+
       <AA1 id='Variabel' title='Variabel' />
       <section className='overflow-x-auto'>
         <table className='w-full min-w-full border table-max'>
@@ -72,7 +66,7 @@ export default function Optik() {
           </THEAD>
         </table>
       </section>
-      
+
       <AA1 id='Rumus' title='Rumus' />
       <div className='grid grid-cols-1 sm:grid-cols-2'></div>
       <div className='grid grid-cols-1 sm:grid-cols-2'>
@@ -83,7 +77,7 @@ export default function Optik() {
           </article>
         ))}
       </div>
-      
+
       <AA1 id='PenurunanRumus' title='Penurunan Rumus' />
       <P>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. A laudantium optio earum autem
@@ -92,7 +86,7 @@ export default function Optik() {
         harum dolorum fugit omnis nostrum deleniti exercitationem, magnam nam voluptatem voluptates,
         laudantium consequuntur ad facilis.
       </P>
-      
+
       <AA1 id='Pembahasan' title='Pembahasan' />
       <P>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolorum cupiditate
@@ -101,7 +95,7 @@ export default function Optik() {
         quae error laudantium incidunt odit inventore unde enim molestias voluptates aut est, facere
         earum adipisci?
       </P>
-      
+
       <AA1 id='ContohSoal' title='Contoh Soal' />
       <P>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa consequatur qui optio

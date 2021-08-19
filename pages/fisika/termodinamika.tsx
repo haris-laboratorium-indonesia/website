@@ -37,12 +37,6 @@ export default function Termodinamika() {
         <NavList title='Contoh Soal' href='ContohSoal' />
       </List>
 
-      <Gambar
-        src={TermodinamikaImage}
-        alt='Termodinamika'
-        caption='Gambar 1 : Gunung di Lauterbrunnen Swiss, tempat dimana rumus termodinamika ke-0 dirumuskan.'
-      />
-      
       <AA1 id='Pengenalan' title='Pengenalan' />
       <A2 title='Apa itu Termodinamika' />
       <P>
@@ -81,7 +75,7 @@ export default function Termodinamika() {
       <P>Semua hal di dunia menggunakan prinsip termodinamika.</P>
       <A2 title='Kapan Termodinamika digunakan' />
       <P>Selama matahari masih menyinari bumi.</P>
-      
+
       <AA1 id='Konstanta' title='Konstanta' />
       <section className='overflow-x-auto '>
         <table className='w-full min-w-full border table-max'>
@@ -116,7 +110,7 @@ export default function Termodinamika() {
           </Body>
         </table>
       </section>
-      
+
       <AA1 id='Variabel' title='Variabel' />
       <section className='overflow-x-auto'>
         <table className='w-full min-w-full border table-max'>
@@ -143,7 +137,7 @@ export default function Termodinamika() {
           </Body>
         </table>
       </section>
-      
+
       <AA1 id='Rumus' title='Rumus' />
       <div className='grid grid-cols-1 sm:grid-cols-2'>
         {TermodinamikaRumus.map(a => (
@@ -157,7 +151,7 @@ export default function Termodinamika() {
           </article>
         ))}
       </div>
-      
+
       <AA1 id='PenurunanRumus' title='Penurunan Rumus' />
       <P>
         Math Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim provident tenetur?
@@ -178,7 +172,7 @@ export default function Termodinamika() {
         magni labore, sapiente repellat nam libero explicabo aspernatur rerum facere, incidunt
         eligendi consequatur magnam inventore voluptatem illo. Nihil, asperiores!
       </P>
-      
+
       <AA1 id='Pembahasan' title='Pembahasan' />
       <P>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore laborum dignissimos odit
@@ -191,7 +185,7 @@ export default function Termodinamika() {
         totam eligendi inventore est ab repudiandae? Soluta, obcaecati ducimus corrupti vel quod
         quasi totam ipsum debitis?
       </P>
-      
+
       <AA1 id='ContohSoal' title='Contoh Soal' />
       <P>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero enim provident tenetur? Earum

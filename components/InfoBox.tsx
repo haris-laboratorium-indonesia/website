@@ -1,30 +1,39 @@
 import Link from 'next/link';
 
-const InfoBox = ({ svg, name, description, color, borderColor, to }) => {
+import { HiChevronRight } from 'react-icons/hi';
+
+const InfoBox = ({ svg, name, description, color, to }) => {
   return (
-    <div className='px-2 sm:px-0'>
-      {/* Icon */}
-      <div className='pl-3'>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          className={`w-8 h-8 ${color}`}
-          // responsive="none"
-          viewBox='0 0 24 24'
-          stroke='currentColor'
-          fill='#ffffff'
-        >
-          <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d={svg} />
-        </svg>
+    <div className='flex flex-col justify-between px-4 pt-4 pb-2 space-y-3 bg-white rounded-lg shadow-lg'>
+      <div className='space-y-2'>
+        <div className='flex flex-row-reverse justify-between mb-4'>
+          {/* Icon */}
+          <div className=''>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              className={`w-9 h-9 ${color}`}
+              // responsive="none"
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+              fill='#ffffff'
+            >
+              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d={svg} />
+            </svg>
+          </div>
+          {/* Name */}
+          <div>
+            <div className='w-1/2 font-semibold leading-tight text-gray-800'>{name}</div>
+          </div>
+        </div>
+        {/* description */}
+        <div className='text-gray-600 '>{description}</div>
       </div>
-      {/* Name */}
-      <div className={`pl-3 mt-3 mb-2 border-l-[1.5px] ${borderColor}`}>
-        <div className='font-semibold text-gray-800 '>{name}</div>
-      </div>
-      {/* description */}
-      <div className='pl-3 text-gray-700'>{description}</div>
       {/* Read more */}
       <Link href={to}>
-        <a className='pl-3 text-blue-500 hover:text-harislab hover:underline'>Baca lebih lanjut</a>
+        <a className='flex items-center space-x-1 text-blue-500 hover:text-harislab hover:underline'>
+          <div className='mb-0.5'>Selengkapnya</div>
+          <HiChevronRight className='w-5 h-5' />
+        </a>
       </Link>
     </div>
   );
