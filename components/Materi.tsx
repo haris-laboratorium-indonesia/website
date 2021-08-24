@@ -156,7 +156,7 @@ export function ButtonTertiary({ name }) {
 export function InternalLink({ name, to }) {
   return (
     <Link href={to}>
-      <a className='flex items-center py-2.5 text-harislab hover:underline cursor-pointer space-x-2 text-lg'>
+      <a className='flex items-center py-2.5 text-harislab hover:underline cursor-pointer space-x-2 '>
         {name}
         <RightArrow />
       </a>
@@ -168,7 +168,7 @@ export function ExternalLink({ name, to }) {
   return (
     <a
       href={to}
-      className='flex items-center space-x-2 py-2.5  text-lg text-harislab hover:underline cursor-pointer '
+      className='flex items-center  py-2.5  text-harislab hover:underline cursor-pointer '
     >
       <div>{name}</div>
       <ArrowUpRight />

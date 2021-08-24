@@ -6,7 +6,7 @@ import { RightArrow } from '@/Icons';
 import { HiChevronLeft } from 'react-icons/hi';
 import { Title, SubTitle, Topic } from '@/components/Materi';
 
-export default function aboutMe() {
+export default function Tentang() {
   return (
     <Layout browserTitle='Tentang' description='Tentang Haris Laboratory'>
       <div className='bg-[#F5F5F7] min-h-screen'>

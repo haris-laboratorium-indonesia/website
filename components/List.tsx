@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { Menu } from '@headlessui/react';
 import { Collection } from '@/components/Icons';
 export const a = 'block text-gray-200 hover:bg-harislab hover:text-white rounded px-2 py-1';
-export const b = '';
 
 export default function List({ branch, to, title, children }) {
   return (

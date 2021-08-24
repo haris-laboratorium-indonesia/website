@@ -3,7 +3,7 @@ import { Title, SubTitle } from '@/components/Materi';
 //Box
 //data biaya
 
-export default function biaya() {
+export default function Biaya() {
   const title = 'text-gray-500 font-semibold text-2xl mb-5';
   return (
     <Layout description='y' browserTitle='Biaya'>

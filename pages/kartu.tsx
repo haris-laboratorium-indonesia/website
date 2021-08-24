@@ -2,9 +2,9 @@ import Layout from '../components/Layout';
 import { Title, SubTitle } from '@/components/Materi';
 import Image from 'next/image';
 
-export default function kartu() {
+export default function Kartu() {
   return (
-    <Layout browserTitle='Kartu' description='Flash Card untuk belajar'>
+    <Layout browserTitle='Kartu' description='Kartu Haris Laboratory'>
       <Title name='Kartu' />
 
       <div className='mb-5 -mt-5 text-center'>Mengingat kembali yang telah kamu pelajari.</div>

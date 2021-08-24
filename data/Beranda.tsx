@@ -134,3 +134,38 @@ export const matematikaChapterData = [
   { title: 'Statistika', to: 'matematika/Statistika' },
   { title: 'Peluang', to: 'matematika/Peluang' },
 ];
+
+export const WhatWhatYouCanDo = [
+  {
+    title: 'Referensi',
+    svg: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
+    to: '/referensi',
+    fiturs: [{ fitur: 'Baca Materi' }, { fitur: 'Contoh Soal' }, { fitur: 'Penurunan Rumus' }],
+    desc: 'Sumber informasi matematika dan fisika dari jenjang sd sampai sma. Dilengkapi dengan fitur rumus, penurunan rumus, dan contoh soal serta konstanta-konstanta yang lengkap.',
+  },
+  {
+    title: 'Kalkulasi',
+    svg: 'M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z',
+    to: '/kalkulasi',
+    fiturs: [
+      { fitur: 'Kalkulator Klasik' },
+      { fitur: 'Kalkulator Saintifik' },
+      { fitur: 'Kalkulator Rumus' },
+    ],
+    desc: 'Dalam proses belajar, siswa membutuhkan perhitungan yang cepat dan akurat. Dalam bidang sains, tidak hanya kalkulator biasa, namun kita juga butuh kalkulator saintifik dan kalkulator rumus.',
+  },
+  {
+    title: 'Animasi',
+    svg: 'M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z',
+    to: '/animasi',
+    fiturs: [{ fitur: 'Les ke rumah' }, { fitur: 'Booking Les' }, { fitur: 'Paket Les' }],
+    desc: 'Tidak semua guru kompeten mengajar,sehingga banyak murid mendatangkan guru bimbel ke rumahnya. Kamu bisa pesan bimbel ke rumah dari HarisLab dengan mudah dan nyaman.',
+  },
+  {
+    title: 'Bimbel',
+    svg: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6',
+    to: '/bimbel',
+    fiturs: [{ fitur: 'Les ke rumah' }, { fitur: 'Booking Les' }, { fitur: 'Paket Les' }],
+    desc: 'Tidak semua guru kompeten mengajar,sehingga banyak murid mendatangkan guru bimbel ke rumahnya. Kamu bisa pesan bimbel ke rumah dari HarisLab dengan mudah dan nyaman.',
+  },
+];

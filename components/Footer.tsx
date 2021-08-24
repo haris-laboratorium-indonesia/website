@@ -29,20 +29,17 @@ export default function Footer() {
           {/* Lainnya */}
           <div className='font-medium text-gray-800 text-tiny sm:text-base'>Lainnya</div>
           <div className='w-full space-y-2'>
-            <Link href='/store'>
-              <a className={a}>Store</a>
+            <Link href='/toko'>
+              <a className={a}>Toko</a>
             </Link>
-            <Link href='/biaya'>
-              <a className={a}>Biaya</a>
-            </Link>
-            <Link href='/design'>
+            <Link href='/desain'>
               <a className={a}>Desain</a>
-            </Link>
-            <Link href='/#support'>
-              <a className={a}>Dukung</a>
             </Link>
             <Link href='/tentang'>
               <a className={a}>Tentang</a>
+            </Link>
+            <Link href='/biaya'>
+              <a className={a}>Biaya</a>
             </Link>
           </div>
         </div>

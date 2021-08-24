@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { HiOutlineSearch } from 'react-icons/hi';
 
-const NavDesktop = () => {
+export default function NavDesktop() {
   const nav = 'p-2 duration-200 hover:text-white text-gray-300 text-tiny block font-inter';
   return (
     <nav className='hidden md:block'>
@@ -72,6 +72,4 @@ const NavDesktop = () => {
       </nav>
     </nav>
   );
-};
-
-export default NavDesktop;
+}

@@ -9,7 +9,7 @@ import Link from 'next/link';
 //Opener
 //DaftarIsi
 
-export default function () {
+export default function Bimbel() {
   return (
     <Layout browserTitle='Bimbel' description='Booking Les tidak pernah semudah ini'>
       <Title name='Bimbel' />

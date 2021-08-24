@@ -12,10 +12,13 @@ import {
 } from '@/components/Materi';
 import { RightArrow } from '@/components/Icons';
 import { UXData, ColorsData } from 'data/Design';
+import Inspirasi from '@/components/Inspirasi';
+import Link from 'next/link';
+import { ColorsBox } from '@/components/ColorBox';
 //ColorsBox
 //ArrowUpRight
 
-export default function Design() {
+export default function Desain() {
   return (
     <Layout browserTitle='Sistem Desain' description='Sistem Desain HarisLab'>
       <Title name='Sistem Desain' />
@@ -35,6 +38,22 @@ export default function Design() {
         <ButtonTertiary name='Button Tertiary' />
         <InternalLink name='Internal Link' to='/design' />
         <ExternalLink name='External Link' to='/design' />
+        <Link href='/desain'>
+          <a
+            className={` text-gray-700 border border-gray-400 pl-4 pr-1.5 py-2.5 sm:py-2 justify-between font-medium rounded-md  hover:bg-gray-200 flex `}
+          >
+            <div>Internal Link v2</div>
+            <RightArrow color='' />
+          </a>
+        </Link>
+        <a
+          href='/desain'
+          target='_blank'
+          className={` border border-gray-400 flex  font-medium hover:bg-gray-200 rounded-md pl-4 pr-2.5 py-2.5 sm:py-2 justify-between `}
+        >
+          <div className='text-gray-700'>External Link v2</div>
+          <ArrowUpRight />
+        </a>
       </div>
 
       <Topic name='Typography' />
@@ -67,20 +86,14 @@ export default function Design() {
           </div>
         ))}
       </div>
+
+      <Topic name='Inspirasi' />
+      <Inspirasi />
     </Layout>
   );
 }
 
-const ColorsBox = ({ color, name, code }) => {
-  return (
-    <div className='flex flex-col space-y-1 '>
-      <div className={`w-16 h-16 rounded-md ${color} drop-shadow-xl mb-1`}></div>
-      <div className='text-sm font-medium text-gray-700'>{name}</div>
-      <div className='text-sm text-gray-600'>{code}</div>
-      <div className='text-sm text-gray-600'>{color}</div>
-    </div>
-  );
-};
+
 
 const ArrowUpRight = () => {
   return (

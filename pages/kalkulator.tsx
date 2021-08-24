@@ -2,7 +2,7 @@ import Layout from '@/components/Layout';
 import { Title, SubTitle } from '@/components/Materi';
 import { useState, useEffect } from 'react';
 
-export default function kalkulator() {
+export default function Kalkulator() {
   return (
     <Layout browserTitle='Kalkulator' description='Kalkulator'>
       <Title name='Kalkulator' />

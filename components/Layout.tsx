@@ -3,7 +3,7 @@ import Footer from './Footer';
 import NavDesktop from './NavDesktop';
 import NavMobile from './NavMobile';
 
-const Layout = ({ children, browserTitle, description }) => {
+export default function Layout({ children, browserTitle, description }) {
   const image = 'https://harislab.com/public/HarisLab.png';
   const type = 'website';
   return (
@@ -37,6 +37,4 @@ const Layout = ({ children, browserTitle, description }) => {
       <Footer />
     </div>
   );
-};
-
-export default Layout;
+}

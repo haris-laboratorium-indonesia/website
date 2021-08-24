@@ -11,36 +11,30 @@ export default function NavMobile() {
           <span className='font-light text-gray-400'>Lab</span>
         </a>
       </Link>
-
-      <NavMobileX />
+      <Menu as='div' className=''>
+        {({ open }) => (
+          <>
+            <Menu.Button className='z-50 flex  py-2.5 px-4 rounded-md focus:outline-none'>
+              {open ? (
+                <X color='text-white hover:text-gray-300' />
+              ) : (
+                <TwoLines color='text-white hover:text-gray-300 ' />
+              )}
+            </Menu.Button>
+            <Menu.Items className='absolute top-0 right-0 z-50 w-full min-h-screen p-5 mt-12 bg-gray-800'>
+              <Search />
+              <section className='grid grid-cols-1 p-5 divide-y divide-gray-600'>
+                <NavLinkMobile to='referensi' title='Referensi' />
+                <NavLinkMobile to='kalkulator' title='Kalkulasi' />
+                <NavLinkMobile to='animasi' title='Animasi' />
+                <NavLinkMobile to='bimbel' title='Bimbel' />
+              </section>
+            </Menu.Items>
+          </>
+        )}
+      </Menu>
+      );
     </nav>
-  );
-}
-
-function NavMobileX() {
-  return (
-    <Menu as='div' className=''>
-      {({ open }) => (
-        <>
-          <Menu.Button className='z-50 flex  py-2.5 px-4 rounded-md focus:outline-none'>
-            {open ? (
-              <X color='text-white hover:text-gray-300' />
-            ) : (
-              <TwoLines color='text-white hover:text-gray-300 ' />
-            )}
-          </Menu.Button>
-          <Menu.Items className='absolute top-0 right-0 z-50 w-full min-h-screen p-5 mt-12 bg-gray-800'>
-            <Search />
-            <section className='grid grid-cols-1 p-5 divide-y divide-gray-600'>
-              <NavLinkMobile to='referensi' title='Referensi' />
-              <NavLinkMobile to='kalkulator' title='Kalkulasi' />
-              <NavLinkMobile to='animasi' title='Animasi' />
-              <NavLinkMobile to='bimbel' title='Bimbel' />
-            </section>
-          </Menu.Items>
-        </>
-      )}
-    </Menu>
   );
 }
 

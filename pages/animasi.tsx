@@ -1,8 +1,9 @@
 import Layout from '@/components/Layout';
 import { SubTitle, Title } from '@/components/Materi';
-export default function animasi() {
+
+export default function Animasi() {
   return (
-    <Layout browserTitle='Animasi' description='Animasi - Haris Lab'>
+    <Layout browserTitle='Animasi' description='Animasi Haris Lab'>
       <Title name='Animasi' />
       <SubTitle name='Animasi matematika dan fisika yang bisa kamu kendalikan.' />
       <div className='flex items-center justify-center mx-auto h-72'>

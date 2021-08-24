@@ -1,9 +1,6 @@
 export default function Inspirasi() {
   return (
     <div className='mb-32 sm:mb-60'>
-      <div className='mb-10 text-2xl font-semibold text-left text-gray-800 sm:text-3xl'>
-        Inspirasi. <span className='text-gray-500'>Bagaimana website ini dibuat.</span>
-      </div>
       <section className='grid grid-cols-1 gap-5 font-medium text-center sm:grid-cols-2'>
         <Box to='https://www.tailwindcss.com' title='Tailwind CSS' textColor='text-[#06B6D4]' />
         <Box to='https://www.nngroup.com' title='NNGroup' textColor='text-rose-500' />
