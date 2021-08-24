@@ -6,31 +6,10 @@ import Image from 'next/image';
 import { Disclosure } from '@headlessui/react';
 import { HiOutlineChevronDown, HiChevronRight } from 'react-icons/hi';
 import Link from 'next/link';
-import { getSession, signIn } from 'next-auth/client';
-import { useState, useEffect } from 'react';
 //Opener
 //DaftarIsi
 
 export default function () {
-  const [loading, setLoading] = useState(true);
-
-  //blank array is used if we only want useEffect once
-  useEffect(() => {
-    const securePage = async () => {
-      const session = await getSession();
-      if (!session) {
-        signIn();
-      } else {
-        setLoading(false);
-      }
-    };
-    securePage();
-  }, []);
-
-  if (loading) {
-    return <h2>Loading...</h2>;
-  }
-
   return (
     <Layout browserTitle='Bimbel' description='Booking Les tidak pernah semudah ini'>
       <Title name='Bimbel' />

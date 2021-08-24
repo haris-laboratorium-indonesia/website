@@ -8,12 +8,9 @@ import Inspirasi from '@/components/Inspirasi';
 import GambarBeranda from '../public/Img.svg';
 import WhatYouCanDo from '@/components/Beranda/WhatYouCanDo';
 import { FiturBox } from '@/components/Beranda/WhatYouCanDo';
-import { useSession } from 'next-auth/client';
 import { SayaPeduliTentang, CaraSayaMenyampaikanInformasi, isiFAQ } from '../data/Beranda';
 
 export default function Beranda() {
-  const [session, loading] = useSession();
-  console.log({ session, loading });
   const tr: string = 'divide-y divide-x divide-cyan-500';
   const td: string = ' text-left text-sm p-2';
   const th: string = 'p-2 text-left text-base font-medium text-cyan-500 bg-cyan-50';
@@ -48,8 +45,6 @@ export default function Beranda() {
           <Image src={GambarBeranda} width={400} height={400} priority />
         </section>
       </section>
-
-      <div>{session ? `${session.user.name}, ` : ''} Welcome to Haris Laboratory</div>
 
       {/* Fitur */}
       <div id='fitur' className='mb-32 sm:mb-60 '>
