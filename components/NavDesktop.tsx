@@ -1,11 +1,7 @@
 import Link from 'next/link';
 import { HiOutlineSearch } from 'react-icons/hi';
-import { signIn, signOut, useSession } from 'next-auth/client';
 
 const NavDesktop = () => {
-  const [session, loading] = useSession();
-  console.log({ session, loading });
-
   const nav = 'p-2 duration-200 hover:text-white text-gray-300 text-tiny block font-inter';
   return (
     <nav className='hidden md:block'>
@@ -56,35 +52,22 @@ const NavDesktop = () => {
               />
             </svg>
           </div>
-          {!loading && !session && (
-            <Link href='/api/auth/signin'>
-              <a
-                onClick={e => {
-                  e.preventDefault();
-                  signIn('github');
-                }}
-              >
-                <div className='px-3 pb-1 text-sm text-gray-300 duration-200 rounded-md pt-0.5 bg-gray-700 border-gray-600 border hover:bg-opacity-80 '>
-                  Sign In
-                </div>
-              </a>
-            </Link>
-          )}
 
-          {session && (
-            <Link href='/api/auth/signout'>
-              <a
-                onClick={e => {
-                  e.preventDefault();
-                  signOut();
-                }}
-              >
-                <div className='px-3 pb-1 text-sm text-gray-300 duration-200 rounded-md pt-0.5 bg-gray-700 border-gray-600 border hover:bg-opacity-80 '>
-                  Sign Out
-                </div>
-              </a>
-            </Link>
-          )}
+          <Link href='/api/auth/signin'>
+            <a>
+              <div className='px-3 pb-1 text-sm text-gray-300 duration-200 rounded-md pt-0.5 bg-gray-700 border-gray-600 border hover:bg-opacity-80 '>
+                Sign In
+              </div>
+            </a>
+          </Link>
+
+          <Link href='/api/auth/signout'>
+            <a>
+              <div className='px-3 pb-1 text-sm text-gray-300 duration-200 rounded-md pt-0.5 bg-gray-700 border-gray-600 border hover:bg-opacity-80 '>
+                Sign Out
+              </div>
+            </a>
+          </Link>
         </div>
       </nav>
     </nav>
