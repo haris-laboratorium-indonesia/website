@@ -88,6 +88,49 @@ export const isiFAQ = [
 ];
 
 export const ContentData = [{ title: 'matematika' }, { title: 'fisika' }, { title: 'kartu' }];
+
 export const BoxData = ({ title }) => {
   return <div className='p-2 bg-gray-200 rounded-md hover:bg-gray-300'>{title}</div>;
 };
+
+export const fisikaChapterData = [
+  { title: 'Fluida Statis', to: 'fisika/FluidaStatis' },
+  { title: 'Fluida Dinamis', to: 'fisika/FluidaDinamis' },
+  { title: 'Listrik Statis', to: 'fisika/ListrikStatis' },
+  { title: 'Listrik Dinamis', to: 'fisika/ListrikDinamis' },
+  { title: 'Gelombang Mekanik', to: 'fisika/GelombangMekanik' },
+  { title: 'Gelombang Bunyi', to: 'fisika/GelombangBunyi' },
+  { title: 'Gelombang Elektromagnetik', to: 'fisika/GelombangElektromagnetik' },
+  { title: 'Kinematika', to: 'fisika/Kinematika' },
+  { title: 'Dinamika', to: 'fisika/Dinamika' },
+  { title: 'Kesetimbangan', to: 'fisika/Kesetimbangan' },
+  { title: 'Termodinamika', to: 'fisika/Termodinamika' },
+  { title: 'Besaran Dan Pengukuran', to: 'fisika/BesaranDanPengukuran' },
+  { title: 'Radiasi Benda Hitam', to: 'fisika/RadiasiBendaHitam' },
+  { title: 'Relativitas Khusus', to: 'fisika/RelativitasKhusus' },
+  { title: 'Kuantum', to: 'fisika/Kuantum' },
+  { title: 'Inti', to: 'fisika/Inti' },
+  { title: 'Magnet', to: 'fisika/Magnet' },
+  { title: 'Optik', to: 'fisika/Optik' },
+];
+
+export const matematikaChapterData = [
+  { title: 'Lingkaran', to: 'matematika/Lingkaran' },
+  { title: 'Integral', to: 'matematika/Integral' },
+  { title: 'Linear', to: 'matematika/Linear' },
+  { title: 'Kuadrat', to: 'matematika/Kuadrat' },
+  { title: 'Suku Banyak', to: 'matematika/SukuBanyak' },
+  { title: 'Matriks', to: 'matematika/Matriks' },
+  { title: 'Transformasi Geometri', to: 'matematika/TransformasiGeometri' },
+  { title: 'Geometri', to: 'matematika/Geometri' },
+  { title: 'Trigonometri', to: 'matematika/Trigonometri' },
+  { title: 'Logaritma', to: 'matematika/Logaritma' },
+  { title: 'Eksponen', to: 'matematika/Eksponen' },
+  { title: 'Turunan', to: 'matematika/Turunan' },
+  { title: 'Limit', to: 'matematika/Limit' },
+  { title: 'Dimensi 3', to: 'matematika/Dimensi3' },
+  { title: 'Vektor', to: 'matematika/Vektor' },
+  { title: 'Barisan Deret', to: 'matematika/BarisanDeret' },
+  { title: 'Statistika', to: 'matematika/Statistika' },
+  { title: 'Peluang', to: 'matematika/Peluang' },
+];

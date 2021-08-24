@@ -1,17 +1,19 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import FAQ from '../components/FAQ';
-import InfoBox from '../components/InfoBox';
+import InfoBox from '../components/Beranda/InfoBox';
 import Layout from '../components/Layout';
 import Support from '@/components/Support';
 import Inspirasi from '@/components/Inspirasi';
-import Image from 'next/image';
-import { Topic, SubTopic } from '@/components/Materi';
-import { isiFAQ } from '../data/Beranda';
-import { SayaPeduliTentang } from '../data/Beranda';
-import { CaraSayaMenyampaikanInformasi } from '../data/Beranda';
-import TextSlider from '@/components/delba/TextSlider';
+import GambarBeranda from '../public/Img.svg';
+import WhatYouCanDo from '@/components/Beranda/WhatYouCanDo';
+import { FiturBox } from '@/components/Beranda/WhatYouCanDo';
+import { useSession } from 'next-auth/client';
+import { SayaPeduliTentang, CaraSayaMenyampaikanInformasi, isiFAQ } from '../data/Beranda';
 
 export default function Beranda() {
+  const [session, loading] = useSession();
+  console.log({ session, loading });
   const tr: string = 'divide-y divide-x divide-cyan-500';
   const td: string = ' text-left text-sm p-2';
   const th: string = 'p-2 text-left text-base font-medium text-cyan-500 bg-cyan-50';
@@ -19,39 +21,50 @@ export default function Beranda() {
   return (
     <Layout browserTitle='Beranda' description='Laboratorium untuk Pelajar.'>
       {/* Hero */}
-      <section className='relative z-40 flex flex-col w-full mt-20 mb-20 sm:mb-60 font-inter'>
-        <TextSlider slides={['Referensi.', 'Kalkulasi.', 'Animasi.']} />
-        <div className='my-5 text-lg leading-tight text-center text-gray-700 sm:text-xl'>
-          Tempat terbaik untuk <span className='underline'>referensi</span>,{' '}
-          <span className='underline'>kalkulasi</span>, <span className='underline'>animasi</span>{' '}
-          Matematika dan Fisika.
-        </div>
-        <div className='grid w-4/5 grid-cols-1 gap-4 mx-auto sm:grid-cols-2 md:w-1/2'>
-          <Link href='/#fitur'>
-            <a className='inline-block px-6 py-2 text-lg text-center text-white duration-200 rounded-md hover:bg-opacity-80 bg-harislab '>
-              Lihat fitur
-            </a>
-          </Link>
-          <Link href='/#support'>
-            <a className='inline-block px-6 py-2 text-lg text-center text-gray-700 duration-200 border border-gray-700 rounded-md cursor-pointer hover:border-gray-400 hover:text-gray-500 '>
-              Dukung kami
-            </a>
-          </Link>
-        </div>
+      <section className='grid grid-cols-1 gap-10 mt-10 mb-32 border-b border-gray-400 md:pb-0 sm:pb-5 sm:gap-5 sm:mb-60 sm:grid-cols-2'>
+        <section className='flex flex-col items-center justify-center '>
+          <div className='text-3xl font-bold leading-tight text-gray-800 sm:text-4xl lg:text-landingPage lg:leading-tight '>
+            Tempat untuk referensi, kalkulasi, animasi, bimbel matematika dan fisika.
+          </div>
+          <div className='mt-2 mb-5 text-gray-700'>
+            Penuhi kebutuhan matematika dan fisika kalian dari jenjang sd hingga kuliah di Haris
+            Laboratory.
+          </div>
+
+          <div className='grid w-full grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2'>
+            <Link href='/#fitur'>
+              <a className='py-2.5 text-center text-white rounded-md bg-harislab hover:bg-opacity-80'>
+                Lihat fitur
+              </a>
+            </Link>
+            <Link href='/#support'>
+              <a className='py-2.5 text-center border rounded-md border-harislab text-harislab hover:bg-blue-50 '>
+                Dukung kami
+              </a>
+            </Link>
+          </div>
+        </section>
+        <section className='flex items-center justify-center'>
+          <Image src={GambarBeranda} width={400} height={400} priority />
+        </section>
       </section>
+
+      <div>{session ? `${session.user.name}, ` : ''} Welcome to Haris Laboratory</div>
 
       {/* Fitur */}
       <div id='fitur' className='mb-32 sm:mb-60 '>
         <div className='mb-10 text-2xl font-semibold text-left text-gray-800 sm:text-3xl'>
-          Fitur. <span className='text-gray-500'>Referensi, Kalkulasi, Animasi, Bimbel.</span>
+          Yang bisa kalian lakukan di sini.{' '}
+          <span className='text-gray-500'>Referensi, Kalkulasi, Animasi, Bimbel.</span>
         </div>
 
-        <section className='grid grid-cols-1 mx-auto gap-7 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3 '>
-          {WhatYouCanDo.map(a => (
-            <YouCanDo
+        <section className='grid grid-cols-1 gap-10 mx-auto sm:gap-5 sm:grid-cols-2 lg:grid-cols-4 '>
+          {WhatWhatYouCanDo.map(a => (
+            <WhatYouCanDo
               key={a.title}
+              svg={a.svg}
+              to={a.to}
               title={a.title}
-              img={a.img}
               fitur={a.fiturs.map(b => (
                 <FiturBox key={b.fitur} fitur={b.fitur} />
               ))}
@@ -70,15 +83,15 @@ export default function Beranda() {
           </span>
         </div>
 
-        <section className='grid grid-cols-1 gap-5 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 '>
+        <section className='grid grid-cols-1 gap-10 mx-auto sm:gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 '>
           {CaraSayaMenyampaikanInformasi.map(a => (
             <InfoBox
               key={a.id}
               svg={a.svg}
               name={a.title}
               description={a.description}
-              color='text-pink-600'
-              to='/haris'
+              color='text-amber-500'
+              to='/tentang'
             />
           ))}
         </section>
@@ -93,7 +106,7 @@ export default function Beranda() {
           </span>
         </div>
 
-        <section className='grid grid-cols-1 gap-5 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 '>
+        <section className='grid grid-cols-1 gap-10 mx-auto sm:gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 '>
           {SayaPeduliTentang.map(a => (
             <InfoBox
               key={a.id}
@@ -170,12 +183,17 @@ export default function Beranda() {
 
       <Inspirasi />
 
+      <div id='support'>
+        <Support />
+      </div>
+
       {/* FAQ */}
       <div className='mb-32 sm:mb-60'>
-        <header className='mb-10 text-2xl font-bold text-left text-gray-800 sm:text-center sm:text-4xl'>
-          Frequently Asked Questions
-        </header>
-        <section className='grid max-w-xl grid-cols-1 gap-5 mx-auto '>
+        <div className='mb-10 text-2xl font-semibold text-left text-gray-800 sm:text-3xl'>
+          Frequently Asked Questions.{' '}
+          <span className='text-gray-500'>Pertanyaan-pertanyaan yang sering ditanyakan.</span>
+        </div>
+        <section className='grid grid-cols-1 gap-5 sm:grid-cols-2 '>
           {isiFAQ.map(a => (
             <div key={a.id}>
               <FAQ button={a.button} panel={a.panel} />
@@ -183,36 +201,22 @@ export default function Beranda() {
           ))}
         </section>
       </div>
-
-      <div id='support'>
-        <Support />
-      </div>
     </Layout>
   );
 }
 
-const WhatYouCanDo = [
+const WhatWhatYouCanDo = [
   {
-    title: 'Matematika',
-    img: '/public/fisika/GelombangElektromagnetikImage.jpg',
+    title: 'Referensi',
+    svg: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
+    to: '/referensi',
     fiturs: [{ fitur: 'Baca Materi' }, { fitur: 'Contoh Soal' }, { fitur: 'Penurunan Rumus' }],
-    desc: 'Ilmu dasar alam semesta, tidak hanya untuk pelajaran sains alam seperti fisika dan kimia tapi juga untuk pelajaran bisnis, ekonomi, bahkan juga digunakan untuk bernalar sehari-hari.',
+    desc: 'Sumber informasi matematika dan fisika dari jenjang sd sampai sma. Dilengkapi dengan fitur rumus, penurunan rumus, dan contoh soal serta konstanta-konstanta yang lengkap.',
   },
   {
-    title: 'Fisika',
-    img: '/public/fisika/GelombangElektromagnetikImage.jpg',
-    fiturs: [{ fitur: 'Baca Materi' }, { fitur: 'Contoh Soal' }, { fitur: 'Penurunan Rumus' }],
-    desc: 'Ilmu alam yang mempelajari tentang pergerakan benda fisik dan perubahannya secara matematis. Jika ingin menjadi teknisi atau memahami alam semesta, pelajarilah fisika.',
-  },
-  {
-    title: 'Kartu',
-    img: '/public/fisika/GelombangElektromagnetikImage.jpg',
-    fiturs: [{ fitur: 'Baca Materi' }, { fitur: 'Contoh Soal' }, { fitur: 'Penurunan Rumus' }],
-    desc: "Sepenggal informasi yang disajikan dalam bentuk kartu yang memudahkan kita untuk menangkap informasi. Cocok untuk me-'re-call' kembali ilmu yang sudah lama dipelajari. ",
-  },
-  {
-    title: 'Kalkulator',
-    img: '/public/fisika/GelombangElektromagnetikImage.jpg',
+    title: 'Kalkulasi',
+    svg: 'M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z',
+    to: '/kalkulasi',
     fiturs: [
       { fitur: 'Kalkulator Klasik' },
       { fitur: 'Kalkulator Saintifik' },
@@ -221,46 +225,17 @@ const WhatYouCanDo = [
     desc: 'Dalam proses belajar, siswa membutuhkan perhitungan yang cepat dan akurat. Dalam bidang sains, tidak hanya kalkulator biasa, namun kita juga butuh kalkulator saintifik dan kalkulator rumus.',
   },
   {
+    title: 'Animasi',
+    svg: 'M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z',
+    to: '/animasi',
+    fiturs: [{ fitur: 'Les ke rumah' }, { fitur: 'Booking Les' }, { fitur: 'Paket Les' }],
+    desc: 'Tidak semua guru kompeten mengajar,sehingga banyak murid mendatangkan guru bimbel ke rumahnya. Kamu bisa pesan bimbel ke rumah dari HarisLab dengan mudah dan nyaman.',
+  },
+  {
     title: 'Bimbel',
-    img: '/public/fisika/GelombangElektromagnetikImage.jpg',
+    svg: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6',
+    to: '/bimbel',
     fiturs: [{ fitur: 'Les ke rumah' }, { fitur: 'Booking Les' }, { fitur: 'Paket Les' }],
     desc: 'Tidak semua guru kompeten mengajar,sehingga banyak murid mendatangkan guru bimbel ke rumahnya. Kamu bisa pesan bimbel ke rumah dari HarisLab dengan mudah dan nyaman.',
   },
 ];
-
-const YouCanDo = ({ img, title, fitur, desc }) => {
-  return (
-    <Link href='/#fitur'>
-      <a className={`w-full p-4 duration-300 rounded-xl bg-white shadow-lg `}>
-        <div className='text-2xl font-semibold text-gray-700'>{title}</div>
-        <div className='mt-1 mb-6 text-gray-600 text-tiny'>{desc}</div>
-        <div className='flex justify-between mb-1.5'>
-          <div className='text-sm font-medium text-gray-500 '>Fitur Utama</div>
-          <Link href='/#fitur'>
-            <a className='text-sm text-gray-600 hover:underline'>Selengkapnya..</a>
-          </Link>
-        </div>
-        <div className='flex flex-col space-y-2'>{fitur}</div>
-      </a>
-    </Link>
-  );
-};
-
-const FiturBox = ({ fitur }) => {
-  return (
-    <Link href='/design'>
-      <a className='flex flex-row items-center justify-between px-3 py-2 pr-2 border border-gray-300 rounded-md border- hover:bg-gray-100 '>
-        <div className='text-gray-700 text-tiny'>{fitur}</div>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          className='w-5 h-5 text-gray-500'
-          fill='none'
-          viewBox='0 0 24 24'
-          stroke='currentColor'
-        >
-          <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1} d='M9 5l7 7-7 7' />
-        </svg>
-      </a>
-    </Link>
-  );
-};

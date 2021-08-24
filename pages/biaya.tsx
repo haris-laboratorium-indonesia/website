@@ -1,5 +1,8 @@
 import Layout from '@/components/Layout';
 import { Title, SubTitle } from '@/components/Materi';
+//Box
+//data biaya
+
 export default function biaya() {
   const title = 'text-gray-500 font-semibold text-2xl mb-5';
   return (
@@ -63,6 +66,7 @@ const Box = ({ title, price, desc }) => {
     </div>
   );
 };
+
 const data = [
   {
     name: 'Free',

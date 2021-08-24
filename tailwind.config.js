@@ -46,6 +46,7 @@ module.exports = {
       },
       fontSize: {
         tiny: '.950rem',
+        landingPage: '2.7rem',
       },
       scale: {
         101: '1.01',

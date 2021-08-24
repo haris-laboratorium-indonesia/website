@@ -17,7 +17,7 @@ export default function Inspirasi() {
 const Box = ({ to, title, textColor }) => {
   return (
     <a
-      className={`items-center pl-4 pr-3 py-3 font-medium text-lg text-center bg-gray-200 rounded-md  ${textColor} hover:bg-gray-300 flex justify-between`}
+      className={`items-center pl-4 pr-3 py-2.5 font-medium text-center border border-gray-400 hover:bg-gray-200 rounded-lg  ${textColor} hover:bg-gray-300 flex justify-between`}
       href={to}
       target='_blank'
     >
@@ -34,11 +34,11 @@ const ArrowUpRight = () => {
       width='24'
       height='24'
       stroke='currentColor'
-      stroke-width='1.5'
-      stroke-linecap='round'
-      stroke-linejoin='round'
+      strokeWidth='1.5'
+      strokeLinecap='round'
+      strokeLinejoin='round'
       fill='none'
-      shape-rendering='geometricPrecision'
+      shapeRendering='geometricPrecision'
     >
       <path d='M7 17L17 7' />
       <path d='M7 7h10v10' />

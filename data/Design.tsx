@@ -4,7 +4,7 @@ export const UXData = [
     description: 'Users often perceive aesthetically pleasing design as design that’s more usable.',
   },
   {
-    title: 'Goal Gradient Effect',
+    title: 'Goal-Gradient Effect',
     description: 'The tendency to approach a goal increases with proximity to the goal.',
   },
   {
@@ -41,7 +41,10 @@ export const UXData = [
     description:
       'The time to acquire a target is a function of the distance to and size of the target.',
   },
-  { title: "Parkinson's Law", description: '' },
+  {
+    title: "Parkinson's Law",
+    description: 'Any task will inflate until all of the available time is spent.',
+  },
   {
     title: 'Law of Common Region',
     description:
@@ -66,7 +69,10 @@ export const UXData = [
     description:
       'Elements that are visually connected are perceived as more related than elements with no connection.',
   },
-  { title: 'Paretho Principle', description: '' },
+  {
+    title: 'Paretho Principle',
+    description: 'For many events, roughly 80% of the effects come from 20% of the causes.',
+  },
   {
     title: 'Doherty Treshold',
     description:
@@ -87,4 +93,14 @@ export const UXData = [
     title: ' Zeigarnik Effect',
     description: 'People remember uncompleted or interrupted tasks better than completed tasks.',
   },
+];
+
+export const ColorsData = [
+  { id: '1', color: 'bg-gray-800', name: 'Top Navigation', code: '#262626' },
+  { id: '2', color: 'bg-gray-700', name: 'Font', code: '#3F3F46' },
+  { id: '3', color: 'bg-harislab', name: 'Action', code: '#007AFF' },
+  { id: '4', color: 'bg-blue-400', name: 'UI Icons', code: '#60A5FA' },
+  { id: '5', color: 'bg-gray-300', name: 'BG Element (hover)', code: '#D4D4D8' },
+  { id: '6', color: 'bg-gray-200', name: 'BG Element', code: '#E5E5E5' },
+  { id: '7', color: 'bg-[#F5F5F7]', name: 'BG Main', code: '#F5F5F7' },
 ];

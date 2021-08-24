@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const Footer = () => {
+export default function Footer() {
   const a = 'block text-gray-600  hover:underline font-inter text-tiny sm:text-base';
   return (
     <footer className='bottom-0 w-full text-center bg-[#f5f5f7] mt-36' id='footer'>
@@ -10,17 +10,14 @@ const Footer = () => {
           {/* Navigasi */}
           <div className='font-medium text-gray-800 text-tiny sm:text-base'>Fitur </div>
           <div className='w-full space-y-2'>
-            <Link href='/matematika'>
-              <a className={a}>Matematika</a>
+            <Link href='/referensi'>
+              <a className={a}>Referensi</a>
             </Link>
-            <Link href='/fisika'>
-              <a className={a}>Fisika</a>
+            <Link href='/kalkulator'>
+              <a className={a}>Kalkulasi</a>
             </Link>
             <Link href='/kartu'>
-              <a className={a}>Kartu</a>
-            </Link>
-            <Link href='/biaya'>
-              <a className={a}>Kalkulator</a>
+              <a className={a}>Animasi</a>
             </Link>
             <Link href='/bimbel'>
               <a className={a}>Bimbel</a>
@@ -32,20 +29,20 @@ const Footer = () => {
           {/* Lainnya */}
           <div className='font-medium text-gray-800 text-tiny sm:text-base'>Lainnya</div>
           <div className='w-full space-y-2'>
+            <Link href='/store'>
+              <a className={a}>Store</a>
+            </Link>
             <Link href='/biaya'>
               <a className={a}>Biaya</a>
-            </Link>
-            <Link href='/#support'>
-              <a className={a}>Dukung</a>
-            </Link>
-            <Link href='/haris'>
-              <a className={a}>Tentang</a>
             </Link>
             <Link href='/design'>
               <a className={a}>Desain</a>
             </Link>
-            <Link href='/store'>
-              <a className={a}>Store</a>
+            <Link href='/#support'>
+              <a className={a}>Dukung</a>
+            </Link>
+            <Link href='/tentang'>
+              <a className={a}>Tentang</a>
             </Link>
           </div>
         </div>
@@ -56,12 +53,10 @@ const Footer = () => {
           <div>PT. Haris Laboratory</div>
           <div>Copyright &copy;2021 Haris Lab</div>
           <div>harislabindonesia@gmail.com</div>
-          <div>Jl. Dr.Setiabudi Gg. Kebon Manggis 5 no. 56</div>
+          <div>Jl. Dr.Setiabudi Gg. Kebon Manggis 5</div>
           <div>Tangerang Selatan, Banten 15226, Indonesia</div>
         </article>
       </section>
     </footer>
   );
-};
-
-export default Footer;
+}

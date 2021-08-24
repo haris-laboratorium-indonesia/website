@@ -2,42 +2,11 @@ import Layout from '@/components/Layout';
 import { Title, SubTitle } from '@/components/Materi';
 import { useState, useEffect } from 'react';
 
-function Box({ title }) {
-  return (
-    <div>
-      <div className='text-center'>{title}</div>
-      <div className='mt-2 duration-300 bg-white rounded-md shadow-md hover:shadow-lg h-52'></div>
-    </div>
-  );
-}
-
-const nama = [
-  { nama: 'Kalkulator Biasa' },
-  { nama: 'Kalkulator Saintifik' },
-  { nama: 'Kalkulator Rumus' },
-];
-
 export default function kalkulator() {
   return (
     <Layout browserTitle='Kalkulator' description='Kalkulator'>
       <Title name='Kalkulator' />
-      <div className='mb-5 -mt-5 text-center'>Hitung apapun yang perlu dihitung.</div>
-      {/* <div className='hidden sm:block'>
-        <div className='grid grid-cols-3 gap-5 mt-10'>
-          {nama.map(a => (
-            <Box title={a.nama}></Box>
-          ))}
-        </div>
-      </div>
-      <div className='block sm:hidden'>
-        <div className='grid grid-cols-1 gap-3'>
-          {nama.map(a => (
-            <div className='px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow-md hover:shadow-lg'>
-              {a.nama}
-            </div>
-          ))}
-        </div>
-      </div> */}
+      <SubTitle name='Hitung apapun yang perlu dihitung.' />
       <KalkulatorSederhana />
     </Layout>
   );

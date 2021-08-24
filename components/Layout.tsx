@@ -9,7 +9,7 @@ const Layout = ({ children, browserTitle, description }) => {
   return (
     <div className='bg-[#F5F5F7]'>
       <Head>
-        <title>{browserTitle} | Haris Lab</title>
+        <title>{browserTitle} | Haris Laboratory</title>
         <link rel='icon' href='/hahaha.ico' />
         <meta name='robots' content='follow, index' />
         <meta content={description} name='description' />

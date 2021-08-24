@@ -1,23 +1,27 @@
-import { Disclosure } from "@headlessui/react";
-import { HiOutlineChevronDown } from "react-icons/hi";
+import { Disclosure } from '@headlessui/react';
+import { HiOutlineChevronDown } from 'react-icons/hi';
 
 const FAQ = ({ button, panel }) => {
   return (
-    <Disclosure as="div" className="flex flex-col max-w-xl mx-auto">
+    <Disclosure as='div'>
       {({ open }) => (
         <>
           <Disclosure.Button
-            as="div"
-            className="flex items-center justify-between p-2 border-b rounded-md cursor-pointer focus:outline-none active:bg-gray-100 hover:bg-gray-100"
+            as='div'
+            className={`${
+              open ? 'rounded-b-none bg-gray-200' : ''
+            } rounded-lg flex flex-row items-center justify-between py-2.5 px-3 border border-gray-400  cursor-pointer focus:outline-none  hover:bg-gray-200`}
           >
             <div>{button}</div>
             <HiOutlineChevronDown
-              className={`${open ? "transform rotate-180" : ""} block`}
+              className={`${open ? 'transform rotate-180' : ''} block w-6 h-6 text-gray-700`}
             />
           </Disclosure.Button>
-          <Disclosure.Panel className="p-3 text-gray-600 rounded-md">
+          <Disclosure.Panel
+            className={`rounded-b-lg border border-t-0 border-gray-400 p-3 text-gray-600 `}
+          >
             {panel}
-          </Disclosure.Panel>{" "}
+          </Disclosure.Panel>
         </>
       )}
     </Disclosure>
