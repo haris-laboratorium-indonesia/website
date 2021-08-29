@@ -7,8 +7,6 @@ export default function Kartu() {
     <Layout browserTitle='Kartu' description='Kartu Haris Laboratory'>
       <Title name='Kartu' />
 
-      <div className='mb-5 -mt-5 text-center'>Mengingat kembali yang telah kamu pelajari.</div>
-
       <div className='grid grid-cols-2 gap-5 mb-10 sm:grid-cols-3 lg:grid-cols-4'>
         {data.map(a => (
           <Card key={a.id} src={a.image} title={a.title} subTitle={a.subTitle} />

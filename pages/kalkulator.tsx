@@ -1,56 +1,50 @@
 import Layout from '@/components/Layout';
-import { Title, SubTitle } from '@/components/Materi';
-import { useState, useEffect } from 'react';
+import { Title, InternalLink } from '@/components/Materi';
+import { Tab } from '@headlessui/react';
 
 export default function Kalkulator() {
+  const tab = 'active:bg-gray-200 rounded-md text-tiny hover:bg-white hover:shadow-md py-2 px-4';
   return (
     <Layout browserTitle='Kalkulator' description='Kalkulator'>
       <Title name='Kalkulator' />
-      <SubTitle name='Hitung apapun yang perlu dihitung.' />
-      <KalkulatorSederhana />
+
+      <Tab.Group as='div' className='mt-5 '>
+        <Tab.List className='grid grid-cols-3 gap-2 p-1 bg-gray-200 rounded-md sm:w-1/2'>
+          <Tab
+            className={({ selected }) =>
+              selected
+                ? 'bg-white shadow-md rounded-md text-black p-1'
+                : 'p-1 hover:bg-gray-300 rounded-md'
+            }
+          >
+            Biasa
+          </Tab>
+          <Tab
+            className={({ selected }) =>
+              selected
+                ? 'bg-white shadow-md rounded-md text-black p-1'
+                : 'p-1 hover:bg-gray-300 rounded-md'
+            }
+          >
+            Saintifik
+          </Tab>
+          <Tab
+            className={({ selected }) =>
+              selected
+                ? 'bg-white shadow-md rounded-md text-black p-1'
+                : 'p-1 hover:bg-gray-300 rounded-md'
+            }
+          >
+            Rumus
+          </Tab>
+        </Tab.List>
+
+        <Tab.Panels className='p-1 mt-2 bg-gray-200 rounded-md'>
+          <Tab.Panel className='h-48'>Content 1</Tab.Panel>
+          <Tab.Panel className='h-48'>Content 2</Tab.Panel>
+          <Tab.Panel className='h-48'>Content 3</Tab.Panel>
+        </Tab.Panels>
+      </Tab.Group>
     </Layout>
   );
 }
-
-const KalkulatorSederhana = () => {
-  const style = 'bg-gray-200 hover:bg-gray-300 h-10 w-10 p-2 text-center rounded-md';
-  const [result, setResult] = useState(0);
-  const [satu, setSatu] = useState(1);
-  const [dua, setDua] = useState(2);
-  const [operasi, setOperasi] = useState('');
-  const hasil = satu * dua;
-
-  useEffect(() => {
-    document.title = `You clicked ${satu} times`;
-  });
-  useEffect(() => {});
-  return (
-    <div className='flex items-center justify-center w-full mx-auto mt-32 '>
-      <div>
-        <div className='flex flex-row mb-5 space-x-3'>
-          <div className={style}>{satu}</div>
-          <div className={style}>{operasi}</div>
-          <div className={style}>{dua}</div>
-          <div className={style}>{result}</div>
-        </div>
-        <section className='grid grid-cols-4 gap-3'>
-          <button onClick={() => setOperasi('*')} className={style}>
-            *
-          </button>
-          <button onClick={() => setOperasi('/')} className={style}>
-            /
-          </button>
-          <button onClick={() => setOperasi('+')} className={style}>
-            +
-          </button>
-          <button onClick={() => setOperasi('-')} className={style}>
-            -
-          </button>
-          <button onClick={() => setResult(hasil)} className={style}>
-            =
-          </button>
-        </section>
-      </div>
-    </div>
-  );
-};

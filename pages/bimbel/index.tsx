@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout';
-import { Title, SubTitle } from '@/components/Materi';
+import { Title, SubTitle, Topic } from '@/components/Materi';
 import Rafi from '../../public/Trainer/Rafi.jpeg';
 import Harits from '../../public/Trainer/Harits.jpg';
 import Image from 'next/image';
@@ -13,7 +13,6 @@ export default function Bimbel() {
   return (
     <Layout browserTitle='Bimbel' description='Booking Les tidak pernah semudah ini'>
       <Title name='Bimbel' />
-      <div className='mb-5 -mt-5 text-center'>Pesan les privat ke rumah.</div>
 
       {/* Memesan pelajaran */}
       <div className='w-full p-4 mx-auto mt-5 mb-10 bg-white rounded-md shadow hover:shadow-md sm:w-1/3'>
@@ -71,7 +70,7 @@ export default function Bimbel() {
       </div>
 
       {/* Daftar Tutor */}
-      <div className='mt-10 mb-3 text-2xl font-medium'> Daftar Trainer</div>
+      <Topic name='Daftar Trainer' />
       <div className='grid w-full grid-cols-1 gap-2 sm:w-1/2 sm:gap-3'>
         <Opener name='Rafi Amrulah' to='/bimbel/trainer/rafi-amrulah' img={Rafi}>
           <div className='flex flex-col p-1 space-y-1'>

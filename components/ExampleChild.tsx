@@ -1,7 +1,7 @@
 import { Disclosure } from '@headlessui/react';
 import { HiOutlineChevronDown } from 'react-icons/hi';
 
-const ExampleChild = ({ type, children }) => {
+export default function ExampleChild({ type, children }) {
   return (
     <Disclosure
       as='div'
@@ -23,6 +23,4 @@ const ExampleChild = ({ type, children }) => {
       )}
     </Disclosure>
   );
-};
-
-export default ExampleChild;
+}

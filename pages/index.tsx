@@ -16,6 +16,9 @@ import {
 } from '../data/Beranda';
 
 export default function Beranda() {
+  const BerandaTitle = 'mb-5 text-2xl font-semibold text-left text-gray-800 xs:w-4/5';
+  const wrapper = 'mb-32 sm:mb-40';
+
   const tr: string = 'divide-y divide-x divide-cyan-500';
   const td: string = ' text-left text-sm p-2';
   const th: string = 'p-2 text-left text-base font-medium text-cyan-500 bg-cyan-50';
@@ -25,22 +28,21 @@ export default function Beranda() {
       {/* Hero */}
       <section className='grid grid-cols-1 gap-10 mt-10 mb-32 border-b border-gray-400 md:pb-0 sm:pb-5 sm:gap-5 sm:mb-60 sm:grid-cols-2'>
         <section className='flex flex-col items-center justify-center '>
-          <div className='text-3xl font-bold leading-tight text-gray-800 sm:text-4xl lg:text-landingPage lg:leading-tight '>
-            Tempat untuk referensi, kalkulasi, animasi, bimbel matematika dan fisika.
+          <div className='text-4xl font-extrabold leading-tight text-center text-gray-700 sm:text-5xl sm:leading-tight sm:text-left'>
+            Matematika. Fisika. Kalkulator. Bimbel.
           </div>
-          <div className='mt-2 mb-5 text-gray-700'>
-            Penuhi kebutuhan matematika dan fisika kalian dari jenjang sd hingga kuliah di Haris
-            Laboratory.
+          <div className='w-full mt-2 mb-5 text-center text-gray-700 sm:text-left'>
+            SD sampai dengan SMA.
           </div>
 
           <div className='grid w-full grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2'>
             <Link href='/#fitur'>
-              <a className='py-2.5 text-center text-white rounded-md bg-harislab hover:bg-opacity-80'>
+              <a className='py-2 text-center text-white border rounded-lg bg-harislab border-harislab hover:bg-opacity-80'>
                 Lihat fitur
               </a>
             </Link>
             <Link href='/#support'>
-              <a className='py-2.5 text-center border rounded-md border-harislab text-harislab hover:bg-blue-50 '>
+              <a className='py-2 text-center border rounded-lg border-harislab text-harislab hover:bg-blue-50 '>
                 Dukung kami
               </a>
             </Link>
@@ -52,13 +54,13 @@ export default function Beranda() {
       </section>
 
       {/* Fitur */}
-      <div id='fitur' className='mb-32 sm:mb-60 '>
-        <div className='mb-10 text-2xl font-semibold text-left text-gray-800 sm:text-3xl'>
-          Yang bisa kalian lakukan di sini.{' '}
-          <span className='text-gray-500'>Referensi, Kalkulasi, Animasi, Bimbel.</span>
+      <section id='fitur' className={wrapper}>
+        <div className={BerandaTitle}>
+          <div>Yang bisa kalian lakukan di sini.</div>
+          <div className='text-gray-500'>Matematika, Fisika, Kalkulator, Bimbel.</div>
         </div>
 
-        <section className='grid grid-cols-1 gap-10 mx-auto sm:gap-5 sm:grid-cols-2 lg:grid-cols-4 '>
+        <section className='grid grid-cols-1 gap-5 mx-auto xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 '>
           {WhatWhatYouCanDo.map(a => (
             <WhatYouCanDo
               key={a.title}
@@ -72,18 +74,15 @@ export default function Beranda() {
             />
           ))}
         </section>
-      </div>
+      </section>
 
       {/* Cara kami menyajikan informasi */}
-      <div className='mb-32 sm:mb-60 '>
-        <div className='mb-10 text-2xl font-semibold text-left text-gray-800 sm:text-3xl'>
-          Cara kami menyajikan informasi.{' '}
-          <span className='text-gray-500'>
-            Arsitektur informasi yang didesain untuk pengalaman belajar terbaik.
-          </span>
+      <section className={wrapper}>
+        <div className={BerandaTitle}>
+          <div>Cara kami menyajikan informasi.</div>
+          <div className='text-gray-500'>Agar informasi yang tersedia mudah dipahami.</div>
         </div>
-
-        <section className='grid grid-cols-1 gap-10 mx-auto sm:gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 '>
+        <section className='grid grid-cols-1 gap-5 mx-auto xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 '>
           {CaraSayaMenyampaikanInformasi.map(a => (
             <InfoBox
               key={a.id}
@@ -95,18 +94,18 @@ export default function Beranda() {
             />
           ))}
         </section>
-      </div>
+      </section>
 
       {/* Kami peduli tentang */}
-      <div className='mb-32 sm:mb-60 '>
-        <div className='mb-10 text-2xl font-semibold text-left text-gray-800 sm:text-3xl'>
-          Kami Peduli.{' '}
-          <span className='text-gray-500'>
-            Tentang bagaimana arsitektur informasi menunjang kemampuan pelajar dalam belajar.
-          </span>
+      <section className={wrapper}>
+        <div className={BerandaTitle}>
+          <div>Kami Peduli.</div>
+          <div className='text-gray-500'>
+            Hubungan arsitektur informasi dan kemampuan pelajar belajar.
+          </div>
         </div>
 
-        <section className='grid grid-cols-1 gap-10 mx-auto sm:gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 '>
+        <section className='grid grid-cols-1 gap-5 mx-auto xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 '>
           {SayaPeduliTentang.map(a => (
             <InfoBox
               key={a.id}
@@ -118,13 +117,13 @@ export default function Beranda() {
             />
           ))}
         </section>
-      </div>
+      </section>
 
       {/* HarisLab vs Zenius vs Ruangguru vs Buku Paket*/}
-      <div className='mb-32 sm:mb-60 '>
-        <div className='mb-10 text-2xl font-semibold text-left text-gray-800 sm:text-3xl'>
-          Perbandingan.{' '}
-          <span className='text-gray-500'>HarisLab vs Zenius vs Ruangguru vs Wikipedia</span>
+      <section className={wrapper}>
+        <div className={BerandaTitle}>
+          <div>Perbandingan.</div>
+          <div className='text-gray-500'>HarisLab vs Zenius vs Ruangguru vs Wikipedia</div>
         </div>
         <section className='mx-auto overflow-x-auto sm:gap-5 lg:px-0'>
           <table className='w-full overflow-hidden border border-cyan-500'>
@@ -179,26 +178,22 @@ export default function Beranda() {
             </tbody>
           </table>
         </section>
-      </div>
+      </section>
 
-      <div id='support'>
-        <Support />
-      </div>
+      <Support />
 
       {/* FAQ */}
-      <div className='mb-32 sm:mb-60'>
-        <div className='mb-10 text-2xl font-semibold text-left text-gray-800 sm:text-3xl'>
-          Frequently Asked Questions.{' '}
-          <span className='text-gray-500'>Pertanyaan-pertanyaan yang sering ditanyakan.</span>
+      <section className={wrapper}>
+        <div className={BerandaTitle}>
+          <div>Frequently Asked Questions.</div>
+          <div className='text-gray-500'>Pertanyaan-pertanyaan yang sering ditanyakan.</div>
         </div>
-        <section className='grid grid-cols-1 gap-5 sm:grid-cols-2 '>
+        <section className='grid grid-cols-1 gap-5 xs:grid-cols-2'>
           {isiFAQ.map(a => (
-            <div key={a.id}>
-              <FAQ button={a.button} panel={a.panel} />
-            </div>
+            <FAQ key={a.id} button={a.button} panel={a.panel} />
           ))}
         </section>
-      </div>
+      </section>
     </Layout>
   );
 }

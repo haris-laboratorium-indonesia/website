@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import BottomNav from './BottomNav';
 import Footer from './Footer';
 import NavDesktop from './NavDesktop';
 import NavMobile from './NavMobile';
@@ -9,7 +10,7 @@ export default function Layout({ children, browserTitle, description }) {
   return (
     <div className='bg-[#F5F5F7]'>
       <Head>
-        <title>{browserTitle} | Haris Laboratory</title>
+        <title>{browserTitle} - Haris Laboratory</title>
         <link rel='icon' href='/hahaha.ico' />
         <meta name='robots' content='follow, index' />
         <meta content={description} name='description' />
@@ -30,11 +31,12 @@ export default function Layout({ children, browserTitle, description }) {
         <NavMobile />
       </section>
 
-      <section className='w-full max-w-5xl min-h-screen px-5 mx-auto xl:px-0 font-inter '>
+      <section className='w-full max-w-5xl min-h-screen px-5 pb-5 mx-auto sm:pb-0 xl:px-0 font-inter '>
         {children}
       </section>
 
       <Footer />
+      <BottomNav />
     </div>
   );
 }

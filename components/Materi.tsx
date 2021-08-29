@@ -6,7 +6,7 @@ import Link from 'next/link';
 const ArrowUpRight = () => {
   return (
     <svg
-      className='w-6 h-6 text-harislab'
+      className='w-5 h-5 text-harislab'
       viewBox='0 0 24 24'
       width='24'
       height='24'
@@ -25,17 +25,22 @@ const ArrowUpRight = () => {
 
 export const AA1 = ({ title, id }) => {
   return (
-    <h1
-      id={id}
-      className={`z-10 text-3xl sm:text-4xl lg:pt-0 font-semibold mt-24 mb-3 text-gray-700 font-mw pb-1`}
-    >
+    <h1 id={id} className={`mt-10 mb-1 text-xl font-semibold text-gray-700`}>
       {title}
     </h1>
   );
 };
 
+export const TopicMateri = ({ name, id }) => {
+  return (
+    <h3 id={id} className={`mt-10 mb-2 text-xl font-semibold text-gray-700`}>
+      {name}
+    </h3>
+  );
+};
+
 export const A2 = ({ title }) => {
-  return <button className='mt-5 mb-2 font-semibold text-gray-700 font-mw'>{title}</button>;
+  return <h4 className='mb-5 font-medium'>{title}</h4>;
 };
 
 export const P = ({ children }) => {
@@ -62,10 +67,10 @@ export const Gambar = ({ src, alt, caption }) => {
 
 export const rumusTitle = 'font-medium text-md inline-block w-full  text-pink-600';
 
-const thead = 'border-t border-gray-400';
-const th = 'w-1/5 py-2 px-4 text-left font-medium text-gray-800 bg-gray-300 w-max';
-const tr = 'buttonide-x buttonide-gray-400 border-b border-l border-r border-gray-400';
-const td = 'text-left px-2 sm:px-4 py-0.5 table-auto w-max text-gray-700 whitespace-nowrap';
+const thead = 'border-t border-gray-300';
+const th = 'w-1/5 py-2 px-2 sm:px-4 text-left font-medium text-gray-800 bg-gray-300 w-max';
+const tr = ' border-b border-l border-r border-gray-300';
+const td = 'text-left px-2 sm:px-4 py-0.5 table-auto  text-gray-700 ';
 
 export const THEAD = ({ children }) => {
   return <thead className={thead}>{children}</thead>;
@@ -93,7 +98,7 @@ export const Legenda = ({ name, rumus }) => {
   );
 };
 export const KaTeX = ({ children }) => {
-  return <TeX className='inline-block py-2 text-sm w-max'>{children}</TeX>;
+  return <TeX className='inline-block py-2 text-xs w-max'>{children}</TeX>;
 };
 export const Anchor = ({ to, name }) => {
   return (
@@ -106,26 +111,22 @@ export const Anchor = ({ to, name }) => {
 //Typography
 export function Title({ name }) {
   return (
-    <h1 className='z-40 w-full h-auto mt-10 mb-5 pt-2.5  max-w-4xl mx-auto font-inter font-bold text-center text-4xl text-gray-800 sm:text-5xl block'>
+    <h1 className='z-40 block w-full h-auto mx-auto my-5 text-3xl font-bold text-gray-800 sm:mt-8 sm:mb-0 font-inter sm:text-4xl'>
       {name}
     </h1>
   );
 }
 
 export function SubTitle({ name }) {
-  return <h2 className='max-w-2xl mx-auto mb-10 -mt-4 text-center '>{name}</h2>;
+  return <h2 className='mb-10 '>{name}</h2>;
 }
 
 export const Topic = ({ name }) => {
-  return (
-    <h3 className='mb-3 text-2xl font-semibold text-left text-gray-700 sm:text-2xl mt-14'>
-      {name}
-    </h3>
-  );
+  return <h3 className='mt-5 mb-1 text-xl font-semibold text-gray-700 sm:mt-8'>{name}</h3>;
 };
 
 export function SubTopic({ name }) {
-  return <h4 className='mb-5 font-medium '>{name}</h4>;
+  return <h4 className='mb-5 font-medium text-gray-700'>{name}</h4>;
 }
 
 //Button
@@ -139,7 +140,7 @@ export function ButtonPrimary({ name }) {
 
 export function ButtonSecondary({ name }) {
   return (
-    <button className='px-4 py-2.5 text-center duration-200 border rounded-md border-harislab text-harislab hover:bg-blue-50'>
+    <button className='px-4 py-2 text-center duration-200 border rounded-md border-harislab text-harislab hover:bg-blue-50'>
       {name}
     </button>
   );
@@ -147,7 +148,7 @@ export function ButtonSecondary({ name }) {
 
 export function ButtonTertiary({ name }) {
   return (
-    <button className='px-4 py-2.5 text-center duration-200 hover:bg-blue-50 rounded-md text-harislab '>
+    <button className='px-4 py-2 text-center duration-200 rounded-md hover:bg-blue-50 text-harislab '>
       {name}
     </button>
   );
@@ -156,7 +157,7 @@ export function ButtonTertiary({ name }) {
 export function InternalLink({ name, to }) {
   return (
     <Link href={to}>
-      <a className='flex items-center py-2.5 text-harislab hover:underline cursor-pointer space-x-2 '>
+      <a className='flex items-center space-x-2 cursor-pointer text-harislab hover:underline'>
         {name}
         <RightArrow />
       </a>
@@ -168,7 +169,8 @@ export function ExternalLink({ name, to }) {
   return (
     <a
       href={to}
-      className='flex items-center  py-2.5  text-harislab hover:underline cursor-pointer '
+      target='_blank'
+      className='flex items-center cursor-pointer text-harislab hover:underline '
     >
       <div>{name}</div>
       <ArrowUpRight />
@@ -180,7 +182,7 @@ const RightArrow = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      className='w-5 h-5 text-harislab'
+      className='w-4 h-5 text-harislab'
       fill='none'
       viewBox='0 0 24 24'
       stroke='currentColor'

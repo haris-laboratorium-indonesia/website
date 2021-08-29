@@ -35,7 +35,7 @@ export const RadiasiBendaHitamRumus = [
 export const TermodinamikaRumus = [
   { nama: 'Gas Ideal', rumus: [{ rumus: 'PV = nRT' }, { rumus: 'PV = nKT' }] },
   { nama: 'Efisiensi', rumus: '\\dfrac{Q_h}{Q_c} = \\dfrac{T_h}{T_c}' },
-  { nama: 'Efisiensi', rumus: '\\eta = \\dfrac{W}{Q_h}' },
+  { nama: 'Hubungan Efisiensi', rumus: '\\eta = \\dfrac{W}{Q_h}' },
   { nama: 'Energi Kinetik', rumus: '\\dfrac{1}{2}mv^2 = \\dfrac{3}{2}KT' },
   {
     nama: 'Isobaris',

@@ -9,8 +9,6 @@ export default function Biaya() {
     <Layout description='y' browserTitle='Biaya'>
       <Title name='Biaya' />
 
-      <div className='mb-5 -mt-5 text-center'>Tidak ada yang sebaik dan semurah ini.</div>
-
       <div className='grid max-w-4xl grid-cols-1 gap-5 mx-auto mb-10 sm:grid-cols-3'>
         {data.map(a => (
           <Box title={a.name} price={a.price} desc={a.service} />

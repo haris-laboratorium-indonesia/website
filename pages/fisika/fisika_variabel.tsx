@@ -1,9 +1,6 @@
 import 'katex/dist/katex.min.css';
-import TeX from '@matejmazur/react-katex';
 import Layout from '@/components/Layout';
-import { Title, SubTitle } from '@/components/Materi';
 import { GlosariumVar } from 'data/VariabelFisika';
-import { GlosariumKonstanta } from 'data/KonstantaFisika';
 import { AA1, TH, TData, Row, THEAD, Body, KaTeX } from '@/components/Materi';
 
 export default function fisikaVariabel() {
@@ -19,9 +16,10 @@ export default function fisikaVariabel() {
               <TH>Satuan</TH>
             </Row>
           </THEAD>
+
           <Body>
             {GlosariumVar.map(a => (
-              <Row>
+              <Row key={a.satuan}>
                 <TData>
                   <KaTeX>{String.raw`${a.simbol}`}</KaTeX>
                 </TData>

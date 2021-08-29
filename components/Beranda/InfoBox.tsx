@@ -4,7 +4,7 @@ import { HiChevronRight } from 'react-icons/hi';
 
 const InfoBox = ({ svg, name, description, color, to }) => {
   return (
-    <div className='flex flex-col justify-between px-4 pt-4 pb-2 space-y-3 bg-white rounded-lg shadow-lg'>
+    <div className='flex flex-col justify-between px-4 pt-4 pb-2 space-y-3 bg-white rounded-lg shadow-md'>
       <div className='space-y-2'>
         <div className='flex flex-row-reverse justify-between mb-4'>
           {/* Icon */}
@@ -22,7 +22,7 @@ const InfoBox = ({ svg, name, description, color, to }) => {
           </div>
           {/* Name */}
           <div>
-            <div className='w-1/2 font-semibold leading-tight text-gray-800'>{name}</div>
+            <div className='w-1/2 font-semibold leading-tight text-gray-700'>{name}</div>
           </div>
         </div>
         {/* description */}

@@ -1,39 +1,45 @@
 import Link from 'next/link';
 import { Menu } from '@headlessui/react';
 import { X } from '@/Icons';
+import BottomNav from './BottomNav';
 
 export default function NavMobile() {
   return (
-    <nav className='z-50 flex items-center justify-between w-full h-auto max-w-5xl pl-4 mx-auto md:hidden'>
+    <nav className='z-50 flex items-center justify-between w-full h-auto max-w-5xl mx-auto md:hidden'>
       <Link href='/'>
-        <a className='items-center block pl-1 text-lg font-medium text-center text-white font-mw'>
+        <a className='items-center block pl-4 font-medium text-center text-white text-tiny font-mw'>
           <span className='font-medium'>Haris</span>
           <span className='font-light text-gray-400'>Lab</span>
         </a>
       </Link>
-      <Menu as='div' className=''>
+
+      <Menu as='div'>
         {({ open }) => (
           <>
-            <Menu.Button className='z-50 flex  py-2.5 px-4 rounded-md focus:outline-none'>
+            <Menu.Button className='z-50 flex px-4 py-2 rounded-md focus:outline-none'>
               {open ? (
                 <X color='text-white hover:text-gray-300' />
               ) : (
                 <TwoLines color='text-white hover:text-gray-300 ' />
               )}
             </Menu.Button>
-            <Menu.Items className='absolute top-0 right-0 z-50 w-full min-h-screen p-5 mt-12 bg-gray-800'>
+
+            <Menu.Items className='absolute top-0 right-0 z-50 w-full min-h-screen p-5 mt-10 bg-gray-800'>
               <Search />
+              <section className='mt-8 space-y-3'>
+                <Login />
+                <SignUp />
+              </section>
               <section className='grid grid-cols-1 p-5 divide-y divide-gray-600'>
-                <NavLinkMobile to='referensi' title='Referensi' />
-                <NavLinkMobile to='kalkulator' title='Kalkulasi' />
-                <NavLinkMobile to='animasi' title='Animasi' />
-                <NavLinkMobile to='bimbel' title='Bimbel' />
+                <NavLinkMobile to='toko' title='Toko' />
+                <NavLinkMobile to='desain' title='Desain' />
+                <NavLinkMobile to='tentang' title='Tentang' />
+                <NavLinkMobile to='biaya' title='Biaya' />
               </section>
             </Menu.Items>
           </>
         )}
       </Menu>
-      );
     </nav>
   );
 }
@@ -59,6 +65,20 @@ const NavLinkMobile = ({ to, title }) => {
   );
 };
 
+const Login = () => {
+  return (
+    <div className='p-2 text-center text-white border rounded-lg bg-harislab border-harislab'>
+      Login
+    </div>
+  );
+};
+
+const SignUp = () => {
+  return (
+    <div className='p-2 text-center text-gray-300 border border-gray-300 rounded-lg'>Sign Up</div>
+  );
+};
+
 const TwoLines = ({ color }) => {
   return (
     <svg
@@ -77,9 +97,9 @@ const TwoLines = ({ color }) => {
 
 const Search = () => {
   return (
-    <section className='flex items-center rounded-lg  p-1.5  bg-gray-700 '>
+    <section className='flex items-center p-2 bg-gray-700 rounded-lg '>
       <label htmlFor='search'>
-        <SearchIcon color=' ' />
+        <SearchIcon />
       </label>
       <input
         id='search'
@@ -91,11 +111,11 @@ const Search = () => {
   );
 };
 
-export const SearchIcon = ({ color }) => {
+export const SearchIcon = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      className='text-gray-300 w-7 h-7'
+      className='w-6 h-6 text-gray-300'
       fill='none'
       viewBox='0 0 24 24'
       stroke='currentColor'

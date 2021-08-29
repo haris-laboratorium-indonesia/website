@@ -4,40 +4,35 @@ import haris from '../public/haris.jpg';
 import Layout from '@/components/Layout';
 import { RightArrow } from '@/Icons';
 import { HiChevronLeft } from 'react-icons/hi';
-import { Title, SubTitle, Topic } from '@/components/Materi';
+import { Title, SubTitle, Topic, ExternalLink, InternalLink } from '@/components/Materi';
 
 export default function Tentang() {
   return (
     <Layout browserTitle='Tentang' description='Tentang Haris Laboratory'>
       <div className='bg-[#F5F5F7] min-h-screen'>
-        <div className='w-full max-w-5xl mx-auto my-10 '>
-          <Link href='/'>
-            <a className='flex items-center text-gray-500 hover:underline'>
-              <HiChevronLeft className='w-6 h-6' />
-              <div>Back</div>
-            </a>
-          </Link>
-
+        <div className='w-full max-w-5xl mx-auto my-5 sm:mt-8 '>
           <Title name='Tentang' />
-          <SubTitle name='Haris Laboratory' />
 
-          <Topic name='About Haris Laboratory' />
-          <div>
-            <p>
-              Haris Laboratory (HarisLab) adalah tempat untuk referensi, kalkulasi, animasi, dan
-              bimbel matematika dan fisika dalam platform web dan mobile. Tujuan kami untuk membuat
-              suatu referensi matematika dan fisika secaara komperhensif dan dinamis terhadap waktu.
-              Kami ingin mengurangi waktu siswa mencari materi pelajaran sehingga bisa meluangkan
-              lebih banyak waktu untuk memahami pelajaran itu. Untuk saat ini HarisLab hanya
-              menyediakan materi matematika dan fisika, kedepannya mungkin saja akan ditambahkan
-              materi kimia bahkan sejarah dan semacamnya. Sekarang, HarisLab hanya dimaintence oleh
-              Harits Syah seorang diri. Alasan mengapa materi yang ada hanya matematika dan fisika,
-              karena itu keahlian saya.
-            </p>
-          </div>
+          <Topic name='What is Haris Laboratory ?' />
+          <p className='indent-sm'>
+            Haris Laboratory (HarisLab) adalah tempat untuk referensi, kalkulasi, animasi, dan
+            bimbel matematika dan fisika dalam platform web dan mobile. Tujuan kami untuk membuat
+            suatu referensi matematika dan fisika secaara komperhensif dan dinamis terhadap waktu.
+            Kami ingin mengurangi waktu siswa mencari materi pelajaran sehingga bisa meluangkan
+            lebih banyak waktu untuk memahami pelajaran itu. Untuk saat ini HarisLab hanya
+            menyediakan materi matematika dan fisika, kedepannya mungkin saja akan ditambahkan
+            materi kimia bahkan sejarah dan semacamnya. Sekarang, HarisLab hanya dimaintence oleh
+            Harits Syah seorang diri. Alasan mengapa materi yang ada hanya matematika dan fisika,
+            karena itu keahlian saya. Untuk melihat sistem desain dari website Haris Laboratory
+            kalian bisa ke{' '}
+            <Link href='/desain'>
+              <a className=' hover:underline text-harislab'>sini</a>
+            </Link>
+            .
+          </p>
 
           <Topic name='Person' />
-          <div className='grid grid-cols-1 gap-4 sm:grid-cols-5'>
+          <div className='grid w-2/3 grid-cols-1 gap-4 xs:w-full xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 '>
             <section className='p-4 duration-200 border border-gray-400 rounded-lg'>
               <div className='flex items-center justify-center my-8'>
                 <Image src={haris} width={100} height={100} priority className='rounded-full' />
@@ -47,138 +42,92 @@ export default function Tentang() {
             </section>
           </div>
 
-          <Topic name='Websites that I created' />
-          <div className='grid w-full grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4'>
-            <GoOut
-              to='https://www.aka-tradingindo.com'
-              textColor='text-emerald-500'
-              title='AKA Trading Indonesia'
-            />
-            <GoOut
-              to='https://www.harislab.com'
-              textColor='text-harislab'
-              title='Haris Laboratory'
-            />
-          </div>
+          <section className='grid grid-cols-1 gap-0 sm:gap-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'>
+            <div>
+              <Topic name='Websites' />
+              <div className='flex flex-col space-y-2'>
+                <ExternalLink to='https://www.aka-tradingindo.com' name='AKA Trading Indonesia' />
+                <ExternalLink to='https://www.harislab.com' name='Haris Laboratory' />
+              </div>
+            </div>
 
-          <Topic name='Social Media & Contacts' />
-          <div className='grid w-full grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4'>
-            <GoOut
-              to='https://www.twitter.com/haritssr'
-              textColor='text-[#1DA1F2]'
-              title='twitter.com/haritssr'
-            />
-            <GoOut
-              to='https://www.github.com/haritssr'
-              textColor='text-gray-700'
-              title='github.com/haritssr'
-            />
-            <GoOut
-              to='mailto:haritssr@gmail.com'
-              textColor='text-[#BB001B]'
-              title='haritssr@gmail.com'
-            />
-            <GoOut to='tel:0895331103401' textColor='text-[#128C7E]' title='WhatsApp' />
-          </div>
+            <div>
+              <Topic name='Contacts' />
+              <div className='flex flex-col space-y-2'>
+                <ExternalLink to='https://www.twitter.com/haritssr' name='Twitter' />
+                <ExternalLink to='https://www.github.com/haritssr' name='Github' />
+                <ExternalLink to='mailto:harislaboratory@gmail.com' name='Gmail' />
+                <ExternalLink to='tel:0895331103401' name='WhatsApp' />
+              </div>
+            </div>
 
-          <Topic name='Mini Projects' />
-          <div className='grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4' id='miniProject'>
-            <GoIn title="Delba's Experiments" textColor='text-gray-700' to='/tentang/delba' />
-            <GoIn title='Number Game' textColor='text-gray-700' to='/tentang/number-game' />
-            <GoIn title='Browser Title' textColor='text-orange-500' to='/tentang/browser-title' />
-            <GoOut
-              title='Framer Motion'
-              textColor='text-pink-600'
-              to='https://www.fremermotion-harislab.vercel.app-motion'
-            />
-            <GoOut
-              title='Firebase'
-              textColor='text-yellow-500'
-              to='https://www.firebase-harislab.vercel.app'
-            />
+            <div>
+              <Topic name='Support Us' />
+              <div className='flex flex-col space-y-2'>
+                <ExternalLink name='Saweria' to='https://www.saweria.co/harislab' />
+                <ExternalLink name='Trakteer' to='https://trakteer.id/harits-syah/tip' />
+                <ExternalLink name='Nih Buat Jajan' to='https://www.nihbuatjajan.com/harislab' />
+              </div>
+            </div>
 
-            <GoOut
-              title='Supabase'
-              textColor='text-[#24b47e]'
-              to='https://www.supabase-harislab.vercel.app'
-            />
-            <GoOut
-              title='NextAuth'
-              textColor='text-indigo-600'
-              to='https://www.nextauth-harislab.vercel.app'
-            />
-            <GoOut
-              title='Tailwind CSS'
-              textColor='text-[#06B6D4]'
-              to='https://www.tailwindcss-harislab.vercel.app'
-            />
-          </div>
+            <div>
+              <Topic name='Design Inspiration' />
+              <div className='flex flex-col space-y-2'>
+                <ExternalLink name='Apple Design' to='https://developer.apple.com/videos/design/' />
+                <ExternalLink
+                  name='Human Design Interface'
+                  to='https://developer.apple.com/design/human-interface-guidelines/'
+                />
 
-          <Topic name='My Brain Food' />
-          <div className='grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4'>
-            <GoOut
-              title='Apple Developer'
-              to='https://developer.apple.com/videos/all-videos/'
-              textColor='text-gray-800'
-            />
-            <GoOut title='NNGroup' to='https://nngroup.com' textColor='text-red-500' />
-            <GoOut
-              title='Laws of UX'
-              to='https://https://lawsofux.com/'
-              textColor='text-amber-500'
-            />
-            <GoOut
-              title='Adobe XD / IA'
-              to='https://xd.adobe.com/ideas/process/information-architecture/'
-              textColor='text-fuschsia-500'
-            />
-          </div>
+                <ExternalLink name='NNGroup' to='https://nngroup.com' />
+                <ExternalLink name='Laws of UX' to='https://lawsofux.com' />
+                <ExternalLink
+                  name='Adobe XD / IA'
+                  to='https://xd.adobe.com/ideas/process/information-architecture/'
+                />
+              </div>
+            </div>
 
-          <Topic name='Technology Stack' />
-          <div className='grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4'>
-            <GoOut
-              title='html'
-              to='https://developer.mozilla.org/en-US/docs/Web/HTML'
-              textColor='text-orange-600'
-            />
-            <GoOut
-              title='css'
-              to='https://developer.mozilla.org/en-US/docs/Web/CSS'
-              textColor='text-harislab'
-            />
-            <GoOut
-              title='javascript'
-              to='https://developer.mozilla.org/en-US/docs/Web/JavaScript'
-              textColor='text-yellow-500'
-            />
-            <GoOut title='react' to='https://reactjs.org/' textColor='text-sky-500' />
-            <GoOut title='swr' to='https://swr.vercel.app/' textColor='text-gray-700' />
-            <GoOut title='nextjs' to='https://nextjs.org/' textColor='text-gray-700' />
-            <GoOut title='vercel' to='https://vercel.com/' textColor='text-gray-700' />
-            <GoOut
-              title='framer motion'
-              to='https://www.framer.com/motion/'
-              textColor='text-pink-600'
-            />
-            <GoOut title='supabase' to='https://supabase.io' textColor='text-emerald-600' />
-            <GoOut title='firebase' to='https://firebase.google.com' textColor='text-orange-500' />
-            <GoOut title='tailwindcss' to='https://tailwindcss.com' textColor='text-[#06B6D4]' />
-          </div>
+            <div>
+              <Topic name='Mini Projects' />
+              <div className='flex flex-col space-y-2' id='miniProject'>
+                <InternalLink name="Delba's Experiments" to='/tentang/delba' />
+                <InternalLink name='Number Game' to='/tentang/number-game' />
+                <InternalLink name='Browser Title' to='/tentang/browser-title' />
+                <ExternalLink
+                  name='Framer Motion'
+                  to='https://www.fremermotion-harislab.vercel.app-motion'
+                />
+                <ExternalLink name='Firebase' to='https://www.firebase-harislab.vercel.app' />
+                <ExternalLink name='Supabase' to='https://www.supabase-harislab.vercel.app' />
+                <ExternalLink name='NextAuth' to='https://www.nextauth-harislab.vercel.app' />
+                <ExternalLink
+                  name='Tailwind CSS'
+                  to='https://www.tailwindcss-harislab.vercel.app'
+                />
+              </div>
+            </div>
 
-          <Topic name='Support Us' />
-          <div className='grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4'>
-            <GoOut title='Saweria' to='https://www.saweria.co/harislab' textColor='text-gray-800' />
-            <GoOut
-              title='Trakteer'
-              to='https://trakteer.id/harits-syah/tip'
-              textColor='text-gray-800'
-            />
-            <GoOut
-              title='Nih Buat Jajan'
-              to='https://www.nihbuatjajan.com/harislab'
-              textColor='text-gray-700'
-            />
-          </div>
+            <div>
+              <Topic name='Technology' />
+              <div className='flex flex-col space-y-2'>
+                <ExternalLink name='html' to='https://developer.mozilla.org/en-US/docs/Web/HTML' />
+                <ExternalLink name='css' to='https://developer.mozilla.org/en-US/docs/Web/CSS' />
+                <ExternalLink
+                  name='javascript'
+                  to='https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+                />
+                <ExternalLink name='react' to='https://reactjs.org/' />
+                <ExternalLink name='swr' to='https://swr.vercel.app/' />
+                <ExternalLink name='nextjs' to='https://nextjs.org/' />
+                <ExternalLink name='vercel' to='https://vercel.com/' />
+                <ExternalLink name='framer motion' to='https://www.framer.com/motion/' />
+                <ExternalLink name='supabase' to='https://supabase.io' />
+                <ExternalLink name='firebase' to='https://firebase.google.com' />
+                <ExternalLink name='tailwindcss' to='https://tailwindcss.com' />
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </Layout>

@@ -27,7 +27,7 @@ import {
 export default function FluidaDinamis() {
   return (
     <LayoutMateri browserTitle='Fluida Dinamis' description='Materi Fluida Dinamis'>
-      <List branch='fisika' to='FluidaDinamis' title='Fluida Dinamis'>
+      <List branch='fisika' to='fluida-dinamis' title='Fluida Dinamis'>
         <NavList title='Pengenalan' href='Pengenalan' />
         <NavList title='Konstanta' href='Konstanta' />
         <NavList title='Variabel' href='Variabel' />
@@ -36,8 +36,6 @@ export default function FluidaDinamis() {
         <NavList title='Pembahasan' href='Pembahasan' />
         <NavList title='Contoh Soal' href='ContohSoal' />
       </List>
-
-      
 
       <AA1 id='Pengenalan' title='Pengenalan' />
       <A2 title='Apa itu Fluida Dinamis' />
@@ -69,7 +67,7 @@ export default function FluidaDinamis() {
           </Body>
         </table>
       </section>
-      
+
       <AA1 id='Variabel' title='Variabel' />
       <section className='overflow-x-auto '>
         <table className='w-full min-w-full border table-max'>
@@ -96,7 +94,7 @@ export default function FluidaDinamis() {
           </Body>
         </table>
       </section>
-      
+
       <AA1 id='Rumus' title='Rumus' />
       <div className='grid grid-cols-1 sm:grid-cols-2'>
         {FluidaDinamisRumus.map(a => (
@@ -106,7 +104,7 @@ export default function FluidaDinamis() {
           </article>
         ))}
       </div>
-      
+
       <AA1 id='PenurunanRumus' title='Penurunan Rumus' />
       <P>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. A laudantium optio earum autem
