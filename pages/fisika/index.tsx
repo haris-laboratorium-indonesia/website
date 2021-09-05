@@ -5,27 +5,33 @@ import { fisikaChapterData } from '../../data/Beranda';
 
 export default function fisika() {
   const yes =
-    'grid grid-cols-1 overflow-hidden  divide-y divide-gray-300 rounded-md xs:gap-3 xs:divide-y-0 xs:grid-cols-2 sm:grid-cols-3 xs:-mx-1 xs:p-1 xs:border-0 shadow xs:shadow-none';
+    'grid grid-cols-1 overflow-hidden  divide-y divide-gray-300 rounded-md xs:gap-3 xs:divide-y-0 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xs:-mx-1 xs:p-1 xs:border-0 shadow xs:shadow-none';
   return (
     <Layout browserTitle='Fisika' description='Materi Fisika SMA'>
       <Title name='Fisika' />
-      {/* <SubTitle name='Ilmu tentang pergerakan benda fisik dan efeknya terhadap benda lainnya.' /> */}
 
-      <Topic name='Glosarium' />
-      <section className={yes}>
-        <ChapterBox title='Konstanta' to='/fisika/fisika_konstanta' />
-        <ChapterBox title='Variabel' to='/fisika/fisika_variabel' />
-        <ChapterBox title='Satuan SI' to='/fisika/fisika_satuanSI' />
-        <ChapterBox title='Animasi' to='/fisika/animasi' />
-        <ChapterBox title='Tokoh Fisika' to='/fisika/tokoh_fisika' />
-      </section>
+      <Topic name='Informasi umum' />
+      <div className='mb-2 -mt-1 text-xl font-semibold leading-6 text-gray-400'>
+        Informasi dan fakta-fakta umum pendukung.
+      </div>
+      <div className={yes}>
+        <ChapterBox title='Konstanta Fisika' to='/fisika/glosarium/fisika_konstanta' />
+        <ChapterBox title='Variabel Fisika' to='/fisika/glosarium/fisika_variabel' />
+        <ChapterBox title='Satuan SI' to='/fisika/glosarium/fisika_satuanSI' />
+        <ChapterBox title='Animasi Fisika' to='/fisika/glosarium/animasi' />
+        <ChapterBox title='Tokoh Fisika' to='/fisika/glosarium/tokoh_fisika' />
+        <ChapterBox title='Flash Card Fisika' to='/fisika/glosarium/flash_card' />
+      </div>
 
-      <Topic name='Bab' />
-      <section className={yes}>
+      <Topic name='Chapter' />
+      <div className='mb-2 -mt-2 text-xl font-semibold text-gray-400 '>
+        Bab fisika SD sampai SMA.
+      </div>
+      <div className={yes}>
         {fisikaChapterData.map(a => (
-          <ChapterBox key={a.title} title={a.title} to={a.to} />
+          <ChapterBox key={a.id} title={a.title} to={a.to} />
         ))}
-      </section>
+      </div>
     </Layout>
   );
 }

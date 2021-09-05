@@ -11,7 +11,7 @@ export default function Layout({ children, browserTitle, description }) {
     <div className='bg-[#F5F5F7]'>
       <Head>
         <title>{browserTitle} - Haris Laboratory</title>
-        <link rel='icon' href='/hahaha.ico' />
+        <link rel='icon' href='/harislab_ico.ico' />
         <meta name='robots' content='follow, index' />
         <meta content={description} name='description' />
         <meta property='og:type' content={type} />
@@ -26,7 +26,7 @@ export default function Layout({ children, browserTitle, description }) {
         <meta name='twitter:image' content={image} />
       </Head>
 
-      <section className='sticky top-0 z-50 bg-gray-800'>
+      <section className='sticky top-0 z-50 bg-gray-900 sm:bg-opacity-90'>
         <NavDesktop />
         <NavMobile />
       </section>
@@ -36,7 +36,6 @@ export default function Layout({ children, browserTitle, description }) {
       </section>
 
       <Footer />
-      <BottomNav />
     </div>
   );
 }

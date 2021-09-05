@@ -122,11 +122,11 @@ export function SubTitle({ name }) {
 }
 
 export const Topic = ({ name }) => {
-  return <h3 className='mt-5 mb-1 text-xl font-semibold text-gray-700 sm:mt-8'>{name}</h3>;
+  return <h3 className='mt-10 mb-1 text-xl font-semibold text-gray-700'>{name}</h3>;
 };
 
 export function SubTopic({ name }) {
-  return <h4 className='mb-5 font-medium text-gray-700'>{name}</h4>;
+  return <h4 className='mb-5 font-medium text-gray-600'>{name}</h4>;
 }
 
 //Button

@@ -1,13 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import FAQ from '../components/FAQ';
-import InfoBox from '../components/Beranda/InfoBox';
+import InfoBox from '../components/InfoBox';
 import Layout from '../components/Layout';
 import Support from '@/components/Support';
-import Inspirasi from '@/components/Inspirasi';
 import GambarBeranda from '../public/Img.svg';
-import WhatYouCanDo from '@/components/Beranda/WhatYouCanDo';
-import { FiturBox } from '@/components/Beranda/WhatYouCanDo';
+
 import {
   SayaPeduliTentang,
   CaraSayaMenyampaikanInformasi,
@@ -16,34 +14,37 @@ import {
 } from '../data/Beranda';
 
 export default function Beranda() {
-  const BerandaTitle = 'mb-5 text-2xl font-semibold text-left text-gray-800 xs:w-4/5';
+  const BerandaTitle =
+    'mb-5 text-xl font-semibold text-center xs:text-left text-gray-600 xs:w-4/5 ';
   const wrapper = 'mb-32 sm:mb-40';
+  const sectionBox =
+    'grid grid-cols-1 gap-5 mx-auto xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 px-5 xs:px-0';
 
-  const tr: string = 'divide-y divide-x divide-cyan-500';
+  const tr: string = 'border-b border-blue-500 divide-x divide-blue-500';
   const td: string = ' text-left text-sm p-2';
-  const th: string = 'p-2 text-left text-base font-medium text-cyan-500 bg-cyan-50';
+  const th: string = 'p-2 text-left text-base font-medium text-blue-700 bg-blue-100';
 
   return (
     <Layout browserTitle='Beranda' description='Laboratorium untuk Pelajar.'>
       {/* Hero */}
-      <section className='grid grid-cols-1 gap-10 mt-10 mb-32 border-b border-gray-400 md:pb-0 sm:pb-5 sm:gap-5 sm:mb-60 sm:grid-cols-2'>
+      <section className='grid grid-cols-1 gap-10 mt-10 mb-32 border-b border-gray-400 md:pb-0 sm:pb-5 sm:gap-5 sm:grid-cols-2'>
         <section className='flex flex-col items-center justify-center '>
-          <div className='text-4xl font-extrabold leading-tight text-center text-gray-700 sm:text-5xl sm:leading-tight sm:text-left'>
-            Matematika. Fisika. Kalkulator. Bimbel.
+          <div className='text-4xl font-extrabold leading-tight text-center text-gray-700 sm:text-left sm:text-5xl sm:leading-tight'>
+            Belajar matematika dan fisika online. Kalkulator. Tutor ke rumah.
           </div>
           <div className='w-full mt-2 mb-5 text-center text-gray-700 sm:text-left'>
             SD sampai dengan SMA.
           </div>
 
-          <div className='grid w-full grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2'>
+          <div className='grid w-full grid-cols-2 gap-3 sm:gap-5'>
             <Link href='/#fitur'>
-              <a className='py-2 text-center text-white border rounded-lg bg-harislab border-harislab hover:bg-opacity-80'>
-                Lihat fitur
+              <a className='py-2 text-center text-white border rounded-md bg-harislab border-harislab hover:bg-opacity-80'>
+                Fitur
               </a>
             </Link>
             <Link href='/#support'>
-              <a className='py-2 text-center border rounded-lg border-harislab text-harislab hover:bg-blue-50 '>
-                Dukung kami
+              <a className='py-2 text-center border rounded-md border-harislab text-harislab hover:bg-blue-50 '>
+                Dukung
               </a>
             </Link>
           </div>
@@ -56,21 +57,22 @@ export default function Beranda() {
       {/* Fitur */}
       <section id='fitur' className={wrapper}>
         <div className={BerandaTitle}>
-          <div>Yang bisa kalian lakukan di sini.</div>
-          <div className='text-gray-500'>Matematika, Fisika, Kalkulator, Bimbel.</div>
+          <div>Yang bisa kalian lakukan.</div>
+          <div className='text-gray-400'>Store, Matematika, Fisika, Kalkulator, Bimbel.</div>
         </div>
 
-        <section className='grid grid-cols-1 gap-5 mx-auto xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 '>
+        <section className={sectionBox}>
           {WhatWhatYouCanDo.map(a => (
-            <WhatYouCanDo
+            <InfoBox
               key={a.title}
               svg={a.svg}
               to={a.to}
-              title={a.title}
-              fitur={a.fiturs.map(b => (
-                <FiturBox key={b.fitur} fitur={b.fitur} />
-              ))}
-              desc={a.desc}
+              name={a.title}
+              description={a.desc}
+              color='text-[#FF2D55]'
+              // fitur={a.fiturs.map(b => (
+              // <FiturBox key={b.fitur} fitur={b.fitur} />
+              // ))}
             />
           ))}
         </section>
@@ -80,16 +82,16 @@ export default function Beranda() {
       <section className={wrapper}>
         <div className={BerandaTitle}>
           <div>Cara kami menyajikan informasi.</div>
-          <div className='text-gray-500'>Agar informasi yang tersedia mudah dipahami.</div>
+          <div className='text-gray-400'>Agar informasi yang tersedia mudah dipahami.</div>
         </div>
-        <section className='grid grid-cols-1 gap-5 mx-auto xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 '>
+        <section className={sectionBox}>
           {CaraSayaMenyampaikanInformasi.map(a => (
             <InfoBox
               key={a.id}
               svg={a.svg}
               name={a.title}
               description={a.description}
-              color='text-amber-500'
+              color='text-[#FF9500]'
               to='/tentang'
             />
           ))}
@@ -100,19 +102,19 @@ export default function Beranda() {
       <section className={wrapper}>
         <div className={BerandaTitle}>
           <div>Kami Peduli.</div>
-          <div className='text-gray-500'>
+          <div className='text-gray-400'>
             Hubungan arsitektur informasi dan kemampuan pelajar belajar.
           </div>
         </div>
 
-        <section className='grid grid-cols-1 gap-5 mx-auto xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 '>
+        <section className={sectionBox}>
           {SayaPeduliTentang.map(a => (
             <InfoBox
               key={a.id}
               svg={a.svg}
               name={a.title}
               description={a.description}
-              color='text-green-500'
+              color='text-emerald-500'
               to='/haris'
             />
           ))}
@@ -123,10 +125,10 @@ export default function Beranda() {
       <section className={wrapper}>
         <div className={BerandaTitle}>
           <div>Perbandingan.</div>
-          <div className='text-gray-500'>HarisLab vs Zenius vs Ruangguru vs Wikipedia</div>
+          <div className='text-gray-400'>HarisLab vs Zenius vs Ruangguru vs Wikipedia</div>
         </div>
         <section className='mx-auto overflow-x-auto sm:gap-5 lg:px-0'>
-          <table className='w-full overflow-hidden border border-cyan-500'>
+          <table className='w-full overflow-hidden border border-blue-500'>
             <thead>
               <tr className={tr}>
                 <th className={th}>vs</th>
@@ -186,7 +188,7 @@ export default function Beranda() {
       <section className={wrapper}>
         <div className={BerandaTitle}>
           <div>Frequently Asked Questions.</div>
-          <div className='text-gray-500'>Pertanyaan-pertanyaan yang sering ditanyakan.</div>
+          <div className='text-gray-400'>Pertanyaan-pertanyaan yang sering ditanyakan.</div>
         </div>
         <section className='grid grid-cols-1 gap-5 xs:grid-cols-2'>
           {isiFAQ.map(a => (

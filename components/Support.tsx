@@ -1,9 +1,9 @@
 export default function Support() {
   return (
     <div className='mb-32 sm:mb-40' id='support'>
-      <div className='mb-5 text-2xl font-semibold text-left text-gray-800 xs:w-4/5'>
+      <div className='mb-5 text-xl font-semibold text-center text-gray-600 xs:text-left xs:w-4/5 '>
         <div>Dukung kami.</div>
-        <div className='text-gray-500'>Melalui salah satu link berikut.</div>
+        <div className='text-gray-400'>Melalui salah satu link berikut.</div>
       </div>
       <div className='grid grid-cols-1 gap-5 sm:grid-cols-3'>
         {/* Saweria */}

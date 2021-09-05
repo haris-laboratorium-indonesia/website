@@ -9,7 +9,7 @@ export default function FAQ({ button, panel }) {
             as='div'
             className={`${
               open ? 'rounded-b-none bg-gray-200' : ''
-            } rounded-lg flex flex-row items-center justify-between py-2 px-3 border border-gray-400  cursor-pointer focus:outline-none  hover:bg-gray-200`}
+            } rounded-lg flex flex-row items-center justify-between py-2 px-3 border border-gray-400  cursor-pointer focus:outline-none  hover:bg-gray-200 font-medium text-gray-700`}
           >
             <div>{button}</div>
             <ChevronUp

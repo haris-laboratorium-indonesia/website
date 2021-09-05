@@ -9,8 +9,8 @@ import { AA1, TH, TData, Row, THEAD, Body, KaTeX } from '@/components/Materi';
 export default function satuanSI() {
   return (
     <Layout browserTitle='Satuan Sistem Internasional' description='Satuan Sistem Internasional'>
-      <AA1 id='Sistem' title='Sistem Satuan Internasional' />
-      <section className='mx-auto overflow-x-auto sm:gap-5 lg:px-0'>
+      <Title name='Sistem Satuan Internasional' />
+      <section className='mx-auto mt-5 overflow-x-auto sm:gap-5 lg:px-0'>
         <table className='w-full min-w-full border table-max'>
           <THEAD>
             <Row>

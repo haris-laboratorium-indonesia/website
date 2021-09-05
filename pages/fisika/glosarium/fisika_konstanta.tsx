@@ -1,13 +1,13 @@
 import 'katex/dist/katex.min.css';
 import Layout from '@/components/Layout';
 import { GlosariumKonstanta } from 'data/KonstantaFisika';
-import { AA1, TH, TData, Row, THEAD, Body, KaTeX } from '@/components/Materi';
+import { AA1, TH, TData, Row, THEAD, Body, KaTeX, Topic, Title } from '@/components/Materi';
 
 export default function fisikaKonstanta() {
   return (
     <Layout browserTitle='Konstanta Fisika' description='Konstanta Fisika'>
-      <AA1 id='Konstanta' title='Konstanta' />
-      <section className='mx-auto overflow-x-auto sm:gap-5 lg:px-0'>
+      <Title name='Konstanta Fisika' />
+      <section className='mx-auto mt-5 overflow-x-auto sm:gap-5 lg:px-0'>
         <table className='w-full min-w-full table-max'>
           <THEAD>
             <Row>

@@ -2,9 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import haris from '../public/haris.jpg';
 import Layout from '@/components/Layout';
-import { RightArrow } from '@/Icons';
-import { HiChevronLeft } from 'react-icons/hi';
-import { Title, SubTitle, Topic, ExternalLink, InternalLink } from '@/components/Materi';
+import { Title, Topic, ExternalLink, InternalLink } from '@/components/Materi';
 
 export default function Tentang() {
   return (
@@ -32,17 +30,17 @@ export default function Tentang() {
           </p>
 
           <Topic name='Person' />
-          <div className='grid w-2/3 grid-cols-1 gap-4 xs:w-full xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 '>
-            <section className='p-4 duration-200 border border-gray-400 rounded-lg'>
+          <div className='grid w-2/3 grid-cols-1 gap-5 xs:w-full xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 '>
+            <section className='p-4 duration-200 rounded-lg'>
               <div className='flex items-center justify-center my-8'>
-                <Image src={haris} width={100} height={100} priority className='rounded-full' />
+                <Image src={haris} width={150} height={150} priority className='rounded-full' />
               </div>
-              <div className='text-xl font-semibold text-center text-gray-700 '>Harits Syah</div>
-              <div className='text-center text-gray-700 '>Founder & CEO</div>
+              <div className='font-semibold text-center text-gray-700 '>Harits Syah</div>
+              <div className='text-sm text-center text-gray-700'>Founder & CEO</div>
             </section>
           </div>
 
-          <section className='grid grid-cols-1 gap-0 sm:gap-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'>
+          <section className='grid grid-cols-2 gap-5 sm:gap-1 sm:grid-cols-3 lg:grid-cols-4 '>
             <div>
               <Topic name='Websites' />
               <div className='flex flex-col space-y-2'>
@@ -73,11 +71,11 @@ export default function Tentang() {
             <div>
               <Topic name='Design Inspiration' />
               <div className='flex flex-col space-y-2'>
-                <ExternalLink name='Apple Design' to='https://developer.apple.com/videos/design/' />
                 <ExternalLink
-                  name='Human Design Interface'
+                  name='H.I.G'
                   to='https://developer.apple.com/design/human-interface-guidelines/'
                 />
+                <ExternalLink name='Apple Design' to='https://developer.apple.com/videos/design/' />
 
                 <ExternalLink name='NNGroup' to='https://nngroup.com' />
                 <ExternalLink name='Laws of UX' to='https://lawsofux.com' />
@@ -91,9 +89,15 @@ export default function Tentang() {
             <div>
               <Topic name='Mini Projects' />
               <div className='flex flex-col space-y-2' id='miniProject'>
-                <InternalLink name="Delba's Experiments" to='/tentang/delba' />
-                <InternalLink name='Number Game' to='/tentang/number-game' />
-                <InternalLink name='Browser Title' to='/tentang/browser-title' />
+                <ExternalLink name="Delba's Exp's" to='https://www.mp-harislab.vercel.app/delba' />
+                <ExternalLink
+                  name='Number Game'
+                  to='https://www.mp-harislab.vercel.app/number-game'
+                />
+                <ExternalLink
+                  name='Browser Title'
+                  to='https://www.mp-harislab.vercel.app/browser-title'
+                />
                 <ExternalLink
                   name='Framer Motion'
                   to='https://www.fremermotion-harislab.vercel.app-motion'
@@ -103,7 +107,7 @@ export default function Tentang() {
                 <ExternalLink name='NextAuth' to='https://www.nextauth-harislab.vercel.app' />
                 <ExternalLink
                   name='Tailwind CSS'
-                  to='https://www.tailwindcss-harislab.vercel.app'
+                  to='https://www.mp-harislab.vercel.app/tailwindcss'
                 />
               </div>
             </div>
@@ -111,20 +115,20 @@ export default function Tentang() {
             <div>
               <Topic name='Technology' />
               <div className='flex flex-col space-y-2'>
-                <ExternalLink name='html' to='https://developer.mozilla.org/en-US/docs/Web/HTML' />
-                <ExternalLink name='css' to='https://developer.mozilla.org/en-US/docs/Web/CSS' />
+                <ExternalLink name='HTML' to='https://developer.mozilla.org/en-US/docs/Web/HTML' />
+                <ExternalLink name='CSS' to='https://developer.mozilla.org/en-US/docs/Web/CSS' />
+                <ExternalLink name='TailwindCSS' to='https://tailwindcss.com' />
                 <ExternalLink
                   name='javascript'
                   to='https://developer.mozilla.org/en-US/docs/Web/JavaScript'
                 />
                 <ExternalLink name='react' to='https://reactjs.org/' />
                 <ExternalLink name='swr' to='https://swr.vercel.app/' />
-                <ExternalLink name='nextjs' to='https://nextjs.org/' />
-                <ExternalLink name='vercel' to='https://vercel.com/' />
-                <ExternalLink name='framer motion' to='https://www.framer.com/motion/' />
-                <ExternalLink name='supabase' to='https://supabase.io' />
-                <ExternalLink name='firebase' to='https://firebase.google.com' />
-                <ExternalLink name='tailwindcss' to='https://tailwindcss.com' />
+                <ExternalLink name='Next.js' to='https://nextjs.org/' />
+                <ExternalLink name='Vercel' to='https://vercel.com/' />
+                <ExternalLink name='Framer Motion' to='https://www.framer.com/motion/' />
+                <ExternalLink name='Supabase' to='https://supabase.io' />
+                <ExternalLink name='Firebase' to='https://firebase.google.com' />
               </div>
             </div>
           </section>
@@ -133,6 +137,20 @@ export default function Tentang() {
     </Layout>
   );
 }
+
+export const RightArrow = () => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      className='w-6 h-6 text-gray-400'
+      fill='none'
+      viewBox='0 0 24 24'
+      stroke='currentColor'
+    >
+      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.1} d='M9 5l7 7-7 7' />
+    </svg>
+  );
+};
 
 const ArrowUpRight = () => {
   return (
@@ -161,7 +179,7 @@ const GoIn = ({ to, textColor, title }) => {
         className={` ${textColor} border border-gray-400 pl-4 pr-1.5 py-2.5 sm:py-2 justify-between font-medium rounded-md  hover:bg-gray-200 flex `}
       >
         <div>{title}</div>
-        <RightArrow color='' />
+        <RightArrow />
       </a>
     </Link>
   );

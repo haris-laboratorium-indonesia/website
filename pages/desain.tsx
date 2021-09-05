@@ -10,7 +10,6 @@ import {
   ExternalLink,
   ButtonTertiary,
 } from '@/components/Materi';
-import { RightArrow } from '@/components/Icons';
 import { UXData, ColorsData } from 'data/Design';
 import Inspirasi from '@/components/Inspirasi';
 import Link from 'next/link';
@@ -42,7 +41,7 @@ export default function Desain() {
             className={` text-gray-700 border border-gray-500 pl-4 pr-1.5 py-2.5 sm:py-2 justify-between font-medium rounded-md  hover:bg-gray-200 flex `}
           >
             <div>Internal Link v2</div>
-            <RightArrow color='' />
+            <RightArrow />
           </a>
         </Link>
         <a
@@ -105,6 +104,20 @@ export default function Desain() {
     </Layout>
   );
 }
+
+export const RightArrow = () => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      className='w-6 h-6 text-gray-400'
+      fill='none'
+      viewBox='0 0 24 24'
+      stroke='currentColor'
+    >
+      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.1} d='M9 5l7 7-7 7' />
+    </svg>
+  );
+};
 
 const ArrowUpRight = () => {
   return (

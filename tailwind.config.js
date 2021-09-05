@@ -26,7 +26,7 @@ module.exports = {
       harislab: '#007AFF',
       black: '#262626',
       white: '#FFFFFF',
-      gray: colors.trueGray,
+      gray: colors.gray,
       red: colors.red,
       orange: colors.orange,
       lime: colors.lime,
