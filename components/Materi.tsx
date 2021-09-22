@@ -68,7 +68,7 @@ export const Gambar = ({ src, alt, caption }) => {
 export const rumusTitle = 'font-medium text-md inline-block w-full  text-pink-600';
 
 const thead = 'border-t border-gray-300';
-const th = 'w-1/5 py-2 px-2 sm:px-4 text-left font-medium text-gray-800 bg-gray-300 w-max';
+const th = 'w-1/5 py-2 px-2 sm:px-4 text-left font-medium text-gray-700 bg-gray-200 w-max';
 const tr = ' border-b border-l border-r border-gray-300';
 const td = 'text-left px-2 sm:px-4 py-0.5 table-auto  text-gray-700 ';
 
@@ -98,7 +98,7 @@ export const Legenda = ({ name, rumus }) => {
   );
 };
 export const KaTeX = ({ children }) => {
-  return <TeX className='inline-block py-2 text-xs w-max'>{children}</TeX>;
+  return <TeX className='inline-block py-2 w-max'>{children}</TeX>;
 };
 export const Anchor = ({ to, name }) => {
   return (
@@ -111,9 +111,31 @@ export const Anchor = ({ to, name }) => {
 //Typography
 export function Title({ name }) {
   return (
-    <h1 className='z-40 block w-full h-auto mx-auto my-5 text-3xl font-bold text-gray-800 sm:mt-8 sm:mb-0 font-inter sm:text-4xl'>
-      {name}
-    </h1>
+    <div className='py-5'>
+      {/* <button
+        className='flex flex-row items-center mb-1 -ml-4 -space-x-1 group'
+        onClick={() => history.back()}
+      >
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          className='w-5 h-5 text-gray-500 group-hover:text-harislab'
+          fill='none'
+          viewBox='0 0 24 24'
+          stroke='currentColor'
+        >
+          <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth={1.5}
+            d='M15 19l-7-7 7-7'
+          />
+        </svg>
+        <div className='text-gray-500 group-hover:text-harislab group-hover:underline'>Back</div>
+      </button> */}
+      <h1 className='z-40 block w-full h-auto mx-auto text-3xl font-bold text-left text-gray-800 sm:text-4xl'>
+        {name}
+      </h1>
+    </div>
   );
 }
 
@@ -122,11 +144,11 @@ export function SubTitle({ name }) {
 }
 
 export const Topic = ({ name }) => {
-  return <h3 className='mt-10 mb-1 text-xl font-semibold text-gray-700'>{name}</h3>;
+  return <h3 className='mb-2 text-xl font-semibold text-gray-700 '>{name}</h3>;
 };
 
 export function SubTopic({ name }) {
-  return <h4 className='mb-5 font-medium text-gray-600'>{name}</h4>;
+  return <h4 className='mb-1 font-medium text-gray-800'>{name}</h4>;
 }
 
 //Button
@@ -182,7 +204,21 @@ const RightArrow = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      className='w-4 h-5 text-harislab'
+      className='w-4 h-4 text-harislab'
+      fill='none'
+      viewBox='0 0 24 24'
+      stroke='currentColor'
+    >
+      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
+    </svg>
+  );
+};
+
+export const ChevronRight = () => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      className='w-6 h-6'
       fill='none'
       viewBox='0 0 24 24'
       stroke='currentColor'

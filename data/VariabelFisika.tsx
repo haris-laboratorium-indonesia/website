@@ -83,6 +83,7 @@ export const GlosariumVar = [
   { simbol: 'A', nama: 'Luas', satuan: 'm^2' },
   { simbol: 'V', nama: 'Volume', satuan: 'm^3' },
   { simbol: '\\rho', nama: 'Massa Jenis', satuan: 'kg/m^3' },
+  { simbol: '\\tau', nama: 'Torsi', satuan: 'N \\cdot m' },
 ];
 
 export const ListrikDinamisVar = [

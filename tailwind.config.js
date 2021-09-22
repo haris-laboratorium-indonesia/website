@@ -6,6 +6,10 @@ module.exports = {
   purge: ['./pages/**/*.tsx', './components/**/*.tsx', './components/List/*.tsx'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fill: theme => ({
+      blue: theme('colors.blue.400'),
+      gray: theme('colors.gray.400'),
+    }),
     textIndent: (theme, { negative }) => ({
       ...{
         no: '0rem',
@@ -43,8 +47,16 @@ module.exports = {
       purple: colors.purple,
       indigo: colors.indigo,
       fuschsia: colors.fuchsia,
+      violet: colors.violet,
     },
     extend: {
+      strokeWidth: {
+        1.5: '1.5',
+        2: '2',
+      },
+      zIndex: {
+        90: '90',
+      },
       animation: {
         'background-spin': 'halfSpin 10s ease-in-out infinite',
       },
@@ -53,7 +65,7 @@ module.exports = {
         mw: ['Merriweather'],
       },
       fontSize: {
-        tiny: '.950rem',
+        tiny: '.900rem',
         landingPage: '2.7rem',
       },
       scale: {
@@ -75,7 +87,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      fill: ['hover', 'focus'],
+    },
   },
   plugins: [require('@tailwindcss/typography'), require('tailwindcss-text-indent')()],
 };

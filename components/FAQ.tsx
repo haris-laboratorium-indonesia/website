@@ -8,17 +8,15 @@ export default function FAQ({ button, panel }) {
           <Disclosure.Button
             as='div'
             className={`${
-              open ? 'rounded-b-none bg-gray-200' : ''
-            } rounded-lg flex flex-row items-center justify-between py-2 px-3 border border-gray-400  cursor-pointer focus:outline-none  hover:bg-gray-200 font-medium text-gray-700`}
+              open ? 'rounded-b-none ' : ''
+            } rounded-lg flex flex-row items-center justify-between py-2 px-3 border border-gray-500  cursor-pointer focus:outline-none  bg-gray-200 font-medium text-gray-700 hover:bg-gray-300`}
           >
             <div>{button}</div>
             <ChevronUp
-              className={`${open ? 'transform rotate-180' : ''} block w-6 h-6 text-gray-700`}
+              className={`${open ? 'transform -rotate-180' : ''} block w-6 h-6 text-gray-700`}
             />
           </Disclosure.Button>
-          <Disclosure.Panel
-            className={`rounded-b-lg border border-t-0 border-gray-400 p-3 text-gray-600 `}
-          >
+          <Disclosure.Panel className='p-3 text-gray-600 border border-t-0 border-gray-500 rounded-b-lg '>
             {panel}
           </Disclosure.Panel>
         </>

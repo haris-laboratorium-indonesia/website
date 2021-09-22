@@ -1,29 +1,32 @@
 import Layout from '@/components/Layout';
-import { Title, InternalLink } from '@/components/Materi';
+import { Title, InternalLink, Topic } from '@/components/Materi';
 import { Tab } from '@headlessui/react';
 
-export default function Kalkulator() {
+export default function Calkulator() {
   const tab = 'active:bg-gray-200 rounded-md text-tiny hover:bg-white hover:shadow-md py-2 px-4';
   return (
-    <Layout browserTitle='Kalkulator' description='Kalkulator'>
+    <Layout
+      browserTitle='Kalkulator'
+      description='Manfaatkan kalkulator dasar, kalkulator saintifik, dan kalkulator rumus untuk belajar.'
+    >
       <Title name='Kalkulator' />
 
-      <Tab.Group as='div' className='mt-5 '>
-        <Tab.List className='grid grid-cols-3 gap-2 p-1 bg-gray-200 rounded-md sm:w-1/2'>
+      <Tab.Group as='div' className='mt-10'>
+        <Tab.List className='grid grid-cols-3 gap-1 p-1 text-base text-gray-600 bg-gray-200 rounded-lg sm:w-1/4 sm:text-tiny'>
           <Tab
             className={({ selected }) =>
               selected
-                ? 'bg-white shadow-md rounded-md text-black p-1'
-                : 'p-1 hover:bg-gray-300 rounded-md'
+                ? 'bg-white shadow-md rounded-md p-1 sm:p-0.5'
+                : 'p-1 sm:p-0.5 hover:bg-gray-300 rounded-md'
             }
           >
-            Biasa
+            Basic
           </Tab>
           <Tab
             className={({ selected }) =>
               selected
-                ? 'bg-white shadow-md rounded-md text-black p-1'
-                : 'p-1 hover:bg-gray-300 rounded-md'
+                ? 'bg-white shadow-md rounded-md p-1 sm:p-0.5'
+                : 'p-1 sm:p-0.5 hover:bg-gray-300 rounded-md'
             }
           >
             Saintifik
@@ -31,8 +34,8 @@ export default function Kalkulator() {
           <Tab
             className={({ selected }) =>
               selected
-                ? 'bg-white shadow-md rounded-md text-black p-1'
-                : 'p-1 hover:bg-gray-300 rounded-md'
+                ? 'bg-white shadow-md rounded-md p-1 sm:p-0.5'
+                : 'p-1 sm:p-0.5 hover:bg-gray-300 rounded-md'
             }
           >
             Rumus

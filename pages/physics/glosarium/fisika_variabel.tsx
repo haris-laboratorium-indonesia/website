@@ -6,7 +6,7 @@ import { AA1, TH, TData, Row, THEAD, Body, KaTeX, Title } from '@/components/Mat
 export default function fisikaVariabel() {
   return (
     <Layout browserTitle='Variabel Fisika' description='Variabel Fisika'>
-      <Title name='Variabel' />
+      <Title name='Variabel Fisika' />
       <section className='mx-auto mt-5 overflow-x-auto sm:gap-5 lg:px-0'>
         <table className='w-full min-w-full border table-max'>
           <THEAD>

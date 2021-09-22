@@ -11,7 +11,10 @@ import Link from 'next/link';
 
 export default function Bimbel() {
   return (
-    <Layout browserTitle='Bimbel' description='Booking Les tidak pernah semudah ini'>
+    <Layout
+      browserTitle='Bimbel'
+      description='Ketika guru di sekolah tidak lagi bisa diandalkan, datanglah ke bimbel Haris Laboratory.'
+    >
       <Title name='Bimbel' />
 
       {/* Memesan pelajaran */}
@@ -56,7 +59,7 @@ export default function Bimbel() {
 
       {/* Catatan */}
       <div>
-        <div className='mt-10 mb-3 text-2xl font-semibold'>Catatan</div>
+        <Topic name='Catatan' />
         <ul className='list-disc list-inside'>
           <li>Hanya bisa membooking 2 hari sebelumnya</li>
           <li>Pembayaran dilakukan ke rekening mandiri</li>

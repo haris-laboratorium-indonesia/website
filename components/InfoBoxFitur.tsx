@@ -1,7 +1,7 @@
 import { InternalLink } from './Materi';
 import Link from 'next/link';
 
-export default function InfoBox({ svg, name, description, to }) {
+export default function InfoBoxFitur({ svg, name, description, to, ResultOfTheAction }) {
   return (
     <div className='flex flex-col items-center justify-between px-4 py-6 space-y-2 bg-white rounded-lg shadow'>
       <svg
@@ -21,7 +21,7 @@ export default function InfoBox({ svg, name, description, to }) {
 
       <Link href={to}>
         <a className='flex items-center space-x-2 cursor-pointer text-harislab hover:underline'>
-          Selengkapnya
+          {ResultOfTheAction}
           <RightArrow />
         </a>
       </Link>

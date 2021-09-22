@@ -1,9 +1,11 @@
 export default function Support() {
+  const BerandaTitle = 'mb-5 text-4xl font-semibold text-center  text-gray-700 space-y-2 ';
+  const subBerandaTitle = 'text-2xl font-normal text-gray-500';
   return (
     <div className='mb-32 sm:mb-40' id='support'>
-      <div className='mb-5 text-xl font-semibold text-center text-gray-600 xs:text-left xs:w-4/5 '>
-        <div>Dukung kami.</div>
-        <div className='text-gray-400'>Melalui salah satu link berikut.</div>
+      <div className={BerandaTitle}>
+        <div>Dukung kami</div>
+        <div className={subBerandaTitle}>Melalui salah satu link berikut</div>
       </div>
       <div className='grid grid-cols-1 gap-5 sm:grid-cols-3'>
         {/* Saweria */}

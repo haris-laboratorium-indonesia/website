@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": ["components/*"],
-      "@/Icons": ["components/Icons"]
+      "@/Icons": ["components/Icons"],
+      "@/showcase":["components/showcase"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "tailwind.config.js"],

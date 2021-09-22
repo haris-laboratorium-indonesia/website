@@ -10,7 +10,7 @@ export default function Layout({ children, browserTitle, description }) {
   return (
     <div className='bg-[#F5F5F7]'>
       <Head>
-        <title>{browserTitle} - Haris Laboratory</title>
+        <title>{browserTitle} – Haris Lab</title>
         <link rel='icon' href='/harislab_ico.ico' />
         <meta name='robots' content='follow, index' />
         <meta content={description} name='description' />
@@ -26,14 +26,14 @@ export default function Layout({ children, browserTitle, description }) {
         <meta name='twitter:image' content={image} />
       </Head>
 
-      <section className='sticky top-0 z-50 bg-gray-900 sm:bg-opacity-90'>
+      <section className='sticky top-0 z-50 bg-gray-800'>
         <NavDesktop />
         <NavMobile />
       </section>
 
-      <section className='w-full max-w-5xl min-h-screen px-5 pb-5 mx-auto sm:pb-0 xl:px-0 font-inter '>
+      <main className='w-full max-w-5xl min-h-screen px-5 pb-5 mx-auto sm:pb-0 xl:px-0 font-inter '>
         {children}
-      </section>
+      </main>
 
       <Footer />
     </div>

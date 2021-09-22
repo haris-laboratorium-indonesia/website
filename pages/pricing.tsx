@@ -1,13 +1,13 @@
 import Layout from '@/components/Layout';
-import { Title, SubTitle } from '@/components/Materi';
+import { Title } from '@/components/Materi';
 //Box
 //data biaya
 
-export default function Biaya() {
+export default function Pricing() {
   const title = 'text-gray-500 font-semibold text-2xl mb-5';
   return (
-    <Layout description='y' browserTitle='Biaya'>
-      <Title name='Biaya' />
+    <Layout description='y' browserTitle='Pricing'>
+      <Title name='Pricing' />
 
       <div className='grid max-w-4xl grid-cols-1 gap-5 mx-auto mb-10 sm:grid-cols-3'>
         {data.map(a => (
