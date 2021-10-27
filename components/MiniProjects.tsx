@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Title, SubTitle } from '@/components/Materi';
+import { Title, SubTitle } from '@/components/DesignSystem';
 import Layout from '@/components/Layout';
 import { HiChevronLeft } from 'react-icons/hi';
 

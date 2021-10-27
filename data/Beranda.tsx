@@ -100,7 +100,7 @@ export const fisikaChapterData = [
   { id: '4', title: 'Listrik Dinamis', to: '/fisika/listrik-dinamis' },
   { id: '5', title: 'Gelombang Mekanik', to: '/fisika/gelombang-mekanik' },
   { id: '6', title: 'Gelombang Bunyi', to: '/fisika/gelombang-bunyi' },
-  { id: '7', title: 'Gelombang E.M', to: '/fisika/gelombang-elektromagnetik' },
+  { id: '7', title: 'Elektromagnetisme', to: '/fisika/gelombang-elektromagnetik' },
   { id: '8', title: 'Kinematika', to: '/fisika/kinematika' },
   { id: '9', title: 'Dinamika', to: '/fisika/dinamika' },
   { id: '10', title: 'Kesetimbangan', to: '/fisika/kesetimbangan' },
@@ -143,33 +143,33 @@ export const WhatWhatYouCanDo = [
     desc: 'Membeli aksesoris, alat, kartu, buku, voucher, dan merchandise Haris Laboratory.',
     ResultOfTheAction: 'Shop now',
   },
-  {
-    title: 'Matematika',
-    svg: 'M4.871 4A17.926 17.926 0 003 12c0 2.874.673 5.59 1.871 8m14.13 0a17.926 17.926 0 001.87-8c0-2.874-.673-5.59-1.87-8M9 9h1.246a1 1 0 01.961.725l1.586 5.55a1 1 0 00.961.725H15m1-7h-.08a2 2 0 00-1.519.698L9.6 15.302A2 2 0 018.08 16H8',
-    to: '/matematika',
-    desc: 'Mempelajari bahasa alam semesta yang digunakan di seluruh dunia untuk hampir segala hal.',
-    ResultOfTheAction: 'Explore math',
-  },
-  {
-    title: 'Fisika',
-    svg: 'M13 10V3L4 14h7v7l9-11h-7z',
-    to: '/fisika',
-    desc: 'Mempelajari kegunaan dari matematika pada fenomena-fenomena fisik di seluruh alam semesta.',
-    ResultOfTheAction: 'Explore physics',
-  },
+
   {
     title: 'Kalkulator',
     svg: 'M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z',
     to: '/kalkulator',
-    desc: 'Manfaatkan kalkulator dasar, kalkulator saintifik, dan kalkulator rumus untuk belajar.',
+    desc: 'Manfaatkan kalkulator dasar, kalkulator saintifik, dan kalkulator rumus demi kelancaran belajar.',
     ResultOfTheAction: 'Calculate now',
   },
-
   {
     title: 'Bimbel',
     svg: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6',
     to: '/bimbel',
     desc: 'Ketika guru di sekolah tidak lagi bisa diandalkan, datanglah ke bimbel Haris Laboratory.',
     ResultOfTheAction: 'Order tutor',
+  },
+  {
+    title: 'Matematika',
+    svg: 'M4.871 4A17.926 17.926 0 003 12c0 2.874.673 5.59 1.871 8m14.13 0a17.926 17.926 0 001.87-8c0-2.874-.673-5.59-1.87-8M9 9h1.246a1 1 0 01.961.725l1.586 5.55a1 1 0 00.961.725H15m1-7h-.08a2 2 0 00-1.519.698L9.6 15.302A2 2 0 018.08 16H8',
+    to: '/matematika',
+    desc: 'Mempelajari bahasa alam semesta yang digunakan di seluruh dunia untuk hampir segala hal.',
+    ResultOfTheAction: 'Explore Math',
+  },
+  {
+    title: 'Fisika',
+    svg: 'M13 10V3L4 14h7v7l9-11h-7z',
+    to: '/fisika',
+    desc: 'Mempelajari kegunaan dari matematika pada fenomena-fenomena fisik di seluruh alam semesta.',
+    ResultOfTheAction: 'Explore Physics',
   },
 ];

@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout';
-import { Title, SubTitle, Topic } from '@/components/Materi';
+import { Title, SubTitle, Topic } from '@/components/DesignSystem';
 import StoreBook from '@/components/StoreBook';
 import StoreCard from '@/components/StoreCard';
 import StoreCloth from '@/components/StoreCloth';

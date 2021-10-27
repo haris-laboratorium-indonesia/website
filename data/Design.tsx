@@ -100,7 +100,7 @@ export const ColorsData = [
   { id: '2', color: 'bg-gray-700', name: 'Font', code: '#3F3F46' },
   { id: '3', color: 'bg-harislab', name: 'Action', code: '#007AFF' },
   { id: '4', color: 'bg-gray-300', name: 'BG Element (hover)', code: '#D4D4D8' },
-  { id: '5', color: 'bg-pink-600', name: 'UI Icons', code: '#60A5FA' },
+  { id: '5', color: 'bg-blue-400', name: 'UI Icons', code: '#60A5FA' },
   { id: '6', color: 'bg-gray-200', name: 'BG Element', code: '#E5E5E5' },
   { id: '7', color: 'bg-[#F5F5F7]', name: 'BG Main', code: '#F5F5F7' },
 ];

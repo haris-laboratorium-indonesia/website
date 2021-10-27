@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Layout from '@/components/Layout';
 import {
   Title,
@@ -9,16 +10,14 @@ import {
   InternalLink,
   ExternalLink,
   ButtonTertiary,
-} from '@/components/Materi';
+} from '@/components/DesignSystem';
 import { UXData, ColorsData } from 'data/Design';
-import Inspirasi from '@/components/Inspirasi';
-import Link from 'next/link';
 import { ColorsBox } from '@/components/ColorBox';
 
 export default function Design() {
   return (
     <Layout browserTitle='Design' description='Design HarisLab'>
-      <Title name='Design' />
+      <Title name='Design System' />
 
       <div className='space-y-10'>
         <div>

@@ -1,15 +1,15 @@
 import Link from 'next/link';
 import Breadcrumbs from 'nextjs-breadcrumbs';
-import { ChevronRight } from '@/components/Materi';
+import { ChevronRight } from '@/components/DesignSystem';
 
 export default function Footer() {
   const a = 'block text-gray-600  hover:underline font-inter';
   return (
     <footer
-      className='bottom-0 w-full pt-5 mt-40 text-center bg-gray-200 border-t border-gray-300'
+      className='bottom-0 w-full pt-5 mt-32 text-center bg-gray-200 border-t border-gray-300'
       id='footer'
     >
-      <div className='px-5 xl:px-0'>
+      <div className='px-5 lg:px-0'>
         <Breadcrumbs
           rootLabel='Home'
           containerClassName='max-w-5xl mx-auto'
@@ -21,22 +21,22 @@ export default function Footer() {
         />
       </div>
       {/* Footer */}
-      <section className='grid max-w-5xl grid-cols-2 px-5 pt-5 pb-10 mx-auto text-left gap-y-5 sm:grid-cols-4 xl:px-0'>
+      <section className='grid max-w-5xl grid-cols-2 px-5 pt-5 pb-10 mx-auto text-left gap-y-5 sm:grid-cols-4 lg:px-0'>
         <FooterBox title='Features'>
           <Link href='/store'>
             <a className={a}>Store</a>
           </Link>
-          <Link href='/math'>
-            <a className={a}>Math</a>
-          </Link>
-          <Link href='/physics'>
-            <a className={a}>Physics</a>
+          <Link href='/tutoring'>
+            <a className={a}>Bimbel</a>
           </Link>
           <Link href='/calculator'>
-            <a className={a}>Calculator</a>
+            <a className={a}>Kalkulator</a>
           </Link>
-          <Link href='/tutoring'>
-            <a className={a}>Tutoring</a>
+          <Link href='/math'>
+            <a className={a}>Matematika</a>
+          </Link>
+          <Link href='/physics'>
+            <a className={a}>Fisika</a>
           </Link>
         </FooterBox>
 
@@ -87,12 +87,22 @@ export default function Footer() {
         </FooterBox>
 
         <FooterBox title='Legal'>
-          <div>Report problem !</div>
-          <div>Make sugestion !</div>
+          <div>Report problem</div>
+          <div>Make sugestion</div>
           <div>Privacy Policy</div>
           <div>Terms of Use</div>
-          <div>Copyright &copy;2021 Haris Lab</div>
         </FooterBox>
+      </section>
+      <section className='flex flex-col max-w-5xl px-5 pb-5 mx-auto space-y-1 text-xs xs:space-y-0 xs:space-x-5 md:flex-row lg:px-0 xs:text-tiny'>
+        <div className='text-left text-gray-500'>
+          Copyright @ {new Date().getFullYear()} HarisLab Inc. All Right Reserved.
+        </div>
+        <div className='flex flex-row flex-wrap space-x-3 text-gray-600 divide-x divide-gray-400'>
+          <div className=''>Privacy Policy</div>
+          <div className='pl-3'>Terms of Use</div>
+          <div className='pl-3'>Sales and Refunds</div>
+          <div className='pl-3'>Site Map</div>
+        </div>
       </section>
     </footer>
   );

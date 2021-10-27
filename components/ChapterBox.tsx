@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function ChapterBox({ to, title }) {
   return (
     <Link href={to}>
-      <a className='flex items-center justify-between w-full pl-2.5 pr-2 py-2.5 sm:py-2  xs:rounded-md bg-white hover:bg-gray-200  xs:shadow group hover:shadow-none overflow-hidden'>
+      <a className='flex items-center justify-between w-full pl-2.5 pr-2 py-2.5 sm:py-2  xs:rounded-md bg-white hover:bg-gray-200  xs:shadow group hover:shadow-none overflow-hidden duration-100 ease-out active:ring-2 active:ring-blue-300'>
         <div className='flex items-center space-x-1.5 overflow-hidden sm:justify-between '>
           <Folder />
           <p className='text-gray-700 truncate group-hover:text-gray-800'>{title}</p>
@@ -18,7 +18,7 @@ export const RightArrow = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      className='w-6 h-6 text-gray-400 group-hover:text-gray-400'
+      className='w-6 h-6 text-gray-500 group-hover:text-gray-600'
       fill='none'
       viewBox='0 0 24 24'
       stroke='currentColor'
@@ -32,7 +32,8 @@ export const Folder = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      className='w-6 h-6 text-blue-400 group-hover:text-gray-500 fill-blue group-hover:fill-[#71717A]'
+      //group-hover:text-gray-500 group-hover:fill-[#71717A]
+      className='w-6 h-6 text-blue-400 fill-blue'
       fill='none'
       viewBox='0 0 24 24'
       stroke='currentColor'

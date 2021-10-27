@@ -1,16 +1,16 @@
 import Link from 'next/link';
 import { Menu, Transition } from '@headlessui/react';
 import src from '../public/logo.png';
-import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 export default function NavMobile() {
   return (
     <nav className='flex items-center justify-between w-full h-auto md:hidden'>
       <Login />
-
       <Link href='/'>
-        <a className='flex items-center '>
-          <Image src={src} width={22} height={22} priority />
+        <a className='flex items-center text-xl font-medium font-mw'>
+          <span className='text-gray-100'>Haris</span>
+          <span className='text-gray-400'>Lab</span>
         </a>
       </Link>
 
@@ -25,11 +25,11 @@ export default function NavMobile() {
               <Search />
 
               <section className='flex flex-col px-8 py-5 space-y-2 bg-gray-800 border-t border-gray-600 divide-y divide-gray-600 '>
-                <Navigaition to='store' title='Store' />
-                <Navigaition to='math' title='Math' />
-                <Navigaition to='physics' title='Physics' />
-                <Navigaition to='calculator' title='Calculator' />
-                <Navigaition to='tutoring' title='Tutoring' />
+                <Navigation to='/store' title='Store' />
+                <Navigation to='/kalkulator' title='Kalkulator' />
+                <Navigation to='/bimbel' title='Bimbel' />
+                <Navigation to='/matematika' title='Matematika' />
+                <Navigation to='/fisika' title='Fisika' />
               </section>
             </Menu.Items>
           </>
@@ -39,19 +39,31 @@ export default function NavMobile() {
   );
 }
 
-const Navigaition = ({ to, title }) => {
-  const style = ' text-lg block text-gray-300 pt-2 pb-1 active:text-gray-500';
+const Navigation = ({ to, title }) => {
+  const router = useRouter();
   return (
     <Menu.Item>
       {({ active }) => (
         <button className='w-full text-left'>
           {active ? (
-            <Link href={`/${to}`}>
-              <a className={style}>{title}</a>
+            <Link href={to}>
+              <a
+                className={`${
+                  router.asPath === to ? 'text-gray-400' : 'text-gray-50'
+                } text-lg block pt-2 pb-1`}
+              >
+                {title}
+              </a>
             </Link>
           ) : (
-            <Link href={`/${to}`}>
-              <a className={style}>{title}</a>
+            <Link href={to}>
+              <a
+                className={`${
+                  router.asPath === to ? 'text-gray-400' : 'text-gray-50'
+                } text-lg block pt-2 pb-1`}
+              >
+                {title}
+              </a>
             </Link>
           )}
         </button>
@@ -99,7 +111,7 @@ const Login = () => {
   return (
     <div className='px-3 py-2 '>
       <svg
-        className='w-7 h-7 text-[#d7d7d6]  rotate-180'
+        className='w-6 h-6 text-[#d7d7d6] '
         xmlns='http://www.w3.org/2000/svg'
         fill='none'
         viewBox='0 0 24 24'

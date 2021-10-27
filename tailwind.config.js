@@ -3,7 +3,7 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   mode: 'jit',
-  purge: ['./pages/**/*.tsx', './components/**/*.tsx', './components/List/*.tsx'],
+  purge: ['./pages/**/*.tsx', './pages/**/**/*.tsx', './components/**/*.tsx', './components/*.tsx'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     fill: theme => ({
@@ -70,19 +70,7 @@ module.exports = {
       },
       scale: {
         101: '1.01',
-      },
-      keyframes: {
-        halfSpin: {
-          '0%': {
-            transform: 'rotate(0deg)',
-          },
-          '50%': {
-            transform: 'rotate(150deg)',
-          },
-          to: {
-            transform: 'rotate(0deg)',
-          },
-        },
+        102: '1.02',
       },
     },
   },

@@ -1,36 +1,47 @@
 import Link from 'next/link';
 import src from '../public/logo.png';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 export default function NavDesktop() {
+  const router = useRouter();
   return (
     <nav className='hidden md:block'>
       <div className='z-30 flex flex-row items-center justify-between w-full h-auto max-w-5xl px-5 py-1 mx-auto xl:px-0'>
         <Link href='/'>
-          <a className='flex items-center'>
-            <Image src={src} width={22} height={22} priority />
+          <a className='flex items-center text-lg font-medium font-mw '>
+            <span className='text-gray-100'>Haris</span>
+            <span className='text-gray-400'>Lab</span>
           </a>
         </Link>
 
-        <Navigation to='/store' name='Store' />
-        <Navigation to='/math' name='Math' />
-        <Navigation to='/physics' name='Physics' />
-        <Navigation to='/calculator' name='Calculator' />
-        <Navigation to='/tutoring' name='Tutoring' />
+        <div className='flex flex-row md:space-x-4 lg:space-x-10'>
+          <Navigation to='/store' title='Store' />
+          <Navigation to='/kalkulator' title='Kalkulator' />
+          <Navigation to='/bimbel' title='Bimbel' />
+          <Navigation to='/matematika' title='Matematika' />
+          <Navigation to='/fisika' title='Fisika' />
+        </div>
 
-        <Search />
-
-        <Login />
+        <div className='flex items-center space-x-5'>
+          <Search />
+          <Login />
+        </div>
       </div>
     </nav>
   );
 }
 
-const Navigation = ({ to, name }) => {
+const Navigation = ({ to, title }) => {
+  const router = useRouter();
   return (
     <Link href={to}>
-      <a className='p-1.5 duration-200 hover:text-white text-[#d7d7d6] text-tiny font-light block font-inter active:text-white'>
-        {name}
+      <a
+        className={`p-1.5 duration-200 hover:text-[#d7d7d6] text-base block font-light font-inter active:text-white ${
+          router.asPath === to ? 'text-[#d7d7d6]' : 'text-gray-50'
+        }`}
+      >
+        {title}
       </a>
     </Link>
   );
