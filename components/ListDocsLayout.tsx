@@ -2,7 +2,17 @@ import Link from 'next/link';
 import { Menu } from '@headlessui/react';
 export const a = 'block text-gray-200 hover:bg-harislab hover:text-white rounded px-2 py-1';
 
-export default function ListDocsLayout({ branch, to, title, children }) {
+export default function ListDocsLayout({
+  branch,
+  to,
+  title,
+  children,
+}: {
+  branch: string;
+  to: string;
+  title: string;
+  children: React.ReactNode;
+}) {
   const sectionStyle =
     'flex items-center justify-between w-full mx-auto bg-white shadow-md rounded-md';
   const titleStyle =
@@ -40,7 +50,7 @@ export default function ListDocsLayout({ branch, to, title, children }) {
   );
 }
 
-export function NavList({ title, href }) {
+export function NavList({ title, href }: { title: string; href: string }) {
   return (
     <Menu.Item>
       <a

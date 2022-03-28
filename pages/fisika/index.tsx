@@ -1,41 +1,74 @@
-import ChapterBox from '@/components/ChapterBox';
 import Layout from '@/components/Layout';
-import { Title, TitleBackHome, Topic } from '@/components/DesignSystem';
-import { fisikaChapterData } from '../../data/Beranda';
+import { InternalLink } from '@/components/DesignSystem';
+import { DataFisika } from './../../data/DataFisika';
+import Link from 'next/link';
+import { Disclosure } from '@headlessui/react';
+import { ChevronBeforeFolder, Folder, File } from '@/components/Icons';
+import { BookOpenIcon } from '@/components/Icons';
 
-export default function fisika() {
-  const sectionStyle =
-    'grid grid-cols-1 overflow-hidden  divide-y divide-gray-300 rounded-md xs:gap-3 xs:divide-y-0 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xs:-mx-1 xs:px-1 xs:py-1 xs:border-0 shadow xs:shadow-none';
+export default function Fisika() {
   return (
     <Layout
       browserTitle='Fisika'
-      description='Mempelajari kegunaan dari matematika pada fenomena-fenomena fisik di seluruh alam semesta.'
+      description='Mempelajari kegunaan dari matematika pada feno mena-fenomena fisik di seluruh alam semesta.'
     >
-      <TitleBackHome name='Fisika' />
-      <div className='space-y-10 '>
-        <div>
-          <Topic name='Informasi Umum' />
-          <div className={sectionStyle}>
-            <ChapterBox title='Konstanta Fisika' to='/fisika/glosarium/fisika_konstanta' />
-            <ChapterBox title='Variabel Fisika' to='/fisika/glosarium/fisika_variabel' />
-            <ChapterBox title='Satuan SI' to='/fisika/glosarium/fisika_satuanSI' />
-            <ChapterBox title='Animasi Fisika' to='/fisika/glosarium/animasi' />
-            <ChapterBox title='Tokoh Fisika' to='/fisika/glosarium/tokoh_fisika' />
-            <ChapterBox title='Flash Card Fisika' to='/fisika/glosarium/flash_card' />
-            <ChapterBox title='Sejarah Fisika' to='/fisika/glosarium/sejarah_fisika' />
-            <ChapterBox title='Mind Map Fisika' to='/fisika/glosarium/mindmap_fisika' />
-            <ChapterBox title='Tabel Periodik' to='/fisika/glosarium/tabel_periodik' />
-            <ChapterBox title='4 Fundamental Force' to='/fisika/glosarium/fundamental-force' />
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 my-5'>
+        {DataFisika.map(({ domain, chapters }) => (
+          <div key={domain} className='bg-gray-100 rounded-lg h-fit'>
+            <Link href={`/fisika/${domain.toLowerCase()}`}>
+              <a className='inline-block text-zinc-700 px-4 pb-2 pt-4 rounded-t-lg font-bold text-lg hover:underline'>
+                {domain}
+              </a>
+            </Link>
+            <div className='px-3 pb-3'>
+              {chapters.map(({ title, contents }) => (
+                <Disclosure as='div' key={title}>
+                  {({ open }) => (
+                    <>
+                      <Disclosure.Button
+                        className={`flex items-center hover:bg-zinc-200 rounded-md pl-1 py-1.5 w-full ${
+                          open ? 'bg-zinc-200 ' : ''
+                        }`}
+                      >
+                        <ChevronBeforeFolder
+                          className={`h-4 w-4 text-zinc-700 ${open ? 'rotate-90' : ''}`}
+                        />
+                        <Folder />
+                        <div className={`text-zinc-700 font-medium `}>
+                          {title}
+                        </div>
+                      </Disclosure.Button>
+                      <Disclosure.Panel className='mb-5 space-y-2 pt-1'>
+                        {contents.map(content => (
+                          <div
+                            key={content}
+                            className='flex flex-nowrap items-start space-x-1 pl-5 group cursor-pointer'
+                          >
+                            {content?.includes('Pengantar') ? (
+                              <BookOpenIcon className='h-6 w-6 min-h-fit min-w-fit text-zinc-600 group-hover:text-[#06c]' />
+                            ) : (
+                              <File className='h-6 w-6 text-zinc-600 group-hover:text-[#06c] min-h-fit min-w-fit' />
+                            )}
+                            <div className='text-zinc-600 group-hover:text-[#06c] group-hover:underline'>
+                              {content}
+                            </div>
+                          </div>
+                        ))}
+                      </Disclosure.Panel>
+                    </>
+                  )}
+                </Disclosure>
+              ))}
+            </div>
           </div>
+        ))}
+      </div>
+
+      <div className='flex justify-center flex-col items-center space-y-5 mt-40'>
+        <div className='font-semibold text-xl text-zinc-700 text-center'>
+          Butuh bimbingan belajar Fisika ke rumah ?
         </div>
-        <div>
-          <Topic name='Bab' />
-          <div className={sectionStyle}>
-            {fisikaChapterData.map(a => (
-              <ChapterBox key={a.id} title={a.title} to={a.to} />
-            ))}
-          </div>
-        </div>
+        <InternalLink name='Pesan bimbel Haris Lab sekarang' to='/bimbel' />
       </div>
     </Layout>
   );

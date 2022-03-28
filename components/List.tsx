@@ -2,7 +2,17 @@ import Link from 'next/link';
 import { Menu } from '@headlessui/react';
 export const a = 'block text-gray-200 hover:bg-harislab hover:text-white rounded px-2 py-1';
 
-export default function List({ branch, to, title, children }) {
+export default function List({
+  branch,
+  to,
+  title,
+  children,
+}: {
+  branch: string;
+  to: string;
+  title: string;
+  children: React.ReactNode;
+}) {
   return (
     <div className='sticky top-0 z-40 -mx-5 md:mx-0 '>
       <Menu as='div' className='flex flex-col w-full mb-5 sm:mb-2 sm:mx-auto '>
@@ -44,7 +54,7 @@ export default function List({ branch, to, title, children }) {
   );
 }
 
-export function NavList({ title, href }) {
+export function NavList({ title, href }: { title: string; href: string }) {
   return (
     <Menu.Item>
       <a

@@ -1,15 +1,13 @@
-// const { urlObjectKeys } = require('next/dist/next-server/lib/utils')
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.tsx', './pages/**/**/*.tsx', './components/**/*.tsx', './components/*.tsx'],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './pages/**/*.tsx',
+    './pages/**/**/*.tsx',
+    './components/**/*.tsx',
+    './components/*.tsx',
+  ],
   theme: {
-    fill: theme => ({
-      blue: theme('colors.blue.400'),
-      gray: theme('colors.gray.400'),
-    }),
     textIndent: (theme, { negative }) => ({
       ...{
         no: '0rem',
@@ -26,30 +24,13 @@ module.exports = {
       xl: '1280px',
       '2xl': '1536px',
     },
-    colors: {
-      harislab: '#007AFF',
-      black: '#262626',
-      white: '#FFFFFF',
-      gray: colors.gray,
-      red: colors.red,
-      orange: colors.orange,
-      lime: colors.lime,
-      rose: colors.rose,
-      yellow: colors.yellow,
-      amber: colors.amber,
-      green: colors.green,
-      emerald: colors.emerald,
-      teal: colors.teal,
-      sky: colors.sky,
-      cyan: colors.cyan,
-      blue: colors.blue,
-      pink: colors.pink,
-      purple: colors.purple,
-      indigo: colors.indigo,
-      fuschsia: colors.fuchsia,
-      violet: colors.violet,
-    },
+
     extend: {
+      colors: {
+        harislab: '#007AFF',
+        black: '#262626',
+        white: '#FFFFFF',
+      },
       strokeWidth: {
         1.5: '1.5',
         2: '2',
@@ -81,3 +62,22 @@ module.exports = {
   },
   plugins: [require('@tailwindcss/typography'), require('tailwindcss-text-indent')()],
 };
+
+// gray: colors.gray,
+// red: colors.red,
+// orange: colors.orange,
+// lime: colors.lime,
+// rose: colors.rose,
+// yellow: colors.yellow,
+// amber: colors.amber,
+// green: colors.green,
+// emerald: colors.emerald,
+// teal: colors.teal,
+// sky: colors.sky,
+// cyan: colors.cyan,
+// blue: colors.blue,
+// pink: colors.pink,
+// purple: colors.purple,
+// indigo: colors.indigo,
+// fuschsia: colors.fuchsia,
+// violet: colors.violet,

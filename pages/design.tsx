@@ -39,7 +39,7 @@ export default function Design() {
             <ExternalLink name='External Link' to='/design' />
             <Link href='/desain'>
               <a
-                className={` text-gray-700 border border-gray-600 pl-4 pr-1.5 py-2.5 sm:py-2 justify-between font-medium rounded-md  hover:bg-gray-200 flex `}
+                className={` text-gray-700 border border-gray-600 pl-4 pr-1.5 py-2.5 sm:py-2 justify-between font-medium rounded-md  hover:bg-zinc-200 flex `}
               >
                 <div>Internal Link v2</div>
                 <RightArrow />

@@ -1,6 +1,18 @@
 import Link from 'next/link';
 
-export default function InfoBoxFitur({ svg, name, description, to, ResultOfTheAction }) {
+export default function InfoBoxFitur({
+  svg,
+  name,
+  description,
+  to,
+  ResultOfTheAction,
+}: {
+  svg: string;
+  name: string;
+  to: string;
+  description: string;
+  ResultOfTheAction: string;
+}) {
   return (
     <Link href={to}>
       <a className='flex flex-col items-center justify-between px-4 pt-6 pb-5 space-y-2.5 duration-200 ease-out bg-white shadow rounded-xl  hover:shadow-lg'>

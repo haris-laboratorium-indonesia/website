@@ -3,7 +3,13 @@ import { HiOutlineChevronDown } from 'react-icons/hi';
 import 'katex/dist/katex.min.css';
 import TeX from '@matejmazur/react-katex';
 
-export default function PenurunanRumus({ title, children }) {
+export default function PenurunanRumus({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
   return (
     <Disclosure as='div' className='flex flex-col w-full mb-3 bg-gray-200 rounded-md'>
       {({ open }) => (

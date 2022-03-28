@@ -55,7 +55,7 @@ export default function Pricing() {
   );
 }
 
-const Box = ({ title, price, desc }) => {
+const Box = ({ title, price, desc }: { title: string; price: number; desc: string[] }) => {
   return (
     <div className='p-4 duration-200 bg-white rounded shadow hover:shadow-lg hover:scale-101'>
       <div>{title}</div>

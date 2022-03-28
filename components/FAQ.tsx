@@ -1,6 +1,12 @@
 import { Disclosure } from '@headlessui/react';
 
-export default function FAQ({ button, panel }) {
+export default function FAQ({
+  button,
+  panel,
+}: {
+  button: React.ReactNode;
+  panel: React.ReactNode;
+}) {
   return (
     <Disclosure as='div' defaultOpen={true}>
       {({ open }) => (
@@ -25,7 +31,7 @@ export default function FAQ({ button, panel }) {
   );
 }
 
-const ChevronUp = ({ className }) => {
+const ChevronUp = ({ className }: { className: string }) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'

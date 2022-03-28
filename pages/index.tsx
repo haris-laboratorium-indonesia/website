@@ -1,72 +1,64 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import FAQ from '../components/FAQ';
 import InfoBox from '../components/InfoBox';
 import Layout from '../components/Layout';
 import Support from '@/components/Support';
-import GambarBeranda from '../public/Img.svg';
-import logo from '../public/logo.png';
 import {
   SayaPeduliTentang,
   CaraSayaMenyampaikanInformasi,
   isiFAQ,
   WhatWhatYouCanDo,
 } from '../data/Beranda';
-import { InternalLink } from '@/components/DesignSystem';
 import InfoBoxFitur from '@/components/InfoBoxFitur';
+import { InternalLink } from '@/components/DesignSystem';
 
 export default function Beranda() {
-  const BerandaTitle = 'mb-7 text-4xl font-bold text-center  text-gray-700 space-y-2 ';
-  const subBerandaTitle = 'text-2xl font-normal text-gray-500';
+  const BerandaTitle = 'mb-7 text-4xl font-bold text-center  text-zinc-700 space-y-2 ';
+  const subBerandaTitle = 'text-2xl font-normal text-zinc-500';
   const wrapper = 'mb-32 sm:mb-40';
   const sectionBox =
     'grid grid-cols-1 gap-5 mx-auto xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-5 xs:px-0';
-  const tr = 'border-b border-gray-600 divide-x divide-gray-600';
+  const tr = 'border-b border-zinc-600 divide-x divide-zinc-600';
   const td = ' text-left text-sm p-2';
-  const th = 'p-2 text-left text-base font-medium text-gray-800 bg-gray-200';
+  const th = 'p-2 text-left text-base font-medium text-zinc-800 bg-zinc-200';
 
   return (
     <Layout browserTitle='Beranda' description='Laboratorium untuk Pelajar.'>
-      <section className='flex flex-col items-center justify-center py-16 space-y-5 xs:py-20'>
-        {/* <div className='text-gray-700 '>Welcome to</div> */}
-        <div className='w-20 h-20 rounded-full shadow'>
-          <Image src={logo} height={150} width={152} priority />
+      <section className='flex flex-col items-center py-16 xs:py-28 text-left sm:w-2/3 mx-auto space-y-4'>
+        <div className='text-5xl text-zinc-800 font-semibold text-center'>
+          Belajar matematika fisika online dan pesan bimbel
         </div>
-        <div className='text-5xl font-bold text-center text-gray-700 xs:space-x-2'>
-          Haris Laboratory
+        <div className='sm:text-lg text-zinc-600 text-center w-full'>
+          Dilengkapi dengan fitur kalkulator, rumus, contoh soal, latihan soal, kontrol animasi, dan
+          laporan pembelajaran.
         </div>
-        <div className='flex flex-col w-full text-2xl text-center text-gray-600 xs:text-3xl md:w-4/5'>
-          Pelajari Matematika dan Fisika secara komperhensif
-        </div>
-        <div className='flex flex-col items-center justify-center w-full mx-auto space-y-4 md:w-2/3 lg:w-1/2 md:space-y-0 md:space-x-2 lg:space-x-4 md:flex-row'>
-          <Link href='/'>
-            <a className='flex flex-row items-center justify-center w-2/3 py-2 pl-4 pr-3 space-x-1 font-medium text-gray-100 duration-100 bg-blue-600 rounded-full shadow md:w-1/2 hover:bg-blue-700 hover:shadow-none active:ring-2 active:ring-blue-300 lg:w-auto'>
-              Coba gratis sekarang
-              <RightArrow />
+
+        {/* LINK KE BELAJAR DAN PESAN BIMBEL */}
+        <div className='flex items-center justify-center flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-10  w-full text-blue-500'>
+          <Link href='/matematika'>
+            <a className='items-center flex w-auto cursor-pointer justify-center duration-300 ease-in-out'>
+              <div className='hover:underline text-lg font-medium'>Belajar online</div>
+              <RightArrowBlue />
             </a>
           </Link>
-          <Link href='/'>
-            <a className='flex flex-row items-center justify-center w-2/3 py-2 pl-4 pr-3 space-x-1 font-medium text-blue-500 duration-100 bg-white border border-gray-300 rounded-full shadow md:w-1/2 hover:bg-opacity-70 hover:shadow-none active:ring-2 active:ring-blue-300 lg:w-auto'>
-              Selengkapnya
-              <RightArrowAbout />
+          <Link href='/fisika'>
+            <a className='items-center flex w-auto cursor-pointer justify-center duration-300 ease-in-out'>
+              <div className='hover:underline text-lg font-medium'>Pesan bimbel</div>
+              <RightArrowBlue />
             </a>
           </Link>
         </div>
       </section>
 
-      <div className='w-1/2 mx-auto mb-20 border-b border-gray-400'></div>
+      <div className='w-full mx-auto mb-20 border-b border-zinc-100'></div>
 
       {/* Fitur */}
       <section id='fitur' className={wrapper}>
         <div className={BerandaTitle}>
           <div>
-            Yang bisa kalian lakukan di{' '}
-            <span className='font-mw'>
-              <span className='text-gray-700'>Haris</span>
-              <span className='text-gray-500'>Lab</span>
-            </span>
+            Yang bisa kalian lakukan di <span className='text-zinc-700'>Haris Lab</span>
           </div>
-          <div className={subBerandaTitle}>Store, Calculator, Tutoring, Math, and Physics.</div>
+          <div className={subBerandaTitle}>Kalkulator, Matematika, Fisika, Bimbel</div>
         </div>
 
         <section className={sectionBox}>
@@ -86,7 +78,7 @@ export default function Beranda() {
         </section>
       </section>
 
-      <div className='w-1/2 mx-auto mb-20 border-b border-gray-400'></div>
+      <div className='w-1/2 mx-auto mb-20 border-b border-zinc-100'></div>
 
       {/* Cara kami menyajikan informasi */}
       <section className={wrapper}>
@@ -107,7 +99,7 @@ export default function Beranda() {
         </section>
       </section>
 
-      <div className='w-1/2 mx-auto mb-20 border-b border-gray-400'></div>
+      <div className='w-1/2 mx-auto mb-20 border-b border-zinc-100'></div>
 
       {/* Kami peduli tentang */}
       <section className={wrapper}>
@@ -131,7 +123,7 @@ export default function Beranda() {
         </section>
       </section>
 
-      <div className='w-1/2 mx-auto mb-20 border-b border-gray-400'></div>
+      <div className='w-1/2 mx-auto mb-20 border-b border-zinc-100'></div>
 
       {/* HarisLab vs Zenius vs Ruangguru vs Buku Paket*/}
       <section className={wrapper}>
@@ -140,7 +132,7 @@ export default function Beranda() {
           <div className={subBerandaTitle}>HarisLab vs Zenius vs Ruangguru vs Wikipedia</div>
         </div>
         <section className='mx-auto overflow-x-auto sm:gap-5 lg:px-0'>
-          <table className='w-full overflow-hidden border border-gray-600'>
+          <table className='w-full overflow-hidden border border-zinc-600'>
             <thead>
               <tr className={tr}>
                 <th className={th}>vs</th>
@@ -210,25 +202,13 @@ export default function Beranda() {
       </section>
 
       {/* Try Haris Lab for free */}
-      <div className='flex flex-col items-center justify-center space-y-5'>
-        <div className='text-3xl font-bold text-center text-gray-700'>
-          Coba{' '}
-          <span className='underline font-mw'>
-            <span className='text-gray-600'>Haris</span>
-            <span className='text-gray-500'>Lab</span>
-          </span>{' '}
-          sekarang
-        </div>
-        <div className='mx-auto text-xl text-center text-gray-600 sm:w-1/2'>
+      <div className='flex flex-col items-center justify-center space-y-3'>
+        <div className='text-3xl font-bold text-center text-zinc-700'>Coba Haris Lab sekarang</div>
+        <div className='mx-auto text-xl text-center text-zinc-500 sm:w-1/2'>
           Mulai gratis dan gunakan fitur advance ketika ketika level pelajaranmu meningkat.
         </div>
 
-        <Link href='/'>
-          <a className='flex flex-row items-center py-2 pl-4 pr-3 space-x-1 font-medium text-gray-100 duration-300 bg-blue-600 rounded-full shadow hover:bg-blue-700 hover:shadow-none active:ring-2 active:ring-blue-300'>
-            Coba gratis sekarang
-            <RightArrow />
-          </a>
-        </Link>
+        <InternalLink name='Mulai belajar' to='/matematika' />
       </div>
     </Layout>
   );
@@ -238,7 +218,7 @@ const RightArrow = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      className='w-5 h-5 pt-0.5 text-gray-200 sm:pt-0 '
+      className='w-5 h-5 pt-0.5 text-zinc-200 sm:pt-0 '
       fill='none'
       viewBox='0 0 24 24'
       stroke='currentColor'
@@ -248,16 +228,16 @@ const RightArrow = () => {
   );
 };
 
-const RightArrowAbout = () => {
+const RightArrowBlue = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      className='w-5 h-5 pt-0.5 text-blue-400 sm:pt-0 '
+      className='w-5 h-5 text-blue-500 group-hover:text-orange-600'
       fill='none'
       viewBox='0 0 24 24'
       stroke='currentColor'
     >
-      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
+      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2.5} d='M9 5l7 7-7 7' />
     </svg>
   );
 };

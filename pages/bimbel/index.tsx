@@ -1,107 +1,115 @@
 import Layout from '@/components/Layout';
-import { Title, SubTitle, Topic } from '@/components/DesignSystem';
-import Rafi from '../../public/Trainer/Rafi.jpeg';
-import Harits from '../../public/Trainer/Harits.jpg';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Disclosure } from '@headlessui/react';
 import { HiOutlineChevronDown, HiChevronRight } from 'react-icons/hi';
-import Link from 'next/link';
-//Opener
-//DaftarIsi
+import { Fragment, useState } from 'react';
+import { Listbox, Transition } from '@headlessui/react';
+import { CheckIcon, SelectorIcon } from '@heroicons/react/solid';
+
+const people = [{ subject: 'Matematika' }, { subject: 'Fisika' }];
 
 export default function Bimbel() {
+  const [selected, setSelected] = useState(people[0]);
+
+  console.log(people[0].subject);
+  console.log(typeof people[0].subject);
+  console.log(typeof setSelected);
   return (
     <Layout browserTitle='Bimbel' description='Bimbel'>
-      <Title name='Bimbel' />
-
-      {/* Memesan pelajaran */}
-      <div className='w-full p-4 mx-auto mt-5 mb-10 bg-white rounded-md shadow hover:shadow-md sm:w-1/3'>
-        <div className='text-lg font-medium text-center text-gray-800 mb-7'>Booking Les</div>
-        <label htmlFor=''>Untuk tanggal :</label>
-        {/* <div className='mb-5 font-semibold'>Selasa, 2 Agustus 2021</div> */}
-        <input type='date' className='block w-full mb-5' />
-        <label htmlFor=''>Pukul :</label>
-        {/* <div className='mb-5 font-semibold'>14:00 - 16:00 WIB</div> */}
-        <input type='time' className='block w-full mb-5' />
-        <label htmlFor='nama' className='text-sm'>
-          Nama
-        </label>
-        <input
-          type='text'
-          id='nama'
-          className='block w-full px-2 py-1 mb-5 text-gray-800 border border-gray-400 rounded focus:border-gray-800 focus:outline-none'
-        />
-        <label htmlFor='MataPelajaran' className='text-sm'>
-          Mata Pelajaran
-        </label>
-        <input
-          type='text'
-          id='MataPelajaran'
-          className='block w-full px-2 py-1 mb-5 text-gray-800 border border-gray-400 rounded focus:border-gray-800 focus:outline-none'
-        />
-        <label htmlFor='Bab' className='text-sm'>
-          Bab
-        </label>
-        <input
-          type='text'
-          id='Bab'
-          className='block w-full px-2 py-1 mb-5 text-gray-800 border border-gray-400 rounded focus:border-gray-800 focus:outline-none'
-        />
-        <div className='flex justify-end'>
-          <div className='w-1/3 px-2 py-1 text-center text-white rounded-md shadow cursor-pointer bg-harislab hover:bg-opacity-70 hover:shadow-md'>
-            Pesan
-          </div>
+      <section className='py-5 space-y-5 sm:space-y-0 sm:space-x-5 flex flex-col sm:items-start sm:flex-row'>
+        <div className='bg-white rounded-lg shadow-md p-5 border'>
+          <label htmlFor='pet-select' className=' text-xl text-zinc-800 '>
+            Pilih Mata pelajaran
+          </label>
+          <div className='mt-5 text-sm text-zinc-400'>Matematika atau Fisika</div>
+          <Listbox value={selected} onChange={setSelected}>
+            <div className='relative mt-1.5'>
+              <Listbox.Button className='relative w-full py-2 pl-3 pr-10 text-left bg-zinc-100 border border-zinc-300 rounded-lg cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm focus:ring-2 focus:ring-blue-500'>
+                <span className='block truncate'>{selected.subject}</span>
+                <span className='absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none'>
+                  <SelectorIcon className='w-5 h-5 text-gray-400' aria-hidden='true' />
+                </span>
+              </Listbox.Button>
+              <Transition
+                as={Fragment}
+                leave='transition ease-in duration-100'
+                leaveFrom='opacity-100'
+                leaveTo='opacity-0'
+              >
+                <Listbox.Options className='absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm border border-zinc-300'>
+                  {people.map((person, personIdx) => (
+                    <Listbox.Option
+                      key={personIdx}
+                      className={({ active }) =>
+                        `${active ? 'text-amber-900 bg-amber-100' : 'text-gray-900'}
+                          cursor-default select-none relative py-2 pl-10 pr-4`
+                      }
+                      value={person}
+                    >
+                      {({ selected, active }) => (
+                        <>
+                          <span
+                            className={`${selected ? 'font-medium' : 'font-normal'} block truncate`}
+                          >
+                            {person.subject}
+                          </span>
+                          {selected ? (
+                            <span
+                              className={`${active ? 'text-amber-600' : 'text-amber-600'}
+                                absolute inset-y-0 left-0 flex items-center pl-3`}
+                            >
+                              <CheckIcon className='w-5 h-5' aria-hidden='true' />
+                            </span>
+                          ) : null}
+                        </>
+                      )}
+                    </Listbox.Option>
+                  ))}
+                </Listbox.Options>
+              </Transition>
+            </div>
+          </Listbox>
         </div>
-      </div>
+        <div className='bg-white rounded-lg shadow-md p-5 border'>
+          <label htmlFor='pet-select' className='text-xl text-zinc-800 '>
+            Pilih Tanggal
+          </label>
+          <div className='mt-5 text-sm text-zinc-400'>Hari, Bulan, Tahun </div>
+          <input
+            type='date'
+            name=''
+            id=''
+            className='w-full mt-1.5 py-1.5 px-2 bg-zinc-100 border border-zinc-300 rounded-md'
+          />
 
-      {/* Catatan */}
-      <div>
-        <Topic name='Catatan' />
-        <ul className='list-disc list-inside'>
-          <li>Hanya bisa membooking 2 hari sebelumnya</li>
-          <li>Pembayaran dilakukan ke rekening mandiri</li>
-          <li>Jika ada pembatalan jadwal, akan muncul notifikasi</li>
-          <li>
-            Pembatalan mungkin saja terjadi karena trainer sakit, kecelakaan, atau terkena bencana
-            lainnya
-          </li>
-          <li>Pengembalian uang sebesar 100%</li>
-        </ul>
-      </div>
-
-      {/* Daftar Tutor */}
-      <Topic name='Daftar Trainer' />
-      <div className='grid w-full grid-cols-1 gap-2 sm:w-1/2 sm:gap-3'>
-        <Opener name='Rafi Amrulah' to='/bimbel/trainer/rafi-amrulah' img={Rafi}>
-          <div className='flex flex-col p-1 space-y-1'>
-            <DaftarIsi point='Nama' desc='Rafi Amrulah Putra' />
-            <DaftarIsi point='Usia' desc='15 Tahun' />{' '}
-            <DaftarIsi point='Keahlian' desc='Pelatih Lari, Sepeda, Gym ' />
-            <DaftarIsi point='Pengalaman melatih' desc='2,5 Tahun' />
-            <DaftarIsi point='Hari Praktek' desc={`Senin - Jum'at`} />
-            <DaftarIsi point='Waktu Praktek' desc={`08:00 - 16:00`} />
-            <DaftarIsi point='Wilayah pelatihan' desc='Tangerang Selatan' />
-            <DaftarIsi point='Bahasa' desc='Indonesia, Inggris, Jawa' />
-          </div>
-        </Opener>
-        <Opener name='Harits Syah' to='/bimbel/trainer/harits-syah' img={Harits}>
-          <div className='flex flex-col p-1 space-y-1'>
-            <DaftarIsi point='Nama' desc='Harits Syah Rahmatullah' />
-            <DaftarIsi point='Usia' desc='22 Tahun' />
-            <DaftarIsi point='Keahlian' desc='Matematika, Fisika, Catur, Web Engineering ' />
-            <DaftarIsi point='Pengalaman melatih' desc='2,5 Tahun' />
-            <DaftarIsi point='Hari Praktek' desc={`Senin - Jum'at`} />
-            <DaftarIsi point='Waktu Praktek' desc={`08:00 - 16:00`} />
-            <DaftarIsi point='Wilayah pelatihan' desc='Tangerang Selatan' />
-            <DaftarIsi point='Bahasa' desc='Indonesia, Inggris' />
-          </div>
-        </Opener>
-      </div>
+          <div className='mt-5 text-sm text-zinc-400'>Jam</div>
+          <input
+            type='time'
+            name=''
+            id=''
+            className='w-full mt-1.5 py-1.5 px-2 bg-zinc-100 border border-zinc-300 rounded-md'
+          />
+        </div>
+      </section>
+      <button className='bg-blue-600 text-center rounded-lg text-white shadow-lg active:translate-y-0.5 duration-200 hover:bg-blue-700 py-3 text-xl hover:cursor-pointer active:shadow-none w-full focus:outline-none focus:ring-2 focus:ring-orange-600'>
+        Buat pesanan
+      </button>
     </Layout>
   );
 }
 
-const Opener = ({ name, img, children, to }) => {
+const Opener = ({
+  name,
+  img,
+  children,
+  to,
+}: {
+  name: string;
+  img: StaticImageData;
+  children: React.ReactNode;
+  to: string;
+}) => {
   return (
     <Disclosure
       as='div'
@@ -136,7 +144,7 @@ const Opener = ({ name, img, children, to }) => {
   );
 };
 
-const DaftarIsi = ({ point, desc }) => {
+const DaftarIsi = ({ point, desc }: { point: string; desc: string }) => {
   return (
     <div className='flex w-full text-sm sm:text-base'>
       <div className='flex flex-row justify-between w-1/3 mr-2'>

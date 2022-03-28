@@ -2,7 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import haris from '../public/haris.jpg';
 import Layout from '@/components/Layout';
-import { Title, Topic, ExternalLink, InternalLink } from '@/components/DesignSystem';
+import { Title, Topic, ExternalLink } from '@/components/DesignSystem';
+import React from 'react';
 
 export default function About() {
   return (
@@ -127,7 +128,7 @@ const ArrowUpRight = () => {
   );
 };
 
-const Wrapper = ({ title, children }) => {
+const Wrapper = ({ title, children }: { title: string; children: React.ReactNode }) => {
   return (
     <div>
       <Topic name={title} />
