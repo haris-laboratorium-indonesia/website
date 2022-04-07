@@ -1,5 +1,90 @@
 export const DataFisika = [
   {
+    domain: 'PENGUKURAN',
+    chapters: [
+      {
+        title: 'Besaran',
+        contents: ['Pengantar Besaran', 'Besaran pokok', 'Besaran satuan'],
+      },
+      {
+        title: 'Satuan',
+        contents: ['Pengantar Satuan', 'Daftar satuan', 'Konversi satuan'],
+      },
+      {
+        title: 'Dimensi',
+        contents: ['Pengantar Dimensi', 'Daftar dimensi', 'Analisis dimensi'],
+      },
+      {
+        title: 'Notasi Ilmiah',
+        contents: ['Pengantar Notasi Ilmiah', 'Angka penting'],
+      },
+      {
+        title: 'Ketepatan',
+        contents: [
+          'Pengantar Ketepatan',
+          'Akurasi',
+          'Presisi',
+          'Keteledoran',
+          'Kesalahan acak',
+          'Kesalahan sistematis',
+        ],
+      },
+      {
+        title: 'Alat Ukur',
+        contents: [
+          'Pengantar Alat Ukur',
+          'Jangka sorong',
+          'Miktometer sekrup',
+          'Mistar',
+          'Tahun Cahaya',
+        ],
+      },
+    ],
+  },
+  {
+    domain: 'GERAK',
+    chapters: [
+      {
+        title: 'Gerak Lurus',
+        contents: [
+          'Pengantar Gerak Lurus',
+          'Gerak Lurus Beraturan',
+          'Gerak Lurus Berubah Beraturan',
+        ],
+      },
+      {
+        title: 'Gerak Rotasi',
+        contents: [
+          'Pengantar Gerak Rotasi',
+          'Momentum Sudut',
+          'Torsi - Momen Gaya',
+          'Momen Inersia',
+        ],
+      },
+      {
+        title: 'Gerak Parabola',
+        contents: ['Pengantar Gerak Parabola', 'Gerak Parabola Simetri', 'Gerak Parabola Asimetri'],
+      },
+      {
+        title: 'Gerak Melingkar',
+        contents: [
+          'Pengantar Gerak Melingkar',
+          'Gerak Melingkar Beraturan',
+          'Percepatan Setripetal',
+          'Momentum Sudut',
+          'Hukum Kekekalan Energi',
+        ],
+      },
+    ],
+  },
+  {
+    domain: 'DINAMIKA',
+    chapters: [
+      { title: 'Usaha', contents: ['a', 'b'] },
+      { title: 'Momentum', contents: ['Pengantar momentum', 'Hukum kekekalan momentum', 'Impuls'] },
+    ],
+  },
+  {
     domain: 'FLUIDA',
     chapters: [
       {
@@ -53,84 +138,7 @@ export const DataFisika = [
       },
     ],
   },
-  {
-    domain: 'GERAK',
-    chapters: [
-      {
-        title: 'Gerak Lurus',
-        contents: [
-          'Pengantar Gerak Lurus',
-          'Gerak Lurus Beraturan',
-          'Gerak Lurus Berubah Beraturan',
-        ],
-      },
-      {
-        title: 'Gerak Rotasi',
-        contents: [
-          'Pengantar Gerak Rotasi',
-          'Momentum Sudut',
-          'Torsi - Momen Gaya',
-          'Momen Inersia',
-        ],
-      },
-      {
-        title: 'Gerak Parabola',
-        contents: ['Pengantar Gerak Parabola', 'Gerak Parabola Simetri', 'Gerak Parabola Asimetri'],
-      },
-      {
-        title: 'Gerak Melingkar',
-        contents: [
-          'Pengantar Gerak Melingkar',
-          'Gerak Melingkar Beraturan',
-          'Percepatan Setripetal',
-          'Momentum Sudut',
-          'Hukum Kekekalan Energi',
-        ],
-      },
-    ],
-  },
-  {
-    domain: 'PENGUKURAN',
-    chapters: [
-      {
-        title: 'Besaran',
-        contents: ['Pengantar Besaran', 'Besaran pokok', 'Besaran satuan'],
-      },
-      {
-        title: 'Satuan',
-        contents: ['Pengantar Satuan', 'Daftar satuan', 'Konversi satuan'],
-      },
-      {
-        title: 'Dimensi',
-        contents: ['Pengantar Dimensi', 'Daftar dimensi', 'Analisis dimensi'],
-      },
-      {
-        title: 'Notasi Ilmiah',
-        contents: ['Pengantar Notasi Ilmiah', 'Angka penting'],
-      },
-      {
-        title: 'Ketepatan',
-        contents: [
-          'Pengantar Ketepatan',
-          'Akurasi',
-          'Presisi',
-          'Keteledoran',
-          'Kesalahan acak',
-          'Kesalahan sistematis',
-        ],
-      },
-      {
-        title: 'Alat Ukur',
-        contents: [
-          'Pengantar Alat Ukur',
-          'Jangka sorong',
-          'Miktometer sekrup',
-          'Mistar',
-          'Tahun Cahaya',
-        ],
-      },
-    ],
-  },
+
   {
     domain: 'TERMODINAMIKA',
     chapters: [
@@ -212,9 +220,5 @@ export const DataFisika = [
         ],
       },
     ],
-  },
-  {
-    domain: 'DINAMIKA',
-    chapters: [{ title: 'Usaha', contents: ['usaha', 'momentum'] }],
   },
 ];

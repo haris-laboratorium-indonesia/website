@@ -13,8 +13,8 @@ import InfoBoxFitur from '@/components/InfoBoxFitur';
 import { InternalLink } from '@/components/DesignSystem';
 
 export default function Beranda() {
-  const BerandaTitle = 'mb-7 text-4xl font-bold text-center  text-zinc-700 space-y-2 ';
-  const subBerandaTitle = 'text-2xl font-normal text-zinc-500';
+  const BerandaTitle = 'mb-7 text-lg sm:text-4xl font-bold text-center  text-zinc-700 space-y-2 ';
+  const subBerandaTitle = 'text-base sm:text-2xl font-normal text-zinc-500';
   const wrapper = 'mb-32 sm:mb-40';
   const sectionBox =
     'grid grid-cols-1 gap-5 mx-auto xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-5 xs:px-0';

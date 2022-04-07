@@ -119,7 +119,7 @@ export const DataMatematika = [
         ],
       },
       {
-        title: 'TRANSFORMASI GEOMETRI',
+        title: 'Tranformasi Geometri',
         contents: [
           'Pengantar Transformasi Geometri',
           'Refleksi',

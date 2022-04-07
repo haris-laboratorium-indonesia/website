@@ -5,7 +5,7 @@ import SearchMenu from './SearchMenu';
 
 export default function GlobalNavigation() {
   return (
-    <nav className='sticky top-0 z-40 bg-zinc-800'>
+    <nav className='z-40 bg-zinc-800'>
       <div className=' flex items-center justify-between h-auto w-full max-w-5xl py-2.5 mx-auto px-3 xl:px-0'>
         <Link href='/'>
           <a className='w-1/2 sm:w-1/6  pt-[1px] space-x-1.5 flex items-center'>
@@ -15,7 +15,7 @@ export default function GlobalNavigation() {
         </Link>
 
         <div className='hidden sm:block sm:w-4/6'>
-          <div className='flex md:space-x-4 items-center justify-center '>
+          <div className='flex md:space-x-6 items-center justify-center '>
             <NavDesktopLink href='/kalkulator' title='Kalkulator' />
             <NavDesktopLink href='/matematika' title='Matematika' />
             <NavDesktopLink href='/fisika' title='Fisika' />

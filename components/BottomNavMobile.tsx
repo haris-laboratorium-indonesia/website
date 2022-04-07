@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 export default function BottomNavMobile() {
   return (
     <div className='sticky bottom-0 block sm:hidden w-full bg-white/70 backdrop-blur border-t border-zinc-200'>
-      <div className='flex items-center justify-evenly w-full '>
+      <div className='flex items-center justify-around w-full '>
         {Data.map(({ id, path }) => (
           <IkonWrapper key={id} to={`/${id}`} path={path} />
         ))}
@@ -33,7 +33,7 @@ const IkonWrapper = ({ to, path }: { to: string; path: string }) => {
               fill='none'
               viewBox='0 0 24 24'
               stroke='currentColor'
-              strokeWidth={2}
+              strokeWidth={1.5}
             >
               <path strokeLinecap='round' strokeLinejoin='round' d={path} />
             </svg>

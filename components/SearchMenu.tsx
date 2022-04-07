@@ -1,7 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react';
 import Link from 'next/link';
 import { useState, Fragment } from 'react';
-import { SearchIcon, SearchIcon2 } from './Icons';
+import { SearchIcon2 } from './Icons';
 
 export default function SearchMenu() {
   let [isOpen, setIsOpen] = useState(false);
@@ -70,8 +70,8 @@ export default function SearchMenu() {
                     <SearchIcon2 />
                     <input
                       type='search'
-                      placeholder='Cari Haris Lab...'
-                      className='focus:outline-none text-tiny bg-zinc-700 w-full text-zinc-200 placeholder-zinc-400 caret-blue-500 font-thin'
+                      placeholder='Cari Haris Lab'
+                      className='focus:outline-none text-tiny bg-zinc-700 w-full text-zinc-200 placeholder-zinc-400 caret-blue-500'
                     />
                   </div>
                   <div
@@ -83,25 +83,25 @@ export default function SearchMenu() {
                 </div>
                 <div className='w-full text-left  text-sm space-y-2 p-3'>
                   <div className='text-zinc-300 text-[10px] tracking-wider'>SUGESTI PENCARIAN</div>
-                  <ul className='space-y-1'>
+                  <ul className='space-y-1 pl-4'>
                     <li>
                       <Link href='/matematika'>
-                        <a className='text-zinc-500 hover:underline'>Matematika</a>
+                        <a className='text-zinc-500 hover:underline text-lg'>Matematika</a>
                       </Link>
                     </li>
                     <li>
                       <Link href='/fisika'>
-                        <a className='text-zinc-500 hover:underline'>Fisika</a>
+                        <a className='text-zinc-500 hover:underline text-lg'>Fisika</a>
                       </Link>
                     </li>
                     <li>
                       <Link href='/bimbel'>
-                        <a className='text-zinc-500 hover:underline'>Bimbel</a>
+                        <a className='text-zinc-500 hover:underline text-lg'>Bimbel</a>
                       </Link>
                     </li>
                     <li>
                       <Link href='/kalkulator'>
-                        <a className='text-zinc-500 hover:underline'>Kalkulator</a>
+                        <a className='text-zinc-500 hover:underline text-lg'>Kalkulator</a>
                       </Link>
                     </li>
                   </ul>
